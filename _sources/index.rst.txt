@@ -2,28 +2,18 @@
 Introducció a la programació
 ############################
 
-Et dono la benvinguda a aquest curs de programació.
+Benvolgut/benvolguda
 
-Els continguts d'aquest curs estan dissenyats per a ser utilitzats com a suport per les classes
-del mòdul 3 *Programació* del cicles de grau superior *Desenvolupament d'Aplicacions Web*
-que estic impartint al centre `IES Joan d'Àustria <http://agora.xtec.cat/insjoandaustria/>`_.
+Moltes gràcies per l’interès en aquests materials.
 
-Pots trobar més detalls sobre aquests materials i la seva llicència d'ús seguint
-:doc:`aquest enllaç <about>`.
+En aquests moments no es troben disponibles. Estan de vacances!
 
-Els continguts d'aquest curs estan organitzats en els següents temes:
+Si et cal, pots contactar amb mi a:
 
+    *moises* **punt** *gomez* **arroba** *iesjoandaustria* **punt** *org*
 
-.. toctree::
-    :titlesonly:
-    :maxdepth: 1
+Tingues present que aquests dies estic molt ocupat assegurant-me que els
+apunts descansin bé, i probablement tardaré una mica en contestar-te.
+Gràcies per la teva comprensió.
 
-    primeres_passes.rst
-    basics.rst
-    moduls.rst
-    fitxers.rst
-    poo.rst
-    biblioteques.rst
-    bd.rst
-    apendix.rst
-
+Salutacions
