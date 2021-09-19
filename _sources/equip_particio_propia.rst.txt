@@ -1,0 +1,67 @@
+Opció recomanada: partició pròpia
+=================================
+
+L'opció recomanada és que disposis d'un equip amb GNU/Linux en la seva
+pròpia *partició*.  Una partició és un tros d'un disc que l'ordinador
+considerarà com una mena de disc independent de la resta de particions.
+Això et permetrà compartir el disc amb diferents sistemes operatius, el
+que es coneix com a *dual boot* o *arrencada dual*.
+
+Els instal·ladors de les distribucions Debian i Ubuntu t'ajudaran a fer la
+instaŀlació i, en la majoria dels casos, no tindràs cap problema. Fins i
+tot t'ajudaran a fer espai per crear la nova partició.
+
+Arrencant el sistema operatiu des de la seva partició permetrà que
+GNU/Linux pugui aprofitar tots els recursos de la teva màquina oferint-te
+la millor experiència possible en el teu equip. Per això és l'opció
+recomanada!
+
+Si no tens cap preferència, et proposo que instaŀlis un Debian, doncs és
+una distribució que es distingeix, entre d'altres coses, per la seva
+estabilitat. A banda, tots els exemples d'execució que et mostraré estan
+realitzats sobre un Debian.
+
+La instaŀlació hauria de ser-te molt senzilla i hi trobaràs molts
+tutorials a la Web.
+
+Et donaré una visió general, per si t'és suficient, tot suposant que el
+teu equip és un PC amb un mínim de 4GB de RAM i 25GB de disc. Si no
+arribes a aquests límits, parlem-ne.
+
+Si estàs a la meva classe, probablement alguna companya o company ja
+disposa d'un CD o un *Pendrive* amb l'instaŀlador. Altrament, considera
+aqwuestes dues passes:
+
+1. Descarrega't la imatge de Debian del seu lloc oficial:
+   `www,debian.org <https://www.debian.org/>`_
+
+   Això et descarregarà un fitxer anomenat
+   ``debian-11.0.0-amd64-netinst.iso``, potser amb alguna versió
+   posteriori a la 11.0.0 depenent de quan estiguis llegint aquests
+   continguts.
+
+2. Copia la imatge (el fitxer .iso) a un CD o, millor, a un *Pendrive*
+
+   Per copiar la imatge a un CD, no funcionarà copiant el fitxer
+   directament. Caldrà que facis el que es coneix com *cremar* el CD. Una
+   traducció directa de l'angès *burn*. Probablement el teu sistema
+   operatiu disposa d'un *quemador* de CDs. Per exemple, a MS Windows
+   disposes de *Windows Disk Image Burner* ja pre-instaŀlat.
+
+   Per copiar-ho a un Pen, considera algun programa com ara `Etcher
+   <https://www.balena.io/etcher/>`_
+
+
+Ara que ja tens l'instaŀlador a un CD o a un *Pendrive* és hora d'arrencar
+l'equip on vols instaŀlar el Debian fent servir el CD o el *Pendrive*.
+Sovint els equips disposen d'una tecla en el moment de l'arrencada per
+accedir a un menú en el que seleccionar des d'on vols arrencar. Identifica
+el CD o el *pen* i selecciona'l.
+
+A continuació segueix, en aquest ordre:
+
+1. :doc:`passes d'instaŀlació de Debian <equip_install_debian>`, i
+
+2. :doc:`equip_configura_so`
+
+

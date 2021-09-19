@@ -1,0 +1,65 @@
+####################
+Opcions alternatives
+####################
+
+Si per algun motiu no t'és possible fer servir cap de les opcions
+recomenades (partició dedicada o màquina virtual), encara et puc proposar
+algunes alternatives.
+
+.. important::
+
+   Tingues en compte que aquesta assignatura ja té prou contingut per si
+   mateixa i que, molt probablement no ens sobrarà el temps ni a tu ni a
+   mi. Si et decideixes per una opció fora de les anteriors, molt probable
+   et trobaràs amb problemes pels que, malauradament jo no et podré
+   ajudar.
+
+Passo a esmentar-te les alternatives que et proposo.
+
+En comptes d'una partició dedicada, pots considerar fer servir un pendrive
+o disc extern. És a dir, quan vulguis treballar l'assignatura només caldrà
+que endollis l'USB que contindrà el GNU/Linux i arrencar amb ell.  Et
+caldrà investigar una mica però no massa.  Per exemple, mira `aquest
+tutorial
+<https://www.fosslinux.com/10212/how-to-install-a-complete-ubuntu-on-a-usb-flash-drive.htm>`_
+És una solució força neta doncs no et cal modificar el teu equip (potser
+la configuració de la BIOS) i pots portar-te tota la teva configuració a
+la butxaca per treballar amb diferents equips.  Recorda només que les
+versions antigues d'USB solen reduir la velocitat respecte el disc dur de
+l'equip.
+
+Una altra opció si uses MSWindows. Des de la versió 10, Windowes ofereix
+la possibilitat d'instaŀlar una màquina virtual directament des de la
+botiga. Et caldrà activar el *subsistema linux* i escollir alguna
+distribució. Vigila perquè algunes distribucions són antigues i podries
+tenir algunes dificultats amb les versions de programari que et deixen
+instaŀlar. Vigila també amb el que es coneix com a *encoding* o *charset*
+si tens intenció d'editar des de Windows. Caldrà que configuris el teu
+editor amb *UTF-8* per assegurar compatibilitat.
+
+Si el sistema que fas servir és un MacOS, és possible que et tempti la
+idea de fer-lo servir en comptes de GNU/Linux ja que disposa de les
+utilitats GNU per defecte. L'experiència d'estudiants anteriors és que
+apareixen problemes amb alguns guions (scripts) que et proporcionaré.
+Després de batallar, no recordo ningú que hagi mantingut aquesta opció
+fins el final (no dic que no sigui possible, eh?).  Si et fa iŀlusió,
+prova-ho i si no et funciona, considera crear-te una màquina virtual.
+
+A més, pots fer servir el núvol. Per exemple https://repl.it t'ofereix
+un editor força completet i integració amb Git, que podria solucionar-te
+totalment o parcial les necessitats pel curs. Segurament la versió
+gratuïta no et serà suficient però és possible que et compensi pagar
+alguns dòlars al mes a canvi de la comoditat de no dependre d'un equip.
+
+Una altra opció a considerar és contractar un *hosting* econòmic (uns
+5$/mes) que et permetran disposar d'una caixa linux al núvol. Aquesta
+opció l'he provada i és perfectament vàlida per fer la majoria si no tots
+els exercicis d'aquest curs. Alguns possibles proveïdors en aquest rang de
+preus són https://www.digitalocean.com/ o https://www.linode.com/ entre
+molts d'altres.
+
+Probablement et resultarà molt més difícil realitzar aquest curs amb una
+*tablet* o un mòbil. Si ho aconsegueixes, per favor, fes-m'ho saber!
+
+T'agrairé molt si te'n surts amb alguna solució alternativa, que m'ho
+comentis, i podré compartir la teva experiència amb futurs estudiants.

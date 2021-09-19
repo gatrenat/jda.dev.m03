@@ -1,0 +1,56 @@
+########################
+Configuració de l'entorn
+########################
+
+.. important:: Aquesta secció no la podràs realitzar fins que no t'hagi
+   actualitzat el teu repositori. Paciència
+
+Perquè el sistema de proves de l'assignatura pugui funcionar al teu equip,
+cal instaŀlar i configurar alguns elements.
+
+He preparat un petit programet que farà part d'aquesta configuració per
+tu.
+
+Un cop el teu repositori hagi estat reconegut pel sistema de proves, al
+teu GitHub disposaràs d'uns nous fitxers de suport.  Els pots descarregar
+fent:
+
+.. code-block:: console
+
+    $ cd ~/introprg
+    $ git pull
+
+Entre els diferents elements que tindràs descarregats al teu equip, un
+d'ells és el programa ``configura_introprg.sh``.
+
+Executa la següent comanda:
+
+.. code-block:: console
+
+   $ bash .introprg/configura_introprg.sh
+
+És possible que la primera vegada que l'executis, el teu sistema et demani
+el password del teu usuari.
+
+Un cop finalitzada l'execució de ``configura_introprg.sh`` podràs
+comprovar si tot està bé escrivint:
+
+.. code-block:: console
+
+    $ source ~/.bashrc
+    $ prgtest 
+    ERROR: El directori actual no es troba dins del directori de treball
+
+Malgrat surt un error, és la resposta que esperàvem. El programa de
+validació ``prgtest`` s'ha executat correctament i t'està avisant que no
+et trobes dins d'una carpeta que reconegui com a exercici. Genial!
+
+L'error que no voldríem és el següent:
+
+.. code-block:: console
+
+    $ prgtest
+    -bash: prgtes: command not found
+
+Si t'ha resposta això després d'haver executat ``configura_introprg.sh``,
+demana ajuda.

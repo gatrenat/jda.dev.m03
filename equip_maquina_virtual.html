@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Opció +/- fàcil: màquina virtual &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Opcions alternatives" href="equip_alternatives.html" />
+    <link rel="prev" title="Opció recomanada: partició pròpia" href="equip_particio_propia.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Introducció a la programació amb Java
+          
+
+          
+            
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020-21
+              </div>
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="primeres_passes.html">Primeres passes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requeriments_coneixements_previs.html">Coneixements previs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="requeriments_equip.html">Ordinador i sistema operatiu</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="equip_particio_propia.html">Opció recomanada: partició pròpia</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Opció +/- fàcil: màquina virtual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_alternatives.html">Opcions alternatives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_install_debian.html">Instaŀlació de Debian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_install_guest_additions.html">Instal·lació Guest Additions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_configura_so.html">Configuració bàsica del sistema operatiu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_editor.html">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_llenguatge.html">Llenguatge de programació</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_cvs.html">Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_aquests_continguts.html">Sobre aquests continguts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_exercicis.html">Sobre els exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holagit.html">Git i GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracio_entorn.html">Configuració de l’entorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com_lliurar.html">Com lliurar un exercici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ritual_holamon.html">Ritual Hola Món!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primeres_passes_exercicis.html">Llista d’exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="primeres_passes.html">Primeres passes</a> &raquo;</li>
+        
+          <li><a href="requeriments_tecnics.html">Requeriments tècnics</a> &raquo;</li>
+        
+          <li><a href="requeriments_equip.html">Ordinador i sistema operatiu</a> &raquo;</li>
+        
+      <li>Opció +/- fàcil: màquina virtual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+            
+  <div class="section" id="opcio-facil-maquina-virtual">
+<h1>Opció +/- fàcil: màquina virtual<a class="headerlink" href="#opcio-facil-maquina-virtual" title="Link permanent a aquest títol">¶</a></h1>
+<p>Si et trobes en un del següents casos, aquesta solució és per tu:</p>
+<div class="sidebar">
+<p class="sidebar-title">Jo ja en sé fer de màquines virtuals!</p>
+<p>Si ja tens els dits pelats d’instaŀlar màquines virtuals, pots
+ometre aquesta pàgina. Simplement assegura’t que t’instaŀles un
+GNU/Linux, per exemple Debian 10 o posterior. Altres distribucions no
+haurien de suposar-te cap problema pel que fa a aquesta assignatura
+sempre que sàpigues manegar-te amb la que escullis. Si vas per aquest
+camí i hi trobes problemes, avisa i potser et sé orientar per que en
+trobis la solució.</p>
+</div>
+<ul class="simple">
+<li><p>treballes amb MSWindows o MACOS i no pots o no vols instaŀlar-t’hi una
+arrancada dual al teu equip</p></li>
+<li><p>disposes d’un equip amb GNU/Linux però t’estimes més que la feina que
+facis en aquesta assignatura quedi aïllada de la resta.</p></li>
+</ul>
+<p>Per aquestes situacions, la solució fàcil i acceptable és crear una
+<em>màquina virtual</em>. En aquest context i simplificant-ho força, màquina
+virtual es refereix a un mecanisme que permet instaŀlar un sistema
+operatiu <em>a sobre</em> el teu sistema operatiu.</p>
+<p>Direm al teu sistema operatiu el <em>host</em> o <em>amfitrió</em>, i al sistema
+operatiu que hi instaŀlarem a sobre la <em>màquina virtual</em>.</p>
+<div class="section" id="installacio-de-virtualbox">
+<h2>Instaŀlació de VirtualBox<a class="headerlink" href="#installacio-de-virtualbox" title="Link permanent a aquest títol">¶</a></h2>
+<p>En primer lloc, ens cal un programa que gestioni la màquina virtual que
+farem servir. Tot i que tenim diferents opcions, aquí ens decantarem per
+una de gratuïta i més que acceptable: VirtualBox.</p>
+<p>Si ja el tens instaŀlat o en disposes d’un altre, pots saltar-te aquesta
+secció.</p>
+<p>Per instaŀlar <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+al teu sistema operatiu, pots seguir aquestes passes:</p>
+<div class="section" id="descarregar">
+<h3>1. Descarregar<a class="headerlink" href="#descarregar" title="Link permanent a aquest títol">¶</a></h3>
+<p>Descarrega l’instaŀlador de VirtualBox</p>
+<p>Et recomano que ho facis des de la pàgina oficial: <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
+<p>A la pàgina hi trobaràs enllaços específics pel teu sistema operatiu</p>
+<img alt="_images/vbox_download.png" class="align-center" src="_images/vbox_download.png" />
+<p>Segueix l’enllaç corresponent. Per exemple, si vols instaŀlar-lo a un
+MSWidows, selecciona l’enllaç <em>Windows host</em>.</p>
+<p>Això et descarregarà un fitxer al teu equip.</p>
+</div>
+<div class="section" id="installa">
+<h3>2. Instaŀla<a class="headerlink" href="#installa" title="Link permanent a aquest títol">¶</a></h3>
+<p>Executa el fitxer que t’has descarregat en el pas anterior.</p>
+<p>En la majoria dels casos, accepta els valors per defecte a menys que
+tinguis alguna raó per no fer-ho. Únicament, si t’ofereix la possibilitat
+d’instaŀlar controladors (en anglès <em>drivers</em>) addicionals, probablement
+és una bona idea fer-ho per incrementar la usabilitat de l’aplicació.</p>
+</div>
+<div class="section" id="executa">
+<h3>3. Executa<a class="headerlink" href="#executa" title="Link permanent a aquest títol">¶</a></h3>
+<p>Arrenca el programa que acabes d’instaŀlar</p>
+<p>En MSWindows et trobaràs una pantalla similar a aquesta:</p>
+<img alt="_images/vbox_empty.png" class="align-center" src="_images/vbox_empty.png" />
+</div>
+</div>
+<div class="section" id="installacio-de-debian">
+<h2>Instaŀlació de Debian<a class="headerlink" href="#installacio-de-debian" title="Link permanent a aquest títol">¶</a></h2>
+<p>Ara que ja tenim disponible VirtualBox, és el moment de crear la màquina
+virtual.</p>
+<p>En primer lloc, caldrà disposar de la imatge del sistema operatiu a
+instaŀlar.</p>
+<p>Si no tens alguna preferència, et proposo que instaŀlis un Debian, doncs és
+una distribució que es distingeix, entre d’altres coses, per la seva
+estabilitat. A banda, tots els exemples d’execució que et mostraré estan
+realitzats sobre un Debian.</p>
+<p>Si estàs a la meva classe, probablement alguna companya o company ja
+disposa de la imatge descarregada, altrament, la pots descarregar del seu
+lloc oficial <a class="reference external" href="https://www.debian.org/">www,debian.org</a></p>
+<p>Això et descarregarà un fitxer anomenat
+<code class="docutils literal notranslate"><span class="pre">debian-11.0.0-amd64-netinst.iso</span></code>, potser amb alguna versió posteriori a
+la 11.0.0 depenent de quan estiguis llegint aquests continguts.</p>
+<p>Prem el botó de <em>nova</em> o selecciona l’opció dins de <em>Fitxer</em> i afegeix-li
+un nom. Si li comences per <em>Debian</em> el programa et posarà uns valors
+adequats.</p>
+<img alt="_images/vbox_debian_install_01.png" class="align-center" src="_images/vbox_debian_install_01.png" />
+<p>Indica-li quanta memòria li vols deixar. En el cas de l’equip que he fet
+servir per muntar aquest tutorial, diposava de 8 GB i, per tant, com a
+mínim li posaré 4GB per la màquina virtual. Com més li posis, millor
+treballaràs amb la màquina virtual i no tan bé amb els programes de la
+màquina amfitrió si els vols fer servir simultàniament.</p>
+<img alt="_images/vbox_debian_install_02.png" class="align-center" src="_images/vbox_debian_install_02.png" />
+<p>A continuació selecciona l’opció de <em>crear un disc dur virtual ara</em>,
+escull el tipus de fitxer de disc dur que et proposi per defecte, ubicat
+de forma dinàmica, amb 8 GB d’espai de disc com a mínim.</p>
+<p>Un cop ja el tinguis, et trobaràs una pantalla similar a aquesta:</p>
+<img alt="_images/vbox_debian_install_03.png" class="align-center" src="_images/vbox_debian_install_03.png" />
+<p>Cal «inserir» el CD amb la imatge ISO que has descarregat.  Ho farem
+seleccionant <em>Paràmetres</em> → <em>Emmagatzematge</em> → <em>Controlador: IDE</em> → Buit →
+<em>Atributs</em> → <em>Unitat òptica</em></p>
+<img alt="_images/vbox_debian_install_05.png" class="align-center" src="_images/vbox_debian_install_05.png" />
+<p>Ara clica sobre la icona blava de CD i selecciona el .iso que t’has
+descarregat.</p>
+<p>Accepta i prem la fletxa verda d’iniciar. T’apareixerà una nova finestra
+amb l’instaŀlador del Debian i ja podem començar a fer la instaŀlació
+estàndard.</p>
+<p>A continuació segueix, en aquest ordre:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="equip_install_debian.html"><span class="doc">passes d’instaŀlació de Debian</span></a></p></li>
+<li><p><a class="reference internal" href="equip_install_guest_additions.html"><span class="doc">Instal·lació Guest Additions</span></a>, i</p></li>
+<li><p><a class="reference internal" href="equip_configura_so.html"><span class="doc">Configuració bàsica del sistema operatiu</span></a></p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="equip_alternatives.html" class="btn btn-neutral float-right" title="Opcions alternatives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="equip_particio_propia.html" class="btn btn-neutral float-left" title="Opció recomanada: partició pròpia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020-2021 Moisès Gómez Girón
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
