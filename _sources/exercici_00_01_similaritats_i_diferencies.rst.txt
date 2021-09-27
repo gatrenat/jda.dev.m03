@@ -20,8 +20,8 @@ Si bé és possible que encara no sàpigues ben bé què és un programa ni què
 són els llenguatges de programació, potser sí seràs capaç d'extreure'n
 unes primeres conclusions d'aquests codis.
 
-Obre un document de text, sigui un LibreOffice Doc, un fitxer de text pla
-(.txt) o un nou email.
+Obre un document de text, sigui un LibreOffice Doc, un *pdf*, o un fitxer
+de text pla (ex. ``.txt``).
 
 Nota: si et veus amb temps, et proposo que ho intentis amb
 :doc:`reStructurreStructuredText <rst_intro>`.
@@ -78,3 +78,23 @@ Pregunta 5. Preferència
 Potser és molt d'hora, però, així a primera vista, quin dels llenguatges
 que et presento, veus més interessant? Perquè?
 
+
+Lliurament
+==========
+
+Per lliurar l'exercici, des de la consola, registra els canvis al control de versions i puja'ls a GitHub:
+
+   .. code-block:: console
+
+        $ git add --all
+        $ git commit -am "Completat l'exercici 00_01"
+        $ git push
+
+Pots comprovar que tot està correcte, mirant directament a l'aplicació Web de
+GitHub.
+
+*Nota*: en realitat no cal que facis un ``push`` per cada exercici que
+finalitzis. Ho pots fer només en finalitzar la teva sessió de treball. El
+que sí és **molt** recomanable és que facis el ``add`` i el ``commit`` per
+cada exercici, doncs et simplificarà molt trobar la solució en cas que
+tinguis problemes amb un lliurament.

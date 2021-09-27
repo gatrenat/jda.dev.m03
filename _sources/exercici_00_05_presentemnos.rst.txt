@@ -45,7 +45,7 @@ Segueix les instruccions:
    .. code-block:: console
         :emphasize-lines: 1
 
-        Hola, sóc la Adelita, la futura millor desenvolupadora del Món!
+        Hola, sóc Adelita, la futura millor desenvolupadora del Món!
 
    Per favor, si no et dius *Adelita*, canvia el nom. Pots modificar també la resta
    de la frase amb quelcom que sentis còmode.
@@ -78,9 +78,6 @@ Segueix les instruccions:
    .. code-block:: console
 
         $ git push
-
-   Com sempre, indica el teu password
-
 
 A banda de l'exercici, et recomano que tu mateix et defineixis canvis que
 t'agradaria provar. Crea d'altres fitxers pels teus experiments, que pots

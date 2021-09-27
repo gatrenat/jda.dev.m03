@@ -81,8 +81,6 @@ Segueix les instruccions:
 
         $ git push
 
-   Hauràs d'indicar el teu usuari i el password
-
 Pots comprovar que tot està correcte, mirant directament a l'aplicació Web de
 GitHub.
 
