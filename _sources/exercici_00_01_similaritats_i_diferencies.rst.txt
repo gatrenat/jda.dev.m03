@@ -23,8 +23,35 @@ unes primeres conclusions d'aquests codis.
 Obre un document de text, sigui un LibreOffice Doc, un *pdf*, o un fitxer
 de text pla (ex. ``.txt``).
 
-Nota: si et veus amb temps, et proposo que ho intentis amb
-:doc:`reStructurreStructuredText <rst_intro>`.
+Al document inclou les següents seccions:
+
+* Títol: el nom de l'exercici
+
+* Autoria: el teu nom complet i la data en que realitzes l'exercici
+
+* Introducció: una secció en que descriguis el context i contingut del
+  document. Per exemple, hi podries indicar que es tracta d'un exercici en
+  que compares la realització d'un mateix programa escrit en diferents
+  llenguatges de programació, i quin és l'objectiu general que creus que
+  persegueix l'exercici.
+
+* Una secció per cada pregunta. Et proposo que copiïs l'enunciat i després
+  hi contestis, de manera que puguis llegir la pregunta i tot seguit la
+  resposta. Potser podràs distingir d'alguna manera què és la pregunta i
+  què la resposta (ex. posant l'enunciat en *cursiva*)
+
+* Opcionalment (però molt recomanable) una secció de conclusions on
+  descriguis què has aprés en completar l'exercici, quines idees t'ha
+  inspirat, quines qüestions t'ha suscitat…
+
+Aquesta estructura de document la podràs fer servir per la resta
+d'exercicis que requereixin un document de text.
+
+Nota: si et veus amb temps, et proposo que intentis escriure-ho fent
+servir la notació de :doc:`reStructurreStructuredText <rst_intro>`.
+
+Preguntes
+=========
 
 Intenta contestar les següents preguntes el millor que et sigui possible.
 

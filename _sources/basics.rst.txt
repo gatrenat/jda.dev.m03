@@ -1,0 +1,27 @@
+#################################
+Elements bàsics de la programació
+#################################
+
+En aquesta secció aprendrem els conceptes més essencials de la
+programació.
+
+Si no els has vist mai, probablement et sorprendran. Si ja els coneixies,
+probablement et servirà per repassar.
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    basics_intro.rst
+    instruccions.rst
+
+    basics_exercicis.rst
+
+..  variables.rst
+..  expressions.rst
+..  condicionals.rst
+..  while.rst
+..  recorreguts.rst
+..  strings.rst
+..  control_bucles.rst
+..  basics_conclusions.rst

@@ -102,7 +102,10 @@ evitar-te problemes que et retardin les pràctiques. Ara, si tens
 curiositat per veure que hi ha, no et privis! La curiositat potser va
 matar el gat però segurament tu no ets pas un gat ;)
 
-En resum, si l'exercici està marcat com autoavaluable:
+Si et cal fer alguna modificació, avisa'm. Potser és quelcom interessant
+per ser afegit al sistema.
+
+En resum, si l'exercici està marcat com autoavaluable (**✓**):
 
 * executa ``prgtest`` per comprovar-ho
 
@@ -110,7 +113,8 @@ En resum, si l'exercici està marcat com autoavaluable:
 
 * lliura l'exercici quan passi totes les proves
 
-* no modifiquis el contingut de ``test/``.
+* no modifiquis el contingut de ``.introprg/``.
+
 
 .. _descripcio_exercicis_dificils:
 
