@@ -128,7 +128,7 @@ Trobaràs la URL del teu repositori aquí:
     :figclass: align-center
 
 Fes click sobre el botó verd *Code* i copia la el contingut de la caixeta
-que t'apareix. En el meu cas ``https://github.com/renat/introprg.git``.
+que t'apareix. En el meu cas ``git@github.com:renat/introprg.git``.
 Podràs copiar aquesta adreça amb la combinació de tecles ``<CTRL> c`` o bé
 fent click sobre el botó que apareix a la dreta. El podràs enganxar al teu
 correu amb ``<CTRL> v`` o amb el botó dret del ratolí i *Enganxa*.
@@ -181,11 +181,11 @@ Escriu les següents comandes amb cura, tot posant les teves dades:
 
     $ ssh-keygen -t ed25519 -C "elteucorreu@iesjoandaustria.org"
     Generating public/private ed25519 key pair.
-    Enter file in which to save the key (/home/.ssh/id_ed25519): 
+    Enter file in which to save the key (/home/usuari/.ssh/id_ed25519): 
     Enter passphrase (empty for no passphrase): 
     Enter same passphrase again: 
-    Your identification has been saved in /home/.ssh/id_ed25519.
-    Your public key has been saved in /home/.ssh/id_ed25519.pub.
+    Your identification has been saved in /home/usuari/.ssh/id_ed25519.
+    Your public key has been saved in /home/usuari/.ssh/id_ed25519.pub.
     The key fingerprint is:
     SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@iesjoandaustria.org
     The key's randomart image is:
@@ -434,11 +434,27 @@ a GitHub.
 .. code-block:: console
 
     $ cd /tmp
-    $ git clone https://github.com/elteuusuari/introprg.git temporal
+    $ git clone git@github.com:renat/introprg.gi temporal
     $ cd temporal
 
 Fixa't que disposes dels mateixos continguts que tenies al teu espai de treball
 guardat a la carpeta ``introprg/``
+
+Ens caldrà tornar a indicar qui som:
+
+.. code-block:: console
+
+    $ git config user.name "el teu nom real"
+    $ git config user.email "lamevaadreça@iesjoandaustria.org"
+
+Si vols, pots fer que ``git`` consideri aquestes dades per tots els
+repositoris que facis amb el teu usuari, simplement afegint ``--global``.
+
+.. code-block:: console
+
+    $ git config --global user.name "el teu nom real"
+    $ git config --global user.email "lamevaadreça@iesjoandaustria.org"
+
 
 Ara crearem un nou fitxer, l'afegirem a ``git`` i el pujarem a GitHub
 

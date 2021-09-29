@@ -40,7 +40,7 @@
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
     <link rel="next" title="Configuració de l’entorn" href="configuracio_entorn.html" />
-    <link rel="prev" title="Sobre els exercicis" href="sobre_exercicis.html" />
+    <link rel="prev" title="Un primer contacte" href="primer_contacte.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -94,9 +94,9 @@
 <li class="toctree-l2"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sobre_aquests_continguts.html">Sobre aquests continguts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sobre_exercicis.html">Sobre els exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Git i GitHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuracio_entorn.html">Configuració de l’entorn</a></li>
-<li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="com_lliurar.html">Com lliurar un exercici</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ritual_holamon.html">Ritual Hola Món!</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primeres_passes_exercicis.html">Llista d’exercicis</a></li>
@@ -268,7 +268,7 @@ cognoms.</p>
 <img alt="_images/githubrepourl.png" src="_images/githubrepourl.png" />
 </div>
 <p>Fes click sobre el botó verd <em>Code</em> i copia la el contingut de la caixeta
-que t’apareix. En el meu cas <code class="docutils literal notranslate"><span class="pre">https://github.com/renat/introprg.git</span></code>.
+que t’apareix. En el meu cas <code class="docutils literal notranslate"><span class="pre">git&#64;github.com:renat/introprg.git</span></code>.
 Podràs copiar aquesta adreça amb la combinació de tecles <code class="docutils literal notranslate"><span class="pre">&lt;CTRL&gt;</span> <span class="pre">c</span></code> o bé
 fent click sobre el botó que apareix a la dreta. El podràs enganxar al teu
 correu amb <code class="docutils literal notranslate"><span class="pre">&lt;CTRL&gt;</span> <span class="pre">v</span></code> o amb el botó dret del ratolí i <em>Enganxa</em>.</p>
@@ -327,11 +327,11 @@ les línies 4 i 5 del llistat següent.</p>
 <span class="normal">20</span>
 <span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span>ssh-keygen -t ed25519 -C <span class="s2">&quot;elteucorreu@iesjoandaustria.org&quot;</span>
 </span><span class="go">Generating public/private ed25519 key pair.</span>
-<span class="hll"><span class="go">Enter file in which to save the key (/home/.ssh/id_ed25519):</span>
+<span class="hll"><span class="go">Enter file in which to save the key (/home/usuari/.ssh/id_ed25519):</span>
 </span><span class="hll"><span class="go">Enter passphrase (empty for no passphrase):</span>
 </span><span class="hll"><span class="go">Enter same passphrase again:</span>
-</span><span class="go">Your identification has been saved in /home/.ssh/id_ed25519.</span>
-<span class="go">Your public key has been saved in /home/.ssh/id_ed25519.pub.</span>
+</span><span class="go">Your identification has been saved in /home/usuari/.ssh/id_ed25519.</span>
+<span class="go">Your public key has been saved in /home/usuari/.ssh/id_ed25519.pub.</span>
 <span class="go">The key fingerprint is:</span>
 <span class="go">SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@iesjoandaustria.org</span>
 <span class="go">The key&#39;s randomart image is:</span>
@@ -524,12 +524,23 @@ Sovint el contingut d’aquesta carpeta és eliminat cada cop que iniciem
 l’equip.  Per tant, el que fem aquí no tindria gaire futur si no el pugem
 a GitHub.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span> /tmp
-<span class="gp">$ </span>git clone https://github.com/elteuusuari/introprg.git temporal
+<span class="gp">$ </span>git clone git@github.com:renat/introprg.gi temporal
 <span class="gp">$ </span><span class="nb">cd</span> temporal
 </pre></div>
 </div>
 <p>Fixa’t que disposes dels mateixos continguts que tenies al teu espai de treball
 guardat a la carpeta <code class="docutils literal notranslate"><span class="pre">introprg/</span></code></p>
+<p>Ens caldrà tornar a indicar qui som:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config user.name <span class="s2">&quot;el teu nom real&quot;</span>
+<span class="gp">$ </span>git config user.email <span class="s2">&quot;lamevaadreça@iesjoandaustria.org&quot;</span>
+</pre></div>
+</div>
+<p>Si vols, pots fer que <code class="docutils literal notranslate"><span class="pre">git</span></code> consideri aquestes dades per tots els
+repositoris que facis amb el teu usuari, simplement afegint <code class="docutils literal notranslate"><span class="pre">--global</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git config --global user.name <span class="s2">&quot;el teu nom real&quot;</span>
+<span class="gp">$ </span>git config --global user.email <span class="s2">&quot;lamevaadreça@iesjoandaustria.org&quot;</span>
+</pre></div>
+</div>
 <p>Ara crearem un nou fitxer, l’afegirem a <code class="docutils literal notranslate"><span class="pre">git</span></code> i el pujarem a GitHub</p>
 <p>El podem crear, per exemple, editant-lo:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gedit eliminam.txt
@@ -651,7 +662,7 @@ pots revisar <a class="reference external" href="https://stackoverflow.com/quest
         <a href="configuracio_entorn.html" class="btn btn-neutral float-right" title="Configuració de l’entorn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sobre_exercicis.html" class="btn btn-neutral float-left" title="Sobre els exercicis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="primer_contacte.html" class="btn btn-neutral float-left" title="Un primer contacte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

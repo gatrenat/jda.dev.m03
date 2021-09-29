@@ -1,10 +1,10 @@
 ###############################################
-|exerciseicon___| Exercici 00_04. Presentem-nos
+|exerciseicon___| Exercici 00_05. Presentem-nos
 ###############################################
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``00_04_presentemnos/``
+* Carpeta de lliurament: ``00_05_presentemnos/``
 
 * Continguts relacionats: :doc:`ritual_holamon`
 
