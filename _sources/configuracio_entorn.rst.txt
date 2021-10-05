@@ -5,6 +5,9 @@ Configuració de l'entorn
 .. important:: Aquesta secció no la podràs realitzar fins que no t'hagi
    actualitzat el teu repositori. Paciència
 
+General
+=======
+
 Perquè el sistema de proves de l'assignatura pugui funcionar al teu equip,
 cal instaŀlar i configurar alguns elements.
 
@@ -54,3 +57,17 @@ L'error que no voldríem és el següent:
 
 Si t'ha resposta això després d'haver executat ``configura_introprg.sh``,
 demana ajuda.
+
+Terminal amb fons negre
+=======================
+
+Si decideixes fer servir un terminal amb el fons negre, és possible que
+et resulti més visible la sortida de ``prgtest`` si afegeixes la següent
+línia a ``~/.bashrc``
+
+.. code-block:: console
+
+   INTROPRG_COLORSCHEMA=dark
+
+Experimenta i, en cas que no t'agradi com es veu, simplement elimina la
+línia del teu ``~/.bashrc``.

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introducció &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  <title>Expressions numèriques &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Instruccions seqüencials" href="instruccions.html" />
-    <link rel="prev" title="Elements bàsics de la programació" href="basics.html" />
+    <link rel="next" title="Expressions booleanes" href="expressions_booleanes_relacionals.html" />
+    <link rel="prev" title="Operadors i expressions" href="expressions.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -91,10 +91,16 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Introducció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics_intro.html">Introducció</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="expressions.html">Operadors i expressions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Expressions numèriques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expressions_booleanes_relacionals.html">Expressions booleanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expressions_booleanes_logics.html">Expressions booleanes amb operadors lògics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taules_veritat.html">Taules de veritat</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d’exercicis</a></li>
 </ul>
 </li>
@@ -147,7 +153,9 @@
         
           <li><a href="basics.html">Elements bàsics de la programació</a> &raquo;</li>
         
-      <li>Introducció</li>
+          <li><a href="expressions.html">Operadors i expressions</a> &raquo;</li>
+        
+      <li>Expressions numèriques</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -165,78 +173,47 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="introduccio">
-<h1>Introducció<a class="headerlink" href="#introduccio" title="Link permanent a aquest títol">¶</a></h1>
-<p>Malgrat molta gent pensa que la programació és quelcom molt complicat, en
-realitat es tracta de saber <em>jugar</em> amb un conjunt relativament reduït de
-conceptes bàsics.</p>
-<div class="sidebar">
-<p class="sidebar-title">Corredor amb Tangram</p>
-<a class="reference internal image-reference" href="_images/Tangram-man.svg"><img alt="Corredor fet amb Tangram" src="_images/Tangram-man.svg" width="200px" /></a>
+  <div class="section" id="expressions-numeriques">
+<h1>Expressions numèriques<a class="headerlink" href="#expressions-numeriques" title="Link permanent a aquest títol">¶</a></h1>
+<p>Direm que una expressió és numèrica si el seu resultat és numèric.</p>
+<p>Hem vist que podem composar expressions numèriques fent servir nombres
+combinats amb els operadors <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> i <code class="docutils literal notranslate"><span class="pre">/</span></code> per sumar, restar,
+multiplicar i dividir, respectivament.</p>
+<p>També hem vist la funció <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> que ens permet treure el signe
+d’un valor numèric.</p>
+<p>Quan dividim, cal tenir en compte que <code class="docutils literal notranslate"><span class="pre">/</span></code> en Java manté el tipus. Per
+exemple, si els dos operands són enters, el resultat serà enter, mentre
+que si un és decimal, el resultat serà decimal</p>
+<ul class="simple">
+<li><p>1 / 2 → 0</p></li>
+<li><p>1.0 / 2 → 0.5</p></li>
+<li><p>1 / 2.0 → 0.5</p></li>
+<li><p>1 / 2d → 0.5</p></li>
+</ul>
+<p>Fixa’t com, en el primer cas, el resultat és 0, mentre que en els altres
+tres és 0.5. En el moment que un dels operadors és decimal, el resultat
+serà decimal. Ah! la <code class="docutils literal notranslate"><span class="pre">d</span></code> que apareix al darrer exemple és de <code class="docutils literal notranslate"><span class="pre">double</span></code>
+i permet indicar a Java que el literal s’ha de considerar d’aquest tipus.
+s</p>
+<p>Saps, però, quin és el valor de l’expressió <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">0</span></code>? Potser has pensat que
+infinit, però com que infinit és un número molt gran per Java, et
+respondrà de la següent manera:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshell&gt; 5 / 0</span>
+<span class="hll"><span class="go">|  Exception java.lang.ArithmeticException: / by zero</span>
+</span><span class="hll"><span class="go">|        at (#1:1)</span>
+</span></pre></div>
 </div>
-<p>Potser t’ajuda la idea de la formació de siluetes mitjançant les peces
-d’un <a class="reference external" href="https://ca.wikipedia.org/wiki/Tangram">tangram</a></p>
-<p>En breu, el joc del Tangram es basa en una silueta <em>objectiu</em> més un
-<em>conjunt de peces</em> amb les que conformar la silueta. La gràcia està en ser
-capaços de combinar aquestes peces en diferents posicions fins a
-aconseguir l’objectiu.</p>
-<p>En aquest joc són tan importants les peces com l’objectiu.  Evidentment,
-si et falta alguna de les peces necessàries per construir la figura, no la
-aconseguiràs. De la mateixa manera, si no tens clara la figura a
-construir, probablement pots passar-te una bona estona combinant peces i
-gaudint del que surti, però el que estaràs fent no serà ben be jugar al
-Tangram.</p>
-<p>Si bé, algunes figures del Tangram poden arribar a ser molt complexes i
-requerir-nos estona per descobrir-les, aviat veurem que els programes són
-un <em>joc</em> una mica més complex. Amb tot, la programació comparteix en certa
-mesura les característiques del joc del Tangram: ens cal un objectiu –allò
-que volem que faci el programa– i un conjunt de peces que anomenarem
-<em>codi</em> i que està format per representacions de dades i instruccions.</p>
-<p>Una diferència important és que en programació les peces es poden repetir
-tants cops com ens calguin, i no cal que les fem servir totes per
-completar cada objectiu.</p>
-<p>A aquesta part del curs, aprendrem a reconèixer i utilitzar les <em>peces
-bàsiques</em> de la programació.</p>
-<p>En quant a objectius, bé, en trobaràs un bon grapat en forma d’enunciats
-d’exercicis.</p>
-<p>Hi ha un element important que al joc del Tangram queda amagat per obvi:
-saber si has aconseguit l’objectiu. En el cas del Tangram ho saps perquè
-veus o no la figura resultant i si et sobren o no peces. En programació,
-saber si hem aconseguit o no l’objectiu, no sol ser tan obvi i, per tant,
-ens caldrà realitzar comprovacions sovint més sofisticades que una simple
-ullada. D’això en direm <em>proves</em> o <em>tests</em>.</p>
-<p>Un altre element que no explicitem al Tangram és indicar quina és la
-figura que hem construït. En teoria la mateixa figura ja ho diu, oi? Ja
-veurem que saber què fan els programes no sempre serà tan evident. Per
-salut mental, els desenvolupadors hem aprés que cal <em>documentar</em>
-adequadament els nostres programes, de manera que, quan els vulguem
-revisar (cosa molt normal) puguem entendre’l.</p>
-<p>Una de les coses que aprens a mida que vas jugant al Tangram és a detectar
-patrons, és a dir, combinacions que has vist prèviament que fan
-determinades formes parcials què, combinades entre si, permeten generar
-figures més complexes. Aquest curs persegueix fer-te conscient d’aquests
-patrons i incentivar-te a trobar-los de manera activa.</p>
-<p>El següent diagrama resumeix aquests elements: objectiu, codi,
-documentació, proves, i patrons</p>
-<div class="figure align-center" id="id1">
-<p class="plantuml">
-<img src="_images/plantuml-3dba8cc367c296cab5363f0be0140ba590c62be4.png" alt="&#64;startuml
-
-hide circle
-hide empty members
-skinparam monochrome true
-
-Programació *-down- Objectiu
-Programació *-down- Codi
-Programació *-down- Documentació
-Programació *-down- Proves
-Programació *-down- Patrons
-
-&#64;enduml"/>
-</p>
-<p class="caption"><span class="caption-text">Elements generals de la programació</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>Amb tot això en ment, comencem!</p>
+<p>Es a dir, et generarà un error en intentar executar-ho de divisió per
+zero.</p>
+<p>A banda, és interessant conèixer l’operador <code class="docutils literal notranslate"><span class="pre">%</span></code> que correspon al mòdul o
+resta de la divisió entera.</p>
+<ul class="simple">
+<li><p>11 % 2 → 1</p></li>
+<li><p>12 % 2 → 0</p></li>
+</ul>
+<p>En aquest cas, calcular mòdul 2 ens permet saber si un nombre és parell o
+senar doncs els parells sempre resultaran amb resta 0 i els senars amb 1.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_01_08_calculadora_basica.html"><span class="doc"> Exercici 01_08. Calculadora bàsica</span></a></p>
 </div>
 
 
@@ -270,10 +247,10 @@ Programació *-down- Patrons
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="instruccions.html" class="btn btn-neutral float-right" title="Instruccions seqüencials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="expressions_booleanes_relacionals.html" class="btn btn-neutral float-right" title="Expressions booleanes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="basics.html" class="btn btn-neutral float-left" title="Elements bàsics de la programació" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="expressions.html" class="btn btn-neutral float-left" title="Operadors i expressions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

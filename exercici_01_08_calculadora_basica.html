@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exercici 01_02. Duplica un número &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  <title>Exercici 01_08. Calculadora bàsica &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 01_03. Inicialització en línia" href="exercici_01_03_inicialitzacio_en_linia.html" />
-    <link rel="prev" title="Exercici 01_01. Comprensió de EndevinaNombre" href="exercici_01_01_compresio_endevinanombre.html" />
+    <link rel="next" title="Exercici 01_09. Algunes expressions amb operadors relacionals" href="exercici_01_09_operadors_relacionals.html" />
+    <link rel="prev" title="Exercici 01_07. Valors del tipus adequat" href="exercici_01_07_valors_del_tipus_adequat.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -98,13 +98,13 @@
 <li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d’exercicis</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_01_compresio_endevinanombre.html"> Exercici 01_01. Comprensió de <code class="docutils literal notranslate"><span class="pre">EndevinaNombre</span></code></a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 01_02. Duplica un número</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_01_02_duplica.html"> Exercici 01_02. Duplica un número</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_03_inicialitzacio_en_linia.html"> Exercici 01_03. Inicialització en línia</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_04_reduccio_de_prints.html"> Exercici 01_04. Reduïm <code class="docutils literal notranslate"><span class="pre">prints</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_05_noms_i_cognoms.html"> Exercici 01_05. Noms i cognoms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_06_nom_variables.html"> Exercici 01_06. Noms de variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_07_valors_del_tipus_adequat.html"> Exercici 01_07. Valors del tipus adequat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_01_08_calculadora_basica.html"> Exercici 01_08. Calculadora bàsica</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 01_08. Calculadora bàsica</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_09_operadors_relacionals.html"> Exercici 01_09. Algunes expressions amb operadors relacionals</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_10_expressions_amb_operadors_logics.html"> Exercici 01_10. Expressions amb operadors lògics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_01_11_precedencia_operadors.html"> Exercici 01_11. Precedència dels operadors</a></li>
@@ -169,7 +169,7 @@
         
           <li><a href="basics_exercicis_sequencials.html">Instruccions seqüencials</a> &raquo;</li>
         
-      <li> Exercici 01_02. Duplica un número</li>
+      <li> Exercici 01_08. Calculadora bàsica</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,56 +187,72 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="exerciseicon-t-exercici-01-02-duplica-un-numero">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 01_02. Duplica un número<a class="headerlink" href="#exerciseicon-t-exercici-01-02-duplica-un-numero" title="Link permanent a aquest títol">¶</a></h1>
+  <div class="section" id="exerciseicon-t-exercici-01-08-calculadora-basica">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 01_08. Calculadora bàsica<a class="headerlink" href="#exerciseicon-t-exercici-01-08-calculadora-basica" title="Link permanent a aquest títol">¶</a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">01_02_duplica/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="declaracions_i_assignacions.html"><span class="doc">Declaracions i assignacions</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">01_08_calculadora_basica/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="expressions_numeriques.html"><span class="doc">Expressions numèriques</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Desenvolupa un programa que dupliqui per 2 el número que rep en
-executar-ho</p>
+<p>Desenvolupa una calculadora bàsica</p>
+<p>El programa demanarà dos nombres enters i mostrarà el resultat de
+sumar-los, restar el segon al primer, multiplicar-los i dividir el primer
+pel segon</p>
+<p>No ens preocuparem si els usuaris ens introdueixen valors que no siguin
+adequats, com per exemple lletres o una divisió per zero.</p>
 <p>Aquí tens una plantilla pel teu codi. Pots copiar-la i enganxar-la al teu
-editor pel fitxer <code class="docutils literal notranslate"><span class="pre">Duplica.java</span></code>. Únicament hauràs de
+editor pel fitxer <code class="docutils literal notranslate"><span class="pre">CalculadoraBasica.java</span></code>. Únicament hauràs de
 reemplaçar els comentaris <code class="docutils literal notranslate"><span class="pre">/*█████*/</span></code> pel codi corresponent.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Aquest programa duplica el valor que rep com a primer argument</span>
+<span class="cm"> * Aquest programa implementa una calculadora bàsica</span>
+<span class="cm"> *</span>
+<span class="cm"> * Demana dos nombres per entrada estàndard i mostra el</span>
+<span class="cm"> * resultat de sumar-los, restar-li el segon al primer, multiplicar-los,</span>
+<span class="cm"> * dividir el primer entre el segon.</span>
 <span class="cm"> *</span>
 <span class="cm"> * El programa no controla valors no adequats d&#39;entrada</span>
 <span class="cm"> */</span>
 
-<span class="kd">class</span> <span class="nc">Duplica</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">CalculadoraBasica</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
 
-        <span class="c1">// declara les variables a utilitzar</span>
-        <span class="kt">int</span> <span class="n">nombreADuplicar</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">nombreDuplicat</span><span class="p">;</span>
+        <span class="c1">// obté operands d&#39;entrada</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Primer operand:&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">primerOperand</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Segon operand:&quot;</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">segonOperand</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 
-        <span class="c1">// obté el nombre a duplicar</span>
-        <span class="n">nombreADuplicar</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-
-        <span class="c1">// calcula el doble</span>
-        <span class="n">nombreDuplicat</span> <span class="o">=</span>  <span class="cm">/*█████*/</span><span class="p">;</span>
+        <span class="c1">// operacions</span>
+        <span class="kt">int</span> <span class="n">suma</span> <span class="o">=</span> <span class="n">primerOperand</span> <span class="o">+</span> <span class="n">segonOperand</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">resta</span> <span class="o">=</span> <span class="n">primerOperand</span> <span class="cm">/*█████*/</span> <span class="n">segonOperand</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">multiplicacio</span> <span class="o">=</span> <span class="cm">/*█████*/</span><span class="p">;</span>
+        <span class="cm">/*█████*/</span><span class="p">;</span>
 
         <span class="c1">// mostra resultats</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;El doble de &quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="cm">/*█████*/</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; és &quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">primerOperand</span> <span class="o">+</span> <span class="s">&quot; + &quot;</span> <span class="o">+</span> <span class="n">segonOperand</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">suma</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">primerOperand</span> <span class="o">+</span> <span class="cm">/*█████*/</span> <span class="o">+</span> <span class="n">segonOperand</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">resta</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">primerOperand</span> <span class="o">+</span> <span class="cm">/*█████*/</span> <span class="o">+</span> <span class="n">segonOperand</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="cm">/*█████*/</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="cm">/*█████*/</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Per exemple, considera la següent execució:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java Duplica <span class="m">5</span>
-<span class="hll"><span class="go">El doble de 5 és 10</span>
+<p>Quan l’executis hauràs d’introduir dos nombres i et mostrarà el resultat
+per cada operació. Una simulació de l’execució és:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java CalculadoraBasica
+<span class="hll"><span class="go">Primer operand:</span>
+</span><span class="go">3</span>
+<span class="hll"><span class="go">Segon operand:</span>
+</span><span class="go">5</span>
+<span class="hll"><span class="go">3 + 5 = 8</span>
+</span><span class="hll"><span class="go">3 - 5 = -2</span>
+</span><span class="hll"><span class="go">3 * 5 = 15</span>
+</span><span class="hll"><span class="go">3 / 5 = 0</span>
 </span></pre></div>
 </div>
-<p>En acabar, no oblidis pujar els canvis a GitHub! Si has oblidat com
-fer-ho, torna a revisar la guia <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">Com lliurar un exercici</span></a></p>
 </div>
 
 
@@ -270,10 +286,10 @@ fer-ho, torna a revisar la guia <a class="reference internal" href="com_lliurar.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exercici_01_03_inicialitzacio_en_linia.html" class="btn btn-neutral float-right" title="Exercici 01_03. Inicialització en línia" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exercici_01_09_operadors_relacionals.html" class="btn btn-neutral float-right" title="Exercici 01_09. Algunes expressions amb operadors relacionals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercici_01_01_compresio_endevinanombre.html" class="btn btn-neutral float-left" title="Exercici 01_01. Comprensió de EndevinaNombre" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercici_01_07_valors_del_tipus_adequat.html" class="btn btn-neutral float-left" title="Exercici 01_07. Valors del tipus adequat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

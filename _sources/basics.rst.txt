@@ -14,11 +14,12 @@ probablement et servirà per repassar.
 
     basics_intro.rst
     instruccions.rst
+    variables.rst
+    expressions.rst
 
     basics_exercicis.rst
 
-..  variables.rst
-..  expressions.rst
+
 ..  condicionals.rst
 ..  while.rst
 ..  recorreguts.rst
