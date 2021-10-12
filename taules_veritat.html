@@ -511,10 +511,14 @@ dir que també el podem expressar com una expressió complexa:</p>
 <ul class="simple">
 <li><p>(A o B) i no (A i B)</p></li>
 </ul>
+<p>o en notació Java</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">||</span> <span class="pre">B)</span> <span class="pre">&amp;&amp;</span> <span class="pre">!</span> <span class="pre">(A</span> <span class="pre">&amp;&amp;</span> <span class="pre">B)</span></code></p></li>
+</ul>
 <p>Fixa’t que cal afegir els parèntesis perquè de manera natural, el Java els
 agruparia així:</p>
 <ul class="simple">
-<li><p>(A o (B i (no A))) o B</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(A</span> <span class="pre">||</span> <span class="pre">(B</span> <span class="pre">&amp;&amp;</span> <span class="pre">(!</span> <span class="pre">A)))</span> <span class="pre">||</span> <span class="pre">B</span></code></p></li>
 </ul>
 <p>Ara ve la gràcia de donar-li noms a les subexpressions:</p>
 <ul class="simple">
@@ -597,8 +601,8 @@ tantes com ens calguin. Únicament cal tenir en compte que la taula es farà
 més gran. Per exemple, l’afirmació «Tant la Clara, com el Marc com tu, sou
 majors d’edat» es podria representar com</p>
 <ul class="simple">
-<li><p>edatClara &gt;= 18 &amp;&amp; edatMarc &gt;= 18 &amp;&amp; edatTeva &gt;= 18</p></li>
-<li><p>A &amp;&amp; B &amp;&amp; C → (A &amp;&amp; B) &amp;&amp; C → D &amp;&amp; C</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">edatClara</span> <span class="pre">&gt;=</span> <span class="pre">18</span> <span class="pre">&amp;&amp;</span> <span class="pre">edatMarc</span> <span class="pre">&gt;=</span> <span class="pre">18</span> <span class="pre">&amp;&amp;</span> <span class="pre">edatTeva</span> <span class="pre">&gt;=</span> <span class="pre">18</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&amp;&amp;</span> <span class="pre">B</span> <span class="pre">&amp;&amp;</span> <span class="pre">C</span> <span class="pre">→</span> <span class="pre">(A</span> <span class="pre">&amp;&amp;</span> <span class="pre">B)</span> <span class="pre">&amp;&amp;</span> <span class="pre">C</span> <span class="pre">→</span> <span class="pre">D</span> <span class="pre">&amp;&amp;</span> <span class="pre">C</span></code></p></li>
 </ul>
 <p>La taula corresponent tindria el següent aspecte:</p>
 <table class="docutils align-default">

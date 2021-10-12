@@ -156,10 +156,14 @@ dir que també el podem expressar com una expressió complexa:
 
 * (A o B) i no (A i B)
 
+o en notació Java
+
+* ``(A || B) && ! (A && B)``
+
 Fixa't que cal afegir els parèntesis perquè de manera natural, el Java els
 agruparia així:
 
-* (A o (B i (no A))) o B
+* ``(A || (B && (! A))) || B``
 
 Ara ve la gràcia de donar-li noms a les subexpressions:
 
@@ -195,9 +199,9 @@ tantes com ens calguin. Únicament cal tenir en compte que la taula es farà
 més gran. Per exemple, l'afirmació "Tant la Clara, com el Marc com tu, sou
 majors d'edat" es podria representar com
 
-* edatClara >= 18 && edatMarc >= 18 && edatTeva >= 18
+* ``edatClara >= 18 && edatMarc >= 18 && edatTeva >= 18``
 
-* A && B && C → (A && B) && C → D && C
+* ``A && B && C → (A && B) && C → D && C``
 
 La taula corresponent tindria el següent aspecte:
 
@@ -222,7 +226,6 @@ haguessin 4 variables, la A alternaria cada 8 (2³→8). En general, el
 nombre de files amb el mateix valor el podrem calcular a partir de 2
 elevat al nombre de variables que venen a continuació. No et preocupis
 doncs en aquest curs no passarem de 4 variables.
-
 
 |exerciseicon___| :doc:`exercici_01_12_taules_veritat`
 
