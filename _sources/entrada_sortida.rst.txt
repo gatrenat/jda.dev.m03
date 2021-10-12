@@ -92,7 +92,7 @@ Fem un petit programa que demostri com es pot llegir:
 .. code-block:: java
     :linenos:
 
-    class ComEtDius {
+    public class ComEtDius {
         public static void main(String[] args) {
             System.out.println("Com et dius?");
             String nom = Entrada.readLine();
@@ -160,5 +160,3 @@ ja els coneixem i l'últim és una mica diferent.
 * ``double``: ``double variable = Double.parseDouble(Entrada.readLine());``
 
 * ``char``: ``char variable = Entrada.readLine().charAt(0);``
-
-

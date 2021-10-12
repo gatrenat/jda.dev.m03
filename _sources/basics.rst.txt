@@ -16,11 +16,11 @@ probablement et servirà per repassar.
     instruccions.rst
     variables.rst
     expressions.rst
+    condicionals.rst
 
     basics_exercicis.rst
 
 
-..  condicionals.rst
 ..  while.rst
 ..  recorreguts.rst
 ..  strings.rst

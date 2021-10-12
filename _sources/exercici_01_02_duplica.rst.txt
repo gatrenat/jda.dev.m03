@@ -31,7 +31,7 @@ reemplaçar els comentaris ``/*█████*/`` pel codi corresponent.
      * El programa no controla valors no adequats d'entrada
      */
 
-    class Duplica {
+    public class Duplica {
         public static void main(String[] args) {
 
             // declara les variables a utilitzar

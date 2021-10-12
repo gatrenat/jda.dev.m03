@@ -40,7 +40,7 @@ reemplaçar els comentaris ``/*█████*/`` pel codi corresponent.
      * El programa no controla valors no adequats d'entrada
      */
 
-    class CalculadoraBasica {
+    public class CalculadoraBasica {
         public static void main(String[] args) {
 
             // obté operands d'entrada

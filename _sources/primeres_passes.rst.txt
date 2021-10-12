@@ -15,6 +15,7 @@ bé, ment oberta, molta curiositat i… endavant!
     sobre_exercicis.rst
     primer_contacte.rst
     holagit.rst
+    primer_contacte.rst
     configuracio_entorn.rst
     com_lliurar.rst
     ritual_holamon.rst
