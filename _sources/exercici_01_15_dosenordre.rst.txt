@@ -24,7 +24,7 @@ Indica amb un comentari, que passa si els dos números són iguals.
 Exemples d'interacció:
 
 .. code-block:: console
-    :emphasize-lines: 2, 4, 6, 9, 11, 13
+    :emphasize-lines: 2, 4, 6
 
     $ java DosEnOrdre
     Primer?
@@ -32,6 +32,19 @@ Exemples d'interacció:
     Segon?
     2
     2 i 3
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
+
+    $ java DosEnOrdre
+    Primer?
+    2
+    Segon?
+    3
+    2 i 3
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
 
     $ java DosEnOrdre
     Primer?
