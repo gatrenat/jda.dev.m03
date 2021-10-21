@@ -182,7 +182,7 @@ entendre-ho tot.
      //       36
      //       ↑ aquest és el valor que assigna finalment a numero
 
-|exerciseicon___| :doc:`exercici_01_01_compresio_endevinanombre`
+|exerciseicon___| :doc:`exercici_01_01_comprensio`
 
 |exerciseicon__T| :doc:`exercici_01_02_duplica`
 
