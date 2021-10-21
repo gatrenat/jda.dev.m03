@@ -8,7 +8,7 @@ La llista d'exercicis sobre :doc:`instruccions seqüencials <instruccions>`
 .. toctree::
     :titlesonly:
 
-    exercici_01_01_compresio_endevinanombre.rst
+    exercici_01_01_comprensio.rst
     exercici_01_02_duplica.rst
     exercici_01_03_inicialitzacio_en_linia.rst
     exercici_01_04_reduccio_de_prints.rst
