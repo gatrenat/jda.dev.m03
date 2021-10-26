@@ -27,8 +27,8 @@ següent:
     :emphasize-lines: 2, 4, 6
 
     $ java SumaPositius
-    Introdueix el primer valor:
+    Introdueix el primer valor
     3
-    Introdueix el segon valor:
+    Introdueix el segon valor
     -1
     La suma és 3
