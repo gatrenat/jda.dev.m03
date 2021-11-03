@@ -27,6 +27,5 @@ Els continguts que treballarem es troben dividits en els següents punts:
     recorreguts_while.rst
     recorreguts_for.rst
     recorreguts_numerics.rst
-
-..  recorreguts_bucle_niat.rst
-..  recorreguts_conclusions.rst
+    recorreguts_bucle_niat.rst
+    recorreguts_conclusions.rst
