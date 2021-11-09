@@ -103,7 +103,7 @@ El bucle sol tenir la següent forma:
 .. code-block:: java
 
     for (int i=inici; i >= fi; i = i - increment) {
-        processai;
+        processa_i;
     }
 
 O si directament el valor de l'increment està expressat en negatiu
@@ -111,7 +111,7 @@ O si directament el valor de l'increment està expressat en negatiu
 .. code-block:: java
 
     for (int i=inici; i >= fi; i = i + decrement) {
-        processai;
+        processa_i;
     }
 
 
