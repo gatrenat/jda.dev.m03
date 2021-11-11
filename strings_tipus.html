@@ -411,6 +411,22 @@ valors. Una manera molt còmoda de fer-ho és aprofitar la funció
 patró amb marques de variables més tants valors com hi hagi a les marques
 del String.</p>
 <p>Per exemple, considera el següent codi:</p>
+<blockquote>
+<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">edat</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">&quot;Nefertiti&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">missatge</span> <span class="o">=</span> <span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;L&#39;edat de %s és %d%n&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">edat</span><span class="p">);</span>
+
+<span class="c1">// missatge.equals(&quot;L&#39;edat de Nefertiti és 19\n&quot;)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Fixa’t com el nom ve a substituir el <code class="docutils literal notranslate"><span class="pre">%s</span></code> del text, mentre que
+l’edat apareix en comptes de <code class="docutils literal notranslate"><span class="pre">%d</span></code>. El <code class="docutils literal notranslate"><span class="pre">%n</span></code> per la seva banda, escriu un
+salt de línia que en sistemes tipus unix/linux correspondria <code class="docutils literal notranslate"><span class="pre">\n</span></code></p>
+<p>Trobaràs tot el detall sobre els elements que poden aparèixer dins del
+patró de <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> a la secció <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax">Format String Syntax</a>.</p>
+<p>Permet-me un exemple una mica més sofisticat fent servir l’operador
+ternari <code class="docutils literal notranslate"><span class="pre">?:</span></code>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">edat</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
 <span class="n">String</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">&quot;Nefertiti&quot;</span><span class="p">;</span>
 <span class="n">String</span> <span class="n">cognoms</span> <span class="o">=</span> <span class="s">&quot;Peláez Ramírez&quot;</span><span class="p">;</span>
@@ -423,16 +439,15 @@ del String.</p>
 <span class="c1">// missatge.equals(&quot;Nefertiti Peláez Ramírez és major d&#39;edat doncs té 19 anys\n&quot;)</span>
 </pre></div>
 </div>
-<div class="sidebar">
-<p class="sidebar-title">Un operador ternari</p>
+<div class="admonition tip">
+<p class="admonition-title">Truc</p>
+<p>Un operador ternari</p>
 <p>Fins ara potser no t’havies trobat amb l’expressió <code class="docutils literal notranslate"><span class="pre">edat</span> <span class="pre">&lt;</span> <span class="pre">18</span> <span class="pre">?</span> <span class="pre">&quot;menor&quot;:</span> <span class="pre">&quot;major&quot;</span></code>.
 Es tracta d’un operador que presenta tres operands <code class="docutils literal notranslate"><span class="pre">edat</span> <span class="pre">&lt;</span> <span class="pre">18</span></code>,
 <code class="docutils literal notranslate"><span class="pre">menor</span></code> i <code class="docutils literal notranslate"><span class="pre">major</span></code>.</p>
 <p>Bàsicament fa que si la condició és certa, resulta en el segon operand
 (en aquest cas <code class="docutils literal notranslate"><span class="pre">&quot;menor&quot;</span></code>) i si és falsa, en el tercer.</p>
 </div>
-<p>Trobaràs tot el detall sobre els elements que poden aparèixer dins del
-patró de <code class="docutils literal notranslate"><span class="pre">String.format()</span></code> a la secció <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax">Format String Syntax</a>.</p>
 </div>
 <div class="section" id="per-saber-mes">
 <h2>Per saber més<a class="headerlink" href="#per-saber-mes" title="Link permanent a aquest títol">¶</a></h2>

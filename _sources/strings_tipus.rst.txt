@@ -257,6 +257,26 @@ del String.
 
 Per exemple, considera el següent codi:
 
+   .. code-block:: java
+
+    int edat = 19;
+    String nom = "Nefertiti";
+    String missatge = String.format("L'edat de %s és %d%n", nom, edat);
+
+    // missatge.equals("L'edat de Nefertiti és 19\n")
+
+Fixa't com el nom ve a substituir el ``%s`` del text, mentre que
+l'edat apareix en comptes de ``%d``. El ``%n`` per la seva banda, escriu un
+salt de línia que en sistemes tipus unix/linux correspondria ``\n`` 
+
+Trobaràs tot el detall sobre els elements que poden aparèixer dins del
+patró de ``String.format()`` a la secció `Format String Syntax
+<http://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax>`_.
+
+
+Permet-me un exemple una mica més sofisticat fent servir l'operador
+ternari ``?:``.
+
 .. code-block:: java
 
     int edat = 19;
@@ -270,7 +290,7 @@ Per exemple, considera el següent codi:
 
     // missatge.equals("Nefertiti Peláez Ramírez és major d'edat doncs té 19 anys\n")
 
-.. sidebar:: Un operador ternari
+.. tip:: Un operador ternari
 
     Fins ara potser no t'havies trobat amb l'expressió ``edat < 18 ? "menor": "major"``.
     Es tracta d'un operador que presenta tres operands ``edat < 18``,
@@ -279,10 +299,6 @@ Per exemple, considera el següent codi:
     Bàsicament fa que si la condició és certa, resulta en el segon operand
     (en aquest cas ``"menor"``) i si és falsa, en el tercer.
 
-
-Trobaràs tot el detall sobre els elements que poden aparèixer dins del
-patró de ``String.format()`` a la secció `Format String Syntax
-<http://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax>`_.
 
 Per saber més
 =============

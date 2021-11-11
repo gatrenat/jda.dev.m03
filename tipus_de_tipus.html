@@ -329,7 +329,27 @@ següents exemples:</p>
 que el valor està representat en hexadecimal i binari (respectivament)</p>
 </li>
 <li><p>El tipus <code class="docutils literal notranslate"><span class="pre">boolean</span></code> admet només els valors <em>true</em> i <em>false</em>, escrits
-així, en minúscules.</p></li>
+així, en minúscules.</p>
+<p>Comentar que quan disposem d’un valor de tipus boolean, no cal
+comparar-ho amb <em>true</em> per saber si és cert o fals.</p>
+<p>Per exemple, les següents condicions serien equivalents:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">esMajorEdat</span> <span class="o">=</span> <span class="n">edat</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">edat</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Podeu anar a la presó&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">esMajorEdat</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Comparant amb true potser *Sí* anireu a la presó ;)&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">esMajorEdat</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sense comparar amb true potser us salveu de la presó&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>La segona condició no et deixarà gaire bé davant programador/es amb més
+experiència. La primera és vàlida i la tercera s’entén millor ja que es
+pot llegir de manera natural <em>si és major d’edat llavors mostra el
+missatge…</em>.</p>
+</li>
 <li><p>El tipus <code class="docutils literal notranslate"><span class="pre">int</span></code> es poden quedar curts per representar alguns enters
 grandets. Java ens ofereix un tipus primitiu una mica més gran, anomenat
 <code class="docutils literal notranslate"><span class="pre">long</span></code>.</p>

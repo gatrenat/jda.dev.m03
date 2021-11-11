@@ -149,6 +149,29 @@ Permetem-nos una breu repassada, amb alguna ampliació, sobre els tipus primitiu
 * El tipus ``boolean`` admet només els valors *true* i *false*, escrits
   així, en minúscules.
 
+  Comentar que quan disposem d'un valor de tipus boolean, no cal
+  comparar-ho amb *true* per saber si és cert o fals.
+
+  Per exemple, les següents condicions serien equivalents:
+
+  .. code-block:: java
+
+     boolean esMajorEdat = edat >= 18;
+     if (edat >= 18) {
+         System.out.println("Podeu anar a la presó");
+     }
+     if (esMajorEdat == true) {
+         System.out.println("Comparant amb true potser *Sí* anireu a la presó ;)");
+     }
+     if (esMajorEdat) {
+         System.out.println("Sense comparar amb true potser us salveu de la presó");
+     }
+
+  La segona condició no et deixarà gaire bé davant programador/es amb més
+  experiència. La primera és vàlida i la tercera s'entén millor ja que es
+  pot llegir de manera natural *si és major d'edat llavors mostra el
+  missatge…*.
+
 * El tipus ``int`` es poden quedar curts per representar alguns enters
   grandets. Java ens ofereix un tipus primitiu una mica més gran, anomenat
   ``long``.
