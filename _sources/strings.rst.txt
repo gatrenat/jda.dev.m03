@@ -14,5 +14,4 @@ un de ben important: els *Strings*.
     tipus_de_tipus.rst
     strings_tipus.rst
     strings_posicions.rst
-
-..  strings_recorreguts.rst
+    strings_recorreguts.rst

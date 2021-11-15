@@ -21,3 +21,4 @@ La llista d'exercicis sobre :doc:`instruccions seqüencials <instruccions>`
     exercici_01_11_precedencia_operadors.rst
     exercici_01_12_taules_veritat.rst
     exercici_01_13_simplificacions_expressions.rst
+
