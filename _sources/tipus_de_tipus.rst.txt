@@ -303,7 +303,7 @@ Permetem-nos una breu repassada, amb alguna ampliació, sobre els tipus primitiu
   absurdes i, encara que sapiguem enganyar, després en executar-ho, es
   produiria un error.
 
-|exerciseicon___| :doc:`exercici_01_56_tipus_primitius`
+|exerciseiconO__| :doc:`exercici_01_56_tipus_primitius`
 
 -----
 

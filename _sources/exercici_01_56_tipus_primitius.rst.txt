@@ -1,5 +1,5 @@
 #############################################################
-|exerciseicon___| Exercici 01_56. Els tipus primitius de Java
+|exerciseiconO__| Exercici 01_56. Els tipus primitius de Java
 #############################################################
 
 .. rubric:: Context
@@ -9,6 +9,8 @@
 * Continguts relacionats: :doc:`tipus_de_tipus`
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
 
 .. rubric:: Enunciat
 

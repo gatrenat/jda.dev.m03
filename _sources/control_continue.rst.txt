@@ -108,6 +108,6 @@ Per exemple, el següent fragment de codi filtrarà la lletra ``'a'``:
         System.out.print(actual);
     }
 
-|exerciseicon__T| :doc:`exercici_01_73_endevina_continue`
+|exerciseiconO_T| :doc:`exercici_01_73_endevina_continue`
 
 

@@ -1,5 +1,5 @@
 ##########################################################
-|exerciseicon__T| Exercici 01_72. Conté el darrer caràcter
+|exerciseiconO_T| Exercici 01_72. Conté el darrer caràcter
 ##########################################################
 
 .. rubric:: Context
@@ -9,6 +9,8 @@
 * Continguts relacionats: :doc:`control_break`
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
 
 * [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
 

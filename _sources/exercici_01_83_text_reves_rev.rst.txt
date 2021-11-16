@@ -1,5 +1,5 @@
 #############################################################
-|exerciseicon_ST| Exercici 01_83. El text del revés (avançat)
+|exerciseiconOST| Exercici 01_83. El text del revés (avançat)
 #############################################################
 
 .. rubric:: Context

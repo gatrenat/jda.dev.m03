@@ -280,4 +280,4 @@ Abans de la comoditat d'escriure'l, però, cal tenir sempre en compte
 sempre la llegibilitat del nostre codi. En aquest cas, la diferència és
 petita.
 
-|exerciseicon__T| :doc:`exercici_01_72_cerca_x`
+|exerciseiconO_T| :doc:`exercici_01_72_cerca_x`

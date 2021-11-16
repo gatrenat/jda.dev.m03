@@ -1,5 +1,5 @@
 #################################################################
-|exerciseicon_ST| Exercici 01_81. Texts capicua (versió avançada)
+|exerciseiconOST| Exercici 01_81. Texts capicua (versió avançada)
 #################################################################
 
 .. rubric:: Context
@@ -9,6 +9,8 @@
 * Continguts relacionats: :doc:`basics_conclusions`
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
 
 * [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
 

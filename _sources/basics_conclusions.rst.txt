@@ -68,17 +68,17 @@ nou programador!
 
 |exerciseicon__T| :doc:`exercici_01_75_comptavocals`
 
-|exerciseicon_ST| :doc:`exercici_01_76_informe_text`
+|exerciseiconOST| :doc:`exercici_01_76_informe_text`
 
 |exerciseicon_ST| :doc:`exercici_01_77_inicials_majuscules`
 
-|exerciseicon_ST| :doc:`exercici_01_78_text_transformat`
+|exerciseiconOST| :doc:`exercici_01_78_text_transformat`
 
 |exerciseicon__T| :doc:`exercici_01_79_text_reves`
 
 |exerciseicon__T| :doc:`exercici_01_80_text_capicua`
 
-|exerciseicon_ST| :doc:`exercici_01_81_text_capicua_rev`
+|exerciseiconOST| :doc:`exercici_01_81_text_capicua_rev`
 
 |exerciseicon__T| :doc:`exercici_01_82_codifica`
 
