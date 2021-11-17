@@ -30,7 +30,7 @@ utilitat                                    descripció
 
 ``length()``                                Longitud de la cadena
 
-``startWith(String unAltre)``               Boolean que indica si la cadena comença per l'altre
+``startsWith(String unAltre)``              Boolean que indica si la cadena comença per l'altre
 
 ``endsWith(String unAltre)``                Boolean que indica si la cadena comença per l'altre
 
