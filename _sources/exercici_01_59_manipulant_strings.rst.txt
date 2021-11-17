@@ -48,17 +48,17 @@ Nota: assegura't que el programa funciona per qualsevol text que rebi.
 
             // Una composició formada per la primera lletra de la paraula en
             // majúscules, seguida de les següents tres lletres en minúscules. Per
-            // exemple, si la paraula és «aIbIcId», resultatà en «Aibi».
+            // exemple, si la paraula és «nEkAnE», resultatà en «Neka».
             // XXX TODO: afegeix aquí les línies que facin falta
 
-            // Mostra una coposició formada per la darrera lletra de la paraula,
-            // seguida de les tres primeres. (ex. si la paraula és «Renat»
-            // mostrarà «aRen»)
+            // Mostra una composició formada per la darrera lletra de la paraula,
+            // seguida de les tres primeres. (ex. si la paraula és «Nekane»
+            // mostrarà «eNek»)
             // XXX TODO: afegeix aquí les línies que facin falta
 
             // Com en el cas anterior però ara corregint les majúscules i
             // minúscules de manera que la primera sigui majúscules i la resta en
-            // minúscules.  (ex. si la paraula és «Renat» mostrarà «Aren»)
+            // minúscules.  (ex. si la paraula és «Nekane» mostrarà «Enek»)
             // XXX TODO: afegeix aquí les línies que facin falta
         }
     }
