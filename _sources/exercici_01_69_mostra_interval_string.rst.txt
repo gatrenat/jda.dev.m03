@@ -34,7 +34,7 @@ Considera les següents simulacions:
     :emphasize-lines: 2, 4, 6, 8-
 
     $ java MostraInterval
-    text?
+    Text?
     Java rocks
     inici?
     5
@@ -48,7 +48,7 @@ Considera les següents simulacions:
     :emphasize-lines: 2, 4, 6, 8-
 
     $ java MostraInterval
-    text?
+    Text?
     Java rocks
     inici?
     7
@@ -62,7 +62,7 @@ Considera les següents simulacions:
     :emphasize-lines: 2, 4, 6, 8-
 
     $ java MostraInterval
-    text?
+    Text?
     Java rocks
     inici?
     5

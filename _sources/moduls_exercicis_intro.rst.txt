@@ -1,0 +1,24 @@
+#################################################
+Llista d'exercicis del primer contacte amb mòduls
+#################################################
+
+Els exercicis del tema :doc:`moduls_intro` són:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    exercici_02_01_lloro_quadrat.rst
+    exercici_02_02_quadrat_parametritzat.rst
+    exercici_02_03_quadrat_reparametritzat.rst
+    exercici_02_04_analisi_caracter.rst
+    exercici_02_05_mostra_interval_string.rst
+    exercici_02_06_cadena_continua.rst
+    exercici_02_07_triangle_lletres.rst
+    exercici_02_08_triangle_invertit_lletres.rst
+    exercici_02_09_parentitza.rst
+    exercici_02_10_nomes_lletres.rst
+    exercici_02_11_vocals_majuscules.rst
+    exercici_02_12_inicials_majuscules.rst
+    exercici_02_13_text_reves.rst
+    exercici_02_14_codifica.rst

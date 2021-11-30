@@ -1,0 +1,32 @@
+##########################################################
+|exerciseicon__T| Exercici 02_02. El quadrat parametritzat
+##########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``02_02_quadrat_parametritzat/``
+
+* Continguts relacionats: :doc:`moduls_parametritzacio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa que esperi un valor enter positiu en ``args[0]`` i
+mostri un quadrat de ``" X"`` amb el costat indicat pel valor rebut.
+
+Una execució d'aquest programa podria ser:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java Quadrat.java 5
+     X X X X X
+     X X X X X
+     X X X X X
+     X X X X X
+     X X X X X
+
+En cas que el valor rebut sigui menor que 1, no mostrarà res.

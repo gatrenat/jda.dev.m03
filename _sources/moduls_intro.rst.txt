@@ -1,0 +1,63 @@
+##################
+Un primer contacte
+##################
+
+Tots els programes que hem fet fins ara, es podrien codificar dins de la
+següent plantilla:
+
+.. code-block:: java
+    :linenos:
+
+    /* Plantilla general dels programes que hem fet fins ara */
+    public class NomDelPrograma {
+        public static void main(String[] args) {
+            /*
+                aquí tot el codi
+            */
+        }
+    }
+
+Per exemple, considera el següent programa:
+
+.. code-block:: java
+    :linenos:
+
+    /* Programa que dibuixa un quadrat numèric de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            for (int linia=1; linia <= 5; linia++) {
+                for (int columna=1; columna <= 5; columna++) {
+                    System.out.print(" X");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+Una execució d'aquest programa seria:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java Quadrat 
+     X X X X X
+     X X X X X
+     X X X X X
+     X X X X X
+     X X X X X
+
+Fins aquí, res especial a mencionar, oi? Hem fet un munt de programes com
+aquest a :doc:`basics` com per espantar-nos!
+
+En les properes pàgines descobrirem que podem *escapar* d'aquesta
+plantilla general, i els avantatges que això ens reportarà.
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    moduls_abandonem_plantilla.rst
+    moduls_snippets.rst
+    moduls_reaprofitament.rst
+    moduls_parametritzacio.rst
+    moduls_primeres_definicions.rst
