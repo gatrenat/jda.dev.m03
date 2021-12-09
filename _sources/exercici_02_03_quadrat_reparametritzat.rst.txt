@@ -27,7 +27,7 @@ Una execució d'aquest programa podria ser:
 .. code-block:: console
     :emphasize-lines: 2-
 
-    $ java Quadrat.java 5 Y
+    $ java Quadrat 5 Y
      Y Y Y Y Y
      Y Y Y Y Y
      Y Y Y Y Y

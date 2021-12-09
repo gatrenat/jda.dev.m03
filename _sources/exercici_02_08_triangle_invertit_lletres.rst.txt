@@ -29,5 +29,5 @@ La signatura dels nous mòduls serà:
 
 .. code-block:: java
 
-    public static void dibuixaTriangle(String text)
-    public static void dibuixaLinia(String text, int linia)
+    public static void dibuixaTriangleInvertit(String text)
+    public static void dibuixaLiniaInvertida(String text, int linia)
