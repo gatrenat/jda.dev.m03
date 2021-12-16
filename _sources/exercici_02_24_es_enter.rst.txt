@@ -34,12 +34,12 @@ Per exemple, considera:
 
 .. code-block:: console
 
-jshell> Integer.parseInt("   123  ")
-|  Exception java.lang.NumberFormatException: For input string: "   123  "
-|        at NumberFormatException.forInputString (NumberFormatException.java:65)
-|        at Integer.parseInt (Integer.java:638)
-|        at Integer.parseInt (Integer.java:770)
-|        at (#2:1)
+    jshell> Integer.parseInt("   123  ")
+    |  Exception java.lang.NumberFormatException: For input string: "   123  "
+    |        at NumberFormatException.forInputString (NumberFormatException.java:65)
+    |        at Integer.parseInt (Integer.java:638)
+    |        at Integer.parseInt (Integer.java:770)
+    |        at (#2:1)
 
 Com veus, en  intentar convertir `"   123  "` a enter, ens genera un
 error que trenca l'execució.

@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_variables.html">Variables i mòduls</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="moduls_exercicis.html">Llista d’exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="moduls_exercicis_intro.html">Llista d’exercicis del primer contacte amb mòduls</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="moduls_exercicis_funcions.html">Llista d’exercicis de funcions i variables</a><ul class="current">
@@ -208,15 +209,14 @@ problema que t’explico a continuació:</p>
 possiblitat de saber si <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code> funcionarà o no, abans
 d’executar-ho.</p>
 <p>Per exemple, considera:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshell&gt; Integer.parseInt(&quot;   123  &quot;)</span>
+<span class="go">|  Exception java.lang.NumberFormatException: For input string: &quot;   123  &quot;</span>
+<span class="go">|        at NumberFormatException.forInputString (NumberFormatException.java:65)</span>
+<span class="go">|        at Integer.parseInt (Integer.java:638)</span>
+<span class="go">|        at Integer.parseInt (Integer.java:770)</span>
+<span class="go">|        at (#2:1)</span>
 </pre></div>
 </div>
-<p>jshell&gt; Integer.parseInt(»   123  «)
-|  Exception java.lang.NumberFormatException: For input string: »   123  »
-|        at NumberFormatException.forInputString (NumberFormatException.java:65)
-|        at Integer.parseInt (Integer.java:638)
-|        at Integer.parseInt (Integer.java:770)
-|        at (#2:1)</p>
 <p>Com veus, en  intentar convertir <cite>»   123  «</cite> a enter, ens genera un
 error que trenca l’execució.</p>
 <p>Per aquesta raó, no podem acceptar que <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> ignori els espais en
