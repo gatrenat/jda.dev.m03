@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Repàs sobre funcions i procediments &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  <title>Necessitem les seqüències &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Variables i mòduls" href="moduls_variables.html" />
-    <link rel="prev" title="La meva biblioteca" href="moduls_biblioteques.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Arrays" href="arrays.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -94,22 +94,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="moduls_funcions.html">Funcions</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_eficiencia.html">Breu consideració sobre eficiència</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_return.html">Sobre el <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_arreu.html">Funcions arreu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moduls_biblioteques.html">La meva biblioteca</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Repàs sobre funcions i procediments</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_variables.html">Variables i mòduls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_exercicis.html">Llista d’exercicis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arrays.html">Arrays</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="arrays.html">Arrays</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Necessitem les <em>seqüències</em></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -161,9 +152,9 @@
         
           <li><a href="moduls.html">Mòduls</a> &raquo;</li>
         
-          <li><a href="moduls_funcions.html">Funcions</a> &raquo;</li>
+          <li><a href="arrays.html">Arrays</a> &raquo;</li>
         
-      <li>Repàs sobre funcions i procediments</li>
+      <li>Necessitem les <em>seqüències</em></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,42 +172,52 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="repas-sobre-funcions-i-procediments">
-<h1>Repàs sobre funcions i procediments<a class="headerlink" href="#repas-sobre-funcions-i-procediments" title="Link permanent a aquest títol">¶</a></h1>
-<p>Com a resum d’aquesta secció ens queden les següents definicions:</p>
-<ul>
-<li><p>funció: un mòdul que retorna un valor amb <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
-<p>Les funcions que hem vist fins ara s’adapten a la plantilla:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static «tipus» «nom de la funció»(«zero o més paràmetres») {
-    «instruccions del bloc»
-    return «valor del tipus»;
-}
-</pre></div>
+  <div class="section" id="necessitem-les-sequencies">
+<h1>Necessitem les <em>seqüències</em><a class="headerlink" href="#necessitem-les-sequencies" title="Link permanent a aquest títol">¶</a></h1>
+<p>Veiem si realment ens calen seqüències que no siguin de caràcter.</p>
+<p>Intenta resoldre els següents reptes usant <em>exclusivament</em> les eines que
+hem estudiat fins ara.</p>
+<div class="section" id="repte-1-la-nota-mes-alta">
+<h2>Repte 1. La nota més alta<a class="headerlink" href="#repte-1-la-nota-mes-alta" title="Link permanent a aquest títol">¶</a></h2>
+<p>Et proposo el següent repte en forma d’exercici:</p>
+<p><img alt="exerciseiconO_T" src="_images/exerciseiconO_T.png" /> <a class="reference internal" href="exercici_02_26_nota_mes_alta_v1.html"><span class="doc"> Exercici 02_26. La nota més alta</span></a></p>
+<p>Llegeix l’enunciat i torna aquí quan el tinguis resolt o et calgui alguna
+pista.</p>
+<p>Ja l’has fet? No? De debò, mira de fer-lo i recorda, <strong>només</strong> amb les
+eines que tenim fins ara!</p>
+<p>Ja estàs? Suposaré que l’has fet.</p>
 </div>
-<p>On «tipus» és qualsevol dels tipus vàlids (no <code class="docutils literal notranslate"><span class="pre">void</span></code>)</p>
-</li>
-<li><p>procediment: mòdul que no retorna cap valor amb <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
-<p>Els procediments poden tenir <code class="docutils literal notranslate"><span class="pre">return</span></code> però aquest vindrà immediatament
-seguit del punt i coma que finalitza la sentència.</p>
-<p>La plantilla pels procediments és:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static void «nom de la funció»(«zero o més paràmetres») {
-    «instruccions del bloc»
-    return; // si cal
-}
-</pre></div>
+<div class="section" id="repte-2-la-nota-mes-alta-no-tan-facil">
+<h2>Repte 2. La nota més alta (no tan fàcil)<a class="headerlink" href="#repte-2-la-nota-mes-alta-no-tan-facil" title="Link permanent a aquest títol">¶</a></h2>
+<p>Imagino que el repte anterior t’ha resultat fàcil, oi?</p>
+<p>No deixa de ser el conegut <em>patró del Lloro</em>. És a dir, un <code class="docutils literal notranslate"><span class="pre">while</span></code> on
+anem demanant notes, anem guardant la màxima i, potser, quants en portem,
+fins rebre una nota negativa. En sortir del bucle, mostrem la màxima o un
+error si hem recollir menys de dues notes. Ja està.</p>
+<p>Donem-li una volta més. Llegeix l’enunciat del següent exercici i
+fes el possible per, com a mínim plantejar-te la seva solució. Si no se
+t’acut com resoldre’l, com a mínim t’ajudarà a entendre la importància del
+nou tema.</p>
+<p><img alt="exerciseiconOST" src="_images/exerciseiconOST.png" /> <a class="reference internal" href="exercici_02_27_nota_mes_alta_v2.html"><span class="doc"> Exercici 02_27. La nota més alta (no tan fàcil)</span></a></p>
+<p>Aquest repte encara es pot resoldre amb les eines que tenim però comença a
+costar una mica, oi?</p>
+<p>Aviat veuràs que es pot simplificar la seva resolució si disposéssim
+d’altres tipus de seqüències. En concret de notes.</p>
+<p>En aquesta ocasió no et donaré més pistes. Però ja et puc dir que si t’ha
+picat i el vols resoldre, fins i tot si no saps com, ja pots sentir que
+tens una bona actitud per la programació! Una medalleta per tu!</p>
+<p>D’acord, et confesso que si m’insisteixes una mica, te’n donaré alguna de
+pista.</p>
 </div>
-</li>
-<li><p>funció pura: funció que no modifica l’entorn i que, amb els mateixos
-arguments, sempre retorna el mateix resultat en ser cridada.</p></li>
-<li><p>funció impura: funció que altera l’entorn, per exemple, llegint de
-l’entrada estàndard, i que pot no retornar sempre el mateix valor per
-crides amb els mateixos arguments.</p>
-<p>A aquesta alteració de l’entorn li diem «efectes col·laterals»</p>
-</li>
-<li><p>punt de sortida: cada punt pel que pot finalitzar un mòdul. Podem
-considerar cada cop que apareix un <code class="docutils literal notranslate"><span class="pre">return</span></code> o bé quan s’acaben les
-instruccions del cos del mòdul.</p></li>
-</ul>
+<div class="section" id="mes-reptes">
+<h2>Més reptes<a class="headerlink" href="#mes-reptes" title="Link permanent a aquest títol">¶</a></h2>
+<p>Has aconseguit fer l’anterior i encara en vols més? Vinga!</p>
+<p><img alt="exerciseiconOST" src="_images/exerciseiconOST.png" /> <a class="reference internal" href="exercici_02_28_nota_mes_alta_v3.html"><span class="doc"> Exercici 02_28. La nota més alta (més difícil)</span></a></p>
+<p><img alt="exerciseiconOST" src="_images/exerciseiconOST.png" /> <a class="reference internal" href="exercici_02_29_nota_mes_alta_v4.html"><span class="doc"> Exercici 02_29. La nota més alta (impossible?)</span></a></p>
+<p>Si vas saber resoldre el repte número 2, ja tindràs una bona idea de com
+resoldre aquests. Per descomptat, m’encantarà donar-te alguna pista en cas
+que et calgui.</p>
+</div>
 </div>
 
 
@@ -250,10 +251,10 @@ instruccions del cos del mòdul.</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="moduls_variables.html" class="btn btn-neutral float-right" title="Variables i mòduls" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="moduls_biblioteques.html" class="btn btn-neutral float-left" title="La meva biblioteca" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="arrays.html" class="btn btn-neutral float-left" title="Arrays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

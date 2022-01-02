@@ -390,7 +390,7 @@ compilador es queixarà doncs estarem intentant fer servir ``llenguatge``
 abans de ser declarat!
 
 El bloc del ``while`` (línies 6 a 14) declara la variable ``missatge`` que
-és, per tant, local dins de *tot* el bloc del ``whilw``, oi? Doncs no! Pel
+és, per tant, local dins de *tot* el bloc del ``while``, oi? Doncs no! Pel
 bloc del ``if`` que hi ha dins del ``while`` (línies 8 a 11), ``missatge`` és global!
 
 La variable ``llenguatge`` definida a la línia 15 dins del bloc del
