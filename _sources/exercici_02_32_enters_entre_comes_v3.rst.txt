@@ -15,7 +15,7 @@
 .. rubric:: Enunciat
 
 Una nova versió del programa :doc:`enters entre comes
-<exercici_02_31_enters_entre_comes_v2>`>
+<exercici_02_31_enters_entre_comes_v2>`.
 
 En aquesta ocasió, el programa tindrà les següents modificacions:
 
