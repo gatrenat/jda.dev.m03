@@ -26,7 +26,7 @@ Ves aquí el nou tema que coneixerem!
     :maxdepth: 1
 
     arrays_justificacio.rst
+    arrays_en_java.rst
 
-..    arrays_en_java.rst
 ..    arrays_taules.rst
 ..    arrays_mutabilitat.rst
