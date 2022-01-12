@@ -27,6 +27,6 @@ Ves aquí el nou tema que coneixerem!
 
     arrays_justificacio.rst
     arrays_en_java.rst
+    arrays_taules.rst
 
-..    arrays_taules.rst
 ..    arrays_mutabilitat.rst

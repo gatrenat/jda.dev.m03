@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exercici 02_31. Enters entre comes (v2) &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  <title>Exercici 02_36. El tres en ratlla per files &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 02_32. Enters entre comes (v3)" href="exercici_02_32_enters_entre_comes_v3.html" />
-    <link rel="prev" title="Exercici 02_30. Enters entre comes (v1)" href="exercici_02_30_enters_entre_comes_v1.html" />
+    <link rel="next" title="Exercici 02_37. El tres en ratlla en taulell" href="exercici_02_37_tresenratlla_taulell.html" />
+    <link rel="prev" title="Exercici 02_35. Suma només enters" href="exercici_02_35_nomes_enters.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -108,12 +108,12 @@
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_28_nota_mes_alta_v3.html"> Exercici 02_28. La nota més alta (més difícil)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_29_nota_mes_alta_v4.html"> Exercici 02_29. La nota més alta (impossible?)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_30_enters_entre_comes_v1.html"> Exercici 02_30. Enters entre comes (v1)</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 02_31. Enters entre comes (v2)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_02_31_enters_entre_comes_v2.html"> Exercici 02_31. Enters entre comes (v2)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_32_enters_entre_comes_v3.html"> Exercici 02_32. Enters entre comes (v3)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_33_enters_entre_comes_v4.html"> Exercici 02_33. Enters entre comes (v4)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_34_arguments.html"> Exercici 02_34. Arguments del main</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_35_nomes_enters.html"> Exercici 02_35. Suma només enters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_02_36_tresenratlla_files.html"> Exercici 02_36. El tres en ratlla per files</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 02_36. El tres en ratlla per files</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_37_tresenratlla_taulell.html"> Exercici 02_37. El tres en ratlla en taulell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_02_38_tresenratlla.html"> Exercici 02_38. El tres en ratlla</a></li>
 </ul>
@@ -175,7 +175,7 @@
         
           <li><a href="moduls_exercicis_arrays.html">Llista d’exercicis d’arrays</a> &raquo;</li>
         
-      <li> Exercici 02_31. Enters entre comes (v2)</li>
+      <li> Exercici 02_36. El tres en ratlla per files</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,42 +193,103 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="exerciseicon-t-exercici-02-31-enters-entre-comes-v2">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 02_31. Enters entre comes (v2)<a class="headerlink" href="#exerciseicon-t-exercici-02-31-enters-entre-comes-v2" title="Link permanent a aquest títol">¶</a></h1>
+  <div class="section" id="exerciseicon-t-exercici-02-36-el-tres-en-ratlla-per-files">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 02_36. El tres en ratlla per files<a class="headerlink" href="#exerciseicon-t-exercici-02-36-el-tres-en-ratlla-per-files" title="Link permanent a aquest títol">¶</a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">02_31_enters_entre_comes_v2/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="arrays_en_java.html"><span class="doc">Seqüències en Java</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">02_36_tresenratlla_files/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="arrays_taules.html"><span class="doc">Taules</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Una nova versió del programa <a class="reference internal" href="exercici_02_30_enters_entre_comes_v1.html"><span class="doc">enters entre comes</span></a>&gt;</p>
-<p>En aquesta ocasió, el programa tindrà les següents modificacions:</p>
-<ul>
-<li><p>els valors de l’array en comptes de ser assignats des del programa, els
-especificaran els usuaris del programa.</p>
-<p>De moment suposarem que els valors d’entrada són sempre enters vàlids.</p>
-</li>
-<li><p>en comptes de 3 valors a l’array, n’hi haurà 5</p></li>
+<p>Desenvolupa un programa que representi la següent situació d’una partida
+de tres en ratlla:</p>
+<a class="reference internal image-reference" href="_images/tictactoebasicpartida.svg"><img alt="_images/tictactoebasicpartida.svg" class="align-center" src="_images/tictactoebasicpartida.svg" width="256" /></a>
+<p>La representació del joc es realitzarà tenint present que:</p>
+<ul class="simple">
+<li><p>el taulell estarà implementat amb tres arrays de caràcters que
+representaran cadascuna de les files</p></li>
+<li><p>cada posició es codificarà amb un de tres possibles caràcters (<code class="docutils literal notranslate"><span class="pre">X</span></code>,
+<code class="docutils literal notranslate"><span class="pre">O</span></code> o <code class="docutils literal notranslate"><span class="pre">·</span></code>) El punt indicarà que la posició encara no està marcada.</p></li>
 </ul>
-<p>Una simulació d’execució seria:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java EntersEntreComes
-<span class="hll"><span class="go">Valor 1?</span>
-</span><span class="go">1</span>
-<span class="hll"><span class="go">Valor 2?</span>
-</span><span class="go">2</span>
-<span class="hll"><span class="go">Valor 3?</span>
-</span><span class="go">3</span>
-<span class="hll"><span class="go">Valor 4?</span>
-</span><span class="go">4</span>
-<span class="hll"><span class="go">Valor 5?</span>
-</span><span class="go">5</span>
-<span class="hll"><span class="go">1, 2, 3, 4, 5</span>
+<p>Completa la plantilla següent tot reemplaçant <code class="docutils literal notranslate"><span class="pre">/*</span> <span class="pre">XXX</span> <span class="pre">*/</span></code> pel teu codi:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> *  XXX</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TresEnRatlla</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="c1">// declaració de les files</span>
+        <span class="kt">char</span><span class="o">[]</span> <span class="n">fila0</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">;</span> <span class="cm">/* XXX */</span><span class="p">;</span>
+        <span class="kt">char</span><span class="o">[]</span> <span class="n">fila1</span> <span class="cm">/* XXX */</span><span class="p">;</span>
+        <span class="cm">/* XXX */</span><span class="p">;</span>
+
+        <span class="c1">// inicialització de la fila 0</span>
+        <span class="n">fila0</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;O&#39;</span><span class="p">;</span>
+        <span class="n">fila0</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;·&#39;</span><span class="p">;</span>
+        <span class="n">fila0</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;X&#39;</span><span class="p">;</span>
+
+        <span class="c1">// inicialització de la fila 1</span>
+        <span class="cm">/* XXX */</span>
+
+        <span class="c1">// inicialització de la fila 2</span>
+        <span class="cm">/* XXX */</span>
+
+        <span class="c1">// mostra el taulell</span>
+        <span class="n">mostraFila</span><span class="p">(</span><span class="n">fila0</span><span class="p">);</span>
+        <span class="cm">/* XXX */</span>
+    <span class="p">}</span>
+
+    <span class="c1">// mostra el contingut de la fila per sortida estàndard</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mostraFila</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">fila</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="cm">/* XXX */</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fila</span><span class="o">[</span><span class="n">col</span><span class="o">]</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>La sortida esperada és la següent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java TresEnRatlla
+<span class="hll"><span class="go">O·X</span>
+</span><span class="hll"><span class="go">XXO</span>
+</span><span class="hll"><span class="go">O··</span>
 </span></pre></div>
 </div>
-<p>Pots assumir que els valors que rebrà el programa seran sempre cinc
-enters.</p>
 </div>
 
 
@@ -262,10 +323,10 @@ enters.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exercici_02_32_enters_entre_comes_v3.html" class="btn btn-neutral float-right" title="Exercici 02_32. Enters entre comes (v3)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exercici_02_37_tresenratlla_taulell.html" class="btn btn-neutral float-right" title="Exercici 02_37. El tres en ratlla en taulell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercici_02_30_enters_entre_comes_v1.html" class="btn btn-neutral float-left" title="Exercici 02_30. Enters entre comes (v1)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercici_02_35_nomes_enters.html" class="btn btn-neutral float-left" title="Exercici 02_35. Suma només enters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
