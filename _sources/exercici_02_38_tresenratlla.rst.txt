@@ -48,7 +48,7 @@ Quan es processa una coordenada, es consideraran els següents casos:
 
   S'indica que el jugador abandona i es finalitza el joc.
 
-* format incorrecte: l'entrada no està formada per dos dígits entre 0 i 3.
+* format incorrecte: l'entrada no està formada per dos dígits entre 0 i 2.
 
   Es mostra el missatge ``"Error"`` i es torna a demanar moviment al
   mateix jugador.

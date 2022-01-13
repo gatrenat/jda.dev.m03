@@ -12,8 +12,6 @@ Els exercicis del tema :doc:`arrays` són:
     exercici_02_27_nota_mes_alta_v2.rst
     exercici_02_28_nota_mes_alta_v3.rst
     exercici_02_29_nota_mes_alta_v4.rst
-    exercici_02_28_nota_mes_alta_v3.rst
-    exercici_02_29_nota_mes_alta_v4.rst
     exercici_02_30_enters_entre_comes_v1.rst
     exercici_02_31_enters_entre_comes_v2.rst
     exercici_02_32_enters_entre_comes_v3.rst
