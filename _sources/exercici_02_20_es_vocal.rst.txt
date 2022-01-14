@@ -33,13 +33,13 @@ En aquest exercici hi haurà tres fitxers:
 * ``UtilString.java``: contindrà la funció ``esVocal()``. No cal que
   contingui ``main()``.
 
-* ``LloroVocals.java``: una nova versió entre mig de
+* ``LloroVocalIniciFi.java``: una nova versió entre mig de
   :doc:`exercici_01_60_inicial_vocal_minuscula` i
   :doc:`exercici_01_61_acaba_vocal_minuscula`
   que farà servir la nova funció per que el lloro repeteixi qualsevol text
   que comenci o acabi en vocal (siguin majúscules o minúscules)
 
-* ``UtilitatsConfirmacio``: que ja tens d'un :doc:`exercici anterior
+* ``UtilitatsConfirmacio.java``: que ja tens d'un :doc:`exercici anterior
   <exercici_02_19_utilitats_confirmacio>`
 
 Una simulació d'execució seria:

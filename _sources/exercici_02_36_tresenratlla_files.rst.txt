@@ -40,7 +40,7 @@ Completa la plantilla següent tot reemplaçant ``/* XXX */`` pel teu codi:
     public class TresEnRatlla {
         public static void main(String[] args){
             // declaració de les files
-            char[] fila0 = new char[3]; /* XXX */;
+            char[] fila0 = new char[3];
             char[] fila1 /* XXX */;
             /* XXX */;
 
