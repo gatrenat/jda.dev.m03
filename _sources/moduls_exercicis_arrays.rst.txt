@@ -21,7 +21,6 @@ Els exercicis del tema :doc:`arrays` són:
     exercici_02_36_tresenratlla_files.rst
     exercici_02_37_tresenratlla_taulell.rst
     exercici_02_38_tresenratlla.rst
-
-..    exercici_02_39_pilota_cau.rst
-..    exercici_02_40_pilota_rebota.rst
-..    exercici_02_41_formes.rst
+    exercici_02_39_pilota_cau.rst
+    exercici_02_40_pilota_rebota.rst
+    exercici_02_41_formes.rst
