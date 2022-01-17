@@ -489,7 +489,7 @@ Considera que tenim la següent funció:
     /* posa en majúscules la lletra a una determinada posició
      * Finalment retorna true quan s'ha fet algun canvi. */
     public static boolean majusculitza(char[] lletres, int posicio) {
-        if (posicio < 0 || posicio > lletres.length) {
+        if (posicio < 0 || posicio >= lletres.length) {
             return false;
         }
         char original = lletres[posicio];
@@ -556,7 +556,7 @@ interessarà analitzar què passa a dins:
 .. code-block:: java
 
     public static boolean majusculitza(char[] lletres, int posicio) {
-        if (posicio < 0 || posicio > lletres.length) {
+        if (posicio < 0 || posicio >= lletres.length) {
             return false;
         }
         char original = lletres[posicio];
@@ -573,7 +573,7 @@ primera línia de la següent manera:
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio > lletres.length) {
+    if (posicio < 0 || posicio >= lletres.length) {
         return false;
     }
     char original = lletres[posicio];
@@ -612,7 +612,7 @@ acceptable:
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio > lletres.length) {
+    if (posicio < 0 || posicio >= lletres.length) {
         return false;
     }
 
@@ -627,7 +627,7 @@ La nova instrucció a executar és l'obtenció del valor original a modificar:
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio > lletres.length) return false;
+    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
 
 En memòria tindrem:
@@ -647,7 +647,7 @@ Realitzem ara la conversió a majúscules:
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio > lletres.length) return false;
+    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
     lletres[posicio] = Character.toUpperCase(original);
 
@@ -666,7 +666,7 @@ produït algun canvi:
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio > lletres.length) return false;
+    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
     lletres[posicio] = Character.toUpperCase(original);
     boolean tmp1 = original != lletres[posicio];

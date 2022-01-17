@@ -309,15 +309,15 @@ Per exemple, considera el següent codi:
 
   public class Fills {
        public static void main(String[] args){
-            String[][] nomsFills= new String[100][];
-            nomsFills[5] = new String[] {"Daphne", "Velma", "Fred"};
-            nomsFills[12] = new String[] {};
-            nomsFills[21] = new String[] {"Shaggy"};
+            String[][] fillsEmpleats= new String[100][];    // empleats x fills
+            fillsEmpleats[5] = new String[] {"Daphne", "Velma", "Fred"};
+            fillsEmpleats[12] = new String[] {};
+            fillsEmpleats[21] = new String[] {"Shaggy"};
 
-            for (int empleat = 0; empleat < nomsFills.length; empleat++) {
-                if (null == nomsFills[empleat]) continue;
+            for (int empleat = 0; empleat < fillsEmpleats.length; empleat++) {
+                if (null == fillsEmpleats[empleat]) continue;
                 System.out.print("Empleat " + empleat + " ");
-                String[] fillsEmpleat = nomsFills[empleat];
+                String[] fillsEmpleat = fillsEmpleats[empleat];
                 if (fillsEmpleat.length == 0) {
                     System.out.println("no en té");
                     continue;

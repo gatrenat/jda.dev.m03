@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Taules &mdash; Introducció a la programació amb Java 2020-21 documentació</title>
+  <title>Taules &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                2020-21
+                Curs 2021-22
               </div>
             
           
@@ -392,15 +392,15 @@ tot plegat com:</p>
 <p>Per exemple, considera el següent codi:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fills</span> <span class="p">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
-          <span class="n">String</span><span class="o">[][]</span> <span class="n">nomsFills</span><span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">100</span><span class="o">][]</span><span class="p">;</span>
-          <span class="n">nomsFills</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span><span class="s">&quot;Daphne&quot;</span><span class="p">,</span> <span class="s">&quot;Velma&quot;</span><span class="p">,</span> <span class="s">&quot;Fred&quot;</span><span class="p">};</span>
-          <span class="n">nomsFills</span><span class="o">[</span><span class="mi">12</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{};</span>
-          <span class="n">nomsFills</span><span class="o">[</span><span class="mi">21</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span><span class="s">&quot;Shaggy&quot;</span><span class="p">};</span>
+          <span class="n">String</span><span class="o">[][]</span> <span class="n">fillsEmpleats</span><span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[</span><span class="mi">100</span><span class="o">][]</span><span class="p">;</span>    <span class="c1">// empleats x fills</span>
+          <span class="n">fillsEmpleats</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span><span class="s">&quot;Daphne&quot;</span><span class="p">,</span> <span class="s">&quot;Velma&quot;</span><span class="p">,</span> <span class="s">&quot;Fred&quot;</span><span class="p">};</span>
+          <span class="n">fillsEmpleats</span><span class="o">[</span><span class="mi">12</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{};</span>
+          <span class="n">fillsEmpleats</span><span class="o">[</span><span class="mi">21</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span><span class="s">&quot;Shaggy&quot;</span><span class="p">};</span>
 
-          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">empleat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">empleat</span> <span class="o">&lt;</span> <span class="n">nomsFills</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">empleat</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-              <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">nomsFills</span><span class="o">[</span><span class="n">empleat</span><span class="o">]</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">empleat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">empleat</span> <span class="o">&lt;</span> <span class="n">fillsEmpleats</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">empleat</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">if</span> <span class="p">(</span><span class="kc">null</span> <span class="o">==</span> <span class="n">fillsEmpleats</span><span class="o">[</span><span class="n">empleat</span><span class="o">]</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
               <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Empleat &quot;</span> <span class="o">+</span> <span class="n">empleat</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
-              <span class="n">String</span><span class="o">[]</span> <span class="n">fillsEmpleat</span> <span class="o">=</span> <span class="n">nomsFills</span><span class="o">[</span><span class="n">empleat</span><span class="o">]</span><span class="p">;</span>
+              <span class="n">String</span><span class="o">[]</span> <span class="n">fillsEmpleat</span> <span class="o">=</span> <span class="n">fillsEmpleats</span><span class="o">[</span><span class="n">empleat</span><span class="o">]</span><span class="p">;</span>
               <span class="k">if</span> <span class="p">(</span><span class="n">fillsEmpleat</span><span class="p">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
                   <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;no en té&quot;</span><span class="p">);</span>
                   <span class="k">continue</span><span class="p">;</span>
@@ -501,7 +501,7 @@ curs,  6 notes per alumne.</p>
   <div role="contentinfo">
     <p>
         
-        &copy; Copyright 2020-2021 Moisès Gómez Girón
+        &copy; Copyright 2021-2022 Moisès Gómez Girón
 
     </p>
   </div> 
