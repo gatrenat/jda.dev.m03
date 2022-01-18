@@ -487,11 +487,9 @@ Considera que tenim la següent funció:
 .. code-block:: java
 
     /* posa en majúscules la lletra a una determinada posició
-     * Finalment retorna true quan s'ha fet algun canvi. */
+     * Finalment retorna true quan s'ha fet algun canvi.
+     * Suposa que posicio és un valor entre el 0 i lletres.length - 1 */
     public static boolean majusculitza(char[] lletres, int posicio) {
-        if (posicio < 0 || posicio >= lletres.length) {
-            return false;
-        }
         char original = lletres[posicio];
         lletres[posicio] = Character.toUpperCase(original);
         return original != lletres[posicio];
@@ -556,9 +554,6 @@ interessarà analitzar què passa a dins:
 .. code-block:: java
 
     public static boolean majusculitza(char[] lletres, int posicio) {
-        if (posicio < 0 || posicio >= lletres.length) {
-            return false;
-        }
         char original = lletres[posicio];
         lletres[posicio] = Character.toUpperCase(original);
         return original != lletres[posicio];
@@ -568,14 +563,11 @@ La crida a ``majusculitza()`` vindria a reemplaçar en la pràctica la
 primera línia de la següent manera:
 
 .. code-block:: java
-   :emphasize-lines: 2, 3, 9
+   :emphasize-lines: 2, 3, 6
 
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio >= lletres.length) {
-        return false;
-    }
     char original = lletres[posicio];
     lletres[posicio] = Character.toUpperCase(original);
     boolean tmp1 = original != lletres[posicio];
@@ -589,7 +581,9 @@ En primer lloc farem l'assignació dels valors passats per la crida als
 paràmetres:
 
 .. code-block:: java
+   :emphasize-lines: 2-
 
+    // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
 
@@ -603,31 +597,14 @@ de la memòria:
 Potser el punt més interessant és que ``lletres`` està apuntant exactament
 al mateix array que ``nomChar``.
 
-Ara s'avalua la condició que comprova si ``posicio`` està dins del rang
-acceptable:
-
-.. code-block:: java
-   :emphasize-lines: 4-
-
-    // boolean tmp1 = majusculitza(nomChar, 0);
-    char[] lletres = nomChar;
-    int posicio = 0;
-    if (posicio < 0 || posicio >= lletres.length) {
-        return false;
-    }
-
-Com que ``posicio`` val 0, no entrem en el cos del ``if`` i continuem
-l'execució.
-
 La nova instrucció a executar és l'obtenció del valor original a modificar:
 
 .. code-block:: java
-   :emphasize-lines: 5
+   :emphasize-lines: 4
 
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
 
 En memòria tindrem:
@@ -642,12 +619,11 @@ el valor assignat a la nova variable ``original``.
 Realitzem ara la conversió a majúscules:
 
 .. code-block:: java
-   :emphasize-lines: 6
+   :emphasize-lines: 5
 
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
     lletres[posicio] = Character.toUpperCase(original);
 
@@ -661,12 +637,11 @@ Executem ara la darrera línia en la que ``tmp1`` ha de contenir si s'ha
 produït algun canvi:
 
 .. code-block:: java
-   :emphasize-lines: 7
+   :emphasize-lines: 6
 
     // boolean tmp1 = majusculitza(nomChar, 0);
     char[] lletres = nomChar;
     int posicio = 0;
-    if (posicio < 0 || posicio >= lletres.length) return false;
     char original = lletres[posicio];
     lletres[posicio] = Character.toUpperCase(original);
     boolean tmp1 = original != lletres[posicio];
@@ -692,6 +667,7 @@ especialment com ``lletres[0]`` ha deixat pas a ``nomChar[0]``.
 Ara ja podem continuar amb el fragment de codi original:
 
 .. code-block:: java
+   :emphasize-lines: 2-
 
     boolean tmp1 = majusculitza(nomChar, 0);        // assigna true
     if (tmp1) {

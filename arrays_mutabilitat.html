@@ -499,11 +499,9 @@ per modificar una variable global. Ara que tenim dades mutables també ho
 pot ser per modificar algun dels seus paràmetres!</p>
 <p>Considera que tenim la següent funció:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/* posa en majúscules la lletra a una determinada posició</span>
-<span class="cm"> * Finalment retorna true quan s&#39;ha fet algun canvi. */</span>
+<span class="cm"> * Finalment retorna true quan s&#39;ha fet algun canvi.</span>
+<span class="cm"> * Suposa que posicio és un valor entre el 0 i lletres.length - 1 */</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span><span class="p">,</span> <span class="kt">int</span> <span class="n">posicio</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
     <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
     <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">original</span> <span class="o">!=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
@@ -549,9 +547,6 @@ facilitar l’anàlisi. Així, el codi quedaria:</p>
 <p>Recordem el codi de la funció <code class="docutils literal notranslate"><span class="pre">majusculitza()</span></code> ja que ara ens
 interessarà analitzar què passa a dins:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span><span class="p">,</span> <span class="kt">int</span> <span class="n">posicio</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
     <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
     <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
     <span class="k">return</span> <span class="n">original</span> <span class="o">!=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
@@ -563,10 +558,7 @@ primera línia de la següent manera:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
 <span class="hll"> <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
 </span><span class="hll"> <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span> <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
-     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
- <span class="p">}</span>
- <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+</span> <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
  <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
 <span class="hll"> <span class="kt">boolean</span> <span class="n">tmp1</span> <span class="o">=</span> <span class="n">original</span> <span class="o">!=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
@@ -577,32 +569,20 @@ línia representa l’assignació del valor resultant.</p>
 <p>Comencem, doncs, a executar les línies en que hem descomposat la crida.
 En primer lloc farem l’assignació dels valors passats per la crida als
 paràmetres:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</pre></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="hll"> <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
+</span><span class="hll"> <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></pre></div>
 </div>
 <p>En executar les dues sentències, ens trobem amb la següent representació
 de la memòria:</p>
 <a class="reference internal image-reference" href="_images/mutabilitat_16.svg"><img alt="_images/mutabilitat_16.svg" class="align-center" src="_images/mutabilitat_16.svg" width="50%" /></a>
 <p>Potser el punt més interessant és que <code class="docutils literal notranslate"><span class="pre">lletres</span></code> està apuntant exactament
 al mateix array que <code class="docutils literal notranslate"><span class="pre">nomChar</span></code>.</p>
-<p>Ara s’avalua la condició que comprova si <code class="docutils literal notranslate"><span class="pre">posicio</span></code> està dins del rang
-acceptable:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
- <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
- <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="hll"> <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="p">{</span>
-</span><span class="hll">     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-</span><span class="hll"> <span class="p">}</span>
-</span></pre></div>
-</div>
-<p>Com que <code class="docutils literal notranslate"><span class="pre">posicio</span></code> val 0, no entrem en el cos del <code class="docutils literal notranslate"><span class="pre">if</span></code> i continuem
-l’execució.</p>
 <p>La nova instrucció a executar és l’obtenció del valor original a modificar:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
  <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
  <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
 <span class="hll"> <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
 </div>
@@ -614,7 +594,6 @@ el valor assignat a la nova variable <code class="docutils literal notranslate">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
  <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
  <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
  <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 <span class="hll"> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
 </span></pre></div>
@@ -626,7 +605,6 @@ produït algun canvi:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
  <span class="kt">char</span><span class="o">[]</span> <span class="n">lletres</span> <span class="o">=</span> <span class="n">nomChar</span><span class="p">;</span>
  <span class="kt">int</span> <span class="n">posicio</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- <span class="k">if</span> <span class="p">(</span><span class="n">posicio</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">posicio</span> <span class="o">&gt;=</span> <span class="n">lletres</span><span class="p">.</span><span class="na">length</span><span class="p">)</span> <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
  <span class="kt">char</span> <span class="n">original</span> <span class="o">=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
  <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
 <span class="hll"> <span class="kt">boolean</span> <span class="n">tmp1</span> <span class="o">=</span> <span class="n">original</span> <span class="o">!=</span> <span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
@@ -642,11 +620,11 @@ memòria seria:</p>
 <p>El diagrama representa els valors ja inaccessibles com esmorteïts. Fixa’t
 especialment com <code class="docutils literal notranslate"><span class="pre">lletres[0]</span></code> ha deixat pas a <code class="docutils literal notranslate"><span class="pre">nomChar[0]</span></code>.</p>
 <p>Ara ja podem continuar amb el fragment de codi original:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">tmp1</span> <span class="o">=</span> <span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>        <span class="c1">// assigna true</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">tmp1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="kt">boolean</span> <span class="n">tmp1</span> <span class="o">=</span> <span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>        <span class="c1">// assigna true</span>
+<span class="hll"> <span class="k">if</span> <span class="p">(</span><span class="n">tmp1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+</span><span class="hll"> <span class="p">}</span>
+</span></pre></div>
 </div>
 <p>Per tant, el missatge <code class="docutils literal notranslate"><span class="pre">&quot;Posat</span> <span class="pre">en</span> <span class="pre">majúscules&quot;</span></code> serà mostrat per sortida
 estàndard.</p>
