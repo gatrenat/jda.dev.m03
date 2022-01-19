@@ -1,0 +1,691 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Recursivitat &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Conclusions" href="moduls_conclusions.html" />
+    <link rel="prev" title="Mutabilitat" href="arrays_mutabilitat.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Introducció a la programació amb Java
+          
+
+          
+            
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Curs 2021-22
+              </div>
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_variables.html">Variables i mòduls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.html">Arrays</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Recursivitat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_conclusions.html">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_exercicis.html">Llista d’exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
+        
+      <li>Recursivitat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+            
+  <div class="section" id="recursivitat">
+<h1>Recursivitat<a class="headerlink" href="#recursivitat" title="Link permanent a aquest títol">¶</a></h1>
+<p>Has pensat si seria possible fer fer un bucle sense <code class="docutils literal notranslate"><span class="pre">for</span></code> ni <code class="docutils literal notranslate"><span class="pre">while</span></code>?</p>
+<p>Doncs sí que es pot. El millor de tot, amb només el que ja hem vist en
+aquest curs!</p>
+<p>Això sí, malgrat no afegirem noves paraules reservades, sí que presentarem
+un nou nom per referir-nos a aquest «nou» tipus de bucles:
+<strong>recursivitat</strong>.</p>
+<p>La idea bàsica és insultantment simple: un modul pot cridar altres mòduls.
+Perquè no cridar-se a si mateix?</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Marlonbrando</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">marlonbrando</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">marlonbrando</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="hll">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+</span><span class="hll">        <span class="n">marlonbrando</span><span class="p">();</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Fixa’t que el mòdul <code class="docutils literal notranslate"><span class="pre">marlonbrando()</span></code><a class="footnote-reference brackets" href="#marlonbrando" id="id1">1</a> es crida a si
+mateix. El codi anterior és similar a fer un bucle infinit, com per
+exemple:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>En aquest cas, però, no és <em>tan infinit</em>. Cada cop que fem una
+crida a un mòdul, Java se n’ha de guardar la posició de retorn per
+quan el mòdul cridat retorni. Aquesta informació es guarda en una
+seqüència anomenada <em>pila de crides</em> o <em>call stack</em>, que, com tantes
+coses a la vida, té una capacitat màxima.</p>
+<p>Tant és així que, l’execució de <code class="docutils literal notranslate"><span class="pre">Marlonbrando</span></code> resulta en el següent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">java Marlonbrando</span>
+<span class="go">Exception in thread &quot;main&quot; java.lang.StackOverflowError</span>
+<span class="go">    at Marlonbrando.marlonbrando(Marlonbrando.java:6)</span>
+<span class="go">    at Marlonbrando.marlonbrando(Marlonbrando.java:6)</span>
+<span class="go">    at Marlonbrando.marlonbrando(Marlonbrando.java:6)</span>
+<span class="go">    at Marlonbrando.marlonbrando(Marlonbrando.java:6)</span>
+<span class="go">    …</span>
+</pre></div>
+</div>
+<p>Els punts suspensius amaguen unes 1000 línies idèntiques a les anteriors.</p>
+<p>El missatge és clar <code class="docutils literal notranslate"><span class="pre">StackOverflowError</span></code> o <em>Error de pila desbordada</em>.
+Vaja, que el nostre programa s’ha passat de voltes.</p>
+<div class="section" id="un-recorregut-classic">
+<h2>Un recorregut <em>clàssic</em><a class="headerlink" href="#un-recorregut-classic" title="Link permanent a aquest títol">¶</a></h2>
+<p>El primer exemple d’aplicació correcta de la recursivitat és un problema
+que ja té una bona solució <em>iterativa</em>, és a dir, que es resol bé amb un
+bucle.</p>
+<p>Considera el següent programa:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ComptaLletres</span> <span class="p">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+         <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&quot;La recursivitat és la forma en la qual s&#39;especifica un procés &quot;</span> <span class="o">+</span>
+                       <span class="s">&quot;basat en la seva pròpia definició.&quot;</span> <span class="p">;</span>
+          <span class="kt">int</span> <span class="n">quantes</span> <span class="o">=</span> <span class="n">quantesLletres</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El text:&quot;</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t\&quot;&quot;</span><span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s">&quot;\&quot;&quot;</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;conté &quot;</span> <span class="o">+</span>
+                             <span class="n">quantes</span> <span class="o">+</span>
+                             <span class="s">&quot; lletr&quot;</span> <span class="o">+</span>
+                             <span class="p">(</span><span class="n">quantes</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="s">&quot;a&quot;</span> <span class="p">:</span> <span class="s">&quot;es&quot;</span><span class="p">)</span>
+                            <span class="p">);</span>
+     <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">quantesLletres</span><span class="p">(</span><span class="n">String</span> <span class="n">text</span><span class="p">)</span> <span class="p">{</span>
+         <span class="kt">int</span> <span class="n">comptador</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+             <span class="kt">char</span> <span class="n">actual</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+             <span class="k">if</span> <span class="p">(</span><span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="n">actual</span><span class="p">))</span> <span class="p">{</span>
+                 <span class="n">comptador</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+             <span class="p">}</span>
+         <span class="p">}</span>
+         <span class="k">return</span> <span class="n">comptador</span><span class="p">;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>La sortida d’aquest programa és:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java ComptaLletres
+<span class="go">El text:</span>
+<span class="go">    &quot;La recursivitat és la forma en la qual s&#39;especifica un procés basat en la seva pròpia definició.&quot;</span>
+<span class="go">conté 78 lletres</span>
+</pre></div>
+</div>
+<p>Com pots observar, el programa fa un recompte de lletres d’un text. Res
+especial, oi?</p>
+</div>
+<div class="section" id="el-problema-iteratiu-resolt-recursivament">
+<h2>El problema iteratiu resolt recursivament<a class="headerlink" href="#el-problema-iteratiu-resolt-recursivament" title="Link permanent a aquest títol">¶</a></h2>
+<p>La manera iterativa de resoldre el problema està prou bé.</p>
+<p>Permet-me, però, que t’emboliqui una mica la vida amb una versió
+<em>peculiar</em> del problema anterior. Deixa’t sorprendre’t.</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ComptaLletres</span> <span class="p">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+         <span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">&quot;La recursivitat és la forma en la qual s&#39;especifica un procés &quot;</span> <span class="o">+</span>
+                       <span class="s">&quot;basat en la seva pròpia definició.&quot;</span> <span class="p">;</span>
+          <span class="kt">int</span> <span class="n">quantes</span> <span class="o">=</span> <span class="n">quantesLletres</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El text:&quot;</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\t\&quot;&quot;</span><span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s">&quot;\&quot;&quot;</span><span class="p">);</span>
+          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;conté &quot;</span> <span class="o">+</span>
+                             <span class="n">quantes</span> <span class="o">+</span>
+                             <span class="s">&quot; lletr&quot;</span> <span class="o">+</span>
+                             <span class="p">(</span><span class="n">quantes</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="s">&quot;a&quot;</span> <span class="p">:</span> <span class="s">&quot;es&quot;</span><span class="p">)</span>
+                            <span class="p">);</span>
+     <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">quantesLletres</span><span class="p">(</span><span class="n">String</span> <span class="n">text</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">         <span class="c1">// cas base</span>
+</span><span class="hll">         <span class="k">if</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class="hll">
+</span><span class="hll">         <span class="c1">// cas recursiu</span>
+</span><span class="hll">         <span class="kt">char</span> <span class="n">primer</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span class="hll">         <span class="kt">int</span> <span class="n">lletresPrimerCaracter</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="n">primer</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// pas actual</span>
+</span><span class="hll">
+</span><span class="hll">         <span class="n">String</span> <span class="n">restaText</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class="hll">         <span class="kt">int</span> <span class="n">lletresRestaText</span> <span class="o">=</span> <span class="n">quantesLletres</span><span class="p">(</span><span class="n">restaText</span><span class="p">);</span>      <span class="c1">// pas recursiu</span>
+</span><span class="hll">
+</span><span class="hll">         <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">lletresPrimerCaracter</span> <span class="o">+</span> <span class="n">lletresRestaText</span><span class="p">;</span>
+</span><span class="hll">         <span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+</span>     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Veiem com és possible que aquesta nova versió faci el mateix que
+l’anterior però sense <code class="docutils literal notranslate"><span class="pre">for</span></code> ni <code class="docutils literal notranslate"><span class="pre">while</span></code>.</p>
+<ul>
+<li><p>Per començar, la funció comprova si el text és buit. És clar, si el text
+és buit ja sabem quantes lletres té sense fer cap càlcul. En té
+exactament zero!</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// cas base</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>És clar, si el text està buit, sabem de segur que no hi ha cap lletra!</p>
+<p>Anomenarem aquesta comprovació el <em>cas base</em></p>
+</li>
+<li><p>A continuació la funció es preocupa de si el primer caràcter és o no una
+lletra:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">primer</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">lletresPrimerCaracter</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="o">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Si és una lletra, el nombre de lletres en el primer caràcter és 1 i si
+no ho és, doncs és que no n’hi ha (zero)</p>
+<p>Anomenarem aquesta part el <em>pas actual</em></p>
+</li>
+<li><p>A continuació, la funció passa a calcular el nombre de lletres que conté
+la resta del text, és a dir, el text original menys el primer caràcter.</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">restaText</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">lletresRestaText</span> <span class="o">=</span> <span class="n">quantesLletres</span><span class="p">(</span><span class="n">restaText</span><span class="p">);</span>      <span class="c1">// pas recursiu</span>
+</pre></div>
+</td></tr></table></div>
+<p>Primer «extreu» el primer caràcter del text amb la funció <code class="docutils literal notranslate"><span class="pre">String.substring()</span></code>.
+Recorda que <code class="docutils literal notranslate"><span class="pre">&quot;Adéu&quot;.substring(1)</span></code> → <code class="docutils literal notranslate"><span class="pre">&quot;déu&quot;</span></code></p>
+<p>I com calcula el nombre de lletres que té la resta del text? Doncs tenim
+una funció que ja ens calcula això. És diu <code class="docutils literal notranslate"><span class="pre">quantesLletres()</span></code>.
+Val, sí, és la mateixa funció que estem
+definint però… el text que li estem passant no és el mateix que hem
+rebut: és un de més <em>petit</em>.</p>
+<p>Anomenarem aquesta part el <em>pas recursiu</em></p>
+</li>
+<li><p>Finalment la funció retorna la suma del nombre de lletres que conté el
+primer caràcter més les que conté la resta del text.</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">lletresPrimerCaracter</span> <span class="o">+</span> <span class="n">lletresRestaText</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+<p>A aquesta part, juntament amb els passos actual i recursiu, els
+anomenarem <em>cas recursiu</em>.</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// cas recursiu</span>
+<span class="kt">char</span> <span class="n">primer</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">lletresPrimerCaracter</span> <span class="o">=</span> <span class="n">Character</span><span class="p">.</span><span class="na">isLetter</span><span class="p">(</span><span class="n">primer</span><span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// pas actual</span>
+
+<span class="n">String</span> <span class="n">restaText</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">lletresRestaText</span> <span class="o">=</span> <span class="n">quantesLletres</span><span class="p">(</span><span class="n">restaText</span><span class="p">);</span>      <span class="c1">// pas recursiu</span>
+
+<span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">lletresPrimerCaracter</span> <span class="o">+</span> <span class="n">lletresRestaText</span><span class="p">;</span>
+<span class="k">return</span> <span class="n">total</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ul>
+<p>Com sabem que <code class="docutils literal notranslate"><span class="pre">quantesLletres()</span></code> no està <em>marlonbrando</em>? És a dir, com
+sabem que no acabarà desbordant la pila com ho feia la funció
+<code class="docutils literal notranslate"><span class="pre">marlonbrando()</span></code>? La resposta a aquesta pregunta és la clau per entendre
+la recursivitat.</p>
+</div>
+<div class="section" id="pas-a-pas">
+<h2>Pas a pas<a class="headerlink" href="#pas-a-pas" title="Link permanent a aquest títol">¶</a></h2>
+<p>Veiem <code class="docutils literal notranslate"><span class="pre">quantesLletres()</span></code> en funcionament.</p>
+<p>Considerarem el text inicial <code class="docutils literal notranslate"><span class="pre">&quot;a+b=c&quot;</span></code> perquè és curt i té lletres i
+no lletres.</p>
+<div class="highlight-console notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">quantesLletres(&quot;a+b=c&quot;)</span>
+<span class="go">├── ! &quot;a+b=c&quot;.isEmpty()                          // no és buit =&gt; no és cas base</span>
+<span class="go">├── primer = &#39;a&#39;</span>
+<span class="go">├── lletresPrimerCaracter = 1                    // pas actual</span>
+<span class="go">├── restaText = &quot;+b=c&quot;</span>
+<span class="go">├── lletresRestaText = quantesLletres(&quot;+b=c&quot;)    // primera crida recursiva</span>
+<span class="go">│   ├── ! &quot;+b=c&quot;.isEmpty()</span>
+<span class="go">│   ├── primer = &#39;+&#39;</span>
+<span class="go">│   ├── lletresPrimerCaracter = 0</span>
+<span class="go">│   ├── restaText = &quot;b=c&quot;</span>
+<span class="go">│   ├── lletresRestaText = quantesLletres(&quot;b=c&quot;)</span>
+<span class="go">│   │   ├── ! &quot;b=c&quot;.isEmpty()</span>
+<span class="go">│   │   ├── primer = &#39;b&#39;</span>
+<span class="go">│   │   ├── lletresPrimerCaracter = 1</span>
+<span class="go">│   │   ├── restaText = &quot;=c&quot;</span>
+<span class="go">│   │   ├── lletresRestaText = quantesLletres(&quot;=c&quot;)</span>
+<span class="go">│   │   │   ├── ! &quot;=c&quot;.isEmpty()</span>
+<span class="go">│   │   │   ├── primer = &#39;=&#39;</span>
+<span class="go">│   │   │   ├── lletresPrimerCaracter = 0</span>
+<span class="go">│   │   │   ├── restaText = &quot;c&quot;</span>
+<span class="go">│   │   │   ├── lletresRestaText = quantesLletres(&quot;c&quot;)</span>
+<span class="go">│   │   │   │   ├── ! &quot;c&quot;.isEmpty()</span>
+<span class="go">│   │   │   │   ├── primer = &#39;c&#39;</span>
+<span class="go">│   │   │   │   ├── lletresPrimerCaracter = 0</span>
+<span class="go">│   │   │   │   ├── restaText = &quot;&quot;</span>
+<span class="go">│   │   │   │   ├── lletresRestaText = quantesLletres(&quot;&quot;)</span>
+<span class="go">│   │   │   │   │   └── &quot;&quot;.isEmpty() // retorna 0</span>
+<span class="go">│   │   │   │   ├── lletresRestaText = 0</span>
+<span class="go">│   │   │   │   ├── total = 1 + 0 // lletresPrimerCaracter + lletresRestaText</span>
+<span class="go">│   │   │   │   └── return 1</span>
+<span class="go">│   │   │   ├── lletresRestaText = 1</span>
+<span class="go">│   │   │   ├── total = 0 + 1</span>
+<span class="go">│   │   │   └── return 1</span>
+<span class="go">│   │   ├── lletresRestaText = 0</span>
+<span class="go">│   │   ├── total = 1 + 0</span>
+<span class="go">│   │   └── return 1</span>
+<span class="go">│   ├── lletresRestaText = 1</span>
+<span class="go">│   ├── total = 1 + 1</span>
+<span class="go">│   └── return 2</span>
+<span class="go">├── lletresRestaText = 2</span>
+<span class="go">├── total = 2 + 1</span>
+<span class="go">└── return 3</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="estructura-d-un-problema-recursiu">
+<h2>Estructura d’un problema recursiu<a class="headerlink" href="#estructura-d-un-problema-recursiu" title="Link permanent a aquest títol">¶</a></h2>
+<a class="reference internal image-reference" href="_images/recursivitat.svg"><img alt="_images/recursivitat.svg" class="align-center" src="_images/recursivitat.svg" width="256" /></a>
+<p>L’estructura bàsica d’una solució recursiva és:</p>
+<ul>
+<li><p>cas base</p>
+<p>Resol una part del problema sense crida recursiva</p>
+</li>
+<li><p>cas recursiu</p>
+<p>Resol l’altra part del problema amb crida recursiva</p>
+<ul class="simple">
+<li><p>Tracta el pas actual</p></li>
+<li><p>Resol el problema sense el pas actual aplicant la mateixa solució a un
+problema «més petit».</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="recepta-per-cuinar-una-bona-recursivitat">
+<h2>Recepta per cuinar una bona recursivitat<a class="headerlink" href="#recepta-per-cuinar-una-bona-recursivitat" title="Link permanent a aquest títol">¶</a></h2>
+<p>Considera el problema a resoldre per una entrada determinada i respon
+les següents preguntes:</p>
+<ol class="arabic">
+<li><p>amb quins valors de l’entrada sabem donar una resposta immediata sense
+fer més càlcul?</p>
+<p>La resposta a aquesta pregunta formaran el cas (o casos) base</p>
+</li>
+<li><p>com podem dividir l’entrada actual en dues parts: una primera amb un
+cas trivial i l’altra amb la resta de l’entrada.</p>
+<p>La primera part la considerarem el pas actual, la segona el pas
+recursiu.</p>
+<p>La segona part ha de resultar una versió del problema més petita, és a
+dir, més a prop del cas base. Això ens garantirà que algun dia acabarem
+de fer crides recursives.</p>
+<p>Un cop tornat del pas recursiu (que inclou la crida recursiva),
+combinem els resultats del pas actual i el pas recursiu i el retornem.</p>
+</li>
+</ol>
+<p>En resum, la solució ha de tenir, com a mínim:</p>
+<ul class="simple">
+<li><p>un cas base</p></li>
+<li><p>un cas recursiu</p></li>
+<li><p>a cada crida recursiva, el valor de l’entrada ha d’estar més a prop d’un cas base</p></li>
+</ul>
+</div>
+<div class="section" id="problemes-naturalment-recursius">
+<h2>Problemes naturalment recursius<a class="headerlink" href="#problemes-naturalment-recursius" title="Link permanent a aquest títol">¶</a></h2>
+<p>La recursivitat no sol ser adequada per exemples de recorregut com el de
+<code class="docutils literal notranslate"><span class="pre">quantesLletres()</span></code>. Fer-ho recursiu resulta sovint més complex
+d’entendre i, en llenguatges com Java, fins i tot menys eficient perquè el
+<code class="docutils literal notranslate"><span class="pre">for</span></code> no guarda context a la pila de crides a cada iteració.</p>
+<p>N’hi ha altres problemes, però, pels que la recursivitat sí presenta
+avantatges importants.</p>
+<p>Et poso uns quants exemples:</p>
+<ul class="simple">
+<li><p>cercar un fitxer en el sistema de fitxers del teu equip</p></li>
+<li><p>processar un document XML</p></li>
+<li><p>calcular una expressió aritmètica amb parèntesis</p></li>
+<li><p>ordenar de manera ràpida (<a class="reference external" href="https://ca.wikipedia.org/wiki/Quicksort">quicksort</a>)</p></li>
+<li><p>resoldre un <a class="reference external" href="https://ca.wikipedia.org/wiki/Sudoku">sudoku</a>, el
+problema de les <a class="reference external" href="https://ca.wikipedia.org/wiki/Vuit_reines">vuit reines</a>, el problema de <a class="reference external" href="https://ca.wikipedia.org/wiki/Torres_de_Hanoi">les
+Torres de Hanoi</a>,
+problemes de prova i error típicament resolts amb <a class="reference external" href="https://ca.wikipedia.org/wiki/Backtracking">backtracking</a> …</p></li>
+<li><p>problemes matemàtics amb definició recursiva, com per exemple <a class="reference external" href="https://ca.wikipedia.org/wiki/Factorial">factorial</a>, <a class="reference external" href="https://ca.wikipedia.org/wiki/Recursivitat">la seqüència de fibonacci</a>, i <a class="reference external" href="https://ca.wikipedia.org/wiki/Nombres_de_Catalan">nombres de Catalan</a></p></li>
+</ul>
+</div>
+<div class="section" id="uns-pocs-exercicis">
+<h2>Uns pocs exercicis<a class="headerlink" href="#uns-pocs-exercicis" title="Link permanent a aquest títol">¶</a></h2>
+<p>Considera els següents exercicis de manera recursiva:</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_02_42_mostralletres_rec.html"><span class="doc"> Exercici 02_42. Mostra lletres (recursiu)</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_02_43_extreu_nombres.html"><span class="doc"> Exercici 02_43. Extreu nombres (recursiu)</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_02_44_suma_digits.html"><span class="doc"> Exercici 02_44. Suma dígits (recursiu)</span></a></p>
+</div>
+<div class="section" id="una-nota-final-sobre-recursivitat">
+<h2>Una nota final sobre recursivitat<a class="headerlink" href="#una-nota-final-sobre-recursivitat" title="Link permanent a aquest títol">¶</a></h2>
+<p>La majoria dels llenguatges de programació iterativa, com ara Java, no
+gestionen especialment bé la recursivitat. Hi ha altres <a class="reference external" href="https://ca.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3">paradigmes de
+programació</a>,
+significativament el <a class="reference external" href="https://ca.wikipedia.org/wiki/Programaci%C3%B3_funcional">funcional</a>, pels que la
+recursivitat és la manera natural d’expressar bucles i que sí disposen de
+mecanismes d’optimització (cerca pel terme <em>tail call</em> si tens
+curiositat)</p>
+<p>Amb tot, és interessant tenir coneixement d’aquesta tècnica de programació
+ja què alguns problemes tenen com a solució més natural la versió
+recursiva. Si bé sovint podrem trobar la manera iterativa de resoldre’ls,
+aquesta pot arribar a ser molt més complexa de programar i d’entendre que
+la recursiva. A més a més, qui sap? Potser algun dia t’animes a provar un
+llenguatge funcional com ara Haskell, Scala o Elixir, on la recursivitat
+és la manera més natural de composar bucles.</p>
+<hr class="docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="marlonbrando"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>El nom <em>Marlonbrando</em> ve de la cançó <a class="reference external" href="https://www.youtube.com/watch?v=-1uJv203lfo">homònima</a> del grup Hamburguessa
+Vegetal.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="moduls_conclusions.html" class="btn btn-neutral float-right" title="Conclusions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="arrays_mutabilitat.html" class="btn btn-neutral float-left" title="Mutabilitat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021-2022 Moisès Gómez Girón
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

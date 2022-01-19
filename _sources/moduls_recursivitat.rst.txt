@@ -1,0 +1,424 @@
+############
+Recursivitat
+############
+
+
+Has pensat si seria possible fer fer un bucle sense ``for`` ni ``while``?
+
+Doncs sí que es pot. El millor de tot, amb només el que ja hem vist en
+aquest curs!
+
+Això sí, malgrat no afegirem noves paraules reservades, sí que presentarem
+un nou nom per referir-nos a aquest "nou" tipus de bucles:
+**recursivitat**.
+
+La idea bàsica és insultantment simple: un modul pot cridar altres mòduls.
+Perquè no cridar-se a si mateix?
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 5,6,7
+
+    public class Marlonbrando {
+        public static void marlonbrando() {
+            marlonbrando();
+        }
+        public static void main(String[] args){
+            marlonbrando();
+        }
+    }
+
+Fixa't que el mòdul ``marlonbrando()`` [#marlonbrando]_ es crida a si
+mateix. El codi anterior és similar a fer un bucle infinit, com per
+exemple:
+
+.. code-block:: java
+
+    while (true);
+
+En aquest cas, però, no és *tan infinit*. Cada cop que fem una
+crida a un mòdul, Java se n'ha de guardar la posició de retorn per
+quan el mòdul cridat retorni. Aquesta informació es guarda en una
+seqüència anomenada *pila de crides* o *call stack*, que, com tantes
+coses a la vida, té una capacitat màxima.
+
+Tant és així que, l'execució de ``Marlonbrando`` resulta en el següent:
+
+.. code-block:: console
+
+    java Marlonbrando
+    Exception in thread "main" java.lang.StackOverflowError
+        at Marlonbrando.marlonbrando(Marlonbrando.java:6)
+        at Marlonbrando.marlonbrando(Marlonbrando.java:6)
+        at Marlonbrando.marlonbrando(Marlonbrando.java:6)
+        at Marlonbrando.marlonbrando(Marlonbrando.java:6)
+        …
+
+Els punts suspensius amaguen unes 1000 línies idèntiques a les anteriors.
+
+El missatge és clar ``StackOverflowError`` o *Error de pila desbordada*.
+Vaja, que el nostre programa s'ha passat de voltes.
+
+
+Un recorregut *clàssic*
+=======================
+
+El primer exemple d'aplicació correcta de la recursivitat és un problema
+que ja té una bona solució *iterativa*, és a dir, que es resol bé amb un
+bucle.
+
+Considera el següent programa:
+
+.. code-block:: java
+    :linenos:
+
+    public class ComptaLletres {
+         public static void main(String[] args){
+             String text = "La recursivitat és la forma en la qual s'especifica un procés " +
+                           "basat en la seva pròpia definició." ;
+              int quantes = quantesLletres(text);
+              System.out.println("El text:");
+              System.out.println("\t\""+ text + "\"");
+              System.out.println("conté " +
+                                 quantes +
+                                 " lletr" +
+                                 (quantes == 1 ? "a" : "es")
+                                );
+         }
+
+         public static int quantesLletres(String text) {
+             int comptador = 0;
+             for (int i = 0; i < text.length(); i++) {
+                 char actual = text.charAt(i);
+                 if (Character.isLetter(actual)) {
+                     comptador += 1;
+                 }
+             }
+             return comptador;
+         }
+    }
+
+La sortida d'aquest programa és:
+
+.. code-block:: console
+
+    $ java ComptaLletres
+    El text:
+        "La recursivitat és la forma en la qual s'especifica un procés basat en la seva pròpia definició."
+    conté 78 lletres
+
+
+Com pots observar, el programa fa un recompte de lletres d'un text. Res
+especial, oi?
+
+El problema iteratiu resolt recursivament
+=========================================
+
+La manera iterativa de resoldre el problema està prou bé.
+
+Permet-me, però, que t'emboliqui una mica la vida amb una versió
+*peculiar* del problema anterior. Deixa't sorprendre't.
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 16-27
+
+    public class ComptaLletres {
+         public static void main(String[] args){
+             String text = "La recursivitat és la forma en la qual s'especifica un procés " +
+                           "basat en la seva pròpia definició." ;
+              int quantes = quantesLletres(text);
+              System.out.println("El text:");
+              System.out.println("\t\""+ text + "\"");
+              System.out.println("conté " +
+                                 quantes +
+                                 " lletr" +
+                                 (quantes == 1 ? "a" : "es")
+                                );
+         }
+
+         public static int quantesLletres(String text) {
+             // cas base
+             if (text.isEmpty()) return 0;
+
+             // cas recursiu
+             char primer = text.charAt(0);
+             int lletresPrimerCaracter = Character.isLetter(primer) ? 1 : 0; // pas actual
+
+             String restaText = text.substring(1);
+             int lletresRestaText = quantesLletres(restaText);      // pas recursiu
+
+             int total = lletresPrimerCaracter + lletresRestaText;
+             return total;
+         }
+    }
+
+Veiem com és possible que aquesta nova versió faci el mateix que
+l'anterior però sense ``for`` ni ``while``.
+
+* Per començar, la funció comprova si el text és buit. És clar, si el text
+  és buit ja sabem quantes lletres té sense fer cap càlcul. En té
+  exactament zero!
+
+  .. code-block:: java
+    :linenos:
+    :lineno-start: 16
+
+    // cas base
+    if (text.isEmpty()) return 0;
+
+  És clar, si el text està buit, sabem de segur que no hi ha cap lletra!
+
+  Anomenarem aquesta comprovació el *cas base*
+
+* A continuació la funció es preocupa de si el primer caràcter és o no una
+  lletra:
+
+  .. code-block:: java
+    :linenos:
+    :lineno-start: 20
+
+    char primer = text.charAt(0);
+    int lletresPrimerCaracter = Character.isLetter(text.charAt(0)) ? 1 : 0;
+
+  Si és una lletra, el nombre de lletres en el primer caràcter és 1 i si
+  no ho és, doncs és que no n'hi ha (zero)
+
+  Anomenarem aquesta part el *pas actual*
+
+* A continuació, la funció passa a calcular el nombre de lletres que conté
+  la resta del text, és a dir, el text original menys el primer caràcter.
+
+  .. code-block:: java
+    :linenos:
+    :lineno-start: 23
+
+    String restaText = text.substring(1);
+    int lletresRestaText = quantesLletres(restaText);      // pas recursiu
+
+  Primer "extreu" el primer caràcter del text amb la funció ``String.substring()``.
+  Recorda que ``"Adéu".substring(1)`` → ``"déu"``
+
+  I com calcula el nombre de lletres que té la resta del text? Doncs tenim
+  una funció que ja ens calcula això. És diu ``quantesLletres()``.
+  Val, sí, és la mateixa funció que estem
+  definint però… el text que li estem passant no és el mateix que hem
+  rebut: és un de més *petit*.
+
+  Anomenarem aquesta part el *pas recursiu*
+
+* Finalment la funció retorna la suma del nombre de lletres que conté el
+  primer caràcter més les que conté la resta del text.
+
+  .. code-block:: java
+    :linenos:
+    :lineno-start: 26
+
+    int total = lletresPrimerCaracter + lletresRestaText;
+    return total;
+
+  A aquesta part, juntament amb els passos actual i recursiu, els
+  anomenarem *cas recursiu*.
+
+  .. code-block:: java
+    :linenos:
+    :lineno-start: 19
+
+    // cas recursiu
+    char primer = text.charAt(0);
+    int lletresPrimerCaracter = Character.isLetter(primer) ? 1 : 0; // pas actual
+
+    String restaText = text.substring(1);
+    int lletresRestaText = quantesLletres(restaText);      // pas recursiu
+
+    int total = lletresPrimerCaracter + lletresRestaText;
+    return total;
+
+
+Com sabem que ``quantesLletres()`` no està *marlonbrando*? És a dir, com
+sabem que no acabarà desbordant la pila com ho feia la funció
+``marlonbrando()``? La resposta a aquesta pregunta és la clau per entendre
+la recursivitat.
+
+Pas a pas
+=========
+
+Veiem ``quantesLletres()`` en funcionament.
+
+Considerarem el text inicial ``"a+b=c"`` perquè és curt i té lletres i
+no lletres.
+
+.. code-block:: console
+   :linenos:
+
+   quantesLletres("a+b=c")
+   ├── ! "a+b=c".isEmpty()                          // no és buit => no és cas base
+   ├── primer = 'a'
+   ├── lletresPrimerCaracter = 1                    // pas actual
+   ├── restaText = "+b=c"
+   ├── lletresRestaText = quantesLletres("+b=c")    // primera crida recursiva
+   │   ├── ! "+b=c".isEmpty() 
+   │   ├── primer = '+'
+   │   ├── lletresPrimerCaracter = 0
+   │   ├── restaText = "b=c"
+   │   ├── lletresRestaText = quantesLletres("b=c")
+   │   │   ├── ! "b=c".isEmpty() 
+   │   │   ├── primer = 'b'
+   │   │   ├── lletresPrimerCaracter = 1
+   │   │   ├── restaText = "=c"
+   │   │   ├── lletresRestaText = quantesLletres("=c")
+   │   │   │   ├── ! "=c".isEmpty() 
+   │   │   │   ├── primer = '='
+   │   │   │   ├── lletresPrimerCaracter = 0
+   │   │   │   ├── restaText = "c"
+   │   │   │   ├── lletresRestaText = quantesLletres("c")
+   │   │   │   │   ├── ! "c".isEmpty() 
+   │   │   │   │   ├── primer = 'c'
+   │   │   │   │   ├── lletresPrimerCaracter = 0
+   │   │   │   │   ├── restaText = ""
+   │   │   │   │   ├── lletresRestaText = quantesLletres("")
+   │   │   │   │   │   └── "".isEmpty() // retorna 0
+   │   │   │   │   ├── lletresRestaText = 0
+   │   │   │   │   ├── total = 1 + 0 // lletresPrimerCaracter + lletresRestaText
+   │   │   │   │   └── return 1
+   │   │   │   ├── lletresRestaText = 1
+   │   │   │   ├── total = 0 + 1
+   │   │   │   └── return 1
+   │   │   ├── lletresRestaText = 0
+   │   │   ├── total = 1 + 0
+   │   │   └── return 1
+   │   ├── lletresRestaText = 1
+   │   ├── total = 1 + 1
+   │   └── return 2
+   ├── lletresRestaText = 2
+   ├── total = 2 + 1
+   └── return 3
+
+Estructura d'un problema recursiu
+=================================
+
+.. image:: _images/recursivitat.svg
+    :width: 256
+    :align: center
+
+L'estructura bàsica d'una solució recursiva és:
+
+* cas base
+
+  Resol una part del problema sense crida recursiva
+
+* cas recursiu
+
+  Resol l'altra part del problema amb crida recursiva
+
+  - Tracta el pas actual
+
+  - Resol el problema sense el pas actual aplicant la mateixa solució a un
+    problema "més petit".
+
+
+Recepta per cuinar una bona recursivitat
+========================================
+
+Considera el problema a resoldre per una entrada determinada i respon
+les següents preguntes:
+
+1. amb quins valors de l'entrada sabem donar una resposta immediata sense
+   fer més càlcul?
+
+   La resposta a aquesta pregunta formaran el cas (o casos) base
+
+2. com podem dividir l'entrada actual en dues parts: una primera amb un
+   cas trivial i l'altra amb la resta de l'entrada.
+
+   La primera part la considerarem el pas actual, la segona el pas
+   recursiu.
+
+   La segona part ha de resultar una versió del problema més petita, és a
+   dir, més a prop del cas base. Això ens garantirà que algun dia acabarem
+   de fer crides recursives.
+
+   Un cop tornat del pas recursiu (que inclou la crida recursiva),
+   combinem els resultats del pas actual i el pas recursiu i el retornem.
+
+
+En resum, la solució ha de tenir, com a mínim:
+
+* un cas base
+
+* un cas recursiu
+
+* a cada crida recursiva, el valor de l'entrada ha d'estar més a prop d'un cas base
+
+Problemes naturalment recursius
+===============================
+
+La recursivitat no sol ser adequada per exemples de recorregut com el de
+``quantesLletres()``. Fer-ho recursiu resulta sovint més complex
+d'entendre i, en llenguatges com Java, fins i tot menys eficient perquè el
+``for`` no guarda context a la pila de crides a cada iteració.
+
+N'hi ha altres problemes, però, pels que la recursivitat sí presenta
+avantatges importants.
+
+Et poso uns quants exemples:
+
+* cercar un fitxer en el sistema de fitxers del teu equip
+
+* processar un document XML
+
+* calcular una expressió aritmètica amb parèntesis
+
+* ordenar de manera ràpida (`quicksort <https://ca.wikipedia.org/wiki/Quicksort>`_)
+
+* resoldre un `sudoku <https://ca.wikipedia.org/wiki/Sudoku>`_, el
+  problema de les `vuit reines
+  <https://ca.wikipedia.org/wiki/Vuit_reines>`_, el problema de `les
+  Torres de Hanoi <https://ca.wikipedia.org/wiki/Torres_de_Hanoi>`_,
+  problemes de prova i error típicament resolts amb `backtracking
+  <https://ca.wikipedia.org/wiki/Backtracking>`_ …
+
+* problemes matemàtics amb definició recursiva, com per exemple `factorial
+  <https://ca.wikipedia.org/wiki/Factorial>`_, `la seqüència de fibonacci
+  <https://ca.wikipedia.org/wiki/Recursivitat>`_, i `nombres de Catalan
+  <https://ca.wikipedia.org/wiki/Nombres_de_Catalan>`_
+
+
+Uns pocs exercicis
+==================
+
+Considera els següents exercicis de manera recursiva:
+
+|exerciseicon__T| :doc:`exercici_02_42_mostralletres_rec`
+
+|exerciseicon__T| :doc:`exercici_02_43_extreu_nombres`
+
+|exerciseicon__T| :doc:`exercici_02_44_suma_digits`
+
+Una nota final sobre recursivitat
+=================================
+
+La majoria dels llenguatges de programació iterativa, com ara Java, no
+gestionen especialment bé la recursivitat. Hi ha altres `paradigmes de
+programació
+<https://ca.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3>`_,
+significativament el `funcional
+<https://ca.wikipedia.org/wiki/Programaci%C3%B3_funcional>`_, pels que la
+recursivitat és la manera natural d'expressar bucles i que sí disposen de
+mecanismes d'optimització (cerca pel terme *tail call* si tens
+curiositat)
+
+Amb tot, és interessant tenir coneixement d'aquesta tècnica de programació
+ja què alguns problemes tenen com a solució més natural la versió
+recursiva. Si bé sovint podrem trobar la manera iterativa de resoldre'ls,
+aquesta pot arribar a ser molt més complexa de programar i d'entendre que
+la recursiva. A més a més, qui sap? Potser algun dia t'animes a provar un
+llenguatge funcional com ara Haskell, Scala o Elixir, on la recursivitat
+és la manera més natural de composar bucles.
+
+-----
+
+.. [#Marlonbrando] El nom *Marlonbrando* ve de la cançó `homònima
+    <https://www.youtube.com/watch?v=-1uJv203lfo>`_ del grup Hamburguessa
+    Vegetal.
+
