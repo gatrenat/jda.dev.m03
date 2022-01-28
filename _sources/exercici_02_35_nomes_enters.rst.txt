@@ -33,13 +33,13 @@ Considera les simulacions:
 .. code-block:: console
    :emphasize-lines: 2
 
-    $ java Sumaenters a 1 2 -2 +4 5 sis
+    $ java SumaEnters a 1 2 -2 +4 5 sis
     10
 
 .. code-block:: console
    :emphasize-lines: 2
 
-    $ java Sumaenters un dos tres
+    $ java SumaEnters un dos tres
     0
 
 Pista: ``filtraEnters()`` haurà de crear un array d'enters. Per saber la
