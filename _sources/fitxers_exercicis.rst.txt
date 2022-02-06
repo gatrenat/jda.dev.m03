@@ -16,7 +16,7 @@ continuació:
     exercici_03_05_lloro_memoria.rst
     exercici_03_06_traduccio.rst
     exercici_03_07_log.rst
+    exercici_03_08_matricules_italianes.rst
+    exercici_03_09_alumnes.rst
 
-.. exercici_03_08_matricules_italianes.rst
-.. exercici_03_09_alumnes.rst
-.. exercici_03_10_inspecciona.rst
+..  exercici_03_10_inspecciona.rst

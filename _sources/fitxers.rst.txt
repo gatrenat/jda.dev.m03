@@ -27,8 +27,8 @@ execucions anteriors.
     fitxers_intro.rst
     fitxers_lectura.rst
     fitxers_escriptura.rst
+    fitxers_registres.rst
     fitxers_exercicis.rst
 
-..  fitxers_registres.rst
 ..  fitxers_gestio.rst
 ..  fitxers_conclusions.rst
