@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.61711944"
-     inkscape:cx="746.86051"
-     inkscape:cy="-348.83262"
+     inkscape:zoom="0.39711263"
+     inkscape:cx="194.02392"
+     inkscape:cy="-348.87541"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -514,7 +514,7 @@
          id="tspan1362"
          x="232.35426"
          y="41.231453"
-         style="stroke-width:0.26458332">NP</tspan></text>
+         style="stroke-width:0.26458332">-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -624,7 +624,7 @@
          id="tspan1362-7"
          x="274.11728"
          y="41.231453"
-         style="stroke-width:0.26458332">NP</tspan></text>
+         style="stroke-width:0.26458332">-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -639,14 +639,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-147.23764"
+       x="-142.4752"
        y="-13.165379"
        id="text1522"><tspan
          sodipodi:role="line"
          id="tspan1520"
-         x="-147.23764"
+         x="-142.4752"
          y="-13.165379"
-         style="stroke-width:0.26458332">char[] noms;</tspan></text>
+         style="stroke-width:0.26458332">String[] noms;</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
