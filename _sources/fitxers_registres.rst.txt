@@ -69,7 +69,7 @@ El següent diagrama representaria aquestes estructures de dades:
    :align: center
 
 **Nota**: he codificat el valor de *no presentat* o ``NP`` com un ``-1``
-per simplicitat. Així ens hi cap en un enter i no hem de fer malabars.
+per simplicitat, ja que és molt fàcil de codificar com un enter.
 
 Així, si volem saber la nota de la UF3 de l'Eleftèria, com que el nom de
 l'alumna es troba a la posició ``0`` de l'array  ``noms``, les seves notes
@@ -347,7 +347,7 @@ Podem donar-li d'alta nous valors:
    alumnes[1].email = "daniel.carrasco@iesjoandaustria.org";
    alumnes[1].edat = 21;
    alumnes[1].esOient = true;
-   alumnes[1].notes = new int[] { 5, 4, 5, 2, NP, NP };
+   alumnes[1].notes = new int[] { 5, 4, 5, 2, -1, -1 };
 
    alumnes[2] = construeixAlumne("Gabriela Cirerer Nasal",
                                  "gabriela.cirerer@iesjoandaustria.org",
