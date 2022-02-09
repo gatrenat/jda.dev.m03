@@ -18,5 +18,4 @@ continuació:
     exercici_03_07_log.rst
     exercici_03_08_matricules_italianes.rst
     exercici_03_09_alumnes.rst
-
-..  exercici_03_10_inspecciona.rst
+    exercici_03_10_inspecciona.rst
