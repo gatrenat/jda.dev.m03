@@ -71,3 +71,7 @@ a mida que les llegeix, sense guardar les ja processades a memòria.
 
 Podem suposar que el fitxer d'entrada sempre existirà i serà de text i
 llegible, tot i que podria estar buit o contenir qualsevol text arbitrari.
+
+Per passar totes les proves, serà necessari que disposis de la funció
+``boolean matriculaItalianaValida(String)`` que, donat un text, retorni
+``true`` quan correspon a una matrícula italiana vàlida.

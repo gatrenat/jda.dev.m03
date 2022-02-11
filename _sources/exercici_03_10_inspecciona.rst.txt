@@ -36,6 +36,7 @@ En cas que es pugui llegir i que la seva extensió sigui una de les
 conegudes, el programa mostrarà el seu contingut envoltant cada línia
 entre dos caràcters ``|`` per permetre distingir espais.
 
+Es consideraran extensions conegudes ``.java`` i ``.txt``.
 
 Considera la següent simulació:
 
