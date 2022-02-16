@@ -33,10 +33,10 @@ Un exemple de contingut de ``matriculesllegides.txt`` pot ser:
     JK432HJ
 
 Desenvolupa un programa que llegeixi ``matriculesllegides.txt`` i
-generi dos nous fitxers anomenats ``matriculescorrectes.txt`` i
+generi dos nous fitxers anomenats ``matriculesvalides.txt`` i
 ``matriculeserronies.txt`` tals que:
 
-* ``matriculescorrectes.txt`` contingui totes les matrícules trobades
+* ``matriculesvalides.txt`` contingui totes les matrícules trobades
   a ``matriculesllegides.txt`` que corresponguin a matrícules vàlides
   italianes. Recorda, per exemple, :doc:`aquest exercici
   <exercici_02_18_matricula_italiana>`
@@ -55,7 +55,7 @@ resultat:
    :emphasize-lines: 2-
 
     $ java TriaMatricules
-    $ cat matriculescorrectes.txt
+    $ cat matriculesvalides.txt
     BC123FG
     PR444RP
     JK432HJ
