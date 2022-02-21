@@ -1,0 +1,44 @@
+#########
+Exercicis
+#########
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    exercici_04_01_propietats.rst
+    exercici_04_02_pis.rst
+    exercici_04_03_mutabilitat.rst
+    exercici_04_04_pujapis.rst
+    exercici_04_05_multiples.rst
+    exercici_04_06_molts_ascensors.rst
+    exercici_04_07_extern.rst
+    exercici_04_08_desdefora.rst
+    exercici_04_09_posicio.rst
+    exercici_04_10_moviment.rst
+    exercici_04_11_protegides.rst
+    exercici_04_12_posicio_correcta.rst
+    exercici_04_13_ascensor_protegit.rst
+    exercici_04_14_com_esta.rst
+    exercici_04_15_ascensor_informatiu.rst
+    exercici_04_16_ensinistrat.rst
+    exercici_04_17_assessinable.rst
+    exercici_04_18_ascensor_interactiu.rst
+    exercici_04_19_classes_i_objectes.rst
+
+..  exercici_04_57_constructor_posicio.rst
+..  exercici_04_58_constructor_parametritzat.rst
+..  exercici_04_59_constructor_posicio.rst
+..  exercici_04_60_aquesta_posicio.rst
+..  exercici_04_61_molts_constructors.rst
+..  exercici_04_62_hora.rst
+..  exercici_04_63_resum.rst
+..  exercici_04_64_hora_static.rst
+..  exercici_04_65_puzles.rst
+..  exercici_04_66_ulls.rst
+..  exercici_04_67_picarol.rst
+..  exercici_04_68_exemple_herencia.rst
+..  exercici_04_69_renat_es_gat.rst
+..  exercici_04_70_metodes_cridats.rst
+..  exercici_04_71_garfield.rst
+..  exercici_04_72_interfagat.rst

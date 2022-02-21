@@ -1,0 +1,20 @@
+################################################################################
+|exerciseicon___| Exercici 04_03. Anotacions sobre mutabilitat de les propietats
+################################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``04_03_mutabilitat/``
+
+* Continguts relacionats: :doc:`poo_intro_propietats_mutables`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Descarregat :download:`aquesta plantilla<_recursos/poo_mutabilitat.rst>` i
+completa-la, tot reemplaçant els ``XXX`` per les anotacions que has pres a
+classe.
+
+.. literalinclude:: _recursos/poo_mutabilitat.rst
+   :language: rst

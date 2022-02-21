@@ -1,0 +1,70 @@
+############
+Accés extern
+############
+
+Fins ara, la definició de ``GatRenat`` ha estat sempre acompanyada d'un
+``main()`` dins del mateix fitxer. Es podria accedir des d'un altre
+programa?
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class GatRenat {
+         + vides: int
+     }
+
+     class UsaGatRenat {
+         + {static} main(String[])
+     }
+
+     UsaGatRenat -left-> GatRenat
+
+     @enduml
+
+
+Considera ara el següent codi que apareix a un altre fitxer:
+
+.. code-block:: java
+    :linenos:
+
+    public class UsaGatRenat {
+        public static void main(String[] args) {
+            GatRenat renat = new GatRenat();
+            System.out.println("Al gat Renat li queden " + renat.vides + " vides");
+        }
+    }
+
+Copia el codi en un fitxer al mateix directori que el de l'exercici
+anterior i executa'l.
+
+Respon a les següents preguntes:
+
+1. Quin és el nom del fitxer on està definit el punt d'entrada ``main()`` d'aquest programa?
+
+#. Ara tenim dos fitxers amb ``main()``. Com pot saber Java quin és el
+   ``main()`` a executar?
+
+#. A quin fitxer està definida la classe del gat Renat?
+
+#. Quants programes es podrien construir fent ús de la definició del gat Renat?
+
+#. Elimina el ``main()`` de ``GatRenat``. Continua funcionant ``UsaGatRenat``?
+   Què ha deixat de poder-se executar?
+
+#. Què passaria si el fitxer amb el codi anterior i el que conté la
+   definició de la classe del Renat estiguessin en directoris
+   diferents?
+
+|exerciseicon___| :doc:`exercici_04_07_extern`
+
+|exerciseicon__T| :doc:`exercici_04_08_desdefora`
+
+|exerciseicon__T| :doc:`exercici_04_09_posicio`
+
+|exerciseicon__T| :doc:`exercici_04_10_moviment`

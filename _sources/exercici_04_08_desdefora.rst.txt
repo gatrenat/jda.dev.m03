@@ -1,0 +1,49 @@
+########################################################
+|exerciseicon__T| Exercici 04_08. L'Ascensor des de fora
+########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``04_08_desdefora/``
+
+* Continguts relacionats: :doc:`poo_intro_us_extern`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa a partir de la següent descripció en UML:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class Ascensor {
+        + pis: int
+     }
+
+     class UsaAscensor {
+        + {static} main(String[])
+     }
+
+     UsaAscensor -left-> Ascensor 
+
+     @enduml
+
+En ser executat, obtindrem aquesta resposta:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+    $ java UsaAscensor
+    L'ascensor creat des de fora està al pis -1
+
+**Nota**: per passar les proves d'aquest exercici, caldrà que ``Ascensor``
+no tingui ``main()``.
