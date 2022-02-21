@@ -27,8 +27,7 @@ típic de GNU (``rwx``)
 A continuació, indicarà si correspon a un fitxer o un directori.
 
 En cas de ser un directori, mostrarà el nom dels fitxers i directoris que
-contingui.
-
+contingui. Ho farà de manera ordenada (*Pista*: recorda ``Arrays.sort()``)
 
 Si és un fitxer, indicarà la seva longitud en bytes.
 
