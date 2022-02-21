@@ -220,28 +220,28 @@ Les anotacions responen a diferents preguntes sobre aquest codi:
 
 <span class="s">    01    public class GatRenat {</span>
 <span class="s">    02        public int vides = 7;   // vides disponibles del gat Renat</span>
-
-<span class="s">    03        public static void main(String[] args) {</span>
-<span class="s">    04            GatRenat renatI;</span>
-<span class="s">    05            renatI = new GatRenat();               // crea un primer gat Renat</span>
-<span class="s">    06            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
-
-<span class="s">    07            GatRenat renatII = new GatRenat();     // crea un segon gat Renat!</span>
-<span class="s">    08            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
-
-<span class="s">    09            renatI.vides++;</span>
-<span class="s">    10            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
-<span class="s">    11            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
-
-<span class="s">    12            renatII = renatI; // atenció: la instància de Renat II es perd!</span>
+<span class="s">    03</span>
+<span class="s">    04        public static void main(String[] args) {</span>
+<span class="s">    05            GatRenat renatI;</span>
+<span class="s">    06            renatI = new GatRenat();               // crea un primer gat Renat</span>
+<span class="s">    07            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
+<span class="s">    08</span>
+<span class="s">    09            GatRenat renatII = new GatRenat();     // crea un segon gat Renat!</span>
+<span class="s">    10            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
+<span class="s">    11</span>
+<span class="s">    12            renatI.vides++;</span>
 <span class="s">    13            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
 <span class="s">    14            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
-
-<span class="s">    15            renatI.vides++;</span>
-<span class="s">    16            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
-<span class="s">    17            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
-<span class="s">    18        }</span>
-<span class="s">    19    }</span>
+<span class="s">    15</span>
+<span class="s">    16            renatII = renatI; // atenció: la instància de Renat II es perd!</span>
+<span class="s">    17            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
+<span class="s">    18            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
+<span class="s">    19</span>
+<span class="s">    20            renatI.vides++;</span>
+<span class="s">    21            System.out.println(&quot;El gat Renat I té  &quot; + renatI.vides + &quot; vides&quot;);</span>
+<span class="s">    22            System.out.println(&quot;El gat Renat II té &quot; + renatII.vides + &quot; vides&quot;);</span>
+<span class="s">    23        }</span>
+<span class="s">    24    }</span>
 
 <span class="gh">Pregunta 1. Sortida</span>
 <span class="gh">===================</span>

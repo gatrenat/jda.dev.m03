@@ -208,7 +208,7 @@ de línia de comandes, quants ascensors crea, cridarà a
 <code class="docutils literal notranslate"><span class="pre">creaAscensorsEnEscala()</span></code> i mostrarà els pisos de tots els ascensors
 creats.</p>
 <p>Completa aquesta plantilla:</p>
-<div class="highlight-console notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -223,22 +223,22 @@ creats.</p>
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go">/* XXX */</span>
-<span class="go">public class Ascensor {</span>
-<span class="go">    /* XXX */</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/* XXX */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Ascensor</span> <span class="p">{</span>
+    <span class="cm">/* XXX */</span>
 
-<span class="go">    public static Ascensor[] creaAscensors(int quants) {</span>
-<span class="go">        /* XXX */</span>
-<span class="go">    }</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Ascensor</span><span class="o">[]</span> <span class="nf">creaAscensors</span><span class="p">(</span><span class="kt">int</span> <span class="n">quants</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* XXX */</span>
+    <span class="p">}</span>
 
-<span class="go">    public static void main(String[] args){</span>
-<span class="go">        /* XXX */</span>
-<span class="go">        Ascensor[] ascensors = creaAscensors(quants);</span>
-<span class="go">        for (int i = 0; i &lt; ascensors.length; i++) {</span>
-<span class="go">            System.out.printf(&quot;Ascensor %d al pis %d%n&quot;, i, ascensors[i].pis);</span>
-<span class="go">        }</span>
-<span class="go">    }</span>
-<span class="go">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="cm">/* XXX */</span>
+        <span class="n">Ascensor</span><span class="o">[]</span> <span class="n">ascensors</span> <span class="o">=</span> <span class="n">creaAscensors</span><span class="p">(</span><span class="n">quants</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ascensors</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Ascensor %d al pis %d%n&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ascensors</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">pis</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>Un exemple de sortida serà:</p>

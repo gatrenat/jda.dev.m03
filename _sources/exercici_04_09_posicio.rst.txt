@@ -63,7 +63,7 @@ La informació de l'estat la guardarem en una propietat amb el nom
 
 Considera la següent plantilla:
 
-.. code-block:: console
+.. code-block:: java
    :linenos:
 
     /* XXX */

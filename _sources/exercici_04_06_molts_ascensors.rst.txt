@@ -29,7 +29,7 @@ creats.
 
 Completa aquesta plantilla:
 
-.. code-block:: console
+.. code-block:: java
     :linenos:
 
     /* XXX */

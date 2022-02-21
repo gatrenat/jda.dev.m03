@@ -53,9 +53,7 @@ Pregunta 2. Un nou accés
 
 En modificar el codi de ``UsaGatRenat`` com:
 
-.. code-block:: java
-    :linenos:
-    :emphasize-lines: 4
+::
 
      public class UsaGatRenat {
          public static void main(String[] args) {
@@ -123,9 +121,7 @@ Pregunta 5. I des de ``GatRenat``?
 He experimentat com es comporta ``private`` des del ``main()`` del propi
 ``GatRenat``. En concret, he provat:
 
-.. code-block:: java
-   :linenos:
-   :emphasize-lines: 11-15
+::
 
    public class GatRenat {
        private int vides = 7;

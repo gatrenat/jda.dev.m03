@@ -238,7 +238,7 @@ informació, fent que inicialment el gat estigui estirat.</p>
 <p>La informació de l’estat la guardarem en una propietat amb el nom
 <code class="docutils literal notranslate"><span class="pre">posicio</span></code> que serà de tipus String.</p>
 <p>Considera la següent plantilla:</p>
-<div class="highlight-console notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -247,16 +247,16 @@ informació, fent que inicialment el gat estigui estirat.</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="go"> /* XXX */</span>
-<span class="go"> public class UsaGatRenat {</span>
-<span class="go">     public static void main(String[] args) {</span>
-<span class="go">         /* XXX */</span>
-<span class="go">         System.out.println(&quot;Vides inicials: &quot; + renat.vides);</span>
-<span class="go">         System.out.println(&quot;Posició inicial: &quot; + renat.XXX);</span>
-<span class="go">         /* XXX *?</span>
-<span class="go">         System.out.println(&quot;Posició final: &quot; + renat.XXX);</span>
-<span class="go">     }</span>
-<span class="go"> }</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="cm">/* XXX */</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsaGatRenat</span> <span class="p">{</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+         <span class="cm">/* XXX */</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vides inicials: &quot;</span> <span class="o">+</span> <span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="p">);</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició inicial: &quot;</span> <span class="o">+</span> <span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+         <span class="o">/*</span> <span class="n">XXX</span> <span class="o">*?</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició final: &quot;</span> <span class="o">+</span> <span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>L’execució hauria de ser:</p>

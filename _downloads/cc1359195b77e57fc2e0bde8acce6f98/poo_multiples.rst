@@ -18,28 +18,28 @@ Les anotacions responen a diferents preguntes sobre aquest codi:
 
     01    public class GatRenat {
     02        public int vides = 7;   // vides disponibles del gat Renat
-
-    03        public static void main(String[] args) {
-    04            GatRenat renatI;
-    05            renatI = new GatRenat();               // crea un primer gat Renat
-    06            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
-
-    07            GatRenat renatII = new GatRenat();     // crea un segon gat Renat!
-    08            System.out.println("El gat Renat II té " + renatII.vides + " vides");
-
-    09            renatI.vides++;
-    10            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
-    11            System.out.println("El gat Renat II té " + renatII.vides + " vides");
-
-    12            renatII = renatI; // atenció: la instància de Renat II es perd!
+    03
+    04        public static void main(String[] args) {
+    05            GatRenat renatI;
+    06            renatI = new GatRenat();               // crea un primer gat Renat
+    07            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
+    08
+    09            GatRenat renatII = new GatRenat();     // crea un segon gat Renat!
+    10            System.out.println("El gat Renat II té " + renatII.vides + " vides");
+    11
+    12            renatI.vides++;
     13            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
     14            System.out.println("El gat Renat II té " + renatII.vides + " vides");
-
-    15            renatI.vides++;
-    16            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
-    17            System.out.println("El gat Renat II té " + renatII.vides + " vides");
-    18        }
-    19    }
+    15
+    16            renatII = renatI; // atenció: la instància de Renat II es perd!
+    17            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
+    18            System.out.println("El gat Renat II té " + renatII.vides + " vides");
+    19
+    20            renatI.vides++;
+    21            System.out.println("El gat Renat I té  " + renatI.vides + " vides");
+    22            System.out.println("El gat Renat II té " + renatII.vides + " vides");
+    23        }
+    24    }
 
 Pregunta 1. Sortida
 ===================

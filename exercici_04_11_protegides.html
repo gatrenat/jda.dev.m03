@@ -255,16 +255,14 @@ Penso que passa perquè XXX
 
 En modificar el codi de <span class="s">``UsaGatRenat``</span> com:
 
-<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> java
-    <span class="nc">:linenos:</span>
-    <span class="nc">:emphasize-lines:</span> 4
+<span class="se">::</span>
 
-     public class UsaGatRenat {
-         public static void main(String[] args) {
-             GatRenat renat = new GatRenat();
-             System.out.println(&quot;El gat Renat té &quot; + renat.getVides() + &quot; vides&quot;);
-         }
-     }
+<span class="s">     public class UsaGatRenat {</span>
+<span class="s">         public static void main(String[] args) {</span>
+<span class="s">             GatRenat renat = new GatRenat();</span>
+<span class="s">             System.out.println(&quot;El gat Renat té &quot; + renat.getVides() + &quot; vides&quot;);</span>
+<span class="s">         }</span>
+<span class="s">     }</span>
 
 La diferència respecte a la versió de la pregunta anterior és XXX.
 
@@ -325,26 +323,24 @@ La meva explicació de perquè això és així és XXX
 He experimentat com es comporta <span class="s">``private``</span> des del <span class="s">``main()``</span> del propi
 <span class="s">``GatRenat``</span>. En concret, he provat:
 
-<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> java
-   <span class="nc">:linenos:</span>
-   <span class="nc">:emphasize-lines:</span> 11-15
+<span class="se">::</span>
 
-   public class GatRenat {
-       private int vides = 7;
-       public int getVides() {  //  retorna el nombre de vides
-           return vides;
-       }
-       public void setVides(int novesVides) {   // modifica el nombre de vides si ens donen un de vàlid
-           if (novesVides &gt;= 0) {
-               vides = novesVides;
-           }
-       }
-       public static void main(String[] args) {
-           GatRenat renat = new GatRenat();
-           renat.vides = -12;
-           System.out.println(&quot;El gat Renat té &quot; + renat.vides + &quot; vides&quot;);
-       }
-   }
+<span class="s">   public class GatRenat {</span>
+<span class="s">       private int vides = 7;</span>
+<span class="s">       public int getVides() {  //  retorna el nombre de vides</span>
+<span class="s">           return vides;</span>
+<span class="s">       }</span>
+<span class="s">       public void setVides(int novesVides) {   // modifica el nombre de vides si ens donen un de vàlid</span>
+<span class="s">           if (novesVides &gt;= 0) {</span>
+<span class="s">               vides = novesVides;</span>
+<span class="s">           }</span>
+<span class="s">       }</span>
+<span class="s">       public static void main(String[] args) {</span>
+<span class="s">           GatRenat renat = new GatRenat();</span>
+<span class="s">           renat.vides = -12;</span>
+<span class="s">           System.out.println(&quot;El gat Renat té &quot; + renat.vides + &quot; vides&quot;);</span>
+<span class="s">       }</span>
+<span class="s">   }</span>
 
 En intentar compilar i executar aquesta versió em trobo què XXX
 
