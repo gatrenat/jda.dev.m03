@@ -62,6 +62,7 @@ Completa la plantilla següent:
             
             System.out.println("Pis final: " + ascensor.XXX);
             System.out.println("Moviment final: " + ascensor.XXX);
+            System.out.println("Estat de l'ascensor: " + ascensor.XXX);
         }
     }
 
@@ -80,3 +81,4 @@ completat:
     pujant
     Pis final: 5
     Moviment final: pujant
+    Estat de l'ascensor: pujant al pis 5
