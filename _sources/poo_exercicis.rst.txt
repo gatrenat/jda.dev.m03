@@ -25,20 +25,21 @@ Exercicis
     exercici_04_17_assessinable.rst
     exercici_04_18_ascensor_interactiu.rst
     exercici_04_19_classes_i_objectes.rst
+    exercici_04_20_constructor_posicio.rst
+    exercici_04_21_constructor_parametritzat.rst
+    exercici_04_22_constructor_posicio.rst
+    exercici_04_23_aquesta_posicio.rst
+    exercici_04_24_molts_constructors.rst
+    exercici_04_25_hora.rst
+    exercici_04_26_resum.rst
 
-..  exercici_04_57_constructor_posicio.rst
-..  exercici_04_58_constructor_parametritzat.rst
-..  exercici_04_59_constructor_posicio.rst
-..  exercici_04_60_aquesta_posicio.rst
-..  exercici_04_61_molts_constructors.rst
-..  exercici_04_62_hora.rst
-..  exercici_04_63_resum.rst
-..  exercici_04_64_hora_static.rst
-..  exercici_04_65_puzles.rst
-..  exercici_04_66_ulls.rst
-..  exercici_04_67_picarol.rst
-..  exercici_04_68_exemple_herencia.rst
-..  exercici_04_69_renat_es_gat.rst
-..  exercici_04_70_metodes_cridats.rst
-..  exercici_04_71_garfield.rst
-..  exercici_04_72_interfagat.rst
+..    exercici_04_27_hora_static.rst
+..    exercici_04_28_unic.rst
+..
+..    exercici_04_29_ulls.rst
+..    exercici_04_30_picarol.rst
+..    exercici_04_68_exemple_herencia.rst
+..    exercici_04_69_renat_es_gat.rst
+..    exercici_04_70_metodes_cridats.rst
+..    exercici_04_71_garfield.rst
+..    exercici_04_72_interfagat.rst

@@ -31,11 +31,10 @@ Aquest tema es desglossa en les següents entrades:
     :titlesonly:
 
     poo_intro.rst
-
+    poo_constructors.rst
     poo_exercicis.rst
 
-..    constructors.rst
-..    static.rst
-..    composicio.rst
+..    poo_static.rst
+..    poo_composicio.rst
 ..    herencia.rst
 ..    interfaces.rst
