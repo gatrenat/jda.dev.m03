@@ -356,10 +356,8 @@ Intentem-ho veure amb aquesta permutació:
     ``renat.getVides()`` → ``GatRenat.getVides(renat)``
 
 **Atenció**: ``GatRenat.getVides(renat)`` no és vàlid en Java tal i com
-està definit ``getVides()``.
-
-Per que la transformació funcionés, ens caldria declarar ``getVides()``
-de la següent manera:
+està definit ``getVides()``. Per que la transformació funcionés, ens
+caldria declarar ``getVides()`` de la següent manera:
 
 .. code-block:: java
     :linenos:
@@ -379,8 +377,8 @@ de la següent manera:
         }
     }
 
-**Nota**: he hagut de posar-li ``aquest`` en comptes de ``this`` perquè
-Java té reservat aquest nom i em donaria error.
+**Nota**: he hagut d'anomenar el paràmetre com ``aquest`` en comptes de
+``this`` perquè Java té reservat aquest nom i em donaria error.
 
 Ara, en entrar a ``getVides()`` ens trobaríem la següent situació:
 
@@ -403,6 +401,9 @@ En resum: podem inicialitzar els valors dels camps de les instàncies de
 ``GatRenat`` tant directament a la línia de la declaració, com dins d'aquesta
 mena de *mòdul* que es diu ``GatRenat()``.
 
+Els constructors en Java
+========================
+
 Ja va sent hora de que el deixem d'anomenar *mena de mòdul* i li posem el nom
 que li correspon: *constructor*.
 
@@ -420,14 +421,14 @@ les següents dues definicions són equivalents:
 
 .. code-block:: java
 
-    public class Garfield {
+    public class GatRenat {
         // no cal indicar el constructor si no ha de fer res especial
     }
 
 .. code-block:: java
 
-    public class Garfield {
-        public Garfield() {
+    public class GatRenat {
+        public GatRenat() {
             // no cal posar res aquí si no ha de fer res especial
         }
     }
@@ -489,11 +490,48 @@ veiem en l'obligació d'indicar el valor inicial.
 
 |exerciseicon__T| :doc:`exercici_04_21_constructor_parametritzat`
 
+Tipus de constructors
+=====================
+
 El constructor sense paràmetres se'l coneix com a *constructor per
 defecte* mentre que el paràmetritzat se'l coneix com a *constructor
-específic*. Java només ens afegirà automàticament el constructor per
-defecte i ho farà només en el cas que no li indiquem nosaltres un altre
-constructor, sigui per defecte o sigui específic.
+específic*.
+
+Java només ens afegirà automàticament el constructor per defecte i ho farà
+només en el cas que no li indiquem nosaltres un altre constructor, sigui
+per defecte o sigui específic.
+
+És a dir, si no indiquem cap constructor, en tindrem un per defecte:
+
+.. code-block:: java
+   :emphasize-lines: 4
+
+    class GatRenat {
+        private int vides;
+
+        // no indiquem constructor: Java ja ens crearà un!
+
+        public static void main(Stringp[] args) {
+            GatRenat renat = new GatRenat(); // puc construir
+        }
+    }
+
+Però si indiquem un d'específic, Java no ens crearà el de per defecte
+automàticament. El següent codi no compila:
+
+.. code-block:: java
+   :emphasize-lines: 7
+
+    class GatRenat {
+        private int vides;
+
+        public GatRenat(int novesVides) { vides = novesVides; }
+
+        public static void main(Stringp[] args) {
+            GatRenat renat = new GatRenat(); // ERROR! ja no hi ha constructor per defecte!
+                                             // Cal passar-li un argument
+        }
+    }
 
 
 Vides desprotegides en néixer!
@@ -681,6 +719,16 @@ partir de la que fem la crida:
    :align: center
    :width: 75%
 
+En resum, podem entendre que ``this`` és una referència que *neix* al
+constructor i que mètodes com els accessors, reben a partir la referència
+amb la que son cridats.
+
+.. image:: _images/constructors_08.svg
+   :align: center
+   :width: 75%
+
+Al ``this`` se'l coneix com el *paràmetre implícit* ja que, el mètode el
+rep sense declarar-lo a la llista de paràmetres.
 
 |exerciseicon__T| :doc:`exercici_04_23_aquesta_posicio`
 
@@ -774,6 +822,7 @@ referència ``this``. Aquest cop amb un format encara més inquietant: com a
 La crida de la línia 7 està fent referència al constructor específic.
 Per poder fer servir ``this()`` cal tenir present que ha de ser la primera
 línia del cos del constructor, altrament ``javac`` es queixarà.
+
 
 |exerciseicon__T| :doc:`exercici_04_24_molts_constructors`
 

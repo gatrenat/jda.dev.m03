@@ -39,7 +39,7 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercicis" href="poo_exercicis.html" />
+    <link rel="next" title="Membres d’instància i de classe" href="poo_static.html" />
     <link rel="prev" title="Accions d’un objecte" href="poo_intro_accions.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
@@ -96,6 +96,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="poo_intro.html">Classes i objectes</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Constructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poo_static.html">Membres d’instància i de classe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poo_composicio.html">Composició</a></li>
 <li class="toctree-l2"><a class="reference internal" href="poo_exercicis.html">Exercicis</a></li>
 </ul>
 </li>
@@ -554,9 +556,8 @@ però sent codi. Estrany, oi?</p>
 <div><p><code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> → <code class="docutils literal notranslate"><span class="pre">GatRenat.getVides(renat)</span></code></p>
 </div></blockquote>
 <p><strong>Atenció</strong>: <code class="docutils literal notranslate"><span class="pre">GatRenat.getVides(renat)</span></code> no és vàlid en Java tal i com
-està definit <code class="docutils literal notranslate"><span class="pre">getVides()</span></code>.</p>
-<p>Per que la transformació funcionés, ens caldria declarar <code class="docutils literal notranslate"><span class="pre">getVides()</span></code>
-de la següent manera:</p>
+està definit <code class="docutils literal notranslate"><span class="pre">getVides()</span></code>. Per que la transformació funcionés, ens
+caldria declarar <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> de la següent manera:</p>
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -584,8 +585,8 @@ de la següent manera:</p>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p><strong>Nota</strong>: he hagut de posar-li <code class="docutils literal notranslate"><span class="pre">aquest</span></code> en comptes de <code class="docutils literal notranslate"><span class="pre">this</span></code> perquè
-Java té reservat aquest nom i em donaria error.</p>
+<p><strong>Nota</strong>: he hagut d’anomenar el paràmetre com <code class="docutils literal notranslate"><span class="pre">aquest</span></code> en comptes de
+<code class="docutils literal notranslate"><span class="pre">this</span></code> perquè Java té reservat aquest nom i em donaria error.</p>
 <p>Ara, en entrar a <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> ens trobaríem la següent situació:</p>
 <a class="reference internal image-reference" href="_images/constructors_06.svg"><img alt="_images/constructors_06.svg" class="align-center" src="_images/constructors_06.svg" width="75%" /></a>
 <p>Així, per executar <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">aquest.vides</span></code>, només hem d’accedir al
@@ -596,6 +597,9 @@ el valor <code class="docutils literal notranslate"><span class="pre">7</span></
 <p>En resum: podem inicialitzar els valors dels camps de les instàncies de
 <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> tant directament a la línia de la declaració, com dins d’aquesta
 mena de <em>mòdul</em> que es diu <code class="docutils literal notranslate"><span class="pre">GatRenat()</span></code>.</p>
+</div>
+<div class="section" id="els-constructors-en-java">
+<h2>Els constructors en Java<a class="headerlink" href="#els-constructors-en-java" title="Link permanent a aquest títol">¶</a></h2>
 <p>Ja va sent hora de que el deixem d’anomenar <em>mena de mòdul</em> i li posem el nom
 que li correspon: <em>constructor</em>.</p>
 <p>Els <em>constructors</em> en Java tenen la forma d’un <em>mòdul</em> amb les següents
@@ -608,13 +612,13 @@ particularitats:</p>
 instanciant gats Renats sense definir constructor? La resposta és: si no
 explicitem un constructor, Java ens n’afegeix un automàticament. És a dir,
 les següents dues definicions són equivalents:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Garfield</span> <span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GatRenat</span> <span class="p">{</span>
     <span class="c1">// no cal indicar el constructor si no ha de fer res especial</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Garfield</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">Garfield</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GatRenat</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">GatRenat</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// no cal posar res aquí si no ha de fer res especial</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -677,11 +681,41 @@ creació!</p>
 <p>Una altra implicació és que ara, per crear una instància de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> ens
 veiem en l’obligació d’indicar el valor inicial.</p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_04_21_constructor_parametritzat.html"><span class="doc"> Exercici 04_21. Posicio parametritzada</span></a></p>
+</div>
+<div class="section" id="tipus-de-constructors">
+<h2>Tipus de constructors<a class="headerlink" href="#tipus-de-constructors" title="Link permanent a aquest títol">¶</a></h2>
 <p>El constructor sense paràmetres se’l coneix com a <em>constructor per
 defecte</em> mentre que el paràmetritzat se’l coneix com a <em>constructor
-específic</em>. Java només ens afegirà automàticament el constructor per
-defecte i ho farà només en el cas que no li indiquem nosaltres un altre
-constructor, sigui per defecte o sigui específic.</p>
+específic</em>.</p>
+<p>Java només ens afegirà automàticament el constructor per defecte i ho farà
+només en el cas que no li indiquem nosaltres un altre constructor, sigui
+per defecte o sigui específic.</p>
+<p>És a dir, si no indiquem cap constructor, en tindrem un per defecte:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="kd">class</span> <span class="nc">GatRenat</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">vides</span><span class="p">;</span>
+
+<span class="hll">     <span class="c1">// no indiquem constructor: Java ja ens crearà un!</span>
+</span>
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">Stringp</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">GatRenat</span> <span class="n">renat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GatRenat</span><span class="p">();</span> <span class="c1">// puc construir</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+<p>Però si indiquem un d’específic, Java no ens crearà el de per defecte
+automàticament. El següent codi no compila:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span> <span class="kd">class</span> <span class="nc">GatRenat</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">vides</span><span class="p">;</span>
+
+     <span class="kd">public</span> <span class="nf">GatRenat</span><span class="p">(</span><span class="kt">int</span> <span class="n">novesVides</span><span class="p">)</span> <span class="p">{</span> <span class="n">vides</span> <span class="o">=</span> <span class="n">novesVides</span><span class="p">;</span> <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">Stringp</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">         <span class="n">GatRenat</span> <span class="n">renat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GatRenat</span><span class="p">();</span> <span class="c1">// ERROR! ja no hi ha constructor per defecte!</span>
+</span>                                          <span class="c1">// Cal passar-li un argument</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="vides-desprotegides-en-neixer">
 <h2>Vides desprotegides en néixer!<a class="headerlink" href="#vides-desprotegides-en-neixer" title="Link permanent a aquest títol">¶</a></h2>
@@ -903,6 +937,12 @@ servir <code class="docutils literal notranslate"><span class="pre">this</span><
 <p>Així, <code class="docutils literal notranslate"><span class="pre">this</span></code> fa referència a la mateixa instància que la variable a
 partir de la que fem la crida:</p>
 <a class="reference internal image-reference" href="_images/constructors_07.svg"><img alt="_images/constructors_07.svg" class="align-center" src="_images/constructors_07.svg" width="75%" /></a>
+<p>En resum, podem entendre que <code class="docutils literal notranslate"><span class="pre">this</span></code> és una referència que <em>neix</em> al
+constructor i que mètodes com els accessors, reben a partir la referència
+amb la que son cridats.</p>
+<a class="reference internal image-reference" href="_images/constructors_08.svg"><img alt="_images/constructors_08.svg" class="align-center" src="_images/constructors_08.svg" width="75%" /></a>
+<p>Al <code class="docutils literal notranslate"><span class="pre">this</span></code> se’l coneix com el <em>paràmetre implícit</em> ja que, el mètode el
+rep sense declarar-lo a la llista de paràmetres.</p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_04_23_aquesta_posicio.html"><span class="doc"> Exercici 04_23. Aquesta posició</span></a></p>
 </div>
 <div class="section" id="mes-d-un-constructor">
@@ -1053,7 +1093,7 @@ línia del cos del constructor, altrament <code class="docutils literal notransl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="poo_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="poo_static.html" class="btn btn-neutral float-right" title="Membres d’instància i de classe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="poo_intro_accions.html" class="btn btn-neutral float-left" title="Accions d’un objecte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
