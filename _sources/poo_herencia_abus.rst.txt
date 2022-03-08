@@ -1,0 +1,111 @@
+########################
+Perill d'abús d'herència
+########################
+
+És típic quan descobreixes l'herència, com qualsevol altra
+tècnica/utilitat/…, voler-la fer servir per tot arreu.
+
+Abans que ens emocionem amb l'herència, cal que tinguem clar què té sentit
+i què no.
+
+Per exemple, imagina't que has d'implementar la classe ``TargetaMetro``
+que té un cert nombre de viatges que es van gastant a mida que es fa
+servir la targeta. En crear la targeta, queda pre-carregada amb un nombre
+de viatges. El nombre de viatges mai no ha de ser negatiu i s'ha de poder
+anar eliminant d'un en un per cada ús. Un cop exhaurits tots els viatges,
+la targeta no és usable a menys que es torni a recarregar.
+
+Potser se'ns podria ocórrer la *brillant* idea de comparar els viatges amb
+les vides d'un ``GatRenat`` i així estalviar-nos un munt de codi:
+
+.. code-block:: java
+    :linenos:
+
+    public class TargetaMetro extends GatRenat {
+        public TargetaMetro(int viatgesInicials) {
+            super(viatgesInicials);
+        }
+    }
+
+Ara, l'ús de la targeta (la pèrdua d'un viatge) la podem executar amb el
+mètode ``mor()`` que treu una vida/viatge fins que ja no en queden més.
+Saber si encara queden viatges ho podem resoldre amb el mètode
+``estaViu()`` i la recàrrega amb ``resuscita()``.`
+
+És cert que ens estalviem tot de codificació, però… tenim una targeta de
+viatges que miola.
+
+Per poder saber quines herències tenen sentit i quines no, hem de fer ús
+del principi de substitució de `Liskov
+<http://en.wikipedia.org/wiki/Barbara_Jane_Liskov>`_:
+
+    una herència entre dues classes està correctament definida si
+    **sempre** es pot fer servir una instància de la subclasse allà on
+    el programa espera una instància de la superclasse.
+
+Un exemple típic d'herència incorrecta és entre Quadrat i Rectangle (o
+també Cercle i Oval). Suposa que tens les següents classes:
+
+.. code-block:: java
+   :linenos:
+
+    class Rectangle {
+        private int base, altura;
+        public Rectangle(int base, int altura) {
+            this.base = base; this.altura = altura;
+        }
+        public int getBase() { return base; }
+        public int getAltura() { return altura; }
+        public void setBase(int base) { this.base=base; }
+        public void setAltura(int altura) { this.altura=altura; }
+        /* … */
+    }
+
+    class Quadrat extends Rectangle {
+        public Quadrat(int costat) {
+            super(costat, costat);
+        }
+        public int getCostat() { getBase(); }
+        public void setCostat(int costat) {
+            setBase(costat);
+            setAltura(costat);
+        }
+        /* … */
+    }
+
+Malgrat que, en principi, una herència com aquesta pot semblar una
+bona idea (especialment si els «…» inclouen molt de codi, en
+realitat amaga una desagradable sorpresa. Considera el següent codi:
+
+.. code-block:: java
+   :linenos:
+
+    class UsaRectangles {
+    public static void main(String[] args) {
+            Rectangle[] rectangles = new Rectangle[2];
+            rectangles[0] = new Rectangle(3, 5);
+            rectangles[1] = new Quadrat(4);
+            for (Rectangle r: rectangles) {
+                r.setBase(r.getBase() - 1); // encongeix la base
+            }
+        }
+    }
+
+En ``UsaRectangles`` aconseguim que la instància de Quadrat
+referenciada per ``rectangles[1]`` acabi tenint un quadrat de costat 3
+i 4!. És a dir, hem aconseguit *petar* la coherència de la classe i
+tot fent-la servir "legalment".
+
+El problema de l'exemple és que un quadrat **no** es pot considerar un
+rectangle en tots els contexts on s'espera que es comporti
+correctament un rectangle (ex. quan encongim un dels seus costats)
+
+En resum, abans de crear una subclasse ``B`` d'una classe ``A``,
+assegurem-nos que podem dir que tot ``B`` **és un** ``A``. No n'hi ha prou
+amb que *algun* ``B`` és un ``A``, o tot ``B`` s'*assembla* a ``A``, o *és
+pràcticament un* ``A`` excepte per algun detall, etc.
+
+Una altra cosa que hem de tenir sempre present en llenguatges com Java, és
+que l'herència és *d'un sol tret* en el sentit que només podem estendre
+una classe. Per sort, disposem d'altres mecanismes que ens permetran
+salvar aquesta aparent limitació. No et perdis el següent episodi…

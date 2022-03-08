@@ -40,7 +40,7 @@ l'hora és sempre vàlida.
         +setSegons(int)
         +incrementa()
         +decrementa()
-        +incremnta(int)
+        +incrementa(int)
         +decrementa(int)
         +compareTo(Hora)
         +toString(): String

@@ -36,9 +36,8 @@ Exercicis
     exercici_04_28_unic.rst
     exercici_04_29_ulls.rst
     exercici_04_30_picarol.rst
-
-..    exercici_04_68_exemple_herencia.rst
-..    exercici_04_69_renat_es_gat.rst
-..    exercici_04_70_metodes_cridats.rst
-..    exercici_04_71_garfield.rst
-..    exercici_04_72_interfagat.rst
+    exercici_04_31_exemple_herencia.rst
+    exercici_04_32_renat_es_gat.rst
+    exercici_04_33_metodes_cridats.rst
+    exercici_04_34_garfield.rst
+    exercici_04_35_interfagat.rst
