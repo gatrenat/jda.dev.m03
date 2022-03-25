@@ -232,6 +232,8 @@ La sortida esperada és:
     1
 
 .. important:: per què ``prgtest`` et digui que tot està correcte, caldrà que
-   implementis exactament els elements indicats al diagrama. La meva
-   recomanació és que comencis a fer-ho de zero i no reaprofitis codis
-   anteriors.
+   cada classe sigui indicada com pública i defineixi exactament els
+   elements indicats al diagrama.
+
+   La meva recomanació és que comencis a fer-ho de zero i no reaprofitis
+   codis anteriors.

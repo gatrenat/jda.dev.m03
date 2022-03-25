@@ -23,19 +23,8 @@ Disposem de la classe ``GatRenat`` amb la següent definició:
         public int vides = 7;         // vides disponibles del gat Renat
     }
 
-Una mica de *culturilla* POO
-============================
-
-Tot i que ``vides`` és una variable, en el món de la POO aquest tipus de
-*bestioles* se les coneix com *propietats* o *camps*.
-
-Una classe pot definir tantes propietats com li calguin.
-
-Als valors que tenen les propietats d'una instància en un determinat
-moment se li anomena *estat* de la instància.
-
-Què haig de fer?
-================
+En aquesta ocasió afegirem al nostre gat Renat la possibilitat d'indicar
+en quina posició es troba. En concret, podrà estar dret, assegut o estirat.
 
 .. uml::
     :align: center
@@ -51,9 +40,6 @@ Què haig de fer?
          + posicio: String
      }
      @enduml
-
-En aquesta ocasió afegirem al nostre gat Renat la possibilitat d'indicar
-en quina posició es troba. En concret, podrà estar dret, assegut o estirat.
 
 Modifica la definició de la seva classe perquè pugui guardar aquesta
 informació, fent que inicialment el gat estigui estirat.
