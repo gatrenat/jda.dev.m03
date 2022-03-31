@@ -1,0 +1,33 @@
+#########
+Exercicis
+#########
+
+Els exercicis de la secció :doc:`bib` són:
+
+.. toctree::
+    :titlesonly:
+
+    exercici_05_01_vi.rst
+    exercici_05_02_botiga.rst
+    exercici_05_03_entorn.rst
+    exercici_05_04_csv.rst
+    exercici_05_05_vi_ampliat.rst
+    exercici_05_06_hores_controlades.rst
+    exercici_05_07_hores_excepcionals.rst
+    exercici_05_08_hores_ilegals.rst
+    exercici_05_09_botiga_excepcional.rst
+
+..  exercici_05_10_gatposicio.rst
+..  exercici_05_11_viprotegit.rst
+..  exercici_05_12_list.rst
+..  exercici_05_13_remove.rst
+..  exercici_05_14_botigacerca.rst
+..  exercici_05_15_botigalist.rst
+..  exercici_05_16_viespecs.rst
+..  exercici_05_17_cava.rst
+..  exercici_05_18_herencia.rst
+..  exercici_05_19_redisseny.rst
+..  exercici_05_20_nousproductes.rst
+..  exercici_05_22_nouredisseny.rst
+..  exercici_05_23_massaespecs.rst
+..  exercici_05_24_addicionals.rst
