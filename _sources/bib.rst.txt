@@ -89,9 +89,9 @@ Trobaràs els continguts d'aquesta secció en els següents documents:
     bib_csv.rst
     bib_vi.rst
     bib_excepcions.rst
+    bib_enum.rst
+    bib_lists.rst
     bib_exercicis.rst
 
-..  bib_enum.rst
-..  bib_lists.rst
 ..  bib_millores.rst
 ..  bib_maps.rst

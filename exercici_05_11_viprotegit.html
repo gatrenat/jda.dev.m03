@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exercici 05_08. La classe Hora amb IllegalArgumentException &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
+  <title>Exercici 05_11. El vi protegit &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 05_09. Excepcions a la botiga de vins" href="exercici_05_09_botiga_excepcional.html" />
-    <link rel="prev" title="Exercici 05_07. La classe Hora amb excepcions" href="exercici_05_07_hores_excepcionals.html" />
+    <link rel="next" title="Exercici 05_12. La classe UsaList" href="exercici_05_12_list.html" />
+    <link rel="prev" title="Exercici 05_10. Les posicions del gat Renat" href="exercici_05_10_gatposicio.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -109,10 +109,10 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_05_vi_ampliat.html"> Exercici 05_05. El Vi ampliat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_06_hores_controlades.html"> Exercici 05_06. La classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code> amb control d’errors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_07_hores_excepcionals.html"> Exercici 05_07. La classe Hora amb excepcions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_05_08_hores_ilegals.html"> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_09_botiga_excepcional.html"> Exercici 05_09. Excepcions a la botiga de vins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_10_gatposicio.html"> Exercici 05_10. Les posicions del gat Renat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_05_11_viprotegit.html"> Exercici 05_11. El vi protegit</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 05_11. El vi protegit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_12_list.html"> Exercici 05_12. La classe <code class="docutils literal notranslate"><span class="pre">UsaList</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_13_remove.html"> Exercici 05_13. Comparació de <code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_14_botigacerca.html"> Exercici 05_14. Cerques de vi amb múltiples resultats</a></li>
@@ -171,7 +171,7 @@
         
           <li><a href="bib_exercicis.html">Exercicis</a> &raquo;</li>
         
-      <li> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></li>
+      <li> Exercici 05_11. El vi protegit</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,29 +189,37 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="exerciseicon-t-exercici-05-08-la-classe-hora-amb-illegalargumentexception">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code><a class="headerlink" href="#exerciseicon-t-exercici-05-08-la-classe-hora-amb-illegalargumentexception" title="Link permanent a aquest títol">¶</a></h1>
+  <div class="section" id="exerciseicon-t-exercici-05-11-el-vi-protegit">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 05_11. El vi protegit<a class="headerlink" href="#exerciseicon-t-exercici-05-11-el-vi-protegit" title="Link permanent a aquest títol">¶</a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">05_08_hores_ilegals/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="bib_excepcions.html"><span class="doc">Excepcions</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">05_11_viprotegit/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bib_enum.html"><span class="doc">Enumerats</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Torna a considerar la classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code>.</p>
-<p>La versió anterior estava fent servir un tipus d’excepció molt genèric. De
-fet el més genèric: <code class="docutils literal notranslate"><span class="pre">Exception</span></code>!</p>
-<p>En aquest exercici faràs servir una excepció més concreta:
-<code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>.</p>
-<p>Els missatges seran els mateixos que els corresponents a l’exercici
-<a class="reference internal" href="exercici_05_07_hores_excepcionals.html"><span class="doc">anterior</span></a>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hores</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«hores»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;minuts</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«minuts»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;segons</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«segons»&quot;</span></code></p></li>
-</ul>
-<p>El següent codi ha de poder funcionar:</p>
+<p>La nostra classe <code class="docutils literal notranslate"><span class="pre">Vi</span></code> per la botiga de la Sra. Estrella està molt
+desprotegida.</p>
+<p>Ens ha agradat la idea d’introduir el concepte de <code class="docutils literal notranslate"><span class="pre">enum</span></code> per protegir
+algunes de les propietats de <code class="docutils literal notranslate"><span class="pre">Vi</span></code>.</p>
+<p>En concret, el nostre objectiu és:</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-f31a095f735844c5e44ec75550e7f90c0f91bbea.png" alt="Diagrama de la classe Vi amb enums"/>
+</p>
+</div>
+<p>Els canvis consistiran en:</p>
+<ul>
+<li><p>La denominació d’origen podrà ser:
+Penedès, Terra Alta, Catalunya, Tarragona, Conca de Barberà,
+Costers del Segre, Empordà, Montsant, Priorat, Alella, Pla de
+Bages, i altre.</p></li>
+<li><p>El tipus de vi podrà ser: blanc, negre, rosat, i altre.</p></li>
+<li><p>Els accents i altres «floritures» de la nostra llengua poden posar
+entrebancs a l’estructura <code class="docutils literal notranslate"><span class="pre">enum</span></code> de Java. Considera el següent codi
+d’exemple, que permetria fer ús del mètode <code class="docutils literal notranslate"><span class="pre">toString()</span></code> per a poder
+mostrar correctament un valor dels possibles origens:</p>
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -221,24 +229,78 @@ fet el més genèric: <code class="docutils literal notranslate"><span class="pr
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsaHora</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Intentarem crear una hora amb valors no vàlids&quot;</span><span class="p">);</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">Hora</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hora</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IllegalArgumentException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Argument il·legal!&quot;</span><span class="p">);</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kd">enum</span> <span class="n">Origen</span> <span class="p">{</span>
+        <span class="n">PENEDES</span> <span class="p">(</span><span class="s">&quot;Penedès&quot;</span><span class="p">),</span>
+        <span class="n">TERRA_ALTA</span> <span class="p">(</span><span class="s">&quot;Terra Alta&quot;</span><span class="p">),</span>
+        <span class="cm">/* … */</span>
+        <span class="n">ALTRE</span> <span class="p">(</span><span class="s">&quot;altre&quot;</span><span class="p">);</span>
+
+        <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">descr</span><span class="p">;</span>
+        <span class="n">Origen</span><span class="p">(</span><span class="n">String</span> <span class="n">descr</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">descr</span> <span class="o">=</span> <span class="n">descr</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">descr</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
-<p>L’execució generarà:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">java UsaHora</span>
-<span class="hll"><span class="go">Intentarem crear una hora amb valors no vàlids</span>
-</span><span class="hll"><span class="go">Argument il·legal!</span>
-</span></pre></div>
-</div>
+</li>
+<li><p>Els dos enumerats oferiran el mètode estàtic <code class="docutils literal notranslate"><span class="pre">fromString(String)</span></code> que
+funcionarà de la següent manera:</p>
+<ul class="simple">
+<li><p>si la cadena és <code class="docutils literal notranslate"><span class="pre">null</span></code> o buida o composada exclusivament d’espais,
+retornarà <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p>si la cadena indicada correspon al nom d’una de les variants
+conegudes, retornarà aquesta</p></li>
+<li><p>si la cadena no correspon a cap de les conegudes, retornarà la variant
+<code class="docutils literal notranslate"><span class="pre">ALTRE</span></code>.</p></li>
+</ul>
+<p>retornarà la instància corresponent o bé <code class="docutils literal notranslate"><span class="pre">null</span></code> si no hi ha cap
+entrada que correspongui al valor indicat, o bé aquesta sigui <code class="docutils literal notranslate"><span class="pre">null</span></code> o
+blanc. El valor a retornar serà el primer en ordre alfabètic, un cop
+normalitzat i ignorant majúscules, que es trobi que comenci pel valor
+donat.</p>
+<p>Així <code class="docutils literal notranslate"><span class="pre">Origen.fromString()</span></code> retornarà <code class="docutils literal notranslate"><span class="pre">CATALUNYA</span></code> quan rebi <code class="docutils literal notranslate"><span class="pre">&quot;c&quot;</span></code>,
+malgrat hi ha tres entrades que comencen amb <em>C</em>. Retornarà
+<code class="docutils literal notranslate"><span class="pre">CONCA_DE_BARBERA</span></code> en demanar-li <code class="docutils literal notranslate"><span class="pre">&quot;co&quot;</span></code> i, per descomptat, en
+demanar-li <code class="docutils literal notranslate"><span class="pre">&quot;Conca</span> <span class="pre">de</span> <span class="pre">Barberà&quot;</span></code>.</p>
+</li>
+<li><p>La signatura del constructor de <code class="docutils literal notranslate"><span class="pre">Vi</span></code> també queda modificada.</p>
+<p>Caldrà revisar altres canvis en mètodes de la classe <code class="docutils literal notranslate"><span class="pre">Vi</span></code>, com ara els
+accessors, o els de serialització que, si bé no canviaran de signatura,
+sí que poden requerir adaptacions al cos.</p>
+</li>
+<li><p>Donat que <code class="docutils literal notranslate"><span class="pre">normalitzaString()</span></code> és requerit per entitats que no tenen
+tan a veure amb <code class="docutils literal notranslate"><span class="pre">Vi</span></code>, mourem aquesta funció de <code class="docutils literal notranslate"><span class="pre">Vi</span></code> a
+<code class="docutils literal notranslate"><span class="pre">UtilString</span></code>.</p></li>
+<li><p>Afegirem a <code class="docutils literal notranslate"><span class="pre">UtilString</span></code> el mètode <code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esPlantillaDeText(String</span>
+<span class="pre">plantilla,</span> <span class="pre">String</span> <span class="pre">text)</span></code> que, donada una plantilla i un text, ens
+retorna cert si el text coincideix amb la plantilla.</p>
+<p>Considerarem que un text coincideix amb una plantilla quan, la seva
+versió normalitzada comença com la plantilla, o és igual.</p>
+<p>Aquesta funció resoldrà als enumerats la decisió de si el nom correspon
+al demanat. Un cop la tenim, seria una llàstima no utilitzar-la també
+altres propietats de tipus String de la cerca. En concret, en el nom del
+vi.</p>
+<p>En cas que la plantilla sigui <code class="docutils literal notranslate"><span class="pre">null</span></code>, o buida o amb només espais,
+acceptarà qualsevol valor de text. Altrament acceptarà només els texts
+que comencin per la plantilla (ambdós normalitzats)</p>
+</li>
+<li><p>El mètode <code class="docutils literal notranslate"><span class="pre">cercar(Vi)</span></code> permetrà cercar parcialment els diferents
+atributs de tipus string. Per exemple <code class="docutils literal notranslate"><span class="pre">Roura</span> <span class="pre">blanc</span></code> podrà ser cercat
+per</p></li>
+<li><p>Els canvis també afectaran lleugerament a la classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code>.
+Caldrà fer una ullada.</p></li>
+</ul>
 </div>
 
 
@@ -272,10 +334,10 @@ fet el més genèric: <code class="docutils literal notranslate"><span class="pr
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exercici_05_09_botiga_excepcional.html" class="btn btn-neutral float-right" title="Exercici 05_09. Excepcions a la botiga de vins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exercici_05_12_list.html" class="btn btn-neutral float-right" title="Exercici 05_12. La classe UsaList" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercici_05_07_hores_excepcionals.html" class="btn btn-neutral float-left" title="Exercici 05_07. La classe Hora amb excepcions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercici_05_10_gatposicio.html" class="btn btn-neutral float-left" title="Exercici 05_10. Les posicions del gat Renat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
