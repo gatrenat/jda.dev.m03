@@ -262,7 +262,9 @@ trobem que tota ``List`` ofereix, entre d'altres, els següents mètodes:
   versions segons l'argument que li passem a la crida:
 
   - si li passem un ``int``, intentarà eliminar l'element de la posició
-    indicada  per l'argument. 
+    indicada per l'argument. 
+
+  - si li passem un element, intentarà eliminar-lo de la llista.
 
 Per recórrer una llista des de l'inici és habitual fer servir el
 *for-enhanced*, per exemple, si volem aixecar tots els gats d'una llista:
@@ -311,9 +313,10 @@ permet que les operacions ``size()``, ``isEmpty()``, ``get()`` i ``set()``
 siguin molt ràpides, Altres operacions com ara ``add()`` o ``remove()``
 poden no ser tan ràpides, doncs requereixen fer espai 
 
-Per exemple, imagina que tenim un ``ArrayList`` de caràcters referenciat per ``lletres``, amb els valors ``'a'``,
-``'i'``, ``'o'`` i ``'u'``, i hi volem afegir ``'e'`` a la posició 1.
-L'operació seria: ``lletres.add(1, 'e');``
+Per exemple, imagina que tenim un ``ArrayList`` de caràcters referenciat
+per ``lletres``, amb els valors ``'a'``, ``'i'``, ``'o'`` i ``'u'``, i hi
+volem afegir ``'e'`` a la posició 1. L'operació seria: ``lletres.add(1,
+'e');``
 
 .. image:: _images/arraylist_aiou.svg
     :width: 75%
@@ -571,6 +574,8 @@ la cosa està més disputada, i que ``ArrayList`` guanya en les insercions
 al mig. Tot plegat és coherent amb la idea que tenim de la implementació
 de cadascuna d'aquestes dues classes.
 
+|exerciseicon___| :doc:`exercici_05_13_remove`
+
 Llistes immutables
 ==================
 
@@ -616,6 +621,8 @@ tenim manera de saber si una instància d'una llista és immutable fins que
 no arribem a executar el programa! ``javac`` ens té massa malacostumats…
 En tot cas, l'eina hi és i, si ho documentem bé, pot ser-nos útil.
 
-|exerciseicon___| :doc:`exercici_05_13_remove`
-
 |exerciseicon__T| :doc:`exercici_05_14_botigacerca`
+
+|exerciseicon__T| :doc:`exercici_05_15_especs`
+
+|exerciseicon__T| :doc:`exercici_05_16_mouespecs`

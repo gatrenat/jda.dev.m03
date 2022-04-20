@@ -39,7 +39,7 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercicis" href="bib_exercicis.html" />
+    <link rel="next" title="Clau-Valor" href="bib_maps.html" />
     <link rel="prev" title="Enumerats" href="bib_enum.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
@@ -101,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bib_excepcions.html">Excepcions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Llistes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_maps.html">Clau-Valor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_exercicis.html">Exercicis</a></li>
 </ul>
 </li>
@@ -432,7 +433,8 @@ ocurrència de l’element, tots dos ens retornaran el mateix valor.</p></li>
 versions segons l’argument que li passem a la crida:</p>
 <ul>
 <li><p>si li passem un <code class="docutils literal notranslate"><span class="pre">int</span></code>, intentarà eliminar l’element de la posició
-indicada  per l’argument.</p></li>
+indicada per l’argument.</p></li>
+<li><p>si li passem un element, intentarà eliminar-lo de la llista.</p></li>
 </ul>
 </li>
 </ul>
@@ -470,9 +472,10 @@ preferirem un a l’altra per cada tasca, oi?</p>
 permet que les operacions <code class="docutils literal notranslate"><span class="pre">size()</span></code>, <code class="docutils literal notranslate"><span class="pre">isEmpty()</span></code>, <code class="docutils literal notranslate"><span class="pre">get()</span></code> i <code class="docutils literal notranslate"><span class="pre">set()</span></code>
 siguin molt ràpides, Altres operacions com ara <code class="docutils literal notranslate"><span class="pre">add()</span></code> o <code class="docutils literal notranslate"><span class="pre">remove()</span></code>
 poden no ser tan ràpides, doncs requereixen fer espai</p>
-<p>Per exemple, imagina que tenim un <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> de caràcters referenciat per <code class="docutils literal notranslate"><span class="pre">lletres</span></code>, amb els valors <code class="docutils literal notranslate"><span class="pre">'a'</span></code>,
-<code class="docutils literal notranslate"><span class="pre">'i'</span></code>, <code class="docutils literal notranslate"><span class="pre">'o'</span></code> i <code class="docutils literal notranslate"><span class="pre">'u'</span></code>, i hi volem afegir <code class="docutils literal notranslate"><span class="pre">'e'</span></code> a la posició 1.
-L’operació seria: <code class="docutils literal notranslate"><span class="pre">lletres.add(1,</span> <span class="pre">'e');</span></code></p>
+<p>Per exemple, imagina que tenim un <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> de caràcters referenciat
+per <code class="docutils literal notranslate"><span class="pre">lletres</span></code>, amb els valors <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, <code class="docutils literal notranslate"><span class="pre">'i'</span></code>, <code class="docutils literal notranslate"><span class="pre">'o'</span></code> i <code class="docutils literal notranslate"><span class="pre">'u'</span></code>, i hi
+volem afegir <code class="docutils literal notranslate"><span class="pre">'e'</span></code> a la posició 1. L’operació seria: <code class="docutils literal notranslate"><span class="pre">lletres.add(1,</span>
+<span class="pre">'e');</span></code></p>
 <a class="reference internal image-reference" href="_images/arraylist_aiou.svg"><img alt="_images/arraylist_aiou.svg" class="align-center" src="_images/arraylist_aiou.svg" width="75%" /></a>
 <p>Per poder afegir <code class="docutils literal notranslate"><span class="pre">'e'</span></code> en aquesta posició, <code class="docutils literal notranslate"><span class="pre">add()</span></code> ha de fer-hi lloc.
 Això ho aconsegueix copiant cada caràcter una posició cap a munt.</p>
@@ -755,6 +758,7 @@ tranquil·lament en insercions a l’inici, que amb les insercions al final
 la cosa està més disputada, i que <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> guanya en les insercions
 al mig. Tot plegat és coherent amb la idea que tenim de la implementació
 de cadascuna d’aquestes dues classes.</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_05_13_remove.html"><span class="doc"> Exercici 05_13. Comparació de remove()</span></a></p>
 </div>
 <div class="section" id="llistes-immutables">
 <h2>Llistes immutables<a class="headerlink" href="#llistes-immutables" title="Link permanent a aquest títol">¶</a></h2>
@@ -806,8 +810,9 @@ modificació sobre els elements de la còpia.</p>
 tenim manera de saber si una instància d’una llista és immutable fins que
 no arribem a executar el programa! <code class="docutils literal notranslate"><span class="pre">javac</span></code> ens té massa malacostumats…
 En tot cas, l’eina hi és i, si ho documentem bé, pot ser-nos útil.</p>
-<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_05_13_remove.html"><span class="doc"> Exercici 05_13. Comparació de remove()</span></a></p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_14_botigacerca.html"><span class="doc"> Exercici 05_14. Cerques de vi amb múltiples resultats</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_15_especs.html"><span class="doc"> Exercici 05_15. Especificacions de vi</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_16_mouespecs.html"><span class="doc"> Exercici 05_16. Especificacions independents</span></a></p>
 </div>
 </div>
 
@@ -842,7 +847,7 @@ En tot cas, l’eina hi és i, si ho documentem bé, pot ser-nos útil.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bib_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="bib_maps.html" class="btn btn-neutral float-right" title="Clau-Valor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="bib_enum.html" class="btn btn-neutral float-left" title="Enumerats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

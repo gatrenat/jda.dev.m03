@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Exercici 05_08. La classe Hora amb IllegalArgumentException &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
+  <title>Exercici 05_15. Especificacions de vi &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 05_09. Excepcions a la botiga de vins" href="exercici_05_09_botiga_excepcional.html" />
-    <link rel="prev" title="Exercici 05_07. La classe Hora amb excepcions" href="exercici_05_07_hores_excepcionals.html" />
+    <link rel="next" title="Exercici 05_16. Especificacions independents" href="exercici_05_16_mouespecs.html" />
+    <link rel="prev" title="Exercici 05_14. Cerques de vi amb múltiples resultats" href="exercici_05_14_botigacerca.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -110,14 +110,14 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_05_vi_ampliat.html"> Exercici 05_05. El Vi ampliat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_06_hores_controlades.html"> Exercici 05_06. La classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code> amb control d’errors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_07_hores_excepcionals.html"> Exercici 05_07. La classe Hora amb excepcions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_05_08_hores_ilegals.html"> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_09_botiga_excepcional.html"> Exercici 05_09. Excepcions a la botiga de vins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_10_gatposicio.html"> Exercici 05_10. Les posicions del gat Renat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_11_viprotegit.html"> Exercici 05_11. El vi protegit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_12_list.html"> Exercici 05_12. La classe <code class="docutils literal notranslate"><span class="pre">UsaList</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_13_remove.html"> Exercici 05_13. Comparació de <code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_14_botigacerca.html"> Exercici 05_14. Cerques de vi amb múltiples resultats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_05_15_especs.html"> Exercici 05_15. Especificacions de vi</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 05_15. Especificacions de vi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_16_mouespecs.html"> Exercici 05_16. Especificacions independents</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_17_envoltastring_case.html"> Exercici 05_17. EnvoltaString indiferent a majúscules i minúscules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_18_envoltastring_str.html"> Exercici 05_18. EnvoltaString és compara amb Strings</a></li>
@@ -176,7 +176,7 @@
         
           <li><a href="bib_exercicis.html">Exercicis</a> &raquo;</li>
         
-      <li> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></li>
+      <li> Exercici 05_15. Especificacions de vi</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -194,55 +194,80 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="exerciseicon-t-exercici-05-08-la-classe-hora-amb-illegalargumentexception">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 05_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code><a class="headerlink" href="#exerciseicon-t-exercici-05-08-la-classe-hora-amb-illegalargumentexception" title="Link permanent a aquest títol">¶</a></h1>
+  <div class="section" id="exerciseicon-t-exercici-05-15-especificacions-de-vi">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 05_15. Especificacions de vi<a class="headerlink" href="#exerciseicon-t-exercici-05-15-especificacions-de-vi" title="Link permanent a aquest títol">¶</a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">05_08_hores_ilegals/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="bib_excepcions.html"><span class="doc">Excepcions</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">05_15_especs/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bib_lists.html"><span class="doc">Llistes</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Torna a considerar la classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code>.</p>
-<p>La versió anterior estava fent servir un tipus d’excepció molt genèric. De
-fet el més genèric: <code class="docutils literal notranslate"><span class="pre">Exception</span></code>!</p>
-<p>En aquest exercici faràs servir una excepció més concreta:
-<code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>.</p>
-<p>Els missatges seran els mateixos que els corresponents a l’exercici
-<a class="reference internal" href="exercici_05_07_hores_excepcionals.html"><span class="doc">anterior</span></a>:</p>
+<p>Amb els canvis de l’exercici anterior hem millorat força la usabilitat
+de l’aplicació.</p>
+<p>Hi ha, però, un element que «canta»: per cercar els vins, el mètode
+<code class="docutils literal notranslate"><span class="pre">Botiga.cerca()</span></code> ens cal crear un Vi. El vi que li passem, però, <strong>no
+és</strong> exactament un <code class="docutils literal notranslate"><span class="pre">Vi</span></code>.</p>
+<p>Per exemple, no li cal tenir referència, ja que si la té, faríem servir el
+<code class="docutils literal notranslate"><span class="pre">Botiga.cerca(String)</span></code>. A més, el preu no és tampoc el preu real
+del vi sinó un màxim, i l’estoc es refereix al mínim necessari. Finalment,
+la resta d’atributs poden ser <code class="docutils literal notranslate"><span class="pre">null</span></code> per especificar que no cal
+considerar-lo en la cerca.</p>
+<p>Quan dissenyem aplicacions orientades a objectes, hem de ser conscients de
+que aquests tipus d’incoherències tard o d’hora ens portaran problemes.</p>
+<p>El cert és que, com ja ho diu bé el nom del seu paràmetre, el mètode
+<code class="docutils literal notranslate"><span class="pre">cerca()</span></code> espera una especificació de vi i <strong>no</strong> un vi!.  Si el
+concepte <em>especificació de vi</em> sembla tenir tanta rellevància, potser ja
+va sent hora que li reconeguem, no trobes?</p>
+<p>Tenint tot això en compte, millorem el nostre disseny afegint la classe
+<code class="docutils literal notranslate"><span class="pre">Especificacio</span></code> segons el següent diagrama.</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-3aaf2714ecd79589cd5945b82ed110e10f6a6314.png" alt="Diagrama de classes de la botiga de vins amb Especificacio"/>
+</p>
+</div>
+<div class="section" id="el-metode-botiga-cerca">
+<h2>El mètode <code class="docutils literal notranslate"><span class="pre">Botiga.cerca()</span></code><a class="headerlink" href="#el-metode-botiga-cerca" title="Link permanent a aquest títol">¶</a></h2>
+<p>Com que les especificacions de vi no disposen de totes les propietats,
+<code class="docutils literal notranslate"><span class="pre">Botiga</span></code> ha d’oferir diferents mètodes de cerca. Fins ara n’oferia dos:
+<code class="docutils literal notranslate"><span class="pre">cerca(ref)</span></code> i <code class="docutils literal notranslate"><span class="pre">cerca(plantilla)</span></code>. Ara reemplaçarem aquest últim per
+<code class="docutils literal notranslate"><span class="pre">cerca(espec)</span></code> i n’afegirem <code class="docutils literal notranslate"><span class="pre">cerca(espec,</span> <span class="pre">preuMax,</span> <span class="pre">estocMin)</span></code>. un més
+per permetre cercar per preu màxim i per estoc mínim. Fixa’t que
+<code class="docutils literal notranslate"><span class="pre">cerca(espec)</span></code> serà equivalent a <code class="docutils literal notranslate"><span class="pre">cerca(espec,</span> <span class="pre">-1,</span> <span class="pre">-1)</span></code>.</p>
+<p>Deixarà d’estar disponible la cerca per localització. No és un gran
+problema. La raó principal de la cerca sol ser trobar aquesta localització
+i, si ja la sap, el més probable és que la sra. Estrella vagi directament
+a agafar l’ampolla que no pas usi l’aplicació.</p>
+<p>Tot plegat fa que, una <code class="docutils literal notranslate"><span class="pre">Especificacio</span></code> sigui un valor immutable doncs
+totes les seves propietats són fixes en el moment de la creació. Això, com
+veurem més endavant, ens resultarà molt útil.</p>
+</div>
+<div class="section" id="el-vi-sempre-correcte">
+<h2>El <code class="docutils literal notranslate"><span class="pre">Vi</span></code> sempre correcte<a class="headerlink" href="#el-vi-sempre-correcte" title="Link permanent a aquest títol">¶</a></h2>
+<p>L’aparició de la classe <code class="docutils literal notranslate"><span class="pre">Especificacio</span></code> ens permet afegir un sistema de
+seguretat per la classe <code class="docutils literal notranslate"><span class="pre">Vi</span></code> de manera que una instància no pugui tenir
+valors no vàlids. Ara, en cas que intentem construir un vi amb algun valor
+no vàlid, o bé intentem modificar-lo de manera que quedi no vàlid,
+llençarem l’excepció <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>. És una
+<code class="docutils literal notranslate"><span class="pre">RuntimeException</span></code> ja que considerem que seria un error del nostre codi
+si es produís.</p>
+<p>Ara <code class="docutils literal notranslate"><span class="pre">esValid()</span></code> deixa de tenir sentit per validar una instància però sí
+el voldrem per assegurar-nos que els valors són vàlids abans de crear una.
+Per aquesta raó, passa a ser estàtic.</p>
+<p>La validesa dels atributs de <code class="docutils literal notranslate"><span class="pre">Vi</span></code> són:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hores</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«hores»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;minuts</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«minuts»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;segons</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«segons»&quot;</span></code></p></li>
+<li><p>els valors de tipus String no poden ser buits, només blancs ni <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p>el preu i l’estoc no poden ser negatius (ni tant sols <code class="docutils literal notranslate"><span class="pre">-1</span></code>)</p></li>
+<li><p>els valors de tipus enumerat, no poden ser <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
 </ul>
-<p>El següent codi ha de poder funcionar:</p>
-<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsaHora</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Intentarem crear una hora amb valors no vàlids&quot;</span><span class="p">);</span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">Hora</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hora</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IllegalArgumentException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Argument il·legal!&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table></div>
-<p>L’execució generarà:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">java UsaHora</span>
-<span class="hll"><span class="go">Intentarem crear una hora amb valors no vàlids</span>
-</span><span class="hll"><span class="go">Argument il·legal!</span>
-</span></pre></div>
+<p>Aquests valors, però, continuaran sent vàlids per les propietats de
+<code class="docutils literal notranslate"><span class="pre">Especificacio</span></code>.</p>
+<p>Finalment, la classe <code class="docutils literal notranslate"><span class="pre">Especificacio</span></code> acceptarà <code class="docutils literal notranslate"><span class="pre">null</span></code> com valor per
+les seves propietats. El que indicarà que no s’està especificant i que
+s’accepta qualsevol.</p>
+<p>Aquests canvis requeriran petites modificacions addicionals. Per exemple,
+en el mètode <code class="docutils literal notranslate"><span class="pre">Botiga.afegeix()</span></code>.</p>
 </div>
 </div>
 
@@ -277,10 +302,10 @@ fet el més genèric: <code class="docutils literal notranslate"><span class="pr
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="exercici_05_09_botiga_excepcional.html" class="btn btn-neutral float-right" title="Exercici 05_09. Excepcions a la botiga de vins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="exercici_05_16_mouespecs.html" class="btn btn-neutral float-right" title="Exercici 05_16. Especificacions independents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="exercici_05_07_hores_excepcionals.html" class="btn btn-neutral float-left" title="Exercici 05_07. La classe Hora amb excepcions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="exercici_05_14_botigacerca.html" class="btn btn-neutral float-left" title="Exercici 05_14. Cerques de vi amb múltiples resultats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

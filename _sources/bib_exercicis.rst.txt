@@ -21,8 +21,7 @@ Els exercicis de la secció :doc:`bib` són:
     exercici_05_12_list.rst
     exercici_05_13_remove.rst
     exercici_05_14_botigacerca.rst
-
-..  exercici_05_15_viespecs.rst
-..  exercici_05_16_propietatsvi.rst
-..  exercici_05_17_envoltastring_case.rst
-..  exercici_05_18_envoltastring_str.rst
+    exercici_05_15_especs.rst
+    exercici_05_16_mouespecs.rst
+    exercici_05_17_envoltastring_case.rst
+    exercici_05_18_envoltastring_str.rst
