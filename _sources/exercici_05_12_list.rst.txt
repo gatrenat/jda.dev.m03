@@ -62,10 +62,10 @@ dels comentaris.
 
             System.out.printf("El text %s és troba a la llista: %s%n", text, esTroba);
 
-            int indexPrimerOcurrència;
-            // TODO: inicialitza indexPrimerOcurrència a l'índex on es troba text
+            int indexPrimerOcurrencia;
+            // TODO: inicialitza indexPrimerOcurrencia a l'índex on es troba text
 
-            System.out.printf("Posició de %s a la llista: %s%n", text, indexPrimerOcurrència);
+            System.out.printf("Posició de %s a la llista: %s%n", text, indexPrimerOcurrencia);
 
 
             System.out.println("Mostrem les entrades introduïdes");
