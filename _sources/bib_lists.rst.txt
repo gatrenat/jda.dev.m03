@@ -43,7 +43,7 @@ Deixa'm que et presenti *part* de la "família":
         abstract class AbstractCollection implements Collection
         abstract class AbstractSequentialList
         abstract class AbstractList extends AbstractCollection
-        class AbstractSequentialList extends AbstractList
+        abstract class AbstractSequentialList extends AbstractList
 
         class ArrayList extends AbstractList
         class LinkedList extends AbstractSequentialList

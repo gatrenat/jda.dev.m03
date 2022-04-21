@@ -18,8 +18,8 @@ Per exemple, considera aquesta llista:
 
     List<Gat> gats = new ArrayList<>();
     gats.add(new Gat("Renat"));
-    gats.add(ew Gat("Garfield"));
-    gats.add(ew Gat("Misifú"));
+    gats.add(new Gat("Garfield"));
+    gats.add(new Gat("Misifú"));
 
 .. image:: _images/maps_gats_as_list.svg
    :align: center
@@ -52,7 +52,7 @@ trobem:
 
 .. code-block:: java
 
-    boolean getRenat(List<Gat> gats) {
+    Gat getRenat(List<Gat> gats) {
         for (Gat gat: gats) {
             if ("Renat".equals(gat.getNom())) return gat;
         }

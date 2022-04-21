@@ -183,8 +183,8 @@ seva posició dins la seqüència.</p>
 <p>Per exemple, considera aquesta llista:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span> <span class="n">gats</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">));</span>
-<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ew</span> <span class="nf">Gat</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">));</span>
-<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">ew</span> <span class="nf">Gat</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/maps_gats_as_list.svg"><img alt="_images/maps_gats_as_list.svg" class="align-center" src="_images/maps_gats_as_list.svg" width="50%" /></a>
@@ -207,7 +207,7 @@ Renat, farem una cerca:</p>
 </div>
 <p>O encara millor, imagina’t que ens cal fer alguna cosa amb el Renat si el
 trobem:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="nf">getRenat</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span> <span class="n">gats</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span> <span class="nf">getRenat</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span> <span class="n">gats</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">Gat</span> <span class="n">gat</span><span class="p">:</span> <span class="n">gats</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">gat</span><span class="p">.</span><span class="na">getNom</span><span class="p">()))</span> <span class="k">return</span> <span class="n">gat</span><span class="p">;</span>
     <span class="p">}</span>
