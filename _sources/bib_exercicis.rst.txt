@@ -25,3 +25,4 @@ Els exercicis de la secció :doc:`bib` són:
     exercici_05_16_mouespecs.rst
     exercici_05_17_envoltastring_case.rst
     exercici_05_18_envoltastring_str.rst
+    exercici_05_19_especmap.rst

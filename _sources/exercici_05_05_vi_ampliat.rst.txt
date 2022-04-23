@@ -87,7 +87,7 @@ El diagrama UML tindrà ara el següent aspecte:
 
 .. uml::
     :align: center
-    :alt: Diagrama de la classe Vi
+    :caption: Diagrama de la classe Vi
 
     class Entorn
     class Botiga {

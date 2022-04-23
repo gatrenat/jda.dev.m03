@@ -92,4 +92,5 @@ Trobaràs els continguts d'aquesta secció en els següents documents:
     bib_enum.rst
     bib_lists.rst
     bib_maps.rst
+    bib_conclusions.rst
     bib_exercicis.rst

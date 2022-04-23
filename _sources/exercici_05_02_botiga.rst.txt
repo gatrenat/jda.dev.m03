@@ -19,7 +19,7 @@ classe ``Botiga``.
 
 .. uml::
     :align: center
-    :alt: Diagrama de classes de la botiga de vins
+    :caption: Diagrama de classes de la botiga de vins
 
     class Botiga {
         - DEFAULT_MAX_VINS: int = 10

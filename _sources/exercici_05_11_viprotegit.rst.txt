@@ -24,7 +24,7 @@ En concret, el nostre objectiu és:
 
 .. uml::
     :align: center
-    :alt: Diagrama de la classe Vi amb enums
+    :caption: Diagrama de la classe Vi amb enums
 
     enum Origen {
         ALELLA

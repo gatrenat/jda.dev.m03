@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>El celler de la Bona Estrella &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
+  <title>Conclusions &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
   
 
   
@@ -39,8 +39,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Guardem les dades" href="bib_csv.html" />
-    <link rel="prev" title="Biblioteques" href="bib.html" />
+    <link rel="next" title="Exercicis" href="bib_exercicis.html" />
+    <link rel="prev" title="Clau-Valor" href="bib_maps.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -95,14 +95,14 @@
 <li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="bib.html">Biblioteques</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">El celler de la Bona Estrella</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_botigavins.html">El celler de la Bona Estrella</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_csv.html">Guardem les dades</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_vi.html">Vins complets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_excepcions.html">Excepcions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_lists.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_maps.html">Clau-Valor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bib_conclusions.html">Conclusions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Conclusions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_exercicis.html">Exercicis</a></li>
 </ul>
 </li>
@@ -155,7 +155,7 @@
         
           <li><a href="bib.html">Biblioteques</a> &raquo;</li>
         
-      <li>El celler de la Bona Estrella</li>
+      <li>Conclusions</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -173,82 +173,55 @@
     
            <div itemprop="articleBody">
             
-  <div class="section" id="el-celler-de-la-bona-estrella">
-<h1>El celler de la Bona Estrella<a class="headerlink" href="#el-celler-de-la-bona-estrella" title="Link permanent a aquest títol">¶</a></h1>
-<p>La senyora Estrella d’Argent és propietària d’una reconeguda botiga de vi
-de la ciutat, especialitzada en vins de taula catalans. El celler es diu
-<em>La Bona Estrella</em> però tothom la coneix com «Ca l’Estrella».</p>
-<p>Fins ara, els clients arribaven a la botiga i li descrivien les
-característiques desitjades del vi cercat. La Sra. Estrella se’ls
-escoltava amb atenció, feia alguna pregunta per acabar de fer-se la idea i
-desapareixia per la porta que donava a la rebotiga, per reaparèixer poc
-més tard, quasi bé sempre, amb una o més ampolles que satisfeien els
-desitjos dels seus clients.</p>
-<p>El temps, però, passa per tothom, i ja la Sra. Estrella comença a fer-se
-gran. Entre d’altres coses, li comença a costar pujar pes. Per aquesta
-raó, i per tenir-lo ocupat en alguna cosa de profit, el Tomet, el nebot
-<em>menys</em> eixerit de la Sra. Estrella, li ajuda amb algunes tasques. Entre
-d’altres, col·loca les ampolles al magatzem i cuida del gat Renat, qui es
-suposa que manté el celler lliure de ratolins. Tot i que el Tomet no ho fa
-del tot malament, el seu ajut presenta un problema a la tieta, doncs ara a
-la Sra.  Estrella ja no se li queda al cap on para cada ampolla de vi quan
-el client li demana.</p>
-<p>Durant un sopar familiar, la germana petita de la Sra Estrella, la Gualda,
-ha comentat que coneix un equip de desenvolupadors molt trempats
-(nosaltres) que li podrien fer una aplicació a mida per ajudar-la amb els
-estocs de vi.</p>
-<p>Així, la Gualda ens ha posat en contacte amb la seva germana i hem tingut
-una primera reunió en la que hem pres algunes notes.</p>
-<p>Un cop analitzat el problema, el nostre equip ha arribat a un primer disseny de
-l’aplicació, que hem representat amb el següent diagrama de classes:</p>
-<div class="figure align-center" id="id1">
-<p class="plantuml">
-<img src="_images/plantuml-060aa5b44759318a47849995e8ea0f7d324b843d.png" alt="class Botiga {
-    - vins: Vi[]
-    + afegeix(Vi)
-    + cerca(nom: String): Vi
-}
-
-class Vi {
-    - nom
-    - preu
-    - estoc
-}
-
-class Entorn {
-    + main()
-}
-
-Botiga o-- Vi
-Entorn *-- Botiga
-Entorn -- Vi
-
-hide class circle
-skinparam classAttributeIconSize 0
-skinparam class {
-    BackgroundColor White
-    BorderColor Black
-    ArrowColor Black
-}"/>
-</p>
-<p class="caption"><span class="caption-text">Diagrama de classes de la botiga de vins</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>La nostra aplicació s’executarà a partir d’un entorn operatiu
-anomenat <code class="docutils literal notranslate"><span class="pre">Entorn</span></code> que permetrà fer diferents gestions sobre la botiga de
-vins, com ara cercar un vi i afegir-ne de nous.</p>
-<p>La classe <code class="docutils literal notranslate"><span class="pre">Botiga</span></code> se n’encarregarà de gestionar la col·lecció de vins
-que hi ha a la botiga, i oferirà mètodes per poder saber si un vi es troba
-a la botiga, accedir al vi en concret, afegir-ne de nous, etc.</p>
-<p>Finalment la classe <code class="docutils literal notranslate"><span class="pre">Vi</span></code> se n’encarregarà de gestionar la informació
-d’un vi en concret, el preu i l’estoc (nombre d’ampolles) disponible.</p>
-<p>Tot plegat és un primer disseny que li mostrem a la Sra. Estrella després
-de convidar-nos a unes tapes regades amb un vi massa bo com per que puguem
-estar segurs d’haver entès del tot les necessitats de la nostra clienta.</p>
-<p>Passem tot seguit a implementar-ho de manera que puguem presentar-li un
-prototip el més aviat possible.</p>
-<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_01_vi.html"><span class="doc"> Exercici 05_01. La classe vi</span></a></p>
-<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_02_botiga.html"><span class="doc"> Exercici 05_02. La classe botiga</span></a></p>
-<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_05_03_entorn.html"><span class="doc"> Exercici 05_03. La classe Entorn</span></a></p>
+  <div class="section" id="conclusions">
+<h1>Conclusions<a class="headerlink" href="#conclusions" title="Link permanent a aquest títol">¶</a></h1>
+<p>En aquest tema hem conegut algunes de les biblioteques essencials de Java.
+En concret, diferents versions de les <em>coleccions</em> <code class="docutils literal notranslate"><span class="pre">List</span></code> i <code class="docutils literal notranslate"><span class="pre">Map</span></code>. Les
+primeres són una implementació de seqüències ordenades, mentre que les
+segones corresponen a parells clau-valor.</p>
+<p>Es tracta d’implementacions que la majoria de llenguatges <em>decents</em> ens
+oferiran amb diferències més o menys petites. El seu coneixement i ús ens
+facilitarà enormement la nostra feina.</p>
+<p>A banda hem conegut el mecanisme de control d’errors més habitual en
+programació orientada a objectes: les excepcions. Ara sabem que es tracta
+d’unes classes que poden ser llençades i capturades, que Java en
+distingeix dos tipus, gestionades i no gestionades, i que, podem
+recuperar-nos d’una excepció i permetre que el nostre programa continuï
+funcionant.</p>
+<p>Una altra addició ha estat els enumerats. <code class="docutils literal notranslate"><span class="pre">enum</span></code> ens permet definir un
+conjunt de valors vàlids. Hem vist que Java els acaba traduint a classes i
+que, per tant, ens ofereixen força flexibilitat.</p>
+<p>Finalment hem conegut la Sra. Estrella d’Argent, a la que hem començat a
+fer-li una aplicació que li ajuda en la gestió del seu celler de vins.
+Aquesta pràctica ens ha permès experimentar el procés d’evolució d’una
+aplicació des de la seva concepció inicial, a l’hora que ens ha servit
+d’excusa per anar practicant els conceptes d’aquest bloc.</p>
+<p>No ens quedem aquí. Un cop comencem a desenvolupar en un llenguatge, el
+que marca la diferència no és saber o no la sintaxi (això es dóna per
+suposat) sinó el nostre grau de coneixement de la seva biblioteca. En
+aquest sentit, Java posa al nostre abast d’una de les més amples
+biblioteques disponibles en l’actualitat.</p>
+<p>Així que, a seguir aprenent i programant!</p>
+<p><em>Nota</em>: potser t’has quedat amb les ganes de saber què va passar amb la
+Sra. Estrella, la seva botiga i l’aplicació. Aquí tens un breu
+resum de com va acabar tot plegat:</p>
+<blockquote>
+<div><p>El cert és que el nostre equip ha fet una feina extraordinària.
+Després del canvi en el disseny que incorporava <code class="docutils literal notranslate"><span class="pre">Propietat</span></code>, el
+sistema estava força desacoblat, el que va permetre afegir, no només
+noves propietats al vi, sinó també noves begudes com ara el cava.</p>
+<p>Amb el temps, l’aplicació va evolucionar i va disposar d’una botiga
+<em>online</em> que distribueix sense descans 24-7-365, els vins catalans
+arreu del món.</p>
+<p>La Sra. Estrella va fer molts diners i es va retirar per dedicar-se a
+una altra de les seves grans passions, gastar-se la seva fortuna
+jugant al pòquer.</p>
+<p>Un de l’equip es va quedar mantenint el sistema (i cuidant del Tomet i
+del gat Renat) mentre que la resta de l’equip ens varem dispersar en
+diferents companyies i projectes.</p>
+<p>Això sí, un cop a l’any, ens seguim reunint al Celler de la Bona
+Estrella i fem un bon brindis pels bons temps que varem viure-hi.</p>
+</div></blockquote>
 </div>
 
 
@@ -282,10 +255,10 @@ prototip el més aviat possible.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bib_csv.html" class="btn btn-neutral float-right" title="Guardem les dades" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="bib_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="bib.html" class="btn btn-neutral float-left" title="Biblioteques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="bib_maps.html" class="btn btn-neutral float-left" title="Clau-Valor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

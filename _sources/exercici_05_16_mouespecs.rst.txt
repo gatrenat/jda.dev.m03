@@ -273,7 +273,7 @@ El nou disseny tindrà el següent aspecte:
 
 .. uml::
     :align: center
-    :alt: Diagrama de classes de la botiga de vins amb especificacions independents
+    :caption: Diagrama de classes de la botiga de vins amb especificacions independents
 
     enum Origen
     enum Tipus

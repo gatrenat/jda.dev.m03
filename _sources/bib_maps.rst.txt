@@ -667,3 +667,5 @@ Així, ``HashMap`` el que fa per localitzar una clau és:
 
 3. considerarà que la clau hi és quan troba una clau que tingui el mateix
    *hash* i ``equals()`` digui que és igual a la cercada.
+
+|exerciseicon__T| :doc:`exercici_05_19_especmap`

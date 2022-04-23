@@ -40,7 +40,7 @@ Tenint tot això en compte, millorem el nostre disseny afegint la classe
 
 .. uml::
     :align: center
-    :alt: Diagrama de classes de la botiga de vins amb Especificacio
+    :caption: Diagrama de classes de la botiga de vins amb Especificacio
 
     enum Origen
     enum Tipus

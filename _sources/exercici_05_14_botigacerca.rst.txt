@@ -50,7 +50,7 @@ El nostre model quedarà de la següent manera:
 
 .. uml::
     :align: center
-    :alt: Cerques amb resultats múltiples
+    :caption: Cerques amb resultats múltiples
 
     enum Origen
     enum Tipus

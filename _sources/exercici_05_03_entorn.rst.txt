@@ -31,7 +31,7 @@ comandes.
 
 .. uml::
     :align: center
-    :alt: Diagrama de classes de la botiga de vins
+    :caption: Diagrama de classes de la botiga de vins
 
     class Entorn {
         {static} main(String[])

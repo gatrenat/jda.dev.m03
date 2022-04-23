@@ -102,6 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_lists.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_maps.html">Clau-Valor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_conclusions.html">Conclusions</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="bib_exercicis.html">Exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_01_vi.html"> Exercici 05_01. La classe <code class="docutils literal notranslate"><span class="pre">vi</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_02_botiga.html"> Exercici 05_02. La classe <code class="docutils literal notranslate"><span class="pre">botiga</span></code></a></li>
@@ -121,6 +122,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 05_16. Especificacions independents</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_17_envoltastring_case.html"> Exercici 05_17. EnvoltaString indiferent a majúscules i minúscules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_05_18_envoltastring_str.html"> Exercici 05_18. EnvoltaString és compara amb Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_05_19_especmap.html"> Exercici 05_19. Propietats del vi</a></li>
 </ul>
 </li>
 </ul>
@@ -420,10 +422,74 @@ futur.</p>
 <div class="section" id="el-diagrama-final">
 <h2>El diagrama final<a class="headerlink" href="#el-diagrama-final" title="Link permanent a aquest títol">¶</a></h2>
 <p>El nou disseny tindrà el següent aspecte:</p>
-<div class="figure align-center">
+<div class="figure align-center" id="id1">
 <p class="plantuml">
-<img src="_images/plantuml-d3d6d7589a9e4ec3ff5e359840b64b5bdcd8447c.png" alt="Diagrama de classes de la botiga de vins amb especificacions independents"/>
+<img src="_images/plantuml-d3d6d7589a9e4ec3ff5e359840b64b5bdcd8447c.png" alt="enum Origen
+enum Tipus
+class Botiga {
+    + cerca(ref: String): Vi
+    + cerca(espec: Especificacio): List&lt;Vi&gt;
+    + cerca(espec: Especificacio, preuMax: int, estocMin: int): List&lt;Vi&gt;
+}
+
+class Vi {
+    - ref: String
+    - preu: int
+    - estoc: int
+    - lloc: String
+    - espec: Especificacio
+    + Vi(ref, preu, lloc, espec)
+    + getRef(): String
+    + getPreu(): int
+    + setPreu(int)
+    + getEstoc(): int
+    + setEstoc(int)
+    + getLloc(): String
+    + setLloc(lloc)
+    + getEspec(): Especificacio
+    + toString(): String
+    + aArrayString(): String[]
+    + {static} deArrayString(String[]): Vi
+    + {static} esValid(ref, preu, estoc, lloc, espec):boolean
+}
+
+class Especificacio {
+    - nom: String
+    - origen: Origen
+    - tipus: Tipus
+    - collita: Collita
+    + Especificacio(nom, origen, tipus, collita)
+    + getNom(): String
+    + getOrigen(): Origen
+    + getTipus(): Tipus
+    + getCollita(): String
+    + toString(): String
+    + esComplet(): boolean
+    + aArrayString(): String[]
+    + {static} deArrayString(String[]): Especificacio
+    + esPlantillaDe(Especificacio): boolean
+}
+
+Entorn *-- Botiga
+Entorn --&gt; Vi
+Entorn --&gt; Especificacio
+Botiga o-- Vi
+Especificacio *-- Origen
+Especificacio *-- Tipus
+Botiga --&gt; Especificacio
+class Especificacio #yellow
+
+hide class circle
+hide enum circle
+hide enum method
+skinparam classAttributeIconSize 0
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}"/>
 </p>
+<p class="caption"><span class="caption-text">Diagrama de classes de la botiga de vins amb especificacions independents</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

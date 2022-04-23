@@ -29,7 +29,7 @@ definitivament no.
 
 .. uml::
     :align: center
-    :alt: Diagrama de l'aplicació
+    :caption: Diagrama de l'aplicació
 
     class Entorn
     class Botiga
