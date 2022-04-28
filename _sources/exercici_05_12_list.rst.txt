@@ -30,7 +30,7 @@ dels comentaris.
             List<String> llista;
 
             // TODO: inicialitza la llista amb una instància de  ArrayList
-            //       un LinkedList. Com et vingui de gust
+            //       o un LinkedList. Com et vingui de gust
 
 
             System.out.println("Obtenim les entrades");

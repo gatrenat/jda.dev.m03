@@ -256,14 +256,14 @@ vàlid.</p>
               <span class="n">GatRenat</span> <span class="n">renat</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GatRenat</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
               <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat està: &quot;</span> <span class="o">+</span> <span class="n">renat</span><span class="p">.</span><span class="na">getPosicio</span><span class="p">());</span>
          <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IllegalArgumentException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">sout</span>
+             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
          <span class="p">}</span>
       <span class="p">}</span>
  <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
 <p>La sortida serà:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java UsaGatRenat
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java UsaGatRenat dret
 <span class="hll"><span class="go"> El gat Renat està: DRET</span>
 </span></pre></div>
 </div>

@@ -61,7 +61,7 @@ Fes servir la següent classe per provar la nova funcionalitat:
                  GatRenat renat = new GatRenat(posicio);
                  System.out.println("El gat Renat està: " + renat.getPosicio());
             } catch (IllegalArgumentException e) {
-            sout
+                System.out.println(e);
             }
          }
     }
@@ -71,5 +71,5 @@ La sortida serà:
 .. code-block:: console
    :emphasize-lines: 2
 
-    $ java UsaGatRenat 
+    $ java UsaGatRenat dret
     El gat Renat està: DRET
