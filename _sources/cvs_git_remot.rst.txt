@@ -1,0 +1,158 @@
+#########
+Git remot
+#########
+
+Amb el que hem vist fins ara, espero que t'hagi convençut de fer
+servir Git (o algun altre SCV) en tots els teus desenvolupaments. Si
+no ho he aconseguit encara, espera't a veure el que Git et pot oferir
+quan el teu projecte el fas des de diferents màquines o/i amb
+diferents desenvolupadors.
+
+Duplicar o clonar
+-----------------
+
+De vegades voldrem treballar en un repositori existent que no ens
+pertany.
+
+Per duplicar un repositori farem servir la comanda ``clone``
+
+.. code-block:: console
+
+    $ git clone «url» [«noudir»]
+
+Per exemple, la següent comanda et crearà un directori anomenat
+``gems`` a partir del directori actual i hi duplicarà el repositori
+contingut a la url indicada.
+
+.. code-block:: console
+
+    $ git clone https://github.com/moiatgit/the-art-of-command-line
+    Cloning into 'the-art-of-command-line'...
+    remote: Enumerating objects: 3532, done.
+    remote: Total 3532 (delta 0), reused 0 (delta 0), pack-reused 3532
+    Receiving objects: 100% (3532/3532), 2.47 MiB | 1.93 MiB/s, done.
+    Resolving deltas: 100% (2077/2077), done.
+    $ cd the-art-of-command-line/
+    the-art-of-command-line/$ ls
+    admin            cowsay.png    README-el.md  README-id.md  README-ko.md  README-ro.md  README-uk.md
+    AUTHORS.md       README-cs.md  README-es.md  README-it.md  README.md     README-ru.md  README-zh-Hant.md
+    CONTRIBUTING.md  README-de.md  README-fr.md  README-ja.md  README-pt.md  README-sl.md  README-zh.md
+
+En cas que no s'especifiqui el nom del directori, la comanda crearà un
+directori amb el mateix nom que l'original.
+
+Ara podríem començar a treballar en una nova branca del projecte que
+Hackmore tan amablement ens ofereix al `github <https://github.com/>`_
+
+El repositori remot
+-------------------
+
+A partir del repositori clonat a la secció anterior, podem demanar a
+Git que ens digui quin és el repositori remot de la nostra còpia:
+
+.. code-block:: console
+
+    gems$ git remote -v
+    origin	git://github.com/WilliamHackmore/linuxgems.git (fetch)
+    origin	git://github.com/WilliamHackmore/linuxgems.git (push)
+
+Aquesta comanda ens està indicant que el repositori té associat un
+repositori remot anomenat *origen* i quines són les urls que farà
+servir en cas que vulguem recuperar noves versions o enviar les
+nostres.
+
+La comanda ``remote`` ens ofereix la possibilitat de gestionar els
+repositoris remots amb que volem enllaçar el nostre. Amb *remot* ens
+referirem a qualsevol altre repositori, independentment de si es troba
+a un altre equip accessible per algun protocol (ex. ssh) o muntat
+directament al nostre.
+
+Per exemple, suposem que volem fer un repositori de còpia de seguretat
+en un disc addicional muntat a ``/mnt/diskbackup/projecte_bak``
+(preferiblement iniciat amb ``--bare``). Podem afegir aquest directori
+com a remot del nostre amb:
+
+.. code-block:: console
+
+    projecte$ git remote add backup /mnt/diskbackup/projecte_bak
+    projecte$ git config remote.backup.mirror true
+
+Amb això, disposem d'un nou repositori remot amb el que ens podrem
+*sincronitzar-nos* quan vulguem fer còpies.
+
+recuperar els canvis remots
+---------------------------
+
+Per recuperar canvis realitzats a un repositori remot, simplement
+farem:
+
+.. code-block:: console
+
+    gems$ git pull origin master
+     * branch            master     -> FETCH_HEAD
+    Already up-to-date.
+
+Donat que el Hackmore no li hem donat temps d'afegir nous canvis, en
+aquest cas ens diu que ja disposem de la darrera versió del projecte.
+Altrament ens hagués descarregat els nous canvis.
+
+enviar canvis a remot
+---------------------
+
+Per enviar els nostres canvis al repositori remot ens calen les
+següents coses:
+
+1. haver fet *commit* dels nostres canvis en local
+
+2. assegurar-nos que tenim la darrera versió del remot (recorda
+   ``pull``)
+
+3. tenir permisos per poder enviar els nostres canvis al repositori
+   remot (en el cas del projecte del Hackmore no els tenim)
+
+4. enviar els canvis amb la comanda ``push``
+
+.. code-block:: console
+
+    gems$ git push origin master
+
+Empaquetament
+-------------
+
+De vegades no podrem connectar-nos directament a algun repositori
+remot, però ens interessarà sincronitzar-nos. Git ofereix la comanda
+``bundle`` que ens permet empaquetar tot o part del repositori en un
+fitxer i portar-lo allà on ens interessi.
+
+Llegeix-te el document :doc:`cvs_git_bundle` abans de continuar.
+
+
+Per empaquetar el nostre repositori, farem simplement:
+
+.. code-block:: console
+
+    projecte$ git bundle create projecte.bundle --all
+    Counting objects: 40, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (28/28), done.
+    Writing objects: 100% (40/40), 3.75 KiB, done.
+    Total 40 (delta 5), reused 0 (delta 0)
+    projecte$ ls
+    adeu.txt  hola.txt  projecte.bundle
+
+Ara copiem el fitxer generat (``projecte.bundle``) allà on ens
+interessi i el recuperem amb:
+
+.. code-block:: console
+
+    $ git clone project.bundle miproject
+    Cloning into 'miproject'...
+    Receiving objects: 100% (40/40), done.
+    Resolving deltas: 100% (5/5), done.
+    $ cd miproject
+    miproject$ ls
+    adeu.txt  hola.txt
+
+Ara ja disposem a ``miproject/`` d'un duplicat del nostre projecte per
+la branca *master*.
+

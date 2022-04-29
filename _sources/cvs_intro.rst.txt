@@ -1,0 +1,91 @@
+############
+Justificació
+############
+
+Els programes, com qualsevol document, canvien al llarg de la seva vida.
+
+Considerem les següents situacions durant la vida d'una aplicació:
+
+* **Molts fitxers**. A partir d'uns requeriments el creem i comencem a
+  composar-la.  Normalment serà prou complexa com per què inclogui més d'un
+  fitxer de diferents tipus (com ara codi, icones, etc) i ens porti uns dies
+  finalitzar-la.
+
+* **Correcció d'errors**. De tant en tant, alguna prova ens indicarà que hi ha
+  alguna part que no acaba d'anar bé i ens caldrà modificar-la.
+
+* **Manteniment**. Un cop finalitzat i provat, el posarem en producció on,
+  després d'un temps apareixeran errors fins llavors no detectats o noves
+  funcionalitats a afegir-hi.
+
+* **Recuperació de codi**. De vegades, alguna de les modificacions que hi
+  afegim, eliminen parts del codi que després voldríem recuperar.
+
+* **Canvis «bruts»**. D'altres vegades, una modificació feta sota pressió fa
+  malbé altres parts del programa i, a sobre, deixa el codi en un estat que
+  costa molt de refer-ho com era abans.
+
+* **Experiments**. Altres vegades voldrem provar si el programa suportaria una
+  certa modificació, però no voldrem modificar el programa original a menys que
+  el resultat ens sigui satisfactori.
+
+* **Coexistència de versions**. Fins i tot pot passar que ens trobem amb el
+  nostre programa en producció i a l'hora estiguem afegint noves funcionalitats
+  per la següent versió del programa, i de sobte ens toqui fer alguna
+  modificació en la versió de producció (per exemple, perquè s'ha detectat un
+  error). Encara no podem lliurar la versió amb que estem treballant potser
+  perquè falta molt per finalitzar-la, i tampoc no voldrem modificar només la
+  versió de producció (si tenim la sort de guardar una còpia del codi font)
+  perquè els canvis no es veuran a la versió en que estem treballant.
+
+* **Moltes ubicacions**. Potser tampoc sempre podrem treballar en la nostra
+  aplicació des del mateix equip. De vegades ens trobarem a l'equip de la feina,
+  d'altres amb el de casa, amb un portàtil, etc. Quan modifiquem alguna cosa en
+  un dels equips, ens trobarem havent d'assegurar-nos que passem els canvis a la
+  resta d'equips en els que treballem.
+
+* **Molts desenvolupadors**. Encara més, sovint no treballarem sols en la nostra
+  aplicació. Amb prou disciplina, podem organitzar-nos els diferents membres de
+  l'equip per treballar en parts independents del codi. Però segurament ja saps
+  les persones no sempre seguim bé les pautes, i tard o d'hora algun company
+  (potser tu!) necessitarà fer un canvi en un dels arxius d'un altre, o
+  esborrarà inadvertidament un fitxer del que depen la feina d'un altre, etc.
+
+* **Treball telemàtic**. Un cas cada cop més freqüent el trobem amb treballadors
+  que treballen de manera exclusivament telemàtica. En
+  aquest cas, el posar-se d'acord per organitzar les diferents aportacions de
+  cada desenvolupador es complica amb la distància.
+
+Per poc que hagis desenvolupat, intuiràs que aquests escenaris, i
+molts altres de similars, no són pas possibilitats remotes sinó més
+aviat el dia a dia dels desenvolupadors.
+
+Quan treballes tu sola, fent servir sempre el mateix PC, amb una aplicació
+senzilleta que requereixi pocs canvis i de poca urgència, potser guardant unes
+còpies de seguretat de tant en tant i amb molt de compte, pots anar tirant.
+
+.. figure:: _images/cvs_img001_local.png
+   :alt: local
+   :align: center
+
+Quan comences a afegir més complexitat, acabes amb una munió de carpetes,
+amb sort anomenades amb alguna marca de temps (la data de la còpia) o de
+seqüència (1.0.0.1, 1.0.0.2, etc.) o pitjor (*la_darrera*, *la_darrera2*,
+*ladelamarta*, *ladelamarta_modificadapeljoan*,
+*la_que_tracta_els_accents*, *aquesta_si_final*, *definitiva*,
+*definitiva2*, *definitivahojuropersnoopy*, …)
+
+Aquestes carpetes les aniràs guardant en diferents suports, enviant per
+correu a la companya, etc. fins que arribarà un moment que no saps quina
+és la versió "actual" amb la que treballar, hauràs perdut un munt de codi,
+de temps reprogramant el que altres (potser un mateix) ja havien programat
+abans. Quan la situació sigui insostenible, probablement us reunireu tot
+l'equip, guardareu totes les còpies en una carpeta anomenada
+*backupdelanypassat* o similar, i començareu de nou amb molt bona voluntat
+i fixant-vos alguna pauta d'anomenar versions que en poc temps estarà tan
+descontrolada com la que guardeu a *backupdelanypassat* i amb la pressió
+creixent per lliurar quelcom que funcioni.
+
+Un escenari terrorífic, oi?
+
+Segurament tu n'has viscut alguna de similar. Oi?
