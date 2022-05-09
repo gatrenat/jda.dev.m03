@@ -1,0 +1,51 @@
+###############################################################################
+|exerciseicon__T| Exercici 52_04. El *setter* per la coordenada ``y`` d'un Punt
+###############################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_04_setter_y/``
+
+* Continguts relacionats: :doc:`test_junit`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+En aquesta ocasió, afegirem el mètode ``setY()`` a la classe ``Punt``.
+
+És important que ho facis seguint el procediment que hem fet als apunts:
+
+1. crea una prova similar a ``setX42()`` per la coordenada y.
+
+2. comprova que falla
+
+3. afegeix els canvis a ``Punt`` per què passi totes les proves.
+
+Un cop hagis passat les teves proves, assegura't que passes també
+``prgtest`` tot afegint la següent classe:
+
+.. code-block:: java
+   :linenos:
+
+    public class UsaPunt {
+        public static void main(String[] args){
+            Punt punt = new Punt();
+            int x = // args[0] si hi és i és enter, o 0 altrament
+            int y = //  args[1] si hi és i és enter, o 0 altrament
+            punt.setX(x);
+            punt.setY(y);
+            System.out.printf("punt.getX() -> %d%n", punt.getX());
+            System.out.printf("punt.getY() -> %d%n", punt.getY());
+        }
+    }
+
+Un exemple d'execució seria:
+
+.. code-block:: console
+
+   $ java UsaPunt 5 7
+   punt.getX() -> 5
+   punt.getY() -> 7

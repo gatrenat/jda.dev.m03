@@ -1,0 +1,945 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Proves unitàries amb JUnit &mdash; Introducció a la programació amb Java 2021-22 documentació</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Exercicis" href="test_exercicis.html" />
+    <link rel="prev" title="Classes de proves" href="test_classesdeproves.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Introducció a la programació amb Java
+          
+
+          
+            
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Curs 2021-22
+              </div>
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cvs.html">Control de versions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="test.html">Validació d’aplicacions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test_errors.html">Els errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_proves.html">Les proves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_classesdeproves.html">Classes de proves</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Proves unitàries amb JUnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_exercicis.html">Exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="test.html">Validació d’aplicacions</a> &raquo;</li>
+        
+      <li>Proves unitàries amb JUnit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+            
+  <div class="section" id="proves-unitaries-amb-junit">
+<h1>Proves unitàries amb JUnit<a class="headerlink" href="#proves-unitaries-amb-junit" title="Link permanent a aquest títol">¶</a></h1>
+<p>Aquesta secció t’introduirà un dels <em>frameworks</em> més utilitzats per a
+la prova unitària: XUnit.</p>
+<p>XUnit és el nom amb el que es coneix una família d’entorns de prova
+unitària amplament coneguda entre els desenvolupadors de programari.
+Aquest nom es deriva de JUnit, el primer d’aquests entorns en ser ben
+conegut. En aquest cas, la <em>J</em> vol dir <em>Java</em>, i és l’entorn que farem
+servir aquí<a class="footnote-reference brackets" href="#articlefowler" id="id1">1</a>.</p>
+<p>El lloc oficial de JUnit és <a class="reference external" href="http://www.junit.org">http://www.junit.org</a> i podràs trobar respostes a diverses
+qüestions bàsiques com ara, com instal·lo a
+<a class="reference external" href="http://junit.sourceforge.net/doc/faq/faq.htm">http://junit.sourceforge.net/doc/faq/faq.htm</a>.</p>
+<p>Si has seguit els darrers blocs d’aquests continguts, ja disposes d’una
+instaŀlació adequada de <em>Junit</em>.
+Altrament, revisa els <a class="reference internal" href="moduls_junit.html"><span class="doc">continguts</span></a>.</p>
+<div class="section" id="junit-des-de-linia-de-comandes">
+<h2>JUnit des de línia de comandes<a class="headerlink" href="#junit-des-de-linia-de-comandes" title="Link permanent a aquest títol">¶</a></h2>
+<p>Com és habitual en aquests continguts, realitzarem les proves des de línia
+de comandes. Per descomptat, si vols configurar-te el teu IDE favorit, ho
+pots fer i adaptar les passes que et descriuré a continuació a la teva
+configuració.</p>
+<p>Per executar JUnit des de consola, farem:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java org.junit.platform.console.ConsoleLauncher -h
+
+<span class="go">Thanks for using JUnit! Support its development at https://junit.org/sponsoring</span>
+
+<span class="go">Usage: ConsoleLauncher [-h] [--disable-ansi-colors] [--disable-banner]</span>
+<span class="go">                       [--fail-if-no-tests] [--scan-modules] [--scan-classpath[=PATH[;|:</span>
+<span class="go">                       PATH...]]]... [--details=MODE] [--details-theme=THEME]</span>
+<span class="go">                       [--reports-dir=DIR] [-c=CLASS]... [--config=KEY=VALUE]... [-cp=PATH</span>
+<span class="go">                       [;|:PATH...]]... [-d=DIR]... [-e=ID]... [-E=ID]...</span>
+<span class="go">                       [--exclude-package=PKG]... [-f=FILE]... [--include-package=PKG]...</span>
+<span class="go">                       [-m=NAME]... [-n=PATTERN]... [-N=PATTERN]... [-o=NAME]...</span>
+<span class="go">                       [-p=PKG]... [-r=RESOURCE]... [-t=TAG]... [-T=TAG]... [-u=URI]...</span>
+<span class="go">Launches the JUnit Platform from the console.</span>
+<span class="go">  -h, --help                 Display help information.</span>
+<span class="go">      --disable-ansi-colors  Disable ANSI colors in output (not supported by all</span>
+<span class="go">                               terminals).</span>
+<span class="go">      --disable-banner       Disable print out of the welcome message.</span>
+<span class="go">      --details=MODE         Select an output details mode for when tests are executed.</span>
+<span class="go">                               Use one of: none, summary, flat, tree, verbose. If &#39;none&#39;</span>
+<span class="go">                               is selected, then only the summary and test failures are</span>
+<span class="go">                               shown. Default: tree.</span>
+<span class="go">      --details-theme=THEME  Select an output details tree theme for when tests are</span>
+<span class="go">…</span>
+</pre></div>
+</div>
+<p>He suprimit part de la sortida per brevetat.</p>
+</div>
+<div class="section" id="provem-la-classe-punt">
+<h2>Provem la classe <code class="docutils literal notranslate"><span class="pre">Punt</span></code><a class="headerlink" href="#provem-la-classe-punt" title="Link permanent a aquest títol">¶</a></h2>
+<p>Passem ara a provar una classe molt bàsica: la classe <code class="docutils literal notranslate"><span class="pre">Punt</span></code>. Ho farem
+seguint els principis del desenvolupament dirigit per la prova o <em>TDD</em>.</p>
+<p>En primer lloc, crearem la classe de test <code class="docutils literal notranslate"><span class="pre">TestPunt</span></code>. Sí, creem el
+text abans de crear la classe!</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// comprova que Punt() pugui ser cridat</span>
+        <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Ara compilem</p>
+<div class="highlight-console notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="gp">$ </span>javac TestPunt.java
+<span class="go">TestPunt.java:6: error: cannot find symbol</span>
+<span class="go">        new Punt();</span>
+<span class="go">            ^</span>
+<span class="go">  symbol:   class Punt</span>
+<span class="go">  location: class TestPunt</span>
+<span class="go">1 error</span>
+</pre></div>
+</td></tr></table></div>
+<p>Com era previsible, tenim un error de compilació: no troba la classe
+<code class="docutils literal notranslate"><span class="pre">Punt</span></code>. Recorda que l’objectiu d’una prova és sempre trobar un error.
+Hem fet fallar el nostre primer test. Per tant <strong>felicitats</strong>!</p>
+<p>Afegim ara la classe <code class="docutils literal notranslate"><span class="pre">Punt</span></code>, amb el codi <strong>estrictament</strong> necessari per
+corregir el problema anterior i passar el nostre primer test.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{}</span>
+</pre></div>
+</div>
+<p>Compilem i ara sí ens passa <code class="docutils literal notranslate"><span class="pre">javac</span></code>.</p>
+<p>Ara toca executar els tests. En comptes d’invocar <code class="docutils literal notranslate"><span class="pre">java</span></code> de la manera
+habitual, ho farem de la següent manera:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java org.junit.platform.console.ConsoleLauncher -c TestPunt
+
+<span class="go"> Thanks for using JUnit! Support its development at https://junit.org/sponsoring</span>
+
+<span class="go"> ╷</span>
+<span class="go"> ├─ JUnit Jupiter ✔</span>
+<span class="go"> └─ JUnit Vintage ✔</span>
+<span class="go">    └─ TestPunt ✔</span>
+<span class="go">       └─ constructor ✔</span>
+
+<span class="go"> Test run finished after 43 ms</span>
+<span class="go"> [         3 containers found      ]</span>
+<span class="go"> [         0 containers skipped    ]</span>
+<span class="go"> [         3 containers started    ]</span>
+<span class="go"> [         0 containers aborted    ]</span>
+<span class="go"> [         3 containers successful ]</span>
+<span class="go"> [         0 containers failed     ]</span>
+<span class="hll"><span class="go"> [         1 tests found           ]</span>
+</span><span class="go"> [         0 tests skipped         ]</span>
+<span class="go"> [         1 tests started         ]</span>
+<span class="go"> [         0 tests aborted         ]</span>
+<span class="hll"><span class="go"> [         1 tests successful      ]</span>
+</span><span class="hll"><span class="go"> [         0 tests failed          ]</span>
+</span></pre></div>
+</div>
+<p>Molt bé! Sembla que hem passat el nostre primer test.</p>
+<p>La sortida que ens genera és molt similar a la que ja ens té acostumat
+<code class="docutils literal notranslate"><span class="pre">prgtest</span></code></p>
+<p>El més important ara és veure que ens diu que:</p>
+<ul class="simple">
+<li><p>el nombre de tests trobats és 1</p></li>
+<li><p>el nombre de tests que passen també és 1</p></li>
+<li><p>el nombre de tests que fallen és 0</p></li>
+</ul>
+<p>No és gaire impressionant, tenint en comptes que bàsicament estem cridant
+al constructor per defecte. Potser va sent hora de fer alguna cosa més.</p>
+</div>
+<div class="section" id="el-punt-te-la-coordenada-x">
+<h2>El <code class="docutils literal notranslate"><span class="pre">Punt</span></code> té la coordenada <code class="docutils literal notranslate"><span class="pre">x</span></code><a class="headerlink" href="#el-punt-te-la-coordenada-x" title="Link permanent a aquest títol">¶</a></h2>
+<p>Fem un nou test, ara una mica més sofisticat: mirarem que els atributs
+d’un punt siguin inicialitzats correctament pel constructor per
+defecte. De moment ens centrarem en la coordenada <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Novament començarem per la prova.</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="hll"><span class="kn">import static</span> <span class="nn">org.junit.jupiter.api.Assertions.*</span><span class="p">;</span>
+</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// comprova que Punt() pugui ser cridat</span>
+        <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructorDefecteXZero</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// comprova que Punt() deixi a 0 la propietat x de Punt</span>
+        <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+<span class="hll">        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Fixa’t en la línia 2. Potser no ho havies vist abans. En Java podem
+importar membres estàtics d’aquesta manera. Això ens permet cridar
+directament el mètode estàtic <code class="docutils literal notranslate"><span class="pre">assertEquals()</span></code> de la línia 14.</p>
+<p>Una alternativa seria fer:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="p">;</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Assertions</span><span class="p">;</span>
+</span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// comprova que Punt() pugui ser cridat</span>
+        <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructorDefecteXZero</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// comprova que Punt() deixi a 0 la propietat x de Punt</span>
+        <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+<span class="hll">        <span class="n">Assertions</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Com que <code class="docutils literal notranslate"><span class="pre">assertEquals()</span></code> està molt associat a <code class="docutils literal notranslate"><span class="pre">JUnit</span></code>, és poc probable
+que anomenem un mètode nostre d’aquesta manera. Així que podem
+estalviar-nos afegir <code class="docutils literal notranslate"><span class="pre">Assertions</span></code> per tot arreu.</p>
+<p>Molt bé, però… què és aquest <code class="docutils literal notranslate"><span class="pre">assertEquals()</span></code>? Aquest mètode es pot
+llegir:</p>
+<blockquote>
+<div><p>Afirmo que 0 i <code class="docutils literal notranslate"><span class="pre">p.getX()</span></code> valen el mateix.</p>
+</div></blockquote>
+<p>O si vols de manera més natural:</p>
+<blockquote>
+<div><p>Afirmo què la coordenada <code class="docutils literal notranslate"><span class="pre">x</span></code> del punt val <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</div></blockquote>
+<p>Quan afirmem una cosa així, <code class="docutils literal notranslate"><span class="pre">assertEquals()</span></code> comprovarà que els dos
+valors que rep siguin iguals. Si ho són, no fa res però si no, llençarà
+l’error <code class="docutils literal notranslate"><span class="pre">AssertionFailedError</span></code>.</p>
+<p>Veiem com funciona.</p>
+<p>En primer lloc ens caldrà completar <code class="docutils literal notranslate"><span class="pre">Punt</span></code> ja que altrament no es podrà
+compilar.</p>
+<p>Inclou el següent codi:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Compila i executa els tests:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>javac *.java <span class="o">&amp;&amp;</span> java org.junit.platform.console.ConsoleLauncher -c TestPunt
+
+<span class="go"> Thanks for using JUnit! Support its development at https://junit.org/sponsoring</span>
+
+<span class="go"> ╷</span>
+<span class="go"> ├─ JUnit Jupiter ✔</span>
+<span class="go"> └─ JUnit Vintage ✔</span>
+<span class="go">    └─ TestPunt ✔</span>
+<span class="hll"><span class="go">       ├─ constructorDefecteXZero ✘ expected: &lt;0&gt; but was: &lt;1&gt;</span>
+</span><span class="go">       └─ constructor ✔</span>
+
+<span class="hll"><span class="go"> Failures (1):</span>
+</span><span class="go">   JUnit Vintage:TestPunt:constructorDefecteXZero</span>
+<span class="go">     MethodSource [className = &#39;TestPunt&#39;, methodName = &#39;constructorDefecteXZero&#39;, methodParameterTypes = &#39;&#39;]</span>
+<span class="hll"><span class="go">     =&gt; org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;1&gt;</span>
+</span><span class="go">        org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)</span>
+<span class="go">        org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)</span>
+<span class="go">        org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)</span>
+<span class="go">        org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)</span>
+<span class="go">        org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)</span>
+<span class="go">        TestPunt.constructorDefecteXZero(TestPunt.java:15)</span>
+<span class="go">        java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span>
+<span class="go">        java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span>
+<span class="go">        java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span>
+<span class="go">        java.base/java.lang.reflect.Method.invoke(Method.java:566)</span>
+<span class="go">        [...]</span>
+
+<span class="go"> Test run finished after 46 ms</span>
+<span class="go"> [         3 containers found      ]</span>
+<span class="go"> [         0 containers skipped    ]</span>
+<span class="go"> [         3 containers started    ]</span>
+<span class="go"> [         0 containers aborted    ]</span>
+<span class="go"> [         3 containers successful ]</span>
+<span class="go"> [         0 containers failed     ]</span>
+<span class="go"> [         2 tests found           ]</span>
+<span class="go"> [         0 tests skipped         ]</span>
+<span class="go"> [         2 tests started         ]</span>
+<span class="go"> [         0 tests aborted         ]</span>
+<span class="go"> [         1 tests successful      ]</span>
+<span class="go"> [         1 tests failed          ]</span>
+</pre></div>
+</div>
+<p>Fixa’t com ens diu el missatge <code class="docutils literal notranslate"><span class="pre">s'esperava</span> <span class="pre">&lt;0&gt;</span> <span class="pre">però</span> <span class="pre">ha</span> <span class="pre">estat</span> <span class="pre">&lt;1&gt;</span></code>.</p>
+<p>Sembla que no li ha agradat gaire que retornem un <code class="docutils literal notranslate"><span class="pre">1</span></code>, oi?</p>
+<p>Arreglem <code class="docutils literal notranslate"><span class="pre">Punt</span></code> perquè passi la prova:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>I ara sí:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>javac *.java <span class="o">&amp;&amp;</span> java org.junit.platform.console.ConsoleLauncher -c TestPunt
+
+<span class="go">Thanks for using JUnit! Support its development at https://junit.org/sponsoring</span>
+
+<span class="go">╷</span>
+<span class="go">├─ JUnit Jupiter ✔</span>
+<span class="go">└─ JUnit Vintage ✔</span>
+<span class="go">   └─ TestPunt ✔</span>
+<span class="go">      ├─ constructorDefecteXZero ✔</span>
+<span class="go">      └─ constructor ✔</span>
+
+<span class="go">Test run finished after 43 ms</span>
+<span class="go">[         3 containers found      ]</span>
+<span class="go">[         0 containers skipped    ]</span>
+<span class="go">[         3 containers started    ]</span>
+<span class="go">[         0 containers aborted    ]</span>
+<span class="go">[         3 containers successful ]</span>
+<span class="go">[         0 containers failed     ]</span>
+<span class="go">[         2 tests found           ]</span>
+<span class="go">[         0 tests skipped         ]</span>
+<span class="go">[         2 tests started         ]</span>
+<span class="go">[         0 tests aborted         ]</span>
+<span class="go">[         2 tests successful      ]</span>
+<span class="go">[         0 tests failed          ]</span>
+</pre></div>
+</div>
+<p>D’aquesta manera anem codificant els tests i després la part de la
+classe que calgui per passar-los. Això, segons els de TFD ens
+garanteix que tot el que anem desenvolupant sempre és estable i què
+mai no desenvolupem de més.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_03_coordenada_y.html"><span class="doc"> Exercici 52_03. La coordenada Y de Punt</span></a></p>
+</div>
+<div class="section" id="el-punt-te-un-setter-per-x">
+<h2>El punt té un <em>setter</em> per X<a class="headerlink" href="#el-punt-te-un-setter-per-x" title="Link permanent a aquest títol">¶</a></h2>
+<p>Seguim afegint funcionalitat a <code class="docutils literal notranslate"><span class="pre">Punt</span></code>. En aquesta ocasió afegirem el
+mètode <code class="docutils literal notranslate"><span class="pre">setX()</span></code></p>
+<p>Començarem com sempre pel test:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// …</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+    <span class="c1">// …</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setX42</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">();</span>
+        <span class="n">p</span><span class="p">.</span><span class="na">setX</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Per descomptat, no compilarà. Ens toca crear el mètode <code class="docutils literal notranslate"><span class="pre">setX()</span></code> que
+novament farem perquè només passi la prova.</p>
+<p>De moment, afegirem el mètode així:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+    <span class="c1">// …</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setX</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>En executar el test, ens trobem amb:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>javac *.java <span class="o">&amp;&amp;</span> java org.junit.platform.console.ConsoleLauncher -c TestPunt
+<span class="go"> …</span>
+<span class="go"> ╷</span>
+<span class="go"> ├─ JUnit Jupiter ✔</span>
+<span class="go"> └─ JUnit Vintage ✔</span>
+<span class="go">    └─ TestPunt ✔</span>
+<span class="go">       ├─ constructorDefecteXZero ✔</span>
+<span class="go">       ├─ constructorDefecteYZero ✔</span>
+<span class="go">       ├─ constructor ✔</span>
+<span class="hll"><span class="go">       └─ setXNoZero ✘ expected: &lt;42&gt; but was: &lt;0&gt;</span>
+</span><span class="go"> …</span>
+</pre></div>
+</div>
+<p>Ops! És clar, el <code class="docutils literal notranslate"><span class="pre">42</span></code> no el tenim en lloc. Cap problema, canviem el
+<code class="docutils literal notranslate"><span class="pre">getX()</span></code>:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// …</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setX</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Ara tenim:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>javac *.java <span class="o">&amp;&amp;</span> java org.junit.platform.console.ConsoleLauncher -c TestPunt
+<span class="go"> …</span>
+<span class="go"> ╷</span>
+<span class="go"> ├─ JUnit Jupiter ✔</span>
+<span class="go"> └─ JUnit Vintage ✔</span>
+<span class="go">    └─ TestPunt ✔</span>
+<span class="hll"><span class="go">       ├─ constructorDefecteXZero ✘ expected: &lt;0&gt; but was: &lt;42&gt;</span>
+</span><span class="go">       ├─ constructorDefecteYZero ✔</span>
+<span class="go">       ├─ constructor ✔</span>
+<span class="go">       └─ setXNoZero ✔</span>
+<span class="go">  …</span>
+</pre></div>
+</div>
+<p>Vaja! Passem un test però fallem en un altre!</p>
+<p>Això ens obliga a fer una mica de revisió al nostre codi. Com podrem fer
+que <code class="docutils literal notranslate"><span class="pre">getX()</span></code> ens retorni <code class="docutils literal notranslate"><span class="pre">0</span></code> quan no hem cridat a <code class="docutils literal notranslate"><span class="pre">setX()</span></code> i <code class="docutils literal notranslate"><span class="pre">42</span></code>
+quan sí? És clar, una propietat:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// …</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setX</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Amb això passem novament totes les proves!</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_04_setter_y.html"><span class="doc"> Exercici 52_04. El setter per la coordenada y d’un Punt</span></a></p>
+</div>
+<div class="section" id="un-constructor-especific-per-punt">
+<h2>Un constructor específic per <code class="docutils literal notranslate"><span class="pre">Punt</span></code><a class="headerlink" href="#un-constructor-especific-per-punt" title="Link permanent a aquest títol">¶</a></h2>
+<p>Ara ja podem assignar a una instància de <code class="docutils literal notranslate"><span class="pre">Punt</span></code> les coordenades que ens
+sembli. Seria, però, interessant poder disposar d’un constructor que ens
+inicialitzi les coordenades sense haver de fer ús dels <em>setters</em>.</p>
+<p>Com sempre, comencem amb el test que, en aquest cas, sembla força obvi,
+no?</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">// …</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+     <span class="c1">// …</span>
+
+     <span class="nd">@Test</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructorEspecific</span><span class="p">()</span> <span class="p">{</span>
+         <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Per descomptat això ens generarà un error de compilació ja que no disposem
+del constructor específic. Cap problema, l’afegim:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
+     <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+     <span class="c1">// …</span>
+     <span class="kd">public</span> <span class="nf">Punt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Potser ja estàvem esperant veure passar les proves quan ens trobem una
+sèrie d’errors inesperats en temps de compilació! Ops</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>javac *.java
+<span class="go">TestPunt.java:7: error: constructor Punt in class Punt cannot be applied to given types;</span>
+<span class="go">        new Punt();</span>
+<span class="go">        ^</span>
+<span class="go">  required: int,int</span>
+<span class="go">  found: no arguments</span>
+<span class="go">  reason: actual and formal argument lists differ in length</span>
+<span class="go">TestPunt.java:13: error: constructor Punt in class Punt cannot be applied to given types;</span>
+<span class="go">        Punt p = new Punt();</span>
+<span class="go">                 ^</span>
+<span class="go">  required: int,int</span>
+<span class="go">  found: no arguments</span>
+<span class="go">  reason: actual and formal argument lists differ in length</span>
+<span class="go">TestPunt.java:20: error: constructor Punt in class Punt cannot be applied to given types;</span>
+<span class="go">        Punt p = new Punt();</span>
+<span class="go">                 ^</span>
+<span class="go">  required: int,int</span>
+<span class="go">  found: no arguments</span>
+<span class="go">  reason: actual and formal argument lists differ in length</span>
+<span class="go">TestPunt.java:26: error: constructor Punt in class Punt cannot be applied to given types;</span>
+<span class="go">        Punt p = new Punt();</span>
+<span class="go">                 ^</span>
+<span class="go">  required: int,int</span>
+<span class="go">  found: no arguments</span>
+<span class="go">  reason: actual and formal argument lists differ in length</span>
+<span class="go">TestPunt.java:33: error: constructor Punt in class Punt cannot be applied to given types;</span>
+<span class="go">        Punt p = new Punt();</span>
+<span class="go">                 ^</span>
+<span class="go">  required: int,int</span>
+<span class="go">  found: no arguments</span>
+<span class="go">  reason: actual and formal argument lists differ in length</span>
+<span class="go">5 errors</span>
+</pre></div>
+</div>
+<p>Vaja. Ens hem oblidat que si afegim el constructor específic <em>perdem</em> el
+de per defecte! Aquests errors, i de més bàsics, passen. Pe això fem els
+tests!</p>
+<p>Només cal afegir el constructor per defecte i ja passem les proves.</p>
+</div>
+<div class="section" id="mes-d-un-assert-per-test">
+<h2>Més d’un <em>assert</em> per test?<a class="headerlink" href="#mes-d-un-assert-per-test" title="Link permanent a aquest títol">¶</a></h2>
+<p>Recordem el darrer test:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1">// …</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestPunt</span> <span class="p">{</span>
+     <span class="c1">// …</span>
+
+     <span class="nd">@Test</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructorEspecific</span><span class="p">()</span> <span class="p">{</span>
+         <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+         <span class="n">assertEquals</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getY</span><span class="p">());</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Fixa’t que estem afegint més d’un <em>assert</em> al mateix test. En general no
+és una bona pràctica, però en casos com aquest podria ser «perdonable».</p>
+<p>El problema és que, si fallen els dos <em>assert</em>, JUnit serà incapaç de
+mostrar-nos els dos errors i només ens dirà que ha fallat el primer.</p>
+<p>Per exemple, suposem que el nostre constructor específic l’implementem amb
+l’error:</p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="nf">Punt</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{}</span>
+</pre></div>
+</td></tr></table></div>
+<p>El resultat de passar el test serà:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">╷</span>
+<span class="go">├─ JUnit Jupiter ✔</span>
+<span class="go">└─ JUnit Vintage ✔</span>
+<span class="go">   └─ TestPunt ✔</span>
+<span class="go">      ├─ constructorDefecteXZero ✔</span>
+<span class="go">      ├─ constructorDefecteYZero ✔</span>
+<span class="go">      ├─ constructor ✔</span>
+<span class="go">      ├─ setX42 ✔</span>
+<span class="go">      ├─ setY24 ✔</span>
+<span class="hll"><span class="go">      └─ constructorEspecific ✘ expected: &lt;1&gt; but was: &lt;0&gt;</span>
+</span></pre></div>
+</div>
+<p>Ni rastre de l’error amb <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>JUnit5 ens ofereix un mecanisme que permet salvar aquest problema sense
+necessitat de crear un test per cada coordenada. La notació ens pot
+resultar desconcertant ja que en aquest curs no hem vist (ni veurem) el
+concepte de <a class="reference external" href="https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html">expressió lambda</a></p>
+<div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">constructorEspecific</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Punt</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Punt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="n">assertAll</span><span class="p">(</span>
+        <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">assertEquals</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">()),</span>
+        <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">assertEquals</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">p</span><span class="p">.</span><span class="na">getY</span><span class="p">())</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Fixa’t com, els dos <em>asserts</em> apareixen com una mena d’arguments de la
+crida a <code class="docutils literal notranslate"><span class="pre">assertAll()</span></code>, precedits per <code class="docutils literal notranslate"><span class="pre">()</span> <span class="pre">-&gt;</span></code> i, com bons arguments
+d’una crida, separats per coma.</p>
+<p>Ara, en tornar a executar el test, tenim:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">╷</span>
+<span class="go">├─ JUnit Jupiter ✔</span>
+<span class="go">└─ JUnit Vintage ✔</span>
+<span class="go">   └─ TestPunt ✔</span>
+<span class="go">      ├─ constructorDefecteXZero ✔</span>
+<span class="go">      ├─ constructorDefecteYZero ✔</span>
+<span class="go">      ├─ constructor ✔</span>
+<span class="go">      ├─ setX42 ✔</span>
+<span class="go">      ├─ setY24 ✔</span>
+<span class="hll"><span class="go">      └─ constructorEspecific ✘ Multiple Failures (2 failures)</span>
+</span><span class="hll"><span class="go">                org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;0&gt;</span>
+</span><span class="hll"><span class="go">                org.opentest4j.AssertionFailedError: expected: &lt;2&gt; but was: &lt;0&gt;</span>
+</span></pre></div>
+</div>
+<p>Molt més informatiu, oi?</p>
+<p>No tens obligació de fer servir aquesta notació en aquest curs, però
+potser està bé si et vas familiaritzant amb ella. El següent exercici
+t’ofereix una oportunitat per practicar-la.</p>
+<p>Apa, practiquem una mica.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_05_suma.html"><span class="doc"> Exercici 52_05. Suma de punts</span></a></p>
+</div>
+<div class="section" id="exercici-7-aprofitant-l-encapsulacio">
+<h2>Exercici 7. Aprofitant l’encapsulació<a class="headerlink" href="#exercici-7-aprofitant-l-encapsulacio" title="Link permanent a aquest títol">¶</a></h2>
+<p>Modifica la classe Punt de manera que ara la implementació de les
+coordenades sigui</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">coord</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>on <code class="docutils literal notranslate"><span class="pre">coord[0]</span></code> correspon a la coordenada x i <code class="docutils literal notranslate"><span class="pre">coord[1]</span></code> correspon a la y.</p>
+<p>Aconsegueix que passi <code class="docutils literal notranslate"><span class="pre">TestPunt</span></code> i <code class="docutils literal notranslate"><span class="pre">TestSegment</span></code> sense haver de
+modificar cap test.</p>
+<p>Finalment, afegeix els canvis al repositori git <code class="docutils literal notranslate"><span class="pre">punts</span></code>.</p>
+</div>
+<div class="section" id="provant-coses-mes-complexes">
+<h2>Provant coses més complexes<a class="headerlink" href="#provant-coses-mes-complexes" title="Link permanent a aquest títol">¶</a></h2>
+<p>Amb el que hem vist fins ara, podem provar classes més aviat
+senzilletes. Què passa però quan la cosa es complica? Per exemple, com
+ens ho fem per comprovar <em>exceptions</em>? o bé classes abstractes? o fins
+i tot multifil?</p>
+<p>La resposta que et donaré ara és… cercant-ho és clar. La lectura
+completa de les FAQ ja són un bon punt de partida.</p>
+<p>En tot cas, intentarem fer una primera aproximació al «búscate la
+vida» que t’estic venent, amb el següent exercici. D’aquesta manera,
+espero, tindràs tota la confiança per trobar els <em>coms</em> de les teves
+necessitats amb els teus mitjans.</p>
+</div>
+<div class="section" id="exercici-8-punt-amb-excepcions">
+<h2>Exercici 8. Punt amb excepcions<a class="headerlink" href="#exercici-8-punt-amb-excepcions" title="Link permanent a aquest títol">¶</a></h2>
+<p>Farem que la nostra classe Punt només admeti coordenades positives i
+que si es troba amb valors negatius, llenci l’excepció
+<code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>.</p>
+<p>Amplia les proves unitàries que hem definit abans per aquesta classe,
+de manera que contemplin aquests nous requisits.</p>
+<p><strong>Pista</strong>: (només en cas de desesperació) mira les FAQ al punt 4.6.
+Ah! Assegura’t que cobreixes tots els punts possibles, doncs n’hi ha
+més d’un i més de dos!.</p>
+<p>Finalment, afegeix els canvis al repositori git <code class="docutils literal notranslate"><span class="pre">punts</span></code>.</p>
+</div>
+<div class="section" id="ampliacions">
+<h2>Ampliacions<a class="headerlink" href="#ampliacions" title="Link permanent a aquest títol">¶</a></h2>
+<p>El món de les proves unitàries és ample. Potser voldràs llegir <a class="reference external" href="http://www.agitar.com/downloads/TheWayOfTestivus.pdf">The
+Way of Testivus</a> per a
+aconseguir una visió més filosòfica i potser entretinguda del món on
+t’estàs ficant amb el tema del testeig.</p>
+<p>També pot ser-te interessant llegir-te el post del James Carr sobre
+els <a class="reference external" href="http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/">antipatrons del TDD</a>. Allà hi
+trobaràs errors típics dels dissenyadors de proves, com ara:</p>
+<ul class="simple">
+<li><p>Definir un munt de proves que el sistema és capaç de passar sense
+donar error, però que si les mires amb detall, no testejen gaire
+cosa.</p></li>
+<li><p>Proves que realment només proven que les dades introduïdes per la
+prova són correctes.</p></li>
+<li><p>Proves que tinguin en comptes com està el sistema després d’una
+altra prova. Les proves dependents entre si poden provocar problemes
+si no estan ben documentades. Es preferible escriure proves
+autocontingudes, que es realitzin amb el sistema «net»</p></li>
+<li><p>Proves que requereixen un munt de preparació per començar a provar,
+fins al punt que es fa difícil saber què és el que es vol provar.</p></li>
+</ul>
+<p><em>Happy bug hunting!</em></p>
+<p class="rubric">Anotacions</p>
+<dl class="footnote brackets">
+<dt class="label" id="articlefowler"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Pots trobar més informació a partir
+d”<a class="reference external" href="http://www.martinfowler.com/bliki/Xunit.html">aquest article</a>
+del Martin Fowler. També, com no, a la <a class="reference external" href="http://en.wikipedia.org/wiki/XUnit">Vikipedia</a> on podràs accedir a una
+ampla <a class="reference external" href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks">llista d’entorns</a> de
+prova classificats pel llenguatge de programació.</p>
+</dd>
+<dt class="label" id="verbatim"><span class="brackets">2</span></dt>
+<dd><p>No facis de <em>debugger</em> i copia-ho <em>verbatim</em>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="test_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="test_classesdeproves.html" class="btn btn-neutral float-left" title="Classes de proves" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021-2022 Moisès Gómez Girón
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
