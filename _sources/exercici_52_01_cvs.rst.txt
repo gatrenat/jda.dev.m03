@@ -77,10 +77,6 @@ Crea una fitxa per cadascun d'ells amb el màxim que trobis dels següents punts
   Et recomano, per exemple, aquest article de `smashingmagazine
   <https://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/>`_
 
-Engloba totes les fitxes en un document ben format (portada, taula de
-continguts, introducció, continguts i conclusió, paginació…)
-
-
 Pregunta 3. Quantes versions guardem?
 =====================================
 
