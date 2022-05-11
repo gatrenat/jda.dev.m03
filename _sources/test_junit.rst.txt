@@ -297,7 +297,7 @@ Arreglem ``Punt`` perquè passi la prova:
    :linenos:
 
     public class Punt {
-        public int getX() { return 1; }
+        public int getX() { return 0; }
     }
 
 I ara sí:
@@ -632,23 +632,10 @@ Apa, practiquem una mica.
 
 |exerciseicon__T| :doc:`exercici_52_05_suma`
 
+|exerciseicon__T| :doc:`exercici_52_06_segment`
 
-Exercici 7. Aprofitant l'encapsulació
-=====================================
+|exerciseicon___| :doc:`exercici_52_07_encapsulacio`
 
-Modifica la classe Punt de manera que ara la implementació de les
-coordenades sigui
-
-.. code-block:: java
-
-    int[] coord[2];
-
-on ``coord[0]`` correspon a la coordenada x i ``coord[1]`` correspon a la y.
-
-Aconsegueix que passi ``TestPunt`` i ``TestSegment`` sense haver de
-modificar cap test.
-
-Finalment, afegeix els canvis al repositori git ``punts``.
 
 Provant coses més complexes
 ===========================
@@ -666,21 +653,7 @@ vida" que t'estic venent, amb el següent exercici. D'aquesta manera,
 espero, tindràs tota la confiança per trobar els *coms* de les teves
 necessitats amb els teus mitjans.
 
-Exercici 8. Punt amb excepcions
-===============================
-
-Farem que la nostra classe Punt només admeti coordenades positives i
-que si es troba amb valors negatius, llenci l'excepció
-``IllegalArgumentException``.
-
-Amplia les proves unitàries que hem definit abans per aquesta classe,
-de manera que contemplin aquests nous requisits.
-
-**Pista**: (només en cas de desesperació) mira les FAQ al punt 4.6.
-Ah! Assegura't que cobreixes tots els punts possibles, doncs n'hi ha
-més d'un i més de dos!.
-
-Finalment, afegeix els canvis al repositori git ``punts``.
+|exerciseicon___| :doc:`exercici_52_08_excepcions`
 
 Ampliacions
 ===========
@@ -722,5 +695,3 @@ trobaràs errors típics dels dissenyadors de proves, com ara:
    ampla `llista d'entorns
    <http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks>`_ de
    prova classificats pel llenguatge de programació.
-
-.. [#verbatim] No facis de *debugger* i copia-ho *verbatim*.

@@ -458,7 +458,7 @@ compilar.</p>
 <div class="highlight-java notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Punt</span> <span class="p">{</span>
-     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
  <span class="p">}</span>
 </pre></div>
 </td></tr></table></div>
@@ -794,18 +794,8 @@ potser està bé si et vas familiaritzant amb ella. El següent exercici
 t’ofereix una oportunitat per practicar-la.</p>
 <p>Apa, practiquem una mica.</p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_05_suma.html"><span class="doc"> Exercici 52_05. Suma de punts</span></a></p>
-</div>
-<div class="section" id="exercici-7-aprofitant-l-encapsulacio">
-<h2>Exercici 7. Aprofitant l’encapsulació<a class="headerlink" href="#exercici-7-aprofitant-l-encapsulacio" title="Link permanent a aquest títol">¶</a></h2>
-<p>Modifica la classe Punt de manera que ara la implementació de les
-coordenades sigui</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">coord</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>on <code class="docutils literal notranslate"><span class="pre">coord[0]</span></code> correspon a la coordenada x i <code class="docutils literal notranslate"><span class="pre">coord[1]</span></code> correspon a la y.</p>
-<p>Aconsegueix que passi <code class="docutils literal notranslate"><span class="pre">TestPunt</span></code> i <code class="docutils literal notranslate"><span class="pre">TestSegment</span></code> sense haver de
-modificar cap test.</p>
-<p>Finalment, afegeix els canvis al repositori git <code class="docutils literal notranslate"><span class="pre">punts</span></code>.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_06_segment.html"><span class="doc"> Exercici 52_06. La classe Segment</span></a></p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_52_07_encapsulacio.html"><span class="doc"> Exercici 52_07. Aprofitant l’encapsulació</span></a></p>
 </div>
 <div class="section" id="provant-coses-mes-complexes">
 <h2>Provant coses més complexes<a class="headerlink" href="#provant-coses-mes-complexes" title="Link permanent a aquest títol">¶</a></h2>
@@ -819,18 +809,7 @@ completa de les FAQ ja són un bon punt de partida.</p>
 vida» que t’estic venent, amb el següent exercici. D’aquesta manera,
 espero, tindràs tota la confiança per trobar els <em>coms</em> de les teves
 necessitats amb els teus mitjans.</p>
-</div>
-<div class="section" id="exercici-8-punt-amb-excepcions">
-<h2>Exercici 8. Punt amb excepcions<a class="headerlink" href="#exercici-8-punt-amb-excepcions" title="Link permanent a aquest títol">¶</a></h2>
-<p>Farem que la nostra classe Punt només admeti coordenades positives i
-que si es troba amb valors negatius, llenci l’excepció
-<code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>.</p>
-<p>Amplia les proves unitàries que hem definit abans per aquesta classe,
-de manera que contemplin aquests nous requisits.</p>
-<p><strong>Pista</strong>: (només en cas de desesperació) mira les FAQ al punt 4.6.
-Ah! Assegura’t que cobreixes tots els punts possibles, doncs n’hi ha
-més d’un i més de dos!.</p>
-<p>Finalment, afegeix els canvis al repositori git <code class="docutils literal notranslate"><span class="pre">punts</span></code>.</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_52_08_excepcions.html"><span class="doc"> Exercici 52_08. Punt amb excepcions</span></a></p>
 </div>
 <div class="section" id="ampliacions">
 <h2>Ampliacions<a class="headerlink" href="#ampliacions" title="Link permanent a aquest títol">¶</a></h2>
@@ -863,9 +842,6 @@ d”<a class="reference external" href="http://www.martinfowler.com/bliki/Xunit.
 del Martin Fowler. També, com no, a la <a class="reference external" href="http://en.wikipedia.org/wiki/XUnit">Vikipedia</a> on podràs accedir a una
 ampla <a class="reference external" href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks">llista d’entorns</a> de
 prova classificats pel llenguatge de programació.</p>
-</dd>
-<dt class="label" id="verbatim"><span class="brackets">2</span></dt>
-<dd><p>No facis de <em>debugger</em> i copia-ho <em>verbatim</em>.</p>
 </dd>
 </dl>
 </div>
