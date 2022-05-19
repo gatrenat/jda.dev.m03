@@ -623,7 +623,7 @@ defecte. Això vol dir, per exemple, que podríem assignar una referència a
 una categoria inexistent per un animal, o fins i tot crear la taula
 *ANIMALS* sense que existís *CATEGORIES*.
 
-Si bé les versions més actuals de ``squlite`` suporten la integritat
+Si bé les versions més actuals de ``sqlite`` suporten la integritat
 referencial, no ho fan per defecte ni el suport està del tot resolt amb
 el controlador per Java.
 

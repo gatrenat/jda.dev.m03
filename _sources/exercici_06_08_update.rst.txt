@@ -126,6 +126,7 @@ La sortida esperada és:
 .. code-block:: console
     :emphasize-lines: 2-
 
+    $ java UsaZoo
     Primer connectem amb la base de dades: connectat
 
     Creem les taules

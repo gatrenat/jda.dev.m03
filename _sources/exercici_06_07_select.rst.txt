@@ -164,7 +164,6 @@ La sortida esperada és:
     :emphasize-lines: 2-
 
     $ java UsaZoo
-
     Primer connectem amb la base de dades: connectat
 
     Creem les taules

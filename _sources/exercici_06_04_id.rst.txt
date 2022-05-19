@@ -103,17 +103,18 @@ La sortida esperada és:
 .. code-block:: console
     :emphasize-lines: 2-
 
+    $ java UsaZoo
     Primer connectem amb la base de dades: connectat
     Creem la taula CATEGORIES
 
     Mostrem les categories disponibles inicialment
     Cap categoria
 
-    Inserim les categories: 
+    Inserim les categories:
         Categoria(id:indefinit, ocell)
         Categoria(id:indefinit, mamífer)
 
-    Un cop inserides les categories queden: 
+    Un cop inserides les categories queden:
         Categoria(id:1, ocell)
         Categoria(id:2, mamífer)
 

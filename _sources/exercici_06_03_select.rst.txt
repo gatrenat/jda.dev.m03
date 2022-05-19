@@ -52,10 +52,11 @@ També ens caldrà poder executar el següent ``UsaZoo``:
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");
-            System.out.println(zoo.connecta());
+            zoo.connecta();
+            System.out.println("connectat");
 
-            System.out.print("Creem la taula CATEGORIES: ");
-            System.out.println(zoo.creaTaulaCategories());
+            System.out.println("Creem la taula CATEGORIES");
+            zoo.creaTaulaCategories();
 
             System.out.println();
             System.out.println("Mostrem les categories disponibles inicialment");
@@ -80,9 +81,9 @@ També ens caldrà poder executar el següent ``UsaZoo``:
             System.out.println("En consultar per la categoria mamífer obtenim " + zoo.obteCategoriaPerNom("mamífer"));
             System.out.println("En consultar per la categoria peix obtenim " + zoo.obteCategoriaPerNom("peix"));
 
-            System.out.println();
             System.out.print("Finalment tanquem la connexió amb la base de dades: ");
-            System.out.println(zoo.desconnecta());
+            zoo.desconnecta();
+            System.out.println("desconnectat");
         }
     }
 
@@ -91,6 +92,8 @@ En executar ``UsaZoo`` ens generarà el següent resultat:
 .. code-block:: console
     :emphasize-lines: 2-
 
+    $ java UsaZoo 
+    Primer connectem amb la base de dades: connectat
     Creem la taula CATEGORIES
 
     Mostrem les categories disponibles inicialment
