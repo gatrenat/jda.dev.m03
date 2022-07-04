@@ -16,34 +16,9 @@ Tingues present que aquests dies estic "molt concentrat" assegurant-me que
 els apunts descansen bé. Per aquesta raó, probablement tardaré una mica en
 contestar-te.  Gràcies per la teva comprensió.
 
-<<<<<<< HEAD
-    primeres_passes.rst
-    basics.rst
-    moduls.rst
-    fitxers.rst
-    poo.rst
-    bib.rst
-    cvs.rst
-    test.rst
-    bd.rst
-    apendix.rst
-
-||||||| parent of 41e6ec1 (automated commit on dilluns, 4 de juliol de 2022, 20:29:35 CEST)
-    primeres_passes.rst
-    basics.rst
-    apendix.rst
-
-..  moduls.rst
-..  fitxers.rst
-..  poo.rst
-..  llibreries.rst
-..  bd.rst
-
-=======
 Salutacions
 
 .. image:: _static/summer.jpg
     :align: center
     :target: https://pixabay.com/users/ylanite-2218222/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3363788">Ylanite Koppens</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3363788
     :alt: Una relaxant imatge de vacances per gentilesa de https://pixabay.com
->>>>>>> 41e6ec1 (automated commit on dilluns, 4 de juliol de 2022, 20:29:35 CEST)
