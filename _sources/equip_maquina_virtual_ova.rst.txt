@@ -95,9 +95,10 @@ Descarregar la màquina preconfigurada
 =====================================
 
 Aquest és :download:`l'enllaç
-<https://drive.google.com/file/d/15PVWXqHWTljHjuS8UnjxudAvFzedHET4/view?usp=sharing>`
-al fitxer que conté la màquina virtual. Si tens problemes per accedir-hi,
-avisa'm.
+<https://drive.google.com/file/d/1VMvx9oTEpaBnAP9XSFEm-yAjF0MyGbY5/view?usp=sharing>`
+al fitxer que conté la màquina virtual. És probable que et mostri una
+finestreta perquè em demanis accés. Si és així, indica'm al missatge qui
+ets. Avisa'm si tens algun problema.
 
 El fitxer fa 3,4Gb i, depenent de la connexió que tinguis, potser et toca
 esperar una mica.
