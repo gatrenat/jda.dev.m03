@@ -1,0 +1,127 @@
+.. _instruccions_git:
+
+#######################
+Com lliurar un exercici
+#######################
+
+A continuació et descric la manera en que et recomano que realitzis els
+teus exercicis per després lliurar-los.
+
+En pocs dies no et caldrà tornar a mirar aquests continguts però potser
+ara et serveixen de referència.
+
+Aquestes són les passes bàsiques que has de fer cada sessió
+de treball:
+
+
+.. graphviz::
+    :align: center
+
+    digraph {
+        inici [label="inici de sessió", shape="box"];
+        pull [label="git pull", shape="box", style=rounded];
+        push [label="git push", shape="box", style=rounded];
+        exercici [label="editar un exercici", shape="box"];
+        add  [label="git add --all", shape="box", style=rounded];
+        commit  [label="git commit -am \"bon comentari\"", shape="box", style=rounded];
+        final [label="final sessió", shape="box"];
+
+        inici -> pull;
+        pull -> exercici;
+        exercici -> add;
+        add -> commit;
+        commit -> exercici [label="un altre exercici"];
+        commit -> push [label="finalitzada sessió"];
+        push -> final;
+    }
+
+
+
+
+#. En començar, recupera els canvis del repositori remot
+
+   .. code-block:: console
+
+        $ git pull
+
+#. A continuació, treballa en un exercici.
+
+   Pot ser un d'incomplet amb el que estaves treballant o bé un de nou.
+
+   Un cop consideris que has finalitzat l'exercici, o bé vulguis guardar
+   el que has fet per finalitzar la sessió, cal que registris els canvis.
+   Comprova quins fitxers has modificat amb:
+
+   .. code-block:: console
+
+        $ git status
+
+   Si no recordes què has modificat a un fitxer, pots consultar-ho amb
+   ``git diff nomfitxermodificat``
+
+#. Quan ja tinguis clar els canvis que vols enregistrar al ``git``, toca
+   afegir-los.
+
+   Aquest pas no sempre serà necessari. Només si ``git status`` et diu que
+   hi ha nous fitxers sense registrar. Si el fas i no hi ha fitxers nous,
+   no farà cap mal.
+
+   Et proposo dues maneres. Escull la que millor et sembli:
+
+   * ``$ git add --all``: aquesta és la versió si no et vols complicar la
+     vida. Afegirà tots els canvis, fins i tot fitxers temporals que hagis
+     creat i que potser no formen part del lliurament.
+
+   * ``$ git add nomfitxermodificat``: indiques el nom dels fitxers que
+     has modificat (segons ``git status``) que vulguis guardar al
+     repositori.
+
+#. Enregistra els canvis
+
+   Ara toca enregistrar quins canvis estàs afegint al repositori. El punt
+   més important aquí és que posis un comentari descriptiu del què has
+   canviat. Aquest comentari t'ajudarà en un futur en cas que et calgui
+   recuperar quelcom que has perdut.
+
+   .. code-block:: console
+
+        $ git commit -am "Un comentari descriptiu"
+
+   Pots veure els comentaris dels registres anteriors fent ``git log`` o
+   ``git log nomfitxer`` si vols per un fitxer concret.
+
+   Bons comentaris són, per exemple:
+
+   * finalitzat l'exercici 01_20
+
+   * corregit error accent a l'exercici 01_20
+
+   * millorat l'exercici 01_20. Ara la capçalera és més descriptiva.
+
+   * treballant en l'exercici 01_20. Encara amb errors de compilació.
+
+   Un cop enregistrat els canvis, pots tornar a editar un altre exercici,
+   o bé finalitzar sessió.
+
+#. Quan ja vols finalitzar la sessió de treball, cal que pugis els canvis
+   al repositori remot.
+
+   .. code-block:: console
+
+        $ git push
+
+.. important::
+
+   Algunes vegades aquesta comanda et pot generar un missatge d'error. Un
+   cas típic és que estiguem tots dos modificant el teu repositori. Si és
+   així, normalment tindràs prou amb primer portar els canvis i després
+   enviar els teus
+
+   .. code-block:: console
+
+        $ git pull
+        $ git push
+
+Si no te'n surts, demana ajuda. Insisteixo, aviat tot aquest mecanisme et
+semblarà molt natural i ni hi pensaràs.
+
