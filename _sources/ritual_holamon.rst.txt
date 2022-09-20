@@ -109,5 +109,6 @@ minúscules!):
    Fixa't que ara no ha calgut dir l'extensió ``.class``. El programa ``java``
    és l'encarregat d'executar el codi compilat que apareix al fitxer ``HolaMon.class``.
 
-
 |exerciseicon__T| :doc:`exercici_00_04_holamon`
+
+|exerciseicon___| :doc:`exercici_00_05_presentemnos`

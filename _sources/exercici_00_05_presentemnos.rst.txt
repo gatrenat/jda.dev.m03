@@ -31,12 +31,12 @@ Segueix les instruccions:
    recordi quins canvis vas fer, i fes el ``commit`` oportú. En cas de dubtes,
    avisa el teu docent que el tens desitjant ajudar-te.
 
-#. Crea la carpeta ``00_04_presentemnos`` si encara no hi és, i entra-hi:
+#. Crea la carpeta ``00_05_presentemnos`` si encara no hi és, i entra-hi:
 
    .. code-block:: console
 
-        $ mkdir -p 00_04_presentemnos
-        $ cd 00_04_presentemnos
+        $ mkdir -p 00_05_presentemnos
+        $ cd 00_05_presentemnos
 
 #. Crea un nou fitxer ``EmPresento.java`` i escriu-hi codi tal que, en ser
    executat escrigui per pantalla el mateix que ``HolaMon.java``, excepte que, en
@@ -79,7 +79,7 @@ Segueix les instruccions:
 
         $ git push
 
-A banda de l'exercici, et recomano que tu mateix et defineixis canvis que
-t'agradaria provar. Crea d'altres fitxers pels teus experiments, que pots
-mantenir sense problemes a aquesta carpeta.  La màxima és: **sense por**. No
-pots trencar res!
+A banda de l'exercici, et recomano et defineixis canvis que t'agradaria
+provar. Crea d'altres fitxers pels teus experiments, que pots mantenir
+sense problemes a aquesta carpeta.  La màxima és: **sense por**. No pots
+trencar res!
