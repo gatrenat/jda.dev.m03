@@ -46,3 +46,7 @@ afegeixis tant la descripció "humana" com l'expressió que proposes. Si no
 tens gaires idees, modifica lleugerament les anteriors, però recorda que
 en programació la creativitat juga un paper importantíssim i es pot
 entrenar.
+
+**Nota**: Si bé pots realitzar aquest exercici en un document de text
+qualsevol, potser t'agradaria intentar fer-ho directament a un programa en
+Java en el que cada expressió sigui assignada a una variable.
