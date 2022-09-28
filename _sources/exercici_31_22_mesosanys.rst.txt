@@ -1,0 +1,32 @@
+##############################################
+|exerciseicon__T| Exercici 31_22. Mesos i anys
+##############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``31_22_mesosanys/``
+
+* Continguts relacionats: :doc:`condicionals_niament`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa que demani un mes i un any, i escrigui el mes
+anterior i el mes següent.
+
+Exemple d'interacció:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
+
+    $ java MesosAnys
+    Mes?
+    10
+    Any?
+    2022
+    Mes anterior 9/2022 i mes següent 11/2022
+
+Pots suposar que l'entrada sempre serà un més i un any correcte
