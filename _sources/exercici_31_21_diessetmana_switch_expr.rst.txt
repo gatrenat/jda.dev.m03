@@ -40,12 +40,12 @@ Per exemple, considera aquest traductor de notes numèriques a lletres:
        ...> };
     $9 ==> 'D'
 
-El ``switch expression`` és una estructura relativament nova en Java ja
-que està disponible a partir de la versió 1.17. 
+El `switch expression <https://docs.oracle.com/en/java/javase/17/language/switch-expressions.html>`_
+és una estructura relativament nova en Java. 
 
 Un cop ho hagis consultat, considera un altre cop l'exercici
 dels :doc:`dies de la setmana <exercici_31_19_diessetmana>`. Crea una nova versió, en
-aquesta ocasió fent servir ``switch``.
+aquesta ocasió fent servir ``switch`` en el format expressió.
 
 A partir d'ara, si t'agrada, pots fer servir aquesta estructura en tots
 els teus programes.
