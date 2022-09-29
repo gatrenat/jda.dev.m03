@@ -13,7 +13,7 @@
 .. rubric:: Enunciat
 
 
-Fes la taula de veritat de les següents afirmacions:
+Composa una taula de veritat per cadascuna de les següents afirmacions:
 
 #. la Clara és major d'edat o bé la Clara és més jove que el Marc
 
@@ -24,3 +24,6 @@ Fes la taula de veritat de les següents afirmacions:
 
    Atenció a la coma! Fa de parèntesis per separar la primera subexpressió
    de la resta!
+
+Pots realitzar-les en qualsevol format, fins i tot amb paper i bolígraf, i
+després lliures una foto.

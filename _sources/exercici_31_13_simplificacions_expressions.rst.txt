@@ -31,3 +31,20 @@ equivalents:
 #. ``! (A && B)``, ``!A || !B``
 
 #. ``! (A || B)``, ``!A && !B``
+
+
+Per exemple, les primeres expressions es podrien representar en una taula
+de veritat de la següent manera:
+
+======  ====    =========
+true    A       true && A
+======  ====    =========
+cert    cert    cert
+cert    fals    fals
+======  ====    =========
+
+Així, si ens fixem, la columna ``A`` i la columna ``true && A`` contenen
+sempre els mateixos valors. Per tant, són equivalents.
+
+**Atenció**: si se t'ha passat pel cap que ``true`` pugui tenir un valor
+diferent a cert, torna a pensar.
