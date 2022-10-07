@@ -1,6 +1,6 @@
-##############################
-I en cas que no, que passa sí…
-##############################
+###############################
+I en cas que no, que passa sí…?
+###############################
 
 "Si tens just 18 anys llavors tot just arribes a la majoria d'edat; si
 tens més de 18 anys llavors ets major d'edat; altrament ets menor d'edat"
@@ -112,3 +112,5 @@ només fer els opcionals d'ampliació si disposes de prou temps.
 |exerciseiconO_T| :doc:`exercici_31_27_nombre_de_fills`
 
 |exerciseicon_ST| :doc:`exercici_31_28_ascensor`
+
+|exerciseicon_ST| :doc:`exercici_31_29_metge_virtual`

@@ -22,4 +22,4 @@ La llista d'exercicis sobre :doc:`condicionals <condicionals>` és:
     exercici_31_26_semafor.rst
     exercici_31_27_nombre_de_fills.rst
     exercici_31_28_ascensor.rst
-
+    exercici_31_29_metge_virtual.rst
