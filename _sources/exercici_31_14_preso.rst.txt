@@ -24,7 +24,7 @@ Finalment, sigui quina sigui l'edat de l'usuari el programa s'acomiadarà dient
 Exemples d'interacció:
 
 .. code-block:: console
-    :emphasize-lines: 2, 4, 6, 9, 11, 13-
+    :emphasize-lines: 2, 4, 6
 
     $ java Preso
     Com us dieu?
@@ -32,6 +32,9 @@ Exemples d'interacció:
     Quants anys teniu?
     17
     Aneu amb compte Manel
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
 
     $ java Preso
     Com us dieu?

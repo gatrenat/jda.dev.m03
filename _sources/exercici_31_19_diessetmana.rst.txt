@@ -41,16 +41,25 @@ entre el 1 i el 7 i respongui segons la taula:
 Considera les següents simulacions d'execució:
 
 .. code-block:: console
-    :emphasize-lines: 2, 5, 8, 11
+    :emphasize-lines: 2
 
     $ java DiaSetmana 1
     Dilluns
 
+.. code-block:: console
+    :emphasize-lines: 2
+
     $ java DiaSetmana 5
     Divendres
 
+.. code-block:: console
+    :emphasize-lines: 2
+
     $ java DiaSetmana 0
     Error
+
+.. code-block:: console
+    :emphasize-lines: 2
 
     $ java DiaSetmana 8
     Error

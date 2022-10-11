@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afegim un pas de complexitat &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Petita correcció" href="while_petita_correccio.html" />
+    <link rel="prev" title="Simplifiquem" href="while_simplifiquem.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics_intro.html">Introducció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condicionals.html">Condicionals</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="while.html">Bucles condicionals</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="while_context.html">Un problema a resoldre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_simplifiquem.html">Simplifiquem</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Afegim un pas de complexitat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_petita_correccio.html">Petita correcció</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_cas_general.html">Plantegem ja el cas general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_no_goto.html">Bucles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_redundancia.html">Codi duplicat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_infinit.html">Bucle per sempre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_exercicis.html">Alguns exercicis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_conclusions.html">Conclusions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="basics.html">Elements bàsics de la programació</a> &raquo;</li>
+          <li><a href="while.html">Bucles condicionals</a> &raquo;</li>
+      <li>Afegim un pas de complexitat</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="afegim-un-pas-de-complexitat">
+<h1>Afegim un pas de complexitat<a class="headerlink" href="#afegim-un-pas-de-complexitat" title="Permalink to this heading"></a></h1>
+<p>Ja hem resolt una simplificació força radical del problema. Compliquem-lo
+una mica.</p>
+<p>Ara imagina't que el problema a resoldre fos llegir dos enters. Llavors,
+el codi passaria a ser quelcom semblant a:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumaPositius</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="c1">// creem la variable on guardarem el resultat de sumar</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// inicialment no hem sumat res i per tant és 0</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// declarem la variable que contindrà els valors llegits</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="c1">// processem el primer valor</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un valor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">        </span><span class="c1">// processem el segon valor</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un valor&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">            </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">        </span><span class="c1">// mostrem el resultat</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La suma és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Com que volem reaprofitar la variable <code class="docutils literal notranslate"><span class="pre">valor</span></code> per cada valor llegit, el
+declarem a la línia 8 i li assignem el valor introduït pels usuaris
+(línies 12 i 19)</p>
+<p>Fixa't que a la línia 14 hi afegim el primer valor, mentre
+que a la 21 hi afegim el segon; em ambdós casos, sempre i quant el valor
+sigui positiu.</p>
+<p>Ara la variable <code class="docutils literal notranslate"><span class="pre">suma</span></code> pren sentit doncs va <em>acumulant</em> els valors que
+ens interessen.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_30_sumatres.html"><span class="doc"> Exercici 31_30. Suma tres positius</span></a></p>
+<p>L'esquema del programa de sumar dos positius seria quelcom similar a:</p>
+<div align="center" class="align-center"><div class="graphviz"><img src="_images/graphviz-0dbb10720916fd508e1aa0b613991ac1f2b465f9.png" alt="digraph G {
+    inici[shape=&quot;box&quot;, style=rounded];
+    final[shape=&quot;box&quot;, style=rounded];
+    instruccio0 [label=&quot;suma = 0&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;];
+    instruccio3 [label=&quot;escriu suma&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;]
+
+
+    compound=true;
+    subgraph cluster0 {
+        lectura1 [label=&quot;valor = llegeix(\&quot;un valor\&quot;)&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;];
+        condicio1 [label=&quot;valor &gt;=0&quot;, shape=&quot;diamond&quot;, style=&quot;&quot;];
+        instruccio1 [label=&quot;suma = suma + valor&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;]
+        label=&quot;// primer valor&quot;;
+    }
+
+    subgraph cluster1 {
+        lectura2 [label=&quot;valor = llegeix(\&quot;un valor\&quot;)&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;];
+        condicio2 [label=&quot;valor &gt;=0&quot;, shape=&quot;diamond&quot;, style=&quot;&quot;];
+        instruccio2 [label=&quot;suma = suma + valor&quot;, shape=&quot;rectangle&quot;, style=&quot;&quot;]
+        label=&quot;// segon valor&quot;;
+    }
+
+    inici -&gt; instruccio0
+    instruccio0 -&gt; lectura1 [lhead=cluster0];
+    lectura1 -&gt; condicio1
+    condicio1 -&gt; instruccio1 [label=&quot;cert&quot;];
+    condicio1 -&gt; lectura2 [label=&quot;fals&quot;,lhead=cluster1];
+    instruccio1 -&gt; lectura2 [lhead=cluster1];
+
+    lectura2 -&gt; condicio2;
+    condicio2 -&gt; instruccio2 [label=&quot;cert&quot;];
+    condicio2 -&gt; instruccio3[label=&quot;fals&quot;];
+    instruccio2 -&gt; instruccio3;
+
+    instruccio3 -&gt; final;
+}" class="graphviz" /></div>
+</div>
+<p>Si et fixes, el bloc que processa el primer valor conté exactament el
+mateix que el que processa el segon. De fet, si has fet
+correctament <a class="reference internal" href="exercici_31_30_sumatres.html"><span class="doc">l'exercici dels tres positius</span></a>,
+el diagrama corresponent seria com l'anterior tot afegint-hi una tercera
+caixa idèntica!</p>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="while_simplifiquem.html" class="btn btn-neutral float-left" title="Simplifiquem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="while_petita_correccio.html" class="btn btn-neutral float-right" title="Petita correcció" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

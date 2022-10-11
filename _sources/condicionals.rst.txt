@@ -10,10 +10,13 @@ Desenvolupa un programa que donat un número enter retorni si és *parell* o
 Per exemple, considera les següents interaccions:
 
 .. code-block:: console
-    :emphasize-lines: 2, 5
+    :emphasize-lines: 2
 
     $ java ParellSenar 4
     Parell
+
+.. code-block:: console
+    :emphasize-lines: 2
 
     $ java ParellSenar 5
     Senar
@@ -48,4 +51,3 @@ Els continguts d'aquesta secció s'estructuren en les següents entrades:
     indentacio.rst
     condicionals_niament.rst
     condicionals_conclusions.rst
-

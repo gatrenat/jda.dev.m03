@@ -113,4 +113,4 @@ només fer els opcionals d'ampliació si disposes de prou temps.
 
 |exerciseicon_ST| :doc:`exercici_31_28_ascensor`
 
-|exerciseicon_ST| :doc:`exercici_31_29_metge_virtual`
+|exerciseiconO__| :doc:`exercici_31_29_metge_virtual`

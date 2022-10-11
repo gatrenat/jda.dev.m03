@@ -1,0 +1,20 @@
+###################
+Bucles condicionals
+###################
+
+La llista d'exercicis sobre :doc:`bucles condicionals <while>` és:
+
+.. toctree::
+    :titlesonly:
+
+    exercici_31_30_sumatres.rst
+    exercici_31_31_sumamaxtres.rst
+    exercici_31_32_sumanotes.rst
+    exercici_31_33_quantsparells.rst
+    exercici_31_34_lloro.rst
+    exercici_31_35_trobamaxim.rst
+    exercici_31_36_trobaproxim.rst
+    exercici_31_37_mitja.rst
+    exercici_31_38_dowhile.rst
+    exercici_31_39_endevina.rst
+    exercici_31_40_endevina_cancel.rst

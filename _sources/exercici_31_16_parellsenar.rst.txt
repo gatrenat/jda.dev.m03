@@ -21,10 +21,13 @@ Desenvolupa un programa que donat un número enter retorni si és *parell* o
 Una simulació d'execució pot ser:
 
 .. code-block:: console
-    :emphasize-lines: 2, 5
+    :emphasize-lines: 2
 
     $ java ParellSenar 5
     El número 5 és senar
+
+.. code-block:: console
+    :emphasize-lines: 2
 
     $ java ParellSenar 8
     Él número 8 és parell
