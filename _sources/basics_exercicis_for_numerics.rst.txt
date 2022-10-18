@@ -1,0 +1,21 @@
+####################
+Recorreguts numèrics
+####################
+
+La llista d'exercicis sobre :doc:`recorreguts numèrics <recorreguts>` és:
+
+.. toctree::
+    :titlesonly:
+
+    exercici_31_41_deu_primers.rst
+    exercici_31_42_deu_primers_decreixent.rst
+    exercici_31_43_primers_parells.rst
+    exercici_31_44_de_principi_a_fi.rst
+    exercici_31_45_deu_primers_for.rst
+    exercici_31_46_deu_primers_decreixent_for.rst
+    exercici_31_47_primers_parells_for.rst
+    exercici_31_48_de_principi_a_fi_for.rst
+    exercici_31_49_suma_nombres.rst
+    exercici_31_50_mostra_interval.rst
+    exercici_31_51_historic_edats.rst
+
