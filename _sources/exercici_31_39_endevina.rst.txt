@@ -32,6 +32,7 @@ Pels missatges concrets esperats, considera el següent exemple d'execució:
 
     $ java Endevina
     Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat
+    Introdueix un valor
     5
     És més gran que 5
     Introdueix un valor
@@ -46,6 +47,5 @@ Pels missatges concrets esperats, considera el següent exemple d'execució:
     Introdueix un valor
     42
     Has encertat!
-
 
 Nota: podem suposar que sempre ens introduiran valors enters.
