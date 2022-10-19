@@ -27,31 +27,6 @@ Considera la següent simulació:
     :emphasize-lines: 2, 4, 6, 8-
 
     $ java HistoricEdats
-    nom?
-    Eleftèria
-    edat?
-    5
-    any actual?
-    2021
-    El 2016 va néixer
-    El 2017 tenia 1 any
-    El 2018 tenia 2 anys
-    El 2019 tenia 3 anys
-    El 2020 tenia 4 anys
-    Adéu Eleftèria
-
-
-L'aplicació no dirà l'edat que té la persona en l'any actual, donat que
-aquesta dada forma part de l'entrada. És a dir, si la persona ha nascut
-aquest any, simplement s'acomiadarà, i si ho va fer l'any passat, només
-dirà quan va néixer i s'acomiadarà de la persona.
-
-Considera aquesta altra simulació:
-
-.. code-block:: console
-    :emphasize-lines: 2, 4, 6, 8
-
-    $ java HistoricEdats
     El vostre nom?
     Eleftèria
     La vostra edat?
@@ -66,18 +41,32 @@ Considera aquesta altra simulació:
     Adéu Eleftèria
 
 
+L'aplicació no dirà l'edat que té la persona en l'any actual, donat que
+aquesta dada forma part de l'entrada. És a dir, si la persona ha nascut
+aquest any, simplement s'acomiadarà, i si ho va fer l'any passat, només
+dirà quan va néixer i s'acomiadarà de la persona.
+
+Considera aquesta altra simulació en la que l'usuari ha nascut aquest
+mateix any:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6, 8
+
+    $ java HistoricEdats
+    El vostre nom?
+    Gosling
+    La vostra edat?
+    0
+    L'any actual?
+    2022
+    Adéu Gosling
+
+
 Addicionalment caldrà realitzar les següents comprovacions a l'entrada:
 
 * que el nom no estigui buit
 
-  **pista**: Java ens ofereix vàries maneres de comprovar si un *String*
-  és buit.  La més fàcil, potser és fer servir l'expressió
-  ``nom.isEmpty()`` però pots fer servir la típica ``nom.equals("")`` o,
-  molt més segura encara que, potser una mica estranya,
-  ``"".equals(nom)``.
-
-* que l'edat sigui un valor positiu (es pressuposa que serà
-  enter)
+* que l'edat sigui un valor positiu (es pressuposa que serà enter)
 
 * que l'any actual sigui com a mínim 1971 (també es pressuposa enter)
 
@@ -92,7 +81,7 @@ En aquest tipus d'exercicis, és important analitzar
 l'exemple d'entrada que ens donen. Intentem detectar què canvia a cada
 línia.
 
-En el cas de l'exemple, podem distingir els següents elements:
+En el cas del primer exemple, podem distingir els següents elements:
 
 .. code-block:: console
 
@@ -103,7 +92,7 @@ En el cas de l'exemple, podem distingir els següents elements:
     El 2020 teníeu 3 anys            la primera
     El 2021 teníeu 4 anys
 
-    Adéu Eleftèria                  Aquesta línia només depén del nom
+    Adéu Eleftèria                   Aquesta línia només depén del nom
 
 
 Així, el teu programa podria tenir una estructura similar a aquesta:
@@ -117,7 +106,7 @@ Així, el teu programa podria tenir una estructura similar a aquesta:
     // escriu comiat
 
 La part més complicada, potser, serà saber quina ha de ser la variable de
-recorregut. Et proposo dues opcions encara que hi ha d'altres:
+recorregut. Et proposo dues opcions, encara que hi ha d'altres:
 
 * recórrer per edat, aproximadament de 1 fins a l'actual
 
