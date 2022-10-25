@@ -19,8 +19,8 @@ probablement et servirà per repassar.
     condicionals.rst
     while.rst
     recorreguts.rst
+    strings.rst
     basics_exercicis.rst
 
-..    strings.rst
 ..    control_bucles.rst
 ..    basics_conclusions.rst

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 31_66. Acaba amb lletra no vocal &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Exercici 31_67. La segona lletra és igual a la penúltima" href="exercici_31_67_segona_igual_penultima.html" />
+    <link rel="prev" title="Exercici 31_65. Acaba amb vocal minúscula" href="exercici_31_65_acaba_vocal_minuscula.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics_intro.html">Introducció</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="condicionals.html">Condicionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while.html">Bucles condicionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recorreguts.html">Recorreguts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_condicionals.html">Instruccions condicionals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_while.html">Bucles condicionals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_for_numerics.html">Recorreguts numèrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_for_niats.html">Recorreguts niuats</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_strings.html">Strings</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_60_tipus_primitius.html"> Exercici 31_60. Els tipus primitius de Java</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_61_informestring.html"> Exercici 31_61. Informe d'un String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_62_informecaracter.html"> Exercici 31_62. Informe d'un caràcter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_63_manipulant_strings.html"> Exercici 31_63. Utilitats de Strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_64_inicial_vocal_minuscula.html"> Exercici 31_64. Inicia amb vocal minúscula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_65_acaba_vocal_minuscula.html"> Exercici 31_65. Acaba amb vocal minúscula</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 31_66. Acaba amb lletra no vocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_67_segona_igual_penultima.html"> Exercici 31_67. La segona lletra és igual a la penúltima</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_68_matricula_italiana.html"> Exercici 31_68. Matrícules italianes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_69_matricula_valida_ampliada.html"> Exercici 31_69. Matrícules italianes (ampliació)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_70_analisi_caracter.html"> Exercici 31_70. Analísis d'un caràcter a un String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_71_parentitza.html"> Exercici 31_71. Lletres entre parèntesis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_72_nomeslletres.html"> Exercici 31_72. Només lletres</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_73_mostra_interval_string.html"> Exercici 31_73. Secció d'un String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_74_cadena_continua.html"> Exercici 31_74. Cadena continua</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_75_es_enter.html"> Exercici 31_75. És enter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="basics.html">Elements bàsics de la programació</a> &raquo;</li>
+          <li><a href="basics_exercicis.html">Llista d'exercicis</a> &raquo;</li>
+          <li><a href="basics_exercicis_strings.html">Strings</a> &raquo;</li>
+      <li> Exercici 31_66. Acaba amb lletra no vocal</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="exerciseicon-t-exercici-31-66-acaba-amb-lletra-no-vocal">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 31_66. Acaba amb lletra no vocal<a class="headerlink" href="#exerciseicon-t-exercici-31-66-acaba-amb-lletra-no-vocal" title="Permalink to this heading"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">31_66_acaba_lletra/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="strings_posicions.html"><span class="doc">String: seqüència de lletres</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
+</ul>
+<p class="rubric">Enunciat</p>
+<p>Desenvolupa una nova versió del programa del Lloro que, en aquest cas
+només repeteixi les paraules que finalitzin amb una lletra no vocal. Com
+la versió original, s'aturarà quan rebi una cadena en blanc o buida.</p>
+<p>Atenció: el programa ha de considerar vocals tant les majúscules com les
+minúscules.</p>
+<p>Una simulació d'execució:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="gp">$ </span>java LloroAcabaLletra
+<span class="hll"><span class="linenos"> 2</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos"> 3</span><span class="go">amic</span>
+<span class="hll"><span class="linenos"> 4</span><span class="go">El lloro diu: amic</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos"> 6</span><span class="go">Mazinguer-Z</span>
+<span class="hll"><span class="linenos"> 7</span><span class="go">El lloro diu: Mazinguer-Z</span>
+</span><span class="hll"><span class="linenos"> 8</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos"> 9</span><span class="go">color</span>
+<span class="hll"><span class="linenos">10</span><span class="go">El lloro diu: color</span>
+</span><span class="hll"><span class="linenos">11</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos">12</span><span class="go">color!</span>
+<span class="hll"><span class="linenos">13</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos">14</span><span class="go">amiga</span>
+<span class="hll"><span class="linenos">15</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos">16</span><span class="go">Afrodita-A</span>
+<span class="hll"><span class="linenos">17</span><span class="go">El lloro pregunta paraula que finalitzi per lletra no vocal</span>
+</span><span class="linenos">18</span>
+<span class="hll"><span class="linenos">19</span><span class="go">Adéu</span>
+</span></pre></div>
+</div>
+<p>Pista: Considera les <a class="reference internal" href="exercici_31_61_informestring.html"><span class="doc">utilitats de Character</span></a>.</p>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercici_31_65_acaba_vocal_minuscula.html" class="btn btn-neutral float-left" title="Exercici 31_65. Acaba amb vocal minúscula" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_31_67_segona_igual_penultima.html" class="btn btn-neutral float-right" title="Exercici 31_67. La segona lletra és igual a la penúltima" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
