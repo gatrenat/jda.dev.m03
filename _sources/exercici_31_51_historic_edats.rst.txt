@@ -70,7 +70,7 @@ Addicionalment caldrà realitzar les següents comprovacions a l'entrada:
 
 * que l'any actual sigui com a mínim 1971 (també es pressuposa enter)
 
-En cas d'error, sempre retornarà el mateix missatge: *Entrada errònia*
+En cas d'error, sempre retornarà el mateix missatge: *Entrada incorrecta*
 
 **Pista**: Et recomano que intentis fer l'exercici sense mirar aquesta
 pista i, tant si l'aconsegueixes com si no, que la llegeixis, doncs
