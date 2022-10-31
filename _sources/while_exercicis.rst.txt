@@ -12,6 +12,8 @@ Practica una mica més els coneixements de bucles d'aquest tema.
 
 |exerciseicon__T| :doc:`exercici_31_37_mitja`
 
+|exerciseiconOS_| :doc:`exercici_31_38_dowhile`
+
 |exerciseicon__T| :doc:`exercici_31_39_endevina`
 
 |exerciseicon__T| :doc:`exercici_31_40_endevina_cancel`

@@ -18,8 +18,8 @@ Desenvolupa un programa que demani tres nombres enters, i escrigui els
 valors entre el primer i el segon saltant d'un al següent amb el tercer.
 
 Podem suposar que sempre ens introduiran valors enters, que el primer
-valor serà sempre menor que el segon, i que el tercer serà sempre més gran
-de 0.
+valor serà sempre menor o igual que el segon, i que el tercer serà sempre
+més gran de 0.
 
 Una simulació de l'execució seria:
 

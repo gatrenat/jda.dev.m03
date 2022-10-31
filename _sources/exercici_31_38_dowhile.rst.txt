@@ -6,6 +6,8 @@
 
 * Carpeta de lliurament: ``31_38_dowhile/``
 
+* Continguts relacionats: :doc:`while_exercicis`
+
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
 
 * [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
