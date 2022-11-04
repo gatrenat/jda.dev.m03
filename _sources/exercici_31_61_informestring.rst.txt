@@ -69,7 +69,7 @@ Considera la següent simulació:
     $ java InformeString
     Text principal?
     String!
-    Text secundari ?
+    Text secundari?
     string!
     Número positiu?
     2
