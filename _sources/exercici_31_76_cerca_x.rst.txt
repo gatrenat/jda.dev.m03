@@ -1,5 +1,5 @@
 ##########################################################
-|exerciseiconO_T| Exercici 31_76. Conté el darrer caràcter
+|exerciseicon__T| Exercici 31_76. Conté el darrer caràcter
 ##########################################################
 
 .. rubric:: Context

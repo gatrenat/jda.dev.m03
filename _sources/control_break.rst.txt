@@ -19,10 +19,8 @@ Per exemple, considera el següent programa
             String text = Entrada.readLine();
             boolean conteJ = false;
             for (int i=0; i < text.length(); i++) {
-                if (! conteJ) {
-                    if (text.charAt(i) == 'J') {
-                        conteJ = true;
-                    }
+                if (text.charAt(i) == 'J') {
+                    conteJ = true;
                 }
             }
             if (conteJ) {
@@ -44,10 +42,8 @@ En concret, considera el fragment de codi següent:
 
 .. code-block:: java
 
-    if (! conteJ) {
-        if (text.charAt(i) == 'J') {
-            conteJ = true;
-        }
+    if (text.charAt(i) == 'J') {
+        conteJ = true;
     }
 
 El codi anterior el podem simplificar amb una única línia:
@@ -56,10 +52,7 @@ El codi anterior el podem simplificar amb una única línia:
 
     conteJ = conteJ || text.charAt(i) == 'J';
 
-Aquesta seria la manera preferida normalment. En aquest context, però,
-continuarem amb la versió *expandida* perquè ens ajudarà millor a
-entendre el concepte que ens presenta aquesta secció.
-
+Si t'agrada aquesta versió, fes-la servir.
 
 Imagina que el text de l'entrada fos simplement ``"Java"``. Sabem que la
 ``'J'`` s'ha trobat al primer caràcter i que donarem encara tres iteracions
