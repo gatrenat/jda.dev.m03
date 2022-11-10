@@ -10,8 +10,6 @@
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
 
-* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
-
 * [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
 
 .. rubric:: Enunciat

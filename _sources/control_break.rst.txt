@@ -273,4 +273,4 @@ Abans de la comoditat d'escriure'l, però, cal tenir sempre en compte
 sempre la llegibilitat del nostre codi. En aquest cas, la diferència és
 petita.
 
-|exerciseiconO_T| :doc:`exercici_31_76_cerca_x`
+|exerciseicon__T| :doc:`exercici_31_76_cerca_x`
