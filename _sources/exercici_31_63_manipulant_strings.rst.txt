@@ -79,5 +79,5 @@ Un exemple d'execució
     La penúltima lletra és 'n'
     La paraula en majúscules és "NEKANE"
     La composició de quatre primeres és "Neka"
-    La composició de quatre és "aNek"
-    La composició de quatre corregint majúscules és "Anek"
+    La composició de quatre és "eNek"
+    La composició de quatre corregint majúscules és "Enek"
