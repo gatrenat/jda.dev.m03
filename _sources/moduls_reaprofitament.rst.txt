@@ -1,0 +1,177 @@
+##############
+Reaprofitament
+##############
+
+Em vist que en modular els nostres programes, el codi es torna més
+llegible. Els avantatges de la modularitat no s'acaben aquí, de fet, tot
+plegat no ha fet més que començar. Un cop coneguem bé els mòduls, no
+sabrem ni voldrem viure-hi sense!
+
+Un dels grans avantatges dels mòduls és la reutilització de codi sense
+necessitat de fer copia-enganxa.
+
+Per exemple, ara que ja tenim un mòdul que dibuixa una línia, podem
+fàcilment crear un mòdul que dibuixi rectangles en comptes de quadrats:
+quadrats
+
+.. code-block:: java
+    :linenos:
+
+    public static void dibuixaRectangle() {
+        for (int linia=1; linia <= 5; linia++) {
+            dibuixaLinia();
+            dibuixaLinia();
+            System.out.println();
+        }
+    }
+
+Fixa't que cridem dos cops ``dibuixaLinia()``. Cap problema!
+
+En cridar ``dibuixaRectangle()``, per exemple, des de ``main()``, ens
+generarà l'esperada forma:
+
+.. code-block:: none
+
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+
+Sense mòduls, haguéssim hagut de duplicar la part del codi que dibuixa la
+línia, per fer això.
+
+
+.. code-block:: java
+   :linenos:
+
+    public static void main(String[] args) {
+        for (int linia=1; linia <= 5; linia++) {
+            for (int columna=1; columna <= 5; columna++) {
+                System.out.print(" X");
+            }
+            for (int columna=1; columna <= 5; columna++) {
+                System.out.print(" X");
+            }
+            System.out.println();
+        }
+    }
+
+.. note:: Abans de que protestis, et diré que sí, que probablement és més
+   fàcil fer simplement:
+
+   .. code-block:: java
+       :linenos:
+       :emphasize-lines: 3
+
+       public static void main(String[] args) {
+           for (int linia=1; linia <= 5; linia++) {
+               for (int columna=1; columna <= 10; columna++) {
+                   System.out.print(" X");
+               }
+               System.out.println();
+           }
+       }
+
+   Amb els mòduls separats, però, es simplifiquen problemes com ara el de
+   generar el següent:
+
+   .. code-block:: none
+
+        X X X X X <-> X X X X X
+        X X X X X <-> X X X X X
+        X X X X X <-> X X X X X
+        X X X X X <-> X X X X X
+        X X X X X <-> X X X X X
+
+   Si bé els podem resoldre posant condicionals dins del bucle, la següent
+   proposta és més fàcil de llegir:
+
+   .. code-block:: java
+      :linenos:
+      :emphasize-lines: 6
+
+       public static void main(String[] args) {
+           for (int linia=1; linia <= 5; linia++) {
+               // primer quadrat
+               for (int columna=1; columna <= 5; columna++) {
+                   System.out.print(" X");
+               }
+               // separació
+               System.out.print(" <->");
+               // segon quadrat
+               for (int columna=1; columna <= 5; columna++) {
+                   System.out.print(" X");
+               }
+               System.out.println();
+           }
+       }
+
+Tornant a la proposa no modular:
+
+.. code-block:: java
+   :linenos:
+   :emphasize-lines: 4, 7
+
+    public static void main(String[] args) {
+        for (int linia=1; linia <= 5; linia++) {
+            for (int columna=1; columna <= 5; columna++) {
+                System.out.print(" X");
+            }
+            for (int columna=1; columna <= 5; columna++) {
+                System.out.print(" X");
+            }
+            System.out.println();
+        }
+    }
+
+Fixa't que si volem canviar alguna cosa com ara posar un asterisc en
+comptes d'una ``X`` al nostre dibuix, ho hem de fer en dos llocs (línies 4
+i 7). Amb mòduls, només ens hem de preocupar de modificar-ho a un únic
+lloc. En concret, a la definició de ``dibuixaLinia()``.
+
+Potser no et semblarà gran cosa ara. Després de tot, són *només* dos
+llocs.  Imagina't, però, haver d'identificar tots els llocs duplicats a un
+programa llarg, distribuït en diferents fitxers, on hi hagi múltiples
+versions de peces de codi amb aspecte diferent (ex. en comptes de
+``columna`` la segona línia podria haver anomenat ``col`` a la variable de
+recorregut) Creu-me, un malson.
+
+La modularització del nostre codi ens permet, per tant, eliminar
+*redundàncies*.
+
+Ah! i si al ``main()`` cridem **dos** cops a ``dibuixaRectangle()`` ens
+generarà un quadrat de 10x10
+
+.. code-block:: java
+
+    public static void main(String[] args) {
+        dibuixaRectangle();
+        dibuixaRectangle();
+    }
+
+La sortida:
+
+.. code-block:: none
+
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+     X X X X X X X X X X
+
+Els mòduls com ``dibuixaLinia()`` i ``dibuixaRectangle()`` han esdevingut
+quelcom similar a *noves instruccions* que amplien les que ens oferia el
+llenguatge de programació! Ara els podem fer servir en qualsevol moment i
+tants cops com vulguem!
+
+Per exemple, considera què et costaria desenvolupar un programa que,
+depenent de l'entrada, dibuixés un quadrat o un rectangle, tot cridant
+``dibuixaQuadrat()`` o ``dibuixaRectangle()``. Fàcil, oi?
+
+|exerciseicon__T| :doc:`exercici_32_04_lloro_quadrat`

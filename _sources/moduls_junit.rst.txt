@@ -1,0 +1,76 @@
+######################
+Una mica de bricolatge
+######################
+
+El ``prgtest`` fins ara, comprovava només l'entrada/sortida dels teus
+programes. Amb els nous conceptes de la secció de :doc:`moduls`
+necessitarem realitzar tests més complexos.
+
+Un dels mecanismes més coneguts i utilitzats per realitzar proves de
+programes en el món Java és `junit <https://junit.org/junit5/>`_. Aquest
+serà el que farem servir en la resta d'aquest curs.
+
+Instal·lació i configuració
+===========================
+
+La tasca d'instal·lar i configurar el JUnit es resumeix en descarregar un
+fitxer al nostre equip i dir-li a ``java`` on el pot trobar.
+
+Per simplicitat, t'he preparat un guió que hauria de realitzar totes les
+passes per tu. Per per-lo servir, simplement escriu dins la carpeta del
+teu repositori:
+
+.. code-block:: console
+
+    $ bash .introprg/install_junit.sh
+
+En executar-ho, t'hauria de finalitzar amb un missatge indicant que *JUnit
+es troba instal·lada correctament*. Altrament t'indicarà algun error. Si
+tens problemes, com sempre, avisa'm.
+
+Un cop t'indiqui que tot està correcte, si vols fer servir la mateixa
+consola per començar a fer proves dels teus programes, caldrà que executis
+la següent comanda:
+
+.. code-block:: console
+
+    $ source ~/.bashrc
+
+
+.. note:: En cas que vulguis fer la instal·lació manualment,
+   descarrega al teu equip el fitxer
+   ``junit-platform-console-standalone-1.9.1.jar`` o posterior d'aquest
+   `repositori
+   <https://search.maven.org/search?q=g:org.junit.platform%20AND%20a:junit-platform-console-standalone>`_
+
+   Un cop el tinguis, afegeix al ``CLASSPATH`` del teu sistema el camí on
+   es troba el fitxer descarregat, de manera que Java el pugui trobar. I
+   ja està!
+
+
+Provant els nostres programes
+=============================
+
+Un cop tinguis instal·lat Junit i disposis de la darrera actualització del
+``prgtest``, ja podràs provar els nous exercicis. 
+
+El funcionament serà el mateix que fins ara. Simplement executa
+``prgtest`` a la carpeta de l'exercici i aquest realitzarà les proves
+corresponents.
+
+Si ``prgtest`` troba un error d'entrada/sortida, t'ho farà saber de la
+manera habitual. Si l'error, però, prové de les proves amb JUnit, el
+resultat que generarà serà el que produeix JUnit.
+
+Com que la sortida de JUnit resulta una mica críptica quan la veus per
+primer cop, el ``prgtest`` t'ofereix un resum al final que t'hauria de
+servir de pista. Amb tot, com abans t'acostumis a interpretar la sortida
+directa de JUnit, millor.  Tingues present que estàs aprenent a llegir la
+sortida que es troba la gent que es dedica al desenvolupament professional
+en Java, en el seu dia a dia!
+
+No tinguis problemes en preguntar al teu docent fins que acabis d'entendre
+aquests missatges. Per això estem!
+
+Ara que ja tenim configurat el nostre sistema, podem començar la nostra
+exploració dels *mòduls*.

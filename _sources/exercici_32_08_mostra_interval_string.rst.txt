@@ -1,0 +1,30 @@
+####################################################
+|exerciseicon__T| Exercici 32_08. Secció d'un String
+####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_08_mostra_interval_string/``
+
+* Continguts relacionats: :doc:`moduls_parametritzacio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una nova versió de l'exercici que :doc:`mostrava la secció
+d'un String <exercici_31_73_mostra_interval_string>`. 
+
+La nova versió tindrà la mateixa sortida que l'original però el codi del
+programa serà més modular. En concret, el mòdul ``main()`` se
+n'encarregarà d'obtenir les dades d'entrada, i cridarà un nou mòdul
+anomenat ``mostraInterval()`` que serà qui realitzi realment la feina de
+mostrar l'interval.
+
+La signatura del nou mòdul serà:
+
+.. code-block:: java
+
+    public static void mostraInterval(String text, int inici, int fi)

@@ -32,11 +32,12 @@ utilitat                                    descripció
 
 ``startsWith(String unAltre)``              Boolean que indica si la cadena comença per l'altre
 
-``endsWith(String unAltre)``                Boolean que indica si la cadena comença per l'altre
+``endsWith(String unAltre)``                Boolean que indica si la cadena finalitza amb l'altre
 
 ``equals(String unAltre)``                  Boolean que indica si la cadena és igual a l'altre
 
 ``equalsIgnoreCase(String unAltre)``        Boolean que indica si la cadena és igual a l'altre
+                                            ignorant majúscules
 
 ``isBlank()``                               Boolean que indica si la cadena només conté caràcters
                                             blancs o bé està buida

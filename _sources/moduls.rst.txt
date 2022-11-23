@@ -1,0 +1,47 @@
+######
+Mòduls
+######
+
+Has arribat fins aquí! Felicitats!
+
+Ha estat un camí intens, oi? Hem aprés a resoldre problemes de programació
+fent servir declaracions, assignacions, entrada/sortida, condicionals i
+bucles. A més, tenim unes primeres nocions de bones pràctiques en la
+documentació del nostre codi (capçaleres, noms de variables, etc)
+Tot plegat, teòricament podem fer **qualsevol programa**!
+
+Atenció, però, a la paraula *teòricament*. A la pràctica, amb *només* les
+eines que tenim fins el moment, la solució d'alguns problemes ens
+requerirà un temps molt elevat doncs els programes esdevenen, de seguida,
+molt complexos. Aquesta complexitat pot arribar a ser immanejable.
+
+Ens cal quelcom que ens permeti *trencar* els programes en peces
+manejables. Al *què* li direm **mòdul** i al *com* el coneixerem com
+**anàlisi descendent** o *top-down*.
+
+L'anàlisi descendent és una tècnica de resolució de problemes basada
+en la descomposició del problema en subproblemes. L'anàlisi descendent
+s'aplica també a aquests subproblemes, fins que els subproblemes
+resultants presenten una solució trivial. I què és una solució *trivial*?
+Aquella que ens resulta tan directa que no ens cal descomposar-la més.
+
+Quan els problemes són de programació, cada subproblema es converteix en
+un mòdul.
+
+Primer de tot, però, ens caldrà fer una mica de "bricolatge" a la nostra
+instal·lació per poder realitzar les proves dels nous exercicis.
+Assegura't de no perdre't la secció :doc:`moduls_junit`.
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    moduls_junit.rst
+    moduls_intro.rst
+    moduls_exercicis.rst
+
+..  moduls_funcions.rst
+..  moduls_variables.rst
+..  arrays.rst
+..  moduls_recursivitat.rst
+..  moduls_conclusions.rst

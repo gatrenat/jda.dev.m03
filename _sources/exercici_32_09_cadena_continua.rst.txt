@@ -1,0 +1,29 @@
+#################################################
+|exerciseicon__T| Exercici 32_09. Cadena continua
+#################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_09_cadena_continua/``
+
+* Continguts relacionats: :doc:`moduls_parametritzacio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una nova versió de l'exercici que :doc:`mostrava una cadena contínua <exercici_31_74_cadena_continua>`. 
+
+La nova versió tindrà la mateixa sortida que l'original però el codi del
+programa serà més modular. En concret, el mòdul ``main()`` se
+n'encarregarà d'obtenir les dades d'entrada, i cridarà un
+nou mòdul anomenat ``mostraCadenaContinua()`` que serà qui realitzi realment la
+feina de mostrar el resultat.
+
+La signatura del nou mòdul serà:
+
+.. code-block:: java
+
+    public static void mostraCadenaContinua(String text, int longitud)
