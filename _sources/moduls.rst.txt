@@ -39,9 +39,9 @@ Assegura't de no perdre't la secció :doc:`moduls_junit`.
     moduls_junit.rst
     moduls_intro.rst
     moduls_funcions.rst
+    moduls_variables.rst
     moduls_exercicis.rst
 
-..  moduls_variables.rst
-..  arrays.rst
-..  moduls_recursivitat.rst
-..  moduls_conclusions.rst
+..    arrays.rst
+..    moduls_recursivitat.rst
+..    moduls_conclusions.rst

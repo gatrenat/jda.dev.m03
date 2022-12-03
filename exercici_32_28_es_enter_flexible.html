@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 32_28. És enter (flexible) &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Exercici 32_29. Cadena continua (modular)" href="exercici_32_29_cadena_continua.html" />
+    <link rel="prev" title="Exercici 32_27. És enter (modular)" href="exercici_32_27_es_enter.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_variables.html">Variables i mòduls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="moduls_exercicis_intro.html">Llista d'exercicis del primer contacte amb mòduls</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_18_compara_ocurrencies.html"> Exercici 32_18. Compara ocurrències</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_19_compta_vocals.html"> Exercici 32_19. Compta vocals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_20_tipus_moduls.html"> Exercici 32_20. Tipus de mòduls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_21_matricula_italiana.html"> Exercici 32_21. Matricules italianes modulades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_22_utilitats_confirmacio.html"> Exercici 32_22. Utilitats de confirmació</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_23_es_vocal.html"> Exercici 32_23. És vocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_24_nomes_lletres.html"> Exercici 32_24. Només lletres (amb mòduls)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_25_variables.html"> Exercici 32_25. Classifiquem les variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_26_mostra_interval_string.html"> Exercici 32_26. Secció d'un String (modular)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_27_es_enter.html"> Exercici 32_27. És enter (modular)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 32_28. És enter (flexible)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_29_cadena_continua.html"> Exercici 32_29. Cadena continua (modular)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
+          <li><a href="moduls_exercicis.html">Llista d'exercicis</a> &raquo;</li>
+          <li><a href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a> &raquo;</li>
+      <li> Exercici 32_28. És enter (flexible)</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="exerciseicon-t-exercici-32-28-es-enter-flexible">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 32_28. És enter (flexible)<a class="headerlink" href="#exerciseicon-t-exercici-32-28-es-enter-flexible" title="Permalink to this heading"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_28_es_enter_flexible/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="moduls_variables.html"><span class="doc">Variables i mòduls</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
+</ul>
+<p class="rubric">Enunciat</p>
+<p>L'exercici <a class="reference internal" href="exercici_32_27_es_enter.html"><span class="doc">anterior</span></a> ens ha deixat amb una
+sensació de pèrdua de funcionalitat. D'acord que per compatibilitat amb
+<code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code> ens pugui ser interessant una versió estricta de
+<code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> però per altres usos podríem preferir una versió que ens
+acceptés enters envoltats d'espais.</p>
+<p>En aquest exercici farem una nova versió de <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code> que li
+oferirà aquesta flexibilitat. A banda, afegirem una nova funció anomenada
+<code class="docutils literal notranslate"><span class="pre">aEnter()</span></code> que permetrà convertir un String a enter.</p>
+<p>Aquí van les signatures:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esEnter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aEnter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>El booleà <code class="docutils literal notranslate"><span class="pre">estricte</span></code> permetrà decidir el comportament d'aquestes dues
+funcions:</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">estricte</span></code> és cert</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> es comporta com <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aEnter(String,</span> <span class="pre">boolean)</span></code> es comporta igual que
+<code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code> de manera que si el text no es pot convertir a enter,
+simplement <em>petarà</em> el programa com ho faria <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code></p></li>
+</ul>
+</li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">estricte</span></code> és fals:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> acceptarà també texts amb espais a
+l'inici i al final.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aEnter(String,</span> <span class="pre">boolean)</span></code> permetrà convertir a enter, sense donar
+error, texts que continguin espais en blanc a l'inici o/i al final.</p></li>
+</ul>
+</li>
+</ul>
+<p>Així, quan se li demani convertir un text que no sigui convertible a
+enter, <code class="docutils literal notranslate"><span class="pre">aEnter()</span></code> donarà un error similar a <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code>. No
+pateixis, el <em>prgtest</em> t'indicarà si no ho has fet bé amb un missatge com
+ara:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MethodSource</span> <span class="p">[</span><span class="n">className</span> <span class="o">=</span> <span class="s1">&#39;TestExercise&#39;</span><span class="p">,</span> <span class="n">methodName</span> <span class="o">=</span> <span class="s1">&#39;aEnterFalseException&#39;</span><span class="p">,</span> <span class="n">methodParameterTypes</span> <span class="o">=</span> <span class="s1">&#39;java.lang.String&#39;</span><span class="p">]</span>
+<span class="o">=&gt;</span> <span class="n">org</span><span class="o">.</span><span class="n">opentest4j</span><span class="o">.</span><span class="n">AssertionFailedError</span><span class="p">:</span> <span class="n">Expected</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">NumberFormatException</span> <span class="n">to</span> <span class="n">be</span> <span class="n">thrown</span><span class="p">,</span> <span class="n">but</span> <span class="n">nothing</span> <span class="n">was</span> <span class="n">thrown</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Bé, sí, resulta una mica críptic en aquests moments, però més endavant
+prendrà més sentit tot això de <code class="docutils literal notranslate"><span class="pre">java.lang.NumberFormatException</span></code>. De
+moment, si veiem aquest error a la sortida del <em>prgtest</em>, ja tenim una
+idea de què ha passat.</p>
+<p>Et sorprèn que puguis tenir a l'hora <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code> i
+<code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> amb el mateix nom? És una particularitat
+interessant de llenguatges com Java, anomenada <em>sobrecàrrega</em> o
+<em>overloading</em>, que veurem amb més detall en el futur.</p>
+<section id="que-es-demana">
+<h2>Què es demana?<a class="headerlink" href="#que-es-demana" title="Permalink to this heading"></a></h2>
+<p>Afegeix les dues noves funcions a <code class="docutils literal notranslate"><span class="pre">UtilString.java</span></code> de manera que
+<code class="docutils literal notranslate"><span class="pre">prgtest</span></code> pugui avaluar-les.</p>
+<p>El lliurament inclourà la mateixa versió de <code class="docutils literal notranslate"><span class="pre">EsEnter.java</span></code> que
+tenia l'exercici anterior.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercici_32_27_es_enter.html" class="btn btn-neutral float-left" title="Exercici 32_27. És enter (modular)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_32_29_cadena_continua.html" class="btn btn-neutral float-right" title="Exercici 32_29. Cadena continua (modular)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

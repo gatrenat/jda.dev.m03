@@ -15,9 +15,8 @@ Els exercicis dels temes :doc:`moduls_funcions` i ``moduls_variables`` són:
     exercici_32_22_utilitats_confirmacio.rst
     exercici_32_23_es_vocal.rst
     exercici_32_24_nomes_lletres.rst
-
-..  exercici_32_25_variables.rst
-..  exercici_32_26_mostra_interval_string.rst
-..  exercici_32_27_es_enter.rst
-..  exercici_32_28_es_enter_flexible.rst
-..  exercici_32_29_cadena_continua.rst
+    exercici_32_25_variables.rst
+    exercici_32_26_mostra_interval_string.rst
+    exercici_32_27_es_enter.rst
+    exercici_32_28_es_enter_flexible.rst
+    exercici_32_29_cadena_continua.rst
