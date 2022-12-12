@@ -467,7 +467,7 @@ especial perquè java ens avisi si accidentalment la modifiquem.
                 dibuixaLinia();
                 System.out.println();
             }
-            // COSTAT += COSTAT + 1;    // error: cannot assign a value to final variable COSTAT
+            // COSTAT += 1;    // error: cannot assign a value to final variable COSTAT
         }
 
         public static void dibuixaLinia() {

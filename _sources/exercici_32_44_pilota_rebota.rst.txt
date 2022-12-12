@@ -1,0 +1,197 @@
+######################################################
+|exerciseicon_ST| Exercici 32_44. La pilota que rebota
+######################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_44_pilota_rebota/``
+
+* Continguts relacionats: :doc:`arrays_mutabilitat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Ha arribat el moment de la tan esperada actualització del :doc:`joc de la
+pilota <exercici_32_43_pilota_cau>`.
+
+Inicialment la pilota semblarà que es comporta com a la versió anterior.
+
+La diferència apareix quan arriba a la darrera fila. En aquesta versió, en comptes
+de tornar a la primera, rebota! És a dir, passa a la fila anterior i
+canvia el sentit del moviment.
+
+Veiem l'aspecte final de l'execució:
+
+.. image:: _images/pilota_rebota.gif
+    :width: 256
+    :align: center
+
+Com pots veure, cada cop que toca una cantonada, rebota.
+
+Per poder realitzar aquesta actualització, ens trobem en la necessitat de
+guardar no només la posició (fila i columna) sinó també l'increment (de
+fila i columna)
+
+Inicialment l'increment és de 1 fila i 1 columna.
+
+Així, quan estem en la primera posició (0, 0), la següent posició passa a
+ser (0 + 1, 0 + 1).
+
+En el moment en que la
+pilota arriba a la darrera fila, l'increment de fila passa a ser negatiu.
+
+És a dir, suposant que la darrera fila és la ``8``, en arribar tindrem la
+posició (8, 8). La següent posició hauria de ser la (9, 9) però ja surt
+del camp. Així que voldrem la (7, 9).  Com que ara l'increment de les
+files serà negatiu, després de (7, 9) tocarà (6, 10)
+
+Et recomano que et facis uns quants dibuixos per sentir que acabes
+d'entendre com va.
+
+La insuportable immutabilitat del ``int``
+=========================================
+
+En la :doc:`versió anterior del joc<exercici_32_43_pilota_cau>`, resolíem
+el càlcul de la següent posició amb les funcions pures ``seguentFila()`` i
+``seguentCol()`` però ara ja no és tan fàcil.
+
+Ara la següent posició depen del sentit del moviment. Això és la part
+fàcil ja que el sentit del moviment l'estem codificant amb el concepte
+d'increment. Quan l'increment és positiu, la pilota es mou cap a
+files/columnes més grans (a baix/a la dreta) i quan és negatiu, es
+desplaça cap a dalt/ a l'esquerra.
+
+La part més difícil d'aquest punt està en que ara ens cal també saber si
+cal canviar aquest sentit del moviment perquè la pilota ha arribat a un
+dels límits (parets)
+
+El que ens interessaria tenir és un mòdul ``seguentPosicio(int fila, int
+col, int incrementFila, int incrementColumna)`` que en ser cridat
+modifiqués els paràmetres convenientment. Malauradament, Java no ens
+permet crear mòduls que modifiquin paràmetres enters. Enters no, però
+arrays…
+
+Per solucionar aquest problema crearem dos arrays nous:
+
+.. code-block:: java
+
+    int[] posicio = new int[2];    // fila, columna
+    int[] increment = new int[2];  // increment de la fila, increment de la columna
+
+D'aquesta manera podem definir el procediment ``seguentPosicio(int[]
+posicio, int[] increment)`` que realitzarà els canvis pertinents allà on
+toqui.
+
+Com que no volem estar preocupant-nos de si era el ``0`` o el ``1`` cada
+cop que vulguem extreure la fila o la columna de ``posicio``, crearem uns
+quants mòduls auxiliars. Seran molt fàcils de construir i deixaran el
+nostre codi molt més fàcil d'entendre:
+
+* ``int obteFila(int[] posicio)``
+* ``int obteCol(int[] posicio)``
+* ``int obteIncrFila(int[] increment)``
+* ``int obteIncrCol(int[] increment)``
+* ``canviaPosicio(int[] posicio, int novaFila, int novaCol)``
+* ``canviaIncrement(int[] increment, int nouIncFila, int nouIncCol)``
+
+Confio en que els noms siguin prou descriptius per entendre la intenció
+d'aquests mòduls.
+
+Què haig de fer?
+================
+
+Et toca fer els canvis necessaris perquè la següent plantilla respongui al
+recorregut de la pilota.
+
+.. code-block:: java
+    :linenos:
+
+    /* XXX */
+    public class Pilota {
+        public static final int N_FILES = 9;
+        public static final int N_COLS = 14;
+
+        public static void netejaPantalla() {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        }
+        public static void mostraCamp(char[][] camp) {
+            /* XXX */
+        }
+        public static void netejaCamp(char[][] camp) {
+            /* XXX */
+        }
+        public static void netejaPosicio(char[][] camp, int[] posicio) {
+            /* XXX */
+        }
+        public static void posicionaPilota(char[][] camp, int[] posicio) {
+            /* XXX */
+        }
+
+        public static int obteFila(int[] posicio) {
+            return posicio[0];
+        }
+        public static int obteCol(int[] posicio) {
+            /* XXX */
+        }
+        public static int obteIncrFila(int[] increment) {
+            /* XXX */
+        }
+        public static int obteIncrCol(int[] increment) {
+            /* XXX */;
+        }
+
+        public static void canviaPosicio(int[] posicio, int novaFila, int novaCol) {
+            /* XXX */;
+        }
+        public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
+            /* XXX */;
+        }
+        public static void seguentPosicio(int[] posicio, int[] increment) {
+            int fila = obteFila(posicio);
+            int col = obteCol(posicio);
+            int incFila = obteIncrFila(increment);
+            int incCol = obteIncrCol(increment);
+
+            // actualitza la fila
+            fila + incFila;
+            if (fila < 0) {                     // es passa per sobre
+                fila = 1;                       // torna a la primera fila
+                incFila = 1;                    // toca baixar
+            } else if (fila > N_FILES -1) {     // es passa per sota
+            /* XXX */;
+            }
+
+            // actualitza la columna
+            /* XXX */;
+
+            // actualitza la posició i l'increment
+            canviaPosicio(posicio, fila, col);
+            canviaIncrement(increment, incFila, incCol);
+        }
+        public static void main(String[] args)  {
+            char[][] camp = new char[N_FILES][N_COLS];
+            netejaCamp(camp);
+
+            int[] posicio = new int[2];         // fila, col
+            canviaPosicio(posicio, 0, 0);       // posició inicial (0, 0)
+
+            int[] increment = new int[2];       // incFila, incCol
+            canviaIncrement(increment, 1, 1);   // desplaçament inicial: 1 fila 1 columna
+
+            while (true) {
+                posicionaPilota(camp, posicio);
+                netejaPantalla();
+                mostraCamp(camp);
+                netejaPosicio(camp, posicio);
+                seguentPosicio(posicio, increment);
+                System.out.printf("%nEnter per continuar");
+                Entrada.readLine();
+            }
+        }
+    }

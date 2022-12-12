@@ -1,0 +1,68 @@
+###########################
+Necessitem les *seqüències*
+###########################
+
+Veiem si realment ens calen seqüències que no siguin de caràcter.
+
+Intenta resoldre els següents reptes usant *exclusivament* les eines que
+hem estudiat fins ara.
+
+
+Repte 1. La nota més alta
+=========================
+
+Et proposo el següent repte en forma d'exercici:
+
+|exerciseicon__T| :doc:`exercici_32_30_nota_mes_alta_v1`
+
+Llegeix l'enunciat i torna aquí quan el tinguis resolt o et calgui alguna
+pista.
+
+Ja l'has fet? No? De debò, mira de fer-lo i recorda, **només** amb les
+eines que tenim fins ara!
+
+Ja estàs? Suposaré que l'has fet.
+
+
+Repte 2. La nota més alta (no tan fàcil)
+========================================
+
+Imagino que el repte anterior t'ha resultat fàcil, oi?
+
+No deixa de ser el conegut *patró del Lloro*. És a dir, un ``while`` on
+anem demanant notes, anem guardant la màxima i, potser, quants en portem,
+fins rebre una nota negativa. En sortir del bucle, mostrem la màxima o un
+error si hem recollir menys de dues notes. Ja està.
+
+Donem-li una volta més. Llegeix l'enunciat del següent exercici i
+fes el possible per, com a mínim plantejar-te la seva solució. Si no se
+t'acut com resoldre'l, com a mínim t'ajudarà a entendre la importància del
+nou tema.
+
+|exerciseiconOST| :doc:`exercici_32_31_nota_mes_alta_v2`
+
+Aquest repte encara es pot resoldre amb les eines que tenim però comença a
+costar una mica, oi? 
+
+Aviat veuràs que es pot simplificar la seva resolució si disposéssim
+d'altres tipus de seqüències. En concret de notes.
+
+En aquesta ocasió no et donaré més pistes. Però ja et puc dir que si t'ha
+picat i el vols resoldre, fins i tot si no saps com, ja pots sentir que
+tens una bona actitud per la programació! Una medalleta per tu!
+
+D'acord, et confesso que si m'insisteixes una mica, te'n donaré alguna de
+pista.
+
+Més reptes
+==========
+
+Has aconseguit fer l'anterior i encara en vols més? Vinga!
+
+|exerciseiconOST| :doc:`exercici_32_32_nota_mes_alta_v3`
+
+|exerciseiconOST| :doc:`exercici_32_33_nota_mes_alta_v4`
+
+Si vas saber resoldre el repte número 2, ja tindràs una bona idea de com
+resoldre aquests. Per descomptat, m'encantarà donar-te alguna pista en cas
+que et calgui.

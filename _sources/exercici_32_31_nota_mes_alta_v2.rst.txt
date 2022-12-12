@@ -1,0 +1,62 @@
+#################################################################
+|exerciseiconOST| Exercici 32_31. La nota més alta (no tan fàcil)
+#################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_31_nota_mes_alta_v2/``
+
+* Continguts relacionats: :doc:`arrays_justificacio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una nova versió del :doc:`programa
+anterior<exercici_32_30_nota_mes_alta_v1>`. Aquest cop, el programa, a
+banda de mostrar la nota màxima, indicarà també les notes introduïdes.
+
+Considera la simulació següent:
+
+.. code-block:: none
+    :emphasize-lines: 2, 12
+
+    $ java NotaMesAlta
+    Introdueix les notes (-1 per finalitzar)
+    5
+    1
+    3
+    9
+    7
+    9
+    1
+    8
+    -1
+    La nota més alta és 9 de les introduïdes: 5, 1, 3, 9, 7, 9, 1 i 8
+
+.. code-block:: none
+    :emphasize-lines: 2, 6
+
+    $ java NotaMesAlta
+    Introdueix les notes (-1 per finalitzar)
+    8
+    9
+    -1
+    La nota més alta és 9 de les introduïdes: 8 i 9
+
+
+Aquesta versió es comportarà com l'anterior quan el programa rep menys de
+dues notes.
+
+.. tip:: Fixa't que en aquest cas ens caldrà guardar d'alguna manera les
+         notes que anem rebent per poder-les mostrar al final.
+
+.. note:: Per passar totes les proves, realitza aquest exercici fent
+          servir **exclusivament** les eines que hem treballat durant
+          aquest curs.

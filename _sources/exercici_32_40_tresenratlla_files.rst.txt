@@ -1,0 +1,81 @@
+#############################################################
+|exerciseicon__T| Exercici 32_40. El tres en ratlla per files
+#############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_40_tresenratlla_files/``
+
+* Continguts relacionats: :doc:`arrays_taules`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa que representi la següent situació d'una partida
+de tres en ratlla:
+
+.. image:: _images/tictactoebasicpartida.svg
+    :width: 256
+    :align: center
+
+La representació del joc es realitzarà tenint present que:
+
+* el taulell estarà implementat amb tres arrays de caràcters que
+  representaran cadascuna de les files
+
+* cada posició es codificarà amb un de tres possibles caràcters (``X``,
+  ``O`` o ``·``) El punt indicarà que la posició encara no està marcada.
+
+Completa la plantilla següent tot reemplaçant ``/* XXX */`` pel teu codi:
+
+.. code-block:: java
+    :linenos:
+
+    /*
+     *  XXX
+     */
+    public class TresEnRatlla {
+        public static void main(String[] args){
+            // declaració de les files
+            char[] fila0 = new char[3];
+            char[] fila1 /* XXX */;
+            /* XXX */;
+
+            // inicialització de la fila 0
+            fila0[0] = 'O';
+            fila0[1] = '·';
+            fila0[2] = 'X';
+
+            // inicialització de la fila 1
+            /* XXX */
+
+            // inicialització de la fila 2
+            /* XXX */
+
+            // mostra el taulell
+            mostraFila(fila0);
+            /* XXX */
+        }
+
+        // mostra el contingut de la fila per sortida estàndard
+        public static void mostraFila(char[] fila) {
+            for (/* XXX */) {
+                System.out.print(fila[col]);
+            }
+            System.out.println();
+        }
+    }
+
+
+La sortida esperada és la següent:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java TresEnRatlla
+    O·X
+    XXO
+    O··

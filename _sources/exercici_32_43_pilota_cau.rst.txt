@@ -1,0 +1,113 @@
+###################################################
+|exerciseicon__T| Exercici 32_43. La pilota que cau
+###################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_43_pilota_cau/``
+
+* Continguts relacionats: :doc:`arrays_mutabilitat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Aquest exercici ens permetrà fer veure que hi ha una pilota que va caient
+en diagonal per la pantalla.
+
+Abans que t'emocionis massa, recorda que estem en Java i tot ho estem
+executant des de terminal. És a dir, tindrem una animació discutiblement…
+animada.
+
+Veiem l'aspecte final de l'execució:
+
+.. image:: _images/pilota_caiguda.gif
+    :width: 256
+    :align: center
+
+Què estem veient? 
+
+El programa ``Pilota`` mostra el contingut d'una taula de caràcters on la
+major part dels valors són el caracter ``'·'`` (un punt). Hi ha un, però,
+el ``'O'`` que representa una pilota.
+
+La pilota comença en la posició (0, 0) i, cada cop que el programa rep un
+salt de línia, incrementa en un la fila i la columna. Quan supera la
+darrera fila, torna a la primera. El mateix fa amb la columna.
+
+La velocitat del canvi, doncs, depen de com de ràpid premem la tecla
+``Enter``.
+
+Ah! I el programa finalitza quan li introduïm quelcom diferent a una
+cadena buida.
+
+Aquí tens el codi (parcial)
+
+.. code-block:: java
+   :linenos:
+
+    /* XXX */
+    public class Pilota {
+        public static final int N_FILES = 9;
+        public static final int N_COLS = 13;
+
+        public static void netejaPantalla() {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        }
+        public static void mostraCamp(char[][] camp) {
+            for (int i=0; i<N_FILES; i++) {
+                for (int j=0; j<N_COLS; j++) {
+                    System.out.print(camp[i][j]);
+                }
+                System.out.println();
+            }
+        }
+        public static void netejaCamp(char[][] camp) {
+            /* XXX */;
+        }
+        public static void netejaPosicio(char[][] camp, int fila, int col) {
+            /* XXX */
+        }
+        public static void posicionaPilota(char[][] camp, int fila, int col) {
+            /* XXX */
+        }
+        public static int seguentFila(int actual) {
+            /* XXX */
+        }
+        public static int seguentCol(int actual) {
+            /* XXX */
+        }
+        public static void main(String[] args)  {
+            char[][] camp = new char[N_FILES][N_COLS];
+            netejaCamp(camp);
+            int fila = 0;
+            int col = 0;
+            do {
+                posicionaPilota(camp, fila, col);
+                netejaPantalla();
+                mostraCamp(camp);
+                netejaPosicio(camp, fila, col);
+                fila = seguentFila(fila);
+                col = seguentCol(col);
+                System.out.printf("%nEnter per continuar");
+            } while (Entrada.readLine().isEmpty());
+        }
+    }
+
+Què has de fer?
+===============
+
+El que has de fer és completar el codi de ``Pilota`` de manera que passi
+les proves.
+
+Fixat bé especialment en els procediments: estan canviant valors del camp
+sense canviar la posició de memòria on es troba el camp! Mutabilitat.
+
+.. note:: pots jugar amb els valors de N_FILES i N_COLS però els hauràs de
+          mantenir per poder passar totes les proves.
+
+.. note:: la neteja de pantalla podria no funcionar fora del terminal.
+
