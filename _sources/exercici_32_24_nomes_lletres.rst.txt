@@ -25,7 +25,6 @@ falta el comentari de capçalera!):
     /*
      * ???
      */
-
     public class NomesLletres{
         public static void main(String[] args) {
             System.out.println("Text?");
@@ -45,7 +44,6 @@ compacta:
     /*
      * ???
      */
-
     public class NomesLletres{
         public static void main(String[] args) {
             System.out.println("Text?");

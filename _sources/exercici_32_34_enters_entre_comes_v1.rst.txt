@@ -24,6 +24,7 @@ Et passo una plantilla on hauràs de reemplaçar els valors que apareixen
 .. code-block:: java
     :linenos:
 
+    /*…**/
     public class EntersEntreComes {
         public static void main(String[] args) {
             int[] numeros;

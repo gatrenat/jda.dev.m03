@@ -120,16 +120,15 @@ falta el comentari de capçalera!):</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/*</span>
 <span class="linenos"> 2</span><span class="cm"> * ???</span>
 <span class="linenos"> 3</span><span class="cm"> */</span><span class="w"></span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NomesLletres</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nomesLletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">nomesLletres</span><span class="p">(</span><span class="n">text</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">separades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">lletresSeparades</span><span class="p">(</span><span class="n">nomesLletres</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">separades</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NomesLletres</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text?&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nomesLletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">nomesLletres</span><span class="p">(</span><span class="n">text</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">separades</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">lletresSeparades</span><span class="p">(</span><span class="n">nomesLletres</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">separades</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>T'ha semblat breu? Doncs espera't que t'ofereixo una versió encara més
@@ -137,19 +136,18 @@ compacta:</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/*</span>
 <span class="linenos"> 2</span><span class="cm"> * ???</span>
 <span class="linenos"> 3</span><span class="cm"> */</span><span class="w"></span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NomesLletres</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">                </span><span class="n">UtilString</span><span class="p">.</span><span class="na">lletresSeparades</span><span class="p">(</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">                    </span><span class="n">UtilString</span><span class="p">.</span><span class="na">nomesLletres</span><span class="p">(</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">                        </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">()</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">                        </span><span class="p">)</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">                    </span><span class="p">)</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">                </span><span class="p">);</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">16</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NomesLletres</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text?&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">                </span><span class="n">UtilString</span><span class="p">.</span><span class="na">lletresSeparades</span><span class="p">(</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">                    </span><span class="n">UtilString</span><span class="p">.</span><span class="na">nomesLletres</span><span class="p">(</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">                        </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">                        </span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">                    </span><span class="p">)</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">                </span><span class="p">);</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Ueee! Són realment dues sentències! (compta els <code class="docutils literal notranslate"><span class="pre">;</span></code>)</p>
