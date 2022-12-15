@@ -1,5 +1,5 @@
 ###################################################
-|exerciseicon__T| Exercici 32_42. El tres en ratlla
+|exerciseicon_ST| Exercici 32_42. El tres en ratlla
 ###################################################
 
 .. rubric:: Context
@@ -9,6 +9,8 @@
 * Continguts relacionats: :doc:`arrays_taules`
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
 
 * [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
 
