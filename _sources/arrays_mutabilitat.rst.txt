@@ -5,8 +5,9 @@ Mutabilitat
 Els arrays incorporen una característica que no havíem vist fins ara en
 aquest curs: la **mutabilitat**.
 
-Concentra't, perquè aquest punt pot resultar una mica confós. Si et perds,
-torna a repassar els exemples.
+.. important:: Concentra't, perquè aquest punt pot resultar una mica
+    confós. Si et perds, torna a repassar els exemples. Pot ser-te molt
+    útil fer els teus propis dibuixos a un paper.
 
 Fins ara, quan una variable prenia un valor, aquest roman igual fins que
 la variable pren un altre valor. Sembla tan lògic, que costa d'entendre
@@ -23,6 +24,7 @@ Immutabilitat dels enters
 Considera el cas següent:
 
 .. code-block:: java
+    :linenos:
 
     int edat = 18;
     edat = edat + 1;
@@ -36,6 +38,7 @@ Immutabilitat dels Strings
 A veure què passa amb els Strings
 
 .. code-block:: java
+    :linenos:
 
     String nom = "macarena";
     nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -57,6 +60,7 @@ Això, com sabem, són en realitat dues instruccions, declaració i
 inicialització:
 
 .. code-block:: java
+    :linenos:
 
     // String nom = "macarena";
     String nom;
@@ -66,6 +70,7 @@ inicialització:
 Comencem per la declaració:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2
 
     // String nom = "macarena";
@@ -83,6 +88,7 @@ A continuació, té lloc la inicialització de ``nom`` amb el literal
 ``"macarena"``.
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 3
 
     // String nom = "macarena";
@@ -105,6 +111,7 @@ està emmagatzemat el text ``"macarena"``.
 La següent instrucció és una mica complexa:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2
 
     String nom = "macarena";
@@ -113,6 +120,7 @@ La següent instrucció és una mica complexa:
 Per analitzar-la, la descomposarem també:
 
 .. code-block:: java
+   :linenos:
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
     char tmp1 = nom.charAt(0);
@@ -128,6 +136,7 @@ l'expressió.
 Resolem:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -153,6 +162,7 @@ a la posició de memòria associada a la variable.
 Ara que ja tenim el valor de l'argument, podem fer el següent pas:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 3
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -170,6 +180,7 @@ Java guarda en una nova posició de memòria a la que hem anomenat ``tmp2``.
 Passem a la següent part de l'expressió.
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 4
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -190,6 +201,7 @@ Estem a punt de finalitzar l'avaluació de l'expressió! El darrer pas
 consisteix en concatenar el resultat de les dues subexpressions:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 5
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -215,6 +227,7 @@ resultat guardat temporalment a ``tmp4`` i només queda assignar-lo a
 ``nom``.
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 6
 
     // nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);
@@ -268,6 +281,7 @@ Serà similar amb els arrays?
 Considerem el següent fragment de programa:
 
 .. code-block:: java
+   :linenos:
 
     String nom = "macarena";
     char[] nomChar = nom.toCharArray();
@@ -297,6 +311,7 @@ li assignem el resultat de cridar a una funció anomenada
 ``String.toCharArray()``.
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2
 
     String nom = "macarena";
@@ -332,6 +347,7 @@ Aquesta línia és també una assignació. Com que presenta subexpressions, la
 descomposarem per facilitar l'anàlisi.
 
 .. code-block:: java
+   :linenos:
 
     // nomChar[0] = Character.toUpperCase(nomChar[0]);
     tmp1 = nomChar[0];
@@ -368,6 +384,7 @@ Per tant, ``nomChar[0]`` fa referència a la posició que conté el caràcter
 El següent pas és convertir el caràcter en majúscules:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 3
 
     // nomChar[0] = Character.toUpperCase(nomChar[0]);
@@ -384,6 +401,7 @@ s'assigna a la variable temporal ``tmp2``, la nostra representació de la memòr
 Ja només ens queda assignar el valor de ``tmp2`` a ``nomChar[0]``:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 4
 
     // nomChar[0] = Character.toUpperCase(nomChar[0]);
@@ -406,7 +424,8 @@ Un cop realitzat el canvi, la penúltima línia ha quedat resolta i ja podem
 passar a executar la darrera línia del fragment de codi inicial:
 
 .. code-block:: java
-    :emphasize-lines: 4
+   :linenos:
+   :emphasize-lines: 4
 
     String nom = "macarena";
     char[] nomChar = nom.toCharArray();
@@ -416,6 +435,7 @@ passar a executar la darrera línia del fragment de codi inicial:
 Ho descomposarem novament per fer-ho més comprensible:
 
 .. code-block:: java
+   :linenos:
 
     // nom = new String(nomChar);
     String tmp3 = new String(nomChar);
@@ -424,6 +444,7 @@ Ho descomposarem novament per fer-ho més comprensible:
 Executem la primera d'aquestes sentències:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2
 
     // nom = new String(nomChar);
@@ -449,6 +470,7 @@ majúscules) a la posició ``@3000``.
 Ara assignem aquest valor a ``nom`` i ja estem!
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 3
 
     // nom = new String(nomChar);
@@ -485,6 +507,7 @@ pot ser per modificar algun dels seus paràmetres!
 Considera que tenim la següent funció:
 
 .. code-block:: java
+   :linenos:
 
     /* posa en majúscules la lletra a una determinada posició
      * Finalment retorna true quan s'ha fet algun canvi.
@@ -499,6 +522,7 @@ Ara tornem a posar la inicial de majúscules a Macarena amb el següent
 fragment de codi:
 
 .. code-block:: java
+   :linenos:
 
     String nom = "macarena";
     char[] nomChar = nom.toCharArray();
@@ -515,6 +539,7 @@ Com que fins la segona línia és idèntic al que hem analitzat en la versió
 Així, considerem ja executades les dues primeres línies:
 
 .. code-block:: java
+   :linenos:
 
     String nom = "macarena";
     char[] nomChar = nom.toCharArray();
@@ -529,6 +554,7 @@ La representació de la memòria en aquest moment seria:
 Ens toca ara resoldre la resta del programa:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 3-
 
     String nom = "macarena";
@@ -541,6 +567,7 @@ Com sempre, farem ús de l'explicitació de variables temporals per
 facilitar l'anàlisi. Així, el codi quedaria:
 
 .. code-block:: java
+   :linenos:
 
     boolean tmp1 = majusculitza(nomChar, 0);
     if (tmp1) {
@@ -552,6 +579,7 @@ Recordem el codi de la funció ``majusculitza()`` ja que ara ens
 interessarà analitzar què passa a dins:
 
 .. code-block:: java
+   :linenos:
 
     public static boolean majusculitza(char[] lletres, int posicio) {
         char original = lletres[posicio];
@@ -563,6 +591,7 @@ La crida a ``majusculitza()`` vindria a reemplaçar en la pràctica la
 primera línia de la següent manera:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2, 3, 6
 
     // boolean tmp1 = majusculitza(nomChar, 0);
@@ -581,6 +610,7 @@ En primer lloc farem l'assignació dels valors passats per la crida als
 paràmetres:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2-
 
     // boolean tmp1 = majusculitza(nomChar, 0);
@@ -600,6 +630,7 @@ al mateix array que ``nomChar``.
 La nova instrucció a executar és l'obtenció del valor original a modificar:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 4
 
     // boolean tmp1 = majusculitza(nomChar, 0);
@@ -619,6 +650,7 @@ el valor assignat a la nova variable ``original``.
 Realitzem ara la conversió a majúscules:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 5
 
     // boolean tmp1 = majusculitza(nomChar, 0);
@@ -637,6 +669,7 @@ Executem ara la darrera línia en la que ``tmp1`` ha de contenir si s'ha
 produït algun canvi:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 6
 
     // boolean tmp1 = majusculitza(nomChar, 0);
@@ -667,6 +700,7 @@ especialment com ``lletres[0]`` ha deixat pas a ``nomChar[0]``.
 Ara ja podem continuar amb el fragment de codi original:
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 2-
 
     boolean tmp1 = majusculitza(nomChar, 0);        // assigna true
@@ -680,6 +714,7 @@ estàndard.
 Què passarà, però, amb la darrera línia? Quin valor rebrà ``nom``?
 
 .. code-block:: java
+   :linenos:
    :emphasize-lines: 6
 
     String nom = "macarena";
@@ -730,6 +765,7 @@ següent problema:
 Potser la primera idea seria fer-ho així:
 
 .. code-block:: java
+   :linenos:
 
     int a = 5;
     int b = 10;
@@ -739,6 +775,7 @@ Potser la primera idea seria fer-ho així:
 Amb:
 
 .. code-block:: java
+   :linenos:
 
     public static void intercanvia(int a, int b) {
         int tmp = a;
@@ -757,6 +794,7 @@ Ara que sabem que el problema està en la immutabilitat dels enters i que
 els arrays no són immutables, podem pensar una nova estratègia:
 
 .. code-block:: java
+   :linenos:
 
     public static void intercanvia(int[] aib) {
         int a = aib[0];
@@ -768,6 +806,7 @@ els arrays no són immutables, podem pensar una nova estratègia:
 Per usar-lo farem:
 
 .. code-block:: java
+   :linenos:
 
     int[] aib = {5, 10};
     intercanvia(aib);
@@ -785,7 +824,15 @@ Practiquem el que acabem de veure amb aquests exercicis.
 
 |exerciseicon_ST| :doc:`exercici_32_44_pilota_rebota`
 
-|exerciseicon__T| :doc:`exercici_32_45_formes`
+|exerciseicon__T| :doc:`exercici_32_45_digitart`
+
+|exerciseicon__T| :doc:`exercici_32_46_int2str`
+
+|exerciseicon__T| :doc:`exercici_32_47_inisequencial`
+
+|exerciseicon_ST| :doc:`exercici_32_48_formestaula`
+
+|exerciseicon_ST| :doc:`exercici_32_49_formesplenes`
 
 -----
 

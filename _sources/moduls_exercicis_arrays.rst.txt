@@ -23,4 +23,8 @@ Els exercicis del tema :doc:`arrays` són:
     exercici_32_42_tresenratlla.rst
     exercici_32_43_pilota_cau.rst
     exercici_32_44_pilota_rebota.rst
-    exercici_32_45_formes.rst
+    exercici_32_45_digitart.rst
+    exercici_32_46_int2str.rst
+    exercici_32_47_inisequencial.rst
+    exercici_32_48_formestaula.rst
+    exercici_32_49_formesplenes.rst

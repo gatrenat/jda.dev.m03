@@ -4,7 +4,7 @@
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``32_45_formes/``
+* Carpeta de lliurament: ``32_45_digitart/``
 
 * Continguts relacionats: :doc:`arrays_mutabilitat`
 
@@ -14,23 +14,19 @@
 
 .. rubric:: Enunciat
 
-En aquest exercici iniciarem el desenvolupament d'una llibreria per
-manipular formes.
+En aquest exercici iniciarem el desenvolupament d'una biblioteca que
+anomenarem ``UtilTaula`` amb utilitats per manipular taules.
 
-Com que per simplicitat, en aquest curs estem treballant en mode text,
-aquestes formes estaran representades per taules de caràcters i tindran
-l'aspecte d'aquelles que dibuixàvem en exercicis com el del :doc:`triangle
-<exercici_31_55_triangles>`. En el cas que fossin gràfics reals, però, la
-feina a fer seria molt similar ja que la taula, en comptes de caràcters,
-seria de *pixels*.
+Per començar la nostra biblioteca, desenvoluparem una funció *pura*:
 
-Per aquest exercici, desenvoluparem la funció pura ``substitueix()`` que
-rebrà una taula de N x M caràcters, i dos caràcters ``inici`` i ``fi``, i
-retornarà una altra taula, de les mateixes dimensions, en la que totes les
-ocurrències del caracter ``inici`` apareixeran reemplaçades per ``fi`` i
-la resta de caràcters romandrà igual.
+* ``UtilTaula.substitueix(char[][] taula, char inici, char fi)``
 
-Per exemple, si la taula d'origen fos:
+``substitueix()`` espera una taula de N x M caràcters, i dos caràcters
+``inici`` i ``fi``, i retorna una altra taula, de les mateixes dimensions,
+en la que totes les ocurrències del caracter ``inici`` apareixeran
+reemplaçades per ``fi`` i la resta de caràcters romandrà igual.
+
+Per exemple, si el resultat de convertir a String la taula d'origen fos:
 
 .. code-block:: console
 
@@ -46,9 +42,9 @@ I la crida fos:
 
 .. code-block:: java
 
-    char[][] resultat = UtilFormes.substitueix(origen, 'X', '2');
+    char[][] resultat = UtilTaula.substitueix(origen, 'X', '2');
 
-El resultat seria:
+Ens quedaria:
 
 .. code-block:: console
 
@@ -60,12 +56,11 @@ El resultat seria:
    ·2222·
    ······
 
-La funció ``substitueix()`` pressuposa que la taula d'origen és
-és rectangular, és a dir, totes les files tenen el mateix nombre de
-columnes. A més, si les dimensions són N x M, tant N com M seran com a
-mínim 1.
+La funció ``substitueix()`` pressuposa que la taula d'origen és és
+rectangular, és a dir, totes les files tenen el mateix nombre de columnes.
+A més, si les dimensions són N x M, tant N com M seran com a mínim 1.
 
-Per provar aquesta funció, completarem el programa següent:
+Per provar aquesta funció, completa el programa següent:
 
 .. code-block:: java
    :linenos:
@@ -113,7 +108,7 @@ Per provar aquesta funció, completarem el programa següent:
                           break;
                 default: return;    // no conec aquest caràcter
             }
-            char[][] desti = UtilFormes.substitueix(origen, 'X', ch);
+            char[][] desti = UtilTaula.substitueix(origen, 'X', ch);
             mostraResultat(origen, desti);
             System.out.println();
         }
@@ -159,7 +154,6 @@ Considera la següent simulació:
     ·XXXX· -> ·3333·
     ······ -> ······
 
-
-**Nota**: els jocs de prova estan dissenyats per permetre que completis el
-teu programa amb la resta dels dígits. És opcional, però si sents la
-necessitat de completar el programa, tu manes!
+**Nota**: els jocs de prova d'aquest exercici estan dissenyats per
+permetre que completis el teu programa amb la resta dels dígits. És
+opcional, però si sents la necessitat de completar el programa, tu manes!

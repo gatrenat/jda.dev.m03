@@ -7,6 +7,7 @@ A Java podem definir un array de diferents tipus de dades.
 Per exemple:
 
 .. code-block:: java
+    :linenos:
 
     char[] vocalsLlatines = {'a', 'e', 'i', 'o', 'u' };
     String[] colors = { "vermell", "groc", "verd" };
@@ -83,6 +84,7 @@ Una possibilitat fent servir el que ja coneixem és definir un array de
 caràcters per cadascuna de les tres files:
 
 .. code-block:: java
+    :linenos:
 
     char[] fila0 = new char[3];
     char[] fila1 = new char[3];
@@ -149,6 +151,7 @@ columna 2 s'indicaria amb ``taulell[1][2]``.
 Així, podem assignar i consultar el valor d'aquesta posició:
 
 .. code-block:: java
+    :linenos:
 
     taulell[1][2] = 'X';
     System.out.printf("La casella [%d, %d] està marcada com '%c'%n", 1, 2, taulell[1][2]);
@@ -227,6 +230,7 @@ columna 2 amb una expressió.
 Sí podem, però, recórrer totes les ceŀles de la columna:
 
 .. code-block:: java
+    :linenos:
 
     for (int fila = 0; fila < 3; fila ++) {
         taulell[fila][2] = '·';
@@ -243,6 +247,7 @@ Què passaria si el que volem és inicialitzar tot el taulell com buit?
 Doncs haurem de recòrrer totes les columnes de cada fila:
 
 .. code-block:: java
+    :linenos:
 
     for (int fila = 0; fila < 3; fila++) {
         for (int columna = 0; columna < 3; columna++) {
@@ -253,6 +258,7 @@ Doncs haurem de recòrrer totes les columnes de cada fila:
 I si volem mostrar el taulell?
 
 .. code-block:: java
+    :linenos:
 
     for (int fila = 0; fila < 3; fila++) {
         for (int columna = 0; columna < 3; columna ++) {
@@ -272,7 +278,7 @@ Per descomptat, amb tot el taulell buit, ens mostrarà un quadrat de punts:
 Si bé no queda tan maco en mode text, aquesta representació ens
 permet continuar treballant amb la sortida estàndard de Java.
 
-|exerciseicon__T| :doc:`exercici_32_42_tresenratlla`
+|exerciseicon_ST| :doc:`exercici_32_42_tresenratlla`
 
 Varietat en els arrays d'arrays
 ===============================
@@ -299,42 +305,11 @@ Quan el nombre de columnes és diferent entre files
 --------------------------------------------------
 
 Per exemple, considera una estructura que guardi els noms dels fills dels
-diferents empleats de la companyia. Si tenim 100 empleats, i l'empleat 5
-en té 3, l'empleada 12 cap i l'empleada 21 en té un, ho podríem codificar
-tot plegat com:
+diferents empleats de la companyia. Suposem que la companyia pot tenir
+fins a 100 empleats, i l'empleat 5 en té 3, l'empleada 12 cap i l'empleada
+21 en té un.
 
-Per exemple, considera el següent codi:
-
-.. code-block:: java
-
-  public class Fills {
-       public static void main(String[] args){
-            String[][] fillsEmpleats= new String[100][];    // empleats x fills
-            fillsEmpleats[5] = new String[] {"Daphne", "Velma", "Fred"};
-            fillsEmpleats[12] = new String[] {};
-            fillsEmpleats[21] = new String[] {"Shaggy"};
-
-            for (int empleat = 0; empleat < fillsEmpleats.length; empleat++) {
-                if (null == fillsEmpleats[empleat]) continue;
-                System.out.print("Empleat " + empleat + " ");
-                String[] fillsEmpleat = fillsEmpleats[empleat];
-                if (fillsEmpleat.length == 0) {
-                    System.out.println("no en té");
-                    continue;
-                }
-                System.out.print("té " + fillsEmpleat[0]);
-                for (int fill = 1; fill < fillsEmpleat.length -1; fill++) {
-                    System.out.print(", " + fillsEmpleat[fill]);
-                }
-                if (fillsEmpleat.length > 1) {
-                    System.out.print(" i " + fillsEmpleat[fillsEmpleat.length - 1]);
-                }
-                System.out.println();
-            }
-       }
-  }
-
-Aquest codi generarà la sortida:
+Un programa que mostrés aquestes dades, podria tenir aquesta sortida:
 
 .. code-block:: console
 
@@ -342,6 +317,38 @@ Aquest codi generarà la sortida:
      Empleat 5 té Daphne, Velma i Fred
      Empleat 12 no en té
      Empleat 21 té Shaggy
+
+El programa podria ser implementat de la següent manera:
+
+.. code-block:: java
+    :linenos:
+
+    public class Fills {
+         public static void main(String[] args){
+              String[][] fillsEmpleats= new String[100][];    // empleats x fills
+              fillsEmpleats[5] = new String[] {"Daphne", "Velma", "Fred"};
+              fillsEmpleats[12] = new String[] {};
+              fillsEmpleats[21] = new String[] {"Shaggy"};
+
+              for (int empleat = 0; empleat < fillsEmpleats.length; empleat++) {
+                  if (null == fillsEmpleats[empleat]) continue;
+                  System.out.print("Empleat " + empleat + " ");
+                  String[] fillsEmpleat = fillsEmpleats[empleat];
+                  if (fillsEmpleat.length == 0) {
+                      System.out.println("no en té");
+                      continue;
+                  }
+                  System.out.print("té " + fillsEmpleat[0]);
+                  for (int fill = 1; fill < fillsEmpleat.length -1; fill++) {
+                      System.out.print(", " + fillsEmpleat[fill]);
+                  }
+                  if (fillsEmpleat.length > 1) {
+                      System.out.print(" i " + fillsEmpleat[fillsEmpleat.length - 1]);
+                  }
+                  System.out.println();
+              }
+         }
+    }
 
 
 Quan hi ha més de dues dimensions
@@ -371,6 +378,7 @@ Per saber la nota nr. 3 de l'alumne nr 22 del curs nr 5 faríem:
 I per recórrer tots els valors faríem:
 
 .. code-block:: java
+    :linenos:
 
     for (int curs=0; curs < notes.length; curs++) {
         for (int alumne=0; alumne < notes[curs].length; alumne++) {

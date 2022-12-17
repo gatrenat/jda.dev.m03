@@ -25,7 +25,7 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="next" title="Exercici 32_46. Taula d&#39;enters a String" href="exercici_32_46_int2str.html" />
     <link rel="prev" title="Exercici 32_44. La pilota que rebota" href="exercici_32_44_pilota_rebota.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
@@ -73,6 +73,10 @@
 <li class="toctree-l4"><a class="reference internal" href="exercici_32_43_pilota_cau.html"> Exercici 32_43. La pilota que cau</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_32_44_pilota_rebota.html"> Exercici 32_44. La pilota que rebota</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 32_45. Transformació de formes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_46_int2str.html"> Exercici 32_46. Taula d'enters a String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_47_inisequencial.html"> Exercici 32_47. Inicialització seqüencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_48_formestaula.html"> Exercici 32_48. Formes entaulades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_49_formesplenes.html"> Exercici 32_49. Formes plenes</a></li>
 </ul>
 </li>
 </ul>
@@ -102,7 +106,10 @@
       <li class="breadcrumb-item active"> Exercici 32_45. Transformació de formes</li>
       <li class="wy-breadcrumbs-aside">
       </li>
-  </ul>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="exercici_32_44_pilota_rebota.html" class="btn btn-neutral float-left" title="Exercici 32_44. La pilota que rebota" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_32_46_int2str.html" class="btn btn-neutral float-right" title="Exercici 32_46. Taula d&#39;enters a String" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -113,25 +120,23 @@
 <h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 32_45. Transformació de formes<a class="headerlink" href="#exerciseicon-t-exercici-32-45-transformacio-de-formes" title="Permalink to this heading"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_45_formes/</span></code></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_45_digitart/</span></code></p></li>
 <li><p>Continguts relacionats: <a class="reference internal" href="arrays_mutabilitat.html"><span class="doc">Mutabilitat</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>En aquest exercici iniciarem el desenvolupament d'una llibreria per
-manipular formes.</p>
-<p>Com que per simplicitat, en aquest curs estem treballant en mode text,
-aquestes formes estaran representades per taules de caràcters i tindran
-l'aspecte d'aquelles que dibuixàvem en exercicis com el del <a class="reference internal" href="exercici_31_55_triangles.html"><span class="doc">triangle</span></a>. En el cas que fossin gràfics reals, però, la
-feina a fer seria molt similar ja que la taula, en comptes de caràcters,
-seria de <em>pixels</em>.</p>
-<p>Per aquest exercici, desenvoluparem la funció pura <code class="docutils literal notranslate"><span class="pre">substitueix()</span></code> que
-rebrà una taula de N x M caràcters, i dos caràcters <code class="docutils literal notranslate"><span class="pre">inici</span></code> i <code class="docutils literal notranslate"><span class="pre">fi</span></code>, i
-retornarà una altra taula, de les mateixes dimensions, en la que totes les
-ocurrències del caracter <code class="docutils literal notranslate"><span class="pre">inici</span></code> apareixeran reemplaçades per <code class="docutils literal notranslate"><span class="pre">fi</span></code> i
-la resta de caràcters romandrà igual.</p>
-<p>Per exemple, si la taula d'origen fos:</p>
+<p>En aquest exercici iniciarem el desenvolupament d'una biblioteca que
+anomenarem <code class="docutils literal notranslate"><span class="pre">UtilTaula</span></code> amb utilitats per manipular taules.</p>
+<p>Per començar la nostra biblioteca, desenvoluparem una funció <em>pura</em>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">UtilTaula.substitueix(char[][]</span> <span class="pre">taula,</span> <span class="pre">char</span> <span class="pre">inici,</span> <span class="pre">char</span> <span class="pre">fi)</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">substitueix()</span></code> espera una taula de N x M caràcters, i dos caràcters
+<code class="docutils literal notranslate"><span class="pre">inici</span></code> i <code class="docutils literal notranslate"><span class="pre">fi</span></code>, i retorna una altra taula, de les mateixes dimensions,
+en la que totes les ocurrències del caracter <code class="docutils literal notranslate"><span class="pre">inici</span></code> apareixeran
+reemplaçades per <code class="docutils literal notranslate"><span class="pre">fi</span></code> i la resta de caràcters romandrà igual.</p>
+<p>Per exemple, si el resultat de convertir a String la taula d'origen fos:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">······</span>
 <span class="go">·XXXX·</span>
 <span class="go">····X·</span>
@@ -142,10 +147,10 @@ la resta de caràcters romandrà igual.</p>
 </pre></div>
 </div>
 <p>I la crida fos:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilFormes</span><span class="p">.</span><span class="na">substitueix</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;2&#39;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilTaula</span><span class="p">.</span><span class="na">substitueix</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;2&#39;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>El resultat seria:</p>
+<p>Ens quedaria:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">······</span>
 <span class="go">·2222·</span>
 <span class="go">····2·</span>
@@ -155,11 +160,10 @@ la resta de caràcters romandrà igual.</p>
 <span class="go">······</span>
 </pre></div>
 </div>
-<p>La funció <code class="docutils literal notranslate"><span class="pre">substitueix()</span></code> pressuposa que la taula d'origen és
-és rectangular, és a dir, totes les files tenen el mateix nombre de
-columnes. A més, si les dimensions són N x M, tant N com M seran com a
-mínim 1.</p>
-<p>Per provar aquesta funció, completarem el programa següent:</p>
+<p>La funció <code class="docutils literal notranslate"><span class="pre">substitueix()</span></code> pressuposa que la taula d'origen és és
+rectangular, és a dir, totes les files tenen el mateix nombre de columnes.
+A més, si les dimensions són N x M, tant N com M seran com a mínim 1.</p>
+<p>Per provar aquesta funció, completa el programa següent:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/* XXX */</span><span class="w"></span>
 <span class="linenos"> 2</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DigitArt</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos"> 3</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="nf">construeix1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -203,7 +207,7 @@ mínim 1.</p>
 <span class="linenos">41</span><span class="w">                       </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
 <span class="linenos">42</span><span class="w">             </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w">    </span><span class="c1">// no conec aquest caràcter</span><span class="w"></span>
 <span class="linenos">43</span><span class="w">         </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">         </span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="n">desti</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilFormes</span><span class="p">.</span><span class="na">substitueix</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">44</span><span class="w">         </span><span class="kt">char</span><span class="o">[][]</span><span class="w"> </span><span class="n">desti</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilTaula</span><span class="p">.</span><span class="na">substitueix</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">45</span><span class="w">         </span><span class="n">mostraResultat</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span><span class="w"> </span><span class="n">desti</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">46</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w"></span>
 <span class="linenos">47</span><span class="w">     </span><span class="p">}</span><span class="w"></span>
@@ -246,9 +250,9 @@ mínim 1.</p>
 </span><span class="hll"><span class="go">······ -&gt; ······</span>
 </span></pre></div>
 </div>
-<p><strong>Nota</strong>: els jocs de prova estan dissenyats per permetre que completis el
-teu programa amb la resta dels dígits. És opcional, però si sents la
-necessitat de completar el programa, tu manes!</p>
+<p><strong>Nota</strong>: els jocs de prova d'aquest exercici estan dissenyats per
+permetre que completis el teu programa amb la resta dels dígits. És
+opcional, però si sents la necessitat de completar el programa, tu manes!</p>
 </section>
 
 
@@ -279,7 +283,7 @@ necessitat de completar el programa, tu manes!</p>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="exercici_32_44_pilota_rebota.html" class="btn btn-neutral float-left" title="Exercici 32_44. La pilota que rebota" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_32_46_int2str.html" class="btn btn-neutral float-right" title="Exercici 32_46. Taula d&#39;enters a String" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

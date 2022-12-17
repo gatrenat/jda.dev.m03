@@ -1,0 +1,70 @@
+###########################################################
+|exerciseicon__T| Exercici 32_47. Inicialització seqüencial
+###########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_47_inisequencial/``
+
+* Continguts relacionats: :doc:`arrays_mutabilitat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+L'exercici :doc:`anterior <exercici_32_46_int2str>` inicialitza la taula
+de manera molt senzilla. 
+En aquesta ocasió farem unes petites modificacions perquè faci una mica
+més de patxoca.
+
+En comptes de ``UtilTaula.inicialitzaTaula()``, farà servir el
+procediment ``UtilTaula.inicialitzaSequencial(int[][] taula, int
+valorInicial)`` que inicialitzarà les posicions de la taula que rep amb
+valors seqüencials a partir d'un donat.
+
+Aquesta nova versió de ``TaulaEnterAString`` mostrarà les taules de la
+mateixa manera que l'anterior. La diferència estarà en com les
+inicialitzarà. Per la primera especificació
+
+Considera la següent simulació:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java TaulaEnterAString 3x4
+
+    3x4
+              1        2        3        4
+              5        6        7        8
+              9       10       11       12
+
+Quan hi ha més especificacions, les successives taules començaran pel
+números correlatius. 
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java TaulaEnterAString 3x4 2x2 123x4 3x2
+
+    3x4
+              1        2        3        4
+              5        6        7        8
+              9       10       11       12
+
+    2x2
+              2         3
+              4         5
+
+    123x4
+    Especificació no vàlida
+
+    3x2
+              3        4
+              5        6
+              7        8
+
+Fixa't com, a aquesta execució, la primera taula comença per 1 la segona
+pel 2. Com que la tercera és una especificació errònia, la darrera taula
+comença per 3 en comptes de 4.
