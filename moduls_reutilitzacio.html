@@ -19,7 +19,6 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="Quant a aquests documents" href="about.html" />
@@ -84,10 +83,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
-          <li class="breadcrumb-item"><a href="moduls_funcions.html">Funcions</a></li>
-      <li class="breadcrumb-item active">Reutilització dels mòduls</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
+          <li><a href="moduls_funcions.html">Funcions</a> &raquo;</li>
+      <li>Reutilització dels mòduls</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
@@ -218,17 +217,21 @@ funcionar-te simplement col·locant <code class="docutils literal notranslate"><
 <span class="hll"><span class="go">Sàvia resposta. De totes maneres la destrucció del món és una tasca que ja estem fent entre tots!</span>
 </span></pre></div>
 </div>
-<p>Ara que ja tenim més d'un fitxer en joc, és possible que <code class="docutils literal notranslate"><span class="pre">javac</span></code> no
-sempre sàpiga compilar el que cal. Et recomano que, de moment, facis com a
+<p>Ara que ja tenim més d'un fitxer en joc, podrem trobar situacions en les
+que <code class="docutils literal notranslate"><span class="pre">java</span></code> no disposi de la darrera versió compilada de tots els
+fitxers.  Per exemple, imagina que compiles <code class="docutils literal notranslate"><span class="pre">AutodestruccioTotal.java</span></code>.
+<code class="docutils literal notranslate"><span class="pre">javac</span></code> farà la compilació de <code class="docutils literal notranslate"><span class="pre">Autodestruccio.java</span></code> si aquest ha
+canviat. Tot correcte, però, si en aquest moment modifiquem
+<code class="docutils literal notranslate"><span class="pre">Autodestruccio.java</span></code> i no el recompilem, en intentar executar
+<code class="docutils literal notranslate"><span class="pre">AutodestruccioTotal</span></code>, es farà servir la versió anterior de
+<code class="docutils literal notranslate"><span class="pre">Autodestruccio.class</span></code>, sense els nous canvis.  Per evitar sorpreses,
+cada cop que modifiquis un fitxer, et recomano que, de moment, facis com a
 l'exemple i indiquis a <code class="docutils literal notranslate"><span class="pre">javac</span></code> tots els fitxers font a compilar. Sovint
-amb <code class="docutils literal notranslate"><span class="pre">javac</span> <span class="pre">*.java</span></code> ja faràs si tot el codi que tens a la
-carpeta és vàlid.</p>
-<p>Tot i que també funcionaria, no et recomano que facis un <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">*.class</span></code>
-abans de compilar, ja que, si bé tornarà a recompilar-ho tot, corres el
-risc d'equivocar-te i esborrar accidentalment altres fitxers.</p>
-<p>Tot plegat funciona gràcies a la variable d'entorn anomenada <code class="docutils literal notranslate"><span class="pre">CLASSPATH</span></code>
-i les paraules <code class="docutils literal notranslate"><span class="pre">public</span></code> i <code class="docutils literal notranslate"><span class="pre">static</span></code>.  De moment no ens preocuparem amb
-aquest temes.</p>
+amb <code class="docutils literal notranslate"><span class="pre">javac</span> <span class="pre">*.java</span></code> ja faràs si tot el codi que tens a la carpeta és
+vàlid.</p>
+<p>Com troben <code class="docutils literal notranslate"><span class="pre">javac</span></code> i <code class="docutils literal notranslate"><span class="pre">java</span></code> els altres programes? Tot plegat funciona
+gràcies a la variable d'entorn anomenada <code class="docutils literal notranslate"><span class="pre">CLASSPATH</span></code> i les paraules
+<code class="docutils literal notranslate"><span class="pre">public</span></code> i <code class="docutils literal notranslate"><span class="pre">static</span></code>.  De moment no ens preocuparem amb aquest temes.</p>
 </section>
 
 

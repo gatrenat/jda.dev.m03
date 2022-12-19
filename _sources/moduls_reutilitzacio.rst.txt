@@ -134,16 +134,19 @@ funcionar-te simplement col·locant ``AutodestruccioTotal.java`` i
     val d'acord, no, però deixa de preguntar
     Sàvia resposta. De totes maneres la destrucció del món és una tasca que ja estem fent entre tots!
 
-Ara que ja tenim més d'un fitxer en joc, és possible que ``javac`` no
-sempre sàpiga compilar el que cal. Et recomano que, de moment, facis com a
+Ara que ja tenim més d'un fitxer en joc, podrem trobar situacions en les
+que ``java`` no disposi de la darrera versió compilada de tots els
+fitxers.  Per exemple, imagina que compiles ``AutodestruccioTotal.java``.
+``javac`` farà la compilació de ``Autodestruccio.java`` si aquest ha
+canviat. Tot correcte, però, si en aquest moment modifiquem
+``Autodestruccio.java`` i no el recompilem, en intentar executar
+``AutodestruccioTotal``, es farà servir la versió anterior de
+``Autodestruccio.class``, sense els nous canvis.  Per evitar sorpreses,
+cada cop que modifiquis un fitxer, et recomano que, de moment, facis com a
 l'exemple i indiquis a ``javac`` tots els fitxers font a compilar. Sovint
-amb ``javac *.java`` ja faràs si tot el codi que tens a la
-carpeta és vàlid.
+amb ``javac *.java`` ja faràs si tot el codi que tens a la carpeta és
+vàlid.
 
-Tot i que també funcionaria, no et recomano que facis un ``rm *.class``
-abans de compilar, ja que, si bé tornarà a recompilar-ho tot, corres el
-risc d'equivocar-te i esborrar accidentalment altres fitxers.
-
-Tot plegat funciona gràcies a la variable d'entorn anomenada ``CLASSPATH``
-i les paraules ``public`` i ``static``.  De moment no ens preocuparem amb
-aquest temes.
+Com troben ``javac`` i ``java`` els altres programes? Tot plegat funciona
+gràcies a la variable d'entorn anomenada ``CLASSPATH`` i les paraules
+``public`` i ``static``.  De moment no ens preocuparem amb aquest temes.
