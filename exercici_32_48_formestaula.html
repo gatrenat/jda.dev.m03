@@ -169,12 +169,12 @@ forma o bé aquesta no es coneix, el programa mostrarà una taula tota
 inicialitzada a fals.</p>
 <p>La següent simulació mostra aquests dos casos:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java Formes <span class="s1">&#39;5x6\&#39;</span> <span class="s1">&#39;0x6\&#39;</span> 4x3
-<span class="hll"><span class="go">5x6*\</span>
+<span class="hll"><span class="go">5x6\</span>
 </span><span class="hll"><span class="go">X.....</span>
-</span><span class="hll"><span class="go">XX....</span>
-</span><span class="hll"><span class="go">XXX...</span>
-</span><span class="hll"><span class="go">XXXX..</span>
-</span><span class="hll"><span class="go">XXXXX.</span>
+</span><span class="hll"><span class="go">·X....</span>
+</span><span class="hll"><span class="go">··X...</span>
+</span><span class="hll"><span class="go">···X..</span>
+</span><span class="hll"><span class="go">····X.</span>
 </span><span class="hll">
 </span><span class="hll"><span class="go">0x6\</span>
 </span><span class="hll"><span class="go">Especificació errònia</span>
@@ -308,13 +308,13 @@ Això implicarà que per algunes dimensions, no semblarà pas una <code class="d
 com al següent exemple, més aviat una <code class="docutils literal notranslate"><span class="pre">V</span></code>, mentre que per d'altres
 quedaran línies en blanc al final.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>7x7x                     3x5x                7x5x
-x·····x                  x···x               X···X
-·x···x·                  .x.x.               ·X·X·
-··x·x··                  ..x..               ··X··
-·x···x·                                      ·X·X·
-x·····x                                      X···X
-                                             ·····
-                                             ·····
+X·····X                  X···X               X···X
+·X···X·                  .X.X.               ·X·X·
+··X·X··                  ..X..               ··X··
+···X···                                      ·X·X·
+··X·X··                                      X···X
+·X···X·                                      ·····
+X·····X                                      ·····
 </pre></div>
 </div>
 </li>

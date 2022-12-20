@@ -79,12 +79,12 @@ La següent simulació mostra aquests dos casos:
    :emphasize-lines: 2-
 
    $ java Formes '5x6\' '0x6\' 4x3
-   5x6*\
+   5x6\
    X.....
-   XX....
-   XXX...
-   XXXX..
-   XXXXX.
+   ·X....
+   ··X...
+   ···X..
+   ····X.
 
    0x6\
    Especificació errònia
@@ -251,13 +251,25 @@ Es requereixen els següents mòduls:
   .. code-block:: none
 
      7x7x                     3x5x                7x5x
-     x·····x                  x···x               X···X
-     ·x···x·                  .x.x.               ·X·X·
-     ··x·x··                  ..x..               ··X··
-     ·x···x·                                      ·X·X·
-     x·····x                                      X···X
-                                                  ·····
-                                                  ·····
+     X·····X                  X···X               X···X
+     ·X···X·                  .X.X.               ·X·X·
+     ··X·X··                  ..X..               ··X··
+     ···X···                                      ·X·X·
+     ··X·X··                                      X···X
+     ·X···X·                                      ·····
+     X·····X                                      ·····
+
+
+
+
+
+
+
+
+
+
+
+
 
 * ``UtilTaula.inicialitzaPasVianants(boolean[][])``: per ``=``
 
