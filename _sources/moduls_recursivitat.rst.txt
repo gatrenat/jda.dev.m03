@@ -276,7 +276,7 @@ no lletres.
    │   │   │   ├── lletresRestaText = quantesLletres("c")
    │   │   │   │   ├── ! "c".isEmpty() 
    │   │   │   │   ├── primer = 'c'
-   │   │   │   │   ├── lletresPrimerCaracter = 0
+   │   │   │   │   ├── lletresPrimerCaracter = 1
    │   │   │   │   ├── restaText = ""
    │   │   │   │   ├── lletresRestaText = quantesLletres("")
    │   │   │   │   │   └── "".isEmpty() // retorna 0
