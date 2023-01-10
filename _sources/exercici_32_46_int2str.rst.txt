@@ -70,7 +70,6 @@ La plantilla del programa és la següent:
             /*…*/
         }
 
-
         public static int obteColumnes(String especificacio) {
             /* Aquesta funció espera l'especificació de la forma d'una taula.
              * En cas que l'especificació sigui correcta, retornarà l'enter

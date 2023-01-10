@@ -279,19 +279,19 @@ no lletres.
    │   │   │   │   ├── lletresPrimerCaracter = 1
    │   │   │   │   ├── restaText = ""
    │   │   │   │   ├── lletresRestaText = quantesLletres("")
-   │   │   │   │   │   └── "".isEmpty() // retorna 0
+   │   │   │   │   │   └── "".isEmpty()             // retorna 0
    │   │   │   │   ├── lletresRestaText = 0
-   │   │   │   │   ├── total = 1 + 0 // lletresPrimerCaracter + lletresRestaText
-   │   │   │   │   └── return 1
+   │   │   │   │   ├── total = 1 + 0                // lletresPrimerCaracter + lletresRestaText
+   │   │   │   │   └── return 1                     // fi de la crida "c"
    │   │   │   ├── lletresRestaText = 1
    │   │   │   ├── total = 0 + 1
-   │   │   │   └── return 1
-   │   │   ├── lletresRestaText = 0
+   │   │   │   └── return 1                         // fi de la crida "=c"
+   │   │   ├── lletresRestaText = 1
    │   │   ├── total = 1 + 1
-   │   │   └── return 2
+   │   │   └── return 2                             // fi de la crida "b=c"
    │   ├── lletresRestaText = 2
    │   ├── total = 0 + 2
-   │   └── return 2
+   │   └── return 2                                 // fi de la crida "+b=c"
    ├── lletresRestaText = 2
    ├── total = 1 + 2
    └── return 3
