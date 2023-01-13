@@ -25,6 +25,9 @@ seguits:
 - una especificació de dimensió com la que ja hem vist a exercicis com
   :doc:`aquest<exercici_32_46_int2str>`
 
+  Com a recordatori, l'especificació de dimensió està formada per dos
+  números del 1 al 99, separades amb un caràcter ``'x'``.
+
 - una especificació de forma
 
 L'especificació de forma consisteix en un text amb un dels següents:

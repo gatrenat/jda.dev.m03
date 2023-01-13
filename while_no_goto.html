@@ -1,47 +1,26 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ca" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Bucles &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
@@ -52,45 +31,18 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
-          
-
-          
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
               <div class="version">
                 Curs 2022-23
               </div>
-            
-          
-
-          
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a><ul class="current">
@@ -123,85 +75,37 @@
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Introducció a la programació amb Java</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="basics.html">Elements bàsics de la programació</a> &raquo;</li>
-        
-          <li><a href="while.html">Bucles condicionals</a> &raquo;</li>
-        
-      <li>Bucles</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
+          <li class="breadcrumb-item"><a href="while.html">Bucles condicionals</a></li>
+      <li class="breadcrumb-item active">Bucles</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="while_redundancia.html" class="btn btn-neutral float-right" title="Codi duplicat" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="while_cas_general.html" class="btn btn-neutral float-left" title="Plantegem ja el cas general" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="while_redundancia.html" class="btn btn-neutral float-right" title="Codi duplicat" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
     
            <div itemprop="articleBody">
-            
-  <section id="bucles">
-<h1>Bucles<a class="headerlink" href="#bucles" title="Permalink to this heading">¶</a></h1>
+             
+  <div class="section" id="bucles">
+<h1>Bucles<a class="headerlink" href="#bucles" title="Permalink to this heading"></a></h1>
 <p>Com hem vist, el que ens caldria és poder tornar a executar una línia que
 ja hem executat.</p>
 <p>En programació estructurada no està permès saltar d'una
@@ -247,28 +151,28 @@ realitat és anar llegint i sumant valors <strong>mentre</strong> ens introdueix
 valors positius. Aquí la paraula clau, evidentment, és el <em>mentre</em>
 (<em>while</em> en anglès)</p>
 <p>A veure que et sembla el següent codi</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumaPositius</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SumaPositius</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="c1">// creem la variable on guardarem el resultat de sumar</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// inicialment no hem sumat res i per tant és 0</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="c1">// creem la variable on guardarem el resultat de sumar</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// inicialment no hem sumat res i per tant és 0</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// demana el primer valor</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix valor&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="c1">// demana el primer valor</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix valor&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="w">        </span><span class="c1">// ves sumant mentre el valor sigui positiu</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">            </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">            </span><span class="c1">// demana un nou valor</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix valor&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">            </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// ves sumant mentre el valor sigui positiu</span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">suma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">            </span><span class="c1">// demana un nou valor</span>
+<span class="linenos">15</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix valor&quot;</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">            </span><span class="n">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos">17</span><span class="w">        </span><span class="p">}</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span><span class="w">        </span><span class="c1">// mostrem el resultat</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La suma és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="c1">// mostrem el resultat</span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La suma és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">suma</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">22</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>La clau està en la línia 12. Allà hi trobem que en comptes de <code class="docutils literal notranslate"><span class="pre">if</span></code> ara
@@ -288,17 +192,16 @@ continuarà fins el final.</p></li>
 </ul>
 <p>Fixa't que l'estructura del <code class="docutils literal notranslate"><span class="pre">while</span></code> és molt semblant a la del <code class="docutils literal notranslate"><span class="pre">if</span></code>
 excepte que el <code class="docutils literal notranslate"><span class="pre">while</span></code> en Java no té <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                     </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">instruccions</span><span class="p">;</span><span class="w">                       </span><span class="n">instruccions</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w">                                   </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                     </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">condicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">instruccions</span><span class="p">;</span><span class="w">                       </span><span class="n">instruccions</span><span class="p">;</span>
+<span class="p">}</span><span class="w">                                   </span><span class="p">}</span>
 </pre></div>
 </div>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_32_sumanotes.html"><span class="doc"> Exercici 31_32. Suma notes</span></a></p>
-</section>
+</div>
 
 
            </div>
-           
           </div>
     <div class="googleanalytics">
     <div id="cookiesbox">
@@ -323,40 +226,29 @@ excepte que el <code class="docutils literal notranslate"><span class="pre">whil
 </div>
 
 
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="while_redundancia.html" class="btn btn-neutral float-right" title="Codi duplicat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="while_cas_general.html" class="btn btn-neutral float-left" title="Plantegem ja el cas general" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="while_redundancia.html" class="btn btn-neutral float-right" title="Codi duplicat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022-2023 Moisès Gómez Girón.
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

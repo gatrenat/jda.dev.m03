@@ -1,47 +1,26 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ca" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Reutilització dels mòduls &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
@@ -52,45 +31,18 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
-          
-
-          
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
               <div class="version">
                 Curs 2022-23
               </div>
-            
-          
-
-          
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
@@ -120,85 +72,37 @@
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Introducció a la programació amb Java</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
-        
-          <li><a href="moduls_funcions.html">Funcions</a> &raquo;</li>
-        
-      <li>Reutilització dels mòduls</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
+          <li class="breadcrumb-item"><a href="moduls_funcions.html">Funcions</a></li>
+      <li class="breadcrumb-item active">Reutilització dels mòduls</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="moduls_biblioteques.html" class="btn btn-neutral float-right" title="La meva biblioteca" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="funcions_collaterals.html" class="btn btn-neutral float-left" title="Efectes col·laterals" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="moduls_biblioteques.html" class="btn btn-neutral float-right" title="La meva biblioteca" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
     
            <div itemprop="articleBody">
-            
-  <section id="reutilitzacio-dels-moduls">
-<h1>Reutilització dels mòduls<a class="headerlink" href="#reutilitzacio-dels-moduls" title="Permalink to this heading">¶</a></h1>
+             
+  <div class="section" id="reutilitzacio-dels-moduls">
+<h1>Reutilització dels mòduls<a class="headerlink" href="#reutilitzacio-dels-moduls" title="Permalink to this heading"></a></h1>
 <p>Ara ja tenim una visió prou completa dels mòduls i sabem que els que ens
 ofereix Java (ex. <code class="docutils literal notranslate"><span class="pre">length()</span></code> dels Strings) els podem utilitzar en tots
 els nostres programes.</p>
@@ -217,25 +121,25 @@ Per exemple:</p>
 <span class="linenos"> 3</span><span class="cm"> * Abans de fer res, demana confirmació als usuaris.</span>
 <span class="linenos"> 4</span><span class="cm"> * Nota: per si algun usuari acaba confirmant, ha estat un plaer</span>
 <span class="linenos"> 5</span><span class="cm"> * conèixer-te</span>
-<span class="linenos"> 6</span><span class="cm"> */</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AutodestruccioTotal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estic apunt de destruir el món. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">                           </span><span class="s">&quot;Estàs d&#39;acord?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">            </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">respostaABoolean</span><span class="p">(</span><span class="n">resposta</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mira que és una decisió definitiva. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">                                   </span><span class="s">&quot;Segur que vols?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">                </span><span class="s">&quot;Sàvia resposta. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">                </span><span class="s">&quot;De totes maneres la destrucció del món és una tasca que &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">                </span><span class="s">&quot;ja estem fent entre tots!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="cm"> */</span>
+<span class="linenos"> 7</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AutodestruccioTotal</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estic apunt de destruir el món. &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">10</span><span class="w">                           </span><span class="s">&quot;Estàs d&#39;acord?&quot;</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">13</span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="linenos">14</span><span class="w">            </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">respostaABoolean</span><span class="p">(</span><span class="n">resposta</span><span class="p">);</span>
+<span class="linenos">15</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">16</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mira que és una decisió definitiva. &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">17</span><span class="w">                                   </span><span class="s">&quot;Segur que vols?&quot;</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+<span class="linenos">21</span><span class="w">                </span><span class="s">&quot;Sàvia resposta. &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">22</span><span class="w">                </span><span class="s">&quot;De totes maneres la destrucció del món és una tasca que &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">23</span><span class="w">                </span><span class="s">&quot;ja estem fent entre tots!&quot;</span><span class="p">);</span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span>
 <span class="linenos">25</span>
 <span class="linenos">26</span><span class="w">    </span><span class="cm">/*</span>
 <span class="linenos">27</span><span class="cm">     * Donada una resposta textual, aquesta funció tradueix la resposta a</span>
@@ -244,24 +148,24 @@ Per exemple:</p>
 <span class="linenos">30</span><span class="cm">     * sense considerar espais a l&#39;inici ni al final,</span>
 <span class="linenos">31</span><span class="cm">     * &quot;sí&quot;, &quot;s&quot;, &quot;yes&quot; o &quot;y&quot;, i algunes variants amb errors ortogràfics.</span>
 <span class="linenos">32</span><span class="cm">     * Altrament considera false.</span>
-<span class="linenos">33</span><span class="cm">     */</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">respostaABoolean</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">null</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">resposta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// considerem false la resposta null</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">        </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;s&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;sí&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;si&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;vale&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;yeah&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">50</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">33</span><span class="cm">     */</span>
+<span class="linenos">34</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">respostaABoolean</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">35</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">null</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">resposta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">     </span><span class="c1">// considerem false la resposta null</span>
+<span class="linenos">36</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">37</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">38</span><span class="w">        </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">();</span>
+<span class="linenos">39</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;s&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">40</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">41</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">42</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;sí&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;yes&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">43</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">44</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">45</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;si&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;vale&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">resposta</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;yeah&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">46</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">47</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">48</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">49</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">50</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Aquesta solució ja ens estalvia feina, sí, però no és del tot
@@ -273,25 +177,25 @@ satisfactòria. Ja sabem que la duplicació de codi és quelcom a defugir.</p>
 <span class="linenos"> 3</span><span class="cm"> * Abans de fer res, demana confirmació als usuaris.</span>
 <span class="linenos"> 4</span><span class="cm"> * Nota: per si algun usuari acaba confirmant, ha estat un plaer</span>
 <span class="linenos"> 5</span><span class="cm"> * conèixer-te</span>
-<span class="linenos"> 6</span><span class="cm"> */</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AutodestruccioTotal</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estic apunt de destruir el món. Estàs d&#39;acord?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="hll"><span class="linenos">13</span><span class="w">            </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Autodestruccio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">resposta</span><span class="p">);</span><span class="w"></span>
-</span><span class="linenos">14</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mira que és una decisió definitiva. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">                                   </span><span class="s">&quot;Segur que vols?&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">                </span><span class="s">&quot;Sàvia resposta. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">                </span><span class="s">&quot;De totes maneres la destrucció del món és una tasca que &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">                </span><span class="s">&quot;ja estem fent entre tots!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">24</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="cm"> */</span>
+<span class="linenos"> 7</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AutodestruccioTotal</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estic apunt de destruir el món. Estàs d&#39;acord?&quot;</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">12</span><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">resposta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="hll"><span class="linenos">13</span><span class="w">            </span><span class="n">confirma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Autodestruccio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">resposta</span><span class="p">);</span>
+</span><span class="linenos">14</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">confirma</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">15</span><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mira que és una decisió definitiva. &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">16</span><span class="w">                                   </span><span class="s">&quot;Segur que vols?&quot;</span><span class="p">);</span>
+<span class="linenos">17</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+<span class="linenos">20</span><span class="w">                </span><span class="s">&quot;Sàvia resposta. &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">21</span><span class="w">                </span><span class="s">&quot;De totes maneres la destrucció del món és una tasca que &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="linenos">22</span><span class="w">                </span><span class="s">&quot;ja estem fent entre tots!&quot;</span><span class="p">);</span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">24</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Si et fixes, la línia 13 fa el truc: simplement indiquem que
@@ -300,10 +204,10 @@ està!</p>
 <p>Amb la configuració que tens del teu repositori local, hauria de
 funcionar-te simplement col·locant <code class="docutils literal notranslate"><span class="pre">AutodestruccioTotal.java</span></code> i
 <code class="docutils literal notranslate"><span class="pre">Autodestruccio.java</span></code> a la mateixa carpeta,</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls Autodestruccio*.java
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>Autodestruccio*.java
 <span class="hll"><span class="go">Autodestruccio.java  AutodestruccioTotal.java</span>
-</span><span class="gp">$ </span>javac Autodestruccio*.java
-<span class="gp">$ </span>java AutodestruccioTotal
+</span><span class="gp">$ </span>javac<span class="w"> </span>Autodestruccio*.java
+<span class="gp">$ </span>java<span class="w"> </span>AutodestruccioTotal
 <span class="hll"><span class="go">Estic apunt de destruir el món. Estàs d&#39;acord?</span>
 </span><span class="go">Sí</span>
 <span class="hll"><span class="go">Mira que és una decisió definitiva. Segur que vols?</span>
@@ -330,11 +234,10 @@ vàlid.</p>
 <p>Com troben <code class="docutils literal notranslate"><span class="pre">javac</span></code> i <code class="docutils literal notranslate"><span class="pre">java</span></code> els altres programes? Tot plegat funciona
 gràcies a la variable d'entorn anomenada <code class="docutils literal notranslate"><span class="pre">CLASSPATH</span></code> i les paraules
 <code class="docutils literal notranslate"><span class="pre">public</span></code> i <code class="docutils literal notranslate"><span class="pre">static</span></code>.  De moment no ens preocuparem amb aquest temes.</p>
-</section>
+</div>
 
 
            </div>
-           
           </div>
     <div class="googleanalytics">
     <div id="cookiesbox">
@@ -359,40 +262,29 @@ gràcies a la variable d'entorn anomenada <code class="docutils literal notransl
 </div>
 
 
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="moduls_biblioteques.html" class="btn btn-neutral float-right" title="La meva biblioteca" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="funcions_collaterals.html" class="btn btn-neutral float-left" title="Efectes col·laterals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="moduls_biblioteques.html" class="btn btn-neutral float-right" title="La meva biblioteca" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022-2023 Moisès Gómez Girón.
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

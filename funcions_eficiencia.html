@@ -1,47 +1,26 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ca" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Breu consideració sobre eficiència &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
@@ -52,45 +31,18 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
-          
-
-          
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
               <div class="version">
                 Curs 2022-23
               </div>
-            
-          
-
-          
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
@@ -120,122 +72,74 @@
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Introducció a la programació amb Java</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
-        
-          <li><a href="moduls_funcions.html">Funcions</a> &raquo;</li>
-        
-      <li>Breu consideració sobre eficiència</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
+          <li class="breadcrumb-item"><a href="moduls_funcions.html">Funcions</a></li>
+      <li class="breadcrumb-item active">Breu consideració sobre eficiència</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="funcions_crides.html" class="btn btn-neutral float-left" title="Aprofitem la funció" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
     
            <div itemprop="articleBody">
-            
-  <section id="breu-consideracio-sobre-eficiencia">
-<h1>Breu consideració sobre eficiència<a class="headerlink" href="#breu-consideracio-sobre-eficiencia" title="Permalink to this heading">¶</a></h1>
+             
+  <div class="section" id="breu-consideracio-sobre-eficiencia">
+<h1>Breu consideració sobre eficiència<a class="headerlink" href="#breu-consideracio-sobre-eficiencia" title="Permalink to this heading"></a></h1>
 <p>Comparem un altre cop les darreres versions del nostre <code class="docutils literal notranslate"><span class="pre">ComptaAiEs</span></code></p>
 <p>La versió que crida a <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code> cada cop que necessita el
 valor, sense importar-li si ja s'havia calculat abans:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="n">comparaAiEs</span><span class="p">(</span><span class="n">entrada</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comptaLletra</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="hll"><span class="linenos">11</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">lletra</span><span class="p">);</span><span class="w"></span>
-</span><span class="linenos">12</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">comptador</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comparaAiEs</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="hll"><span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">16</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span><span class="w"></span>
-</span><span class="linenos">17</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;a&#39;s com &#39;e&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span>
+<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">comparaAiEs</span><span class="p">(</span><span class="n">entrada</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comptaLletra</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="linenos">11</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">lletra</span><span class="p">);</span>
+</span><span class="linenos">12</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">comptador</span><span class="p">);</span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comparaAiEs</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">16</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+</span><span class="linenos">17</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">22</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;a&#39;s com &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">26</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">27</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">28</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">29</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">30</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">31</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">32</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span>
+<span class="linenos">33</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">34</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>En total, en aquest programa es crida dos cops <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code>
@@ -246,39 +150,39 @@ sap que ja les ha comptades abans i torna a fer el càlcul un altre cop per
 obtenir el mateix resultat.</p>
 <p>Et proposo la següent versió que cridaria <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code> el
 mínim possible:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
-<span class="hll"><span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numAs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w"></span>
-</span><span class="hll"><span class="linenos"> 7</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numEs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span><span class="w"></span>
-</span><span class="linenos"> 8</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="n">mostraComparacio</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="hll"><span class="linenos">12</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraOcurrencies</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="linenos">13</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">quantes</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="hll"><span class="linenos">15</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraComparacio</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="linenos">16</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">quantes2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s com &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">33</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span>
+<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="hll"><span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numAs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos"> 7</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numEs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+</span><span class="linenos"> 8</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">mostraComparacio</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos">12</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraOcurrencies</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="linenos">13</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">quantes</span><span class="p">);</span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos">15</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraComparacio</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="linenos">16</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">quantes2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">21</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s com &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">25</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">26</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">27</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">28</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">29</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">30</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">31</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span>
+<span class="linenos">32</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">33</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Fixa't que aquesta versió <em>només</em> calcula un cop les ocurrències de cada
@@ -304,8 +208,8 @@ afegir més complexitat no és una bona idea.</p>
 costa de complicar el codi. Un cop finalitzat el programa, i només si la
 seva execució resulta massa lenta, passarem a optimitzar tot mirant de
 minimitzar la pèrdua de simplicitat.</p>
-<section id="vols-saber-ne-mes">
-<h2>Vols saber-ne més?<a class="headerlink" href="#vols-saber-ne-mes" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="vols-saber-ne-mes">
+<h2>Vols saber-ne més?<a class="headerlink" href="#vols-saber-ne-mes" title="Permalink to this heading"></a></h2>
 <p>Quan desenvolupem hem de tenir sempre en ment la famosa frase de <a class="reference external" href="https://ca.wikipedia.org/wiki/Donald_Knuth">Donald
 Knuth</a> <em>Premature
 Optimization Is the Root of All Evil</em> (l'optimització prematura és
@@ -313,12 +217,11 @@ l'origen de tots els mals)</p>
 <p>L'optimització prematura no és només una cosa de desenvolupadors. Per
 exemple, <a class="reference external" href="https://effectiviology.com/premature-optimization/">aquest article</a> ho explica des d'un
 punt de vista més general.</p>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
-           
           </div>
     <div class="googleanalytics">
     <div id="cookiesbox">
@@ -343,40 +246,29 @@ punt de vista més general.</p>
 </div>
 
 
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="funcions_crides.html" class="btn btn-neutral float-left" title="Aprofitem la funció" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022-2023 Moisès Gómez Girón.
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

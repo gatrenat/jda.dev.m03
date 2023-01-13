@@ -87,8 +87,13 @@ La plantilla del programa és la següent:
     dels Strings de Java que ens retorna un array amb els elements que
     apareguin al text separats entre el símbol indicat. No cal que
     entenguis aquest codi ara, ja que el treballarem més endavant del
-    curs. Amb tot, he pensat que potser et faria gràcia conèixer-lo i,
-    potser, et simplifica una mica la realització de nous exercicis.
+    curs.
+
+    Si consultes la `documentació oficial
+    <https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html#split(java.lang.String)>`_
+    trobaràs que hi ha dues versions; una que espera només un String i una
+    altra que, a banda del String té un paràmetre enter. Una funció
+    interessant a guardar al calaix d'eines.
 
 Considera les següents simulacions:
 

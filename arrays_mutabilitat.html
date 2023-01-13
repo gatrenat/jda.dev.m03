@@ -1,47 +1,26 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ca" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Mutabilitat &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-  <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
@@ -52,45 +31,18 @@
 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
-          
-
-          
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
           </a>
-
-          
-            
-            
               <div class="version">
                 Curs 2022-23
               </div>
-            
-          
-
-          
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
@@ -114,85 +66,37 @@
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Introducció a la programació amb Java</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="moduls.html">Mòduls</a> &raquo;</li>
-        
-          <li><a href="arrays.html">Arrays</a> &raquo;</li>
-        
-      <li>Mutabilitat</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
+          <li class="breadcrumb-item"><a href="arrays.html">Arrays</a></li>
+      <li class="breadcrumb-item active">Mutabilitat</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="moduls_recursivitat.html" class="btn btn-neutral float-right" title="Recursivitat" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-      
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="arrays_taules.html" class="btn btn-neutral float-left" title="Taules" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-      
+        <a href="moduls_recursivitat.html" class="btn btn-neutral float-right" title="Recursivitat" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
     
            <div itemprop="articleBody">
-            
-  <section id="mutabilitat">
-<h1>Mutabilitat<a class="headerlink" href="#mutabilitat" title="Permalink to this heading">¶</a></h1>
+             
+  <div class="section" id="mutabilitat">
+<h1>Mutabilitat<a class="headerlink" href="#mutabilitat" title="Permalink to this heading"></a></h1>
 <p>Els arrays incorporen una característica que no havíem vist fins ara en
 aquest curs: la <strong>mutabilitat</strong>.</p>
 <div class="admonition important">
@@ -207,21 +111,21 @@ per on vaig, oi?</p>
 <p>Què podria ser el contrari? Que una variable no canviés de valor però que
 aquest valor sí que canviés d'alguna manera? Això pot tenir sentit?</p>
 <p>Deixa'm que m'expliqui</p>
-<section id="immutabilitat-dels-enters">
-<h2>Immutabilitat dels enters<a class="headerlink" href="#immutabilitat-dels-enters" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="immutabilitat-dels-enters">
+<h2>Immutabilitat dels enters<a class="headerlink" href="#immutabilitat-dels-enters" title="Permalink to this heading"></a></h2>
 <p>Considera el cas següent:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<span class="linenos">2</span><span class="n">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Podem canviar el valor de <code class="docutils literal notranslate"><span class="pre">edat</span></code> per 19, però no hem modificat el valor
 18. Res especial, oi?</p>
-</section>
-<section id="immutabilitat-dels-strings">
-<h2>Immutabilitat dels Strings<a class="headerlink" href="#immutabilitat-dels-strings" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="immutabilitat-dels-strings">
+<h2>Immutabilitat dels Strings<a class="headerlink" href="#immutabilitat-dels-strings" title="Permalink to this heading"></a></h2>
 <p>A veure què passa amb els Strings</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>El codi anterior corregeix el nom posant la inicial en majúscules. Podríem
@@ -230,19 +134,19 @@ estat així.</p>
 <p>Analitzem l'execució del fragment anterior pas a pas. Ho farem de manera
 simplificada així que només quedat amb la idea i no amb els detalls.</p>
 <p>La primera línia declara i inicialitza un String:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Això, com sabem, són en realitat dues instruccions, declaració i
 inicialització:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// String nom = &quot;macarena&quot;;</span><span class="w"></span>
-<span class="linenos">2</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">// String nom = &quot;macarena&quot;;</span>
+<span class="linenos">2</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="linenos">3</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Comencem per la declaració:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// String nom = &quot;macarena&quot;;</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// String nom = &quot;macarena&quot;;</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_01.svg"><img alt="_images/mutabilitat_01.svg" class="align-center" src="_images/mutabilitat_01.svg" width="50%" /></a>
@@ -251,9 +155,9 @@ a una posició de memòria (al gràfic li hem dit <code class="docutils literal 
 De moment no té cap valor assignat ja que no ha estat inicialitzada.</p>
 <p>A continuació, té lloc la inicialització de <code class="docutils literal notranslate"><span class="pre">nom</span></code> amb el literal
 <code class="docutils literal notranslate"><span class="pre">&quot;macarena&quot;</span></code>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// String nom = &quot;macarena&quot;;</span><span class="w"></span>
-<span class="linenos">2</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">3</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// String nom = &quot;macarena&quot;;</span>
+<span class="linenos">2</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<span class="hll"><span class="linenos">3</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_02.svg"><img alt="_images/mutabilitat_02.svg" class="align-center" src="_images/mutabilitat_02.svg" width="50%" /></a>
@@ -264,25 +168,25 @@ guarda <code class="docutils literal notranslate"><span class="pre">&quot;macare
 <p>Ara, procedim a la inicialització de <code class="docutils literal notranslate"><span class="pre">nom</span></code> amb l'adreça de memòria on
 està emmagatzemat el text <code class="docutils literal notranslate"><span class="pre">&quot;macarena&quot;</span></code>.</p>
 <p>La següent instrucció és una mica complexa:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <p>Per analitzar-la, la descomposarem també:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp4</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span>
+<span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp4</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Fixa't que he posat uns noms no específics per les variables intermitges que
 segurament està creant el compilador de Java quan realitzi l'avaluació de
 l'expressió.</p>
 <p>Resolem:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_03.svg"><img alt="_images/mutabilitat_03.svg" class="align-center" src="_images/mutabilitat_03.svg" width="50%" /></a>
@@ -297,9 +201,9 @@ l'assignació <code class="docutils literal notranslate"><span class="pre">char<
 <p>Com que <code class="docutils literal notranslate"><span class="pre">tmp1</span></code> és de tipus primitiu, el seu valor és guardat directament
 a la posició de memòria associada a la variable.</p>
 <p>Ara que ja tenim el valor de l'argument, podem fer el següent pas:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">      </span><span class="c1">// tmp1 = &#39;m&#39;</span><span class="w"></span>
-<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">      </span><span class="c1">// tmp1 = &#39;m&#39;</span>
+<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_04.svg"><img alt="_images/mutabilitat_04.svg" class="align-center" src="_images/mutabilitat_04.svg" width="50%" /></a>
@@ -307,10 +211,10 @@ a la posició de memòria associada a la variable.</p>
 la variable temporal <code class="docutils literal notranslate"><span class="pre">tmp1</span></code> i retorna la seva versió en majúscules, que
 Java guarda en una nova posició de memòria a la que hem anomenat <code class="docutils literal notranslate"><span class="pre">tmp2</span></code>.</p>
 <p>Passem a la següent part de l'expressió.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_05.svg"><img alt="_images/mutabilitat_05.svg" class="align-center" src="_images/mutabilitat_05.svg" width="50%" /></a>
@@ -320,11 +224,11 @@ text a partir de la posició 1 (inclosa). El resultat passa a ser <em>apuntat</e
 per una variable temporal que hem anomenat <code class="docutils literal notranslate"><span class="pre">tmp3</span></code>.</p>
 <p>Estem a punt de finalitzar l'avaluació de l'expressió! El darrer pas
 consisteix en concatenar el resultat de les dues subexpressions:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_06.svg"><img alt="_images/mutabilitat_06.svg" class="align-center" src="_images/mutabilitat_06.svg" width="50%" /></a>
@@ -336,12 +240,12 @@ Java guarda a <code class="docutils literal notranslate"><span class="pre">tmp4<
 <code class="docutils literal notranslate"><span class="pre">Character.toUpperCase(nom.charAt(0))</span> <span class="pre">+</span> <span class="pre">nom.substring(1)</span></code>. Tenim el seu
 resultat guardat temporalment a <code class="docutils literal notranslate"><span class="pre">tmp4</span></code> i només queda assignar-lo a
 <code class="docutils literal notranslate"><span class="pre">nom</span></code>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp4</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = Character.toUpperCase(nom.charAt(0)) + nom.substring(1);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span>
+<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp4</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_07.svg"><img alt="_images/mutabilitat_07.svg" class="align-center" src="_images/mutabilitat_07.svg" width="50%" /></a>
@@ -369,15 +273,15 @@ posició <code class="docutils literal notranslate"><span class="pre">&#64;1000<
 <p>Series capaç de dibuixar el teu exemple? Et recomano que agafis
 un paper i un llapis, t'inventis el teu exemple i que ho facis.</p>
 </div>
-</section>
-<section id="mutabilitat-dels-arrays">
-<h2>Mutabilitat dels arrays<a class="headerlink" href="#mutabilitat-dels-arrays" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="mutabilitat-dels-arrays">
+<h2>Mutabilitat dels arrays<a class="headerlink" href="#mutabilitat-dels-arrays" title="Permalink to this heading"></a></h2>
 <p>Serà similar amb els arrays?</p>
 <p>Considerem el següent fragment de programa:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>El codi anterior té el mateix resultat que el codi que hem analitzat a la
@@ -385,7 +289,7 @@ secció <cite>Immutabilitat dels Strings</cite>, però ho fa d'una manera difere
 Anem a pams:</p>
 <p>La primera línia és la mateixa: declarem una variable anomenada <code class="docutils literal notranslate"><span class="pre">nom</span></code> i
 li assignem un literal.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>La representació de la memòria és, com ja vam veure:</p>
@@ -393,8 +297,8 @@ li assignem un literal.</p>
 <p>A continuació declarem un array de <code class="docutils literal notranslate"><span class="pre">char</span></code> anomenat <code class="docutils literal notranslate"><span class="pre">nomChar</span></code> i
 li assignem el resultat de cridar a una funció anomenada
 <code class="docutils literal notranslate"><span class="pre">String.toCharArray()</span></code>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
 </span></pre></div>
 </div>
 <p>Aquesta funció, a partir del String apuntat per <code class="docutils literal notranslate"><span class="pre">nom</span></code> construeix un
@@ -402,32 +306,32 @@ array de <code class="docutils literal notranslate"><span class="pre">char</span
 caràcters amb la notació <code class="docutils literal notranslate"><span class="pre">{'m',</span> <span class="pre">'a',</span> <span class="pre">'c',</span> <span class="pre">'a',</span> <span class="pre">'r',</span> <span class="pre">'e',</span> <span class="pre">'n',</span> <span class="pre">'a'}</span></code>. És
 una notació força comú. És el que et mostrarà si li li demanes a JShell.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshell&gt; &quot;macarena&quot;.toCharArray()</span>
-<span class="gp">$</span><span class="nv">1</span> <span class="o">==</span>&gt; char<span class="o">[</span><span class="m">8</span><span class="o">]</span> <span class="o">{</span> <span class="s1">&#39;m&#39;</span>, <span class="s1">&#39;a&#39;</span>, <span class="s1">&#39;c&#39;</span>, <span class="s1">&#39;a&#39;</span>, <span class="s1">&#39;r&#39;</span>, <span class="s1">&#39;e&#39;</span>, <span class="s1">&#39;n&#39;</span>, <span class="s1">&#39;a&#39;</span> <span class="o">}</span>
+<span class="gp">$</span><span class="nv">1</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span>char<span class="o">[</span><span class="m">8</span><span class="o">]</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s1">&#39;m&#39;</span>,<span class="w"> </span><span class="s1">&#39;a&#39;</span>,<span class="w"> </span><span class="s1">&#39;c&#39;</span>,<span class="w"> </span><span class="s1">&#39;a&#39;</span>,<span class="w"> </span><span class="s1">&#39;r&#39;</span>,<span class="w"> </span><span class="s1">&#39;e&#39;</span>,<span class="w"> </span><span class="s1">&#39;n&#39;</span>,<span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="o">}</span>
 </pre></div>
 </div>
 <p>La representació gràfica vindria a ser:</p>
 <a class="reference internal image-reference" href="_images/mutabilitat_09.svg"><img alt="_images/mutabilitat_09.svg" class="align-center" src="_images/mutabilitat_09.svg" width="50%" /></a>
 <p>Passem ara a executar la següent instrucció:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="hll"><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="hll"><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <p>Aquesta línia és també una assignació. Com que presenta subexpressions, la
 descomposarem per facilitar l'anàlisi.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Comencem per la primera:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span><span class="w"></span>
-<span class="hll"><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span>
+<span class="hll"><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>Per calcular la posició de memòria on es troba l'element <code class="docutils literal notranslate"><span class="pre">i</span></code> d'un array,
-Java suma <code class="docutils literal notranslate"><span class="pre">i</span></code> a la posició de memòria on es troba l'array<a class="footnote-reference brackets" href="#midatipus" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+Java suma <code class="docutils literal notranslate"><span class="pre">i</span></code> a la posició de memòria on es troba l'array<a class="footnote-reference brackets" href="#midatipus" id="id1">1</a>.
 En el nostre exemple, l'array <code class="docutils literal notranslate"><span class="pre">nomChar</span></code> es troba a la posició <code class="docutils literal notranslate"><span class="pre">&#64;2000</span></code>
 i la <code class="docutils literal notranslate"><span class="pre">i</span></code> és <code class="docutils literal notranslate"><span class="pre">0</span></code>. Per tant, l'element que ens interessa es troba a la
 posició <code class="docutils literal notranslate"><span class="pre">&#64;2000</span></code>.</p>
@@ -437,19 +341,19 @@ posició <code class="docutils literal notranslate"><span class="pre">&#64;2000<
 <code class="docutils literal notranslate"><span class="pre">'m'</span></code>. Assignem aquest valor a <code class="docutils literal notranslate"><span class="pre">tmp1</span></code>.</p>
 <a class="reference internal image-reference" href="_images/mutabilitat_11.svg"><img alt="_images/mutabilitat_11.svg" class="align-center" src="_images/mutabilitat_11.svg" width="50%" /></a>
 <p>El següent pas és convertir el caràcter en majúscules:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <p>Un cop <code class="docutils literal notranslate"><span class="pre">Character.toUpperCase()</span></code> fa la seva feina i el resultat
 s'assigna a la variable temporal <code class="docutils literal notranslate"><span class="pre">tmp2</span></code>, la nostra representació de la memòria queda:</p>
 <a class="reference internal image-reference" href="_images/mutabilitat_12.svg"><img alt="_images/mutabilitat_12.svg" class="align-center" src="_images/mutabilitat_12.svg" width="50%" /></a>
 <p>Ja només ens queda assignar el valor de <code class="docutils literal notranslate"><span class="pre">tmp2</span></code> a <code class="docutils literal notranslate"><span class="pre">nomChar[0]</span></code>:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nomChar[0] = Character.toUpperCase(nomChar[0]);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">tmp2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">tmp1</span><span class="p">);</span>
+<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp2</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>Novament Java calcula la posició de memòria on assignar el valor a partir
@@ -460,21 +364,21 @@ en la posició <code class="docutils literal notranslate"><span class="pre">&#64
 apunta <code class="docutils literal notranslate"><span class="pre">nomChar</span></code>.</p>
 <p>Un cop realitzat el canvi, la penúltima línia ha quedat resolta i ja podem
 passar a executar la darrera línia del fragment de codi inicial:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">nomChar</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <p>Ho descomposarem novament per fer-ho més comprensible:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Executem la primera d'aquestes sentències:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <p>Aquesta línia pot sobtar-te una mica. Semblaria com si el tipus String s'hagués tornat
@@ -490,9 +394,9 @@ apuntat per <code class="docutils literal notranslate"><span class="pre">nomChar
 <p>És a dir, tenim un nou String amb el valor <code class="docutils literal notranslate"><span class="pre">&quot;Macarena&quot;</span></code> (sí, la M en
 majúscules) a la posició <code class="docutils literal notranslate"><span class="pre">&#64;3000</span></code>.</p>
 <p>Ara assignem aquest valor a <code class="docutils literal notranslate"><span class="pre">nom</span></code> i ja estem!</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// nom = new String(nomChar);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">tmp3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
+<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp3</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_15.svg"><img alt="_images/mutabilitat_15.svg" class="align-center" src="_images/mutabilitat_15.svg" width="50%" /></a>
@@ -509,9 +413,9 @@ amb els valors dels altres tipus de dades que havíem vist fins ara.</p>
 exemple teu amb arrays i intenta dibuixar com va canviant
 la memòria en executar-lo.</p>
 </div>
-</section>
-<section id="arrays-i-puresa-de-les-funcions">
-<h2>Arrays i puresa de les funcions<a class="headerlink" href="#arrays-i-puresa-de-les-funcions" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="arrays-i-puresa-de-les-funcions">
+<h2>Arrays i puresa de les funcions<a class="headerlink" href="#arrays-i-puresa-de-les-funcions" title="Permalink to this heading"></a></h2>
 <p>Quan barregem dades mutables amb funcions, les possibilitats de perdre la
 puresa s'amplien.</p>
 <p>Fins ara hem vist que una funció pot ser impura per fer entrada/sortida o
@@ -520,67 +424,67 @@ pot ser per modificar algun dels seus paràmetres!</p>
 <p>Considera que tenim la següent funció:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="cm">/* posa en majúscules la lletra a una determinada posició</span>
 <span class="linenos">2</span><span class="cm">  * Finalment retorna true quan s&#39;ha fet algun canvi.</span>
-<span class="linenos">3</span><span class="cm">  * Suposa que posicio és un valor entre el 0 i lletres.length - 1 */</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">5</span><span class="w">     </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">6</span><span class="w">     </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">7</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">8</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">3</span><span class="cm">  * Suposa que posicio és un valor entre el 0 i lletres.length - 1 */</span>
+<span class="linenos">4</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">5</span><span class="w">     </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">6</span><span class="w">     </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+<span class="linenos">7</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">8</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Ara tornem a posar la inicial de majúscules a Macarena amb el següent
 fragment de codi:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Tornem a analitzar pas a pas l'execució del fragment de codi.</p>
 <p>Com que fins la segona línia és idèntic al que hem analitzat en la versió
 <cite>Mutabilitat dels arrays</cite>, ens saltem uns quants passos.</p>
 <p>Així, considerem ja executades les dues primeres línies:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>La representació de la memòria en aquest moment seria:</p>
 <a class="reference internal image-reference" href="_images/mutabilitat_09.svg"><img alt="_images/mutabilitat_09.svg" class="align-center" src="_images/mutabilitat_09.svg" width="50%" /></a>
 <p>Ens toca ara resoldre la resta del programa:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="p">}</span>
 </span></pre></div>
 </div>
 <p>Com sempre, farem ús de l'explicitació de variables temporals per
 facilitar l'anàlisi. Així, el codi quedaria:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Recordem el codi de la funció <code class="docutils literal notranslate"><span class="pre">majusculitza()</span></code> ja que ara ens
 interessarà analitzar què passa a dins:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">     </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">     </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">majusculitza</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">     </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">     </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>La crida a <code class="docutils literal notranslate"><span class="pre">majusculitza()</span></code> vindria a reemplaçar en la pràctica la
 primera línia de la següent manera:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-</span><span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span>
+</span><span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>Fixa't que les dues primeres línies corresponen a la simulació del pas
@@ -589,9 +493,9 @@ línia representa l'assignació del valor resultant.</p>
 <p>Comencem, doncs, a executar les línies en que hem descomposat la crida.
 En primer lloc farem l'assignació dels valors passats per la crida als
 paràmetres:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span>
+</span><span class="hll"><span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>En executar les dues sentències, ens trobem amb la següent representació
@@ -600,10 +504,10 @@ de la memòria:</p>
 <p>Potser el punt més interessant és que <code class="docutils literal notranslate"><span class="pre">lletres</span></code> està apuntant exactament
 al mateix array que <code class="docutils literal notranslate"><span class="pre">nomChar</span></code>.</p>
 <p>La nova instrucció a executar és l'obtenció del valor original a modificar:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>En memòria tindrem:</p>
@@ -611,23 +515,23 @@ al mateix array que <code class="docutils literal notranslate"><span class="pre"
 <p>El valor de <code class="docutils literal notranslate"><span class="pre">lletres[0]</span></code> és el caràcter <code class="docutils literal notranslate"><span class="pre">'m'</span></code>. Per tant, aquest serà
 el valor assignat a la nova variable <code class="docutils literal notranslate"><span class="pre">original</span></code>.</p>
 <p>Realitzem ara la conversió a majúscules:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="hll"><span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_18.svg"><img alt="_images/mutabilitat_18.svg" class="align-center" src="_images/mutabilitat_18.svg" width="50%" /></a>
 <p>Això ens ha modificat el valor del primer element de l'array <code class="docutils literal notranslate"><span class="pre">lletres</span></code>.</p>
 <p>Executem ara la darrera línia en la que <code class="docutils literal notranslate"><span class="pre">tmp1</span></code> ha de contenir si s'ha
 produït algun canvi:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span><span class="w"></span>
-<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="c1">// boolean tmp1 = majusculitza(nomChar, 0);</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">lletres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nomChar</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">lletres</span><span class="o">[</span><span class="n">posicio</span><span class="o">]</span><span class="p">;</span>
 </span></pre></div>
 </div>
 <p>Com que <code class="docutils literal notranslate"><span class="pre">original</span></code> val <code class="docutils literal notranslate"><span class="pre">'m'</span></code>, <code class="docutils literal notranslate"><span class="pre">posicio</span></code> val <code class="docutils literal notranslate"><span class="pre">0</span></code> i <code class="docutils literal notranslate"><span class="pre">lletres[0]</span></code> val
@@ -640,21 +544,21 @@ memòria seria:</p>
 <p>El diagrama representa els valors ja inaccessibles com esmorteïts. Fixa't
 especialment com <code class="docutils literal notranslate"><span class="pre">lletres[0]</span></code> ha deixat pas a <code class="docutils literal notranslate"><span class="pre">nomChar[0]</span></code>.</p>
 <p>Ara ja podem continuar amb el fragment de codi original:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">        </span><span class="c1">// assigna true</span><span class="w"></span>
-<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">3</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span><span class="w"></span>
-</span><span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">tmp1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">        </span><span class="c1">// assigna true</span>
+<span class="hll"><span class="linenos">2</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">tmp1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">3</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">4</span><span class="w"> </span><span class="p">}</span>
 </span></pre></div>
 </div>
 <p>Per tant, el missatge <code class="docutils literal notranslate"><span class="pre">&quot;Posat</span> <span class="pre">en</span> <span class="pre">majúscules&quot;</span></code> serà mostrat per sortida
 estàndard.</p>
 <p>Què passarà, però, amb la darrera línia? Quin valor rebrà <code class="docutils literal notranslate"><span class="pre">nom</span></code>?</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;macarena&quot;</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">nomChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">();</span>
+<span class="linenos">3</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">majusculitza</span><span class="p">(</span><span class="n">nomChar</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posat en majúscules&quot;</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w"> </span><span class="p">}</span>
+<span class="hll"><span class="linenos">6</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">nomChar</span><span class="p">);</span>
 </span></pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/mutabilitat_21.svg"><img alt="_images/mutabilitat_21.svg" class="align-center" src="_images/mutabilitat_21.svg" width="50%" /></a>
@@ -682,9 +586,9 @@ que facis un exemple propi i intentis dibuixar com va canviant
 la memòria en executar-lo. Potser voldràs fer-ho amb
 companys.</p>
 </div>
-</section>
-<section id="intercanviar-dos-enters">
-<h2>Intercanviar dos enters<a class="headerlink" href="#intercanviar-dos-enters" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="intercanviar-dos-enters">
+<h2>Intercanviar dos enters<a class="headerlink" href="#intercanviar-dos-enters" title="Permalink to this heading"></a></h2>
 <p>Abans de finalitzar aquest tema, potser t'agradaria intentar resoldre el
 següent problema:</p>
 <blockquote>
@@ -692,18 +596,18 @@ següent problema:</p>
 estiguin intercanviats.</p>
 </div></blockquote>
 <p>Potser la primera idea seria fer-ho així:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="n">intercanvia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">4</span><span class="w"> </span><span class="c1">// a == 10 &amp;&amp; b == 5</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="linenos">2</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w"> </span><span class="n">intercanvia</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w"> </span><span class="c1">// a == 10 &amp;&amp; b == 5</span>
 </pre></div>
 </div>
 <p>Amb:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intercanvia</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">     </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">     </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">5</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intercanvia</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">     </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w">     </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Com ja sabem, tot i que el mòdul és correcte des del punt de vista de
@@ -713,25 +617,25 @@ valors originals de <code class="docutils literal notranslate"><span class="pre"
 funcionaria però  deixaria molt limitat l'ús de <code class="docutils literal notranslate"><span class="pre">intercanvia()</span></code></p>
 <p>Ara que sabem que el problema està en la immutabilitat dels enters i que
 els arrays no són immutables, podem pensar una nova estratègia:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intercanvia</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">aib</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">2</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aib</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aib</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">4</span><span class="w">     </span><span class="n">aib</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">5</span><span class="w">     </span><span class="n">aib</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">6</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intercanvia</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">aib</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aib</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aib</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w">     </span><span class="n">aib</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">     </span><span class="n">aib</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Per usar-lo farem:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">aib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span><span class="w"></span>
-<span class="linenos">2</span><span class="w"> </span><span class="n">intercanvia</span><span class="p">(</span><span class="n">aib</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">3</span><span class="w"> </span><span class="c1">// aib == [10, 5]</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">aib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+<span class="linenos">2</span><span class="w"> </span><span class="n">intercanvia</span><span class="p">(</span><span class="n">aib</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w"> </span><span class="c1">// aib == [10, 5]</span>
 </pre></div>
 </div>
 <p>No és la solució ideal però si ens cal quelcom així en Java, podem fer
 servir aquest <em>truc</em>.</p>
-</section>
-<section id="alguns-exercicis">
-<h2>Alguns exercicis<a class="headerlink" href="#alguns-exercicis" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="alguns-exercicis">
+<h2>Alguns exercicis<a class="headerlink" href="#alguns-exercicis" title="Permalink to this heading"></a></h2>
 <p>Practiquem el que acabem de veure amb aquests exercicis.</p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_32_43_pilota_cau.html"><span class="doc"> Exercici 32_43. La pilota que cau</span></a></p>
 <p><img alt="exerciseicon_ST" src="_images/exerciseicon_ST.png" /> <a class="reference internal" href="exercici_32_44_pilota_rebota.html"><span class="doc"> Exercici 32_44. La pilota que rebota</span></a></p>
@@ -741,21 +645,19 @@ servir aquest <em>truc</em>.</p>
 <p><img alt="exerciseicon_ST" src="_images/exerciseicon_ST.png" /> <a class="reference internal" href="exercici_32_48_formestaula.html"><span class="doc"> Exercici 32_48. Formes entaulades</span></a></p>
 <p><img alt="exerciseicon_ST" src="_images/exerciseicon_ST.png" /> <a class="reference internal" href="exercici_32_49_formesplenes.html"><span class="doc"> Exercici 32_49. Formes plenes</span></a></p>
 <hr class="docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="midatipus" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>Per ser més precisos, en comptes de sumar-li l'índex, li suma l'índex
+<dl class="footnote brackets">
+<dt class="label" id="midatipus"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Per ser més precisos, en comptes de sumar-li l'índex, li suma l'índex
 multiplicat per la mida del tipus de dades emmagatzemat per l'array, però
 no ens cal arribar a aquest nivell de detall si només volem entendre el
 funcionament.</p>
-</aside>
-</aside>
-</section>
-</section>
+</dd>
+</dl>
+</div>
+</div>
 
 
            </div>
-           
           </div>
     <div class="googleanalytics">
     <div id="cookiesbox">
@@ -780,40 +682,29 @@ funcionament.</p>
 </div>
 
 
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="moduls_recursivitat.html" class="btn btn-neutral float-right" title="Recursivitat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="arrays_taules.html" class="btn btn-neutral float-left" title="Taules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="moduls_recursivitat.html" class="btn btn-neutral float-right" title="Recursivitat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022-2023 Moisès Gómez Girón.
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
 
-    </p>
-  </div> 
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
