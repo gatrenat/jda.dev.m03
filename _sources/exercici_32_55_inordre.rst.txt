@@ -28,9 +28,9 @@ el següent algorisme recursiu:
 
     1. Primer es mostren les subcadenes corresponents a la primera meitat de la cadena
 
-    2. A continuació es mostren les subcadenes corresponents a la resta de la cadena
+    2. A continuació es mostra la cadena
 
-    3. Finalment es mostra la cadena
+    3. Finalment es mostren les subcadenes corresponents a la resta de la cadena
 
 
 Caldrà que la teva solució **no** faci servir cap estructura de bucle
