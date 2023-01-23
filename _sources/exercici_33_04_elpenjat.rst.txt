@@ -1,0 +1,297 @@
+###################################################
+|exerciseicon_ST| Exercici 33_04. El joc del penjat
+###################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``33_04_elpenjat/``
+
+* Continguts relacionats: :doc:`fitxers_lectura`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+En aquesta secció desenvoluparàs un programa que permeti jugar al joc del
+penjat.
+
+És tracta d'un exercici més llarg que l'habitual i, per tant, l'enunciat
+també resulta més llarg i complex. Toca concentrar-se.
+
+Descripció general
+==================
+
+El joc del penjat consisteix en que un jugador es pensa una paraula que
+l'adversari ha d'endevinar.
+
+La paraula pensada és mostrada amb les lletres tapades de manera que es
+pot saber quantes lletres té.
+
+L'adversari va dient lletres. Quan la lletra es troba a la paraula, es
+destapen totes les ocurrències. Si no es troba la lletra, s'anota un
+error, normalment acompanyat d'un traç a un dibuix que representa
+l'adversari sent penjat (un joc tendre, oi?) Quan l'adversari destapa
+totes les lletres de la paraula, guanya i quan ha fet massa errors, perd
+(i el dibuix el mostra totalment penjat)
+
+En la implementació que has de realitzar, qui pensarà la paraula és el
+programa. La paraula serà obtinguda d'una llista de paraules que
+apareixeran dins d'un fitxer de text (veure `Paraules en joc`_). Per altra
+banda, l'adversari és la persona que fa servir el programa. Ens referirem
+a ella com *jugador*.
+
+Paraules en joc
+===============
+
+Les paraules disponibles es troben a un fitxer anomenat ``paraules.txt``
+que inclou una paraula per línia. Un exemple de contingut seria:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ cat paraules.txt 
+    java
+    kotlin
+    scala
+    clojure
+
+Per simplicitat, pots mantenir el fitxer de paraules obert fins que
+finalitzi el joc. Si bé ho pots fer, no és recomanable que carreguis totes
+les paraules en memòria ja que podrien ser moltes.
+
+Als jugadors els anirem presentant una paraula cada cop per què intenti
+encertar-la. Quan no en quedin més paraules, es mostrarà el missatge ``"No
+queden més paraules"`` i es finalitzarà el joc.
+
+En cas que ``paraules.txt`` no contingui cap paraula, es mostrarà el
+missatge ``No tinc paraules per jugar`` i es finalitzarà l'execució.
+
+Jugant una paraula
+==================
+
+Un cop es presenta una paraula, el programa anirà demanant lletres.
+
+No es distingeixen majúscules i minúscules en l'entrada.
+
+Les possibilitats són:
+
+* quan la lletra introduïda està dins de la paraula a encertar, aquesta
+  quedarà descoberta.
+
+* quan la lletra introduïda no estigui dins de la paraula a encertar, es
+  considerarà un error, tot descomptant el nombre d'intents disponibles
+  per la paraula.
+
+* si l'entrada és ``"prou"``, s'indica la intenció de deixar de jugar. El
+  programa demanarà confirmació amb la frase ``Vols sortir?`` i si
+  respon afirmativament, queda abandonada la paraula actual i la resta de
+  les que no s'hagin jugat.
+
+  Per realitzar la confirmació, caldrà fer servir
+  ``respostaABoolean()`` que varem usar a
+  un exercici :doc:`anterior <exercici_32_22_utilitats_confirmacio>`.
+
+* quan l'entrada és ``"glups"``, els jugadors ens indiquen que troben
+  massa difícil la paraula actual i es rendeixen. La paraula actual es
+  compta com abandonada/cancel·lada i es passa a la següent.
+
+* quan la darrera lletra introduïda destapa tota la paraula actual en joc,
+  el programa informa els jugadors que han encertat la paraula actual i
+  se'ls ofereix la següent, si en queden, o es finalitza el joc.
+
+* quan la darrera entrada no corresponia a una lletra de la paraula actual
+  i ha exhaurit el nombre màxim intents, el programa informa els jugadors
+  que han fallat aquesta paraula i se'ls ofereix la següent si en queden,
+  o finalitza el joc.
+
+* Si es torna a introduir una lletra ja introduïda, el joc informa que la
+  lletra ja ha estat introduïda i no la comptarà com intent.
+
+* quan no és una de les paraules reservades (``"prou"`` o ``"glups"``),
+  s'espera que només sigui una lletra. Si no és el cas, es mostra un
+  missatge però no se li compta com a intent.
+
+  El missatge d'error és ``"Error: cal una lletra entre 'a' i 'z', 'prou'
+  o 'glups'"``
+
+Per cada paraula, en començar hi haurà disponibles tots els intents,
+independentment de com anés el joc amb la paraula anterior.
+
+A cada jugada, el programa informa de la situació de la partida tot
+mostrant:
+
+* la paraula ocultant les lletres encara per descobrir
+
+* les lletres utilitzades fins ara. Apareixen en majúscules, en el mateix
+  ordre en que van ser introduïdes i sense repeticions.
+
+* el nombre d'intents disponibles. Un valor del 10 al 1 (quan és zero es
+  considera fallada la paraula)
+
+Lletra errònia
+==============
+
+Cada cop que els jugadors introdueixen una lletra que no és a la paraula
+actual, es mostra un missatge d'error i es dibuixa una figura que
+representa l'estat del penjat de manera més o menys gràfica.
+
+Les figures disponibles es troben definides a uns fitxers de text
+anomenats ``figura0.txt``, ``figura1.txt``… ``figura9.txt``
+
+Per exemple, la figura 8 conté el següent:
+
+.. code-block:: console
+  :emphasize-lines: 2-
+
+  $ cat figura8.txt 
+    ··XXXXXXX·
+    ···X····X·
+    ··oOo···X·
+    ··oOo···X·
+    ···O····X·
+    ·oOOOo··X·
+    ·oOOOo··X·
+    ·oOOOo··X·
+    ····O···X·
+    ····O···X·
+    ····Oo··X·
+    ········X·
+    ········X·
+    XXXXXXXXXX
+
+Per mostrar una figura, desenvoluparàs un procediment anomenat
+``mostraFigura(int intentsDisponibles)``. El mòdul mostrarà la figura
+corresponent als intents disponibles que se li indiqui al seu únic
+paràmetre.
+
+Així, quan queden 9 intents, la figura que mostrarem serà la 0. Quan en
+queden 8 la 1 i quan no en queden cap, la 9.
+
+El procediment ``mostraFigura()`` bàsicament obrirà el fitxer de la figura
+corresponent, mostrarà el seu contingut i el tancarà en finalitzar. Tot
+això cada cop.
+
+Finalització del joc
+====================
+
+El joc finalitza en una de les següents condicions:
+
+* s'han jugat totes les paraules que hi havia al fitxer de paraules.
+
+* els jugadors han demanat finalitzar el joc
+
+En ambdós casos, el programa mostrarà un resum i s'acomiadarà
+
+El resum consistirà en indicar el nombre de paraules jugades, encertades,
+fallades i cancel·lades.
+
+**Nota**: recorda que, si no ho has fet encara, aquest és el moment per
+tancar el fitxer de paraules!
+
+
+Una simulació
+=============
+
+Considera la següent simulació en la que es mostra com juguem amb la
+primera paraula.
+
+.. code-block:: console
+    :emphasize-lines: 2-6, 8-11, 13-30, 32-49, 51-54, 56-60, 62-
+
+    $ java Penjat 
+    Comencem a jugar
+    Paraula: ****
+    Utilitzades: cap
+    Intents disponibles: 10
+    Introdueix una lletra
+    a
+    Paraula: *a*a
+    Utilitzades: A
+    Intents disponibles: 10
+    Introdueix una lletra
+    p
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        ··········
+        XXXXXXXXXX
+    Paraula: *a*a
+    Utilitzades: A i P
+    Intents disponibles: 9
+    Introdueix una lletra
+    u
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        ········X·
+        XXXXXXXXXX
+    Paraula: *a*a
+    Utilitzades: A, P i U
+    Intents disponibles: 8
+    Introdueix una lletra
+    v
+    Paraula: *ava
+    Utilitzades: A, P, U i V
+    Intents disponibles: 8
+    Introdueix una lletra
+    j
+    Has encertat! La paraula era java
+    Paraula: ******
+    Utilitzades: cap
+    Intents disponibles: 10
+    Introdueix una lletra
+    prou
+    Vols finalitzar?
+    Sí
+    Paraules jugades: 2
+    Paraules encertades: 1
+    Paraules fallades: 0
+    Paraules cancel·lades: 1
+    Espero que t'hagis divertit
+
+
+Ampliacions
+===========
+
+És possible que et quedis amb les ganes de fer algunes ampliacions a
+aquest joc.
+
+En cas que així sigui, et proposo que creis un programa amb un nom
+diferent de ``Penjat.java``, de manera que no tinguis problemes amb les
+proves de la versió bàsica.
+
+Si vols que tingui en compte aquestes ampliacions, caldrà que hi afegeixis
+un fitxer de text anomenat ``ampliacio.rst`` que contingui una descripció
+de l'ampliació que heu fet i, si cal, indicacions per a ser executada (ex.
+si cal instal·lar alguna biblioteca addicional)
+
+Algunes possibles ampliacions que potser et resulten interessants o/i divertides:
+
+* canviar el disseny de les figures
+
+* aconseguir un efecte *random*. És a dir, escollir les paraules
+  aleatòriament del fitxer d'entrada.
+
+* repetir les paraules que s'han fallat o/i cancel·lat
