@@ -16,3 +16,8 @@ continuació:
     exercici_33_05_lloro_memoria.rst
     exercici_33_06_traduccio.rst
     exercici_33_07_log.rst
+    exercici_33_08_classificador.rst
+    exercici_33_09_alumnes.rst
+
+..  exercici_33_10_inspecciona.rst
+..  exercici_33_11_classificador_dups.rst
