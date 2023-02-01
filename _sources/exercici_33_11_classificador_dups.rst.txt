@@ -1,0 +1,102 @@
+#############################################################
+|exerciseicon__T| Exercici 33_11. Classificador de matrícules
+#############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``33_11_classificador_dups/``
+
+* Continguts relacionats: :doc:`fitxers_gestio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Aquest exercici és una versió ampliada de l'exercici :doc:`anterior
+<exercici_33_08_classificador>`. La ampliació consisteix en evitar
+que els fitxers de sortida tinguin repetits.
+
+Un exemple de contingut de ``llegides.txt`` pot ser:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+    $ cat llegides.txt
+    BC123FG
+    B2993NV
+    FRV5996
+       PR444RP
+    BC123FG
+    4563BBB
+    CHUCKY
+
+    B2993NV
+    JK432HJ
+
+Com en la versió anterior, el programa llegirà `
+``llegides.txt`` i generarà dos nous
+fitxers anomenats ``italianes.txt`` i ``desconegudes.txt`` tals que:
+
+* ``italianes.txt`` contingui totes les matrícules trobades a
+  ``llegides.txt`` que corresponguin a matrícules vàlides italianes.
+  Recorda, per exemple, :doc:`aquest exercici
+  <exercici_32_21_matricula_italiana>`
+
+* ``desconegudes.txt`` que correspongui a totes les matrícules trobades no
+  vàlides com a matrícules italianes.
+
+El contingut dels fitxers ``italianes.txt`` i ``desconegudes.txt`` tindrà
+les següents característiques:
+
+* Les entrades apareixeran en el mateix ordre que a ``llegides.txt``
+
+* Les entrades apareixeran *netes*. És a dir, no tindran espais en blanc
+  ni a l'inici ni al final i cap serà una línia buida.
+
+* No apareixerà cap entrada repetida.
+
+El programa no es preocuparà si ja existien o no els fitxers de sortida.
+Sempre els sobreescriurà fins i tot si no hi ha cap dada que escriure a
+algun d'ells.
+
+Amb l'exemple anterior de ``llegides.txt`` tindríem el següent
+resultat:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+    $ java TriaMatricules
+    $ cat italianes.txt
+    BC123FG
+    PR444RP
+    JK432HJ
+    $ cat desconegudes.txt
+    B2993NV
+    FRV5996
+    4563BBB
+    CHUCKY
+
+Donat que el contingut dels fitxers és potencialment molt gran, per evitar
+consumir massa memòria, el programa hauria de processar cada línia a mida
+que les llegeix, sense guardar les ja processades a memòria.
+
+Podem suposar que el fitxer d'entrada sempre existirà i serà de text i
+llegible, tot i que podria estar buit o contenir qualsevol text arbitrari.
+
+Per passar totes les proves, serà necessari que disposis de la funció
+``boolean matriculaItalianaValida(String)`` que, donat un text, retorni
+``true`` quan correspon estrictament a una matrícula italiana vàlida.
+
+Una pista?
+==========
+
+Malgrat sempre és interessant que intentis resoldre el problema sense
+pistes, si realment no saps com adreçar el tema dels repetits, et proposo
+que consideris dues possibilitats:
+
+1. Abans d'incorporar una entrada a un fitxer, comprovar si ja hi és
+
+2. Recordar què fèiem quan volíem intercanviar els valors de dues
+   variables

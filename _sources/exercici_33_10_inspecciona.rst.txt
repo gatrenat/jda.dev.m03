@@ -1,0 +1,94 @@
+#######################################################
+|exerciseicon__T| Exercici 33_10. Inspecció d'un fitxer
+#######################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``33_10_inspecciona/``
+
+* Continguts relacionats: :doc:`fitxers_gestio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa que consideri els arguments de línia de comanda
+com si fossin camins del sistema de fitxer.
+
+Per cada argument, comprovarà si correspon a un camí existent.
+
+Si no existeix, indicarà ``"No trobat"``.
+
+En cas que existeixi, indicarà els seus permisos per l'usuari en el format
+típic de GNU (``rwx``)
+
+A continuació, indicarà si correspon a un fitxer o un directori.
+
+En cas de ser un directori, mostrarà el nom dels fitxers i directoris que
+contingui. Ho farà de manera ordenada (*Pista*: recorda ``Arrays.sort()``)
+
+Si és un fitxer, indicarà la seva longitud en bytes.
+
+En cas que es pugui llegir i que la seva extensió sigui una de les
+conegudes, el programa mostrarà el seu contingut envoltant cada línia
+entre dos caràcters ``|`` per permetre distingir espais.
+
+Es consideraran extensions conegudes ``.java`` i ``.txt``.
+
+Considera la següent simulació:
+
+
+.. code-block:: console
+
+    $ tree .
+    .
+    ├── carpeta
+    │   ├── buida
+    │   ├── buit.txt
+    │   └── contingut.txt
+    ├── Inspecciona.class
+    └── Inspecciona.java
+
+    $ cat carpeta/contingut.txt
+    primer
+    segon
+    tercer
+
+    $ ls -s carpeta/buit.txt 
+    0 carpeta/buit.txt
+
+    $ java Inspecciona inexistent carpeta carpeta/contingut.txt carpeta/buit.txt carpeta/buida
+
+    Processant argument: inexistent
+    ===============================
+
+    No trobat
+
+    Processant argument: carpeta
+    ============================
+
+    rwx directori que conté: contingut.txt, buit.txt, buida
+
+    Processant argument: carpeta/contingut.txt
+    ==========================================
+
+    rw- fitxer de mida en bytes: 20
+    Amb els continguts:
+    |primer|
+    |segon|
+    |tercer|
+
+    Processant argument: carpeta/buit.txt
+    =====================================
+
+    rw- fitxer buit
+
+    Processant argument: carpeta/buida
+    ==================================
+
+    rwx directori buit
+
+Et podria ser útil revisar la documentació oficial sobre `File
+<https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/File.html>`_
