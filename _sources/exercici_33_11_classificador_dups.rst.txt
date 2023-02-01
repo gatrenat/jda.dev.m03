@@ -67,7 +67,7 @@ resultat:
 .. code-block:: console
    :emphasize-lines: 2-
 
-    $ java TriaMatricules
+    $ java ClassificaMatricules
     $ cat italianes.txt
     BC123FG
     PR444RP
