@@ -36,8 +36,8 @@ excepcionals amb un mecanisme anomenat *exceptions*, en el cas dels
 fitxers amb ``IOException``.
 
 En paral·lel, hem pogut treballar el treball en equip fent el nostre
-primer projecte "complex" amb l'exercici del *Penjat* i hem simulat el
-desenvolupament dirigit per la prova amb l'exercici del *Puzle*.
+primer projecte "complex" amb l'exercici del *Penjat*, i hem fet una
+primera ullada a l'agrupació de dades de tipus heterogenis.
 
 A més a més, hem descobert noves utilitats de la API de Java, com ara les
 funcions ``split()`` i ``replace()`` amb Strings i ``sort()`` d'Arrays.
