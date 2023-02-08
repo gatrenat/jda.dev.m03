@@ -1,0 +1,84 @@
+#####################################################
+|exerciseicon__T| Exercici 34_15. Ascensor informatiu
+#####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``34_15_ascensor_informatiu/``
+
+* Continguts relacionats: :doc:`poo_intro_consultes`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Afegeix al repertori de mètodes de ``Ascensor`` els següents:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+     class Ascensor {
+        + estaAbaix(): boolean
+        + estaAmunt(): boolean
+        + estaAturat(): boolean
+        + estaMovent(): boolean
+        + estaPujant(): boolean
+        + estaBaixant(): boolean
+        + comEsta(): String
+     }
+     @enduml
+
+``estaAbaix()`` i ``estaAmunt()`` retornen cert quan l'ascensor es troba
+al primer i al darrer pis respectivament.
+
+``estaMovent()`` retorna cert quan està pujant o baixant.
+
+``comEsta()`` retorna un String amb el moviment i el pis. Per exemple, si
+està pujant en el pis 1, el missatge serà ``pujant al pis 1``.
+
+Completa la plantilla següent:
+
+.. code-block:: java
+    :linenos:
+
+    public class UsaAscensor {
+        // XXX considera si et cal algun mòdul d'ajut
+        public static void main(String[] args) {
+            Ascensor ascensor = new Ascensor();
+            System.out.println("Pis inicial: " + ascensor.XXX);
+            System.out.println("Moviment inicial: " + ascensor.XXX);
+            System.out.println("Introdueix nou pis:");
+            // XXX llegir el nou pis de stdin i assignar-lo a l'ascensor
+
+            System.out.println("Introdueix nou moviment:");
+            // XXX llegir el nou moviment de stdin i assignar-lo a l'ascensor
+            
+            System.out.println("Pis final: " + ascensor.XXX);
+            System.out.println("Moviment final: " + ascensor.XXX);
+            System.out.println("Estat de l'ascensor: " + ascensor.XXX);
+        }
+    }
+
+Considera la següent simulació de la sortida de ``UsaAscensor`` un cop
+completat:
+
+.. code-block:: console
+    :emphasize-lines: 2-4, 6, 8-
+
+    $ java UsaAscensor 
+    Pis inicial: -1
+    Moviment inicial: aturat
+    Introdueix nou pis:
+    5
+    Introdueix nou moviment:
+    pujant
+    Pis final: 5
+    Moviment final: pujant
+    Estat de l'ascensor: pujant al pis 5

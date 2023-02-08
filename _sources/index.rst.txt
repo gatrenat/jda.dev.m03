@@ -22,10 +22,10 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     primeres_passes.rst
     basics.rst
     moduls.rst
+    poo.rst
     fitxers.rst
     apendix.rst
 
-..    poo.rst
 ..    bib.rst
 ..    cvs.rst
 ..    test.rst

@@ -1,0 +1,70 @@
+####################
+Accions d'un objecte
+####################
+
+Un dels avantatges de la POO és que podem tractar peces de codi com si
+tinguessin una mena de personalitat pròpia. És el que es coneix com
+*la metàfora de la POO*. Així, podem imaginar que els objectes ens
+responen quan els fem consultes, com ara ``renat.estaDret()`` que hem vist
+abans.
+
+A banda de fer consultes, podem imaginar que li demanem que faci coses.
+
+Això ja ho podem fer. Per exemple, podem demanar-li que es posi dret tot
+cridant ``renat.setPosicio("dret")``. Amb tot, encara ho podem fer més
+natural.
+Tornem a ampliar el nostre pacient amic Renat.
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+     class GatRenat {
+         + aixecat()
+         + seu()
+         + estirat()
+     }
+     @enduml
+
+Aquest diagrama UML ens mostra tres nous mètodes o serveis:
+
+* ``aixecat()``: fa que Renat es posi dret.
+
+* ``seu()``: fa que Renat s'assegui.
+
+* ``estirat()``: fa que Renat s'estiri.
+
+Amb els nous mètodes, la interacció amb Renat comença a ser força
+*natural*. Fixa't per exemple, en la següent *conversa*:
+
+    Si Renat està dret que s'assegui.
+
+Això en codi i aprofitant els nous mètodes, vindria a ser:
+
+.. code-block:: java
+
+   if (renat.estaDret()) {
+       renat.seu();
+   }
+
+Compara-ho amb la versió sense mètodes *naturals*:
+
+.. code-block:: java
+
+   if (renat.getPosicio().equals("dret")) {
+       renat.setPosicio("assegut");
+   }
+
+Et toca programar!
+
+|exerciseicon__T| :doc:`exercici_34_16_ensinistrat`
+
+|exerciseicon__T| :doc:`exercici_34_17_assessinable`
+
+|exerciseicon__T| :doc:`exercici_34_18_ascensor_interactiu`
+
+|exerciseicon___| :doc:`exercici_34_19_classes_i_objectes`

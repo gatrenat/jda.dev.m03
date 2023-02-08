@@ -1,0 +1,53 @@
+########################################################
+|exerciseicon__T| Exercici 34_10. L'ascensor té moviment
+########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``34_10_moviment/``
+
+* Continguts relacionats: :doc:`poo_intro_us_extern`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Implementa els canvis necessaris per la classe ``Ascensor`` segons el
+següent diagrama UML:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class Ascensor {
+        + pis: int
+        + moviment: String
+     }
+
+     class UsaAscensor {
+        + {static} main(String[])
+     }
+
+     UsaAscensor -left-> Ascensor 
+
+     @enduml
+
+Com veus, l'ascensor disposarà de moviment. Inicialment l'ascensor estarà
+*aturat*. Altres moviments seran *pujant* i *baixant*.
+
+L'execució haurà de ser:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java UsaAscensor 
+    Pis inicial: -1
+    Moviment inicial: aturat
+    Moviment final: pujant

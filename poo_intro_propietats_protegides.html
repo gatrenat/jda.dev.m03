@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propietats protegides &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Preguntes a un objecte" href="poo_intro_consultes.html" />
+    <link rel="prev" title="Accés extern" href="poo_intro_us_extern.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="poo_intro.html">Classes i objectes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_propietats.html">Propietats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_propietats_mutables.html">Propietats mutables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_multiples_instancies.html">Múltiples instàncies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_us_extern.html">Accés extern</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Propietats protegides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_consultes.html">Preguntes a un objecte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_intro_accions.html">Accions d'un objecte</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poo_exercicis.html">Exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
+          <li class="breadcrumb-item"><a href="poo_intro.html">Classes i objectes</a></li>
+      <li class="breadcrumb-item active">Propietats protegides</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="poo_intro_us_extern.html" class="btn btn-neutral float-left" title="Accés extern" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="poo_intro_consultes.html" class="btn btn-neutral float-right" title="Preguntes a un objecte" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="propietats-protegides">
+<h1>Propietats protegides<a class="headerlink" href="#propietats-protegides" title="Permalink to this heading"></a></h1>
+<p>Considera la següent implementació de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="linenos">3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Aquesta declaració ens permet fer el següent:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">12</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat té &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+<span class="linenos">6</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">7</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Que <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> funcioni no ens hauria de deixar massa tranquil·litat.
+-12 de vida? Potser per un joc de zombis podria ser vàlid però en general
+no sembla quelcom gaire desitjable.</p>
+<p>El que voldríem és aconseguir evitar que ens puguin assignar un valor no
+vàlid per les vides del gat Renat.</p>
+<p>No et pensis que és quelcom a l'abast de tots els llenguatges de
+programació. Per Java, però, veurem que és força senzill.</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-e8704b945b35a7e989e0896f85d5dbb46d246fc0.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+
+ class GatRenat {
+     - vides: int
+     + getVides(): int
+     + setVides(int)
+ }
+ &#64;enduml"/>
+</p>
+</div>
+<p>Has vist el <code class="docutils literal notranslate"><span class="pre">-</span></code> davant de <code class="docutils literal notranslate"><span class="pre">vides</span></code> al diagrama?</p>
+<p>Considera aquesta nova versió de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span class="hll"><span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVides</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//  retorna el nombre de vides</span>
+</span><span class="linenos"> 4</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVides</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">novesVides</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// modifica el nombre de vides si ens donen un de vàlid</span>
+</span><span class="linenos"> 7</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">novesVides</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">novesVides</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">11</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Contesta les següents preguntes:</p>
+<ol class="arabic">
+<li><p>Què passa si intentes executar el següent codi? Perquè creus?</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat té &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+<span class="linenos">5</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">6</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Què tal si modifiquem lleugerament el codi anterior per aquest?</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="hll"><span class="linenos">4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat té &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">getVides</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+</span><span class="linenos">5</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">6</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Fixa't que ara estem fent servir <code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> en comptes de
+directament <code class="docutils literal notranslate"><span class="pre">renat.vides()</span></code>. Funciona ara?</p>
+</li>
+<li><p>Com es pot determinar a <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> que <code class="docutils literal notranslate"><span class="pre">renat</span></code> té 5 vides?</p>
+<p>Inclou el codi a la resposta i la sortida que et genera.</p>
+</li>
+<li><p>Què passa si intentem assignar-li -12 en comptes de 5 vides?</p>
+<p>Inclou el codi, la sortida i la teva explicació.</p>
+</li>
+<li><p>Un cop hem vist què passa des de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> toca experimentar com
+es comporta aquest <code class="docutils literal notranslate"><span class="pre">private</span></code> des del <code class="docutils literal notranslate"><span class="pre">main()</span></code> del propi
+<code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>.</p>
+<p>Experimenta afegint a la darrera versió de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> la mateixa
+declaració de <code class="docutils literal notranslate"><span class="pre">main()</span></code> que apareixia a la primera versió de
+<code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> d'aquesta pàgina. És  a dir:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVides</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//  retorna el nombre de vides</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVides</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">novesVides</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// modifica el nombre de vides si ens donen un de vàlid</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">novesVides</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">            </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">novesVides</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos">11</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="linenos">12</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+</span><span class="hll"><span class="linenos">13</span><span class="w">        </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">12</span><span class="p">;</span>
+</span><span class="hll"><span class="linenos">14</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat té &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">15</span><span class="w">    </span><span class="p">}</span>
+</span><span class="linenos">16</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Què passa en intentar compilar i executar aquesta versió? Perquè creus?
+Ho veus coherent?</p>
+</li>
+<li><p>Considerant aquesta darrera versió de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>, és possible
+aconseguir assignar un nombre de vides negatiu a una instància de
+<code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> sense modificar el codi de la classe <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>?  Perquè
+o Com?</p></li>
+<li><p>Com descriuries el paper de <code class="docutils literal notranslate"><span class="pre">public</span></code> i <code class="docutils literal notranslate"><span class="pre">private</span></code> a les propietats
+d'una classe?</p></li>
+<li><p>Aquesta implementació de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> disposa de <em>getter</em> i de
+<em>setter</em>. T'has plantejat què passaria si només en tingués <em>getter</em>? i
+si només en tingués <em>setter</em>? i si no en tingués cap dels dos?</p></li>
+<li><p>Per cert, t'has fixat que els mòduls <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> i <code class="docutils literal notranslate"><span class="pre">setVides()</span></code>
+tenen una definició lleugerament diferent als mòduls que hem declarat
+fins ara en aquest curs? En concret, no els falta alguna cosa?</p>
+<p>Si no se t'acut, considera revisar quan varem veure <a class="reference internal" href="moduls_abandonem_plantilla.html"><span class="doc">per primer
+cop</span></a> un mòdul que no fos el <code class="docutils literal notranslate"><span class="pre">main()</span></code>.</p>
+<p>De moment només cal que identifiquis la petita diferència en la
+declaració, però si tens molta curiositat, experimenta què passa si
+declares <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> de la mateixa manera que <code class="docutils literal notranslate"><span class="pre">dibuixaQuadrat()</span></code>.</p>
+</li>
+</ol>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_34_11_protegides.html"><span class="doc"> Exercici 34_11. Anotacions sobre accés des de fora</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_34_12_posicio_correcta.html"><span class="doc"> Exercici 34_12. Posició sempre correcta</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_34_13_ascensor_protegit.html"><span class="doc"> Exercici 34_13. Ascensor protegit</span></a></p>
+<div class="section" id="una-mica-de-culturilla-poo">
+<h2>Una mica de <em>culturilla</em> POO<a class="headerlink" href="#una-mica-de-culturilla-poo" title="Permalink to this heading"></a></h2>
+<p>Als mòduls <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> i <code class="docutils literal notranslate"><span class="pre">setVides()</span></code> en orientació a objectes els
+anomenem <em>accessors</em> doncs ens permeten accedir a propietats privades, en
+aquest cas <code class="docutils literal notranslate"><span class="pre">vides</span></code>. De fet, aquesta manera d'anomenar els accessors és
+tan típica que sovint parlem de <em>getters</em> i <em>setters</em>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="poo_intro_us_extern.html" class="btn btn-neutral float-left" title="Accés extern" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="poo_intro_consultes.html" class="btn btn-neutral float-right" title="Preguntes a un objecte" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
