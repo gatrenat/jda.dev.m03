@@ -75,8 +75,9 @@ la següent manera:
    :align: center
    :width: 50%
 
-``renat`` és una variable. El seu valor de moment és ``null`` i està
-allotjat a la posició de memòria ``@100`` associada al nom ``renat``.
+``renat`` és una variable. El seu valor de moment és indeterminat, ja que no ha
+estat inicialitzada. Considerarem que el valor de la variable ``renat`` estarà
+allotjat a la posició de memòria ``@100``.
 
 De moment no tenim cap gat instanciat. Només un nom (``renat``) que en pot
 fer referència. Passem a la següent línia:
@@ -96,28 +97,50 @@ fer referència. Passem a la següent línia:
         }
     }
 
+En primer lloc, l'expressió ``new GatRenat()`` ens reservarà un espai de
+memòria, diguem a la posició ``@1000`` que contindrà el valor de la propietat
+``vida`` i, potser, altres coses.
+
+En inicialitzar ``renat`` amb aquesta posició, ja podem referir-nos a la
+instància des de la novstra variable.
+
+Ho podem representar de manera simplificada, de la següent manera:
+
 .. image:: _images/constructors_02.svg
    :align: center
    :width: 75%
 
-Aquesta representació simplificada ens mostra que l'estat del gat Renat,
-del que de moment només ens interessa el valor de la propietat *vides*.
+Passem a la següent línia:
 
-La següent línia crida el mètode ``getVides()`` que retornarà el valor de
-``vides`` de la instància referenciada per ``renat``. És a dir, la que hi
-ha a la posició ``@1000``.
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 7
 
-Ignorant el fet que ``vides`` és privat, ``renat.getVides()`` vindria a
-ser equivalent a ``renat.vides``.
+    public class GatRenat {
+        private int vides = 7;
+        public int getVides() { return vides; }
+        public static void main(String[] args) {
+            GatRenat renat;
+            renat = new GatRenat();
+            int vides = renat.getVides();
+            System.out.printf("Vides: %d%n", vides);
+        }
+    }
+
+En aquesta ocasió, fem una crida al mètode ``getVides()`` que retornarà el
+valor de la propietat de ``vides`` de la instància referida per la variable
+``renat``. És a dir, la instància allotjada a la posició ``@1000``.
+
+``renat.getVides()`` vindria a ser equivalent a ``renat.vides`` i, per tant,
+aquesta instrucció resultarà en assignar ``7`` a ``vides``:
 
 .. image:: _images/constructors_03.svg
    :align: center
    :width: 75%
 
-
-En fer ``renat.getVides()`` la funció *sap* que ``renat`` apunta a la posició
-``@100`` i per tant, és capaç de localitzar el seu camp ``vides``, i retornar
-el seu valor: ``7``.
+En fer ``renat.getVides()`` la funció ``getVides()`` *sap* d'alguna manera que
+el valor de ``renat`` és (o fa referència a) la posició ``@1000`` i per tant,
+és capaç de localitzar el seu camp ``vides``, i retornar el seu valor: ``7``.
 
 
 Un lleuger canvi
@@ -236,7 +259,7 @@ aquest misteriós comentari.
         }
     }
 
-En el que el codi no ens permet veure, Java ha *designat* un espai de
+Les instruccions que no ens mostra el codi han *designat* un espai de
 memòria suficient per emmagatzemar totes les propietats d'una instància de
 la classe ``GatRenat`` i les ha inicialitzades al seu valor base. En ser
 ``vides`` un enter, aquest valor és ``0``.

@@ -143,8 +143,9 @@ valor de tipus <code class="docutils literal notranslate"><span class="pre">GatR
 <p>Podem representar la part que ens interessa de la memòria del programa de
 la següent manera:</p>
 <a class="reference internal image-reference" href="_images/constructors_01.svg"><img alt="_images/constructors_01.svg" class="align-center" src="_images/constructors_01.svg" width="50%" /></a>
-<p><code class="docutils literal notranslate"><span class="pre">renat</span></code> és una variable. El seu valor de moment és <code class="docutils literal notranslate"><span class="pre">null</span></code> i està
-allotjat a la posició de memòria <code class="docutils literal notranslate"><span class="pre">&#64;100</span></code> associada al nom <code class="docutils literal notranslate"><span class="pre">renat</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">renat</span></code> és una variable. El seu valor de moment és indeterminat, ja que no ha
+estat inicialitzada. Considerarem que el valor de la variable <code class="docutils literal notranslate"><span class="pre">renat</span></code> estarà
+allotjat a la posició de memòria <code class="docutils literal notranslate"><span class="pre">&#64;100</span></code>.</p>
 <p>De moment no tenim cap gat instanciat. Només un nom (<code class="docutils literal notranslate"><span class="pre">renat</span></code>) que en pot
 fer referència. Passem a la següent línia:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
@@ -159,18 +160,35 @@ fer referència. Passem a la següent línia:</p>
 <span class="linenos">10</span><span class="p">}</span>
 </pre></div>
 </div>
+<p>En primer lloc, l'expressió <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">GatRenat()</span></code> ens reservarà un espai de
+memòria, diguem a la posició <code class="docutils literal notranslate"><span class="pre">&#64;1000</span></code> que contindrà el valor de la propietat
+<code class="docutils literal notranslate"><span class="pre">vida</span></code> i, potser, altres coses.</p>
+<p>En inicialitzar <code class="docutils literal notranslate"><span class="pre">renat</span></code> amb aquesta posició, ja podem referir-nos a la
+instància des de la novstra variable.</p>
+<p>Ho podem representar de manera simplificada, de la següent manera:</p>
 <a class="reference internal image-reference" href="_images/constructors_02.svg"><img alt="_images/constructors_02.svg" class="align-center" src="_images/constructors_02.svg" width="75%" /></a>
-<p>Aquesta representació simplificada ens mostra que l'estat del gat Renat,
-del que de moment només ens interessa el valor de la propietat <em>vides</em>.</p>
-<p>La següent línia crida el mètode <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> que retornarà el valor de
-<code class="docutils literal notranslate"><span class="pre">vides</span></code> de la instància referenciada per <code class="docutils literal notranslate"><span class="pre">renat</span></code>. És a dir, la que hi
-ha a la posició <code class="docutils literal notranslate"><span class="pre">&#64;1000</span></code>.</p>
-<p>Ignorant el fet que <code class="docutils literal notranslate"><span class="pre">vides</span></code> és privat, <code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> vindria a
-ser equivalent a <code class="docutils literal notranslate"><span class="pre">renat.vides</span></code>.</p>
+<p>Passem a la següent línia:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVides</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="hll"><span class="linenos"> 7</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">getVides</span><span class="p">();</span>
+</span><span class="linenos"> 8</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Vides: %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">vides</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">10</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>En aquesta ocasió, fem una crida al mètode <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> que retornarà el
+valor de la propietat de <code class="docutils literal notranslate"><span class="pre">vides</span></code> de la instància referida per la variable
+<code class="docutils literal notranslate"><span class="pre">renat</span></code>. És a dir, la instància allotjada a la posició <code class="docutils literal notranslate"><span class="pre">&#64;1000</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> vindria a ser equivalent a <code class="docutils literal notranslate"><span class="pre">renat.vides</span></code> i, per tant,
+aquesta instrucció resultarà en assignar <code class="docutils literal notranslate"><span class="pre">7</span></code> a <code class="docutils literal notranslate"><span class="pre">vides</span></code>:</p>
 <a class="reference internal image-reference" href="_images/constructors_03.svg"><img alt="_images/constructors_03.svg" class="align-center" src="_images/constructors_03.svg" width="75%" /></a>
-<p>En fer <code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> la funció <em>sap</em> que <code class="docutils literal notranslate"><span class="pre">renat</span></code> apunta a la posició
-<code class="docutils literal notranslate"><span class="pre">&#64;100</span></code> i per tant, és capaç de localitzar el seu camp <code class="docutils literal notranslate"><span class="pre">vides</span></code>, i retornar
-el seu valor: <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+<p>En fer <code class="docutils literal notranslate"><span class="pre">renat.getVides()</span></code> la funció <code class="docutils literal notranslate"><span class="pre">getVides()</span></code> <em>sap</em> d'alguna manera que
+el valor de <code class="docutils literal notranslate"><span class="pre">renat</span></code> és (o fa referència a) la posició <code class="docutils literal notranslate"><span class="pre">&#64;1000</span></code> i per tant,
+és capaç de localitzar el seu camp <code class="docutils literal notranslate"><span class="pre">vides</span></code>, i retornar el seu valor: <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
 </div>
 <div class="section" id="un-lleuger-canvi">
 <h2>Un lleuger canvi<a class="headerlink" href="#un-lleuger-canvi" title="Permalink to this heading"></a></h2>
@@ -265,7 +283,7 @@ aquest misteriós comentari.</p>
 <span class="linenos">14</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>En el que el codi no ens permet veure, Java ha <em>designat</em> un espai de
+<p>Les instruccions que no ens mostra el codi han <em>designat</em> un espai de
 memòria suficient per emmagatzemar totes les propietats d'una instància de
 la classe <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> i les ha inicialitzades al seu valor base. En ser
 <code class="docutils literal notranslate"><span class="pre">vides</span></code> un enter, aquest valor és <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
