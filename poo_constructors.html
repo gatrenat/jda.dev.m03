@@ -484,12 +484,12 @@ específic</em>.</p>
 només en el cas que no li indiquem nosaltres un altre constructor, sigui
 per defecte o sigui específic.</p>
 <p>És a dir, si no indiquem cap constructor, en tindrem un per defecte:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span>
 
 <span class="hll"><span class="w">     </span><span class="c1">// no indiquem constructor: Java ja ens crearà un!</span>
 </span>
-<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">Stringp</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span><span class="w"> </span><span class="c1">// puc construir</span>
 <span class="w">     </span><span class="p">}</span>
 <span class="w"> </span><span class="p">}</span>
@@ -497,12 +497,12 @@ per defecte o sigui específic.</p>
 </div>
 <p>Però si indiquem un d'específic, Java no ens crearà el de per defecte
 automàticament. El següent codi no compila:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span>
 
 <span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="nf">GatRenat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">novesVides</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">novesVides</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">Stringp</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="hll"><span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span><span class="w"> </span><span class="c1">// ERROR! ja no hi ha constructor per defecte!</span>
 </span><span class="w">                                          </span><span class="c1">// Cal passar-li un argument</span>
 <span class="w">     </span><span class="p">}</span>

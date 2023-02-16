@@ -529,12 +529,12 @@ per defecte o sigui específic.
 .. code-block:: java
    :emphasize-lines: 4
 
-    class GatRenat {
+    public class GatRenat {
         private int vides;
 
         // no indiquem constructor: Java ja ens crearà un!
 
-        public static void main(Stringp[] args) {
+        public static void main(String[] args) {
             GatRenat renat = new GatRenat(); // puc construir
         }
     }
@@ -545,12 +545,12 @@ automàticament. El següent codi no compila:
 .. code-block:: java
    :emphasize-lines: 7
 
-    class GatRenat {
+    public class GatRenat {
         private int vides;
 
         public GatRenat(int novesVides) { vides = novesVides; }
 
-        public static void main(Stringp[] args) {
+        public static void main(String[] args) {
             GatRenat renat = new GatRenat(); // ERROR! ja no hi ha constructor per defecte!
                                              // Cal passar-li un argument
         }
