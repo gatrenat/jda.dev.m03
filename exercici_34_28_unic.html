@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 34_12. Posició sempre correcta &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+  <title>Exercici 34_28. Un únic gat Renat &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 34_13. Ascensor protegit" href="exercici_34_13_ascensor_protegit.html" />
-    <link rel="prev" title="Exercici 34_11. Anotacions sobre accés des de fora" href="exercici_34_11_protegides.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Exercici 34_27. Mètodes de classe en Hora" href="exercici_34_27_hora_static.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -64,7 +64,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_09_posicio.html"> Exercici 34_09. Renat té posició</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_10_moviment.html"> Exercici 34_10. L'ascensor té moviment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_11_protegides.html"> Exercici 34_11. Anotacions sobre accés des de fora</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_12. Posició sempre correcta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_12_posicio_correcta.html"> Exercici 34_12. Posició sempre correcta</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_13_ascensor_protegit.html"> Exercici 34_13. Ascensor protegit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_14_com_esta.html"> Exercici 34_14. Com està Renat?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_15_ascensor_informatiu.html"> Exercici 34_15. Ascensor informatiu</a></li>
@@ -80,7 +80,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_25_hora.html"> Exercici 34_25. La classe Hora</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_26_resum.html"> Exercici 34_26. Què he aprés dels constructors?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_27_hora_static.html"> Exercici 34_27. Mètodes de classe en Hora</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_34_28_unic.html"> Exercici 34_28. Un únic gat Renat</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_28. Un únic gat Renat</a></li>
 </ul>
 </li>
 </ul>
@@ -104,12 +104,12 @@
       <li><a href="index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
           <li class="breadcrumb-item"><a href="poo_exercicis.html">Exercicis</a></li>
-      <li class="breadcrumb-item active"> Exercici 34_12. Posició sempre correcta</li>
+      <li class="breadcrumb-item active"> Exercici 34_28. Un únic gat Renat</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_34_11_protegides.html" class="btn btn-neutral float-left" title="Exercici 34_11. Anotacions sobre accés des de fora" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_34_13_ascensor_protegit.html" class="btn btn-neutral float-right" title="Exercici 34_13. Ascensor protegit" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_27_hora_static.html" class="btn btn-neutral float-left" title="Exercici 34_27. Mètodes de classe en Hora" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -117,66 +117,105 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="exerciseicon-t-exercici-34-12-posicio-sempre-correcta">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_12. Posició sempre correcta<a class="headerlink" href="#exerciseicon-t-exercici-34-12-posicio-sempre-correcta" title="Permalink to this heading"></a></h1>
+  <div class="section" id="exerciseicon-t-exercici-34-28-un-unic-gat-renat">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_28. Un únic gat Renat<a class="headerlink" href="#exerciseicon-t-exercici-34-28-un-unic-gat-renat" title="Permalink to this heading"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_12_posicio_correcta/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_propietats_protegides.html"><span class="doc">Propietats protegides</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_28_unic/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="poo_static.html"><span class="doc">Membres d'instància i de classe</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>En aquest exercici, torna a afegir la propietat <code class="docutils literal notranslate"><span class="pre">posicio</span></code> que vas
-incorporar a l'exercici <a class="reference internal" href="exercici_34_09_posicio.html"><span class="doc">Renat té posició</span></a>.
-En aquesta ocasió, fes la propietat privada i implementa els accessors de
-manera que garanteixis que la posició del Renat sigui sempre correcta, a
-l'hora que pugui ser canviada.</p>
+<p>En aquest exercici implementaràs una versió de la classe <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> de manera
+que només hi pugui haver una única instància.</p>
+<p>Recupera alguna versió antiga de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>, per exemple <a class="reference internal" href="exercici_34_24_molts_constructors.html"><span class="doc">mots
+constructors</span></a> i segueix les passes que
+t'enumero a continuació:</p>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="_images/plantuml-d3098497f04b27f14460764e25145a138f415c48.png" alt=" &#64;startuml
+<img src="_images/plantuml-32df6a0ca8416bba711f436d9164ac56391c94ae.png" alt=" &#64;startuml
  hide circle
  skinparam monochrome true
  skinparam classAttributeIconSize 0
 
-
  class GatRenat {
-     - vides: int
-     - posicio: String
-     + getVides(): int
-     + setVides(int)
-     + getPosicio(): String
-     + setPosicio(String)
+    -{static} instancia: GatRenat
+    -GatRenat()
+    +{static} getInstancia(): GatRenat
+    +{static} getInstancia(int): GatRenat
+    +{static} getInstancia(String): GatRenat
+    +{static} getInstancia(int, String): GatRenat
  }
  &#64;enduml"/>
 </p>
 </div>
-<p>Recorda que les posicions vàlides del gat Renat són <strong>exactament</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;dret&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;assegut&quot;</span></code> i <code class="docutils literal notranslate"><span class="pre">&quot;estirat&quot;</span></code>.</p>
-<p>En cas que el <em>setter</em> de <code class="docutils literal notranslate"><span class="pre">posicio</span></code> rebi un valor no vàlid, mantindrà el
-valor de la propietat sense modificar. És a dir, es comportarà igual que
-<code class="docutils literal notranslate"><span class="pre">setVides()</span></code>.</p>
-<p>Completa la següent plantilla:</p>
+<ol class="arabic">
+<li><p>defineix una propietat privada anomenada <code class="docutils literal notranslate"><span class="pre">instancia</span></code> de tipus
+<code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>. Sí, no t'espantis que no estem
+<a class="reference internal" href="moduls_recursivitat.html"><span class="doc">marlonbrando</span></a>. <code class="docutils literal notranslate"><span class="pre">instancia</span></code> és també estàtica.</p></li>
+<li><p>fes privat tots els constructors de la classe. No pateixis, al final de
+l'exercici sí es podrà crear instàncies.</p>
+<p><em>Nota</em>: Com que són privats, potser voldràs quedar-te només amb un com
+indica el diagrama UML.</p>
+</li>
+<li><p>defineix com a públic i estàtic, diferents mètodes anomenats
+<code class="docutils literal notranslate"><span class="pre">getInstancia()</span></code>, un per cada versió del constructor, amb els paràmetres
+del constructor que reemplaça. Tots aquests mètodes retornaran un GatRenat.</p></li>
+<li><p>per cada mètode <code class="docutils literal notranslate"><span class="pre">getInstancia()</span></code> comprova si la propietat <code class="docutils literal notranslate"><span class="pre">instancia</span></code> és
+<code class="docutils literal notranslate"><span class="pre">null</span></code>. Si ho és, crida el constructor corresponent i assigna el resultat
+a <code class="docutils literal notranslate"><span class="pre">instancia</span></code>. Finalment retorna el valor de <code class="docutils literal notranslate"><span class="pre">instancia</span></code> amb els valors
+indicats en els paràmetres (si n'hi ha).</p>
+<p>Totes les crides a tots quatre mètodes retornaran sempre la mateixa instància.</p>
+</li>
+</ol>
+<p>Ja estem</p>
+<p>Ara et toca provar que ho has fet bé i quines repercussions tenen els canvis
+que acabes de realitzar</p>
+<p>Considera la següent plantilla de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> que hauràs de completar.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 2</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
-<span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vides inicials: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
-<span class="linenos"> 5</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
-<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix nova posició:&quot;</span><span class="p">);</span>
-<span class="linenos"> 7</span><span class="w">         </span><span class="n">renat</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició final: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="hll"><span class="linenos"> 3</span><span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">.</span><span class="na">getInstancia</span><span class="p">();</span>
+</span><span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inicialment Renat està &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">getPosicio</span><span class="p">());</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">posicio</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 6</span><span class="w">             </span><span class="n">canviaPosicio</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ara està &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">getPosicio</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="p">}</span>
 <span class="linenos"> 9</span><span class="w">     </span><span class="p">}</span>
-<span class="linenos">10</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">canviaPosicio</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">novaPosicio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">         </span><span class="c1">// Tradueix novaPosicio: 1 -&gt; estirat, 2 -&gt; assegut, 3 -&gt; dret,</span>
+<span class="linenos">12</span><span class="w">         </span><span class="c1">// altrament es queda com estava</span>
+<span class="linenos">13</span><span class="w">         </span><span class="c1">// XXX</span>
+<span class="hll"><span class="linenos">14</span><span class="w">         </span><span class="n">GatRenat</span><span class="p">.</span><span class="na">getInstancia</span><span class="p">(</span><span class="n">novaPosicio</span><span class="p">);</span>
+</span><span class="linenos">15</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">16</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Una simulació d'execució de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> vindria a ser:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>UsaGatRenat
-<span class="hll"><span class="go">Vides inicials: 7</span>
-</span><span class="hll"><span class="go">Posició inicial: estirat</span>
-</span><span class="hll"><span class="go">Introdueix nova posició:</span>
-</span><span class="go">assegut</span>
-<span class="hll"><span class="go">Posició final: assegut</span>
-</span></pre></div>
+<p>Fixat especialment en les línies 3 i 14. En ambdues accedim a la única
+instància de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>. Tant <code class="docutils literal notranslate"><span class="pre">main()</span></code> com <code class="docutils literal notranslate"><span class="pre">canviaPosicio()</span></code> no
+comuniquen aquesta instància entre si ja que, ni la instància de <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code>
+està declarada com a global de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code>, ni <code class="docutils literal notranslate"><span class="pre">canviaPosicio()</span></code> la rep
+com a paràmetre ni la retorna! Amb tot, els canvis que es realitzen en un mòdul
+són visibles a l'altre. Sembla màgia, oi?</p>
+<p>Per completar la plantilla, et caldrà traduir el valor de <code class="docutils literal notranslate"><span class="pre">novaPosicio</span></code> de manera que:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">estirat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">assegut</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">dret</span></code></p></li>
+<li><p>qualsevol altre valor no es canvia</p></li>
+</ul>
+<p>Una simulació d'execució seria:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>UsaGatRenat<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>dret
+<span class="go">Inicialment Renat està estirat</span>
+<span class="go">Ara està dret</span>
+<span class="go">Ara està assegut</span>
+<span class="go">Ara està estirat</span>
+<span class="go">Ara està dret</span>
+</pre></div>
+</div>
+<div class="section" id="una-mica-de-culturilla-poo">
+<h2>Una mica de culturilla POO<a class="headerlink" href="#una-mica-de-culturilla-poo" title="Permalink to this heading"></a></h2>
+<p>El que t'estic demanant en aquest exercici és que implementis el <em>patró singleton</em>. Com diu la <a class="reference external" href="https://ca.wikipedia.org/wiki/Patr%C3%B3_singleton">Viquipèdia</a>, aquest patró és fa servir per restringir la instanciació d'una classe a un únic objecte.</p>
 </div>
 </div>
 
@@ -207,8 +246,8 @@ valor de la propietat sense modificar. És a dir, es comportarà igual que
 
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_34_11_protegides.html" class="btn btn-neutral float-left" title="Exercici 34_11. Anotacions sobre accés des de fora" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_34_13_ascensor_protegit.html" class="btn btn-neutral float-right" title="Exercici 34_13. Ascensor protegit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_27_hora_static.html" class="btn btn-neutral float-left" title="Exercici 34_27. Mètodes de classe en Hora" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

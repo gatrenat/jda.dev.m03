@@ -32,13 +32,13 @@ Exercicis
     exercici_34_24_molts_constructors.rst
     exercici_34_25_hora.rst
     exercici_34_26_resum.rst
+    exercici_34_27_hora_static.rst
+    exercici_34_28_unic.rst
 
-..  exercici_34_27_hora_static.rst
-..  exercici_34_28_unic.rst
-..  exercici_34_29_ulls.rst
-..  exercici_34_30_picarol.rst
-..  exercici_34_31_exemple_herencia.rst
-..  exercici_34_32_renat_es_gat.rst
-..  exercici_34_33_metodes_cridats.rst
-..  exercici_34_34_garfield.rst
-..  exercici_34_35_interfagat.rst
+..    exercici_34_29_ulls.rst
+..    exercici_34_30_picarol.rst
+..    exercici_34_31_exemple_herencia.rst
+..    exercici_34_32_renat_es_gat.rst
+..    exercici_34_33_metodes_cridats.rst
+..    exercici_34_34_garfield.rst
+..    exercici_34_35_interfagat.rst
