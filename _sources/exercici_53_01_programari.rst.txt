@@ -1,0 +1,97 @@
+###############################################
+|exerciseicon___| Exercici 53_01. El programari
+###############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_01_programari/``
+
+* Continguts relacionats: :doc:`adoo_programari`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+En aquest exercici hauràs de desenvolupar un document (format pdf) amb les
+següents seccions:
+
+* portada: títol, context (cicle, assignatura), autoria i  data
+
+* taula de continguts (amb enllaços)
+
+* cada pàgina contindrà al peu:
+
+  - paginació que indicarà el número de pàgina i total de pàgines del document
+
+  - el títol del document i la versió
+
+* una primera secció d'introducció en la que s'explicarà els continguts del
+  document
+
+* una secció per cadascuna de les preguntes/temes que s'enumeraran a continuació
+
+* una secció final amb conclusions, que farà un petit resum dels continguts
+  vistos i, si escau, enllaços consultats i propostes per ampliar la
+  informació.
+
+.. important:: Mira de donar-li un aspecte que qualificaries de
+   *professional*. La plantilla et pot servir de base per futurs
+   documents.
+
+Les preguntes/temes a incloure al document són:
+
+1. Descriu amb les teves paraules en un paràgraf què és el programari, de
+   manera que ho pugui entendre una persona que s'estigui plantejant fer un
+   cicle de desenvolupament de programari com ara el que estàs cursant.
+
+2. Hem vist que el nostre producte, el programari, presenta les següents
+   característiques:
+
+   - es desenvolupa o construeix, no es manufactura
+
+   - no es desgasta però es deteriora
+
+   - es construeix majoritàriament "a mida"
+
+   Troba un o més exemples d'altres productes desenvolupats pels éssers
+   humans, que comparteixin les tres característiques esmentades al tema.
+   Si no compleix alguna, indica perquè.
+
+   Atreveix-te a fer una abstracció de quina mena de productes es
+   desenvolupen com el programari.
+
+3. **Tipologies**: Revisa les diferents tipologies de programari que hem
+   comentat a classe.
+
+   Escull-ne com a mínim cinc, i, per cadascuna d'elles, fes una breu
+   recerca d'aplicacions concretes que pensis que poden ser classificades
+   i proposa'n com a mínim una.
+
+4. **Legacy**: Torna a considerar les activitats generals dels models de
+   desenvolupament
+
+   .. image:: _images/activitats_generals.png
+      :alt: Activitats generals
+      :align: center
+
+   Argumenta amb quina activitat o activitat es creen o es produeixen les
+   característiques menys desitjables del programari heretat.
+
+5. **Riscos**: Defineix què és un risc i descriu un mínim de dos riscos
+   *creïbles* que consideris que podrien afectar-te en l'obtenció d'una
+   bona feina en el món del desenvolupament d'aplicacions. Considera quina
+   seria la severitat i proposa alguna estratègia per eliminar-los,
+   pal·liar-los o/i *sobreviure-hi* en el cas que finalment esdevinguin
+   una realitat.
+
+6. **Models de desenvolupament**: Fes una recerca sobre diferents models
+   de desenvolupament i composa'n en aquest document una breu introducció
+   i comparació entre ells. Identifica en la descripció, com resolen les
+   cinc activitats generals.
+   Com a mínim, haurien d'aparèixer els següents:
+
+   - El model clàssic o en cascada
+
+   - El model en espiral
+
+   - Algun model àgil (ex. eXtreme Programming)

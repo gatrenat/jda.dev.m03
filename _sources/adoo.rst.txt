@@ -1,0 +1,22 @@
+######################################
+Anàlisi i Disseny Orientats a Objectes
+######################################
+
+Aquesta part del curs és una introduccio a l'anàlisi i disseny orientat a
+objectes. Farem una ullada més profunda al nostre *producte*, el
+programari, i descobrirem com passar de la idea al codi. Ens ajudarem
+especialment d'un llenguatge de modelització anomenat UML.
+
+Els continguts d'aquesta part del curs els trobarem a les següents
+entrades:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    adoo_programari.rst
+    adoo_exercicis.rst
+
+..    adoo_requeriments.rst
+..    adoo_classes_objectes.rst
+..    uml.rst

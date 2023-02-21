@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programari &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Llistat d&#39;exercicis" href="adoo_exercicis.html" />
+    <link rel="prev" title="Anàlisi i Disseny Orientats a Objectes" href="adoo.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Programari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adoo_exercicis.html">Llistat d'exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+      <li class="breadcrumb-item active">Programari</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="adoo.html" class="btn btn-neutral float-left" title="Anàlisi i Disseny Orientats a Objectes" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adoo_exercicis.html" class="btn btn-neutral float-right" title="Llistat d&#39;exercicis" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="programari">
+<h1>Programari<a class="headerlink" href="#programari" title="Permalink to this heading"></a></h1>
+<p>Comencem amb una mica de context, amb el prefaci del llibre <em>The Pragmatic
+Programmer: From Journeyman to Master</em></p>
+<blockquote>
+<div><p>Programming is a craft. At its simplest, it comes down to getting
+a computer to do what you want it to do (or what your user wants
+it to do). As a programmer, you are part listener, part advisor,
+part interpreter, and part dictator. You try to capture elusive
+requirements and find a way of expressing them so that a mere
+machine can do them justice. You try to document your work so that
+others can understand it, and you try to engineer your work so
+that others can build on it. What's more, you try to do all this
+against the relentless ticking of the project clock. You work
+small miracles every day.</p>
+<p>It's a difficult job.</p>
+<p>There are many people offering you help. Tool vendors tout the
+miracles their products perform. Methodology gurus promise that
+their techniques guarantee results. Everyone claims that their
+programming language is the best, and every operating system is
+the answer to all conceivable ills.</p>
+<p>Of course, none of this is true. There are no easy answers. There
+is no such thing as a best solution, be it a tool, a language, or
+an operating system. There can only be systems that are more
+appropriate in a particular set of circumstances.</p>
+<p>This is where pragmatism comes in. You shouldn't be wedded to any
+particular technology, but have a broad enough background and
+experience base to allow you to choose good solutions in
+particular situations. Your background stems from an understanding
+of the basic principles of computer science, and your experience
+comes from a wide range of practical projects. Theory and practice
+combine to make you strong.</p>
+</div></blockquote>
+<p>Els usem, els construïm, els modifiquem, en somiem amb nous.
+L'element amb que treballem els desenvolupadors de programari és,
+evidentment, el programari. Però què és exactament el programari?
+Quines característiques té? Com es construeix?</p>
+<p>En aquest tema es tracta el concepte de <em>programari</em> des de diferents
+perspectives amb l'objectiu d'oferir un context de reflexió sobre el
+producte de la nostra professió.</p>
+<div class="section" id="definicio-formal">
+<h2>Definició formal<a class="headerlink" href="#definicio-formal" title="Permalink to this heading"></a></h2>
+<p>Una definició formal de llibre de text diria que el programari es
+composa de:</p>
+<ol class="arabic simple">
+<li><p>Les instruccions (programes de computadora) que en executar-se
+proporcionen les característiques, funcions i grau de rendiment
+desitjats;</p></li>
+<li><p>Les estructures de dades que permeten que els programes manipulin
+informació de manera adequada; y</p></li>
+<li><p>Els documents que descriuen l'operació i ús dels programes.</p></li>
+</ol>
+<p>Però, amb això sabem que és el programari?</p>
+</div>
+<div class="section" id="caracteristiques">
+<h2>Característiques<a class="headerlink" href="#caracteristiques" title="Permalink to this heading"></a></h2>
+<p>El programari presenta unes característiques molt particulars, en
+destacarem aquí:</p>
+<ul>
+<li><p>es desenvolupa o es construeix, no es manufactura en el sentit
+clàssic</p>
+<p>No es treballa amb matèria (física), les despeses que ocasiona estan
+en els desenvolupadors i no tant en els materials</p>
+</li>
+<li><p>no es desgasta però es deteriora</p>
+<p>Amb el temps, les modificacions que es realitzen per manteniment
+introdueixen més i més errors</p>
+</li>
+<li><p>es construeix majoritàriament &quot;a mida&quot;</p>
+<ul class="simple">
+<li><p>començant sempre pràcticament des de zero,</p></li>
+<li><p>sense pràcticament fer servir components a diferència de la
+tendència general de la industria</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="tipus">
+<h2>Tipus<a class="headerlink" href="#tipus" title="Permalink to this heading"></a></h2>
+<p>El programari sovint es classifica en una o més de les següents
+categories:</p>
+<ul>
+<li><p>programari de sistemes</p>
+<p>S.O., compiladors, i altres utilitats que es fan servir sovint per
+altres programes</p>
+</li>
+<li><p>programari d'aplicació</p>
+<p>Programes que resolen una necessitat específica de negoci (ex.
+Processament de transaccions als punts de venda i el control de
+processos de manufactura en temps real com ara <em>just-in-time</em>)</p>
+</li>
+<li><p>programari científic i d'enginyeria</p>
+<p>Caracteritzats per algorismes &quot;devoradors de nombres&quot; ex.
+Analitzadors de dades (astronomia, vulcanologia, tensió
+automotriu, biologia molecular…)</p>
+</li>
+<li><p>programari incrustat (embedded)</p>
+<ul class="simple">
+<li><p>resideix a memòria de només lectura dels sistemes</p></li>
+<li><p>controlen característiques i funcions concretes per l'usuari i
+pel propi sistema ex. Control del teclat d'un forn microones,
+funcions digitals de l'automòbil (control del combustible, de
+frenada…)</p></li>
+</ul>
+</li>
+<li><p>programari de línia de productes</p>
+<p>Ofereixen una capacitat específica valida per un gran nombre
+d'usuaris dins d'un sector concret: (ex. Productes de control
+d'inventaris, comptabilitat…) o molt genèrics (ex. Processadors
+de texts, full de càlculs, presentació, multimedia, gestió de
+bases de dades…)</p>
+</li>
+<li><p>aplicacions basades en web (WebApps)</p>
+<p>Des d'un conjunt d'arxius en html fins a aplicacions B2B (Business
+to Business) i de comerç electrònic.</p>
+</li>
+<li><p>aplicacions per dispositius mòbils (<em>apps</em>)</p>
+<ul class="simple">
+<li><p>s'executen en smartphones, tablets i altres dispositius
+lleugers.</p></li>
+<li><p>connectades, amb localització geogràfica, amb interaccions més
+properes a l'usuari (gestos tàctils, moviment i posició del
+dispositiu, anàlisi de audio i vídeo, etc.)</p></li>
+</ul>
+</li>
+<li><p>programari d'intel·ligència artificial</p>
+<ul class="simple">
+<li><p>fa servir algorismes no numèrics (ex. basats en heurístics, xarxes
+neuronals, evolutius) per a la resolució de problemes complexos que
+encara no poden ser abordats per l'anàlisi directe. Inclouen
+aplicacions per a la robòtica, els sistemes experts, el reconeixement
+de patrons (text, imatge, so), demostració de teoremes, jocs
+d'ordinador i, per descomptat, parts importants de les <em>apps</em> més
+innovadores.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="programari-heretat-legacy-software">
+<h2>Programari heretat (legacy software)<a class="headerlink" href="#programari-heretat-legacy-software" title="Permalink to this heading"></a></h2>
+<p>Existeixen milers de programes en funcionament de totes les tipologies</p>
+<p>Algunes descripcions:</p>
+<ul class="simple">
+<li><p>Els sistemes de programari heretats van ser desenvolupats fa
+dècades, i han estat modificats de forma contínua per a complir els
+requeriments dels canvis als negocis i de les plataformes de còmput.
+La proliferació d'aquests sistemes ha causat mals de cap a les grans
+organitzacions, que els perceben com a costosos de mantenir i
+d'evolució molt arriscada</p></li>
+<li><p>Molts sistemes heretats donen suport a les funcions centrals de
+negoci i són indispensables per les empreses</p></li>
+<li><p>Es caracteritza per la seva longevitat i per ser crítics pels
+negocis</p></li>
+</ul>
+<p>Una característica addicional en general és la poca qualitat d'aquest
+programari:</p>
+<ul class="simple">
+<li><p>dissenys impossibles d'entendre,</p></li>
+<li><p>codi complicat,</p></li>
+<li><p>documentació escassa o inexistent,</p></li>
+<li><p>casos de prova i resultats que mai van ser arxivats,</p></li>
+<li><p>historial de canvis pobrement mantingut, …</p></li>
+<li><p>no s'adapta 100% a les necessitats</p></li>
+</ul>
+<p>I, què es pot fer amb tot això?</p>
+<p>La <em>regla d'or</em> sempre ha estat &quot;mentre funcioni no el toquis!&quot;.</p>
+<p>Amb el temps, però, tot programari en ús requereix canvis perquè:</p>
+<ul class="simple">
+<li><p>cal adaptar-lo a noves tecnologies (ex. a entorns visuals, xarxa…)</p></li>
+<li><p>calen nous requeriments de negoci o els requeriments han canviat</p></li>
+<li><p>cal que interaccioni amb nous sistemes i sgbds, …</p></li>
+<li><p>quan s'ha de modificar, cal que es realitzi un procés de
+reenginyeria per a garantir la seva evolució futura.</p></li>
+</ul>
+<p>Què passa? És què els anteriors desenvolupadors no ho sabien fer?</p>
+<ul class="simple">
+<li><p>La crua realitat és que nosaltres estem desenvolupant el programari
+heretat de demà.</p></li>
+<li><p>El programari evoluciona contínuament. El programari nou es
+construeix a partir de l'antic, i tots han d'interactuar i cooperar
+amb altres.</p></li>
+<li><p>El nostre repte, com a desenvolupadors, és trobar mecanismes per
+desenvolupar programari de manera que interaccioni adequadament amb
+el programari heretat i, a l'hora, sigui més mantenible que aquest.</p></li>
+</ul>
+</div>
+<div class="section" id="desenvolupament">
+<h2>Desenvolupament<a class="headerlink" href="#desenvolupament" title="Permalink to this heading"></a></h2>
+<p>Ara que ja tenim una idea més &quot;enriquida&quot; del què és el programari,
+anem a veure com el construïm.</p>
+<p>Per desenvolupar programari necessitem</p>
+<ul>
+<li><p>un procés o model de desenvolupament</p>
+<ul class="simple">
+<li><p>defineix el marc de treball</p></li>
+<li><p>persegueix el desenvolupament racional i a temps del programari</p></li>
+<li><p>ofereix control de la gestió dels projectes de programari</p></li>
+<li><p>estableix el context on s'apliquen els mètodes tècnics, es
+generen els productes (models, documents, dades, informes,
+formats)</p></li>
+<li><p>assegura la qualitat</p></li>
+<li><p>ofereix control de la gestió del canvi</p></li>
+</ul>
+</li>
+<li><p>un conjunt de mètodes</p>
+<ul class="simple">
+<li><p>són els “com” tècnics de la construcció del programari.</p></li>
+<li><p>inclouen tasques com: comunicació, anàlisi de requeriments,
+modelat del disseny construcció dels programes, realització de
+proves, i  suport</p></li>
+</ul>
+</li>
+<li><p>un conjunt d'eines</p>
+<ul>
+<li><p>proporcionen un suport pel procés i els mètodes.</p></li>
+<li><p>quan les eines estan integrades entre si, es parla d'una eina CASE
+(Computer Aided Software Engineering)</p>
+<p>(<a class="reference external" href="http://ca.wikipedia.org/wiki/Eines_CASE">http://ca.wikipedia.org/wiki/Eines_CASE</a>) Les eines CASE (Computer
+Aided Software Engineering, Enginyeria del programari Assistida
+per Ordinador) són diverses aplicacions informàtiques destinades a
+augmentar la productivitat en el desenvolupament de programari
+reduint el cost del desenvolupament en termes temps i diners.
+Aquestes eines proporcionen ajudes en totes les fases del cicle de
+vida de desenvolupament de programari com per exemple el procés de
+realitzar un disseny del projecte, calcular costos, implementació
+automàtica de codi a partir del disseny, compilació automàtica,
+documentació o detecció d'errors entre d'altres.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="activitats">
+<h2>Activitats<a class="headerlink" href="#activitats" title="Permalink to this heading"></a></h2>
+<p>Els models de desenvolupament consideren les següents activitats
+generals:</p>
+<img alt="Activitats generals" class="align-center" src="_images/activitats_generals.png" />
+<ul class="simple">
+<li><p>comunicació</p>
+<ul>
+<li><p>col·laboració i comunicació amb el client</p></li>
+<li><p>client (<em>stakeholder</em>) és qualsevol que tingui interès en l'èxit del
+resultat del projecte</p></li>
+</ul>
+</li>
+</ul>
+<div class="sidebar">
+<p class="sidebar-title"><em>stakeholders</em></p>
+<p><em>stakeholder</em> en anglès vol dir persona que subjecta una estaca. A
+la nostra professió, aquesta estaca és gran i afilada…  si no
+cuides bé als teus clients ja saps on anirà a parar aquesta
+estaca… (acudit vist a &quot;Ingeniería del Software, un enfoque
+Práctico&quot; 6a ed. del Roger Pressman)</p>
+</div>
+<ul>
+<li><p>planificació</p>
+<p>Descriu el pla de treball:</p>
+<ul class="simple">
+<li><p>les tasques tècniques a realitzar</p></li>
+<li><p>els riscos probables</p></li>
+<li><p>els recursos requerits</p></li>
+<li><p>els productes a generar</p></li>
+<li><p>la programació de les tasques en el temps associades als recursos</p></li>
+</ul>
+</li>
+<li><p>modelat</p>
+<ul>
+<li><p>elaboració dels models que permeten al desenvolupador i al client
+entendre i posar-se d'acord amb els requeriments del programari a
+desenvolupar.</p></li>
+<li><p>definició del disseny que satisfarà aquests requeriments</p></li>
+<li><p>generalment es composa de dues accions diferenciades: anàlisi i
+disseny.</p></li>
+<li><p>l'anàlisi</p>
+<p>Inclou investigació, elaboració, negociació, especificació i validació dels requeriments.</p>
+<p>Condueix a un model d'anàlisi o especificació de requeriments.</p>
+</li>
+<li><p>el disseny</p>
+<p>Pot ser de dades, arquitectònic, d'interfície i a nivell de components</p>
+<p>Crea un model de disseny o especificació de disseny.</p>
+</li>
+</ul>
+</li>
+<li><p>construcció</p>
+<ul class="simple">
+<li><p>generació del producte a partir del disseny (codificació)</p></li>
+<li><p>realització de les proves</p></li>
+</ul>
+</li>
+<li><p>desplegat</p>
+<ul class="simple">
+<li><p>lliurament al client</p></li>
+<li><p>avaluació per part del client del resultat</p></li>
+</ul>
+</li>
+</ul>
+<p>A banda de les activitats generals, s'inclou un conjunt d'activitats
+de suport. Entre d'altres:</p>
+<ul>
+<li><p>seguiment i suport del projecte</p>
+<p>Permet l'avaluació del progrés comparant-lo amb el pla del projecte</p>
+<p>Permet prendre mesures per a corregir les possibles desviacions</p>
+</li>
+<li><p>gestió del risc</p>
+<p>Avalua els riscos que puguin afectar al desenvolupament o a la qualitat</p>
+</li>
+<li><p>assegurament de la qualitat</p>
+<p>Defineix i condueix les activitats requerides per a assegurar la
+qualitat del programari</p>
+</li>
+<li><p>revisions tècniques</p>
+<p>Avalua els productes que es van desenvolupant per a trobar i
+eliminar errors abans que arribin a la següent acció o activitat</p>
+</li>
+<li><p>mesurament</p>
+<p>Defineix i recull mesures del procés, el projecte i el producte</p>
+<p>Ajuda a garantir la satisfacció dels requeriments</p>
+</li>
+<li><p>gestió de la reutilització</p>
+<p>Defineix els criteris per a la reutilització dels productes
+(incloent components de programari)</p>
+<p>Estableix mecanismes per a la creació de components reusables</p>
+</li>
+<li><p>preparació i producció</p>
+<p>Activitats requerides per a crear els productes com ara models,
+documents, registres, formats i llistes.</p>
+</li>
+</ul>
+<p>Existeixen diferents models de desenvolupament en ús actualment, des
+de l'històric <em>model clàssic</em> o <em>en cascada</em>, a les diferents versions
+de <em>desenvolupament àgil</em> (ex. eXtreme Programming, Scrum). Tots ells
+persegueixen un desenvolupament controlat que satisfaga el client.</p>
+</div>
+<div class="section" id="el-manifest-agil">
+<h2>El manifest àgil<a class="headerlink" href="#el-manifest-agil" title="Permalink to this heading"></a></h2>
+<p>Els models predominants en l'actualitat, o si més no, els que a les
+trobades entre desenvolupadors, queda millor dir que segueixen són alguna
+variant del que es coneix com <em>agile</em>.</p>
+<p>Com que el seu <a class="reference external" href="https://agilemanifesto.org/iso/ca/manifesto.html">manifest</a> és prou <em>àgil</em> per
+explicar, el reprodueixo aquí:</p>
+<blockquote>
+<div><p>Estem posant al descobert millors maneres de desenvolupar programari
+fent-ho i ajudant a altres a fer-ho. Mitjançant aquesta feina hem
+acabat valorant:</p>
+<ul class="simple">
+<li><p>Individus i interaccions per sobre de processos i eines</p></li>
+<li><p>Programari que funciona per sobre de documentació exhaustiva</p></li>
+<li><p>Col·laboració amb el client per sobre de negociació de contractes</p></li>
+<li><p>Resposta al canvi per sobre de cenyir-se a una planificació</p></li>
+</ul>
+<p>És a dir, encara que els elements de la dreta tenen valor,
+nosaltres valorem més els de l’esquerra.</p>
+</div></blockquote>
+<p>El manifest està signat per un bon nombre de les figures més rellevants de
+la nostra indústria, i encara que només fos per això, potser val la pena
+donar-li punts de credibilitat.</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_53_01_programari.html"><span class="doc"> Exercici 53_01. El programari</span></a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="adoo.html" class="btn btn-neutral float-left" title="Anàlisi i Disseny Orientats a Objectes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adoo_exercicis.html" class="btn btn-neutral float-right" title="Llistat d&#39;exercicis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

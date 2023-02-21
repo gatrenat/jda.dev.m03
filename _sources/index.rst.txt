@@ -24,6 +24,7 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     moduls.rst
     fitxers.rst
     poo.rst
+    adoo.rst
     apendix.rst
 
 ..    bib.rst

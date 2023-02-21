@@ -1,0 +1,19 @@
+###################
+Llistat d'exercicis
+###################
+
+A continuació trobaràs la llista d'exercicis del tema: :doc:`adoo`.
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    exercici_53_01_programari.rst
+
+..    exercici_53_02_cercamines.rst
+..    exercici_53_03_dgc_cercamines.rst
+..    exercici_53_04_lloguer_vehicles.rst
+..    exercici_53_05_gestio_centre.rst
+..    exercici_53_06_cervesera.rst
+..    exercici_53_07_naus_industrials.rst
+..    exercici_53_08_el_meu_projecte.rst
