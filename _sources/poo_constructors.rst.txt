@@ -849,6 +849,6 @@ línia del cos del constructor, altrament ``javac`` es queixarà.
 
 |exerciseicon__T| :doc:`exercici_34_24_molts_constructors`
 
-|exerciseicon__T| :doc:`exercici_34_25_hora`
+|exerciseicon_ST| :doc:`exercici_34_25_hora`
 
 |exerciseicon___| :doc:`exercici_34_26_resum`

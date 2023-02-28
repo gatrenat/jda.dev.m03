@@ -60,6 +60,7 @@
 <li class="toctree-l2"><a class="reference internal" href="poo_constructors.html">Constructors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="poo_static.html">Membres d'instància i de classe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="poo_composicio.html">Composició</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poo_herencia.html">Herència</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="poo_exercicis.html">Exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_01_propietats.html"> Exercici 34_01. Anotacions sobre les propietats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_02_pis.html"> Exercici 34_02. L'ascensor està al primer pis</a></li>
@@ -91,6 +92,9 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_28. Un únic gat Renat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_29_ulls.html"> Exercici 34_29. Els ulls del gat Renat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_30_picarol.html"> Exercici 34_30. El Picarol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_31_exemple_herencia.html"> Exercici 34_31. El meu exemple d'herència</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_32_renat_es_gat.html"> Exercici 34_32. Renat és un Gat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_33_metodes_cridats.html"> Exercici 34_33. Els mètodes que realment es criden</a></li>
 </ul>
 </li>
 </ul>
@@ -208,11 +212,13 @@ comuniquen aquesta instància entre si ja que, ni la instància de <code class="
 està declarada com a global de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code>, ni <code class="docutils literal notranslate"><span class="pre">canviaPosicio()</span></code> la rep
 com a paràmetre ni la retorna! Amb tot, els canvis que es realitzen en un mòdul
 són visibles a l'altre. Sembla màgia, oi?</p>
-<p>Per completar la plantilla, et caldrà traduir el valor de <code class="docutils literal notranslate"><span class="pre">novaPosicio</span></code> de manera que:</p>
+<p>Per completar la plantilla, et caldrà traduir el valor de <code class="docutils literal notranslate"><span class="pre">novaPosicio</span></code> de
+manera que:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">estirat</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">assegut</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> passi a ser <code class="docutils literal notranslate"><span class="pre">dret</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">estirat</span></code>, <code class="docutils literal notranslate"><span class="pre">assegut</span></code>, <code class="docutils literal notranslate"><span class="pre">dret</span></code> demanin el canvi de posició corresponent.</p></li>
 <li><p>qualsevol altre valor no es canvia</p></li>
 </ul>
 <p>Una simulació d'execució seria:</p>

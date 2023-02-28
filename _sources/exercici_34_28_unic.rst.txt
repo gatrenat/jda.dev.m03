@@ -96,13 +96,16 @@ està declarada com a global de ``UsaGatRenat``, ni ``canviaPosicio()`` la rep
 com a paràmetre ni la retorna! Amb tot, els canvis que es realitzen en un mòdul
 són visibles a l'altre. Sembla màgia, oi?
 
-Per completar la plantilla, et caldrà traduir el valor de ``novaPosicio`` de manera que:
+Per completar la plantilla, et caldrà traduir el valor de ``novaPosicio`` de
+manera que:
 
 * ``1`` passi a ser ``estirat``
 
 * ``2`` passi a ser ``assegut``
 
 * ``3`` passi a ser ``dret``
+
+* ``estirat``, ``assegut``, ``dret`` demanin el canvi de posició corresponent.
 
 * qualsevol altre valor no es canvia
 

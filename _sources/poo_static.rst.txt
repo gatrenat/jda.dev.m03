@@ -221,7 +221,7 @@ En UML els mètodes estàtics apareixen subratllats
      @enduml
 
 
-|exerciseicon___| :doc:`exercici_34_27_hora_static`
+|exerciseicon__T| :doc:`exercici_34_27_hora_static`
 
 En quant les propietats
 =======================

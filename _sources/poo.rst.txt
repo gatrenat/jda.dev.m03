@@ -34,6 +34,6 @@ Aquest tema es desglossa en les següents entrades:
     poo_constructors.rst
     poo_static.rst
     poo_composicio.rst
+    poo_herencia.rst
     poo_exercicis.rst
 
-..    poo_herencia.rst
