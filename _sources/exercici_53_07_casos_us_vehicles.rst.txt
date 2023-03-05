@@ -1,0 +1,19 @@
+####################################################################
+|exerciseiconO__| Exercici 53_07. Casos d'ús del lloguer de vehicles
+####################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_07_casos_us_vehicles/``
+
+* Continguts relacionats: :doc:`adoo_casosdus`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+.. rubric:: Enunciat
+
+Fes una nova versió del document d'anàlisi de l'aplicació de lloguer de
+vehicles que vàrem treballar :doc:`anteriorment
+<exercici_53_02_lloguer_vehicles>`. Afegeix una nova secció amb els casos d'ús.

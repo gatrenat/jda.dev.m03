@@ -15,8 +15,8 @@ entrades:
     :maxdepth: 1
 
     adoo_programari.rst
+    adoo_requeriments.rst
     adoo_exercicis.rst
 
-..    adoo_requeriments.rst
-..    adoo_classes_objectes.rst
-..    uml.rst
+.. adoo_classes_objectes.rst
+.. uml.rst

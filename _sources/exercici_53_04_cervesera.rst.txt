@@ -1,0 +1,36 @@
+##############################################
+|exerciseiconO__| Exercici 53_04. La cervesera
+##############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_04_cervesera/``
+
+* Continguts relacionats: :doc:`adoo_dgc`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+.. rubric:: Enunciat
+
+Novament analitzaràs uns requeriments que es descriuen a continuació i
+generaràs el DGC amb la descripció d'actors.
+
+Composa un document amb el format i l'estructura que requerien exercicis
+anteriors. No oblidis incloure una secció amb el text original dels
+requeriments. Considera també afegir una secció amb els dubtes que t'ha
+generat, les alternatives que has considerat i decisions (justificades)
+que has acabat prenent.
+
+Requeriments
+============
+
+Aplicació de gestió de comandes i estoc d'un productor de cerveses. El sistema disposarà de regles
+que defineixen la planificació de producció diària de cada producte, i d'un sistema per a corregir
+inventaris (clar, de vegades les planificacions de producció no s'acompleixen). Els clients poden
+realitzar comandes en-línia dels diferents productes i el sistema permet fer reserves d'estoc, i de
+donar una idea als clients de quan estarà disponible la seva comanda per a ser lliurada (segons
+estoc i plans de producció). Finalment el sistema ofereix informació de compres (estadístiques) que
+permeten als planificadors de producció i equips comercials i de màrqueting conèixer com està
+funcionant al mercat.

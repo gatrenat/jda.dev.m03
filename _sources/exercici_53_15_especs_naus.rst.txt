@@ -1,0 +1,28 @@
+############################################################################
+|exerciseicon___| Exercici 53_15. Casos d'ús del lloguer de naus industrials
+############################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_15_especs_naus/``
+
+* Continguts relacionats: :doc:`adoo_especificacions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Fes una nova versió del document que vas generar per l'exercici
+del :doc:`lloguer de naus industrials <exercici_53_10_casos_us_naus>`.
+
+Considera la llista de casos d'ús que vas incloure-hi. Crea l'especificació de
+cadascun d'ells fins el punt 2 (*breu descripció*)
+
+Escull un o més casos d'ús i completa la seva especificació. Especifica tant
+com puguis el curs principal i els cursos alternatius.
+
+Escull un o més casos d'ús i completa una història d'usuari.
+
+Considera afegir documentació sobre *requeriments addicionals*.
+
+Afegeix-ho tot plegat a la documentació del teu projecte.

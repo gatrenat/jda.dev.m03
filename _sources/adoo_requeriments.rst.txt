@@ -1,0 +1,67 @@
+############
+Requeriments
+############
+
+
+Abans de començar a plantejar-se el desenvolupament d'una aplicació, el
+primer de tot és *saber què hem de fer*; el que coneixerem com
+*requeriments*. Aquest serà el tema que estem a punt de començar a
+treballar.
+
+Recordem les activitats comunes a tots els models de desenvolupament:
+
+.. image:: _images/activitats_generals.png
+   :alt: Activitats generals
+   :align: center
+
+Els requeriments es recullen a la primera activitat, la de comunicació.
+
+En aquesta activitat no pretenem desenvoplupar l'aplicació. Només volem
+trobar el màxim possible d'elements a tenir presents per desenvolupar el
+sistema.
+
+La activitat de comunicació té, com a resultat, un o més documents. Tot i
+que el format d'aquesta documentació no és estàndard, hi sol contenir els
+següents punts:
+
+#. Descripció de l'objectiu del projecte
+
+   És una descripció breu textual en línia o paràgraf
+
+#. Descripció del màxim nombre de característiques del projecte:
+
+   - diagrama general de context (DGC)
+
+   - tipologia d'usuaris
+
+   - funcionalitats
+
+   - elements (dades) a tractar
+
+   - restriccions tècniques (maquinari/so...) a tenir en compte
+
+   - altres consideracions crítiques/restriccions a tenir en compte (ex.
+     Coses que **NO** pot permetre que passin)
+
+Pràctica: Dificultats en la comunicació
+=======================================
+
+Calen dos voluntaris, paper i quelcom per escriure.
+
+.. note:: Aquesta pràctica es descriu a classe i perdria el factor
+   sorpresa si la descric aquí. Si no estàs seguint la meva classe però
+   tens interès en aquesta pràctica, posa't en contacte amb mi.
+
+
+-----
+
+
+A continuació veurem amb més detall aquests punts:
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    adoo_dgc.rst
+    adoo_casosdus.rst
+    adoo_especificacions.rst

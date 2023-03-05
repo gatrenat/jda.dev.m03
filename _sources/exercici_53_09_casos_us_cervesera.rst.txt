@@ -1,0 +1,20 @@
+############################################################
+|exerciseiconO__| Exercici 53_09. Casos d'ús de la cervesera
+############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_09_casos_us_cervesera/``
+
+* Continguts relacionats: :doc:`adoo_casosdus`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+.. rubric:: Enunciat
+
+Fes una nova versió del document d'anàlisi de l'aplicació de
+la cervesera
+que vàrem treballar :doc:`anteriorment
+<exercici_53_04_cervesera>`. Afegeix una nova secció amb els casos d'ús.

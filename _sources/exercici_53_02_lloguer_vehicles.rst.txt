@@ -1,0 +1,37 @@
+#####################################################
+|exerciseiconO__| Exercici 53_02. Lloguer de vehicles
+#####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``53_02_lloguer_vehicles/``
+
+* Continguts relacionats: :doc:`adoo_dgc`, :doc:`adoo_dgc`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+.. rubric:: Enunciat
+
+En aquesta ocasió, analitzaràs uns requeriments que es descriuen a
+continuació i generaràs el DGC amb la descripció d'actors.
+
+Composa un document amb el format i l'estructura que requerien exercicis
+anteriors. No oblidis incloure una secció amb el text original dels
+requeriments. Considera també afegir una secció amb els dubtes que t'ha
+generat, les alternatives que has considerat i decisions (justificades)
+que has acabat prenent.
+
+Requeriments
+============
+
+Es vol desenvolupar una aplicació que permeti ampliar la gestió de les activitats d'una companyia de
+lloguer de vehicles. L'aplicació haurà de gestionar les reserves dels clients (on-line) i un sistema
+de fidelització per punts.
+
+La nova aplicació haurà d'integrar-se amb les aplicacions existents que gestionen aspectes com els
+clients, els vehicles disponibles i els lloguers. D'aquesta manera, per exemple, un vehicle llogat
+per internet, deixarà d'estar disponible per a les aplicacions “off-line”, mentre que els punts de
+fidelització seran comptats tant per les operacions on-line com per les que es fan a oficina.
+Aquesta integració, en cap cas, requerirà la modificació de les aplicacions anteriors.

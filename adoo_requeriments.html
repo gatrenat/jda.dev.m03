@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anàlisi i Disseny Orientats a Objectes &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+  <title>Requeriments &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Programari" href="adoo_programari.html" />
-    <link rel="prev" title="Exercici 34_33. Els mètodes que realment es criden" href="exercici_34_33_metodes_cridats.html" />
+    <link rel="next" title="Diagrama general de context (DGC)" href="adoo_dgc.html" />
+    <link rel="prev" title="Programari" href="adoo_programari.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
 
@@ -56,9 +56,14 @@
 <li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Anàlisi i Disseny Orientats a Objectes</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="adoo_programari.html">Programari</a></li>
-<li class="toctree-l2"><a class="reference internal" href="adoo_requeriments.html">Requeriments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Requeriments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="adoo_dgc.html">Diagrama general de context (DGC)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adoo_casosdus.html">Casos d'ús</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adoo_especificacions.html">Especificacions dels casos d'ús</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="adoo_exercicis.html">Llistat d'exercicis</a></li>
 </ul>
 </li>
@@ -79,12 +84,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Anàlisi i Disseny Orientats a Objectes</li>
+          <li class="breadcrumb-item"><a href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+      <li class="breadcrumb-item active">Requeriments</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_34_33_metodes_cridats.html" class="btn btn-neutral float-left" title="Exercici 34_33. Els mètodes que realment es criden" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="adoo_programari.html" class="btn btn-neutral float-right" title="Programari" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="adoo_programari.html" class="btn btn-neutral float-left" title="Programari" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adoo_dgc.html" class="btn btn-neutral float-right" title="Diagrama general de context (DGC)" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -92,20 +98,55 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="analisi-i-disseny-orientats-a-objectes">
-<h1>Anàlisi i Disseny Orientats a Objectes<a class="headerlink" href="#analisi-i-disseny-orientats-a-objectes" title="Permalink to this heading"></a></h1>
-<p>Aquesta part del curs és una introduccio a l'anàlisi i disseny orientat a
-objectes. Farem una ullada més profunda al nostre <em>producte</em>, el
-programari, i descobrirem com passar de la idea al codi. Ens ajudarem
-especialment d'un llenguatge de modelització anomenat UML.</p>
-<p>Els continguts d'aquesta part del curs els trobarem a les següents
-entrades:</p>
+  <div class="section" id="requeriments">
+<h1>Requeriments<a class="headerlink" href="#requeriments" title="Permalink to this heading"></a></h1>
+<p>Abans de començar a plantejar-se el desenvolupament d'una aplicació, el
+primer de tot és <em>saber què hem de fer</em>; el que coneixerem com
+<em>requeriments</em>. Aquest serà el tema que estem a punt de començar a
+treballar.</p>
+<p>Recordem les activitats comunes a tots els models de desenvolupament:</p>
+<img alt="Activitats generals" class="align-center" src="_images/activitats_generals.png" />
+<p>Els requeriments es recullen a la primera activitat, la de comunicació.</p>
+<p>En aquesta activitat no pretenem desenvoplupar l'aplicació. Només volem
+trobar el màxim possible d'elements a tenir presents per desenvolupar el
+sistema.</p>
+<p>La activitat de comunicació té, com a resultat, un o més documents. Tot i
+que el format d'aquesta documentació no és estàndard, hi sol contenir els
+següents punts:</p>
+<ol class="arabic">
+<li><p>Descripció de l'objectiu del projecte</p>
+<p>És una descripció breu textual en línia o paràgraf</p>
+</li>
+<li><p>Descripció del màxim nombre de característiques del projecte:</p>
+<ul class="simple">
+<li><p>diagrama general de context (DGC)</p></li>
+<li><p>tipologia d'usuaris</p></li>
+<li><p>funcionalitats</p></li>
+<li><p>elements (dades) a tractar</p></li>
+<li><p>restriccions tècniques (maquinari/so...) a tenir en compte</p></li>
+<li><p>altres consideracions crítiques/restriccions a tenir en compte (ex.
+Coses que <strong>NO</strong> pot permetre que passin)</p></li>
+</ul>
+</li>
+</ol>
+<div class="section" id="practica-dificultats-en-la-comunicacio">
+<h2>Pràctica: Dificultats en la comunicació<a class="headerlink" href="#practica-dificultats-en-la-comunicacio" title="Permalink to this heading"></a></h2>
+<p>Calen dos voluntaris, paper i quelcom per escriure.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Aquesta pràctica es descriu a classe i perdria el factor
+sorpresa si la descric aquí. Si no estàs seguint la meva classe però
+tens interès en aquesta pràctica, posa't en contacte amb mi.</p>
+</div>
+<hr class="docutils" />
+<p>A continuació veurem amb més detall aquests punts:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="adoo_programari.html">Programari</a></li>
-<li class="toctree-l1"><a class="reference internal" href="adoo_requeriments.html">Requeriments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="adoo_exercicis.html">Llistat d'exercicis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo_dgc.html">Diagrama general de context (DGC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo_casosdus.html">Casos d'ús</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo_especificacions.html">Especificacions dels casos d'ús</a></li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -136,8 +177,8 @@ entrades:</p>
 
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_34_33_metodes_cridats.html" class="btn btn-neutral float-left" title="Exercici 34_33. Els mètodes que realment es criden" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="adoo_programari.html" class="btn btn-neutral float-right" title="Programari" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="adoo_programari.html" class="btn btn-neutral float-left" title="Programari" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="adoo_dgc.html" class="btn btn-neutral float-right" title="Diagrama general de context (DGC)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
