@@ -39,3 +39,5 @@ Exercicis
     exercici_34_31_exemple_herencia.rst
     exercici_34_32_renat_es_gat.rst
     exercici_34_33_metodes_cridats.rst
+    exercici_34_34_garfield.rst
+    exercici_34_35_interfagat.rst

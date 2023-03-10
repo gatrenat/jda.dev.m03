@@ -17,3 +17,7 @@ entre dues classes.
     poo_herencia_interficie.rst
     poo_herencia_override.rst
     poo_herencia_constructors.rst
+    poo_polimorfisme.rst
+    poo_abstract.rst
+    poo_herencia_abus.rst
+    poo_interfaces.rst
