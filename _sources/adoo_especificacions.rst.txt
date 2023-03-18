@@ -383,4 +383,6 @@ Posem totes les peces juntes de l'exemple que hem treballat.
 
 |exerciseicon___| :doc:`exercici_53_15_especs_naus`
 
-|exerciseicon___| :doc:`exercici_53_16_especs_meu_projecte`
+|exerciseiconO__| :doc:`exercici_53_16_especs_meu_projecte`
+
+|exerciseicon___| :doc:`exercici_53_17_classes_naus`

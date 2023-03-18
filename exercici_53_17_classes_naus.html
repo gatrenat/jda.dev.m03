@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 53_07. Casos d&#39;ús del lloguer de vehicles &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+  <title>Exercici 53_17. Classes del lloguer de naus industrials &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 53_08. Casos d&#39;ús de la gestio del centre" href="exercici_53_08_casos_us_centre.html" />
-    <link rel="prev" title="Exercici 53_06. El meu projecte" href="exercici_53_06_el_meu_projecte.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Exercici 53_16. Especificacions del teu projecte" href="exercici_53_16_especs_meu_projecte.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -67,7 +67,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_04_cervesera.html"> Exercici 53_04. La cervesera</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_05_naus_industrials.html"> Exercici 53_05. Lloguer de naus industrials: Gualda</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_06_el_meu_projecte.html"> Exercici 53_06. El meu projecte</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 53_07. Casos d'ús del lloguer de vehicles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_53_07_casos_us_vehicles.html"> Exercici 53_07. Casos d'ús del lloguer de vehicles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_08_casos_us_centre.html"> Exercici 53_08. Casos d'ús de la gestio del centre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_09_casos_us_cervesera.html"> Exercici 53_09. Casos d'ús de la cervesera</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_10_casos_us_naus.html"> Exercici 53_10. Casos d'ús del lloguer de naus industrials</a></li>
@@ -77,7 +77,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_14_especs_cervesera.html"> Exercici 53_14. Especificacions de la cervesera</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_15_especs_naus.html"> Exercici 53_15. Especificacions del lloguer de naus industrials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_53_16_especs_meu_projecte.html"> Exercici 53_16. Especificacions del teu projecte</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_53_17_classes_naus.html"> Exercici 53_17. Classes del lloguer de naus industrials</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 53_17. Classes del lloguer de naus industrials</a></li>
 </ul>
 </li>
 </ul>
@@ -101,12 +101,12 @@
       <li><a href="index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
           <li class="breadcrumb-item"><a href="adoo_exercicis.html">Llistat d'exercicis</a></li>
-      <li class="breadcrumb-item active"> Exercici 53_07. Casos d'ús del lloguer de vehicles</li>
+      <li class="breadcrumb-item active"> Exercici 53_17. Classes del lloguer de naus industrials</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_53_06_el_meu_projecte.html" class="btn btn-neutral float-left" title="Exercici 53_06. El meu projecte" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_53_08_casos_us_centre.html" class="btn btn-neutral float-right" title="Exercici 53_08. Casos d&#39;ús de la gestio del centre" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_53_16_especs_meu_projecte.html" class="btn btn-neutral float-left" title="Exercici 53_16. Especificacions del teu projecte" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -114,18 +114,22 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="exerciseicono-exercici-53-07-casos-d-us-del-lloguer-de-vehicles">
-<h1><img alt="exerciseiconO__" src="_images/exerciseiconO__.png" /> Exercici 53_07. Casos d'ús del lloguer de vehicles<a class="headerlink" href="#exerciseicono-exercici-53-07-casos-d-us-del-lloguer-de-vehicles" title="Permalink to this heading"></a></h1>
+  <div class="section" id="exerciseicon-exercici-53-17-classes-del-lloguer-de-naus-industrials">
+<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 53_17. Classes del lloguer de naus industrials<a class="headerlink" href="#exerciseicon-exercici-53-17-classes-del-lloguer-de-naus-industrials" title="Permalink to this heading"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">53_07_casos_us_vehicles/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="adoo_casosdus.html"><span class="doc">Casos d'ús</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">53_17_classes_naus/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="adoo_especificacions.html"><span class="doc">Especificacions dels casos d'ús</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
-<li><p>[☼] Exercici <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-optatius"><span class="std std-ref">optatiu</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Fes una nova versió del document d'anàlisi de l'aplicació de lloguer de
-vehicles que vàrem treballar <a class="reference internal" href="exercici_53_02_lloguer_vehicles.html"><span class="doc">anteriorment</span></a>. Afegeix una nova secció amb els casos d'ús.</p>
+<p>A partir de la tècnica d'anàlisi de sustantius i verbs vist a classe, aplicat
+tant a l'enunciat com als casos d'ús i especificacions que has desenvolupat en
+exercicis previs, elabora un diagrama UML de classes sobre el projecte de
+gestió de lloguer de naus industrials.</p>
+<p>Inclou les novetats en una nova versió del document que vas lliurar amb
+<a class="reference internal" href="exercici_53_15_especs_naus.html"><span class="doc">les especificacions</span></a> de l'aplicació per la
+sra. Gualda.</p>
 </div>
 
 
@@ -154,8 +158,8 @@ vehicles que vàrem treballar <a class="reference internal" href="exercici_53_02
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_53_06_el_meu_projecte.html" class="btn btn-neutral float-left" title="Exercici 53_06. El meu projecte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_53_08_casos_us_centre.html" class="btn btn-neutral float-right" title="Exercici 53_08. Casos d&#39;ús de la gestio del centre" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_53_16_especs_meu_projecte.html" class="btn btn-neutral float-left" title="Exercici 53_16. Especificacions del teu projecte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

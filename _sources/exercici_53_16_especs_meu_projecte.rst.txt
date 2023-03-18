@@ -1,6 +1,6 @@
-#############################################################
-|exerciseicon___| Exercici 53_16. Casos d'ús del teu projecte
-#############################################################
+##################################################################
+|exerciseiconO__| Exercici 53_16. Especificacions del teu projecte
+##################################################################
 
 .. rubric:: Context
 
@@ -9,6 +9,8 @@
 * Continguts relacionats: :doc:`adoo_especificacions`
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
 
 .. rubric:: Enunciat
 

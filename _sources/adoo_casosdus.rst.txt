@@ -192,4 +192,4 @@ disponibilitat del vehicle que vull en les dates que el necessito»
 
 |exerciseicon___| :doc:`exercici_53_10_casos_us_naus`
 
-|exerciseicon___| :doc:`exercici_53_11_casos_us_meu_projecte`
+|exerciseiconO__| :doc:`exercici_53_11_casos_us_meu_projecte`

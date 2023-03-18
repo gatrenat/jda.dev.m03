@@ -24,3 +24,4 @@ A continuació trobaràs la llista d'exercicis del tema: :doc:`adoo`.
     exercici_53_14_especs_cervesera.rst
     exercici_53_15_especs_naus.rst
     exercici_53_16_especs_meu_projecte.rst
+    exercici_53_17_classes_naus.rst

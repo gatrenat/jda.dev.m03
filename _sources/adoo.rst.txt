@@ -18,5 +18,6 @@ entrades:
     adoo_requeriments.rst
     adoo_exercicis.rst
 
-.. adoo_classes_objectes.rst
-.. uml.rst
+
+..  adoo_classes_objectes.rst
+..  uml.rst
