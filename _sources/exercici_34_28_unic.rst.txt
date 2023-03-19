@@ -28,6 +28,11 @@ t'enumero a continuació:
      hide circle
      skinparam monochrome true
      skinparam classAttributeIconSize 0
+     skinparam class {
+       BackgroundColor White
+       BorderColor Black
+       ArrowColor Black
+     }
 
      class GatRenat {
         -{static} instancia: GatRenat

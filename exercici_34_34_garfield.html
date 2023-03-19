@@ -183,7 +183,7 @@ tots els gats, mourem la responsabilitat d'aquest comportament  a la
 superclasse comuna, <code class="docutils literal notranslate"><span class="pre">Gat</span></code>.</p>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="_images/plantuml-c9e8296ec3aa61c8598f40bc8977c995cae332b4.png" alt=" &#64;startuml
+<img src="_images/plantuml-a0adabcbad12f4e6a475a3549c2b4a0ac1796489.png" alt=" &#64;startuml
  hide circle
  skinparam monochrome true
  skinparam classAttributeIconSize 0
@@ -209,6 +209,7 @@ superclasse comuna, <code class="docutils literal notranslate"><span class="pre"
  }
 
  class GatRenat extends Gat {
+     + GatRenat()
      + GatRenat(vides: int)
      + GatRenat(posicio: String)
      + GatRenat(vides: int, posicio: String)
@@ -258,6 +259,10 @@ superclasse comuna, <code class="docutils literal notranslate"><span class="pre"
 </span><span class="hll"><span class="go">Garfield diu: no faig res</span>
 </span><span class="hll"><span class="go">Garfield diu: Bai Maitea, bai</span>
 </span></pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Per passar totes les proves, caldrà que totes les classes siguin marcades com <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p>
 </div>
 </div>
 

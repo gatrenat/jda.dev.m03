@@ -51,7 +51,10 @@ Un ``UllDeGat`` pot estar obert o tancat i ofereix els mètodes:
 * ``tancat()``
 * ``boolean estaObert()``
 
-Implementa la classe ``GatRenat`` de manera que ara tingui **dos** ulls. 
+Amplia la classe ``GatRenat`` de manera que ara tingui **dos** ulls.
+
+.. note:: Fes servir de base una versió de GatRenat que no sigui la
+   :doc:`d'aquest exercici<exercici_34_28_unic>`
 
 Els ulls estaran oberts o tancats depenent de la posició del gat. Si el gat
 està dret, tots dos ulls estaran oberts. Si està assegut, l'ull dret

@@ -90,6 +90,7 @@ superclasse comuna, ``Gat``.
      }
 
      class GatRenat extends Gat {
+         + GatRenat()
          + GatRenat(vides: int)
          + GatRenat(posicio: String)
          + GatRenat(vides: int, posicio: String)
@@ -144,3 +145,5 @@ La sortida esperada és:
     Garfield diu: m'aixeco
     Garfield diu: no faig res
     Garfield diu: Bai Maitea, bai
+
+.. important:: Per passar totes les proves, caldrà que totes les classes siguin marcades com ``public``.
