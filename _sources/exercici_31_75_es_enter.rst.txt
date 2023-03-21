@@ -26,7 +26,7 @@ Tinguem en compte que:
 
 * cal acceptar que el nombre comenci per ``+`` o per ``-``
 
-Considera les següents simulacions:
+Considera la següent simulació:
 
 .. code-block:: console
     :emphasize-lines: 2, 4, 6, 8, 10, 12, 14

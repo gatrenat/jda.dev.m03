@@ -2,10 +2,10 @@
 Reaprofitament
 ##############
 
-Em vist que en modular els nostres programes, el codi es torna més
-llegible. Els avantatges de la modularitat no s'acaben aquí, de fet, tot
-plegat no ha fet més que començar. Un cop coneguem bé els mòduls, no
-sabrem ni voldrem viure-hi sense!
+Em vist que en modular els nostres programes, el codi es torna més llegible.
+Els avantatges de la modularitat no s'acaben aquí. De fet, tot plegat no ha fet
+més que començar. Un cop coneguem bé els mòduls, no sabrem ni voldrem viure-hi
+sense!
 
 Un dels grans avantatges dels mòduls és la reutilització de codi sense
 necessitat de fer copia-enganxa.
@@ -89,7 +89,7 @@ línia, per fer això.
 
    .. code-block:: java
       :linenos:
-      :emphasize-lines: 6
+      :emphasize-lines: 7, 8
 
        public static void main(String[] args) {
            for (int linia=1; linia <= 5; linia++) {

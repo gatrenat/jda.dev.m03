@@ -43,22 +43,22 @@ Mòduls de registre
 
 La nostra biblioteca es dirà `Log` i oferirà els següents mòduls públics:
 
-* ``printError()``
+* ``String printError(String)``
 
     Per indicar errors greus, sovint irrecuperables Ex. S'ha quedat sense
     espai el disc.
 
-* ``printWarning()``
+* ``String printWarning(String)``
 
     Per indicar situacions anòmales que, si bé són recuperables, poden
     esdevenir un error. Ex. falta un fitxer de configuració.
 
-* ``printInfo()``
+* ``String printInfo(String)``
 
     Permet indicar informació general, normalment no problemàtica, com
     ara, l'inici i finalització d'una execució.
 
-* ``printDebug()``
+* ``String printDebug(String)``
 
     Permet indicar detalls de l'execució, com per exemple, la crida a un
     mòdul amb els arguments que se li passen o l'opertura/tancament dels
