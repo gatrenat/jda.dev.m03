@@ -86,12 +86,11 @@ Trobaràs els continguts d'aquesta secció en els següents documents:
     :maxdepth: 1
 
     bib_botigavins.rst
+    bib_csv.rst
+    bib_vi.rst
+    bib_excepcions.rst
     bib_exercicis.rst
 
-
-..  bib_csv.rst
-..  bib_vi.rst
-..  bib_excepcions.rst
 ..  bib_enum.rst
 ..  bib_lists.rst
 ..  bib_maps.rst
