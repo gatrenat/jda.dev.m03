@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercicis &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+  <title>Exercici 35_10. Les posicions del gat Renat &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 35_01. La classe vi" href="exercici_35_01_vi.html" />
-    <link rel="prev" title="Enumerats" href="bib_enum.html" />
+    <link rel="next" title="Exercici 35_11. El vi protegit" href="exercici_35_11_viprotegit.html" />
+    <link rel="prev" title="Exercici 35_09. Excepcions a la botiga de vins" href="exercici_35_09_botiga_excepcional.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -64,7 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bib_vi.html">Vins complets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_excepcions.html">Excepcions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Exercicis</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="bib_exercicis.html">Exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_01_vi.html"> Exercici 35_01. La classe <code class="docutils literal notranslate"><span class="pre">vi</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_02_botiga.html"> Exercici 35_02. La classe <code class="docutils literal notranslate"><span class="pre">botiga</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_03_entorn.html"> Exercici 35_03. La classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code></a></li>
@@ -74,7 +74,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_07_hores_excepcionals.html"> Exercici 35_07. La classe Hora amb excepcions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_08_hores_ilegals.html"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_09_botiga_excepcional.html"> Exercici 35_09. Excepcions a la botiga de vins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_35_10_gatposicio.html"> Exercici 35_10. Les posicions del gat Renat</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 35_10. Les posicions del gat Renat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_11_viprotegit.html"> Exercici 35_11. El vi protegit</a></li>
 </ul>
 </li>
@@ -98,12 +98,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="bib.html">Biblioteques</a></li>
-      <li class="breadcrumb-item active">Exercicis</li>
+          <li class="breadcrumb-item"><a href="bib_exercicis.html">Exercicis</a></li>
+      <li class="breadcrumb-item active"> Exercici 35_10. Les posicions del gat Renat</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="bib_enum.html" class="btn btn-neutral float-left" title="Enumerats" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_35_01_vi.html" class="btn btn-neutral float-right" title="Exercici 35_01. La classe vi" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_09_botiga_excepcional.html" class="btn btn-neutral float-left" title="Exercici 35_09. Excepcions a la botiga de vins" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_35_11_viprotegit.html" class="btn btn-neutral float-right" title="Exercici 35_11. El vi protegit" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -111,23 +112,66 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="exercicis">
-<h1>Exercicis<a class="headerlink" href="#exercicis" title="Permalink to this heading"></a></h1>
-<p>Els exercicis de la secció <a class="reference internal" href="bib.html"><span class="doc">Biblioteques</span></a> són:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_01_vi.html"> Exercici 35_01. La classe <code class="docutils literal notranslate"><span class="pre">vi</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_02_botiga.html"> Exercici 35_02. La classe <code class="docutils literal notranslate"><span class="pre">botiga</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_03_entorn.html"> Exercici 35_03. La classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_04_csv.html"> Exercici 35_04. Guardem les dades</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_05_vi_ampliat.html"> Exercici 35_05. El Vi ampliat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_06_hores_controlades.html"> Exercici 35_06. La classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code> amb control d'errors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_07_hores_excepcionals.html"> Exercici 35_07. La classe Hora amb excepcions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_08_hores_ilegals.html"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_09_botiga_excepcional.html"> Exercici 35_09. Excepcions a la botiga de vins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_10_gatposicio.html"> Exercici 35_10. Les posicions del gat Renat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_11_viprotegit.html"> Exercici 35_11. El vi protegit</a></li>
+  <div class="section" id="exerciseicon-t-exercici-35-10-les-posicions-del-gat-renat">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 35_10. Les posicions del gat Renat<a class="headerlink" href="#exerciseicon-t-exercici-35-10-les-posicions-del-gat-renat" title="Permalink to this heading"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">35_10_gatposicio/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bib_enum.html"><span class="doc">Enumerats</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
+<p class="rubric">Enunciat</p>
+<p>Considera el següent diagrama:</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-52a98b33b2a2ae60e936b586e597e4203997143d.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+ enum GatPosicio {
+    + DRET
+    + ASSEGUT
+    + ESTIRAT
+    + {static} fromString(String): GatPosicio
+ }
+
+ class GatRenat {
+    - posicio: GatPosicio
+    + GatRenat(GatPosicio)
+    + GatRenat(String)
+    + getPosicio(): GatPosicio
+    + setPosicio(GatPosicio)
+    + setPosicio(String)
+ }
+
+ GatRenat -&gt; GatPosicio
+ &#64;enduml"/>
+</p>
+</div>
+<p>Implementa la classe <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> que ofereixi els elements que apareixen
+en el diagrama.</p>
+<p>Atenció: alguns mòduls llencen una excepció si el valor que reben no és
+vàlid.</p>
+<p>Fes servir la següent classe per provar la nova funcionalitat:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">      </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<span class="linenos"> 3</span><span class="w">          </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">              </span><span class="n">GatPosicio</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GatPosicio</span><span class="p">.</span><span class="na">fromString</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">              </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">(</span><span class="n">posicio</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">              </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El gat Renat està: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">getPosicio</span><span class="p">());</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 8</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">      </span><span class="p">}</span>
+<span class="linenos">11</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>La sortida serà:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>UsaGatRenat<span class="w"> </span>dret
+<span class="hll"><span class="go"> El gat Renat està: DRET</span>
+</span></pre></div>
 </div>
 </div>
 
@@ -157,8 +201,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bib_enum.html" class="btn btn-neutral float-left" title="Enumerats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_35_01_vi.html" class="btn btn-neutral float-right" title="Exercici 35_01. La classe vi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_09_botiga_excepcional.html" class="btn btn-neutral float-left" title="Exercici 35_09. Excepcions a la botiga de vins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_35_11_viprotegit.html" class="btn btn-neutral float-right" title="Exercici 35_11. El vi protegit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,195 @@
+################################################
+|exerciseicon__T| Exercici 35_11. El vi protegit
+################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``35_11_viprotegit/``
+
+* Continguts relacionats: :doc:`bib_enum`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+La nostra classe ``Vi`` per la botiga de la Sra. Estrella està molt
+desprotegida.
+
+Ens ha agradat la idea d'introduir el concepte de ``enum`` per protegir
+algunes de les propietats de ``Vi``.
+
+En concret, el nostre objectiu és:
+
+.. uml::
+    :align: center
+    :caption: Diagrama de la classe Vi amb enums
+
+    enum Origen {
+        ALELLA
+        CATALUNYA
+        CONCA_DE_BARBERA
+        COSTERS_DEL_SEGRE
+        EMPORDA
+        MONTSANT
+        PENEDES
+        PLA_DE_BAGES
+        PRIORAT
+        TARRAGONA
+        TERRA_ALTA
+        ALTRE
+    }
+
+    enum Tipus {
+        BLANC
+        NEGRE
+        ROSAT
+        ALTRE
+    }
+
+    class Vi {
+        - ref: String
+        - nom: String
+        - preu: int
+        - stoc: int
+        - lloc: String
+        - origen: Origen
+        - tipus: Tipus
+        - collita: String
+
+        + getRef(): String
+        + getNom(): String
+        + getPreu(): int
+        + setPreu(int)
+        + getEstoc(): int
+        + setEstoc(int)
+        + getLloc(): String
+        + setLloc(lloc)
+        + getOrigen(): Origen
+        + getTipus(): Tipus
+        + getCollita(): String
+        + esValid(): boolean
+        + aArrayString(): String[]
+        + {static} deArrayString(String[]): Vi
+    }
+    class UtilString {
+        + {static} normalitzaString(String): String
+        + {static} esPlantillaDeText(plantilla, text): boolean
+    }
+
+    Botiga o-- Vi
+    Entorn *-- Botiga
+    Entorn --> Vi
+    Vi *-- Origen
+    Vi *-- Tipus
+    Entorn --> UtilString
+    Botiga --> UtilString
+    Vi --> UtilString
+    Origen --> UtilString
+    Tipus --> UtilString
+
+    enum Origen #yellow
+    enum Tipus #yellow
+
+    hide class circle
+    hide enum circle
+    hide enum method
+    skinparam classattributeiconsize 0
+    skinparam class {
+        backgroundcolor white
+        bordercolor black
+        arrowcolor black
+    }
+
+.. -*  for vim highligting issues
+
+Els canvis consistiran en:
+
+* La denominació d'origen podrà ser:
+  Penedès, Terra Alta, Catalunya, Tarragona, Conca de Barberà,
+  Costers del Segre, Empordà, Montsant, Priorat, Alella, Pla de
+  Bages, i altre.
+
+* El tipus de vi podrà ser: blanc, negre, rosat, i altre.
+
+* Els accents i altres "floritures" de la nostra llengua poden posar
+  entrebancs a l'estructura ``enum`` de Java. Considera el següent codi
+  d'exemple, que permetria fer ús del mètode ``toString()`` per a poder
+  mostrar correctament un valor dels possibles origens:
+
+  .. code-block:: java
+      :linenos:
+
+          public enum Origen {
+              PENEDES ("Penedès"),
+              TERRA_ALTA ("Terra Alta"),
+              /* … */
+              ALTRE ("altre");
+
+              private final String descr;
+              Origen(String descr) {
+                  this.descr = descr;
+              }
+
+              @Override
+              public String toString() {
+                  return descr;
+              }
+          }
+
+* Els dos enumerats oferiran el mètode estàtic ``fromString(String)`` que
+  funcionarà de la següent manera:
+
+  * si la cadena és ``null`` o buida o composada exclusivament d'espais,
+    retornarà ``null``.
+
+  * si la cadena indicada correspon al nom d'una de les variants
+    conegudes, retornarà aquesta
+
+  * si la cadena no correspon a cap de les conegudes, retornarà la variant
+    ``ALTRE``.
+
+  retornarà la instància corresponent o bé ``null`` si no hi ha cap
+  entrada que correspongui al valor indicat, o bé aquesta sigui ``null`` o
+  blanc. El valor a retornar serà el primer en ordre alfabètic, un cop
+  normalitzat i ignorant majúscules, que es trobi que comenci pel valor
+  donat.
+
+  Així ``Origen.fromString()`` retornarà ``CATALUNYA`` quan rebi ``"c"``,
+  malgrat hi ha tres entrades que comencen amb *C*. Retornarà
+  ``CONCA_DE_BARBERA`` en demanar-li ``"co"`` i, per descomptat, en
+  demanar-li ``"Conca de Barberà"``.
+
+* La signatura del constructor de ``Vi`` també queda modificada.
+
+  Caldrà revisar altres canvis en mètodes de la classe ``Vi``, com ara els
+  accessors, o els de serialització que, si bé no canviaran de signatura,
+  sí que poden requerir adaptacions al cos.
+
+* Donat que ``normalitzaString()`` és requerit per entitats que no tenen
+  tan a veure amb ``Vi``, mourem aquesta funció de ``Vi`` a
+  ``UtilString``.
+
+* Afegirem a ``UtilString`` el mètode ``boolean esPlantillaDeText(String
+  plantilla, String text)`` que, donada una plantilla i un text, ens
+  retorna cert si el text coincideix amb la plantilla.
+
+  Considerarem que un text coincideix amb una plantilla quan, la seva
+  versió normalitzada comença com la plantilla, o és igual. 
+
+  Aquesta funció resoldrà als enumerats la decisió de si el nom correspon
+  al demanat. Un cop la tenim, seria una llàstima no utilitzar-la també
+  altres propietats de tipus String de la cerca. En concret, en el nom del
+  vi.
+
+  En cas que la plantilla sigui ``null``, o buida o amb només espais,
+  acceptarà qualsevol valor de text. Altrament acceptarà només els texts
+  que comencin per la plantilla (ambdós normalitzats)
+
+* El mètode ``cercar(Vi)`` permetrà cercar parcialment els diferents
+  atributs de tipus string. Per exemple ``Roura blanc`` podrà ser cercat
+  per 
+
+* Els canvis també afectaran lleugerament a la classe ``Entorn``.
+  Caldrà fer una ullada.

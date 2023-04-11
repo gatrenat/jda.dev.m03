@@ -16,9 +16,9 @@ Els exercicis de la secció :doc:`bib` són:
     exercici_35_07_hores_excepcionals.rst
     exercici_35_08_hores_ilegals.rst
     exercici_35_09_botiga_excepcional.rst
+    exercici_35_10_gatposicio.rst
+    exercici_35_11_viprotegit.rst
 
-..  exercici_35_10_gatposicio.rst
-..  exercici_35_11_viprotegit.rst
 ..  exercici_35_12_list.rst
 ..  exercici_35_13_remove.rst
 ..  exercici_35_14_botigacerca.rst
