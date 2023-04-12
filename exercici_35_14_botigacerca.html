@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 35_08. La classe Hora amb IllegalArgumentException &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+  <title>Exercici 35_14. Cerques de vi amb múltiples resultats &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 35_09. Excepcions a la botiga de vins" href="exercici_35_09_botiga_excepcional.html" />
-    <link rel="prev" title="Exercici 35_07. La classe Hora amb excepcions" href="exercici_35_07_hores_excepcionals.html" />
+    <link rel="next" title="Exercici 35_15. Especificacions de vi" href="exercici_35_15_especs.html" />
+    <link rel="prev" title="Exercici 35_13. Comparació de remove()" href="exercici_35_13_remove.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -73,13 +73,13 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_05_vi_ampliat.html"> Exercici 35_05. El Vi ampliat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_06_hores_controlades.html"> Exercici 35_06. La classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code> amb control d'errors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_07_hores_excepcionals.html"> Exercici 35_07. La classe Hora amb excepcions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_35_08_hores_ilegals.html"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_09_botiga_excepcional.html"> Exercici 35_09. Excepcions a la botiga de vins</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_10_gatposicio.html"> Exercici 35_10. Les posicions del gat Renat</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_11_viprotegit.html"> Exercici 35_11. El vi protegit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_12_list.html"> Exercici 35_12. La classe <code class="docutils literal notranslate"><span class="pre">UsaList</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_13_remove.html"> Exercici 35_13. Comparació de <code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_35_14_botigacerca.html"> Exercici 35_14. Cerques de vi amb múltiples resultats</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 35_14. Cerques de vi amb múltiples resultats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_15_especs.html"> Exercici 35_15. Especificacions de vi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_16_mouespecs.html"> Exercici 35_16. Especificacions independents</a></li>
 </ul>
@@ -105,12 +105,12 @@
       <li><a href="index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="bib.html">Biblioteques</a></li>
           <li class="breadcrumb-item"><a href="bib_exercicis.html">Exercicis</a></li>
-      <li class="breadcrumb-item active"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></li>
+      <li class="breadcrumb-item active"> Exercici 35_14. Cerques de vi amb múltiples resultats</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_35_07_hores_excepcionals.html" class="btn btn-neutral float-left" title="Exercici 35_07. La classe Hora amb excepcions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_35_09_botiga_excepcional.html" class="btn btn-neutral float-right" title="Exercici 35_09. Excepcions a la botiga de vins" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_13_remove.html" class="btn btn-neutral float-left" title="Exercici 35_13. Comparació de remove()" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_35_15_especs.html" class="btn btn-neutral float-right" title="Exercici 35_15. Especificacions de vi" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -118,47 +118,85 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="exerciseicon-t-exercici-35-08-la-classe-hora-amb-illegalargumentexception">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code><a class="headerlink" href="#exerciseicon-t-exercici-35-08-la-classe-hora-amb-illegalargumentexception" title="Permalink to this heading"></a></h1>
+  <div class="section" id="exerciseicon-t-exercici-35-14-cerques-de-vi-amb-multiples-resultats">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 35_14. Cerques de vi amb múltiples resultats<a class="headerlink" href="#exerciseicon-t-exercici-35-14-cerques-de-vi-amb-multiples-resultats" title="Permalink to this heading"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">35_08_hores_ilegals/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="bib_excepcions.html"><span class="doc">Excepcions</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">35_14_botigacerca/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bib_lists.html"><span class="doc">Llistes</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Torna a considerar la classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code>.</p>
-<p>La versió anterior estava fent servir un tipus d'excepció molt genèric. De
-fet el més genèric: <code class="docutils literal notranslate"><span class="pre">Exception</span></code>!</p>
-<p>En aquest exercici faràs servir una excepció més concreta:
-<code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code>.</p>
-<p>Els missatges seran els mateixos que els corresponents a l'exercici
-<a class="reference internal" href="exercici_35_07_hores_excepcionals.html"><span class="doc">anterior</span></a>:</p>
+<p>A Ca l'Estrella els està anant molt bé la nostra aplicació. S'ha reduït
+força el problema de trobar el vi. Com passa amb tot, però, sempre hi ha
+maneres de millorar-ho i, en aquest cas, la nostra aplicació presenta una
+limitació molt trista: només permet obtenir un vi per cada cerca, malgrat
+que, de vegades hi poden haver més d'un vi que compleixi els requeriments
+dels clients de la Sra. Estrella.</p>
+<p>Això ho hem de solucionar. La proposta és que <code class="docutils literal notranslate"><span class="pre">cerca()</span></code> ara ens retorni
+una llista de vins.</p>
+<p>Aquest serà el nostre nou objectiu: afegir cerques amb múltiples
+resultats.</p>
+<p>A banda, en veure la potència de les llistes, ens toca fer un plantejament
+amb la manera de guardar els vins de la classe <code class="docutils literal notranslate"><span class="pre">Botiga</span></code>.</p>
+<p>De moment guardem els vins a un array amb una capacitat màxima i un control
+complex per culpa de que la funcionalitat d'eliminació de vins ens deixava
+posicions nuŀles. I pensar que, a sobre, de moment hem deixat de
+necessitar l'opció d'eliminació…</p>
+<p>En aquesta nova versió, reemplaçarem l'array de vins a <code class="docutils literal notranslate"><span class="pre">Botiga</span></code> per una
+llista. Això també elimina la necessitat del constructor específic
+<code class="docutils literal notranslate"><span class="pre">Botiga(int)</span></code>, els mètodes <code class="docutils literal notranslate"><span class="pre">iniciaRecorregut()</span></code> i <code class="docutils literal notranslate"><span class="pre">getSeguent()</span></code>.
+Tampoc no llençarem l'excepció <code class="docutils literal notranslate"><span class="pre">BotigaException</span></code> quan la botiga està
+plena. Clar, ara ja no tindrem un màxim!.</p>
+<p>Aquestes accions de simplificació/neteja solen passar desapercebudes als
+nostres usuaris però a nosaltres ens faciliten molt la feina futura. Les
+hem de fer amb compte de no introduir errors, però… qui té por quan
+disposem de jocs de prova?</p>
+<p>El nostre model quedarà de la següent manera:</p>
+<div class="figure align-center" id="id1">
+<p class="plantuml">
+<img src="_images/plantuml-3dc563f1683b8ae6ca151e6b257d129bf721fd56.png" alt="enum Origen
+enum Tipus
+class Botiga {
+    - vins: List&lt;Vi&gt;
+    + getVins(): List&lt;Vi&gt;
+    + cerca(ref: String): Vi
+    + cerca(plantilla: Vi): List&lt;Vi&gt;
+    + afegeix(Vi): Vi
+    + elimina(String): Vi
+}
+
+Botiga o-- Vi
+Entorn *-- Botiga
+Entorn --&gt; Vi
+Vi *-- Origen
+Vi *-- Tipus
+
+
+hide class circle
+hide enum circle
+hide enum method
+skinparam classattributeiconsize 0
+skinparam class {
+    backgroundcolor white
+    bordercolor black
+    arrowcolor black
+}"/>
+</p>
+<p class="caption"><span class="caption-text">Cerques amb resultats múltiples</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</div>
+<p>Un parell de consideracions addicionals:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hores</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«hores»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;minuts</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«minuts»&quot;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;segons</span> <span class="pre">fora</span> <span class="pre">de</span> <span class="pre">rang:</span> <span class="pre">«segons»&quot;</span></code></p></li>
+<li><p>Quan cerquem un vi a partir d'una plantilla, a partir d'ara <code class="docutils literal notranslate"><span class="pre">cerca(Vi)</span></code>
+ja no ens tornarà mai <code class="docutils literal notranslate"><span class="pre">null</span></code> encara que no es trobi cap vi.  retornarà
+una <code class="docutils literal notranslate"><span class="pre">List&lt;Vi&gt;</span></code> amb zero o més vins.</p></li>
+<li><p>Tot i que podríem escollir <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> o <code class="docutils literal notranslate"><span class="pre">LinkedList</span></code>, tenint en
+compte que <code class="docutils literal notranslate"><span class="pre">cerca()</span></code> molt probablement anirà afegint vins al final de
+la llista i que aquesta serà usada per un recorregut seqüencial, potser
+la implementació més adequada seria amb <code class="docutils literal notranslate"><span class="pre">LinkedList</span></code>.</p></li>
+<li><p>Totes les llistes de retorn seran immutables.</p></li>
 </ul>
-<p>El següent codi ha de poder funcionar:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaHora</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Intentarem crear una hora amb valors no vàlids&quot;</span><span class="p">);</span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 5</span><span class="w">            </span><span class="n">Hora</span><span class="w"> </span><span class="n">hora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Hora</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IllegalArgumentException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 7</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Argument il·legal!&quot;</span><span class="p">);</span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="p">}</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">10</span><span class="p">}</span>
-</pre></div>
-</div>
-<p>L'execució generarà:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">java UsaHora</span>
-<span class="hll"><span class="go">Intentarem crear una hora amb valors no vàlids</span>
-</span><span class="hll"><span class="go">Argument il·legal!</span>
-</span></pre></div>
-</div>
 </div>
 
 
@@ -187,8 +225,8 @@ fet el més genèric: <code class="docutils literal notranslate"><span class="pr
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_35_07_hores_excepcionals.html" class="btn btn-neutral float-left" title="Exercici 35_07. La classe Hora amb excepcions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="exercici_35_09_botiga_excepcional.html" class="btn btn-neutral float-right" title="Exercici 35_09. Excepcions a la botiga de vins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_13_remove.html" class="btn btn-neutral float-left" title="Exercici 35_13. Comparació de remove()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_35_15_especs.html" class="btn btn-neutral float-right" title="Exercici 35_15. Especificacions de vi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

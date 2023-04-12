@@ -90,8 +90,8 @@ Trobaràs els continguts d'aquesta secció en els següents documents:
     bib_vi.rst
     bib_excepcions.rst
     bib_enum.rst
+    bib_lists.rst
     bib_exercicis.rst
 
-..  bib_lists.rst
 ..  bib_maps.rst
 ..  bib_conclusions.rst
