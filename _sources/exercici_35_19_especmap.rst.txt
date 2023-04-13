@@ -1,0 +1,616 @@
+###################################################
+|exerciseicon__T| Exercici 35_19. Propietats del vi
+###################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``35_19_especmap/``
+
+* Continguts relacionats: :doc:`bib_maps`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+El disseny de la nostra aplicació s'ha flexibilitzat moltíssim. Ara podem
+afegir noves propietats de vi amb certa facilitat i només haurem de
+modificar ``Especificacio`` i ``Entorn``. No està malament!
+
+Amb tot, encara ho podem fer millor. I ho farem!
+
+On estem?
+=========
+
+En primer lloc reconsiderem ``Especificacio``. Es tracta d'una classe que
+conté les propietats que especifiquen un vi, de moment nom, origen, tipus
+i collita.
+
+Per altra banda, les especificacions es fan servir per dues coses:
+
+* definir els valors de les propietats d'un vi concret
+
+* definir una plantilla per especificar una cerca
+
+Quan actua com a plantilla, els valors dels atributs d'especificació
+poden:
+
+* no estar definits (``null``) indicant que és vàlid qualsevol valor per
+  aquesta propietat
+
+* ser parcials. Per exemple, la propietat ``nom`` pot valer ``"ro"`` que
+  permetrà el nom del vi ``"Roura blanc"``.
+
+Per poder saber si una especificació actua com a plantilla o bé defineix
+els valors, disposem del mètode ``esComplet()`` i per saber si un vi
+concret és acceptable per una determinada plantilla, ara per ara disposem
+de ``esPlantillaDe()``.
+
+``Entorn`` demana les dades de la cerca i per això està obligat a saber
+que cal nom, origen, tipus i collita.
+
+Com podríem aconseguir que ``Entorn`` pogués demanar el valor de les
+propietats sense saber quines són?   
+
+La classe ``Propietat``
+=======================
+
+Després d'unes intenses sessions de *brainstorming* dins l'equip, hem
+arribat a la conclusió que ens cal una classe ``Propietat`` que representi
+una propietat de ``Vi``.
+
+* nom de la propietat: ex. nom, collita, etc.
+
+  El nom ha de ser necessari per tota propietat i serà de tipus
+  ``NomPropietat`` (un enumerat del que parlem més tard)
+
+  Afegirem el corresponent *getter* 
+  ``NomPropietat getNom()``
+
+* un mètode per construir-la a partir d'un valor de tipus String, que ens
+  avisi quan el valor no sigui adequat. El mètode es dirà
+  ``fromString(String)`` i retornarà ``null`` si el valor rebut no és
+  vàlid per la propietat. 
+
+  Com que el funcionament d'aquest mètode depen del tipus de propietat
+  concret, farem que el mètode sigui abstracte.
+
+* un mètode per indicar si el seu valor és acceptable per la plantilla que
+  rep com a paràmetre: ``esAcceptableComAPlantilla(String)``.
+
+  Aquest mètode també haurà de ser abstracte.
+
+
+* si bé no és imprescindible, pot resultar molt còmode per depurar
+  reescriure el mètode ``toString()``. Es proposa la següent implementació
+  que presenta com a curiositat el fet de fer servir un mètode abstracte
+  dins d'un mètode no abstracte. Això és programar pel futur, oi?
+
+  .. code-block:: java
+      :linenos:
+
+      @Override
+      public String toString() {
+          return String.format("%s(%s: %s)",
+                               this.getClass().getName(),
+                               getNom(),
+                               getValorComString());
+      }
+
+``Propietat`` serà abstracta i disposarà de les subclasses
+``PropietatEnterPositiu``, ``PropietatString``, ``PropietatOrigen`` i
+``PropietatTipus``.
+
+.. uml::
+    :align: center
+    :caption: La classe ``Propietat``
+
+    abstract class Propietat {
+        - nom: NomPropietat
+        + Propietat(NomPropietat)
+        + getNom(): NomPropietat
+        + {abstract} getValorComString(): String
+        + {abstract} esAcceptableComAPlantilla(String): boolean
+    }
+
+    class PropietatEnterPositiu extends Propietat
+    class PropietatString extends Propietat
+    class PropietatOrigen extends Propietat
+    class PropietatTipus extends Propietat
+
+    hide class circle
+    hide abstract circle
+    hide enum circle
+    hide enum method
+    skinparam classAttributeIconSize 0
+    skinparam class {
+        BackgroundColor White
+        BorderColor Black
+        ArrowColor Black
+    }
+
+
+La classe ``PropietatEnterPositiu``
+===================================
+
+``PropietatEnterPositiu``: aquesta propietat disposarà d'un valor de
+tipus enter que oferirà amb l'accessor ``getValor()``
+
+El mètode ``esAcceptableComAPlantilla()`` retornarà ``true`` quan:
+
+- la plantilla normalitzada sigui ``null``, o bé
+
+- la plantilla sigui convertible a un enter i aquest coincideixi amb 
+  ``valor``.
+
+En la resta de casos retornarà ``false``.
+
+Per crear una instància d'aquesta classe, el més segur és usar el mètode
+estàtic ``fromString()``, que requerirà els paràmetres:
+
+* el nom de la propietat: un ``NomPropietat``
+
+* el tipus de comparació: un ``TipusComparacio``
+
+  Els valors vàlids seran ``MAXIM`` i ``MINIM``. En altre
+  cas generarà un ``IllegalArgumentException``
+
+* el valor de la propietat com a String.
+
+En cas que el valor sigui vàlid (un enter positiu) crearà una instància
+i la retornarà.
+
+El constructor d'aquesta classe llençarà una ``IllegalArgumentException``
+en cas que el nom de la propietat, el tipus de comparació o el valor
+no siguin vàlids.
+
+Nota: En aquests moments no hi ha cap propietat de ``Vi`` que requereixi
+una comparació exacta entre enters positius. Però com que gairebé costa
+més no contemplar-la, simplement l'afegirem.
+
+El ``TipusComparacio.MAXIM`` serà adequat per gestionar el *preu* mentre
+que ``MINIM`` és adequat per *estoc*.
+
+Es proposa la següent implementació del mètode
+``esAcceptableComAPlantilla()``:
+
+.. code-block:: java
+
+  @Override
+  public boolean esAcceptableComAPlantilla(String plantilla) {
+      plantilla = UtilString.normalitzaString(plantilla);
+      if (plantilla == null) return true;
+      if (! UtilString.esEnter(plantilla)) return false;
+      int valorPlantilla = Integer.parseInt(plantilla);
+      if (comparacio.equals(TipusComparacio.MAXIM)) return valor <= valorPlantilla;
+      if (comparacio.equals(TipusComparacio.MINIM)) return valor >= valorPlantilla;
+      return valor == valorPlantilla;
+  }
+
+La classe ``PropietatString``
+=============================
+
+``PropietatString``: Aquesta classe representarà una propietat amb valor
+de tipus String. ``esAcceptableComAPlantilla()`` retornarà ``true`` quan
+la plantilla normalitzada correspongui a ``null`` o sigui exactament igual
+a ``valor``.
+
+Com ``PropietatEnterPositiu``, aquesta classe també disposarà d'un atribut
+``TipusComparacio`` que permetrà indicar la manera en que es comportarà
+``esAcceptableComAPlantilla()`` 
+
+Quan el tipus de comparació sigui ``EXACTE`` la propietat serà adequada
+per implementar *referència*, *lloc* i *collita*.
+
+Quan el tipus de comparació sigui ``INICIAL``, la propietat serà adequada
+per *nom*.
+
+Altres tipus de comparació diferents de ``EXACTE`` i ``INICIAL``
+provocaran una ``IllegalArgumentException``
+
+
+Les classes ``PropietatOrigen`` i ``PropietatTipus``
+====================================================
+
+``PropietatOrigen`` i ``PropietatTipus``: Aquestes subclasses estan
+pensades per implementar *origen* i *tipus* del vi. Tindran una propietat
+``valor`` de tipus ``Origen`` i ``Tipus`` respectivament, més el *getter*
+corresponent.
+
+Com que aquestes classes són molt específiques per les propietats *origen*
+i *tipus*, no caldrà que li diguem el nom de la propietat.
+
+Cal tenir present que totes les subclasses de propietat que s'ofereixen
+són immutables. Això implica que ``valor`` serà declarat com a ``final``.
+
+L'enumerat ``NomPropietat``
+===========================
+
+Disposem de diferents tipus de propietats. Per exemple, el nom, el preu o
+l'origen.
+
+Com que el nostre objectiu és permetre que ``Entorn`` no hagi de saber
+quines propietats concretes té el vi, hi afegirem la informació del
+*prompt* que ha de presentar ``Entorn`` quan demana les dades de cerca.
+
+El codi d'aquest enumerat podria ser:
+
+.. code-block:: java
+   :linenos:
+
+    public enum NomPropietat {
+        REF     ("ref"),
+        NOM     ("nom"),
+        PREU    ("preu max."),
+        ESTOC   ("estoc min."),
+        LLOC    ("lloc"),
+        ORIGEN  ("D.O."),
+        TIPUS   ("tipus"),
+        COLLITA ("collita");
+
+        private final String textPrompt;
+        NomPropietat(String textPrompt) {
+            this.textPrompt = textPrompt;
+        }
+        public String getTextPrompt() { return textPrompt; }
+    }
+
+L'enumerat ``TipusComparacio``
+==============================
+
+Com hem vist, algunes de les subclasses de ``Propietat`` necessiten
+indicar el tipus de comparació que es tindrà en comptes quan s'estigui
+considerant si una propietat és acceptada o no per una plantilla.
+
+El codi que es proposa és el següent:
+
+.. code-block:: java
+   :linenos:
+
+    public enum TipusComparacio {
+        EXACTE,     // el valor ha de ser exactament igual a la plantilla
+        MINIM,      // per numèrics, el valor no pot ser inferior a la plantilla
+        MAXIM,      // per numèrics, el valor no pot ser superior a la plantilla
+        INICIAL     // per Strings, el valor ha de començar com la plantilla
+    }
+
+De moment no sembla que calgui afegir-hi gaire més informació.
+
+La classe ``Vi``
+================
+
+La classe ``Vi`` també es veu força modificada ja que les propietats d'un
+vi es codificaran amb instàncies de ``Propietat``.
+
+Hem decidit guardar totes les propietats en un ``Map`` amb clau
+``NomPropietat`` i valor ``Propietat``. Li direm ``propietats`` i
+emmagatzemarà *totes* les propietats.
+
+El constructor específic construirà una instància de ``Vi`` sempre i quan
+el paràmetre ``propietats`` contingui entrades per **totes** les
+propietats necessàries. Altrament llençarà l'excepció
+``IllegalArgumentException``.
+
+El mètode ``esValid()`` rep un ``Map`` de propietats i retorna ``true``
+quan aquestes contenen totes les propietats necessàries per construir un
+``Vi``. Hem decidit oferir-lo públic per permetre evitar l'excepció amb el
+constructor.
+
+És proposa la següent implementació (parcial) de ``esValid()``:
+
+.. code-block:: java
+   :linenos:
+
+    public static boolean esValid(Map<NomPropietat, Propietat> propietats) {
+        // comprovació nombre de propietats
+        Set<NomPropietat> noms = propietats.keySet();
+        if (noms.size() != 2 + propietatsSeleccionables.size()) return false;
+
+        // comprovació disponibilitat de les propietats
+        if (! noms.contains(NomPropietat.REF)) return false;
+        if (! noms.contains(NomPropietat.NOM)) return false;
+        // XXX completar
+
+        // comprovació les propietats no són null
+        if (propietats.get(NomPropietat.REF) == null) return false;
+        if (propietats.get(NomPropietat.NOM) == null) return false;
+        // XXX completar
+
+        // comprovació les propietats són del tipus esperat
+        if (! (propietats.get(NomPropietat.REF) instanceof PropietatString)) return false;
+        if (! (propietats.get(NomPropietat.PREU) instanceof PropietatEnterPositiu)) return false;
+        // XXX completar
+
+        // comprovació les propietats tenen el tipus de comparació esperat
+        if (! ((PropietatString)propietats.get(NomPropietat.REF)).getTipusComparacio().equals(TipusComparacio.EXACTE)) return false;
+        if (! ((PropietatString)propietats.get(NomPropietat.NOM)).getTipusComparacio().equals(TipusComparacio.INICIAL)) return false;
+        if (! ((PropietatEnterPositiu)propietats.get(NomPropietat.PREU)).getTipusComparacio().equals(TipusComparacio.MAXIM)) return false;
+        // XXX completar
+
+        return true;
+    }
+
+
+Com que les propietats seran guardades en un ``Map``, els accessors
+s'hauran d'adaptar a aquesta nova implementació.
+
+Hem decidit oferir un *getter* per a totes les propietats que retornarà el
+valor de la propietat demanada en forma de String. Per exemple, obtindrem
+el nom amb ``vi.get(NomPropietat.NOM)``.
+
+Per comoditat, afegirem també *getters* específics per algunes de les
+propietats. En concret, per la referència, el lloc, el preu i l'estoc. Com
+que, excepte per la referència, aquests atributs són modificables,
+afegirem també *setters*.
+
+Un exemple d'implementació dels accessors de *preu* seria:
+
+.. code-block:: java
+   :linenos:
+
+    public int getPreu() {
+        return ((PropietatEnterPositiu) propietats.get(NomPropietat.PREU)).getValor();
+    }
+
+    public void setPreu(int preu) {
+        if (preu >= 0) {
+            Propietat propietat = new PropietatEnterPositiu(NomPropietat.PREU,
+                    TipusComparacio.MAXIM, preu);
+            propietats.put(NomPropietat.PREU, propietat);
+        }
+        else throw new IllegalArgumentException("El preu no pot ser negatiu");
+    }
+
+Ja que volem que ``Entorn`` no hagi de saber res de les propietats a
+demanar a l'hora de processar una cerca, haurem d'oferir algun mecanisme
+per que es pugui determinar quines propietats han de ser demanades. Ens
+hem decidit per definir una llista amb aquesta informació. Així, ``Vi``
+oferirà públicament la propietat immutable ``propietatsSeleccionables``.
+Es recomana la següent implementació:
+
+.. code-block:: java
+   :linenos:
+
+    public static final List<NomPropietat> propietatsSeleccionables = List.of(
+         NomPropietat.NOM,
+         NomPropietat.PREU,
+         NomPropietat.ESTOC,
+         NomPropietat.ORIGEN,
+         NomPropietat.TIPUS,
+         NomPropietat.COLLITA);
+
+``List.of()`` ens ofereix una llista immutable amb els elements indicats.
+
+Fixa't que no afegim ni la referència ni el lloc. La referència ha de ser
+demanada independentment ja que té una cerca directa. En quant al lloc,
+seguirem sense incloure'l com a criteri de cerca ja que el més probable és
+que sigui la raó per la qual es fa la cerca.
+
+Per què ``Botiga`` pugui decidir si un vi entra o no entre els resultats
+d'una cerca, ens caldrà que ``Vi`` sigui capaç d'indicar si una instància
+compleix o no una plantilla. Farem servir el mètode
+``esValidPerPlantilla()``, que rep una plantilla en forma de ``Map`` amb
+clau ``NomPropietat`` i valor String, amb els valors corresponents per
+cada element especificat a la cerca. El mètode revisarà que cada element
+de la plantilla sigui acceptable pel valor de la corresponent propietat,
+tot cridant el mètode ``Propietat.esAcceptableComAPlantilla()`` .
+
+Finalment, caldrà fer una repassada d'altres elements de ``Vi`` que pugui
+ser necessari modificar per adaptar-los a ``Propietat``. Per exemple,
+``toString()``.
+
+El disseny de la classe ``Vi`` quedarà:
+
+.. uml::
+    :align: center
+    :caption: El nou disseny de la classe ``Vi``
+
+    class Vi {
+        - {static} propietatsSeleccionables: List<NomPropietat>
+        - propietats: Map<String, Propietat>
+        + Vi(propietats: Map<NomPropietat, Propietat>)
+        + {static} getNomsPropietatsSeleccionables(): List<String>
+        + getRef(): String
+        + getLloc(): String
+        + get(nomPropietat: String)
+        + getPreu(): int
+        + setPreu(int)
+        + getEstoc(): int
+        + setEstoc(int)
+        + getLloc(): String
+        + setLloc(lloc)
+        + toString(): String
+        + esValidPerPlantilla(plantilla: Map<NomPropietat, String>): boolean
+        + aArrayString(): String[]
+        + {static} deArrayString(String[]): Vi
+        + esValid(propietats: Map<NomPropietat, Propietat>)
+    }
+
+    Vi *-- Propietat
+    Vi -> NomPropietat
+
+    hide class circle
+    hide abstract circle
+    hide enum circle
+    hide enum method
+    skinparam classAttributeIconSize 0
+    skinparam class {
+        BackgroundColor White
+        BorderColor Black
+        ArrowColor Black
+    }
+
+.. -*  for vim highligting issues
+
+
+Ens acomiadem de ``Especificacio``
+==================================
+
+La classe ``Especificacio`` deixa de servir com a plantilla. La funció de
+plantilla la realitzarà un ``Map<NomPropietat, String>`` on cada clau serà
+el tipus de propietat i el valor serà una representació en forma de String
+del valor de la propietat.
+
+L'altra funció de ``Especificacio`` era la de composar ``Vi``, encapsulant
+els membres que havien de ser considerats a l'hora d'aplicar una plantilla
+durant la cerca. Aquesta funció la realitzarà un ``Map`` amb clau
+``NomPropietat`` i valor ``Propietat``.
+
+Per tant, ja no ens cal la classe i li diem adéu. La tindrem sempre
+present en els nostres cors o, si més no, en l'històric de *commits* del
+nostre repositori.
+
+
+La classe ``Botiga``
+====================
+
+Aquesta classe requerirà alguns petits canvis en els mètodes de cerca que
+requerien una ``Especificacio``.
+
+Reduïm els dos mètodes a un que rebrà com a paràmetre una plantilla
+consistent en un ``Map`` amb clau ``NomPropietat`` i valor un String que
+defineix la plantilla de cada propietat especificada.
+
+Fixa't que amb aquest disseny la plantilla pot especificar que una
+propietat no importa de dues maneres:
+
+* associant-li un valor que en ser normalitzat es resolgui a ``null``
+
+* simplement no incloent la propietat a la plantilla.
+
+La classe ``Entorn``
+====================
+
+``Entorn`` requerirà alguns canvis en l'obtenció i processament dels
+valors en processar l'opció de cerca. Tot plegat resultarà en una
+simplificació interessant del codi.
+
+El disseny final a implementar
+==============================
+
+En resum, el nostre objectiu ara és aconseguir implementar el següent:
+
+.. uml::
+    :align: center
+    :caption: Diagrama de classes de la botiga de vins amb ``Propietat``
+
+    enum Origen
+    enum Tipus
+    enum NomPropietat {
+        REF
+        NOM
+        PREU
+        ESTOC
+        LLOC
+        ORIGEN
+        TIPUS
+        COLLITA
+    }
+
+    enum TipusComparacio {
+        EXACTE
+        MAXIM
+        MINIM
+        INICIAL
+    }
+
+    class Botiga {
+        + cerca(ref: String): Vi
+        + cerca(plantilla: Map<NomPropietat, String>): List<Vi>
+    }
+
+    class Vi {
+        - {static} propietatsSeleccionables: List<NomPropietat>
+        - propietats: Map<String, Propietat>
+        + Vi(propietats: Map<NomPropietat, Propietat>)
+        + {static} getNomsPropietatsSeleccionables(): List<String>
+        + getRef(): String
+        + getLloc(): String
+        + get(nomPropietat: String)
+        + getPreu(): int
+        + setPreu(int)
+        + getEstoc(): int
+        + setEstoc(int)
+        + getLloc(): String
+        + setLloc(lloc)
+        + toString(): String
+        + esValidPerPlantilla(plantilla: Map<NomPropietat, String>): boolean
+        + aArrayString(): String[]
+        + {static} deArrayString(String[]): Vi
+        + esValid(propietats: Map<NomPropietat, Propietat>)
+    }
+
+    abstract class Propietat {
+        - nom: NomPropietat
+        + Propietat(NomPropietat)
+        + getNom(): NomPropietat
+        + {abstract} getValorComString(): String
+        + {abstract} esAcceptableComAPlantilla(String): boolean
+    }
+
+    class PropietatEnterPositiu {
+        - valor: int
+        - comparacio: TipusComparacio
+        + PropietatEnterPositiu(NomPropietat, TipusComparacio, int)
+        + getValor(): int
+        + getTipusComparacio(): TipusComparacio
+        + {static} fromString(NomPropietat, TipusComparacio, String): PropietatEnterPositiu
+    }
+
+    class PropietatString {
+        - valor: String
+        - comparacio: TipusComparacio
+        - PropietatString(NomPropietat, TipusComparacio, String)
+        + getValor(): String
+        + getTipusComparacio(): TipusComparacio
+        + {static} fromString(NomPropietat, TipusComparacio, String): PropietatString
+    }
+
+    class PropietatOrigen {
+        - valor: Origen
+        + PropietatOrigen(Origen)
+        + getValor(): Origen
+        + {static} fromString(String): PropietatOrigen
+    }
+
+    class PropietatTipus {
+        - valor: Tipus
+        + PropietatTipus(Tipus)
+        + getValor(): Tipus
+        + {static} fromString(String): PropietatTipus
+    }
+
+    class PropietatString extends Propietat
+    class PropietatEnterPositiu extends Propietat
+    class PropietatOrigen extends Propietat
+    class PropietatTipus extends Propietat
+
+    Entorn *-- Botiga
+    Entorn --> Vi
+    Botiga o-- Vi
+    Vi *-- Propietat
+    Propietat *-left- NomPropietat
+    PropietatOrigen *-down-> Origen
+    PropietatTipus *-down-> Tipus
+    PropietatEnterPositiu *-- TipusComparacio
+    PropietatString *-- TipusComparacio
+
+    enum NomPropietat #yellow
+    enum TipusComparacio #yellow
+    class Propietat #yellow
+    class PropietatEnterPositiu #yellow
+    class PropietatOrigen #yellow
+    class PropietatString #yellow
+    class PropietatTipus #yellow
+
+    hide class circle
+    hide abstract circle
+    hide enum circle
+    hide enum method
+    skinparam classAttributeIconSize 0
+    skinparam class {
+        BackgroundColor White
+        BorderColor Black
+        ArrowColor Black
+    }

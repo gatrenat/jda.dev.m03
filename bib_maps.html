@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clau-Valor &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Conclusions" href="bib_conclusions.html" />
+    <link rel="prev" title="Llistes" href="bib_lists.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="bib.html">Biblioteques</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bib_botigavins.html">El celler de la Bona Estrella</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_csv.html">Guardem les dades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_vi.html">Vins complets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_excepcions.html">Excepcions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_lists.html">Llistes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Clau-Valor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_conclusions.html">Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bib_exercicis.html">Exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="bib.html">Biblioteques</a></li>
+      <li class="breadcrumb-item active">Clau-Valor</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="bib_lists.html" class="btn btn-neutral float-left" title="Llistes" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bib_conclusions.html" class="btn btn-neutral float-right" title="Conclusions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="clau-valor">
+<h1>Clau-Valor<a class="headerlink" href="#clau-valor" title="Permalink to this heading"></a></h1>
+<p>Amb <code class="docutils literal notranslate"><span class="pre">List</span></code> hem conegut una manera d'agrupar instàncies de manera
+seqüencial. És una manera molt habitual però no és la única.</p>
+<p>En aquesta secció descobrirem una altra manera d'agrupar dades molt
+típica: les parelles <em>clau-valor</em></p>
+<p>Les llistes, com de fet els <em>arrays</em>, identifiquen cada element per la
+seva posició dins la seqüència.</p>
+<p>Per exemple, considera aquesta llista:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/maps_gats_as_list.svg"><img alt="_images/maps_gats_as_list.svg" class="align-center" src="_images/maps_gats_as_list.svg" width="50%" /></a>
+<p>El diagrama anterior et mostra com, per referir-nos a un dels gats, fem
+servir la seva posició a la llista.</p>
+<p>Trobem l'entrada corresponent a <code class="docutils literal notranslate"><span class="pre">&quot;Renat&quot;</span></code> a la posició <code class="docutils literal notranslate"><span class="pre">0</span></code> de la
+llista:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gats</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Si ens passen una llista de gats i volem saber si hi és el nostre amic
+Renat, farem una cerca:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">boolean</span><span class="w"> </span><span class="nf">hiEsRenat</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gats</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Gat</span><span class="w"> </span><span class="n">gat</span><span class="p">:</span><span class="w"> </span><span class="n">gats</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">gat</span><span class="p">.</span><span class="na">getNom</span><span class="p">()))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>O encara millor, imagina't que ens cal fer alguna cosa amb el Renat si el
+trobem:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span><span class="w"> </span><span class="nf">getRenat</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Gat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gats</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Gat</span><span class="w"> </span><span class="n">gat</span><span class="p">:</span><span class="w"> </span><span class="n">gats</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">gat</span><span class="p">.</span><span class="na">getNom</span><span class="p">()))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">gat</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ara, amb <code class="docutils literal notranslate"><span class="pre">getRenat()</span></code> podem fer el següent:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getRenat</span><span class="p">(</span><span class="n">gats</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">renat</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">renat</span><span class="p">.</span><span class="na">miola</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Aquesta solució està bé però és millorable. Imagina que poguessis fer
+simplement <code class="docutils literal notranslate"><span class="pre">gats.get(&quot;Renat&quot;)</span></code>.</p>
+<div class="section" id="arriba-map">
+<h2>Arriba <code class="docutils literal notranslate"><span class="pre">Map</span></code><a class="headerlink" href="#arriba-map" title="Permalink to this heading"></a></h2>
+<p>Considera el següent codi:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Gat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">));</span>
+<span class="n">gats</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="_images/maps_gats.svg"><img alt="_images/maps_gats.svg" class="align-center" src="_images/maps_gats.svg" width="50%" /></a>
+<p>Ara, fixa't:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gats</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">renat</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">renat</span><span class="p">.</span><span class="na">miola</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>És a dir, per <em>referir-nos</em> a un gat concret, fem servir el seu nom!</p>
+</div>
+<div class="section" id="parelles-clau-valor">
+<h2>Parelles clau-valor<a class="headerlink" href="#parelles-clau-valor" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Map&lt;K,</span> <span class="pre">V&gt;</span></code> defineix una coŀlecció de parelles de dades. És a dir, cada
+entrada d'un <em>map</em> consta de dos valors: la clau (de tipus <em>K</em>) i el valor
+pròpiament dit (de tipus <em>V</em>).</p>
+<p>En el cas del nostre exemple, el tipus de la clau és String, i el del
+valor <code class="docutils literal notranslate"><span class="pre">Gat</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Gat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Map</span></code> és una <em>interface</em> que declara mètodes per gestionar aquests
+parells clau-valor: afegir, treure, eliminar i consultar a partir de la
+clau.</p>
+<p>Una representació parcial de la seva família és:</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-d2ca3d0fc0e81eace95c0f797865ebe551454498.png" alt="&#64;startuml
+
+hide circle
+hide empty members
+
+skinparam class {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+
+
+interface Map {
+    clear()
+    containsKey(Object): boolean
+    containsValue(Object): boolean
+    getOrDefault(Object key, V default): V
+    isEmpty(): boolean
+    put(K key, V value): V
+    remove(Object): V
+    size(): int
+}
+
+class AbstractMap &lt;&lt;abstract&gt;&gt; implements Map
+class HashMap extends AbstractMap
+class TreeMap extends AbstractMap
+
+&#64;enduml"/>
+</p>
+</div>
+<p>La classe <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/HashMap.html">HashMap</a>
+implementa la <em>interface</em> <code class="docutils literal notranslate"><span class="pre">Map</span></code> de manera que trobar el valor a partir
+de la clau sigui molt ràpid. A canvi, els programes que el facin servir no
+poden assumir cap ordre en les claus.</p>
+<p>La classe <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/TreeMap.html">TreeMap</a>
+també és un <code class="docutils literal notranslate"><span class="pre">Map</span></code> però sí que manté l'ordre d'entrada de les claus. Per
+contra, no és tan ràpid com <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> en la majoria dels mètodes bàsics.</p>
+<p>L'elecció entre aquestes dues implementacions (i d'altres) no sempre és
+trivial ja que depen molt d'un nombre significatiu de condicions d'ús, com
+ara: si ens cal o no preservar l'ordre, quantes parelles hem d'afegir,
+quantes parelles <em>sabem</em> que hem d'afegir inicialment, de
+quina manera les consultarem, etc. Per les necessitats d'aquest curs,
+ens resultarà indiferent quina escollim.</p>
+<p>A l'igual que amb <code class="docutils literal notranslate"><span class="pre">List</span></code>, tant la clau com el valor no poden ser de
+tipus primitiu. En cas que ens calgui sempre podem fer servir la classe
+<em>embolcall</em> (<em>wrapper</em>) corresponent. Recorda per exemple <code class="docutils literal notranslate"><span class="pre">int</span></code> →
+<code class="docutils literal notranslate"><span class="pre">Integer</span></code>.</p>
+<p>Veiem un exemple que fa servir un <code class="docutils literal notranslate"><span class="pre">HashMap</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>~/$ jshell
+<span class="linenos"> 2</span>|  Welcome to JShell -- Version 11.0.14
+<span class="linenos"> 3</span>|  For an introduction type: /help intro
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span>jshell&gt; Map&lt;String, List&lt;Integer&gt;&gt; notes = new HashMap&lt;&gt;()
+<span class="linenos"> 6</span>notes ==&gt; {}
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>jshell&gt; notes.put(&quot;Eleftèria&quot;, new ArrayList&lt;Integer&gt;());
+<span class="linenos"> 9</span>$2 ==&gt; null
+<span class="linenos">10</span>
+<span class="linenos">11</span>jshell&gt; List&lt;Integer&gt; notesElefteria = notes.get(&quot;Eleftèria&quot;);
+<span class="linenos">12</span>notesElefteria ==&gt; []
+<span class="linenos">13</span>
+<span class="linenos">14</span>jshell&gt; notesElefteria.add(5);
+<span class="linenos">15</span>$4 ==&gt; true
+<span class="linenos">16</span>
+<span class="linenos">17</span>jshell&gt; notesElefteria.add(4);
+<span class="linenos">18</span>$5 ==&gt; true
+<span class="linenos">19</span>
+<span class="linenos">20</span>jshell&gt; notesElefteria.add(6);
+<span class="linenos">21</span>$6 ==&gt; true
+<span class="linenos">22</span>
+<span class="linenos">23</span>jshell&gt; notes.get(&quot;Eleftèria&quot;)
+<span class="linenos">24</span>$7 ==&gt; [5, 4, 6]
+<span class="linenos">25</span>
+<span class="linenos">26</span>jshell&gt; notes.put(&quot;Aina&quot;, new ArrayList&lt;Integer&gt;());
+<span class="linenos">27</span>$8 ==&gt; null
+<span class="linenos">28</span>
+<span class="linenos">29</span>jshell&gt; notes.get(&quot;Aina&quot;);
+<span class="linenos">30</span>$9 ==&gt; []
+<span class="linenos">31</span>
+<span class="linenos">32</span>jshell&gt; notes.get(&quot;Aina&quot;).add(8);
+<span class="linenos">33</span>$10 ==&gt; true
+<span class="linenos">34</span>
+<span class="linenos">35</span>jshell&gt; notes.get(&quot;Aina&quot;).add(9);
+<span class="linenos">36</span>$11 ==&gt; true
+<span class="linenos">37</span>
+<span class="linenos">38</span>jshell&gt; notes.get(&quot;Aina&quot;).add(7);
+<span class="linenos">39</span>$12 ==&gt; true
+<span class="linenos">40</span>
+<span class="linenos">41</span>jshell&gt; notes.get(&quot;Saul&quot;);
+<span class="linenos">42</span>$13 ==&gt; null
+<span class="linenos">43</span>
+<span class="linenos">44</span>jshell&gt; notes.getOrDefault(&quot;Saul&quot;, new ArrayList&lt;Integer&gt;());
+<span class="linenos">45</span>$14 ==&gt; []
+</pre></div>
+</div>
+<p>Fixa't que, en aquest cas, la clau ha estat el nom i el valor un
+<code class="docutils literal notranslate"><span class="pre">List&lt;Integer&gt;</span></code></p>
+</div>
+<div class="section" id="igualtat">
+<h2>Igualtat<a class="headerlink" href="#igualtat" title="Permalink to this heading"></a></h2>
+<p>Les classes que habitualment fem servir (ex. <code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">Integer</span></code>)
+estan ben definides per poder funcionar com a claus d'un <code class="docutils literal notranslate"><span class="pre">Map</span></code>, però si
+decidíssim tenir una clau d'una classe nostra (ex. <code class="docutils literal notranslate"><span class="pre">Gat</span></code>) ens caldria
+assegurar que <code class="docutils literal notranslate"><span class="pre">Map</span></code> pot saber si dos gats són el mateix gat.</p>
+<p>Què vol dir que dos objectes siguin iguals?</p>
+<p>Probablement, estarem d'acord amb que dos objectes són iguals si fan
+referència a la mateixa instància, oi? És clar, és la identitat la que
+està en joc!</p>
+<p>És a dir:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Gat</span><span class="w"> </span><span class="n">gat1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="n">Gat</span><span class="w"> </span><span class="n">gat2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Gat</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="n">Gat</span><span class="w"> </span><span class="n">gat3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gat1</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;gat1 == gat2 -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">gat1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">gat2</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;gat1 == gat3 -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">gat1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">gat3</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">gat1</span></code> i <code class="docutils literal notranslate"><span class="pre">gat2</span></code> són diferents malgrat tenen el mateix nom ja que
+corresponen a instàncies diferents. En canvi, <code class="docutils literal notranslate"><span class="pre">gat1</span></code> i <code class="docutils literal notranslate"><span class="pre">gat3</span></code> sí
+resulten <code class="docutils literal notranslate"><span class="pre">true</span></code> en comparar-los per igualtat, ja que són la mateixa
+instància.</p>
+<p>Sovint, però, no és la identitat el que ens importa. Per exemple, encara
+que dos Strings no siguin la mateixa instància, si contenen el mateix
+valor, volem considerar-los iguals:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Renat&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">nom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w">   </span><span class="c1">// suposa que introduïm &quot;Renat&quot;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;nom1 == nom2 -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">nom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nom2</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;nom1.equals(nom2) -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">nom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nom2</span><span class="p">)));</span><span class="w"> </span><span class="c1">// true</span>
+</pre></div>
+</div>
+<p>Ja sabem que <code class="docutils literal notranslate"><span class="pre">nom1</span></code> i <code class="docutils literal notranslate"><span class="pre">nom2</span></code> difícilment estaran guardats en la
+mateixa posició de memòria, però en aquest exemple, el seu contingut és el
+mateix i, per tant <code class="docutils literal notranslate"><span class="pre">String.equals()</span></code> els considera iguals.</p>
+<p>Considera la classe <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> que no fa res més que <em>envoltar</em> un
+String.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaString</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EnvoltaString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;ENVOLTAT(\&quot;%s\&quot;)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Renat&quot;</span><span class="p">;</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot; == \&quot;%s\&quot; -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos">12</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot;.equals(\&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nom2</span><span class="p">));</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom1</span><span class="p">);</span>
+<span class="linenos">15</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s == %s -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">);</span>
+<span class="linenos">17</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s.equals(%s) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">envoltaNom2</span><span class="p">));</span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">19</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>El codi anterior té com a sortida:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaString
+<span class="hll"><span class="go"> &quot;Renat&quot; == &quot;Renat&quot; -&gt; false</span>
+</span><span class="hll"><span class="go"> &quot;Renat&quot;.equals(&quot;Renat&quot;) -&gt; true</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) == ENVOLTAT(&quot;Renat&quot;) -&gt; false</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;).equals(ENVOLTAT(&quot;Renat&quot;)) -&gt; false</span>
+</span></pre></div>
+</div>
+<p>Com ja esperàvem, la comparació de Strings amb <code class="docutils literal notranslate"><span class="pre">==</span></code> ens havia de donar
+<code class="docutils literal notranslate"><span class="pre">false</span></code> ja que compara dues instàncies diferents. Per contra, el primer
+<code class="docutils literal notranslate"><span class="pre">equals()</span></code> ens generaria <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>Perquè el primer <code class="docutils literal notranslate"><span class="pre">equals()</span></code> ens retorna <code class="docutils literal notranslate"><span class="pre">true</span></code> mentre que el segon ens
+torna <code class="docutils literal notranslate"><span class="pre">false</span></code> malgrat tot el que contenen les instàncies són Strings amb
+el mateix contingut?</p>
+<p>Per donar resposta, ens cal entendre que els dos <code class="docutils literal notranslate"><span class="pre">equals()</span></code> no són el
+mateix mètode. El primer pertany a la classe <code class="docutils literal notranslate"><span class="pre">String</span></code> i el segon a
+<code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>.</p>
+<p>Però nosaltres no hem definit el mètode <code class="docutils literal notranslate"><span class="pre">equals()</span></code> a <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>!
+On està definit?</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">Object</span></code> és clar. <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>, com qualsevol altra classe,
+hereta d'<code class="docutils literal notranslate"><span class="pre">Object</span></code> i ofereix directament els mètodes públics heretats
+quan no els redefineix. Però lògicament a <code class="docutils literal notranslate"><span class="pre">Object</span></code> no li podem demanar
+que sàpiga com comparar totes i cadascuna de les seves subclasses!</p>
+<p>Imagina-t'ho només amb <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>. Quan hauria de considerar que
+dos <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> són iguals? Quan els seus valors són iguals (segons
+<code class="docutils literal notranslate"><span class="pre">String.equals()</span></code>)? Quan siguin iguals independents de majúscules i
+minúscules?</p>
+<p>Nosaltres decidim què fa iguals a dues instàncies de <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>
+i, per tant, nosaltres haurem de desenvolupar el codi per
+comparar-les.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaString</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EnvoltaString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;ENVOLTAT(\&quot;%s\&quot;)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 7</span>
+<span class="hll"><span class="linenos"> 8</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">altre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="linenos"> 9</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">altre</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">10</span><span class="w">    </span><span class="p">}</span>
+</span><span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Renat&quot;</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="linenos">15</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot; == \&quot;%s\&quot; -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot;.equals(\&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nom2</span><span class="p">));</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom1</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s == %s -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s.equals(%s) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">envoltaNom2</span><span class="p">));</span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">23</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Fixa't que sobreescrivim <code class="docutils literal notranslate"><span class="pre">equals()</span></code> de manera que, en rebre un altre
+<code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>, indiqui cert si els valors són iguals segons
+<code class="docutils literal notranslate"><span class="pre">String.equals()</span></code>.</p>
+<p>La sortida d'aquest programa, com era d'esperar, serà:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaString
+<span class="hll"><span class="go"> &quot;Renat&quot; == &quot;Renat&quot; -&gt; false</span>
+</span><span class="hll"><span class="go"> &quot;Renat&quot;.equals(&quot;Renat&quot;) -&gt; true</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) == ENVOLTAT(&quot;Renat&quot;) -&gt; false</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;).equals(ENVOLTAT(&quot;Renat&quot;)) -&gt; true</span>
+</span></pre></div>
+</div>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_35_17_envoltastring_case.html"><span class="doc"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</span></a></p>
+<p>Què passaria si provéssim el següent codi?</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">envoltat</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Vector</span><span class="o">&lt;</span><span class="n">GatRenat</span><span class="o">&gt;</span><span class="p">()));</span>
+</pre></div>
+</div>
+<p>Fixa't que estem comparant un <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> amb un <code class="docutils literal notranslate"><span class="pre">Vector</span></code>!
+Com seria d'esperar, el resultat és <code class="docutils literal notranslate"><span class="pre">false</span></code> però, com és possible?
+Perquè no resulta en un error? Perquè Java no es queixa quan intentem
+accedir a <code class="docutils literal notranslate"><span class="pre">altre.nom</span></code>?</p>
+<p>La resposta és, perquè no s'està executant el <code class="docutils literal notranslate"><span class="pre">EnvoltaString.equals()</span></code>
+sinó <code class="docutils literal notranslate"><span class="pre">Object.equals()</span></code>. Perquè?</p>
+<p>Trobem una bona pista si afegim l'anotació <code class="docutils literal notranslate"><span class="pre">&#64;Override</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaString</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="nf">EnvoltaString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="hll"><span class="linenos"> 6</span><span class="w">     </span><span class="nd">@Override</span>
+</span><span class="linenos"> 7</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;ENVOLTAT(\&quot;%s\&quot;)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 8</span>
+<span class="hll"><span class="linenos"> 9</span><span class="w">     </span><span class="nd">@Override</span>
+</span><span class="linenos">10</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">altre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">altre</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span>
+<span class="linenos">12</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">13</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>En intentar compilar el codi anterior, rebem el següent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>javac<span class="w"> </span>EnvoltaString.java
+<span class="hll"><span class="go"> EnvoltaString.java:9: error: method does not override or implement a method from a supertype</span>
+</span><span class="hll"><span class="go">     @Override</span>
+</span><span class="hll"><span class="go">     ^</span>
+</span><span class="hll"><span class="go"> 1 error</span>
+</span></pre></div>
+</div>
+<p>El que ens està dient és que <strong>no</strong> hem redefinit el mètode <code class="docutils literal notranslate"><span class="pre">equals()</span></code>
+de <code class="docutils literal notranslate"><span class="pre">Object</span></code> ja que la seva signatura és <code class="docutils literal notranslate"><span class="pre">equals(Object)</span></code> i no
+<code class="docutils literal notranslate"><span class="pre">equals(EnvoltaString)</span></code>. El que hem fet és <em>sobrecarregar</em> el nom
+<code class="docutils literal notranslate"><span class="pre">equals()</span></code>.</p>
+<p>Per poder redefinir <code class="docutils literal notranslate"><span class="pre">equals()</span></code> ens caldrà fer el següent:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nd">@Override</span>
+<span class="linenos">2</span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// si ja ni tant sols és ni un EnvoltaString malament</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">altre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">EnvoltaString</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">altre</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span>
+<span class="linenos">6</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">7</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">8</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_35_18_envoltastring_str.html"><span class="doc"> Exercici 35_18. EnvoltaString és compara amb Strings</span></a></p>
+</div>
+<div class="section" id="no-hi-ha-prou-amb-ser-iguals">
+<h2>No hi ha prou amb ser iguals<a class="headerlink" href="#no-hi-ha-prou-amb-ser-iguals" title="Permalink to this heading"></a></h2>
+<p>Si les coses fossin tan fàcils com redefinir el mètode <code class="docutils literal notranslate"><span class="pre">equals()</span></code>,
+Java seria massa avorrit.</p>
+<p>Considera el següent codi:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaMap</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">));</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">));</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">));</span>
+<span class="hll"><span class="linenos"> 9</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">),</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat II&quot;</span><span class="p">));</span>
+</span><span class="linenos">10</span><span class="w">         </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">clau</span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot; -&gt; %s%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">clau</span><span class="p">,</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">clau</span><span class="p">));</span>
+<span class="linenos">12</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">13</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>El codi anterior crea un <code class="docutils literal notranslate"><span class="pre">HashMap&lt;String,</span> <span class="pre">EnvoltaString&gt;</span></code> i hi introdueix quatre parelles
+clau-valor' dues d'elles amb la mateixa clau.</p>
+<p>La sortida resultant del programa és:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaMap
+<span class="hll"><span class="go"> &quot;Garfield&quot; -&gt; ENVOLTAT(&quot;Garfield&quot;)</span>
+</span><span class="hll"><span class="go"> &quot;Misifú&quot; -&gt; ENVOLTAT(&quot;Misifú&quot;)</span>
+</span><span class="hll"><span class="go"> &quot;Renat&quot; -&gt; ENVOLTAT(&quot;Renat II&quot;)</span>
+</span></pre></div>
+</div>
+<p>És possible que a tu t'apareguin en un altre ordre ja que estem fent
+servir <code class="docutils literal notranslate"><span class="pre">HashMap</span></code>. En tot cas, el valor corresponent a <code class="docutils literal notranslate"><span class="pre">&quot;Renat&quot;</span></code> ja no
+serà <code class="docutils literal notranslate"><span class="pre">&quot;Renat&quot;</span></code> sinó <code class="docutils literal notranslate"><span class="pre">&quot;Renat</span> <span class="pre">II&quot;</span></code>. Perquè? Perquè l'assignació de la
+línia 9 fa canviar el valor associat a la clau <code class="docutils literal notranslate"><span class="pre">&quot;Renat&quot;</span></code>. És el que
+esperaríem, oi?</p>
+<p>Fem-ho ara a l'inrevés. És a dir, fem que ara la clau sigui
+<code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> en comptes de <code class="docutils literal notranslate"><span class="pre">String</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="linenos"> 3</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaMap</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">EnvoltaString</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Garfield&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Garfield&quot;</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Misifú&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Misifú&quot;</span><span class="p">);</span>
+<span class="hll"><span class="linenos"> 9</span><span class="w">         </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Renat II&quot;</span><span class="p">);</span>
+</span><span class="linenos">10</span><span class="w">         </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">clau</span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s -&gt; \&quot;%s\&quot;%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">clau</span><span class="p">,</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">clau</span><span class="p">));</span>
+<span class="linenos">12</span><span class="w">         </span><span class="p">}</span>
+<span class="linenos">13</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>El codi és força similar a l'anterior. A veure què fa la sortida:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaMap
+<span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) -&gt; &quot;Renat&quot;</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) -&gt; &quot;Renat II&quot;</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Garfield&quot;) -&gt; &quot;Garfield&quot;</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Misifú&quot;) -&gt; &quot;Misifú&quot;</span>
+</span></pre></div>
+</div>
+<p>En primer lloc veiem un canvi d'ordre. És clar, <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> no ens
+garanteix l'ordre i, per tant, podem esperar qualsevol.</p>
+<p>El més intrigant és, però, que hi ha quatre entrades! Sembla que l'entrada
+de Renat s'ha duplicat!</p>
+<p>Què està passant? És que no està funcionant el mètode <code class="docutils literal notranslate"><span class="pre">equals()</span></code> de
+<code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>?</p>
+<p>En situacions així, una cosa que podem fer és comprovar què s'està
+executant. Una manera molt simple és fer servir un <em>xivato</em>.</p>
+<p>Afegim un xivato al codi <code class="docutils literal notranslate"><span class="pre">equals()</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nd">@Override</span>
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;XXX Cridat %s.equals(%s)%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">     </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">altre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">EnvoltaString</span><span class="p">)</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">altre</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Un cop recompilat, si tornem a executar el <code class="docutils literal notranslate"><span class="pre">EnvoltaMap</span></code> ens trobem…
+exàctament la mateixa sortida! Sembla que no s'està cridant <code class="docutils literal notranslate"><span class="pre">equals()</span></code>
+de <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code>.</p>
+<p>Mirem què ens diu la documentació del mètode <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)">Object.equals()</a>:</p>
+<p>Al final de la descripció tenim la pista en forma de nota:</p>
+<blockquote>
+<div><p>Noteu que generalment és necessari sobreescriure el mètode
+<code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> quan aquest métode [<code class="docutils literal notranslate"><span class="pre">equals()</span></code>] és sobreescrit, de
+manera que se mantingui el contracte general del mètode <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code>
+que requereix que els objectes iguals han de tenir codis <em>hash</em>
+iguals.</p>
+</div></blockquote>
+<p>El que ens està dient és que si sobreescrivim <code class="docutils literal notranslate"><span class="pre">equals()</span></code> generalment
+haurem de sobreescriure un altre mètode anomenat <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code>. En
+consultar la <a class="reference external" href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()">seva documentació</a>
+ens trobem que <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> requereix:</p>
+<ul class="simple">
+<li><p>sempre que el cridem sobre la mateixa instància, haurà de retornar el
+mateix valor.</p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">equals()</span></code> ens diu que dues instàncies són iguals, <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> ens
+ha de retornar el mateix valor per les dues instàncies.</p></li>
+<li><p>no és necessari que dos instàncies diferents resultin en valors
+diferents de <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code>. Amb tot, és recomanable per millorar el
+funcionament de les classes que fan servir taules de <em>hash</em> (recordes
+<code class="docutils literal notranslate"><span class="pre">HashMap</span></code>?)</p></li>
+</ul>
+<p>És a dir, que ens toca redefinir també el mètode <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> per
+<code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code></p>
+<p>Per saber quin valor li fem tornar a <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> hauríem d'investigar
+una mica quines són les bones pràctiques. Alguns IDE ens oferiran opcions per generar-ho per nosaltres!
+En aquest cas concret, però, ho tenim força fàcil,
+ja que podem simplement retornar el valor de <em>hash</em> del String envoltat:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EnvoltaString</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">EnvoltaString</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">valor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="nd">@Override</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;ENVOLTAT(\&quot;%s\&quot;)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">valor</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="nd">@Override</span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;XXX Cridat %s.equals(%s)%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+<span class="linenos">12</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="w"> </span><span class="p">(</span><span class="n">element</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">altre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">EnvoltaString</span><span class="p">)</span><span class="w"> </span><span class="n">element</span><span class="p">;</span>
+<span class="linenos">14</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">altre</span><span class="p">.</span><span class="na">valor</span><span class="p">);</span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="nd">@Override</span>
+<span class="linenos">18</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;XXX Cridat %s.hashCode()%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor</span><span class="p">.</span><span class="na">hashCode</span><span class="p">();</span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">22</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Si executem ara <code class="docutils literal notranslate"><span class="pre">EnvoltaMap</span></code> ens trobem la següent sortida:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaMap
+<span class="hll"><span class="go"> ENVOLTAT(&quot;Garfield&quot;) -&gt; &quot;Garfield&quot;</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Misifú&quot;) -&gt; &quot;Misifú&quot;</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) -&gt; &quot;Renat II&quot;</span>
+</span></pre></div>
+</div>
+<p>Per fi tenim el que esperàvem! <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> ha considerat que les dues
+instàncies que corresponen a Renat són <em>iguals</em>.</p>
+<p>Si tornem a posar els <em>xivatos</em> podrem veure què ha passat per dins:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>EnvoltaMap
+<span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Renat&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Garfield&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Misifú&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Renat&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Renat&quot;).equals(ENVOLTAT(&quot;Renat&quot;))</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Garfield&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Garfield&quot;) -&gt; &quot;Garfield&quot;</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Misifú&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Misifú&quot;) -&gt; &quot;Misifú&quot;</span>
+</span><span class="hll"><span class="go"> XXX Cridat ENVOLTAT(&quot;Renat&quot;).hashCode()</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) -&gt; &quot;Renat II&quot;</span>
+</span></pre></div>
+</div>
+<p>Fixa't que <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code> és cridat en nombroses ocasions. fins i tot per
+part de <code class="docutils literal notranslate"><span class="pre">get()</span></code>! En canvi, <code class="docutils literal notranslate"><span class="pre">equals()</span></code> és executat un únic cop, i ho fa
+per comparar la instància corresponent a Renat!.</p>
+<p>Així, <code class="docutils literal notranslate"><span class="pre">HashMap</span></code> el que fa per localitzar una clau és:</p>
+<ol class="arabic simple">
+<li><p>obté el <em>hash</em> de la clau a localitzar fent servir <code class="docutils literal notranslate"><span class="pre">hashCode()</span></code></p></li>
+<li><p>si hi ha una clau amb el mateix <em>hash</em>, crida <code class="docutils literal notranslate"><span class="pre">equals()</span></code></p></li>
+<li><p>considerarà que la clau hi és quan troba una clau que tingui el mateix
+<em>hash</em> i <code class="docutils literal notranslate"><span class="pre">equals()</span></code> digui que és igual a la cercada.</p></li>
+</ol>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_35_19_especmap.html"><span class="doc"> Exercici 35_19. Propietats del vi</span></a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bib_lists.html" class="btn btn-neutral float-left" title="Llistes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bib_conclusions.html" class="btn btn-neutral float-right" title="Conclusions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
