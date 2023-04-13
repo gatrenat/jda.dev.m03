@@ -46,4 +46,4 @@ Esperarà que, per exemple, la següent execució generi la sortida esperada:
     "Renat" == "RENAT" -> false
     "Renat".equals("RENAT") -> false
     ENVOLTAT("Renat") == ENVOLTAT("RENAT") -> false
-    ENVOLTAT("Renat").equals(ENVOLTAT("RENAT")) -> false
+    ENVOLTAT("Renat").equals(ENVOLTAT("RENAT")) -> true

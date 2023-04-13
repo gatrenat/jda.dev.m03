@@ -413,11 +413,12 @@ comparar-les.</p>
 <p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_35_17_envoltastring_case.html"><span class="doc"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</span></a></p>
 <p>Què passaria si provéssim el següent codi?</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="s">&quot;Renat&quot;</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">envoltat</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Vector</span><span class="o">&lt;</span><span class="n">GatRenat</span><span class="o">&gt;</span><span class="p">()));</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">envoltat</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">ArrayList</span><span class="o">&lt;</span><span class="n">GatRenat</span><span class="o">&gt;</span><span class="p">()));</span>
 </pre></div>
 </div>
-<p>Fixa't que estem comparant un <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> amb un <code class="docutils literal notranslate"><span class="pre">Vector</span></code>!
-Com seria d'esperar, el resultat és <code class="docutils literal notranslate"><span class="pre">false</span></code> però, com és possible?
+<p>Fixa't que estem comparant un <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> amb un <code class="docutils literal notranslate"><span class="pre">ArrayList</span></code> de gats Renat!
+Com seria d'esperar, el resultat que es mostra per pantalla és <code class="docutils literal notranslate"><span class="pre">false</span></code> però,
+com és possible?
 Perquè no resulta en un error? Perquè Java no es queixa quan intentem
 accedir a <code class="docutils literal notranslate"><span class="pre">altre.nom</span></code>?</p>
 <p>La resposta és, perquè no s'està executant el <code class="docutils literal notranslate"><span class="pre">EnvoltaString.equals()</span></code>

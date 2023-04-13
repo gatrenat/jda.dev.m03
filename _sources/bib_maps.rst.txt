@@ -392,10 +392,11 @@ Què passaria si provéssim el següent codi?
 .. code-block:: java
 
     EnvoltaString envoltat = new EnvoltaString("Renat");
-    System.out.println(envoltat.equals(new java.util.Vector<GatRenat>()));
+    System.out.println(envoltat.equals(new java.util.ArrayList<GatRenat>()));
 
-Fixa't que estem comparant un ``EnvoltaString`` amb un ``Vector``!
-Com seria d'esperar, el resultat és ``false`` però, com és possible?
+Fixa't que estem comparant un ``EnvoltaString`` amb un ``ArrayList`` de gats Renat!
+Com seria d'esperar, el resultat que es mostra per pantalla és ``false`` però,
+com és possible?
 Perquè no resulta en un error? Perquè Java no es queixa quan intentem
 accedir a ``altre.nom``?
 
