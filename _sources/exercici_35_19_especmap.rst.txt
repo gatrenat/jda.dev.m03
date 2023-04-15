@@ -33,14 +33,9 @@ Per altra banda, les especificacions es fan servir per dues coses:
 
 * definir una plantilla per especificar una cerca
 
-Quan actua com a plantilla, els valors dels atributs d'especificació
-poden:
-
-* no estar definits (``null``) indicant que és vàlid qualsevol valor per
-  aquesta propietat
-
-* ser parcials. Per exemple, la propietat ``nom`` pot valer ``"ro"`` que
-  permetrà el nom del vi ``"Roura blanc"``.
+Quan actua com a plantilla, els valors dels atributs d'especificació poden no
+estar definits (``null``) indicant que és vàlid qualsevol valor per aquesta
+propietat
 
 Per poder saber si una especificació actua com a plantilla o bé defineix
 els valors, disposem del mètode ``esComplet()`` i per saber si un vi

@@ -187,9 +187,5 @@ Els canvis consistiran en:
   acceptarà qualsevol valor de text. Altrament acceptarà només els texts
   que comencin per la plantilla (ambdós normalitzats)
 
-* El mètode ``cercar(Vi)`` permetrà cercar parcialment els diferents
-  atributs de tipus string. Per exemple ``Roura blanc`` podrà ser cercat
-  per 
-
 * Els canvis també afectaran lleugerament a la classe ``Entorn``.
   Caldrà fer una ullada.
