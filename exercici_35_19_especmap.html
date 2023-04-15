@@ -147,9 +147,14 @@ i collita.</p>
 <li><p>definir els valors de les propietats d'un vi concret</p></li>
 <li><p>definir una plantilla per especificar una cerca</p></li>
 </ul>
-<p>Quan actua com a plantilla, els valors dels atributs d'especificació poden no
-estar definits (<code class="docutils literal notranslate"><span class="pre">null</span></code>) indicant que és vàlid qualsevol valor per aquesta
-propietat</p>
+<p>Quan actua com a plantilla, els valors dels atributs d'especificació
+poden:</p>
+<ul class="simple">
+<li><p>no estar definits (<code class="docutils literal notranslate"><span class="pre">null</span></code>) indicant que és vàlid qualsevol valor per
+aquesta propietat</p></li>
+<li><p>ser parcials. Per exemple, la propietat <code class="docutils literal notranslate"><span class="pre">nom</span></code> pot valer <code class="docutils literal notranslate"><span class="pre">&quot;ro&quot;</span></code> que
+permetrà el nom del vi <code class="docutils literal notranslate"><span class="pre">&quot;Roura</span> <span class="pre">blanc&quot;</span></code>.</p></li>
+</ul>
 <p>Per poder saber si una especificació actua com a plantilla o bé defineix
 els valors, disposem del mètode <code class="docutils literal notranslate"><span class="pre">esComplet()</span></code> i per saber si un vi
 concret és acceptable per una determinada plantilla, ara per ara disposem

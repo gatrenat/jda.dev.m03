@@ -176,16 +176,21 @@ Els canvis consistiran en:
   retorna cert si el text coincideix amb la plantilla.
 
   Considerarem que un text coincideix amb una plantilla quan, la seva
-  versió normalitzada comença com la plantilla, o és igual. 
+  versió normalitzada *comença* com la plantilla, o és igual. 
 
   Aquesta funció resoldrà als enumerats la decisió de si el nom correspon
   al demanat. Un cop la tenim, seria una llàstima no utilitzar-la també
   altres propietats de tipus String de la cerca. En concret, en el nom del
   vi.
 
-  En cas que la plantilla sigui ``null``, o buida o amb només espais,
+  Així, en cas que la plantilla sigui ``null``, buida o amb només espais,
   acceptarà qualsevol valor de text. Altrament acceptarà només els texts
   que comencin per la plantilla (ambdós normalitzats)
+
+  Així, el mètode ``cercar(Vi)``, gràcies a ``UtilString.esPlantillaDeText()``,
+  permetrà cercar parcialment els diferents atributs de tipus string. Per
+  exemple, el vi amb el nom ``Roura blanc`` podrà ser trobat per ``Roura``,
+  ``rou`` o fins i tot per ``r``.
 
 * Els canvis també afectaran lleugerament a la classe ``Entorn``.
   Caldrà fer una ullada.

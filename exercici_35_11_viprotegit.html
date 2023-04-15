@@ -280,14 +280,18 @@ tan a veure amb <code class="docutils literal notranslate"><span class="pre">Vi<
 <span class="pre">plantilla,</span> <span class="pre">String</span> <span class="pre">text)</span></code> que, donada una plantilla i un text, ens
 retorna cert si el text coincideix amb la plantilla.</p>
 <p>Considerarem que un text coincideix amb una plantilla quan, la seva
-versió normalitzada comença com la plantilla, o és igual.</p>
+versió normalitzada <em>comença</em> com la plantilla, o és igual.</p>
 <p>Aquesta funció resoldrà als enumerats la decisió de si el nom correspon
 al demanat. Un cop la tenim, seria una llàstima no utilitzar-la també
 altres propietats de tipus String de la cerca. En concret, en el nom del
 vi.</p>
-<p>En cas que la plantilla sigui <code class="docutils literal notranslate"><span class="pre">null</span></code>, o buida o amb només espais,
+<p>Així, en cas que la plantilla sigui <code class="docutils literal notranslate"><span class="pre">null</span></code>, buida o amb només espais,
 acceptarà qualsevol valor de text. Altrament acceptarà només els texts
 que comencin per la plantilla (ambdós normalitzats)</p>
+<p>Així, el mètode <code class="docutils literal notranslate"><span class="pre">cercar(Vi)</span></code>, gràcies a <code class="docutils literal notranslate"><span class="pre">UtilString.esPlantillaDeText()</span></code>,
+permetrà cercar parcialment els diferents atributs de tipus string. Per
+exemple, el vi amb el nom <code class="docutils literal notranslate"><span class="pre">Roura</span> <span class="pre">blanc</span></code> podrà ser trobat per <code class="docutils literal notranslate"><span class="pre">Roura</span></code>,
+<code class="docutils literal notranslate"><span class="pre">rou</span></code> o fins i tot per <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
 </li>
 <li><p>Els canvis també afectaran lleugerament a la classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code>.
 Caldrà fer una ullada.</p></li>
