@@ -255,9 +255,10 @@ Per evitar-ho, *mourem la responsabilitat* de saber si les especificacions
 dun vi es corresponen o no a una especificació, a la classe
 ``Especificacio``.
 
-Així, ``Especificacio`` disposarà d'un nou mètode anomenat
-``esPlantillaDe()`` que rebrà l'especificació d'un ``Vi`` i retornarà
-``true`` en cas que ho sigui.
+Així, ``Especificacio`` disposarà d'un nou mètode anomenat ``esPlantillaDe()``
+que rebrà un ``Vi`` i retornarà ``true`` en cas que la plantilla sigui vàlida
+pel vi, o si vols, que els valors que especifica la plantilla són satisfets pel
+vi.
 
 Entorn
 ======
