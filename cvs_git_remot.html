@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git remot &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Exercici 52_01. Control de versions" href="exercici_52_01_cvs.html" />
+    <link rel="prev" title="Empaquetar un repositori de Git" href="cvs_git_bundle.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="cvs.html">Control de versions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cvs_intro.html">Justificació</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_definicio.html">Definició</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cvs_git.html">Git</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_intro.html">Introducció</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_install.html">Instal·lació i configuració</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_basic.html">Git bàsic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_branch.html">Branques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_bundle.html">Empaquetar un repositori de Git</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Git remot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercici_52_01_cvs.html"> Exercici 52_01. Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="cvs.html">Control de versions</a></li>
+          <li class="breadcrumb-item"><a href="cvs_git.html">Git</a></li>
+      <li class="breadcrumb-item active">Git remot</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="cvs_git_bundle.html" class="btn btn-neutral float-left" title="Empaquetar un repositori de Git" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_52_01_cvs.html" class="btn btn-neutral float-right" title="Exercici 52_01. Control de versions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="git-remot">
+<h1>Git remot<a class="headerlink" href="#git-remot" title="Permalink to this heading"></a></h1>
+<p>Amb el que hem vist fins ara, espero que t'hagi convençut de fer
+servir Git (o algun altre SCV) en tots els teus desenvolupaments. Si
+no ho he aconseguit encara, espera't a veure el que Git et pot oferir
+quan el teu projecte el fas des de diferents màquines o/i amb
+diferents desenvolupadors.</p>
+<div class="section" id="duplicar-o-clonar">
+<h2>Duplicar o clonar<a class="headerlink" href="#duplicar-o-clonar" title="Permalink to this heading"></a></h2>
+<p>De vegades voldrem treballar en un repositori existent que no ens
+pertany.</p>
+<p>Per duplicar un repositori farem servir la comanda <code class="docutils literal notranslate"><span class="pre">clone</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>«url»<span class="w"> </span><span class="o">[</span>«noudir»<span class="o">]</span>
+</pre></div>
+</div>
+<p>Per exemple, la següent comanda et crearà un directori anomenat
+<code class="docutils literal notranslate"><span class="pre">gems</span></code> a partir del directori actual i hi duplicarà el repositori
+contingut a la url indicada.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/moiatgit/the-art-of-command-line
+<span class="go">Cloning into &#39;the-art-of-command-line&#39;...</span>
+<span class="go">remote: Enumerating objects: 3532, done.</span>
+<span class="go">remote: Total 3532 (delta 0), reused 0 (delta 0), pack-reused 3532</span>
+<span class="go">Receiving objects: 100% (3532/3532), 2.47 MiB | 1.93 MiB/s, done.</span>
+<span class="go">Resolving deltas: 100% (2077/2077), done.</span>
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>the-art-of-command-line/
+<span class="go">the-art-of-command-line/$ ls</span>
+<span class="go">admin            cowsay.png    README-el.md  README-id.md  README-ko.md  README-ro.md  README-uk.md</span>
+<span class="go">AUTHORS.md       README-cs.md  README-es.md  README-it.md  README.md     README-ru.md  README-zh-Hant.md</span>
+<span class="go">CONTRIBUTING.md  README-de.md  README-fr.md  README-ja.md  README-pt.md  README-sl.md  README-zh.md</span>
+</pre></div>
+</div>
+<p>En cas que no s'especifiqui el nom del directori, la comanda crearà un
+directori amb el mateix nom que l'original.</p>
+<p>Ara podríem començar a treballar en una nova branca del projecte que
+Hackmore tan amablement ens ofereix al <a class="reference external" href="https://github.com/">github</a></p>
+</div>
+<div class="section" id="el-repositori-remot">
+<h2>El repositori remot<a class="headerlink" href="#el-repositori-remot" title="Permalink to this heading"></a></h2>
+<p>A partir del repositori clonat a la secció anterior, podem demanar a
+Git que ens digui quin és el repositori remot de la nostra còpia:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gems$ git remote -v</span>
+<span class="go">origin      git://github.com/WilliamHackmore/linuxgems.git (fetch)</span>
+<span class="go">origin      git://github.com/WilliamHackmore/linuxgems.git (push)</span>
+</pre></div>
+</div>
+<p>Aquesta comanda ens està indicant que el repositori té associat un
+repositori remot anomenat <em>origen</em> i quines són les urls que farà
+servir en cas que vulguem recuperar noves versions o enviar les
+nostres.</p>
+<p>La comanda <code class="docutils literal notranslate"><span class="pre">remote</span></code> ens ofereix la possibilitat de gestionar els
+repositoris remots amb que volem enllaçar el nostre. Amb <em>remot</em> ens
+referirem a qualsevol altre repositori, independentment de si es troba
+a un altre equip accessible per algun protocol (ex. ssh) o muntat
+directament al nostre.</p>
+<p>Per exemple, suposem que volem fer un repositori de còpia de seguretat
+en un disc addicional muntat a <code class="docutils literal notranslate"><span class="pre">/mnt/diskbackup/projecte_bak</span></code>
+(preferiblement iniciat amb <code class="docutils literal notranslate"><span class="pre">--bare</span></code>). Podem afegir aquest directori
+com a remot del nostre amb:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git remote add backup /mnt/diskbackup/projecte_bak</span>
+<span class="go">projecte$ git config remote.backup.mirror true</span>
+</pre></div>
+</div>
+<p>Amb això, disposem d'un nou repositori remot amb el que ens podrem
+<em>sincronitzar-nos</em> quan vulguem fer còpies.</p>
+</div>
+<div class="section" id="recuperar-els-canvis-remots">
+<h2>recuperar els canvis remots<a class="headerlink" href="#recuperar-els-canvis-remots" title="Permalink to this heading"></a></h2>
+<p>Per recuperar canvis realitzats a un repositori remot, simplement
+farem:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gems$ git pull origin master</span>
+<span class="go"> * branch            master     -&gt; FETCH_HEAD</span>
+<span class="go">Already up-to-date.</span>
+</pre></div>
+</div>
+<p>Donat que el Hackmore no li hem donat temps d'afegir nous canvis, en
+aquest cas ens diu que ja disposem de la darrera versió del projecte.
+Altrament ens hagués descarregat els nous canvis.</p>
+</div>
+<div class="section" id="enviar-canvis-a-remot">
+<h2>enviar canvis a remot<a class="headerlink" href="#enviar-canvis-a-remot" title="Permalink to this heading"></a></h2>
+<p>Per enviar els nostres canvis al repositori remot ens calen les
+següents coses:</p>
+<ol class="arabic simple">
+<li><p>haver fet <em>commit</em> dels nostres canvis en local</p></li>
+<li><p>assegurar-nos que tenim la darrera versió del remot (recorda
+<code class="docutils literal notranslate"><span class="pre">pull</span></code>)</p></li>
+<li><p>tenir permisos per poder enviar els nostres canvis al repositori
+remot (en el cas del projecte del Hackmore no els tenim)</p></li>
+<li><p>enviar els canvis amb la comanda <code class="docutils literal notranslate"><span class="pre">push</span></code></p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gems$ git push origin master</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="empaquetament">
+<h2>Empaquetament<a class="headerlink" href="#empaquetament" title="Permalink to this heading"></a></h2>
+<p>De vegades no podrem connectar-nos directament a algun repositori
+remot, però ens interessarà sincronitzar-nos. Git ofereix la comanda
+<code class="docutils literal notranslate"><span class="pre">bundle</span></code> que ens permet empaquetar tot o part del repositori en un
+fitxer i portar-lo allà on ens interessi.</p>
+<p>Llegeix-te el document <a class="reference internal" href="cvs_git_bundle.html"><span class="doc">Empaquetar un repositori de Git</span></a> abans de continuar.</p>
+<p>Per empaquetar el nostre repositori, farem simplement:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git bundle create projecte.bundle --all</span>
+<span class="go">Counting objects: 40, done.</span>
+<span class="go">Delta compression using up to 4 threads.</span>
+<span class="go">Compressing objects: 100% (28/28), done.</span>
+<span class="go">Writing objects: 100% (40/40), 3.75 KiB, done.</span>
+<span class="go">Total 40 (delta 5), reused 0 (delta 0)</span>
+<span class="go">projecte$ ls</span>
+<span class="go">adeu.txt  hola.txt  projecte.bundle</span>
+</pre></div>
+</div>
+<p>Ara copiem el fitxer generat (<code class="docutils literal notranslate"><span class="pre">projecte.bundle</span></code>) allà on ens
+interessi i el recuperem amb:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>project.bundle<span class="w"> </span>miproject
+<span class="go">Cloning into &#39;miproject&#39;...</span>
+<span class="go">Receiving objects: 100% (40/40), done.</span>
+<span class="go">Resolving deltas: 100% (5/5), done.</span>
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>miproject
+<span class="go">miproject$ ls</span>
+<span class="go">adeu.txt  hola.txt</span>
+</pre></div>
+</div>
+<p>Ara ja disposem a <code class="docutils literal notranslate"><span class="pre">miproject/</span></code> d'un duplicat del nostre projecte per
+la branca <em>master</em>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cvs_git_bundle.html" class="btn btn-neutral float-left" title="Empaquetar un repositori de Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="exercici_52_01_cvs.html" class="btn btn-neutral float-right" title="Exercici 52_01. Control de versions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

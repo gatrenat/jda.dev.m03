@@ -1,0 +1,32 @@
+###################
+Control de versions
+###################
+
+Aquest tema és una introducció al control de versions. Està
+orientat especialment a la gestió de versions de programari i escull
+el gestor de versions *Git* com a concreció.
+
+Tot i que he composat aquesta introducció a partir de diverses fonts,
+hi ha dues que vull ressaltar:
+
+* el `manual oficial de Git
+  <https://www.kernel.org/pub/software/scm/git/docs/>`_
+
+* el llibre de Scott Chacon `Pro Git <http://git-scm.com/book>`_
+
+Aquest bloc et requerirà composar un document en el que respondràs a
+diferents qüestions que et formularà un únic exercici:
+
+|exerciseicon___| :doc:`exercici_52_01_cvs`
+
+
+Els continguts d'aquest bloc els trobaràs seccionats de la següent manera:
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    cvs_intro.rst
+    cvs_definicio.rst
+    cvs_git.rst
+    exercici_52_01_cvs.rst

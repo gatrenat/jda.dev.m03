@@ -1,0 +1,36 @@
+#########
+Git bàsic
+#########
+
+A aquesta secció hi trobaràs com realitzar les tasques que més
+freqüentment necessitaràs de Git.
+
+Et proposo que segueixis aquesta secció com un tutorial pràctic.
+
+Comença creant un directori i hi afegeixis algun fitxer. Per exemple:
+
+.. code-block:: console
+
+    $ mkdir projecte
+    $ cd projecte
+    projecte$ echo "hola" > hola.txt
+
+
+Els continguts estan seccionats de la següent manera:
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    cvs_git_help.rst
+    cvs_git_init.rst
+    cvs_git_add.rst
+    cvs_git_status.rst
+    cvs_git_commit.rst
+    cvs_git_stage.rst
+    cvs_git_ignore.rst
+    cvs_git_log.rst
+    cvs_git_diff.rst
+    cvs_git_rm.rst
+    cvs_git_mv.rst
+    cvs_git_back.rst

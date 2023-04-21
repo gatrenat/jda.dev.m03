@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 52_01. Control de versions &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Git remot" href="cvs_git_remot.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="cvs.html">Control de versions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cvs_intro.html">Justificació</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_definicio.html">Definició</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_git.html">Git</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> Exercici 52_01. Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="cvs.html">Control de versions</a></li>
+      <li class="breadcrumb-item active"> Exercici 52_01. Control de versions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="cvs_git_remot.html" class="btn btn-neutral float-left" title="Git remot" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="exerciseicon-exercici-52-01-control-de-versions">
+<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 52_01. Control de versions<a class="headerlink" href="#exerciseicon-exercici-52-01-control-de-versions" title="Permalink to this heading"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">52_01_cvs/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="cvs.html"><span class="doc">Control de versions</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+</ul>
+<p class="rubric">Enunciat</p>
+<p>Crea un document en format <em>pdf</em> amb el següent contingut:</p>
+<ul>
+<li><p>Una portada</p>
+<ul class="simple">
+<li><p>inclourà un títol adequat a aquest tema, el teu nom, el context (curs,
+mòdul, etc) i la data</p></li>
+</ul>
+</li>
+<li><p>Una taula de continguts</p>
+<p>Inclourà un índex amb el nom de cada secció i el número de la pàgina
+dins del document on es troba. Idealment oferirà un enllaç.</p>
+</li>
+<li><p>Números de pàgina, títol i versió del document a cada pàgina (capçalera/peu).</p></li>
+<li><p>Una secció d'introducció</p>
+<p>Explicarà com a mínim l'objectiu/continguts d'aquest document, i
+descriurà breument la seva estructura (seccions)</p>
+</li>
+<li><p>Una secció per cadascuna de les preguntes que s'enumeren a continuació</p>
+<p>Cada secció inclourà una còpia de l'enunciat i distingirà clarament aquest de
+la teva resposta. Per exemple, pots fer servir cursives, o una tabulació o
+color diferent.</p>
+</li>
+<li><p>Una secció amb les teves conclusions personals sobre el tema</p></li>
+</ul>
+<p>Les diferents preguntes es troben llistades a continuació:</p>
+<div class="section" id="pregunta-1-la-meva-historia-de-por">
+<h2>Pregunta 1. La meva història de por<a class="headerlink" href="#pregunta-1-la-meva-historia-de-por" title="Permalink to this heading"></a></h2>
+<p>Descriu un cas concret de la teva experiència que t'hagis trobat amb un o
+més dels problemes descrits a la secció <a class="reference internal" href="cvs_intro.html"><span class="doc">Justificació</span></a>. Fes-ho en els
+termes indicats, per exemple, si ha estat entre molts treballadors o de
+manera telemàtica.</p>
+<p>Concreta molt. Per exemple, descriu la convenció de noms que has fet
+servir per cada versió.</p>
+</div>
+<div class="section" id="pregunta-2-comparem-sistemes-de-control-de-versions">
+<h2>Pregunta 2. Comparem sistemes de control de versions<a class="headerlink" href="#pregunta-2-comparem-sistemes-de-control-de-versions" title="Permalink to this heading"></a></h2>
+<p>Agafa els diferents exemples de sistemes de control de versions que hi apareixen
+a la secció <a class="reference internal" href="cvs_definicio.html"><span class="doc">Definició</span></a>.</p>
+<p>Crea una fitxa per cadascun d'ells amb el màxim que trobis dels següents punts:</p>
+<ul>
+<li><p>nom del cvs</p></li>
+<li><p>url del projecte</p></li>
+<li><p>llicència</p></li>
+<li><p>descripció: pots copiar&amp;enganxar la descripció breu que hi apareix a cada
+pàgina, si vols, directament en l'idioma original.</p></li>
+<li><p>bondats: com que hi ha prou competència entre cvs, les pàgines solen oferir de
+manera resumida les característiques diferenciadores del seu producte, fins i
+tot comparant-los amb altres.</p>
+<p>Inclou-les a la fitxa. Pot ser de manera directa (en l'idioma original) o més
+treballada, tractant de descriure amb les teves paraules què volen dir.</p>
+</li>
+<li><p>impressió: una descripció de la teva primera impressió respecte el cvs</p>
+<p>Potser voldràs llegir algun article o blog per oferir una idea més informada.
+Et recomano, per exemple, aquest article de <a class="reference external" href="https://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/">smashingmagazine</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="pregunta-3-quantes-versions-guardem">
+<h2>Pregunta 3. Quantes versions guardem?<a class="headerlink" href="#pregunta-3-quantes-versions-guardem" title="Permalink to this heading"></a></h2>
+<p>Recorda l'esquema que varem veure a <a class="reference internal" href="cvs_git_intro.html"><span class="doc">Introducció</span></a>.</p>
+<div class="figure align-center">
+<img alt="snapshots" src="_images/cvs_img004_snapshots.png" />
+</div>
+<p>Completa la taula següent, indicant quants fitxers (no enllaços) són guardats
+realment per Git a cada versió d'aquest exemple:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>versió</p></th>
+<th class="head"><p>nombre de fitxers guardats</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pregunta-4-configuracio-global">
+<h2>Pregunta 4. Configuració global<a class="headerlink" href="#pregunta-4-configuracio-global" title="Permalink to this heading"></a></h2>
+<p>Un cop disposis de <code class="docutils literal notranslate"><span class="pre">git</span></code> instaŀlat i configurat al teu sistema
+(<a class="reference internal" href="cvs_git_install.html"><span class="doc">Instal·lació i configuració</span></a>), crida la següent instrucció a la consola:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--list
+</pre></div>
+</div>
+<p>La resposta a aquest exercici és el resultat d'aquesta consola. Revisa que les
+dades siguin les que esperes.</p>
+</div>
+<div class="section" id="pregunta-5-ajut-d-algunes-comandes-interessants">
+<h2>Pregunta 5. Ajut d'algunes comandes interessants<a class="headerlink" href="#pregunta-5-ajut-d-algunes-comandes-interessants" title="Permalink to this heading"></a></h2>
+<p>Obté ajuda per les següents opcions de <em>git</em>:</p>
+<ul class="simple">
+<li><p>clone</p></li>
+<li><p>init</p></li>
+<li><p>add</p></li>
+<li><p>mv</p></li>
+<li><p>reset</p></li>
+<li><p>rm</p></li>
+<li><p>log</p></li>
+<li><p>status</p></li>
+<li><p>checkout</p></li>
+<li><p>commit</p></li>
+</ul>
+<p>Per  cadascuna d'aquestes opcions, afegeix al document:</p>
+<ul class="simple">
+<li><p>la comanda per obtenir l'ajut</p></li>
+<li><p>l'ajut generat per git. Només cal que indiqueu la breu descripció que apareix a la
+secció <em>Name</em> i la descripció que apareix a la secció <em>Description</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="pregunta-6-configuracio-inicial">
+<h2>Pregunta 6. Configuració inicial<a class="headerlink" href="#pregunta-6-configuracio-inicial" title="Permalink to this heading"></a></h2>
+<p>Un cop hagis fet la creació d'un repositori segons (<a class="reference internal" href="cvs_git_init.html"><span class="doc">Creació d'un repositori: init</span></a>), crida la
+següent instrucció a la consola:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --list
+</pre></div>
+</div>
+<p>Respon a les següents preguntes:</p>
+<ol class="arabic simple">
+<li><p>quina sortida t'ha generat la comanda anterior</p></li>
+<li><p>què voldrà dir el valor de <code class="docutils literal notranslate"><span class="pre">core.bare</span></code>?</p></li>
+</ol>
+</div>
+<div class="section" id="pregunta-7-resum-de-comandes">
+<h2>Pregunta 7. Resum de comandes<a class="headerlink" href="#pregunta-7-resum-de-comandes" title="Permalink to this heading"></a></h2>
+<p>Creat un petit resum de les comandes que han aparegut en aquesta
+introducció a Git. Inclou les comandes comentades a partir de
+suggeriments del propi Git, com ara <code class="docutils literal notranslate"><span class="pre">reset</span></code>.</p>
+<p>Pensa-ho com una <em>xuleta</em> o <em>cheat sheet</em> que serveixi de
+referència ràpida pel Git.</p>
+<p>Fes servir un format tabular amb les capcaleres:</p>
+<ul class="simple">
+<li><p>Comanda (ex. <code class="docutils literal notranslate"><span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">«comentaris»</span></code>)</p></li>
+<li><p>Petita descripció (ex. &quot;registra els canvis a <em>stage</em> associant-los un comentari&quot;)</p></li>
+<li><p>Exemple (ex. &quot;$ git commit -m &quot;Registre inicial&quot;)</p></li>
+</ul>
+</div>
+<div class="section" id="pregunta-8-comptem-objectes">
+<h2>Pregunta 8. Comptem objectes<a class="headerlink" href="#pregunta-8-comptem-objectes" title="Permalink to this heading"></a></h2>
+<p>A partir dels continguts de <a class="reference internal" href="cvs_git_stage.html"><span class="doc">Passar a stage</span></a>, crea un nou repositori, per
+exemple a partir de <code class="docutils literal notranslate"><span class="pre">/tmp</span></code>.</p>
+<p>Pas 0. Compta el nombre d'objectes que està guardant Git en aquest moment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git count-objects
+</pre></div>
+</div>
+<p>Guarda el resultat de la comanda anterior.</p>
+<p>Pas 1. Crea-hi un fitxer anomenat <code class="docutils literal notranslate"><span class="pre">test.txt</span></code> però de moment no l'afegeixis a Git.</p>
+<p>Compta un altre cop quants objectes guarda Git.</p>
+<p>Pas 2. Afegeix <code class="docutils literal notranslate"><span class="pre">test.txt</span></code> a Git però de moment no facis <code class="docutils literal notranslate"><span class="pre">commit</span></code>.</p>
+<p>Torna a comptar quants objectes guarda Git.</p>
+<p>Pas 3. Fes el primer <code class="docutils literal notranslate"><span class="pre">commit</span></code> i torna a comptar el nombre d'objectes que està
+guardant.</p>
+<p>Pas 4. Modifica el fitxer <code class="docutils literal notranslate"><span class="pre">test.txt</span></code> de la següent manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --list &gt; test.txt
+</pre></div>
+</div>
+<p>Abans de fer <code class="docutils literal notranslate"><span class="pre">commit</span></code>, torna a revisar quants objectes guarda Git</p>
+<p>Pas 5. Fes commit i torna a comptar quants objectes en portes.</p>
+<p>Emplena la següent taula:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 40%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>pas</p></th>
+<th class="head"><p>objectes</p></th>
+<th class="head"><p>kilobytes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pregunta-9-una-mica-de-practica">
+<h2>Pregunta 9. Una mica de pràctica<a class="headerlink" href="#pregunta-9-una-mica-de-practica" title="Permalink to this heading"></a></h2>
+<p>Practicarem ara els continguts que hem vist a <a class="reference internal" href="cvs_git_branch.html"><span class="doc">Branques</span></a>.</p>
+<p>Per la realització d'aquest exercici hauràs de prendre nota de totes
+les comandes que llencis i continguts de fitxers que toquis.</p>
+<p>Segueix les instruccions i prepara els resultats finals que seran en
+forma de <em>bundle</em> més un document amb les descripcions de les passes i
+les comandes/continguts de fitxer.</p>
+<p>Les instruccions et deixaran lliures alguns elements (ex. noms, alguns
+continguts de fitxers, missatges de <em>commit</em>) És molt recomanable que
+les realitzis sobre un GNU/Linux o, com a mínim, un sistema compatible
+POSIX per facilitar-te la captura.</p>
+<p><strong>Instruccions</strong></p>
+<ol class="arabic simple">
+<li><p>Personalitza adequadament el teu Git.</p></li>
+<li><p>Crea un repositori Git</p></li>
+<li><p>Afegeix al directori de treball un fitxer amb un contingut generat
+per la comanda <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ip</span> <span class="pre">a</span></code> (o l'equivalent al teu sistema) des de
+la teva màquina.</p></li>
+<li><p>Fes el primer <em>commit</em></p></li>
+<li><p>Copia el contingut del teu fitxer de configuració <code class="docutils literal notranslate"><span class="pre">.gitconfig</span></code> a
+un fitxer dins del directori de treball i afegeix-lo al control de
+versions.</p></li>
+<li><p>Crea un nou fitxer on afegeixis la data i hora del sistema
+(<code class="docutils literal notranslate"><span class="pre">date</span></code>), afegeix-lo a <em>stage</em> i comprova l'estat del projecte.</p></li>
+<li><p>Modifica el primer fitxer tot afegint-hi al final la data i hora
+del sistema i comprova l'estat del projecte.</p></li>
+<li><p>Registra tots els canvis i torna a comprovar l'estat del projecte.</p></li>
+<li><p>Consulta l'historial de canvis fins el moment de tot el projecte.</p></li>
+<li><p>Configura el teu projecte de manera que Git no intenti gestionar
+els .class. Realitza les accions que consideris per comprovar que
+no ho està fent.</p></li>
+<li><p>Realitza les accions que trobis necessàries per demostrar com es
+pot veure els canvis realitzats al contingut d'un fitxer que
+encara no s'han passat a <em>stage</em>.</p></li>
+<li><p>Com al punt anterior, però aquest cop demostra com comprovar
+els canvis realitzats en un fitxer respecte el darrer <em>commit</em>.</p></li>
+<li><p>Consulta ara l'històric de canvis d'un dels fitxers incloent les
+diferències de cada versió respecte de l'anterior.</p></li>
+<li><p>Realitza les comandes necessàries per demostrar com es pot tornar
+a l'estat del darrer <em>commit</em> d'un determinat fitxer.</p></li>
+<li><p>Crea una nova branca, modifica-hi un dels fitxers i registra els
+canvis. Comprova que els canvis hi són a la nova branca però no a
+la branca <em>mestra</em>. Finalment torna a la branca mestra, fusiona
+els canvis de la nova branca i elimina la nova branca. Comprova que
+l'has eliminada.</p></li>
+<li><p>Crea una nova branca i realitza els canvis necessaris sobre algun
+dels fitxers, de manera que les dues línies de desenvolupament (la
+nova branca i la mestra) divergeixin. Aconsegueix que en intentar
+fusionar els canvis a la branca mestra algun dels fitxers
+modificats sigui fusionat automàticament però algun altre
+requereixi modificacions manuals. Finalment hauria de quedar tots
+els canvis fusionats a la branca mestra i l'altra branca quedar
+eliminada.</p></li>
+<li><p>Guarda tot el contingut de la branca mestra en un paquet git.</p></li>
+</ol>
+</div>
+<div class="section" id="pregunta-10-visualitzacio">
+<h2>Pregunta 10. Visualització<a class="headerlink" href="#pregunta-10-visualitzacio" title="Permalink to this heading"></a></h2>
+<p>També existeixen eines gràfiques per visualitzar els repositoris git.  Aquestes
+eines permeten navegar de manera més visual per l'històric de canvis.</p>
+<p>Una de les més senzilles d'instal·lar és, potser, <a class="reference external" href="https://www.kernel.org/pub/software/scm/git/docs/gitk.html">gitk</a>) . Aquesta
+la podràs instal·lar i executar amb:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install gitk
+«...»
+projecte$ gitk
+</pre></div>
+</div>
+<p>Per a aquest exercici, instal·la't l'eina <em>gitk</em> o alguna
+<a class="reference external" href="https://alternativeto.net/software/gitk/">alternativa</a></p>
+<p>Desenvolupa un petit tutorial de la instal·lació que inclogui captures de
+pantalla de l'eina amb el projecte anterior.</p>
+</div>
+<div class="section" id="pregunta-11-l-art-de-la-linia-de-comandes">
+<h2>Pregunta 11. L'art de la línia de comandes<a class="headerlink" href="#pregunta-11-l-art-de-la-linia-de-comandes" title="Permalink to this heading"></a></h2>
+<p>El nostre idioma no es troba entre les traduccions de <a class="reference external" href="https://github.com/jlevy/the-art-of-command-line/blob/master/README.md">The art of
+command line</a></p>
+<p>En aquest exercici farem un pas per mirar d'arreglar aquesta situació.</p>
+<p>Per a poder gestionar aquest exercici sense afectar en <em>jlevy</em>, he creat
+un <em>fork</em> al meu compte de GitHub.</p>
+<p>#. Fes un <em>fork</em> <a class="reference external" href="https://github.com/moiatjda/the-art-of-command-line">d'aquest repositori</a> amb el teu compte de
+github.</p>
+<ol class="arabic simple">
+<li><p>Clona'l al teu equip.</p></li>
+<li><p>Crea una nova branca i anomena-la <em>catalan</em></p></li>
+<li><p>Afegeix-hi un nou fitxer anomenat <strong>README-ca.md</strong> amb els continguts del
+fitxer <strong>README.md</strong>.</p></li>
+<li><p>Comença a fer la traducció dels seus continguts. Com a mínim, tradueix la
+línia 27. Si et veus amb dificultats, pots fer servir algun traductor
+automàtic (no li ho direm a ningú ;) )</p></li>
+<li><p>Un cop ho tinguis, fes els <em>commits</em> pertinents i puja-ho al teu
+repositori remot</p></li>
+</ol>
+<p>La resposta a aquest exercici inclourà la url del teu repositori a GitHub
+i captures de pantalla amb explicacions de cada pas.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cvs_git_remot.html" class="btn btn-neutral float-left" title="Git remot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

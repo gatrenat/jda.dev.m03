@@ -1,0 +1,74 @@
+###########
+Introducció
+###########
+
+Una descripció molt ràpida del funcionament de Git és: cada cop que registres
+l'estat del teu projecte, Git guarda una *foto* (*snapshot*) del
+contingut de **tots** els fitxers que composen el projecte
+
+Per qüestions d'eficiència, en comptes de
+tornar a guardar els fitxers no modificats, simplement en guarda un
+enllaç.
+
+.. figure:: /_images/cvs_img004_snapshots.png
+   :alt: snapshots
+   :align: center
+
+A l'esquema anterior, veiem com els tres fitxers gestionats per al
+projecte representat, van sent emmagatzemats a partir dels canvis que
+apareixen a cada versió guardada. A la versió 1 els fitxers A i C han
+estat modificats i Git guarda els seus nous continguts. En canvi el
+fitxer B no presenta cap canvi i, per tant, només es guarda un enllaç
+al fitxer original.
+
+Per cada fitxer, Git calcula un valor de hash (checksum) per cada
+fitxer, de manera que no se li escapa cap modificació, tant si l'hem
+feta expressament com si s'ha produït accidentalment. La funció que fa
+servir és diu `SHA-1
+<http://ca.wikipedia.org/wiki/Secure_Hash_Algorithm>`_ que genera un
+string de 40 caràcters hexadecimals [0-9a-f]. Aquests strings
+identifiquen cada (versió de) fitxer dins de Git en comptes del nom.
+
+La majoria de les accions que permet fer Git afegeixen dades al
+repositori. D'aquesta manera no és fàcil perdre informació i, per
+tant, podem experimentar amb tranquil·litat.
+
+Per Git, tot fitxer gestionat es troba principalment en un dels
+següents tres estats: registrat (*commited*), modificat i en escena
+(*staged*).
+
+* *commited*: tens l'estat actual del fitxer registrat en el
+  repositori.
+
+* modificat: has modificat el fitxer i però encara no has indicat
+  res sobre els canvis a Git.
+
+* *staged*: has modificat el fitxer i has indicat a Git que registri
+  el nou estat al repositori la propera vegada que es guardi l'estat
+  del projecte (es faci *commit*)
+
+Tenint en compte aquests estats, els fitxers es troben guardats en
+tres àrees diferents: el directori de treball, l'escenari (àrea
+*staging*) i el repositori de Git.
+
+.. figure:: /_images/cvs_img005_estats.png
+   :alt: estats
+   :align: center
+
+El repositori és bàsicament un directori amb una estructura particular
+on Git emmagatzema les diferents versions i la meta-informació per
+gestionar-les. Tot plegat es guarda comprimit d'una manera força
+eficient.
+
+El directori de treball és una única versió del projecte. El procés
+d'obtenir una determinada versió del repositori es coneix com a
+*checkout*.
+
+Finalment, l'àrea de *staging* és un fitxer, probablement guardat dins
+del directori de Git, que conté informació sobre el que es registrarà
+el proper *commit*.
+
+Habitualment, modificaràs un o més fitxers en l'àrea de treball,
+passaràs els fitxers modificats que t'interessin a l'àrea de *staging*
+i finalment fas un *commit* amb el que els canvis registrats a
+*staging* passen definitivament al repositori.

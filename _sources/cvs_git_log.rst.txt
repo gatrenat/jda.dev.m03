@@ -1,0 +1,65 @@
+#######################
+Consultar versions: log
+#######################
+
+Quan portem un temps treballant en un projecte, de vegades ens
+interessarà consultar l'històric de canvis realitzats. Per fer-ho, Git
+ens ofereix ``git log``
+
+.. code-block:: none
+    :linenos:
+
+    projecte$ git log
+    commit b4d88eabeb77e1d83ca674199810de0c892c7efa
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+    Date:   Sun Mar 10 12:15:45 2013 +0100
+
+        Afegit adéu en inglish
+
+    commit 831889ec9bfd31575b56f220c0a2c67c3a07be58
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+    Date:   Sun Mar 10 12:15:19 2013 +0100
+
+        Afegit adéu
+
+    commit 527a52776b695a05e174b276b75da2a8a9c82ae7
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+    Date:   Sun Mar 10 12:14:37 2013 +0100
+
+        Registre inicial
+
+Fixa't que per cada *commit* apareix una entrada al llistat amb la
+següent informació:
+
+* Identificador del *commit*: són els 40 caràcters que genera la
+  funció de hash SHA-1. Els primers 7 caràcters d'aquests strings
+  corresponen a la informació que ens apareix quan fem *commit*.
+
+* L'autor del *commit*: nom i adreça de correu que hem especificat a
+  la configuració.
+
+* La data del *commit*.
+
+* El comentari que posem a cada *commit*. Ja et vaig dir que era
+  important posar-ne un de significatiu, oi?
+
+Si vols veure l'historial de canvis d'un fitxer concret, pots
+indicar-li:
+
+.. code-block:: console
+
+    projecte$ git log hola.txt
+
+Les opcions de la comanda ``log`` s'escapen de qualsevol text
+introductori de Git. Pots fer una ullada al manual de `git-log
+<https://www.kernel.org/pub/software/scm/git/docs/git-log.html>`_
+
+Per exemple, pots aconseguir que el log sigui més compacte amb:
+
+.. code-block:: none
+    :linenos:
+
+    projecte$ git log --pretty=format:"%h [%cn]: %s"
+    b4d88ea [Laia Sànchez d'Argent]: Afegit adéu en inglish
+    831889e [Laia Sànchez d'Argent]: Afegit adéu
+    527a527 [Laia Sànchez d'Argent]: Registre inicial

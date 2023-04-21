@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branques &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Empaquetar un repositori de Git" href="cvs_git_bundle.html" />
+    <link rel="prev" title="Tornar enrere" href="cvs_git_back.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="cvs.html">Control de versions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cvs_intro.html">Justificació</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_definicio.html">Definició</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cvs_git.html">Git</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_intro.html">Introducció</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_install.html">Instal·lació i configuració</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_basic.html">Git bàsic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Branques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_bundle.html">Empaquetar un repositori de Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_remot.html">Git remot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercici_52_01_cvs.html"> Exercici 52_01. Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="cvs.html">Control de versions</a></li>
+          <li class="breadcrumb-item"><a href="cvs_git.html">Git</a></li>
+      <li class="breadcrumb-item active">Branques</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="cvs_git_back.html" class="btn btn-neutral float-left" title="Tornar enrere" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git_bundle.html" class="btn btn-neutral float-right" title="Empaquetar un repositori de Git" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="branques">
+<h1>Branques<a class="headerlink" href="#branques" title="Permalink to this heading"></a></h1>
+<p>En diferents ocasions ens pot interessar treballar amb una versió del
+projecte sense que els nostres canvis afectin a la línia principal.
+Per exemple:</p>
+<ul class="simple">
+<li><p>tenim una versió en producció a la que hem de corregir un error,
+mentre estem ja treballant en una nova versió del projecte que no
+podem/volem lliurar encara al client.</p></li>
+<li><p>volem fer un experiment de codi i només fer-lo servir si ens surt
+bé.</p></li>
+<li><p>volem fer una nova línia de desenvolupament del projecte tot
+mantenint l'anterior.</p></li>
+</ul>
+<p>Un cop realitzat els experiments o modificacions, voldrem:</p>
+<ul class="simple">
+<li><p>deixar-los tal qual</p></li>
+<li><p>descartar-los</p></li>
+<li><p>fusionar-los amb la línia principal de desenvolupament (o amb alguna
+altra línia)</p></li>
+</ul>
+<p>La majoria dels SCVs ofereixen algun tipus de mecanismes per a
+aconseguir aquesta funcionalitat. Sovint se li diu <em>branching</em> ja que
+cada nova línia és com una <em>branca</em> de l'arbre (línia principal).</p>
+<p>Git ofereix un mecanisme de <em>branching</em> força lleuger i àgil.</p>
+<p>Per poder entendre el funcionament de les branques de Git, cal
+mirar amb més deteniment com guarda Git la informació.</p>
+<p>Suposa que al nostre projecte tenim tres fitxers (<code class="docutils literal notranslate"><span class="pre">fitxerA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">fitxerB</span></code> i <code class="docutils literal notranslate"><span class="pre">fitxerC</span></code>). Git amb el primer <em>commit</em> guarda el
+contingut dels tres fitxers, crea un nou objecte (li direm <em>arbre</em>)
+que conté una referència al contingut de cadascun dels tres fitxers
+juntament amb meta-informació (com ara el nom de cada fitxer), i crea
+un altre objecte que apunta a l'arbre, i que afegeix la informació del
+<em>commit</em> (entre d'altres l'autor, la data i el missatge descriptiu).
+El directori de Git acaba contenint cinc elements: els tres continguts
+dels fitxers A, B i C; l'objecte que conté la meta-informació dels
+fitxers i l'objecte que conté la informació del <em>commit</em>. De tots cinc
+elements, Git calcula el seu valor hash amb els que els identificarà.</p>
+<div class="figure align-center">
+<img alt="commit" src="_images/cvs_img007_commit.png" />
+</div>
+<p>Fixa't com cada element es veu identificat pel seu valor de hash.</p>
+<p>Si a continuació modifiquem els continguts dels fitxers A i C, Git
+crea un nou arbre que apunta als fitxers i un nou objecte amb la
+informació del <em>commit</em>.</p>
+<div class="figure align-center">
+<img alt="dos commits" src="_images/cvs_img008_2commits.png" />
+</div>
+<p>Fixa't com el segon <em>commit</em> fa referència al primer. El diagrama
+també mostra que, donat que <code class="docutils literal notranslate"><span class="pre">fitxerB</span></code> no ha modificat els seus
+continguts, simplement no es crea un nou objecte per ell sinó que es
+fa servir el del <em>commit</em> anterior (el què té hash 4425b...)</p>
+<p>Després d'uns quants <em>commits</em> i simplificant més el diagrama
+anterior, l'aspecte del repositori es podria representar segons el
+següent diagrama:</p>
+<div class="figure align-center">
+<img alt="master" src="_images/cvs_img009_master.png" />
+</div>
+<p>Fixa't en el nou node anomenat <em>master</em>. Es tracta d'un simple
+apuntador al darrer <em>commit</em> realitzat. Aquest és el significat de
+<em>master</em> que ens apareix cada cop que fem <em>commit</em>: és bàsicament la
+línia principal o branca mestra de desenvolupament del nostre
+projecte, i de moment la única.</p>
+<div class="section" id="crear-una-branca">
+<h2>Crear una branca<a class="headerlink" href="#crear-una-branca" title="Permalink to this heading"></a></h2>
+<p>La comanda <code class="docutils literal notranslate"><span class="pre">branch</span></code> ens permet llistar, crear i eliminar branques.</p>
+<p>Per crear una nova branca, farem:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git branch prova</span>
+</pre></div>
+</div>
+<p>Aquesta comanda ens crea una nova branca anomenada <code class="docutils literal notranslate"><span class="pre">prova</span></code>. Podem
+veure les branques disponibles amb:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git branch</span>
+<span class="go">* master</span>
+<span class="go">  prova</span>
+</pre></div>
+</div>
+<p>Fixa't com la branca actual (en aquest cas <em>master</em>) apareix
+ressaltada. Per tant, només hem creat la branca, però hem canviat de
+branca!</p>
+<p>L'aspecte del repositori d'ara és:</p>
+<div class="figure align-center">
+<img alt="prova" src="_images/cvs_img010_prova.png" />
+</div>
+</div>
+<div class="section" id="canviar-de-branca">
+<h2>Canviar de branca<a class="headerlink" href="#canviar-de-branca" title="Permalink to this heading"></a></h2>
+<p>Canviem de branca fent servir la comanda <code class="docutils literal notranslate"><span class="pre">checkout</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ git status</span>
+<span class="gp"># </span>On<span class="w"> </span>branch<span class="w"> </span>prova
+<span class="go">nothing to commit (working directory clean)</span>
+<span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ git status</span>
+<span class="gp"># </span>On<span class="w"> </span>branch<span class="w"> </span>master
+<span class="go">nothing to commit (working directory clean)</span>
+</pre></div>
+</div>
+<p>Per saber en quina branca es troba el teu directori de treball, Git fa
+servir un apuntador anomenat <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>.</p>
+<div class="figure align-center">
+<img alt="head" src="_images/cvs_img011_head.png" />
+</div>
+<p>En crear una branca, aquesta apareix apuntant a <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>. Quan fem un
+<em>commit</em> en una branca, les línies de desenvolupament es separen.</p>
+<p>Per exemple, suposa que passes a la branca de proves, modifiques el
+contingut de <code class="docutils literal notranslate"><span class="pre">fitxerA</span></code> i fas <em>commit</em>. El resultat es pot
+representar segons :</p>
+<div class="figure align-center">
+<img alt="prova del commit" src="_images/cvs_img012_provacommit.png" />
+</div>
+<p>En codi, podem fer la següent prova:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git status</span>
+<span class="gp"># </span>On<span class="w"> </span>branch<span class="w"> </span>master
+<span class="go">nothing to commit (working directory clean)</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ ls</span>
+<span class="go">adeu.txt  hola.txt</span>
+<span class="go">projecte$ echo &quot;canvi afegit a la branca de prova&quot; &gt;&gt; adeu.txt</span>
+<span class="go">projecte$ git commit -am &quot;afegit un text a adeu.txt&quot;</span>
+<span class="go">[prova 653315c] afegit un text a adeu.txt</span>
+<span class="go"> 1 file changed, 1 insertion(+)</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">canvi afegit a la branca de prova</span>
+<span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">canvi afegit a la branca de prova</span>
+</pre></div>
+</div>
+<p>Fixa't com hem fet un canvi al fitxer <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> mentre estàvem a la
+branca <em>prova</em> i hi hem fet <em>commit</em>. A continuació passem a la
+branca <em>master</em> on comprovem que <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> no conté el canvi que
+hem fet a la branca <em>prova</em>. Finalment tornem a la branca <em>prova</em> on
+comprovem que el canvi fet a <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> continua sent-hi.</p>
+<p>Fins ara tot quedava representat en una única línia de <em>commits</em>
+encara que amb dues branques. Què passaria si tornem a la branca
+<em>master</em> i hi registrem un nou canvi? Doncs que les línies de les dues
+branques divergiran.</p>
+<p>Al següent diagrama veiem el resultat de modificar i fer <em>commit</em> des
+de <em>master</em> a partir de la situació del diagrama anterior.</p>
+<div class="figure align-center">
+<img alt="divergència" src="_images/cvs_img013_divergencia.png" />
+</div>
+<p>En codi, ho podem reproduir per exemple amb</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ echo &quot;afegim des de master&quot; &gt;&gt; hola.txt</span>
+<span class="go">projecte$ git commit -am &quot;afegida línia a hola.txt&quot;</span>
+<span class="go">[master 4df1544] afegida línia a hola.txt</span>
+<span class="go"> 1 file changed, 1 insertion(+)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fusionar-branques">
+<h2>Fusionar branques<a class="headerlink" href="#fusionar-branques" title="Permalink to this heading"></a></h2>
+<p>Si has seguit l'exemple de codi que hem fet fins ara, disposaràs de
+dues branques <em>master</em> i <em>prova</em> amb continguts diferents. <em>master</em>
+ha registrat un canvi a <code class="docutils literal notranslate"><span class="pre">hola.txt</span></code> que no està contingut a <em>prova</em>.
+A l'hora, <em>prova</em> ha registrat un canvi a <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> que no està
+registrat a <em>master</em>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout master</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">afegim des de master</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">canvi afegit a la branca de prova</span>
+</pre></div>
+</div>
+<p>Com ens ho fem per fusionar (<em>merge</em>) aquests canvis? Suposem que
+volem fusionar els canvis a <em>master</em></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ git merge prova</span>
+<span class="go">Merge made by the &#39;recursive&#39; strategy.</span>
+<span class="go"> adeu.txt |    1 +</span>
+<span class="go"> 1 file changed, 1 insertion(+)</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">afegim des de master</span>
+<span class="go">projecte$ cat adeu.txt</span>
+<span class="go">nou adéu</span>
+<span class="go">canvi afegit a la branca de prova</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+</pre></div>
+</div>
+<p>Fixa't com el resultat és:</p>
+<ul class="simple">
+<li><p><em>master</em> conté els canvis de <em>prova</em>: el fitxer <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code>
+incorpora el canvi realitzat a la branca <em>prova</em></p></li>
+<li><p><em>prova</em> no es modifica: el fitxer <code class="docutils literal notranslate"><span class="pre">hola.txt</span></code> no ha patit cap canvi
+malgrat a <em>master</em> va ser modificat.</p></li>
+</ul>
+<p>Tot plegat ha creat un nou <em>commit</em> que té com a antecessors els
+<em>commits</em> corresponents a les dues branques fusionades. El següent
+diagrama mostra una representació gràfica:</p>
+<div class="figure align-center">
+<img alt="merge" src="_images/cvs_img014_merge.png" />
+</div>
+<p>Aquesta fusió no és poca cosa. Com que Git tracta continguts i no
+fitxers, és capaç de fusionar continguts que hagin estat modificats en
+diferents punts d'un mateix fitxer!</p>
+<p>En aquesta demostració introduirem un canvi al començament del fitxer
+<code class="docutils literal notranslate"><span class="pre">hola.txt</span></code> de la branca <em>prova</em> i farem <em>commit</em>. Fixa't que a
+partir d'aquest moment tant <em>master</em> com <em>prova</em> contenen canvis en el
+mateix fitxer! Què farà Git en demanar-li que fusioni les dues
+branques?</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout master</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">afegim des de master</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">projecte$ mv hola.txt tmphola</span>
+<span class="go">projecte$ echo &quot;un canvi introduït des de prova&quot; &gt; hola.txt</span>
+<span class="go">projecte$ cat /tmp/tmphola &gt;&gt; hola.txt</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">un canvi introduït des de prova</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">projecte$ git commit -am &quot;canvi afegit al començament de hola.txt&quot;</span>
+<span class="go">[prova e4f3743] canvi afegit al començament de hola.txt</span>
+<span class="go"> 1 file changed, 1 insertion(+)</span>
+<span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ git merge prova</span>
+<span class="go">Auto-merging hola.txt</span>
+<span class="go">Merge made by the &#39;recursive&#39; strategy.</span>
+<span class="go"> hola.txt |    1 +</span>
+<span class="go"> 1 file changed, 1 insertion(+)</span>
+<span class="go">projecte$ cat hola.txt</span>
+<span class="go">un canvi introduït des de prova</span>
+<span class="go">hola</span>
+<span class="go">adéu</span>
+<span class="go">gutbai</span>
+<span class="go">afegim des de master</span>
+</pre></div>
+</div>
+<p>No sé a tu, però a mi m'ha impressionat!</p>
+<p>Malauradament Git no pot resoldre totes les possibles situacions de
+conflicte en fusionar un fitxer modificat a dues branques. De vegades
+caldrà realitzar fusions manuals. Amb tot, Git t'ajudarà en aquesta
+indesitjable situació.</p>
+<p>Per fer la següent demostració, modificarem el fitxer <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> de
+manera diferent a totes dues branques i intentarem fusionar en
+<em>master</em>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ echo &quot;un canvi dràstic des de master&quot; &gt; adeu.txt</span>
+<span class="go">projecte$ git commit -am &quot;canvi dràstic des de master&quot;</span>
+<span class="go">[master 58f8a62] canvi dràstic des de master</span>
+<span class="go"> 1 file changed, 1 insertion(+), 1 deletion(-)</span>
+<span class="go">projecte$ git checkout prova</span>
+<span class="go">M   adeu.txt</span>
+<span class="go">Switched to branch &#39;prova&#39;</span>
+<span class="go">projecte$ echo &quot;un canvi també dràstic des de prova&quot; &gt; adeu.txt</span>
+<span class="go">projecte$ git commit -am &quot;canvi dràstic des de prova&quot;</span>
+<span class="go">[prova 8de01e1] canvi dràstic des de prova</span>
+<span class="go"> 1 file changed, 1 insertion(+), 1 deletion(-)</span>
+<span class="go">projecte$ git checkout master</span>
+<span class="go">Switched to branch &#39;master&#39;</span>
+<span class="go">projecte$ git merge prova</span>
+<span class="go">Auto-merging adeu.txt</span>
+<span class="go">CONFLICT (content): Merge conflict in adeu.txt</span>
+<span class="go">Automatic merge failed; fix conflicts and then commit the result.</span>
+</pre></div>
+</div>
+<p>Git ens avisa que no ha pogut fer la fusió automàtica. Ens proposa que
+arreglem els conflictes i que tornem a fer <em>commit</em> amb el resultat.</p>
+<p>Si ara demanem l'estat, ens trobem</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git status</span>
+<span class="gp"># </span>On<span class="w"> </span>branch<span class="w"> </span>master
+<span class="gp"># </span>Unmerged<span class="w"> </span>paths:
+<span class="gp">#   </span><span class="o">(</span>use<span class="w"> </span><span class="s2">&quot;git add/rm &lt;file&gt;...&quot;</span><span class="w"> </span>as<span class="w"> </span>appropriate<span class="w"> </span>to<span class="w"> </span>mark<span class="w"> </span>resolution<span class="o">)</span>
+<span class="gp">#</span>
+<span class="gp">#   </span>both<span class="w"> </span>modified:<span class="w">      </span>adeu.txt
+<span class="gp">#</span>
+<span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</pre></div>
+</div>
+<p>És més, Git ens ha afegit unes marques al fitxer <code class="docutils literal notranslate"><span class="pre">adeu.txt</span></code> de
+manera que ens sigui més fàcil prendre les decisions.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ cat adeu.txt</span>
+<span class="go">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<span class="go">un canvi dràstic des de master</span>
+<span class="go">=======</span>
+<span class="go">un canvi també dràstic des de prova</span>
+<span class="go">&gt;&gt;&gt;&gt;&gt;&gt;&gt; prova</span>
+</pre></div>
+</div>
+<p>Ara simplement hem d'editar el fitxer, modificar-lo com ens convingui
+i fer un nou <em>commit</em> com ens recomana Git.</p>
+<blockquote>
+<div><p>projecte$ cat adeu.txt
+un canvi dràstic des de master i també des de prova
+projecte$ git commit -am &quot;corregida la fusió manualment&quot;
+[master f54fbd7] corregida la fusió manualment
+projecte$ git status
+# On branch master
+nothing to commit (working directory clean)</p>
+</div></blockquote>
+<p>Amb fitxers binaris com ara imatges, Git no ens podrà ajudar tant amb
+les fusions. Amb tot, els marcarà com a <em>unmerged</em> i esperarà que
+facis <em>commit</em> amb la versió corregida.</p>
+</div>
+<div class="section" id="eliminar-una-branca">
+<h2>Eliminar una branca<a class="headerlink" href="#eliminar-una-branca" title="Permalink to this heading"></a></h2>
+<p>Quan ja no et cal una branca, pots eliminar-la amb l'opció <code class="docutils literal notranslate"><span class="pre">-d</span></code> de
+<code class="docutils literal notranslate"><span class="pre">branch</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>prova
+<span class="go">Deleted branch prova (was 8de01e1).</span>
+</pre></div>
+</div>
+<p>Si a la branca a eliminar hi quedaven canvis sense fusionar amb el
+<code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, Git t'avisarà i et proposarà que facis servir l'opció <code class="docutils literal notranslate"><span class="pre">-D</span></code>
+en comptes de <code class="docutils literal notranslate"><span class="pre">-d</span></code> per indicar que no t'importa que es perdin els
+canvis.</p>
+</div>
+<div class="section" id="crear-una-branca-a-partir-d-una-versio-antiga">
+<h2>Crear una branca a partir d'una versió antiga<a class="headerlink" href="#crear-una-branca-a-partir-d-una-versio-antiga" title="Permalink to this heading"></a></h2>
+<p>Suposa que vols continuar un desenvolupament des d'un <em>commit</em> concret. Troba el
+seu hash (amb els primers caràcters segurament en tindràs prou) i fes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">projecte$ git branch tornemhi ced5a9</span>
+<span class="go">projecte$ git checkout tornemhi</span>
+<span class="go">Switched to branch &#39;tornemhi&#39;</span>
+</pre></div>
+</div>
+<p>Ja pots treballar en aquesta branca i, en acabar, realitzar les
+fusions que consideris necessàries.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cvs_git_back.html" class="btn btn-neutral float-left" title="Tornar enrere" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git_bundle.html" class="btn btn-neutral float-right" title="Empaquetar un repositori de Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

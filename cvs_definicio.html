@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Definició &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Git" href="cvs_git.html" />
+    <link rel="prev" title="Justificació" href="cvs_intro.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="cvs.html">Control de versions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cvs_intro.html">Justificació</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Definició</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_git.html">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercici_52_01_cvs.html"> Exercici 52_01. Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="cvs.html">Control de versions</a></li>
+      <li class="breadcrumb-item active">Definició</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="cvs_intro.html" class="btn btn-neutral float-left" title="Justificació" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git.html" class="btn btn-neutral float-right" title="Git" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="definicio">
+<h1>Definició<a class="headerlink" href="#definicio" title="Permalink to this heading"></a></h1>
+<p>Un <em>sistema de control de versions</em> (<em>SCV</em>) o <em>Version Control System</em>
+(<em>VCS</em>) és una aplicació que ofereix mecanismes per gestionar les
+diferents versions d'un o més fitxers de manera que eviti la pèrdua de
+continguts un cop enregistrat i permeti recuperar qualsevol versió un
+cop enregistrada. Alguns també permeten gestionar la complexitat de
+treball en grup i des de diferents equips.</p>
+<p>Un SCV <em>com cal</em> ens haurà de permetre, entre d'altres:</p>
+<ul class="simple">
+<li><p>recuperar un estat anterior d'arxius concrets o de tot el projecte</p></li>
+<li><p>revisar els canvis realitzats al llarg del temps en arxius o grups
+d'arxius.</p></li>
+<li><p>recuperar arxius eliminats accidentalment</p></li>
+<li><p>comparar diferents versions d'un arxiu</p></li>
+<li><p>comprovar si una determinada modificació pot ser útil sense que la
+prova afecti la resta de l'aplicació.</p></li>
+<li><p>mantenir simultàniament diferents línies d'un mateix projecte: ex.
+versió de producció i nova versió.</p></li>
+<li><p>facilitar la fusió de diferents versions</p></li>
+<li><p>facilitar la integració de canvis realitzats per diferents membres
+de l'equip</p></li>
+<li><p>fer tot això sense afegir una sobrecàrrega excessiva, especialment als
+desenvolupadors que ja prou feina tenim!</p></li>
+</ul>
+<p>Hi ha bàsicament dos tipus:</p>
+<ul class="simple">
+<li><p>els centralitzats</p></li>
+<li><p>els distribuïts</p></li>
+</ul>
+<div class="section" id="scv-centralitzats">
+<h2>SCV centralitzats<a class="headerlink" href="#scv-centralitzats" title="Permalink to this heading"></a></h2>
+<p>Un dels principals problemes a resoldre pel SCV es troba en la gestió
+de versions produïdes per més d'un desenvolupador o/i en diferents
+equips.</p>
+<div class="figure align-center">
+<img alt="centralitzat" src="_images/cvs_img002_centralitzat.png" />
+</div>
+<p>Aquests SCV, com ara <a class="reference external" href="http://cvs.nongnu.org/">CVS</a>, <a class="reference external" href="http://subversion.apache.org/">Subversion</a> i <a class="reference external" href="http://www.perforce.com/">Perforce</a>, disposen d'un únic servidor (el
+repositori central) que conté totes les versions registrades. Els
+usuaris es descarreguen la versió que els interessa del servidor als
+seus equips i, quan realitzen modificacions, les envien al servidor.
+L'administrador del repositori disposa normalment de moltes eines per
+controlar qui pot enviar què al servidor, realitzar fusions entre
+versions, etc.</p>
+<p>Un dels problemes obvis amb aquest tipus de SCVs és la seva
+dependència amb un sol punt. Què passa si el servidor deixa d'estar
+disponible una estona? Doncs que durant aquest temps ningú no pot
+treballar amb cap versió diferent de la que tingui al seu equip.
+Encara pitjor, i si el disc del servidor es trenca? Depenem de les
+còpies de seguretat que fes el servidor, donat que les còpies locals
+de cadascun dels usuaris són de versions úniques i, potser,
+modificades.</p>
+</div>
+<div class="section" id="scv-distribuits">
+<h2>SCV distribuïts<a class="headerlink" href="#scv-distribuits" title="Permalink to this heading"></a></h2>
+<p>Alguns dels problemes dels SCV centralitzats els intenten adreçar els
+SCV distribuïts.</p>
+<div class="figure align-center">
+<img alt="distribuït" src="_images/cvs_img003_distribuit.png" />
+</div>
+<p>En aquest cas, cada usuari disposa d'una còpia de <strong>totes</strong> les
+versions registrades. El servidor &quot;central&quot; pot no existir o haver-ne
+més d'un. En cas que n'hi hagi, es diferenciarà dels equips dels
+usuaris únicament en que no tindrà espai de treball.</p>
+<p>Exemples de SCV distribuïts són <a class="reference external" href="http://git-scm.com/">Git</a>,
+<a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a>, <a class="reference external" href="http://bazaar.canonical.com/en/">Bazaar</a> i <a class="reference external" href="http://darcs.net/">Darcs</a>.</p>
+<p>Entre els avantatges d'aquest tipus de SCVs tenim l'evident que ja no
+hi ha una dependència del servidor per a poder treballar. Si un cau,
+la resta poden continuar treballant (excepte per sincronitzar amb
+l'equip caigut, és clar) A més, donat que cada usuari disposa d'una
+còpia amb tot el repositori de versions, la majoria de les operacions
+més habituals no requereixen comunicació entre equips i, per tant, són
+més ràpides. Per contra tenen el problema de l'espai ocupat pels
+fitxers de totes les versions. Sovint això no representa cap problema
+amb les capacitats d'emmagatzemament i compressió actuals.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cvs_intro.html" class="btn btn-neutral float-left" title="Justificació" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git.html" class="btn btn-neutral float-right" title="Git" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

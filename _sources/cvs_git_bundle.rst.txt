@@ -1,0 +1,165 @@
+###############################
+Empaquetar un repositori de Git
+###############################
+
+De vegades ens pot interessar guardar els continguts d'un repositori
+Git en un paquet. Per exemple, considera el cas que vulguis compartir
+un projecte amb una màquina que no està connectada a la xarxa
+[#casexamen]_.
+
+La resposta que t'ofereix Git es diu *bundle* (aquí traduït com a
+*paquet*).
+
+En aquesta entrada podràs veure com es pot guardar tot un repositori
+Git en un paquet per després desempaquetar-ho.
+
+Creació d'un paquet Git
+=======================
+
+Per crear un paquet Git, farem servir l'opció:
+
+.. code-block:: console
+
+    git bundle create «nomfitxer» «branca»
+
+Com a exemple, crearem un repositori senzillet a la carpeta temporal
+del nostre equip:
+
+.. code-block:: bash
+
+    $ cd /tmp
+    $ mkdir elmeurepo
+    $ cd elmeurepo
+    $ git init
+    Initialized empty Git repository in /tmp/elmeurepo/.git/
+    $ echo "Repositori de prova" > readme
+    $ git add .
+    $ git commit -am "primer commit"
+    [master (root-commit) eb124ef] primer commit
+     1 file changed, 1 insertion(+)
+     create mode 100644 readme
+    $ echo "Un fitxer amb continguts" > continguts.txt
+    $ git add continguts.txt
+    /tmp/elmeurepo$ git commit -am "Afegit continguts"
+    [master 54da159] Afegit continguts
+     1 file changed, 1 insertion(+)
+     create mode 100644 continguts.txt
+    $ git log
+    commit 54da15947ad77315308c21d75c351023773a7bb2
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.com>
+    Date:   Thu Mar 19 16:25:39 2015 +0100
+
+        Afegit continguts
+
+    commit eb124ef136751c60c224070581d94fc588e31fbb
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.com>
+    Date:   Thu Mar 19 16:24:26 2015 +0100
+
+        primer commit
+
+Si has seguit les passes, ara disposes d'un repositori senzillet amb
+dos fitxers i amb dos *commits*. Toca crear el paquet:
+
+.. code-block:: bash
+
+    $ git bundle create elmeurepo.bundle master
+    Counting objects: 6, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (6/6), 497 bytes, done.
+    Total 6 (delta 1), reused 0 (delta 0)
+    $ ls
+    continguts.txt  elmeurepo.bundle  readme
+
+Ara ja disposem del fitxer *elmeurepo.bundle* que podem enviar per
+correu electrònic, amb un *pendrive* o com sigui, a la màquina on
+volem recuperar el projecte.
+
+Verificació d'un paquet Git
+===========================
+
+Quan reps un paquet Git, o bé n'has d'enviar un a algú, potser voldràs
+comprovar que estigui correcte [#siesexer]_. Git t'ofereix la següent
+manera:
+
+.. code-block:: console
+
+    git bundle verify «nomfitxer»
+
+A la secció anterior vam crear un fitxer anomenat *elmeurepo.bundle*.
+Suposem que el tenim a un altre lloc (encara que podria ser a la
+mateixa carpeta on el vam crear). Comprovarem la seva integritat amb:
+
+.. code-block:: bash
+
+    $ git bundle verify elmeurepo.bundle
+    The bundle contains 1 ref
+    54da15947ad77315308c21d75c351023773a7bb2 refs/heads/master
+    The bundle requires these 0 ref
+    elmeurepo.bundle is okay
+
+Extraient el contingut d'un paquet Git
+======================================
+
+Un cop el paquet Git ha arribat a la seva destinació, toca
+desempaquetar-ho. Per fer-ho, podem crear una nova versió del
+repositori a la nova màquina fent servir l'opció *-b* de *clone*
+
+.. code-block:: console
+
+    git clone -b «branca» «nomfitxer» «nomrepositori»
+
+Seguint l'exemple que portem:
+
+.. code-block:: bash
+
+    $ git clone -b master elmeurepo.bundle nourepo
+    Cloning into 'nourepo'...
+    Receiving objects: 100% (6/6), done.
+    Resolving deltas: 100% (1/1), done.
+    $ cd nourepo
+    $ ls
+    continguts.txt  readme
+    $ git log
+    commit 54da15947ad77315308c21d75c351023773a7bb2
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.com>
+    Date:   Thu Mar 19 16:25:39 2015 +0100
+
+        Afegit continguts
+
+    commit eb124ef136751c60c224070581d94fc588e31fbb
+    Author: Laia Sànchez d'Argent <lalaionamolonaexample.com>
+    Date:   Thu Mar 19 16:24:26 2015 +0100
+
+        primer commit
+
+Com pots veure, el nou repositori conté una còpia de l'original que
+inclou tots els *commits* de la branca *master*.
+
+Més informació
+==============
+
+En aquesta entrada t'he presentat una versió reduïda. Hi ha més
+possibilitats amb els paquets Git. Per exemple, podries fer paquets
+incrementals de manera que es poguessin afegir *commits* nous entre
+els dos repositoris.
+
+Si t'has quedat amb les ganes de saber més opcions disponibles
+d'aquesta funcionalitat de Git, pots llegir totes les opcions
+disponibles a:
+
+.. code-block:: bash
+
+    $ git help bundle
+
+O amb més descripció al manual de `Git <http://git-scm.com/docs/git-bundle>`_
+
+Notes
+=====
+
+.. [#casexamen] O un cas més "remot": que has de lliurar un projecte a
+   un docent per que te l'avalui.
+
+.. [#siesexer] Aquesta comprovació és important, per exemple, si el
+   que estàs és preparant un paquet per enviar-ho a algú que t'ha
+   d'avaluar el teu projecte.

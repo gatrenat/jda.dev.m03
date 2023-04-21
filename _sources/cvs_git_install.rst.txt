@@ -1,0 +1,32 @@
+###########################
+Instal·lació i configuració
+###########################
+
+El més probable és que aquest punt no el necessitis si has anat seguint el
+curs. En tot cas, te'l deixo per referència.
+
+Per la instal·lació de Git, disposes d'una guia força detallada a `Pro Git
+<http://git-scm.com/book/en/Getting-Started-Installing-Git>`_.
+
+Si estàs fent servir Debian o Ubuntu, probablement tindràs prou escrivint a una
+consola:
+
+.. code-block:: console
+
+    $ sudo apt install git
+
+Un cop el tinguis instal·lat, cal que facis unes petites tasques de
+configuració. En concret, cal indicar a Git qui ets. Això ho faràs amb
+les següents comandes:
+
+.. code-block:: console
+
+    $ git config --global user.name "Laia Sànchez d'Argent"
+    $ git config --global user.email lalaionamolona@example.org
+
+Aquesta informació serà guardada en el teu sistema per al teu usuari.
+Així, altres usuaris poden fer servir Git en el teu equip sense
+problemes.
+
+Ara que ja tens el Git disponible al teu sistema, pots començar a
+utilitzar-lo.

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empaquetar un repositori de Git &mdash; Introducció a la programació amb Java 2022-23 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Git remot" href="cvs_git_remot.html" />
+    <link rel="prev" title="Branques" href="cvs_git_branch.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Introducció a la programació amb Java
+            <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2022-23
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adoo.html">Anàlisi i Disseny Orientats a Objectes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="cvs.html">Control de versions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cvs_intro.html">Justificació</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cvs_definicio.html">Definició</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cvs_git.html">Git</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_intro.html">Introducció</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_install.html">Instal·lació i configuració</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_basic.html">Git bàsic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_branch.html">Branques</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Empaquetar un repositori de Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cvs_git_remot.html">Git remot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercici_52_01_cvs.html"> Exercici 52_01. Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="cvs.html">Control de versions</a></li>
+          <li class="breadcrumb-item"><a href="cvs_git.html">Git</a></li>
+      <li class="breadcrumb-item active">Empaquetar un repositori de Git</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="cvs_git_branch.html" class="btn btn-neutral float-left" title="Branques" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git_remot.html" class="btn btn-neutral float-right" title="Git remot" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="empaquetar-un-repositori-de-git">
+<h1>Empaquetar un repositori de Git<a class="headerlink" href="#empaquetar-un-repositori-de-git" title="Permalink to this heading"></a></h1>
+<p>De vegades ens pot interessar guardar els continguts d'un repositori
+Git en un paquet. Per exemple, considera el cas que vulguis compartir
+un projecte amb una màquina que no està connectada a la xarxa<a class="footnote-reference brackets" href="#casexamen" id="id1">1</a>.</p>
+<p>La resposta que t'ofereix Git es diu <em>bundle</em> (aquí traduït com a
+<em>paquet</em>).</p>
+<p>En aquesta entrada podràs veure com es pot guardar tot un repositori
+Git en un paquet per després desempaquetar-ho.</p>
+<div class="section" id="creacio-d-un-paquet-git">
+<h2>Creació d'un paquet Git<a class="headerlink" href="#creacio-d-un-paquet-git" title="Permalink to this heading"></a></h2>
+<p>Per crear un paquet Git, farem servir l'opció:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git bundle create «nomfitxer» «branca»</span>
+</pre></div>
+</div>
+<p>Com a exemple, crearem un repositori senzillet a la carpeta temporal
+del nostre equip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/tmp
+$<span class="w"> </span>mkdir<span class="w"> </span>elmeurepo
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>elmeurepo
+$<span class="w"> </span>git<span class="w"> </span>init
+Initialized<span class="w"> </span>empty<span class="w"> </span>Git<span class="w"> </span>repository<span class="w"> </span><span class="k">in</span><span class="w"> </span>/tmp/elmeurepo/.git/
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Repositori de prova&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>readme
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;primer commit&quot;</span>
+<span class="o">[</span>master<span class="w"> </span><span class="o">(</span>root-commit<span class="o">)</span><span class="w"> </span>eb124ef<span class="o">]</span><span class="w"> </span>primer<span class="w"> </span>commit
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>readme
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Un fitxer amb continguts&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>continguts.txt
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>continguts.txt
+/tmp/elmeurepo$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Afegit continguts&quot;</span>
+<span class="o">[</span>master<span class="w"> </span>54da159<span class="o">]</span><span class="w"> </span>Afegit<span class="w"> </span>continguts
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>continguts.txt
+$<span class="w"> </span>git<span class="w"> </span>log
+commit<span class="w"> </span>54da15947ad77315308c21d75c351023773a7bb2
+Author:<span class="w"> </span>Laia<span class="w"> </span>Sànchez<span class="w"> </span>d<span class="s1">&#39;Argent &lt;lalaionamolonaexample.com&gt;</span>
+<span class="s1">Date:   Thu Mar 19 16:25:39 2015 +0100</span>
+
+<span class="s1">    Afegit continguts</span>
+
+<span class="s1">commit eb124ef136751c60c224070581d94fc588e31fbb</span>
+<span class="s1">Author: Laia Sànchez d&#39;</span>Argent<span class="w"> </span>&lt;lalaionamolonaexample.com&gt;
+Date:<span class="w">   </span>Thu<span class="w"> </span>Mar<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">16</span>:24:26<span class="w"> </span><span class="m">2015</span><span class="w"> </span>+0100
+
+<span class="w">    </span>primer<span class="w"> </span>commit
+</pre></div>
+</div>
+<p>Si has seguit les passes, ara disposes d'un repositori senzillet amb
+dos fitxers i amb dos <em>commits</em>. Toca crear el paquet:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>bundle<span class="w"> </span>create<span class="w"> </span>elmeurepo.bundle<span class="w"> </span>master
+Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="k">done</span>.
+Delta<span class="w"> </span>compression<span class="w"> </span>using<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span><span class="m">4</span><span class="w"> </span>threads.
+Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Writing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">6</span>/6<span class="o">)</span>,<span class="w"> </span><span class="m">497</span><span class="w"> </span>bytes,<span class="w"> </span><span class="k">done</span>.
+Total<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+$<span class="w"> </span>ls
+continguts.txt<span class="w">  </span>elmeurepo.bundle<span class="w">  </span>readme
+</pre></div>
+</div>
+<p>Ara ja disposem del fitxer <em>elmeurepo.bundle</em> que podem enviar per
+correu electrònic, amb un <em>pendrive</em> o com sigui, a la màquina on
+volem recuperar el projecte.</p>
+</div>
+<div class="section" id="verificacio-d-un-paquet-git">
+<h2>Verificació d'un paquet Git<a class="headerlink" href="#verificacio-d-un-paquet-git" title="Permalink to this heading"></a></h2>
+<p>Quan reps un paquet Git, o bé n'has d'enviar un a algú, potser voldràs
+comprovar que estigui correcte<a class="footnote-reference brackets" href="#siesexer" id="id2">2</a>. Git t'ofereix la següent
+manera:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git bundle verify «nomfitxer»</span>
+</pre></div>
+</div>
+<p>A la secció anterior vam crear un fitxer anomenat <em>elmeurepo.bundle</em>.
+Suposem que el tenim a un altre lloc (encara que podria ser a la
+mateixa carpeta on el vam crear). Comprovarem la seva integritat amb:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>bundle<span class="w"> </span>verify<span class="w"> </span>elmeurepo.bundle
+The<span class="w"> </span>bundle<span class="w"> </span>contains<span class="w"> </span><span class="m">1</span><span class="w"> </span>ref
+54da15947ad77315308c21d75c351023773a7bb2<span class="w"> </span>refs/heads/master
+The<span class="w"> </span>bundle<span class="w"> </span>requires<span class="w"> </span>these<span class="w"> </span><span class="m">0</span><span class="w"> </span>ref
+elmeurepo.bundle<span class="w"> </span>is<span class="w"> </span>okay
+</pre></div>
+</div>
+</div>
+<div class="section" id="extraient-el-contingut-d-un-paquet-git">
+<h2>Extraient el contingut d'un paquet Git<a class="headerlink" href="#extraient-el-contingut-d-un-paquet-git" title="Permalink to this heading"></a></h2>
+<p>Un cop el paquet Git ha arribat a la seva destinació, toca
+desempaquetar-ho. Per fer-ho, podem crear una nova versió del
+repositori a la nova màquina fent servir l'opció <em>-b</em> de <em>clone</em></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone -b «branca» «nomfitxer» «nomrepositori»</span>
+</pre></div>
+</div>
+<p>Seguint l'exemple que portem:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>elmeurepo.bundle<span class="w"> </span>nourepo
+Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;nourepo&#39;</span>...
+Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">6</span>/6<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">1</span>/1<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>nourepo
+$<span class="w"> </span>ls
+continguts.txt<span class="w">  </span>readme
+$<span class="w"> </span>git<span class="w"> </span>log
+commit<span class="w"> </span>54da15947ad77315308c21d75c351023773a7bb2
+Author:<span class="w"> </span>Laia<span class="w"> </span>Sànchez<span class="w"> </span>d<span class="s1">&#39;Argent &lt;lalaionamolonaexample.com&gt;</span>
+<span class="s1">Date:   Thu Mar 19 16:25:39 2015 +0100</span>
+
+<span class="s1">    Afegit continguts</span>
+
+<span class="s1">commit eb124ef136751c60c224070581d94fc588e31fbb</span>
+<span class="s1">Author: Laia Sànchez d&#39;</span>Argent<span class="w"> </span>&lt;lalaionamolonaexample.com&gt;
+Date:<span class="w">   </span>Thu<span class="w"> </span>Mar<span class="w"> </span><span class="m">19</span><span class="w"> </span><span class="m">16</span>:24:26<span class="w"> </span><span class="m">2015</span><span class="w"> </span>+0100
+
+<span class="w">    </span>primer<span class="w"> </span>commit
+</pre></div>
+</div>
+<p>Com pots veure, el nou repositori conté una còpia de l'original que
+inclou tots els <em>commits</em> de la branca <em>master</em>.</p>
+</div>
+<div class="section" id="mes-informacio">
+<h2>Més informació<a class="headerlink" href="#mes-informacio" title="Permalink to this heading"></a></h2>
+<p>En aquesta entrada t'he presentat una versió reduïda. Hi ha més
+possibilitats amb els paquets Git. Per exemple, podries fer paquets
+incrementals de manera que es poguessin afegir <em>commits</em> nous entre
+els dos repositoris.</p>
+<p>Si t'has quedat amb les ganes de saber més opcions disponibles
+d'aquesta funcionalitat de Git, pots llegir totes les opcions
+disponibles a:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>bundle
+</pre></div>
+</div>
+<p>O amb més descripció al manual de <a class="reference external" href="http://git-scm.com/docs/git-bundle">Git</a></p>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading"></a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="casexamen"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>O un cas més &quot;remot&quot;: que has de lliurar un projecte a
+un docent per que te l'avalui.</p>
+</dd>
+<dt class="label" id="siesexer"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Aquesta comprovació és important, per exemple, si el
+que estàs és preparant un paquet per enviar-ho a algú que t'ha
+d'avaluar el teu projecte.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="cvs_git_branch.html" class="btn btn-neutral float-left" title="Branques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cvs_git_remot.html" class="btn btn-neutral float-right" title="Git remot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2023 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

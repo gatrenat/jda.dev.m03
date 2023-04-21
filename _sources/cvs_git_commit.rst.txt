@@ -1,0 +1,36 @@
+##########################
+Guardar els canvis: commit
+##########################
+
+Per registrar els canvis fem servir la comanda ``git commit``.
+
+Ens caldrà indicar un missatge descriptiu dels canvis que registrem.
+Per a això disposem de l'opció ``-m``. Si no ho fem, Git ens obrirà
+l'editor per defecte del sistema (si no l'hem canviat) i ens permetrà
+descriure els nostres canvis.
+
+Els comentaris que indiquem quan fem un ``commit`` ens resultaran molt
+útils quan vulguem recuperar una versió anterior. Així que acostuma't
+a posar-hi sempre quelcom significatiu.
+
+En l'estat del nostre exemple, donat que és el primer *commit* podem
+fer simplement:
+
+.. code-block:: console
+
+    projecte$ git commit -m "Registre inicial"
+    [master (root-commit) 527a527] Registre inicial
+     1 file changed, 1 insertion(+)
+     create mode 100644 hola.txt
+    projecte$ git status
+    # On branch master
+    nothing to commit (working directory clean)
+
+La darrera línia de *status* ens indica que el directori de treball no
+té cap fitxer no gestionat ni modificat.
+
+Fixa't també en la cadena hexadecimal de la primera línia generada pel
+*commit*. ``527a527`` correspon a la part inicial dels 40 caràcters
+que ens genera la funció SHA-1 per aquest commit. Aquest valor ens
+servirà més endavant per revisar aquest estat concret del nostre
+projecte. No cal que l'apuntis, Git t'ofereix maneres de recuperar-lo.

@@ -1,0 +1,430 @@
+########
+Branques
+########
+
+En diferents ocasions ens pot interessar treballar amb una versió del
+projecte sense que els nostres canvis afectin a la línia principal.
+Per exemple:
+
+* tenim una versió en producció a la que hem de corregir un error,
+  mentre estem ja treballant en una nova versió del projecte que no
+  podem/volem lliurar encara al client.
+
+* volem fer un experiment de codi i només fer-lo servir si ens surt
+  bé.
+
+* volem fer una nova línia de desenvolupament del projecte tot
+  mantenint l'anterior.
+
+Un cop realitzat els experiments o modificacions, voldrem:
+
+* deixar-los tal qual
+
+* descartar-los
+
+* fusionar-los amb la línia principal de desenvolupament (o amb alguna
+  altra línia)
+
+La majoria dels SCVs ofereixen algun tipus de mecanismes per a
+aconseguir aquesta funcionalitat. Sovint se li diu *branching* ja que
+cada nova línia és com una *branca* de l'arbre (línia principal).
+
+Git ofereix un mecanisme de *branching* força lleuger i àgil.
+
+Per poder entendre el funcionament de les branques de Git, cal
+mirar amb més deteniment com guarda Git la informació.
+
+Suposa que al nostre projecte tenim tres fitxers (``fitxerA``,
+``fitxerB`` i ``fitxerC``). Git amb el primer *commit* guarda el
+contingut dels tres fitxers, crea un nou objecte (li direm *arbre*)
+que conté una referència al contingut de cadascun dels tres fitxers
+juntament amb meta-informació (com ara el nom de cada fitxer), i crea
+un altre objecte que apunta a l'arbre, i que afegeix la informació del
+*commit* (entre d'altres l'autor, la data i el missatge descriptiu).
+El directori de Git acaba contenint cinc elements: els tres continguts
+dels fitxers A, B i C; l'objecte que conté la meta-informació dels
+fitxers i l'objecte que conté la informació del *commit*. De tots cinc
+elements, Git calcula el seu valor hash amb els que els identificarà.
+
+.. figure:: /_images/cvs_img007_commit.png
+   :alt: commit
+   :align: center
+
+Fixa't com cada element es veu identificat pel seu valor de hash.
+
+Si a continuació modifiquem els continguts dels fitxers A i C, Git
+crea un nou arbre que apunta als fitxers i un nou objecte amb la
+informació del *commit*.
+
+.. figure:: /_images/cvs_img008_2commits.png
+   :alt: dos commits
+   :align: center
+
+Fixa't com el segon *commit* fa referència al primer. El diagrama
+també mostra que, donat que ``fitxerB`` no ha modificat els seus
+continguts, simplement no es crea un nou objecte per ell sinó que es
+fa servir el del *commit* anterior (el què té hash 4425b...)
+
+Després d'uns quants *commits* i simplificant més el diagrama
+anterior, l'aspecte del repositori es podria representar segons el
+següent diagrama:
+
+.. figure:: /_images/cvs_img009_master.png
+   :alt: master
+   :align: center
+
+Fixa't en el nou node anomenat *master*. Es tracta d'un simple
+apuntador al darrer *commit* realitzat. Aquest és el significat de
+*master* que ens apareix cada cop que fem *commit*: és bàsicament la
+línia principal o branca mestra de desenvolupament del nostre
+projecte, i de moment la única.
+
+Crear una branca
+----------------
+
+La comanda ``branch`` ens permet llistar, crear i eliminar branques.
+
+Per crear una nova branca, farem:
+
+.. code-block:: console
+
+    projecte$ git branch prova
+
+Aquesta comanda ens crea una nova branca anomenada ``prova``. Podem
+veure les branques disponibles amb:
+
+.. code-block:: console
+
+    projecte$ git branch
+    * master
+      prova
+
+Fixa't com la branca actual (en aquest cas *master*) apareix
+ressaltada. Per tant, només hem creat la branca, però hem canviat de
+branca!
+
+L'aspecte del repositori d'ara és:
+
+.. figure:: /_images/cvs_img010_prova.png
+   :alt: prova
+   :align: center
+
+Canviar de branca
+-----------------
+
+Canviem de branca fent servir la comanda ``checkout``
+
+.. code-block:: console
+
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ git status
+    # On branch prova
+    nothing to commit (working directory clean)
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ git status
+    # On branch master
+    nothing to commit (working directory clean)
+
+Per saber en quina branca es troba el teu directori de treball, Git fa
+servir un apuntador anomenat ``HEAD``.
+
+.. figure:: /_images/cvs_img011_head.png
+   :alt: head
+   :align: center
+
+En crear una branca, aquesta apareix apuntant a ``HEAD``. Quan fem un
+*commit* en una branca, les línies de desenvolupament es separen.
+
+Per exemple, suposa que passes a la branca de proves, modifiques el
+contingut de ``fitxerA`` i fas *commit*. El resultat es pot
+representar segons :
+
+.. figure:: /_images/cvs_img012_provacommit.png
+   :alt: prova del commit
+   :align: center
+
+En codi, podem fer la següent prova:
+
+.. code-block:: console
+
+    projecte$ git status
+    # On branch master
+    nothing to commit (working directory clean)
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ ls
+    adeu.txt  hola.txt
+    projecte$ echo "canvi afegit a la branca de prova" >> adeu.txt
+    projecte$ git commit -am "afegit un text a adeu.txt"
+    [prova 653315c] afegit un text a adeu.txt
+     1 file changed, 1 insertion(+)
+    projecte$ cat adeu.txt
+    nou adéu
+    canvi afegit a la branca de prova
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ cat adeu.txt
+    nou adéu
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ cat adeu.txt
+    nou adéu
+    canvi afegit a la branca de prova
+
+Fixa't com hem fet un canvi al fitxer ``adeu.txt`` mentre estàvem a la
+branca *prova* i hi hem fet *commit*. A continuació passem a la
+branca *master* on comprovem que ``adeu.txt`` no conté el canvi que
+hem fet a la branca *prova*. Finalment tornem a la branca *prova* on
+comprovem que el canvi fet a ``adeu.txt`` continua sent-hi.
+
+Fins ara tot quedava representat en una única línia de *commits*
+encara que amb dues branques. Què passaria si tornem a la branca
+*master* i hi registrem un nou canvi? Doncs que les línies de les dues
+branques divergiran.
+
+Al següent diagrama veiem el resultat de modificar i fer *commit* des
+de *master* a partir de la situació del diagrama anterior.
+
+.. figure:: /_images/cvs_img013_divergencia.png
+   :alt: divergència
+   :align: center
+
+En codi, ho podem reproduir per exemple amb
+
+.. code-block:: console
+
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ echo "afegim des de master" >> hola.txt
+    projecte$ git commit -am "afegida línia a hola.txt"
+    [master 4df1544] afegida línia a hola.txt
+     1 file changed, 1 insertion(+)
+
+Fusionar branques
+-----------------
+
+Si has seguit l'exemple de codi que hem fet fins ara, disposaràs de
+dues branques *master* i *prova* amb continguts diferents. *master*
+ha registrat un canvi a ``hola.txt`` que no està contingut a *prova*.
+A l'hora, *prova* ha registrat un canvi a ``adeu.txt`` que no està
+registrat a *master*.
+
+.. code-block:: console
+
+    projecte$ git checkout master
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+    afegim des de master
+    projecte$ cat adeu.txt
+    nou adéu
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+    projecte$ cat adeu.txt
+    nou adéu
+    canvi afegit a la branca de prova
+
+Com ens ho fem per fusionar (*merge*) aquests canvis? Suposem que
+volem fusionar els canvis a *master*
+
+.. code-block:: console
+
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ git merge prova
+    Merge made by the 'recursive' strategy.
+     adeu.txt |    1 +
+     1 file changed, 1 insertion(+)
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+    afegim des de master
+    projecte$ cat adeu.txt
+    nou adéu
+    canvi afegit a la branca de prova
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+
+Fixa't com el resultat és:
+
+* *master* conté els canvis de *prova*: el fitxer ``adeu.txt``
+  incorpora el canvi realitzat a la branca *prova*
+
+* *prova* no es modifica: el fitxer ``hola.txt`` no ha patit cap canvi
+  malgrat a *master* va ser modificat.
+
+Tot plegat ha creat un nou *commit* que té com a antecessors els
+*commits* corresponents a les dues branques fusionades. El següent
+diagrama mostra una representació gràfica:
+
+.. figure:: /_images/cvs_img014_merge.png
+   :alt: merge
+   :align: center
+
+Aquesta fusió no és poca cosa. Com que Git tracta continguts i no
+fitxers, és capaç de fusionar continguts que hagin estat modificats en
+diferents punts d'un mateix fitxer!
+
+En aquesta demostració introduirem un canvi al començament del fitxer
+``hola.txt`` de la branca *prova* i farem *commit*. Fixa't que a
+partir d'aquest moment tant *master* com *prova* contenen canvis en el
+mateix fitxer! Què farà Git en demanar-li que fusioni les dues
+branques?
+
+.. code-block:: console
+
+    projecte$ git checkout master
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+    afegim des de master
+    projecte$ git checkout prova
+    Switched to branch 'prova'
+    projecte$ cat hola.txt
+    hola
+    adéu
+    gutbai
+    projecte$ mv hola.txt tmphola
+    projecte$ echo "un canvi introduït des de prova" > hola.txt
+    projecte$ cat /tmp/tmphola >> hola.txt
+    projecte$ cat hola.txt
+    un canvi introduït des de prova
+    hola
+    adéu
+    gutbai
+    projecte$ git commit -am "canvi afegit al començament de hola.txt"
+    [prova e4f3743] canvi afegit al començament de hola.txt
+     1 file changed, 1 insertion(+)
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ git merge prova
+    Auto-merging hola.txt
+    Merge made by the 'recursive' strategy.
+     hola.txt |    1 +
+     1 file changed, 1 insertion(+)
+    projecte$ cat hola.txt
+    un canvi introduït des de prova
+    hola
+    adéu
+    gutbai
+    afegim des de master
+
+No sé a tu, però a mi m'ha impressionat!
+
+Malauradament Git no pot resoldre totes les possibles situacions de
+conflicte en fusionar un fitxer modificat a dues branques. De vegades
+caldrà realitzar fusions manuals. Amb tot, Git t'ajudarà en aquesta
+indesitjable situació.
+
+Per fer la següent demostració, modificarem el fitxer ``adeu.txt`` de
+manera diferent a totes dues branques i intentarem fusionar en
+*master*.
+
+.. code-block:: console
+
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ echo "un canvi dràstic des de master" > adeu.txt
+    projecte$ git commit -am "canvi dràstic des de master"
+    [master 58f8a62] canvi dràstic des de master
+     1 file changed, 1 insertion(+), 1 deletion(-)
+    projecte$ git checkout prova
+    M	adeu.txt
+    Switched to branch 'prova'
+    projecte$ echo "un canvi també dràstic des de prova" > adeu.txt
+    projecte$ git commit -am "canvi dràstic des de prova"
+    [prova 8de01e1] canvi dràstic des de prova
+     1 file changed, 1 insertion(+), 1 deletion(-)
+    projecte$ git checkout master
+    Switched to branch 'master'
+    projecte$ git merge prova
+    Auto-merging adeu.txt
+    CONFLICT (content): Merge conflict in adeu.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+
+Git ens avisa que no ha pogut fer la fusió automàtica. Ens proposa que
+arreglem els conflictes i que tornem a fer *commit* amb el resultat.
+
+Si ara demanem l'estat, ens trobem
+
+.. code-block:: console
+
+    projecte$ git status
+    # On branch master
+    # Unmerged paths:
+    #   (use "git add/rm <file>..." as appropriate to mark resolution)
+    #
+    #	both modified:      adeu.txt
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+És més, Git ens ha afegit unes marques al fitxer ``adeu.txt`` de
+manera que ens sigui més fàcil prendre les decisions.
+
+.. code-block:: console
+
+    projecte$ cat adeu.txt
+    <<<<<<< HEAD
+    un canvi dràstic des de master
+    =======
+    un canvi també dràstic des de prova
+    >>>>>>> prova
+
+Ara simplement hem d'editar el fitxer, modificar-lo com ens convingui
+i fer un nou *commit* com ens recomana Git.
+
+    projecte$ cat adeu.txt
+    un canvi dràstic des de master i també des de prova
+    projecte$ git commit -am "corregida la fusió manualment"
+    [master f54fbd7] corregida la fusió manualment
+    projecte$ git status
+    # On branch master
+    nothing to commit (working directory clean)
+
+Amb fitxers binaris com ara imatges, Git no ens podrà ajudar tant amb
+les fusions. Amb tot, els marcarà com a *unmerged* i esperarà que
+facis *commit* amb la versió corregida.
+
+Eliminar una branca
+-------------------
+
+Quan ja no et cal una branca, pots eliminar-la amb l'opció ``-d`` de
+``branch``
+
+.. code-block:: console
+
+    $ git branch -d prova
+    Deleted branch prova (was 8de01e1).
+
+Si a la branca a eliminar hi quedaven canvis sense fusionar amb el
+``HEAD``, Git t'avisarà i et proposarà que facis servir l'opció ``-D``
+en comptes de ``-d`` per indicar que no t'importa que es perdin els
+canvis.
+
+Crear una branca a partir d'una versió antiga
+---------------------------------------------
+
+Suposa que vols continuar un desenvolupament des d'un *commit* concret. Troba el
+seu hash (amb els primers caràcters segurament en tindràs prou) i fes:
+
+.. code-block:: console
+
+    projecte$ git branch tornemhi ced5a9
+    projecte$ git checkout tornemhi
+    Switched to branch 'tornemhi'
+
+Ja pots treballar en aquesta branca i, en acabar, realitzar les
+fusions que consideris necessàries.

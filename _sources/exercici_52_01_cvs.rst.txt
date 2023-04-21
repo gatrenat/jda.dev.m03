@@ -1,0 +1,367 @@
+#####################################################
+|exerciseicon___| Exercici 52_01. Control de versions
+#####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_01_cvs/``
+
+* Continguts relacionats: :doc:`cvs`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Crea un document en format *pdf* amb el següent contingut:
+
+* Una portada
+
+  - inclourà un títol adequat a aquest tema, el teu nom, el context (curs,
+    mòdul, etc) i la data
+
+* Una taula de continguts
+
+  Inclourà un índex amb el nom de cada secció i el número de la pàgina
+  dins del document on es troba. Idealment oferirà un enllaç.
+
+* Números de pàgina, títol i versió del document a cada pàgina (capçalera/peu).
+
+* Una secció d'introducció
+
+  Explicarà com a mínim l'objectiu/continguts d'aquest document, i
+  descriurà breument la seva estructura (seccions)
+  
+* Una secció per cadascuna de les preguntes que s'enumeren a continuació
+
+  Cada secció inclourà una còpia de l'enunciat i distingirà clarament aquest de
+  la teva resposta. Per exemple, pots fer servir cursives, o una tabulació o
+  color diferent.
+
+* Una secció amb les teves conclusions personals sobre el tema
+
+Les diferents preguntes es troben llistades a continuació:
+
+Pregunta 1. La meva història de por
+===================================
+
+Descriu un cas concret de la teva experiència que t'hagis trobat amb un o
+més dels problemes descrits a la secció :doc:`cvs_intro`. Fes-ho en els
+termes indicats, per exemple, si ha estat entre molts treballadors o de
+manera telemàtica.
+
+Concreta molt. Per exemple, descriu la convenció de noms que has fet
+servir per cada versió.
+
+
+Pregunta 2. Comparem sistemes de control de versions
+====================================================
+
+Agafa els diferents exemples de sistemes de control de versions que hi apareixen
+a la secció :doc:`cvs_definicio`.
+
+Crea una fitxa per cadascun d'ells amb el màxim que trobis dels següents punts:
+
+* nom del cvs
+
+* url del projecte
+
+* llicència
+
+* descripció: pots copiar&enganxar la descripció breu que hi apareix a cada
+  pàgina, si vols, directament en l'idioma original.
+
+* bondats: com que hi ha prou competència entre cvs, les pàgines solen oferir de
+  manera resumida les característiques diferenciadores del seu producte, fins i
+  tot comparant-los amb altres.
+
+  Inclou-les a la fitxa. Pot ser de manera directa (en l'idioma original) o més
+  treballada, tractant de descriure amb les teves paraules què volen dir.
+
+* impressió: una descripció de la teva primera impressió respecte el cvs
+
+  Potser voldràs llegir algun article o blog per oferir una idea més informada.
+  Et recomano, per exemple, aquest article de `smashingmagazine
+  <https://www.smashingmagazine.com/2008/09/the-top-7-open-source-version-control-systems/>`_
+
+Pregunta 3. Quantes versions guardem?
+=====================================
+
+Recorda l'esquema que varem veure a :doc:`cvs_git_intro`.
+
+.. figure:: /_images/cvs_img004_snapshots.png
+   :alt: snapshots
+   :align: center
+
+Completa la taula següent, indicant quants fitxers (no enllaços) són guardats
+realment per Git a cada versió d'aquest exemple:
+
+======      ==========================
+versió      nombre de fitxers guardats
+======      ==========================
+0           3
+1
+2
+3
+4
+======      ==========================
+
+
+Pregunta 4. Configuració global
+===============================
+
+Un cop disposis de ``git`` instaŀlat i configurat al teu sistema
+(:doc:`cvs_git_install`), crida la següent instrucció a la consola:
+
+.. code-block:: console
+
+    $ git config --list
+
+La resposta a aquest exercici és el resultat d'aquesta consola. Revisa que les
+dades siguin les que esperes.
+
+
+Pregunta 5. Ajut d'algunes comandes interessants
+================================================
+
+Obté ajuda per les següents opcions de *git*:
+
+* clone
+
+* init
+
+* add
+
+* mv
+
+* reset
+
+* rm
+
+* log
+
+* status
+
+* checkout
+
+* commit
+
+Per  cadascuna d'aquestes opcions, afegeix al document:
+
+* la comanda per obtenir l'ajut
+
+* l'ajut generat per git. Només cal que indiqueu la breu descripció que apareix a la
+  secció *Name* i la descripció que apareix a la secció *Description*.
+
+
+Pregunta 6. Configuració inicial
+================================
+
+Un cop hagis fet la creació d'un repositori segons (:doc:`cvs_git_init`), crida la
+següent instrucció a la consola: ::
+
+    $ git config --list
+
+Respon a les següents preguntes:
+
+1. quina sortida t'ha generat la comanda anterior
+
+2. què voldrà dir el valor de ``core.bare``?
+
+
+Pregunta 7. Resum de comandes
+=============================
+
+Creat un petit resum de les comandes que han aparegut en aquesta
+introducció a Git. Inclou les comandes comentades a partir de
+suggeriments del propi Git, com ara ``reset``.
+
+Pensa-ho com una *xuleta* o *cheat sheet* que serveixi de
+referència ràpida pel Git.
+
+Fes servir un format tabular amb les capcaleres:
+
+- Comanda (ex. ``commit -m «comentaris»``)
+
+- Petita descripció (ex. "registra els canvis a *stage* associant-los un comentari")
+
+- Exemple (ex. "$ git commit -m "Registre inicial")
+
+
+Pregunta 8. Comptem objectes
+============================
+
+A partir dels continguts de :doc:`cvs_git_stage`, crea un nou repositori, per
+exemple a partir de ``/tmp``.
+
+Pas 0. Compta el nombre d'objectes que està guardant Git en aquest moment: ::
+
+    $ git count-objects
+
+Guarda el resultat de la comanda anterior.
+
+Pas 1. Crea-hi un fitxer anomenat ``test.txt`` però de moment no l'afegeixis a Git.
+
+Compta un altre cop quants objectes guarda Git.
+
+Pas 2. Afegeix ``test.txt`` a Git però de moment no facis ``commit``.
+
+Torna a comptar quants objectes guarda Git.
+
+Pas 3. Fes el primer ``commit`` i torna a comptar el nombre d'objectes que està
+guardant.
+
+Pas 4. Modifica el fitxer ``test.txt`` de la següent manera: ::
+
+    $ git config --list > test.txt
+
+Abans de fer ``commit``, torna a revisar quants objectes guarda Git
+
+Pas 5. Fes commit i torna a comptar quants objectes en portes.
+
+Emplena la següent taula:
+
+===         ========            =========
+pas         objectes            kilobytes
+===         ========            =========
+0           0                   0
+1
+2
+3
+4
+5
+===         ========            =========
+
+
+Pregunta 9. Una mica de pràctica
+================================
+
+Practicarem ara els continguts que hem vist a :doc:`cvs_git_branch`.
+
+Per la realització d'aquest exercici hauràs de prendre nota de totes
+les comandes que llencis i continguts de fitxers que toquis.
+
+Segueix les instruccions i prepara els resultats finals que seran en
+forma de *bundle* més un document amb les descripcions de les passes i
+les comandes/continguts de fitxer.
+
+Les instruccions et deixaran lliures alguns elements (ex. noms, alguns
+continguts de fitxers, missatges de *commit*) És molt recomanable que
+les realitzis sobre un GNU/Linux o, com a mínim, un sistema compatible
+POSIX per facilitar-te la captura.
+
+**Instruccions**
+
+#. Personalitza adequadament el teu Git.
+
+#. Crea un repositori Git
+
+#. Afegeix al directori de treball un fitxer amb un contingut generat
+   per la comanda ``$ ip a`` (o l'equivalent al teu sistema) des de
+   la teva màquina.
+
+#. Fes el primer *commit*
+
+#. Copia el contingut del teu fitxer de configuració ``.gitconfig`` a
+   un fitxer dins del directori de treball i afegeix-lo al control de
+   versions.
+
+#. Crea un nou fitxer on afegeixis la data i hora del sistema
+   (``date``), afegeix-lo a *stage* i comprova l'estat del projecte.
+
+#. Modifica el primer fitxer tot afegint-hi al final la data i hora
+   del sistema i comprova l'estat del projecte.
+
+#. Registra tots els canvis i torna a comprovar l'estat del projecte.
+
+#. Consulta l'historial de canvis fins el moment de tot el projecte.
+
+#. Configura el teu projecte de manera que Git no intenti gestionar
+   els .class. Realitza les accions que consideris per comprovar que
+   no ho està fent.
+
+#. Realitza les accions que trobis necessàries per demostrar com es
+   pot veure els canvis realitzats al contingut d'un fitxer que
+   encara no s'han passat a *stage*.
+
+#. Com al punt anterior, però aquest cop demostra com comprovar
+   els canvis realitzats en un fitxer respecte el darrer *commit*.
+
+#. Consulta ara l'històric de canvis d'un dels fitxers incloent les
+   diferències de cada versió respecte de l'anterior.
+
+#. Realitza les comandes necessàries per demostrar com es pot tornar
+   a l'estat del darrer *commit* d'un determinat fitxer.
+
+#. Crea una nova branca, modifica-hi un dels fitxers i registra els
+   canvis. Comprova que els canvis hi són a la nova branca però no a
+   la branca *mestra*. Finalment torna a la branca mestra, fusiona
+   els canvis de la nova branca i elimina la nova branca. Comprova que
+   l'has eliminada.
+
+#. Crea una nova branca i realitza els canvis necessaris sobre algun
+   dels fitxers, de manera que les dues línies de desenvolupament (la
+   nova branca i la mestra) divergeixin. Aconsegueix que en intentar
+   fusionar els canvis a la branca mestra algun dels fitxers
+   modificats sigui fusionat automàticament però algun altre
+   requereixi modificacions manuals. Finalment hauria de quedar tots
+   els canvis fusionats a la branca mestra i l'altra branca quedar
+   eliminada.
+
+#. Guarda tot el contingut de la branca mestra en un paquet git.
+
+
+Pregunta 10. Visualització
+==========================
+
+També existeixen eines gràfiques per visualitzar els repositoris git.  Aquestes
+eines permeten navegar de manera més visual per l'històric de canvis.
+
+Una de les més senzilles d'instal·lar és, potser, `gitk
+<https://www.kernel.org/pub/software/scm/git/docs/gitk.html>`_) . Aquesta
+la podràs instal·lar i executar amb:
+
+.. code-block:: none
+
+    $ sudo apt-get install gitk
+    «...»
+    projecte$ gitk
+
+Per a aquest exercici, instal·la't l'eina *gitk* o alguna
+`alternativa <https://alternativeto.net/software/gitk/>`_
+
+Desenvolupa un petit tutorial de la instal·lació que inclogui captures de
+pantalla de l'eina amb el projecte anterior.
+
+
+Pregunta 11. L'art de la línia de comandes
+==========================================
+
+El nostre idioma no es troba entre les traduccions de `The art of
+command line
+<https://github.com/jlevy/the-art-of-command-line/blob/master/README.md>`_
+
+En aquest exercici farem un pas per mirar d'arreglar aquesta situació.
+
+Per a poder gestionar aquest exercici sense afectar en *jlevy*, he creat
+un *fork* al meu compte de GitHub.
+
+#. Fes un *fork* `d'aquest repositori
+<https://github.com/moiatjda/the-art-of-command-line>`_ amb el teu compte de
+github.
+
+#. Clona'l al teu equip.
+
+#. Crea una nova branca i anomena-la *catalan*
+
+#. Afegeix-hi un nou fitxer anomenat **README-ca.md** amb els continguts del
+   fitxer **README.md**.
+
+#. Comença a fer la traducció dels seus continguts. Com a mínim, tradueix la
+   línia 27. Si et veus amb dificultats, pots fer servir algun traductor
+   automàtic (no li ho direm a ningú ;) )
+
+#. Un cop ho tinguis, fes els *commits* pertinents i puja-ho al teu
+   repositori remot
+
+La resposta a aquest exercici inclourà la url del teu repositori a GitHub
+i captures de pantalla amb explicacions de cada pas.

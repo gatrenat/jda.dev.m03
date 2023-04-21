@@ -1,0 +1,33 @@
+#################################
+Creació d'un repositori: ``init``
+#################################
+
+.. important:: Les activitats  d'aquest punt han de ser realitzades
+   **fora** del repositori de l'assignatura, altrament trobaràs
+   conflictes.
+
+Poques coses et seran més fàcils que crear un nou repositori Git
+
+.. code-block:: console
+
+    $ mkdir ~/projecte
+    $ cd ~/projecte
+    projecte$ git init
+
+Això et generarà un directori anomenat ``.git`` que en sistemes POSIX
+apareixerà ocult. Pots tafanejar dins del directori però, a menys que
+sàpigues molt bé el que fas, millor que no hi toquis res.
+
+Donat que aquesta secció és queda tan curta, l'amplio dient-te com
+eliminar un repositori git. Simplement elimina el directori ``.git/``
+que t'ha generat ``git init``
+
+*Nota* en cas que el que vulguem crear sigui un repositori sense
+directori de treball, podem fer servir l'opció ``--bare``
+
+.. code-block:: console
+
+    projecte_bak$ git --bare init
+
+En aquest cas, només disposarem del directori on git guarda la base
+de dades amb les diferents versions que gestiona.

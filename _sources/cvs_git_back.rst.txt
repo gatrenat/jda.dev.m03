@@ -1,0 +1,170 @@
+#############
+Tornar enrere
+#############
+
+Potser la raó fonamental de fer servir un SCV és poder recuperar
+fàcilment una versió anterior.
+
+Considera els següents escenaris habituals i la manera de resoldre'ls:
+
+Modificar el missatge del darrer *commit*
+=========================================
+
+Potser volíem afegir alguna cosa més a la descripció del darrer
+*commit* o bé simplement ens hem equivocat amb el missatge. En
+qualsevol cas, podem tornar enrere fàcilment amb l'opció
+``--amend`` si encara no tenim cap canvi a *stage*.
+
+Aconsegueix que el teu directori de treball estigui net segons
+``status``
+
+.. code-block:: console
+
+  projecte$ git status
+  # On branch master
+  nothing to commit (working directory clean)
+  projecte$ echo "un altre" > adeu.txt
+  projecte$ git add adeu.txt
+  projecte$ git commit -am "un missatge equivocat"
+  [master 6b38844] un missatge equivocat
+   1 file changed, 1 insertion(+)
+   create mode 100644 adeu.txt
+  $ git commit --amend -m "missatge correcte"
+  [master 2c942cc] missatge correcte
+   1 file changed, 1 insertion(+)
+   create mode 100644 adeu.txt
+  projecte$ git log -2
+  commit 2c942cc4dd691473b1d791d1b82af839d21b4b50
+  Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+  Date:   Sun Mar 10 13:18:46 2013 +0100
+
+      missatge correcte
+
+  commit b4d88eabeb77e1d83ca674199810de0c892c7efa
+  Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+  Date:   Sun Mar 10 12:15:45 2013 +0100
+
+      afegit adéu en inglish
+
+Fixa't com a l'històric no queda constància del missatge erroni.
+
+Afegir/eliminar continguts al darrer *commit*
+=============================================
+
+De vegades fem el *commit* massa aviat per després adonar-nos que
+hem comés un petit error i ens veiem obligats a tornar a fer el
+*commit*. Git ens ofereix un mecanisme senzill tot utilitzant
+novament l'opció ``--amend``
+
+.. code-block:: console
+
+  projecte$ echo "nou adéu" > adeu.txt
+  projecte$ git status
+  # On branch master
+  # Changes not staged for commit:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #	modified:   adeu.txt
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+  projecte$ git commit --amend -am "missatge correcte amb adeu correcte"
+  [master ced5a9d] missatge correcte amb adeu correcte
+   1 file changed, 1 insertion(+)
+   create mode 100644 adeu.txt
+  projecte$ git log -2
+  commit ced5a9d2161b6206c76f2dbe47a77cc113bdc5c4
+  Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+  Date:   Sun Mar 10 13:18:46 2013 +0100
+
+      missatge correcte amb adeu correcte
+
+  commit b4d88eabeb77e1d83ca674199810de0c892c7efa
+  Author: Laia Sànchez d'Argent <lalaionamolonaexample.org>
+  Date:   Sun Mar 10 12:15:45 2013 +0100
+
+Fixa't com el contingut del fitxer ``adeu.txt`` ha canviat però
+queda enregistrat en el mateix *commit* que abans.
+
+Recuperar un fitxer segons el darrer *commit*
+=============================================
+
+Has modificat el contingut d'un fitxer però vols deixar-lo tal i com
+estava el darrer cop que vas fer *commit*? Només has de seguir les
+indicacions de ``git status``
+
+.. code-block:: console
+
+  projecte$ echo "nou hola" > hola.txt
+  projecte$ echo "nou adéu" > adeu.txt
+  projecte$ git add hola.txt
+  projecte$ git status
+  # On branch master
+  # Changes to be committed:
+  #   (use "git reset HEAD <file>..." to unstage)
+  #
+  #	modified:   hola.txt
+  #
+  # Changes not staged for commit:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #	modified:   adeu.txt
+  #
+
+Fixa't que tenim en *stage* a ``hola.txt`` i com a *modificat* a
+``adeu.txt``. Recuperem tots dos seguint les indicacions de Git
+
+.. code-block:: console
+
+  $ git reset HEAD hola.txt
+  Unstaged changes after reset:
+  M	adeu.txt
+  M	hola.txt
+  projecte$ git status
+  # On branch master
+  # Changes not staged for commit:
+  #   (use "git add <file>..." to update what will be committed)
+  #   (use "git checkout -- <file>..." to discard changes in working directory)
+  #
+  #	modified:   adeu.txt
+  #	modified:   hola.txt
+  #
+  no changes added to commit (use "git add" and/or "git commit -a")
+  projecte$ git checkout -- hola.txt adeu.txt
+  projecte$ git status
+  # On branch master
+  nothing to commit (working directory clean)
+  projecte$ cat hola.txt
+  hola
+  adéu
+  gutbai
+  projecte$ cat adeu.txt
+  un altre
+
+**Atenció**: fes servir aquestes comandes amb compte. Els canvis que
+reverteixis d'aquesta manera **no** els podràs recuperar amb Git
+donat que no han arribat mai a ser registrats! És preferible que
+facis servir l'opció ``--amend`` perquè aquesta ofereix a Git
+possibilitats de `recuperació
+<http://git-scm.com/book/en/Git-Internals-Maintenance-and-Data-Recovery>`_.
+
+Més opcions de recuperació
+==========================
+
+Git ens ofereix moltes més opcions per tornar en rere. Per exemple, si ens
+interessa tornar dos *commits* enrere, ho podem fer amb:
+
+.. code-block:: console
+
+    $ git revert HEAD~2..HEAD
+
+Troba més informació d'opcions de recuperació per exemple al `llibre Pro Git
+<https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things>`_
+
+Quan et trobis amb una situació concreta en que hagis de recuperar quelcom que
+has fet, si no te'n surts amb els exemples anteriors, el més probable és git
+ofereixi alguna manera senzilla de fer-ho. El més important és que siguis capaç
+de descriure amb precisió què és el que vols i realitzis una cerca. És més que
+probable que algú altre s'hi hagi trobat abans i hagi publicat com.
+
