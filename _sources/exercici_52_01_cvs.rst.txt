@@ -41,6 +41,10 @@ Crea un document en format *pdf* amb el següent contingut:
 
 Les diferents preguntes es troben llistades a continuació:
 
+.. important:: Fes els exercicis **fora** del repositori ``prgtest/``,
+   altrament experimentaràs problemes.
+
+
 Pregunta 1. La meva història de por
 ===================================
 
