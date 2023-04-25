@@ -455,14 +455,14 @@ ser necessari modificar per adaptar-los a <code class="docutils literal notransl
 <p>El disseny de la classe <code class="docutils literal notranslate"><span class="pre">Vi</span></code> quedarà:</p>
 <div class="figure align-center" id="id2">
 <p class="plantuml">
-<img src="_images/plantuml-d43602e395c9207983f95f87e39989d35314eabf.png" alt="class Vi {
+<img src="_images/plantuml-9dcf11ae4d065b257631dce29196ba54c1cb6567.png" alt="class Vi {
     - {static} propietatsSeleccionables: List&lt;NomPropietat&gt;
-    - propietats: Map&lt;String, Propietat&gt;
+    - propietats: Map&lt;NomPropietat, Propietat&gt;
     + Vi(propietats: Map&lt;NomPropietat, Propietat&gt;)
     + {static} getNomsPropietatsSeleccionables(): List&lt;String&gt;
     + getRef(): String
     + getLloc(): String
-    + get(nomPropietat: String)
+    + get(nomPropietat: NomPropietat): String
     + getPreu(): int
     + setPreu(int)
     + getEstoc(): int
@@ -473,7 +473,7 @@ ser necessari modificar per adaptar-los a <code class="docutils literal notransl
     + esValidPerPlantilla(plantilla: Map&lt;NomPropietat, String&gt;): boolean
     + aArrayString(): String[]
     + {static} deArrayString(String[]): Vi
-    + esValid(propietats: Map&lt;NomPropietat, Propietat&gt;)
+    + {statoc} esValid(propietats: Map&lt;NomPropietat, Propietat&gt;)
 }
 
 Vi *-- Propietat

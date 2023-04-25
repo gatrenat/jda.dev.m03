@@ -408,12 +408,12 @@ El disseny de la classe ``Vi`` quedarà:
 
     class Vi {
         - {static} propietatsSeleccionables: List<NomPropietat>
-        - propietats: Map<String, Propietat>
+        - propietats: Map<NomPropietat, Propietat>
         + Vi(propietats: Map<NomPropietat, Propietat>)
         + {static} getNomsPropietatsSeleccionables(): List<String>
         + getRef(): String
         + getLloc(): String
-        + get(nomPropietat: String)
+        + get(nomPropietat: NomPropietat): String
         + getPreu(): int
         + setPreu(int)
         + getEstoc(): int
@@ -424,7 +424,7 @@ El disseny de la classe ``Vi`` quedarà:
         + esValidPerPlantilla(plantilla: Map<NomPropietat, String>): boolean
         + aArrayString(): String[]
         + {static} deArrayString(String[]): Vi
-        + esValid(propietats: Map<NomPropietat, Propietat>)
+        + {statoc} esValid(propietats: Map<NomPropietat, Propietat>)
     }
 
     Vi *-- Propietat
