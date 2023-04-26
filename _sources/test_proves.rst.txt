@@ -1,0 +1,38 @@
+##########
+Les proves
+##########
+
+Les proves són accions destinades a trobar errors en la nostra
+aplicació. Atenció, fixa't que no he dit, destinades a demostrar que
+la nostra aplicació funciona. Si trobes un error amb una prova és que
+hi era, si no el trobes no vol dir que no hi sigui: potser la prova no
+ha estat prou efectiva.
+
+Una bona prova:
+
+* té alta probabilitat de trobar un error,
+
+* presenta baixa redundància amb altres proves, i
+
+* minimitza la interacció humana. Idealment és automatitzable!
+
+Quan s'està dissenyant o desenvolupant un component, s'ha de tenir al
+cap la idea de facilitar la prova.  Per exemple, se sap que un codi
+amb poques dependències facilita la prova. Per exemple, si el
+funcionament d'una classe és independent (de la BD, la GUI, la xarxa,
+altres classes) serà molt més fàcil dissenyar/realitzar proves per a
+aquesta classe.
+
+TDD (`Test Driven Development
+<https://ca.wikipedia.org/wiki/Desenvolupament_guiat_per_proves>`_), una
+metodologia de desenvolupament basada en la prova, proposa que
+comencem pensant com provarem el nostre sistema abans de codificar-lo.
+
+En el moment en que comencem a analitzar els casos d'ús del sistema a
+desenvolupar, ja podem començar a definir com els provarem, el que
+es coneix com a casos de test.
+
+Aquest tema s'escapa dels objectius d'aquest document. En tot cas, pensa
+un cas de test com una descripció d'una prova sobre un cas d'ús. En el cas
+de test sovint hi inclourem dades realistes, de vegades amb algun error, i
+indicarem què s'espera que generi el sistema a partir d'elles.

@@ -1,0 +1,17 @@
+#########
+Exercicis
+#########
+
+Aquesta pàgina llista els exercicis a realitzar per la secció de :doc:`validació
+de programes <test>`
+
+.. toctree::
+    :titlesonly:
+
+    exercici_52_02_validacio.rst
+    exercici_52_03_coordenada_y.rst
+    exercici_52_04_setter_y.rst
+    exercici_52_05_suma.rst
+    exercici_52_06_segment.rst
+    exercici_52_07_encapsulacio.rst
+    exercici_52_08_excepcions.rst
