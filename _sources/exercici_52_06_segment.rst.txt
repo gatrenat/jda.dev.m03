@@ -122,3 +122,9 @@ Per exemple, considera la següent execució:
     p2: Punt(4, 5)
     s1: Segment(Punt(2, 3), Punt(4, 5)) s1.longitud: 2,83
     s2: Segment(Punt(4, 5), Punt(2, 3)) s2.longitud: 2,83
+
+Pots comprovar que dos valors *double* són iguals, tot indicant a ``assertEquals()`` un llindar:
+
+.. code-block:: java
+
+    assertEquals(1.2, segment.longitud(), 0.000001d);

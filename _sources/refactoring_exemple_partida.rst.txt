@@ -1,0 +1,54 @@
+###############
+Punt de partida
+###############
+
+L'exemple que treballarem és un sistema de gestió de lloguers de
+vehicles. En concret, estudiarem el programa que genera els informes a
+lliurar als clients. El programa, a partir dels lloguers realitzats
+per un client, calcula l'import total dels lloguers i les
+bonificacions aconseguides. Els vehicles llogats poden ser de tres
+categories diferents: bàsic, general i de luxe.
+
+Considera el següent diagrama UML de classes que descriu els elements
+principals d'aquest exemple.
+
+.. uml::
+    :align: center
+
+    class Vehicle {
+        - model
+        - marca
+        - categoria
+    }
+
+    class Lloguer {
+        - dies
+    }
+
+    class Client {
+        - nif
+        - nom
+        - telèfon
+        + informe()
+    }
+
+    Vehicle <-left- Lloguer
+    Lloguer <-left- Client: *
+
+    hide class circle
+    skinparam classAttributeIconSize 0
+    skinparam class {
+        BackgroundColor White
+        BorderColor Black
+        ArrowColor Black
+    }
+
+
+És a dir, tenim tres classes. Els vehicles, els lloguers que fan referència a
+un vehicle, i els clients que guarden la llista dels lloguers contractats.
+
+Fem uns primers exercicis per començar a escalfar motors:
+
+|exerciseicon__T| :doc:`exercici_52_10_gestor_lloguers`
+
+|exerciseicon__T| :doc:`exercici_52_11_gestor_lite`

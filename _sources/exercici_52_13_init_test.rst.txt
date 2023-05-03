@@ -1,0 +1,51 @@
+############################################################
+|exerciseicon__T| Exercici 52_13. Primera prova de regressió
+############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_13_init_test/``
+
+* Continguts relacionats: :doc:`refactoring_exemple_objectiu`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Com que anirem modificant el codi de manera significativa, voldrem
+disposar d'algun mecanisme que ens garanteixi que no hem trencat res.
+
+En aquest exercici generarem una prova unitària per al mètode
+``Client.informe()``
+
+La prova inicial serà molt senzilla. Agafarem el nostre client *demo* que
+GestorLite, i la prova unitària simplement cridarà ``informe()`` i compararà el
+resultat amb el que s'esperaria per aquest client.
+
+Per tant, primer de tot obté un informe a partir de dels resultats generats per
+la versió actual de ``Client.informe()`` amb el client *demo*. A continuació,
+crea una prova JUnit en el fitxer ``TestGestor.java`` que inclogui un test que
+construeixi el client *demo*, cridi el seu ``informe()`` i compari el resultat
+amb el que hem obtingut abans.
+
+Evidentment, si no modifiquem ``Client.informe()`` hauria de passar la
+prova. La gràcia apareixerà quan modifiquem el
+mètode.
+
+Aquest tipus de proves sovint s'anomenen *proves de regressió*. La idea darrera
+d'elles és: si en modificar el meu codi, la prova deixa de funcionar, és que ja
+no fa el que feia.
+
+Alguna cosa no sona bé?
+=======================
+
+Potser estàs pensant: no m'havies venut que les proves es creen per què
+*fallin*? Com és que ara em demanen crear una prova a passar?.
+
+És cert que l'objectiu de crear una prova (especialment en TDD) és fer que
+falli i per això escrivim la prova abans del codi. En aquest cas però, el codi
+ja el tenim i estem pressuposant que funciona. La idea és que aviat canviarem
+el codi i volem comprovar que continua funcionant de la mateixa manera després
+de les modificacions.

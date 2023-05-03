@@ -1,0 +1,62 @@
+###########
+Conclusions
+###########
+
+Hem arribat al final d'aquesta introducció a la refacció. Fem aquí
+unes breus paraules com a conclusió de la feina feta i, sobre tot,
+unes indicacions per a ampliar els nostres coneixements en un tema
+que, en cas d'aplicar-lo correctament, ens garantirà que la qualitat
+del nostre millori cada cop que el revisem.
+
+Recapitulem
+===========
+
+Amb uns senzills canvis, hem passat d'un mètode d'unes 50 línies en
+les que es barrejaven un munt d'aspectes diversos, a un altre de menys
+de 5 que es limita a realitzar la **seva** tasca: composar l'informe.
+Les funcionalitats "sobrants" les hem passades a altres mètodes,
+alguns fins i tot els hem mogut a altres classes. A més, hem realitzat
+alguns canvis de noms.
+
+El resultat és un codi molt més modular (hom diria *orientat a
+objectes*) que permet crear nous formats d'informes de manera molt més
+àgil.
+
+Hem vist només unes poques passes de refacció. Es coneixen moltes més.
+Tot i que les presentades en aquesta sèrie d'exercicis ja poden
+ajudar-nos a millorar significativament el nostre codi, és possible
+que no et vulguis quedar aquí. 
+
+Si és així. Si t'has quedat amb ganes de veure més, et recomano que
+aconsegueixis una còpia del fantàstic llibre del [FOWLER]_ i gaudeixis
+de la seva lectura. Malgrat la transformació que he realitzat al seu
+exemple inicial per a adaptar-lo al context que persegueixo per a
+aquests materials, estic segur que podràs seguir els conceptes
+que hi apareixen a la resta de l'exemple i, sobre tot, que aprofitaràs
+l'ampli ventall de passos de refacció que recopila.
+
+Un altre llibre que t'ajudarà a aprofundir en els conceptes de
+reanomenament i reducció de llargària de mètodes és el [MARTIN]_ en
+els capítols 2 i 3. El conjunt del llibre t'oferirà una visió molt
+pràctica del què vol dir un *codi net*.
+
+Finalment, si t'ha agradat aquesta manera d'aprendre a partir del seguiment d'un
+exemple concret, [FREEMANPRYCE]_ és un llibre especialment interessant si vols
+tenir una visió ampla de la construcció de programari orientat a objectes guiat
+per proves.
+
+Bibliografia
+============
+
+Aquests continguts estan basats en moltes fonts. Faig referència com a
+especialment recomanables:
+
+.. [FOWLER] Fowler, Martin (2018) *Refactoring: Improving the Design of Existing
+   Code*.  Addison-Wesley Professional.
+
+
+.. [MARTIN] Martin, Robert C. (2008) *Clean Code: A Handbook of Agile Software
+   Craftmanship*. Prentice Hall.
+
+.. [FREEMANPRYCE] Freeman, Nat Pryce (2009) *Growing Object-Oriented
+   Software, Guided by Tests*. Addison-Wesley.

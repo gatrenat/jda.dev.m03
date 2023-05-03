@@ -1,0 +1,46 @@
+###########
+Refactoring
+###########
+
+En aquesta sèrie d'entrades tindrem una primera aproximació al
+concepte de *refacció*, més conegut directament amb el nom en anglès:
+*refàctoring*.
+
+El tema es presentarà tot seguint un exemple.
+
+Per seguir aquests continguts amb el màxim d'aprofitament et caldran
+coneixements de programació orientada a objectes en Java i UML, així
+com utilització del gestor de versions Git i del entorn de prova
+unitària JUnit.
+
+Per a poder extreure el màxim d'aquests continguts, considera les
+següents recomanacions:
+
+* Si estàs fent servir un IDE que ofereixi suport per la refacció, et
+  proposo que pels següents exercicis **no facis** servir aquesta
+  funcionalitat. D'aquesta manera aconseguiràs un coneixement molt més
+  profund del tema del que obtindries amb simplement veure els
+  resultats.
+
+* Realitza els exercicis de manera seqüencial. Evidentment, si
+  descobreixes alguna cosa posteriorment hi pots tornar a un exercici
+  anterior. Procura, però, començar sempre a realitzar els exercicis abans
+  d'haver llegit continguts posteriors.
+
+Els continguts d'aquest tema es troben distribuïts en les següents entrades:
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   refactoring_intro.rst
+   refactoring_exemple.rst
+   refactoring_method_extraction.rst
+   refactoring_method_movement.rst
+   refactoring_tmp_call.rst
+   refactoring_responsabilitat.rst
+   refactoring_removetmps.rst
+   refactoring_metodes_lleugers.rst
+   refactoring_altres.rst
+   refactoring_conclusions.rst
+   refactoring_exercicis.rst

@@ -1,0 +1,22 @@
+######################
+El lloguer de vehicles
+######################
+
+En aquesta entrada es presenta i desenvolupa una primera implementació
+de l'exemple que treballarem al llarg d'aquesta introducció al
+*refactoring*.
+
+L'exemple correspon a una versió simplificada de l'exemple introductori de
+[FOWLER]_. Et recomano molt anar seguint l'exemple de manera seqüèncial i
+realitzant els exercicis un cop vas llegint cada pas. Trobaràs que part dels
+exercicis correspon a documentació dels canvis. Posar-li atenció a aquesta part
+t'ajudarà molt a entendre el que has fet.
+
+
+.. toctree::
+   :titlesonly:
+
+   refactoring_exemple_partida.rst
+   refactoring_exemple_informe.rst
+   refactoring_exemple_problema.rst
+   refactoring_exemple_objectiu.rst

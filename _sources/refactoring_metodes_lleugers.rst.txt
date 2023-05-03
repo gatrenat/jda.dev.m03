@@ -1,0 +1,143 @@
+############################
+Una funcionalitat per mètode
+############################
+
+Recordes com era originalment aquell complex mètode ``Client.informe()``?
+
+.. code-block:: java
+    :linenos:
+
+    public String informe() {
+        double total = 0;
+        int bonificacions = 0;
+        String resultat = "Informe de lloguers del client " +
+            getNom() +
+            " (" + getNif() + ")\n";
+        for (Lloguer lloguer: lloguers) {
+            double quantitat = 0;
+            switch (lloguer.getVehicle().getCategoria()) {
+                case Vehicle.BASIC:
+                    quantitat += 3;
+                    if (lloguer.getDies() > 3) {
+                        quantitat += (lloguer.getDies() - 3) * 1.5;
+                    }
+                    break;
+                case Vehicle.GENERAL:
+                    quantitat += 4;
+                    if (lloguer.getDies() > 2) {
+                        quantitat += (lloguer.getDies() - 2) * 2.5;
+                    }
+                    break;
+                case Vehicle.LUXE:
+                    quantitat += lloguer.getDies() * 6;
+                    break;
+            }
+
+            // afegeix lloguers freqüents
+            bonificacions ++;
+
+            // afegeix bonificació per dos dies de lloguer de Luxe
+            if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
+                    lloguer.getDies()>1 ) {
+                bonificacions ++;
+            }
+
+            // composa els resultats d'aquest lloguer
+            resultat += "\t" +
+                lloguer.getVehicle().getMarca() +
+                " " +
+                lloguer.getVehicle().getModel() + ": " +
+                (quantitat * 30) + "€" + "\n";
+            total += quantitat * 30;
+        }
+
+        // afegeix informació final
+        resultat += "Import a pagar: " + total + "€\n" +
+            "Punts guanyats: " + bonificacions + "\n";
+        return resultat;
+    }
+
+La versió actual és indiscutiblement més fàcil d'entendre:
+
+.. code-block:: java
+   :linenos:
+
+    public String informe() {
+        String resultat = "Informe de lloguers del client " + 
+            getNom() + 
+            " (" + getNif() + ")\n";
+        for (Lloguer lloguer: lloguers) {
+            // composa els resultats d'aquest lloguer
+            resultat += "\t" + 
+                lloguer.getVehicle().getMarca() + 
+                " " + 
+                lloguer.getVehicle().getModel() + ": " +
+                ( /* ??? */ * 30) + "€" + "\n";
+        }
+
+        // afegeix informació final
+        resultat += "Import a pagar: " + importTotal() + "€\n" +
+            "Punts guanyats: " + bonificacionsTotal() + "\n";
+        return resultat;
+    }
+
+Encara podem fer alguna cosa més per millorar-ho i facilitar la implementació
+del mètode ``informeHTML()``.
+
+Encara es podrien fer més passes de refacció. Per exemple, fixa't que
+el mètodes ``Client.informe()`` fa tres coses separades: composa la
+capçalera, el detall de cada lloguer i peu de l'informe.
+
+.. code-block:: java
+
+    public String informe() {
+
+        // composa capçalera
+        /* … */
+
+        // composa detalls
+        /* … */
+
+        // composa peu
+        /* … */
+
+        return resultats;
+    }
+
+Els diferents *subblocs* es podrien extreure, simplificant encara més
+el codi del mètode. És el que hem anomenat *extracció de mètode*.
+
+En general, quan ens trobem un mètode que té comentaris o blocs
+diferents de codi, podem considerar que fa més d'una cosa i plantejar
+l'extracció de mètodes.
+
+Tornarem a aplicar l'*extracció de mètodes* de manera que el codi
+següent funcioni:
+
+.. code-block:: java
+
+    public String informe() {
+        return composaCapsalera() +
+               composaDetall() +
+               composaPeu();
+    }
+
+On parem? És a dir, fins quan podem estar intentant reduir un mètode?
+En general, quan en intentar-ho, no aconseguim millorar la
+llegibilitat. Per exemple, podríem reduir el codi anterior a:
+
+.. code-block:: java
+
+    public String informe() {
+        return composaCapsalera() +
+               composaRestaInforme();
+    }
+
+Si bé el codi és més reduït (una línia menys), no sembla que hàgim
+guanyat gaire en llegibilitat, oi? Aquí, com a tants altres llocs,
+haurem de fer servir el nostre sentit comú per decidir.
+
+|exerciseicon__T| :doc:`exercici_52_26_metodes_lleugers`
+
+|exerciseicon___| :doc:`exercici_52_27_documentacio`
+

@@ -1,0 +1,27 @@
+###########
+El problema
+###########
+
+El codi del mètode ``informe()``, per lleig que ens resulti, fa el que s'espera
+i al compilador no l'importa l'estètica. 
+
+El problema vindrà quan ens calgui modificar-lo. Suposa que ens demanen que
+afegim un nou mètode que generi l'informe en format html. 
+
+Què ens caldrà modficar d'aquest codi per a poder realitzar-ho?
+
+Què en podríem aprofitar del mètode ``Client.informe()``?
+
+D'acord que podem fer un *copy&paste* i modificar la part de construcció del
+String de tornada. Què passaria llavors si ens demanen que canviem la lògica del
+càlcul de l'informe?  (ex. canvien política de preu pels vehicles de luxe).
+
+Potser em diràs que *el codi no és tan complex després de tot* i que
+no és tan greu haver-lo de reescriure. Si ho has pensat, recorda que
+aquest és només un exemple senzill; una *joguina* per introduir el
+concepte. A la vida real aquest tipus de codi el trobaràs **molt** més
+llarg, enrevessat i barrejat amb altre codi del mateix nivell.
+
+Com a regla d'or: si el codi que has de modificar presenta una
+resistència important als canvis que persegueixes incorporar-li,
+**primer** refacció i **després** introducció de la modificació.

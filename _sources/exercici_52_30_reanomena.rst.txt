@@ -1,0 +1,64 @@
+###############################################
+|exerciseicon__T| Exercici 52_30. Reanomenament
+###############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_30_reanomena/``
+
+* Continguts relacionats: :doc:`refactoring_altres`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+En aquesta ocasió aplicarem el pas de refacció conegut com a *reanomenament de
+mètode*.
+
+Ara que hem aprofundit més en els conceptes que envolten al càlcul de
+l'import del lloguer, ens adonem que el mot *quantitat* no és
+representatiu del que conté la variable ``quantitat`` al mètode
+``Lloguer.quantitat()``. De fet, el nom del mètode presenta el mateix
+problema!
+
+És quelcom molt habitual. Quan estàs creant un nou mètode fas servir
+uns noms el més adequats que pots. Després, revisant amb més perspectiva,
+te n'adones que els noms inicials no són adequats. Quan no disposes de
+jocs de prova automàtics i, a més, el codi està molt embolicat, és
+comprensible que no t'atreveixis a fer cap canvi. I si trenques alguna
+cosa?
+
+Sortosament disposem de proves unitàries que es queixaran de seguida!
+
+Millorar el nom dels elements d'un programa és molt més que aconsellable: els
+noms formen una part significativa de la documentació del codi.
+
+    Millors noms ⇒ més llegibilitat ⇒ més reusabilitat + modificabilitat
+
+En aquest exercici se't demana que trobis un nom més adequat pel
+mètode ``Lloguer.quantitat()`` i per la variable ``quantitat``.
+
+Sobre els noms
+==============
+
+Si el mètode pertany a la interfície pública d'una classe que
+està fent servir molta gent (ex. les de l'API de Java), un canvi en el
+nom pot causar molts problemes.
+
+Els desenvolupadors de l'API de Java assumeixen una responsabilitat molt gran
+i, tot i que hi deuen dedicar molta estona a revisar els noms, hi ha alguns que
+segur haguessin volgut canviar. Normalment, un cop publicada una interfície,
+només els queda l'opció d'afegir un comentari a la documentació, com es pot
+veure al següent comentari trobat a la documentació de la classe
+`java.font.TextAttribute
+<https://docs.oracle.com/en/java/javase/17/docs/api/java.desktop/java/awt/font/TextAttribute.html>`_ :
+
+        Note: This attribute is **unfortunately misnamed**, as it
+        specifies the face name and not just the family. Thus values
+        such as "Lucida Sans Bold" will select that face if it exists.
+        Note, though, that if the requested face does not exist, the
+        default will be used with regular weight. The "Bold" in the
+        name is part of the face name, not a separate request that the
+        font's weight be bold.

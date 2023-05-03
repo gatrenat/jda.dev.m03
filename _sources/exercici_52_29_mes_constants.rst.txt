@@ -1,0 +1,42 @@
+###############################################
+|exerciseicon__T| Exercici 52_29. Més constants
+###############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_29_mes_constants/``
+
+* Continguts relacionats: :doc:`refactoring_altres`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Considera ara el fragment de codi que pertany al mètode
+``Lloguer.quantitat()``. Signifiquen el mateix els tres cops que hi
+apareix el valor ``3``?
+
+.. code-block:: java
+    :linenos:
+
+    case Vehicle.BASIC:
+        quantitat += 3;
+        if (getDies() > 3) {
+            quantitat += (getDies() - 3) * 1.5;
+        }
+        break;
+
+En aquest cas, veiem que el primer ``3`` correspon a la quantitat (o
+unitats de cost) que val el lloguer d'un vehicle bàsic entre un i tres
+dies. Els altres dos ``3`` en canvi, corresponen a nombre de dies
+inicials amb el mateix preu.
+
+En aquest exercici hauràs d'identificar els diferents literals numèrics del
+mètode ``Lloguer.quantitat()`` (el ``0`` amb que inicialitzem ``quantitat`` no
+cal). Troba'ls un nom adequat, declara una constant per cadascun d'ells i
+reemplaça els literals originals amb aquestes constants.
+
+**Pista**: En total hauràs de crear 7 constants noves.
+

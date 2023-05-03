@@ -1,0 +1,105 @@
+##################################################################
+|exerciseicon__T| Exercici 52_10. Codificant el Gestor de Lloguers
+##################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_10_gestor_lloguers/``
+
+* Continguts relacionats: :doc:`refactoring_exemple_partida`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+A partir del diagrama de classes, fes una proposta de codificació de les
+classes que hi apareixen.
+
+.. uml::
+    :align: center
+
+    class Vehicle {
+        + {static} BASIC = 1: int
+        + {static} GENERAL = 2: int
+        + {static} LUXE = 3: int
+        - model: String
+        - marca: String
+        - categoria: int
+        + Vehicle(marca, model, categoria)
+    }
+
+    class Lloguer {
+        - dies: int
+        + Lloguer(dies, vehicle)
+    }
+
+    class Client {
+        - nif: String
+        - nom: String
+        - telèfon: String
+        + informe(): String
+    }
+
+    Vehicle <-left- Lloguer
+    Lloguer <-left- Client: *
+
+    hide class circle
+    skinparam classAttributeIconSize 0
+    skinparam class {
+        BackgroundColor White
+        BorderColor Black
+        ArrowColor Black
+    }
+
+
+Assegura't que les propietats que apareixen al diagrama de classes disposen
+d'accessors adequats. Bàsicament, totes les propietats no estàtiques tindràn
+tant *getter* com *setter* i, de moment, no caldrà que afegim cap validació.
+
+Considera el codi següent per la classe ``Client`` com a referència.
+
+.. code-block:: java
+    :linenos:
+
+    import java.util.ArrayList;
+
+    public class Client {
+        private String nif;
+        private String nom;
+        private String telefon;
+        private ArrayList<Lloguer> lloguers;
+
+        public Client(String nif, String nom, String telefon) {
+            this.nif = nif;
+            this.nom = nom;
+            this.telefon = telefon;
+            this.lloguers = new ArrayList<Lloguer>();
+        }
+
+        public String getNif()     { return nif; }
+        public String getNom()     { return nom; }
+        public String getTelefon() { return telefon; }
+        public ArrayList<Lloguer> getLloguers() { return lloguers; }
+
+        public void setNif(String nif) { this.nif = nif; }
+        public void setNom(String nom) { this.nom = nom; }
+        public void setTelefon(String telefon) { this.telefon = telefon; }
+
+        public String informe() {
+            // XXX: de moment buit
+            return null;
+        }
+    }
+
+Algunes pistes:
+
+* ``Vehicle`` inclou tres constants que defineixen les tres categories
+  disponibles de vehicles.
+
+* Malgrat al diagrama no s'explicita amb una propietat, la relació entre
+  ``Lloguer`` i ``Vehicle`` segurament et requerirà una.
+
+* Per afegir un lloguer a un client, caldrà primer aconseguir la llista de
+  lloguers del client i afegir-li a aquesta el lloguer.
