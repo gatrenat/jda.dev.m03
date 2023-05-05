@@ -2,7 +2,7 @@
 Exercicis de *Refactoring*
 ##########################
 
-Els exercicis de la secció de :doc:`persistència en bases de dades <bd>`
+Els exercicis de la secció de :doc:`refacció <refactoring>`
 són:
 
 .. toctree::
