@@ -81,6 +81,6 @@ Suposa que el codi que et trobes d'aquest mètode és el següent:
 
 D'aquest codi en podríem dir vàries coses. Probablement no totes
 *maques*. El mètode ``Client.informe()`` és molt llarg i fa un munt de
-coses que probablement hauria de fer alguna altra classe. Seria una
+coses que segurament hauria de fer alguna altra classe. Seria una
 mena de traducció directa d'un algorisme no orientat a objectes a
-java. Hom podria trobar que és un codi *lleig*.
+java. Hi ha qui arribaria a afirmar que  és un codi *lleig*.

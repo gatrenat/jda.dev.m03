@@ -32,7 +32,7 @@ classes que hi apareixen.
 
     class Lloguer {
         - dies: int
-        + Lloguer(dies, vehicle)
+        + Lloguer(vehicle, dies)
     }
 
     class Client {
