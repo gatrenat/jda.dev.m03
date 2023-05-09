@@ -143,24 +143,24 @@
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Com que anirem modificant el codi de manera significativa, voldrem
+<p>Com que anirem modificant el nostre codi de manera significativa, voldrem
 disposar d'algun mecanisme que ens garanteixi que no hem trencat res.</p>
 <p>En aquest exercici generarem una prova unitària per al mètode
 <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code></p>
-<p>La prova inicial serà molt senzilla. Agafarem el nostre client <em>demo</em> que
-GestorLite, i la prova unitària simplement cridarà <code class="docutils literal notranslate"><span class="pre">informe()</span></code> i compararà el
-resultat amb el que s'esperaria per aquest client.</p>
-<p>Per tant, primer de tot obté un informe a partir de dels resultats generats per
-la versió actual de <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code> amb el client <em>demo</em>. A continuació,
-crea una prova JUnit en el fitxer <code class="docutils literal notranslate"><span class="pre">TestGestor.java</span></code> que inclogui un test que
-construeixi el client <em>demo</em>, cridi el seu <code class="docutils literal notranslate"><span class="pre">informe()</span></code> i compari el resultat
-amb el que hem obtingut abans.</p>
-<p>Evidentment, si no modifiquem <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code> hauria de passar la
-prova. La gràcia apareixerà quan modifiquem el
-mètode.</p>
-<p>Aquest tipus de proves sovint s'anomenen <em>proves de regressió</em>. La idea darrera
-d'elles és: si en modificar el meu codi, la prova deixa de funcionar, és que ja
-no fa el que feia.</p>
+<p>La prova inicial serà molt senzilla. Agafarem el nostre client <em>demo</em> generat
+per <code class="docutils literal notranslate"><span class="pre">GestorLite</span></code> i recollirem el valor generat per <code class="docutils literal notranslate"><span class="pre">informe()</span></code> amb aquest
+client. Aquest serà el <em>valor esperat</em> per la prova que hem de crear. El
+copiarem i el posarem literalment en un String.</p>
+<p>La prova unitària:</p>
+<ol class="arabic simple">
+<li><p>Crearà una nova instància del client <em>demo</em>: la <em>fixture</em> o <em>preparació</em> de
+la prova.</p></li>
+<li><p>Definirà el valor esperat: en aquest cas, una variable de tipus String amb el literal recollit abans, a partir de l'execució de <code class="docutils literal notranslate"><span class="pre">GestorLite</span></code>.</p></li>
+<li><p>Cridarà <code class="docutils literal notranslate"><span class="pre">informe()</span></code> i guardarà el seu resultat com a <em>valor obtingut</em></p></li>
+<li><p>Finalment afirmarà que el resultat esperat i el resultat obtingut són iguals.</p></li>
+</ol>
+<p>Evidentment, si no hem modificat <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code>, hauria de passar la
+prova sense cap problema. La gràcia apareixerà quan modifiquem el mètode.</p>
 <div class="section" id="alguna-cosa-no-sona-be">
 <h2>Alguna cosa no sona bé?<a class="headerlink" href="#alguna-cosa-no-sona-be" title="Permalink to this heading"></a></h2>
 <p>Potser estàs pensant: no m'havies venut que les proves es creen per què
@@ -170,6 +170,10 @@ falli i per això escrivim la prova abans del codi. En aquest cas però, el codi
 ja el tenim i estem pressuposant que funciona. La idea és que aviat canviarem
 el codi i volem comprovar que continua funcionant de la mateixa manera després
 de les modificacions.</p>
+<p>Aquest tipus de proves sovint s'anomenen <em>proves de regressió</em>. També les podem
+entendre com proves de <em>verificació</em> o <em>validació</em> de regressió. La idea
+darrera d'elles és: si en modificar el meu codi, la prova deixa de passar, és
+que alguna cosa s'ha trencat amb la modificació.</p>
 </div>
 </div>
 

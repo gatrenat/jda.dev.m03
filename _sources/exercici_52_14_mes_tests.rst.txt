@@ -14,10 +14,11 @@
 
 .. rubric:: Enunciat
 
-Amb la prova de l'exercici anterior ja podem fer alguna cosa. Amb tot, abans de
-començar a modificar un codi, és molt interessant disposar del màxim possible
-de cobertura de proves. És a dir, que les proves passin pel màxim nombre de
-línies del codi.
+Amb la prova de l'exercici :doc:`anterior <exercici_52_13_init_test>` ja tenim
+un mínim de seguretat a l'hora de començar a fer canvis al nostre codi. Amb
+tot, abans de començar a modificar un codi, és molt interessant disposar del
+màxim possible de cobertura de proves. És a dir, que les proves passin pel
+màxim nombre de línies del codi.
 
 Com que estem d'entrenament, dedica una mica més d'esforç i crea un
 joc de prova amb cobertura 100% de les línies del mètode

@@ -14,29 +14,30 @@
 
 .. rubric:: Enunciat
 
-Com que anirem modificant el codi de manera significativa, voldrem
+Com que anirem modificant el nostre codi de manera significativa, voldrem
 disposar d'algun mecanisme que ens garanteixi que no hem trencat res.
 
 En aquest exercici generarem una prova unitària per al mètode
 ``Client.informe()``
 
-La prova inicial serà molt senzilla. Agafarem el nostre client *demo* que
-GestorLite, i la prova unitària simplement cridarà ``informe()`` i compararà el
-resultat amb el que s'esperaria per aquest client.
+La prova inicial serà molt senzilla. Agafarem el nostre client *demo* generat
+per ``GestorLite`` i recollirem el valor generat per ``informe()`` amb aquest
+client. Aquest serà el *valor esperat* per la prova que hem de crear. El
+copiarem i el posarem literalment en un String.
 
-Per tant, primer de tot obté un informe a partir de dels resultats generats per
-la versió actual de ``Client.informe()`` amb el client *demo*. A continuació,
-crea una prova JUnit en el fitxer ``TestGestor.java`` que inclogui un test que
-construeixi el client *demo*, cridi el seu ``informe()`` i compari el resultat
-amb el que hem obtingut abans.
+La prova unitària:
 
-Evidentment, si no modifiquem ``Client.informe()`` hauria de passar la
-prova. La gràcia apareixerà quan modifiquem el
-mètode.
+1. Crearà una nova instància del client *demo*: la *fixture* o *preparació* de
+   la prova.
 
-Aquest tipus de proves sovint s'anomenen *proves de regressió*. La idea darrera
-d'elles és: si en modificar el meu codi, la prova deixa de funcionar, és que ja
-no fa el que feia.
+2. Definirà el valor esperat: en aquest cas, una variable de tipus String amb el literal recollit abans, a partir de l'execució de ``GestorLite``.
+
+3. Cridarà ``informe()`` i guardarà el seu resultat com a *valor obtingut*
+
+4. Finalment afirmarà que el resultat esperat i el resultat obtingut són iguals.
+
+Evidentment, si no hem modificat ``Client.informe()``, hauria de passar la
+prova sense cap problema. La gràcia apareixerà quan modifiquem el mètode.
 
 Alguna cosa no sona bé?
 =======================
@@ -49,3 +50,8 @@ falli i per això escrivim la prova abans del codi. En aquest cas però, el codi
 ja el tenim i estem pressuposant que funciona. La idea és que aviat canviarem
 el codi i volem comprovar que continua funcionant de la mateixa manera després
 de les modificacions.
+
+Aquest tipus de proves sovint s'anomenen *proves de regressió*. També les podem
+entendre com proves de *verificació* o *validació* de regressió. La idea
+darrera d'elles és: si en modificar el meu codi, la prova deixa de passar, és
+que alguna cosa s'ha trencat amb la modificació.

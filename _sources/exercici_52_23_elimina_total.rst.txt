@@ -35,7 +35,7 @@ Abans de l'eliminació, ``informe()`` era:
             getNom() + 
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            bonificacions += bonificacionsDeLloguer(lloguer);
+            bonificacions += /* ??? */
             // composa els resultats d'aquest lloguer
             resultat += "\t" +
                 lloguer.getVehicle().getMarca() +
@@ -64,7 +64,7 @@ Amb la nova versió, el mètode quedarà amb el següent aspecte:
             getNom() + 
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacions();
+            bonificacions += /* ??? */
             // composa els resultats d'aquest lloguer
             resultat += "\t" +
                 lloguer.getVehicle().getMarca() +

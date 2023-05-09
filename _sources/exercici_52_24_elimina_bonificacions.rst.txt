@@ -29,7 +29,7 @@ Abans de l'eliminació, ``informe()`` era:
             getNom() + 
             " (" + getNif() + ")\n";
         for (Lloguer lloguer: lloguers) {
-            bonificacions += lloguer.bonificacions();
+            bonificacions += /* ??? */
             // composa els resultats d'aquest lloguer
             resultat += "\t" +
                 lloguer.getVehicle().getMarca() +
