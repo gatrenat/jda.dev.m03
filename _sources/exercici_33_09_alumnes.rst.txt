@@ -45,9 +45,9 @@ Per exemple, considera el contingut del fitxer:
 
     $ cat alumnes.csv
     nom,email,edat,esOient,uf1,uf2,uf3,uf4,uf5,uf6
-    Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9
-    Daniel Carrasco Macadàmia,daniel.carrasco@iesjoandaustria.org,21,true,5,4,5,2,NP,NP
-    Gabriela Cirerer Nasal,gabriela.cirerer@iesjoandaustria.org,20,false,6,7,5,8,9,5
+    Eleftèria Ortiz Luján,elefteria.ortiz@mevaempresa.org,10,false,7,8,5,7,8,9
+    Daniel Carrasco Macadàmia,daniel.carrasco@mevaempresa.org,21,true,5,4,5,2,NP,NP
+    Gabriela Cirerer Nasal,gabriela.cirerer@mevaempresa.org,20,false,6,7,5,8,9,5
 
 Les següents execucions demostren el funcionament del programa:
 
@@ -56,7 +56,7 @@ Les següents execucions demostren el funcionament del programa:
 
     $ java CercaAlumnes elef
     Alumne: Eleftèria Ortiz Luján
-    - email: elefteria.ortiz@iesjoandaustria.org
+    - email: elefteria.ortiz@mevaempresa.org
     - edat: 10
     - és oïent: No
     - notes: 7,8,5,7,8,9
@@ -66,17 +66,17 @@ Les següents execucions demostren el funcionament del programa:
 
     $ java CercaAlumnes ria
     Alumne: Eleftèria Ortiz Luján
-    - email: elefteria.ortiz@iesjoandaustria.org
+    - email: elefteria.ortiz@mevaempresa.org
     - edat: 10
     - és oïent: No
     - notes: 7,8,5,7,8,9
     Alumne: Daniel Carrasco Macadàmia
-    - email: daniel.carrasco@iesjoandaustria.org
+    - email: daniel.carrasco@mevaempresa.org
     - edat: 21
     - és oïent: Sí
     - notes: 5,4,5,2,NP,NP
     Alumne: Gabriela Cirerer Nasal
-    - email: gabriela.cirerer@iesjoandaustria.org
+    - email: gabriela.cirerer@mevaempresa.org
     - edat: 20
     - és oïent: No
     - notes: 6,7,5,8,9,5
@@ -86,12 +86,12 @@ Les següents execucions demostren el funcionament del programa:
 
     $ java CercaAlumnes as
     Alumne: Daniel Carrasco Macadàmia
-    - email: daniel.carrasco@iesjoandaustria.org
+    - email: daniel.carrasco@mevaempresa.org
     - edat: 21
     - és oïent: Sí
     - notes: 5,4,5,2,NP,NP
     Alumne: Gabriela Cirerer Nasal
-    - email: gabriela.cirerer@iesjoandaustria.org
+    - email: gabriela.cirerer@mevaempresa.org
     - edat: 20
     - és oïent: No
     - notes: 6,7,5,8,9,5

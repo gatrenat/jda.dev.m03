@@ -65,10 +65,11 @@ Crear repositori
 ----------------
 
 Crear el teu repositori és molt fàcil. En primer lloc, ves a
-`https://github.com/` i, si encara no en tens un, crea't un compte.
+https://github.com/ i, si encara no en tens un, crea't un compte.
 
-Et recomano que el compte de correu que facis servir sigui el del centre
-doncs així tindràs totes les notificacions del curs a una mateixa adreça.
+Et recomano que la compta de correu que facis servir sigui el teu personal,
+doncs així el podràs aprofitar com el teu espai personal també en acabar el
+curs.
 
 Un cop disposes del teu compte, crea un repositori. 
 
@@ -179,7 +180,7 @@ Escriu les següents comandes amb cura, tot posant les teves dades:
     :linenos:
     :emphasize-lines: 1, 3, 4, 5
 
-    $ ssh-keygen -t ed25519 -C "elteucorreu@iesjoandaustria.org"
+    $ ssh-keygen -t ed25519 -C "elteucorreu@mevaempresa.org"
     Generating public/private ed25519 key pair.
     Enter file in which to save the key (/home/usuari/.ssh/id_ed25519): 
     Enter passphrase (empty for no passphrase): 
@@ -187,7 +188,7 @@ Escriu les següents comandes amb cura, tot posant les teves dades:
     Your identification has been saved in /home/usuari/.ssh/id_ed25519.
     Your public key has been saved in /home/usuari/.ssh/id_ed25519.pub.
     The key fingerprint is:
-    SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@iesjoandaustria.org
+    SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@mevaempresa.org
     The key's randomart image is:
     +--[ED25519 256]--+
     |  o.=o...        |
@@ -215,7 +216,7 @@ pública) que podràs consultar amb ``cat``
 .. code-block:: console
 
     $ cat ~/.ssh/id_ed25519.pub 
-    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAInteressant8gUhMostrap0uDeyWWEncriptacio0mHk elteucorreu@iesjoandaustria.org
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAInteressant8gUhMostrap0uDeyWWEncriptacio0mHk elteucorreu@mevaempresa.org
 
 Selecciona la sortida de ``cat`` que comença amb ``ssh-ed`` i acaba amb el
 final de la teva adreça de correu. Ho pots fer amb el ratolí i, amb botó
@@ -288,7 +289,7 @@ la teva adreça de correu:
 .. code-block:: console
 
     $ git config --global user.name "el teu nom real"
-    $ git config --global user.email "lamevaadreça@iesjoandaustria.org"
+    $ git config --global user.email "lamevaadreça@mevaempresa.org"
 
 Afegirem també la següent configuració addicional [#avisincomode]_:
 
@@ -345,8 +346,7 @@ Et proposo que escriguis quelcom similar a:
     Introducció a la Programació
     ############################
 
-    Activitats del curs d'introducció a la programació per cicles de
-    desenvolupament al centre IES Joan d'Àustria
+    Activitats del curs d'introducció a la programació
 
 Potser hi voldràs posar el teu nom i alguna cosa més relacionada amb tu.
 

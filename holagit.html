@@ -154,9 +154,10 @@ pels desenvolupadors en l'actualitat</p></li>
 <div class="section" id="crear-repositori">
 <h3>Crear repositori<a class="headerlink" href="#crear-repositori" title="Permalink to this heading"></a></h3>
 <p>Crear el teu repositori és molt fàcil. En primer lloc, ves a
-<cite>https://github.com/</cite> i, si encara no en tens un, crea't un compte.</p>
-<p>Et recomano que el compte de correu que facis servir sigui el del centre
-doncs així tindràs totes les notificacions del curs a una mateixa adreça.</p>
+<a class="reference external" href="https://github.com/">https://github.com/</a> i, si encara no en tens un, crea't un compte.</p>
+<p>Et recomano que la compta de correu que facis servir sigui el teu personal,
+doncs així el podràs aprofitar com el teu espai personal també en acabar el
+curs.</p>
 <p>Un cop disposes del teu compte, crea un repositori.</p>
 <p>Anomena'l <code class="docutils literal notranslate"><span class="pre">introprg</span></code>, marca'l com a <strong>privat</strong> i demana que inicialitzi
 el repositori amb un <em>README</em>. Finalment prem el botó de crear, deixant la
@@ -240,7 +241,7 @@ les línies 4 i 5 del llistat següent.</p>
 <p>Obre una consola o terminal, per exemple amb <code class="docutils literal notranslate"><span class="pre">ctrl-alt-t</span></code> o <code class="docutils literal notranslate"><span class="pre">alt-f2</span>
 <span class="pre">gnome-terminal</span></code>, tot i que segurament trobaràs també opcions als menús.</p>
 <p>Escriu les següents comandes amb cura, tot posant les teves dades:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;elteucorreu@iesjoandaustria.org&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;elteucorreu@mevaempresa.org&quot;</span>
 </span><span class="linenos"> 2</span><span class="go">Generating public/private ed25519 key pair.</span>
 <span class="hll"><span class="linenos"> 3</span><span class="go">Enter file in which to save the key (/home/usuari/.ssh/id_ed25519):</span>
 </span><span class="hll"><span class="linenos"> 4</span><span class="go">Enter passphrase (empty for no passphrase):</span>
@@ -248,7 +249,7 @@ les línies 4 i 5 del llistat següent.</p>
 </span><span class="linenos"> 6</span><span class="go">Your identification has been saved in /home/usuari/.ssh/id_ed25519.</span>
 <span class="linenos"> 7</span><span class="go">Your public key has been saved in /home/usuari/.ssh/id_ed25519.pub.</span>
 <span class="linenos"> 8</span><span class="go">The key fingerprint is:</span>
-<span class="linenos"> 9</span><span class="go">SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@iesjoandaustria.org</span>
+<span class="linenos"> 9</span><span class="go">SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@mevaempresa.org</span>
 <span class="linenos">10</span><span class="go">The key&#39;s randomart image is:</span>
 <span class="linenos">11</span><span class="go">+--[ED25519 256]--+</span>
 <span class="linenos">12</span><span class="go">|  o.=o...        |</span>
@@ -272,7 +273,7 @@ les línies 4 i 5 del llistat següent.</p>
 <p>Hauràs de copiar el contingut del fitxer <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code> (la clau
 pública) que podràs consultar amb <code class="docutils literal notranslate"><span class="pre">cat</span></code></p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-<span class="go">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAInteressant8gUhMostrap0uDeyWWEncriptacio0mHk elteucorreu@iesjoandaustria.org</span>
+<span class="go">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAInteressant8gUhMostrap0uDeyWWEncriptacio0mHk elteucorreu@mevaempresa.org</span>
 </pre></div>
 </div>
 <p>Selecciona la sortida de <code class="docutils literal notranslate"><span class="pre">cat</span></code> que comença amb <code class="docutils literal notranslate"><span class="pre">ssh-ed</span></code> i acaba amb el
@@ -327,7 +328,7 @@ generat GitHub.</p>
 <p>Escriu per consola les següents comandes, tot indicant el teu nom real i
 la teva adreça de correu:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;el teu nom real&quot;</span>
-<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;lamevaadreça@iesjoandaustria.org&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;lamevaadreça@mevaempresa.org&quot;</span>
 </pre></div>
 </div>
 <p>Afegirem també la següent configuració addicional<a class="footnote-reference brackets" href="#avisincomode" id="id3">2</a>:</p>
@@ -368,8 +369,7 @@ escriure una descripció de què contindrà el teu repositori.</p>
 <span class="gh">Introducció a la Programació</span>
 <span class="gh">############################</span>
 
-Activitats del curs d&#39;introducció a la programació per cicles de
-desenvolupament al centre IES Joan d&#39;Àustria
+Activitats del curs d&#39;introducció a la programació
 </pre></div>
 </div>
 <p>Potser hi voldràs posar el teu nom i alguna cosa més relacionada amb tu.</p>

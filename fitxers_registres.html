@@ -206,7 +206,7 @@ la classe del nostre programa:</p>
 <em>classe</em>, farem el següent:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">Alumne</span><span class="w"> </span><span class="n">alumne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span>
 <span class="linenos">2</span><span class="n">alumne</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Eleftèria Ortiz Luján&quot;</span><span class="p">;</span>
-<span class="linenos">3</span><span class="n">alumne</span><span class="p">.</span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;elefteria.ortiz@iesjoandaustria.org&quot;</span><span class="p">;</span>
+<span class="linenos">3</span><span class="n">alumne</span><span class="p">.</span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;elefteria.ortiz@mevaempresa.org&quot;</span><span class="p">;</span>
 <span class="linenos">4</span><span class="n">alumne</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span>
 <span class="linenos">5</span><span class="n">alumne</span><span class="p">.</span><span class="na">esOient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <span class="linenos">6</span><span class="n">alumne</span><span class="p">.</span><span class="na">notes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="p">};</span>
@@ -276,7 +276,7 @@ instància amb els valors desitjats.</p>
 <p>Així, podríem crear una nova instància per la nostra estudiant Eleftèria
 de la següent manera:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Alumne</span><span class="w"> </span><span class="n">alumne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">construeixAlumne</span><span class="p">(</span><span class="s">&quot;Eleftèria Ortiz Luján&quot;</span><span class="p">,</span>
-<span class="w">                                 </span><span class="s">&quot;elefteria.ortiz@iesjoandaustria.org&quot;</span><span class="p">,</span>
+<span class="w">                                 </span><span class="s">&quot;elefteria.ortiz@mevaempresa.org&quot;</span><span class="p">,</span>
 <span class="w">                                 </span><span class="mi">19</span><span class="p">,</span>
 <span class="w">                                 </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">                                 </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="p">});</span>
@@ -304,7 +304,7 @@ seus camps. Una manera seria:</p>
 <p>En cridar-lo, si definim adequadament la funció <code class="docutils literal notranslate"><span class="pre">String</span>
 <span class="pre">notesACsv(int[])</span></code>, ens treurà per sortida estàndard el següent contingut:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Alumne: Eleftèria Ortiz Luján</span>
-<span class="go">- email: elefteria.ortiz@iesjoandaustria.org</span>
+<span class="go">- email: elefteria.ortiz@mevaempresa.org</span>
 <span class="go">- edat: 19</span>
 <span class="go">- és oïent: No</span>
 <span class="go">- notes: 7,8,5,7,8,9</span>
@@ -323,7 +323,7 @@ exemple, ajudar-nos a depurar el codi. Per exemple:</p>
 </div>
 <p>En fer la crida <code class="docutils literal notranslate"><span class="pre">alumneAString(alumne)</span></code> sobre la instància de Eleftèria
 rebrem el String:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Alumne(nom: &quot;Eleftèria Ortiz Luján&quot;, email: &quot;elefteria.ortiz@iesjoandaustria.org&quot;, edat: 19, esOient: false, notes: {7,8,5,7,8,9})</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Alumne(nom: &quot;Eleftèria Ortiz Luján&quot;, email: &quot;elefteria.ortiz@mevaempresa.org&quot;, edat: 19, esOient: false, notes: {7,8,5,7,8,9})</span>
 </pre></div>
 </div>
 </div>
@@ -341,7 +341,7 @@ en forma línia dins d;un fitxer csv.</p>
 </div>
 <p>Així, per exemple, en cridar <code class="docutils literal notranslate"><span class="pre">alumneACsv(alumne)</span></code> amb el valor
 <code class="docutils literal notranslate"><span class="pre">alumne</span></code> en que havíem guardat les dades d'Eleftèria, ens retornaria:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&quot;Eleftèria Ortiz Luján,elefteria.ortiz@mevaempresa.org,10,false,7,8,5,7,8,9&quot;</span>
 </pre></div>
 </div>
 <p>Al procés de convertir l'alumne a una seqüència de text se li sol anomenar
@@ -367,13 +367,13 @@ de moment.</p>
 
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span><span class="w">   </span><span class="c1">// un alumne buit</span>
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Daniel Carrasco Macadàmia&quot;</span><span class="p">;</span>
-<span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;daniel.carrasco@iesjoandaustria.org&quot;</span><span class="p">;</span>
+<span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;daniel.carrasco@mevaempresa.org&quot;</span><span class="p">;</span>
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">esOient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">.</span><span class="na">notes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">};</span>
 
 <span class="n">alumnes</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">construeixAlumne</span><span class="p">(</span><span class="s">&quot;Gabriela Cirerer Nasal&quot;</span><span class="p">,</span>
-<span class="w">                              </span><span class="s">&quot;gabriela.cirerer@iesjoandaustria.org&quot;</span><span class="p">,</span>
+<span class="w">                              </span><span class="s">&quot;gabriela.cirerer@mevaempresa.org&quot;</span><span class="p">,</span>
 <span class="w">                              </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">                              </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">});</span>
 </pre></div>

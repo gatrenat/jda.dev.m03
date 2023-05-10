@@ -26,7 +26,7 @@ que has acabat prenent.
 Requeriments
 ============
 
-Aplicació de gestió de les activitats de manteniment d'un centre com l'IES Joan d'Àustria. Inclou el
+Aplicació de gestió de les activitats de manteniment d'un centre educatiu. Inclou el
 manteniment d'aules, equips informàtics, intranet… Permet que un usuari d'un subsistema pugui avisar
 d'una incidència i veure el seguiment que se li està fent. Les incidències es podran graduar segons
 la seva criticitat i urgència. Els tècnics associats al subsistema, en accedir a la llista

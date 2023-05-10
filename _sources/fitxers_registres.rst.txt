@@ -138,7 +138,7 @@ Per representar la nostra companya Eleftèria, fent servir aquesta
 
    Alumne alumne = new Alumne();
    alumne.nom = "Eleftèria Ortiz Luján";
-   alumne.email = "elefteria.ortiz@iesjoandaustria.org";
+   alumne.email = "elefteria.ortiz@mevaempresa.org";
    alumne.edat = 19;
    alumne.esOient = false;
    alumne.notes = new int[] { 7, 8, 5, 7, 8, 9 };
@@ -231,7 +231,7 @@ de la següent manera:
 .. code-block:: java
 
    Alumne alumne = construeixAlumne("Eleftèria Ortiz Luján",
-                                    "elefteria.ortiz@iesjoandaustria.org",
+                                    "elefteria.ortiz@mevaempresa.org",
                                     19,
                                     false,
                                     new int[] { 7, 8, 5, 7, 8, 9 });
@@ -265,7 +265,7 @@ notesACsv(int[])``, ens treurà per sortida estàndard el següent contingut:
 .. code-block:: console
 
     Alumne: Eleftèria Ortiz Luján
-    - email: elefteria.ortiz@iesjoandaustria.org
+    - email: elefteria.ortiz@mevaempresa.org
     - edat: 19
     - és oïent: No
     - notes: 7,8,5,7,8,9
@@ -288,7 +288,7 @@ rebrem el String:
 
 .. code-block:: console
 
-    Alumne(nom: "Eleftèria Ortiz Luján", email: "elefteria.ortiz@iesjoandaustria.org", edat: 19, esOient: false, notes: {7,8,5,7,8,9})
+    Alumne(nom: "Eleftèria Ortiz Luján", email: "elefteria.ortiz@mevaempresa.org", edat: 19, esOient: false, notes: {7,8,5,7,8,9})
 
 Serialització
 -------------
@@ -312,7 +312,7 @@ Així, per exemple, en cridar ``alumneACsv(alumne)`` amb el valor
 
 .. code-block:: console
 
-    "Eleftèria Ortiz Luján,elefteria.ortiz@iesjoandaustria.org,10,false,7,8,5,7,8,9"
+    "Eleftèria Ortiz Luján,elefteria.ortiz@mevaempresa.org,10,false,7,8,5,7,8,9"
 
 Al procés de convertir l'alumne a una seqüència de text se li sol anomenar
 *serialitzar*, mentre que la recuperació d'una instància a partir de la
@@ -344,13 +344,13 @@ Podem donar-li d'alta nous valors:
 
    alumnes[1] = new Alumne();   // un alumne buit
    alumnes[1].nom = "Daniel Carrasco Macadàmia";
-   alumnes[1].email = "daniel.carrasco@iesjoandaustria.org";
+   alumnes[1].email = "daniel.carrasco@mevaempresa.org";
    alumnes[1].edat = 21;
    alumnes[1].esOient = true;
    alumnes[1].notes = new int[] { 5, 4, 5, 2, -1, -1 };
 
    alumnes[2] = construeixAlumne("Gabriela Cirerer Nasal",
-                                 "gabriela.cirerer@iesjoandaustria.org",
+                                 "gabriela.cirerer@mevaempresa.org",
                                  20, false,
                                  new int[] {6, 7, 5, 8, 9, 5});
 
