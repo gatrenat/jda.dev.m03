@@ -82,12 +82,6 @@ podrien simplificar els nostres codis, el nostre objectiu no és tant
 resoldre els problemes si no aprendre a programar. És a dir, fes servir
 **només** el que et vagin oferint aquests continguts.
 
-Et recomano que ampliïs les teves anotacions del :doc:`resum de comandes
-<exercici_00_03_resum_comandes>` amb les funcions que et vagi presentant.
-En cas que trobis d'altres, és important
-que les marquis com a **no permeses** en els exercicis base ni a les
-proves d'aquest curs.
-
 |exerciseicon__T| :doc:`exercici_31_62_informecaracter`
 
 |exerciseicon__T| :doc:`exercici_31_63_manipulant_strings`

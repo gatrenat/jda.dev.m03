@@ -52,7 +52,6 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
 <li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
@@ -121,11 +120,13 @@ el primer exercici.</p>
 funcionament:</p>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="_images/plantuml-e6ffdda87ba5d89aff8dfe1f4091cde4a8f0aaf1.png" alt="actor Usuari
+<img src="_images/plantuml-34fa168b8490250d0f2ca46629c30878f401d8f6.png" alt="actor Usuari
 Usuari -&gt; unClient: informe()
 unClient -&gt; unLloguer: getVehicle()
 note left: per cada lloguer
-unClient -&gt; unVehicle: getTipus()
+unClient -&gt; unVehicle: getMarca()
+unClient -&gt; unVehicle: getModel()
+unClient -&gt; unVehicle: getCategoria()
 unClient -&gt; unLloguer: getDies()
 
 hide footbox

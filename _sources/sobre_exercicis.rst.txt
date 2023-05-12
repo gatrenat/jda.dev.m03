@@ -1,3 +1,4 @@
+:orphan:
 ###################
 Sobre els exercicis
 ###################
@@ -32,9 +33,6 @@ apareixent de manera que puguis aplicar el que tot just acabes de veure.
 
 Al final de cada bloc d'exercicis, i per facilitar la localització,
 apareixerà la llista amb tots els exercicis del bloc. 
-
-El lliurament dels exercicis es realitzarà mitjançant un repositori
-``git`` compartit. La secció :doc:`holagit` t'explicarà tots els detalls.
 
 Els exercicis disposen de tres possibles atributs que indiquen la
 obligatorietat, la dificultat i si disposen de mecanisme d'autoavaluació.

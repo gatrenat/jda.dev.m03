@@ -15,7 +15,9 @@ funcionament:
     Usuari -> unClient: informe()
     unClient -> unLloguer: getVehicle()
     note left: per cada lloguer
-    unClient -> unVehicle: getTipus()
+    unClient -> unVehicle: getMarca()
+    unClient -> unVehicle: getModel()
+    unClient -> unVehicle: getCategoria()
     unClient -> unLloguer: getDies()
 
     hide footbox

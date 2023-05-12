@@ -53,7 +53,8 @@ fer una prova bàsica del teu codi.
   ``prgtest`` no farà cap cas a aquest ``main()``.
 
 
-Considera la següent simulació d'execució per que et puguis fer una idea de les dades concretes del client demo:
+Considera la següent simulació d'execució per que et puguis fer una idea de les
+dades concretes del client demo:
 
 .. code-block:: console
    :emphasize-lines: 2-
@@ -69,3 +70,7 @@ Considera la següent simulació d'execució per que et puguis fer una idea de l
               dies llogats: 5
            3. vehicle: Fiat Uno
               dies llogats: 3
+
+
+**Nota**: Seat 600 i Tata Vista haurien de ser de categoria bàsica, mentre que
+el Fiat Uno hauria de estar com categoria luxe.

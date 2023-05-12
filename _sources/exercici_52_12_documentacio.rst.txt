@@ -61,8 +61,6 @@ Per exemple, el diagrama de classes, el representaries:
     Vehicle <-left- Lloguer
     Lloguer <-left- Client: *
 
-    Vehicle <-left- Lloguer
-    Lloguer <-left- Client
 
 
 Per la seva banda, el diagrama de seqüència el podries descriure amb:
@@ -73,5 +71,7 @@ Per la seva banda, el diagrama de seqüència el podries descriure amb:
     Usuari -> unClient: informe()
     unClient -> unLloguer: getVehicle()
     note left: per cada lloguer
-    unClient -> unVehicle: getTipus()
+    unClient -> unVehicle: getMarca()
+    unClient -> unVehicle: getModel()
+    unClient -> unVehicle: getCategoria()
     unClient -> unLloguer: getDies()

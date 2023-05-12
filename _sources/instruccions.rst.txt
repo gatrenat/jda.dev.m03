@@ -2,8 +2,7 @@
 Instruccions seqüencials
 ########################
 
-Si penses en el que varem veure al :doc:`primer_contacte`, 
-un programa no deixa de ser una llista d'instruccions que
+Un programa no deixa de ser una seqüència d'instruccions que
 l'ordinador va executant una darrera de l'altra.
 
 Podem classificar les instruccions bàsiques en tres categories:
@@ -41,4 +40,3 @@ desenvolupar els nostres primers programes.
 
     declaracions_i_assignacions.rst
     entrada_sortida.rst
-

@@ -16,7 +16,7 @@
 
 .. uml::
     :align: center
-    :caption: Relació entre les classews Segment i Punt
+    :caption: Relació entre les classes Segment i Punt
 
     class Punt {
         - x: int
