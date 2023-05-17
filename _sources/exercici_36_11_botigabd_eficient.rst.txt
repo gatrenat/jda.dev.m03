@@ -1,0 +1,64 @@
+##############################################################
+|exerciseicon_S_| Exercici 36_11. La botiga de vins *eficient*
+##############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``36_11_botigabd_eficient/``
+
+* Continguts relacionats: :doc:`bd_consultes`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+.. rubric:: Enunciat
+
+En aquest exercici desenvoluparàs una nova versió de la botiga de vins. En
+aquesta ocasió, en comptes de guardar les dades al fitxer ``botiga.csv``
+ho faràs a la base de dades ``botiga.bd``.
+
+Per simplicitat, et proposo que escullis la versió de l'aplicació que vas
+desenvolupar fins l'exercici en que :doc:`guardàvem les dades
+<exercici_35_04_csv>`. Això permetrà que puguem provar les operacions
+d'afegir, modificar i eliminar que van quedar abandonades en versions
+posteriors. Si vols, però, pots escollir qualsevol versió posterior.
+
+El funcionament serà equivalent al que hem fet servir per la versió amb
+fitxers. És a dir, en arrencar l'aplicació carregarà tots els vins que
+trobi a la base de dades (si és que existeix i n'hi ha cap) i en sortir,
+els guardarà per què estiguin disponibles a la propera sessió.
+
+La classe ``Vi`` requerirà poder guardar l'identificador de la base de
+dades. Et proposo que facis servir un mecanisme similar al que hem vist
+per les classes de ``Zoo`` a exercicis anteriors.
+
+Tindràs l'oportunitat de realitzar aquest exercici en diferents versions.
+
+Aquesta versió és una mica més complexa que
+:doc:`l'anterior<exercici_36_10_botigabd_ineficient>`. Toca
+concentrar-se si la vols resoldre.
+
+Versió eficient
+===============
+
+La versió ineficient obliga a eliminar tots els vins registrats abans
+d'incorporar els actuals a la base de dades. Això podria arribar a ser
+inacceptable en un context amb milers d'entrades en les que la majoria de
+les execucions no modifiquen cap o només uns mínims de vins.
+
+Aquesta versió més eficient, només guardarà els vins nous, modificarà les
+que han canviat i eliminant els que ja no hi són a la botiga.
+
+Potser la manera més fàcil de fer aquesta versió seria afegir unes 
+llistes a ``Entorn`` que continguin referències als vins nous, eliminats i 
+modificats. ``Entorn`` se n'encarregarà d'anar mantenint aquestes llistes
+i, en sortir, afegirà els nous, modificarà els canviats i eliminarà els…
+bé, ja m'entens.
+
+Una altra opció és afegir a ``Vi`` un camp que indiqui si és modificat o
+eliminat. Nou no caldrà doncs serà evident si el seu identificador és
+indefinit.
+
+Hi ha més maneres. Si se t'acut alguna altra, endavant! Potser voldràs
+comentar-la abans de començar.

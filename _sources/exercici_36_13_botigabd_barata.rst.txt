@@ -1,0 +1,54 @@
+#############################################################
+|exerciseiconO__| Exercici 36_13. Una botiga *barata* de vins
+#############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``36_13_botigabd_barata/``
+
+* Continguts relacionats: :doc:`bd_consultes`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
+
+.. rubric:: Enunciat
+
+En aquest exercici desenvoluparàs una nova versió de la botiga de vins. En
+aquesta ocasió, en comptes de guardar les dades al fitxer ``botiga.csv``
+ho faràs a la base de dades ``botiga.bd``.
+
+Per simplicitat, et proposo que escullis la versió de l'aplicació que vas
+desenvolupar fins l'exercici en que :doc:`guardàvem les dades
+<exercici_35_04_csv>`. Això permetrà que puguem provar les operacions
+d'afegir, modificar i eliminar que van quedar abandonades en versions
+posteriors. Si vols, però, pots escollir qualsevol versió posterior.
+
+El funcionament serà equivalent al que hem fet servir per la versió amb
+fitxers. És a dir, en arrencar l'aplicació carregarà tots els vins que
+trobi a la base de dades (si és que existeix i n'hi ha cap) i en sortir,
+els guardarà per què estiguin disponibles a la propera sessió.
+
+La classe ``Vi`` requerirà poder guardar l'identificador de la base de
+dades. Et proposo que facis servir un mecanisme similar al que hem vist
+per les classes de ``Zoo`` a exercicis anteriors.
+
+Tindràs l'oportunitat de realitzar aquest exercici en diferents versions.
+
+Aquesta versió està pensada per si no vas fer l'aplicació de la botiga de
+vins i no et vols posar a fer-la.
+
+Versió *barata*
+===============
+
+Bàsicament et caldrà implementar la classe ``Vi`` segons les
+:doc:`especificacions de l'exercici <exercici_35_01_vi>`, afegir els camps
+necessaris per fer persistència (com hem fet amb els elements del Zoo), una
+classe ``Botiga`` que ofereixi operacions *CRUD* (afegir, consultar, modificar
+i eliminar) tal i com feia la classe ``Zoo``, i afegir una classe ``UsaBotiga``
+que demostri el funcionament de totes les operacions que ofereix ``Botiga`` de
+manera similar a com ho fèiem amb les diferents ``UsaZoo``.
+
+
+.. important:: Si ja has fet una o més de les versions de *botigabd* dels
+   exercicis anteriors, no cal que facis aquesta ja que no t'aportarà gaire.

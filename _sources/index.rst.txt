@@ -23,6 +23,7 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     cvs.rst
     test.rst
     refactoring.rst
+    bd.rst
     apendix.rst
 
 ..  primeres_passes.rst
