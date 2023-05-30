@@ -131,7 +131,7 @@ La sortida esperada és:
         Categoria(id:3, ocell)
         Categoria(id:2, peix)
 
-    Afegim guppy dins d'una categoria coneguda
+    Afegim pardal dins d'una categoria coneguda
     Nombre de categories: 3
         Categoria(id:1, ocell)
         Categoria(id:3, ocell)
