@@ -1,29 +1,25 @@
-############################
-Introducció a la programació
-############################
+######################
+Continguts de vacances
+######################
 
-Et dono la benvinguda a aquest curs de programació.
+Bon dia
 
-Pots trobar més detalls sobre aquests materials i la seva llicència d'ús
-seguint :doc:`aquest enllaç <about>`.
+Moltes gràcies per interessar-te en aquests materials.
 
-Els continguts d'aquest curs estan organitzats en els següents temes:
+Com veus, en aquests moments no es troben disponibles. Ara estan de vacances, i
+poc després traslladaran la seva residència.
 
+Pots contactar amb mi a:
 
-.. toctree::
-    :titlesonly:
-    :maxdepth: 1
+    *moises* **punt** *gomez* **arroba** *iticbcn* **punt** *cat*
 
-    basics.rst
-    moduls.rst
-    fitxers.rst
-    poo.rst
-    adoo.rst
-    bib.rst
-    cvs.rst
-    test.rst
-    refactoring.rst
-    bd.rst
-    apendix.rst
+Tingues present que aquests dies estic "molt concentrat" assegurant-me que
+els apunts descansen bé. Per aquesta raó, probablement tardaré una mica en
+contestar-te.  Gràcies per la teva comprensió.
 
-..  primeres_passes.rst
+Salutacions
+
+.. image:: _static/summer.jpg
+    :align: center
+    :target: https://pixabay.com/users/ylanite-2218222/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3363788">Ylanite Koppens</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3363788
+    :alt: Una relaxant imatge de vacances per gentilesa de https://pixabay.com

@@ -25,7 +25,3 @@ div.admonition.exercise.stared p.admonition-title:before{
 div.admonition.exercise.blackstared p.admonition-title:before{
     content: "★";
 }
-
-img.align-center {
-    padding-bottom: 1em;
-}
