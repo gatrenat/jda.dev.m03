@@ -21,20 +21,15 @@ Fixa't com la icona que representa l'exercici es mostra amb
 la marca ✓. Això t'indica que l'exercici disposa de prova automàtica.
 Anem a executar-la.
 
-Ara, obre un terminal ves a la carpeta corresponent. Per exemple:
-
-.. code-block:: console
-
-    $ cd ~/introprg/00_04_holamon
-
-Si no ho has fet encara, et recomano que actualitzis el teu repositori per
-si hi ha canvis. Per exemple, si has fet coses a un altre lloc o bé jo
-t'he afegit actualitzacions.
+Si no ho has fet encara, actualitza el teu repositori per si hi ha canvis. Per
+exemple, si has fet coses a un altre lloc o bé jo t'he afegit actualitzacions.
 
 .. code-block:: console
 
     $ git pull
 
+Ara, obre un terminal, inicialitza l'exercici, crea i ves a la carpeta
+corresponent (recorda ``prgtest init 00_04``).
 
 Ara guarda el fitxer ``HolaMon.java`` dins la carpeta de lliurament que
 s'indica a l'inici d'aquest enunciat.

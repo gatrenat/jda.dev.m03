@@ -10,9 +10,10 @@ bé, ment oberta, molta curiositat i… endavant!
     :maxdepth: 1
 
     requeriments_coneixements_previs.rst
-    requeriments_tecnics.rst
     sobre_aquests_continguts.rst
+    requeriments_tecnics.rst
     sobre_exercicis.rst
+    consells.rst
     primer_contacte.rst
     holagit.rst
     configuracio_entorn.rst

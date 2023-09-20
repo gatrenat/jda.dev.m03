@@ -54,9 +54,10 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="primeres_passes.html">Primeres passes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="requeriments_coneixements_previs.html">Coneixements previs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sobre_aquests_continguts.html">Sobre aquests continguts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sobre_exercicis.html">Sobre els exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consells.html">Uns consells</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="holagit.html">Git i GitHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuracio_entorn.html">Configuració de l'entorn</a></li>
@@ -119,19 +120,17 @@ una resposta al GitHub.</p>
 <p>Segueix les instruccions:</p>
 <ol class="arabic">
 <li><p>Obre una consola i col·loca't a la carpeta de treball (<code class="docutils literal notranslate"><span class="pre">~/introprg/</span></code>)</p></li>
-<li><p>Crea una nova carpeta amb el nom <code class="docutils literal notranslate"><span class="pre">00_02_holagit/</span></code> on deixarem
-l'exercici, i entra-hi:</p>
+<li><p>Inicialitza l'exercici:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>~/introprg
-<span class="gp">$ </span>mkdir<span class="w"> </span>00_02_holagit
-<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>00_02_holagit
+<span class="gp">$ </span>prgtest<span class="w"> </span>init<span class="w"> </span>00_02
 </pre></div>
 </div>
-<p><strong>Nota</strong>: Normalment les carpetes et seran creades automàticament. En
-aquest cas, no caldrà que facis la comanda <code class="docutils literal notranslate"><span class="pre">mkdir</span></code></p>
 </li>
-<li><p>Descarrega el fitxer <a class="reference download internal" download="" href="_downloads/49daf3cf97d802077cc042d2b9e66366/primer_exercici.rst"><code class="xref download docutils literal notranslate"><span class="pre">primer_exercici.rst</span></code></a> i posa'l a la nova carpeta.</p></li>
-<li><p>Edita el fitxer <code class="docutils literal notranslate"><span class="pre">primer_exercici.rst</span></code> amb un editor de text pla</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gedit<span class="w"> </span>primer_exercici.rst<span class="w"> </span><span class="p">&amp;</span>
+<li><p>Segueix les instruccions que t'indicarà <cite>prgtest</cite>. Bàsicament et proposarà
+les instruccions per crear una carpeta i entrar-hi.</p></li>
+<li><p>Descarrega el fitxer <a class="reference download internal" download="" href="_downloads/26168eb54fdd865dc69a334d14bd249c/exercici_git.rst"><code class="xref download docutils literal notranslate"><span class="pre">exercici_git.rst</span></code></a> i posa'l a la nova carpeta.</p></li>
+<li><p>Edita el fitxer <code class="docutils literal notranslate"><span class="pre">exercici_git.rst</span></code> amb un editor de text pla</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gedit<span class="w"> </span>exercici_git.rst<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>Aquest fitxer conté text pla en un format anomenat <em>ReStructuredText</em>.
@@ -149,13 +148,13 @@ fitxer.</p>
 cas que no tinguis res més a dir, posa-hi quelcom similar a <em>Res més a dir</em>.</p></li>
 <li><p>Guarda els canvis al fitxer (ex. amb <code class="docutils literal notranslate"><span class="pre">ctrl-s</span></code>)</p></li>
 <li><p>Pots revisar que tot estigui bé, escrivint, des de la consola:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>primer_exercici.rst
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>exercici_git.rst
 </pre></div>
 </div>
 <p>Si hi ha alguna cosa que no t'agrada, pots tornar-ho a editar.</p>
 </li>
 <li><p>Des de la consola, registra els canvis al control de versions:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>primer_exercici.rst
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>exercici_git.rst
 <span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Completat l&#39;exercici hola git&quot;</span>
 </pre></div>
 </div>

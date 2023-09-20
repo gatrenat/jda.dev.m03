@@ -50,9 +50,14 @@ vigila no fer servir als exercicis res incompatible per la versió 1.17, ja que
 no els podré corregir i, el que és pitjor per a tu, tampoc no podré posar-te
 nota.
 
-Una última observació. És important que tinguis clar que aquest **no** és un
-curs de Java. És un curs de programació i no de codificació! Només fem servir
-aquest llenguatge com a eina per aprendre els conceptes de programació que
-després faràs servir en ves-a-saber-tu-quin-llenguatge (potser ni existeix
-encara!). Les característiques particulars de Java fan que sigui una bona
-elecció per aquest curs, no pateixis.
+.. important::
+
+    És important que tinguis clar que aquest **no** és un curs de Java. És un
+    curs de programació i no de codificació! Només fem servir aquest llenguatge
+    com a eina per aprendre els conceptes de programació que després faràs
+    servir en ves-a-saber-tu-quin-llenguatge (potser ni existeix encara!).
+
+    Les característiques particulars de Java fan que sigui una bona elecció per
+    aquest curs, no pateixis. A més, la versió 1.17 és molt `moderna per la
+    majoria de les empreses
+    <https://newrelic.com/resources/report/2023-state-of-the-java-ecosystem>`_.

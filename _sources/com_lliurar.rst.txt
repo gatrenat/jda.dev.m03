@@ -10,6 +10,13 @@ teus exercicis per després lliurar-los.
 En pocs dies no et caldrà tornar a mirar aquests continguts però potser
 ara et serveixen de referència.
 
+
+Preparar l'entorn
+=================
+
+Per preparar l'entorn, et caldrà seguir les passes de :doc:`holagit`.
+
+
 Aquestes són les passes bàsiques que has de fer cada sessió
 de treball:
 
@@ -124,4 +131,3 @@ de treball:
 
 Si no te'n surts, demana ajuda. Insisteixo, aviat tot aquest mecanisme et
 semblarà molt natural i ni hi pensaràs.
-

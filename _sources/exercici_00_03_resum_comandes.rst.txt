@@ -17,6 +17,9 @@ A la secció :doc:`holagit` hem vist un munt de noves comandes des de la
 consola de GNU/Linux. És molt fàcil que les oblidem, així que et proposo
 que et facis uns apunts.
 
+Per començar, no oblidis informar a ``prgtest`` que inicies l'exercici
+(``prgtest init 00_03``)
+
 Crea un document de text, per exemple ``apunts.rst`` o ``apunts.odt`` i
 completa la següent taula amb una descripció de què fa cada comanda:
 

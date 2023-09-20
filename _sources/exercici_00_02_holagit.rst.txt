@@ -22,26 +22,24 @@ Segueix les instruccions:
 
 #. Obre una consola i col·loca't a la carpeta de treball (``~/introprg/``)
 
-#. Crea una nova carpeta amb el nom ``00_02_holagit/`` on deixarem
-   l'exercici, i entra-hi:
+#. Inicialitza l'exercici:
 
    .. code-block:: console
 
         $ cd ~/introprg
-        $ mkdir 00_02_holagit
-        $ cd 00_02_holagit
+        $ prgtest init 00_02
 
-   **Nota**: Normalment les carpetes et seran creades automàticament. En
-   aquest cas, no caldrà que facis la comanda ``mkdir``
+#. Segueix les instruccions que t'indicarà `prgtest`. Bàsicament et proposarà
+   les instruccions per crear una carpeta i entrar-hi.
 
-#. Descarrega el fitxer :download:`primer_exercici.rst
-   <_recursos/primer_exercici.rst>` i posa'l a la nova carpeta.
+#. Descarrega el fitxer :download:`exercici_git.rst
+   <_recursos/exercici_git.rst>` i posa'l a la nova carpeta.
 
-#. Edita el fitxer ``primer_exercici.rst`` amb un editor de text pla
+#. Edita el fitxer ``exercici_git.rst`` amb un editor de text pla
 
    .. code-block:: console
 
-        $ gedit primer_exercici.rst &
+        $ gedit exercici_git.rst &
 
    Aquest fitxer conté text pla en un format anomenat *ReStructuredText*.
    Es tracta d'un format que permet ser llegit fàcilment per les persones,
@@ -64,7 +62,7 @@ Segueix les instruccions:
 
    .. code-block:: console
 
-        $ cat primer_exercici.rst
+        $ cat exercici_git.rst
 
    Si hi ha alguna cosa que no t'agrada, pots tornar-ho a editar.
 
@@ -72,7 +70,7 @@ Segueix les instruccions:
 
    .. code-block:: console
 
-        $ git add primer_exercici.rst
+        $ git add exercici_git.rst
         $ git commit -am "Completat l'exercici hola git"
 
 #. Un cop estigui tal i com vols la teva resposta, puja els canvis a GitHub

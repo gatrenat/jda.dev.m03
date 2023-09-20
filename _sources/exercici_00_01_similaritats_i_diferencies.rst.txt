@@ -106,16 +106,27 @@ Potser és molt d'hora, però, així a primera vista, quin dels llenguatges
 que et presento, veus més interessant? Perquè?
 
 
-Lliurament
-==========
+Realització i lliurament
+========================
 
-Per lliurar l'exercici, des de la consola, registra els canvis al control de versions i puja'ls a GitHub:
+Per realitzar l'exercici, primer avisa a `prgtesrt` que l'inicies:
 
-   .. code-block:: console
+.. code-block:: console
 
-        $ git add --all
-        $ git commit -am "Completat l'exercici 00_01"
-        $ git push
+   $ cd ~/introprg
+   $ prgtest init 00_01
+
+Ara segueix les passes que t'indica per crear i canviar a la carpeta de l'exercici.
+
+Un cop allà, col·loca-hi el fitxer amb la teva resposta. 
+
+Un cop finalitzat, registra els canvis al control de versions i puja'ls a GitHub:
+
+.. code-block:: console
+
+   $ git add --all
+   $ git commit -am "Completat l'exercici 00_01"
+   $ git push
 
 Pots comprovar que tot està correcte, mirant directament a l'aplicació Web de
 GitHub.

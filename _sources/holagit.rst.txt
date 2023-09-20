@@ -291,11 +291,12 @@ la teva adreça de correu:
     $ git config --global user.name "el teu nom real"
     $ git config --global user.email "lamevaadreça@mevaempresa.org"
 
-Afegirem també la següent configuració addicional [#avisincomode]_:
-
-.. code-block:: console
-
-    $ git config pull.rebase false
+.. Afegirem també la següent configuració addicional [#avisincomode]_:
+.. 
+.. .. code-block:: console
+.. 
+..     $ git config pull.ff only
+..     $ git config pull.rebase false
 
 
 Creem el primer fitxer
@@ -547,9 +548,9 @@ GitHub.
    uniformitzar la gestió de les teves activitats.
 
 
-.. [#avisincomode] A les versions recents de git (+2.27) han afegit un
-   missatge d'avís amb una de les comandes (``pull``) que pot resultar una
-   mica confós quan estàs començant a descobrir l'eina. Aquest valor de
-   configuració és adequat per l'ús que en farem. Si en vols saber més,
-   pots revisar `aquesta discusió a stackoverflow
-   <https://stackoverflow.com/questions/62653114/how-to-deal-with-this-git-warning-pulling-without-specifying-how-to-reconcile>`_
+.. .. [#avisincomode] A les versions recents de git (2.27+) han afegit un
+..    missatge d'avís amb una de les comandes (``pull``) que pot resultar una
+..    mica confós quan estàs començant a descobrir l'eina. Aquest valor de
+..    configuració és adequat per l'ús que en farem. Si en vols saber més,
+..    pots revisar `aquesta discusió a stackoverflow
+..    <https://stackoverflow.com/questions/62653114/how-to-deal-with-this-git-warning-pulling-without-specifying-how-to-reconcile>`_
