@@ -15,10 +15,10 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     :maxdepth: 1
 
     primeres_passes.rst
+    basics.rst
 
     apendix.rst
 
-..    basics.rst
 ..    moduls.rst
 ..    fitxers.rst
 ..    poo.rst
