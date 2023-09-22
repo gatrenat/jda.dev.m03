@@ -152,7 +152,7 @@ Per exemple, executaràs:
 
 .. code-block:: console
 
-    $ firefox aval/exercicis_uf1.html &
+    $ firefox aval/exercicis_uf31.html &
 
 Cal tenir present que l'avaluació definitiva no la tindràs fins que el
 bloc d'exercicis estigui tancat. Algunes de les proves poden ser manuals i

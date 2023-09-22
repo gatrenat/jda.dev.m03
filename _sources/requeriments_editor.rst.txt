@@ -38,7 +38,7 @@ preguntar-me o/i veure com el fan servir els teus companys.
    També és possible que parlis amb gent "experta" que et dirà que el seu
    editor és el més guai de l'únivers, que et simplificarà això i allò i que en
    acabar de programar, fins i tot et farà un massatge. Pren-t'ho amb calma. De
-   `guerres dels editors <https://en.wikipedia.org/wiki/Editor_war>` fa anys
+   `guerres dels editors <https://en.wikipedia.org/wiki/Editor_war>`_ fa anys
    que en coneixem i només han servit per produir alguns (pocs) bons acudits.
 
    L'ús d'un editor més *guay* no t'ajudarà a aprendre a programar ni més ràpid

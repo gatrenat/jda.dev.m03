@@ -87,7 +87,7 @@ Afegir-me com a col·laborador
 Un cop has creat el nou repositori, cal que m'afegeixis com a col·laborador.
 
 Ves a ``settings``, selecciona ``Manage access`` i afegeix el meu usuari de
-github: ``moiatjda``.
+github: ``gatrenat``.
 
 .. figure:: _images/githubcollaborator.png
     :figclass: align-center
@@ -98,7 +98,7 @@ de diàleg hauria de tenir el següent aspecte:
 .. figure:: _images/githubcheckcollaborator.png
     :figclass: align-center
 
-Un cop ho tinguis clar, prem el botó *Add moiatjda to introprg*.
+Un cop ho tinguis clar, prem el botó *Add gatrenat to introprg*.
 
 Notifica que ja estàs
 ---------------------
