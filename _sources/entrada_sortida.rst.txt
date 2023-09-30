@@ -126,6 +126,11 @@ El programa fa el següent:
 * Ara que ja tenim el nom, podem saludar els nostres usuaris. Això és el
   que fa la línia 5.
 
+.. important:: Hi ha altres maneres de llegir de l'entrada estàndard des de
+   Java. Una de molt popular entre els que comencen amb aquest llenguatge és
+   ``Scanner``. Pels exercicis d'aquest curs, però, **només** fes servir
+   ``Entrada.readLine()``.
+
 |exerciseicon__T| :doc:`exercici_31_05_nomcognom`
 
 .. _continguts_llegint_diferents_tipus:

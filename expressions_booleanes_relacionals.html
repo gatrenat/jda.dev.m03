@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Llista d&#39;exercicis &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Expressions booleanes &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Instruccions seqüencials" href="basics_exercicis_sequencials.html" />
-    <link rel="prev" title="Taules de veritat" href="taules_veritat.html" />
+    <link rel="next" title="Expressions booleanes amb operadors lògics" href="expressions_booleanes_logics.html" />
+    <link rel="prev" title="Expressions numèriques" href="expressions_numeriques.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -61,11 +61,14 @@
 <li class="toctree-l2"><a class="reference internal" href="basics_intro.html">Introducció</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Llista d'exercicis</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="expressions.html">Operadors i expressions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="expressions_numeriques.html">Expressions numèriques</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Expressions booleanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expressions_booleanes_logics.html">Expressions booleanes amb operadors lògics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taules_veritat.html">Taules de veritat</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -86,12 +89,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
-      <li class="breadcrumb-item active">Llista d'exercicis</li>
+          <li class="breadcrumb-item"><a href="expressions.html">Operadors i expressions</a></li>
+      <li class="breadcrumb-item active">Expressions booleanes</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="basics_exercicis_sequencials.html" class="btn btn-neutral float-right" title="Instruccions seqüencials" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="expressions_numeriques.html" class="btn btn-neutral float-left" title="Expressions numèriques" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="expressions_booleanes_logics.html" class="btn btn-neutral float-right" title="Expressions booleanes amb operadors lògics" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -99,14 +103,43 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="llista-d-exercicis">
-<h1>Llista d'exercicis<a class="headerlink" href="#llista-d-exercicis" title="Permalink to this heading"></a></h1>
-<p>Els exercicis d'aquest bloc els trobaràs agrupats en les següents seccions:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
+  <div class="section" id="expressions-booleanes">
+<h1>Expressions booleanes<a class="headerlink" href="#expressions-booleanes" title="Permalink to this heading"></a></h1>
+<p>El tipus booleà el trobarem sovint en programació, per tant és important
+que el comencem a conèixer.</p>
+<p>Sabem que un booleà pot ser <code class="docutils literal notranslate"><span class="pre">true</span></code> o <code class="docutils literal notranslate"><span class="pre">false</span></code>. Aquest tipus de valor
+apareix quan ens preguntem si quelcom és cert o fals. Per exemple, les
+següents són maneres diferents de preguntar sobre la majoria d'edat:</p>
+<ul class="simple">
+<li><p>ets major d'edat?</p></li>
+<li><p>la teva edat és més gran o igual a 18 anys?</p></li>
+<li><p>tens més de 17 anys?</p></li>
+<li><p>has fet ja els 18 anys?</p></li>
+<li><p>tens com a mínim 18 anys?</p></li>
+<li><p>la diferència en anys entre la data del teu naixement i avui és com a
+mínim 18?</p></li>
 </ul>
-</div>
+<p>Totes aquestes preguntes fan servir <em>operadors relacionals</em>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code>: igual</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code>: diferent</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: més gran que</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: més petit que</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>: més gran o igual que</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>: més petit o igual que</p></li>
+</ul>
+<p>Per exemple, podem representar les preguntes anteriors, suposant que
+disposem de la teva edat a la variable <code class="docutils literal notranslate"><span class="pre">edat</span></code> de la següent manera:</p>
+<ul class="simple">
+<li><p>edat &gt;= 18 → probablement <code class="docutils literal notranslate"><span class="pre">true</span></code> en el teu cas</p></li>
+</ul>
+<p>Els operadors <code class="docutils literal notranslate"><span class="pre">==</span></code> i <code class="docutils literal notranslate"><span class="pre">!=</span></code> poden rebre també operands booleans. Per
+exemple:</p>
+<ul class="simple">
+<li><p>true == (5 &gt; 4) → true == true → true</p></li>
+<li><p>(5 &gt; 4) != false → true != false → true</p></li>
+</ul>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_31_09_operadors_relacionals.html"><span class="doc"> Exercici 31_09. Algunes expressions amb operadors relacionals</span></a></p>
 </div>
 
 
@@ -135,8 +168,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="basics_exercicis_sequencials.html" class="btn btn-neutral float-right" title="Instruccions seqüencials" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="expressions_numeriques.html" class="btn btn-neutral float-left" title="Expressions numèriques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="expressions_booleanes_logics.html" class="btn btn-neutral float-right" title="Expressions booleanes amb operadors lògics" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

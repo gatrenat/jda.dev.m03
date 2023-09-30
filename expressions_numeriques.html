@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Llista d&#39;exercicis &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Expressions numèriques &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Instruccions seqüencials" href="basics_exercicis_sequencials.html" />
-    <link rel="prev" title="Taules de veritat" href="taules_veritat.html" />
+    <link rel="next" title="Expressions booleanes" href="expressions_booleanes_relacionals.html" />
+    <link rel="prev" title="Operadors i expressions" href="expressions.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -61,11 +61,14 @@
 <li class="toctree-l2"><a class="reference internal" href="basics_intro.html">Introducció</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Llista d'exercicis</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="expressions.html">Operadors i expressions</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Expressions numèriques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expressions_booleanes_relacionals.html">Expressions booleanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="expressions_booleanes_logics.html">Expressions booleanes amb operadors lògics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taules_veritat.html">Taules de veritat</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -86,12 +89,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
-      <li class="breadcrumb-item active">Llista d'exercicis</li>
+          <li class="breadcrumb-item"><a href="expressions.html">Operadors i expressions</a></li>
+      <li class="breadcrumb-item active">Expressions numèriques</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="basics_exercicis_sequencials.html" class="btn btn-neutral float-right" title="Instruccions seqüencials" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="expressions.html" class="btn btn-neutral float-left" title="Operadors i expressions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="expressions_booleanes_relacionals.html" class="btn btn-neutral float-right" title="Expressions booleanes" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -99,14 +103,47 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="llista-d-exercicis">
-<h1>Llista d'exercicis<a class="headerlink" href="#llista-d-exercicis" title="Permalink to this heading"></a></h1>
-<p>Els exercicis d'aquest bloc els trobaràs agrupats en les següents seccions:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
+  <div class="section" id="expressions-numeriques">
+<h1>Expressions numèriques<a class="headerlink" href="#expressions-numeriques" title="Permalink to this heading"></a></h1>
+<p>Direm que una expressió és numèrica si el seu resultat és numèric.</p>
+<p>Hem vist que podem composar expressions numèriques fent servir nombres
+combinats amb els operadors <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> i <code class="docutils literal notranslate"><span class="pre">/</span></code> per sumar, restar,
+multiplicar i dividir, respectivament.</p>
+<p>També hem vist la funció <code class="docutils literal notranslate"><span class="pre">Math.abs()</span></code> que ens permet treure el signe
+d'un valor numèric.</p>
+<p>Quan dividim, cal tenir en compte que <code class="docutils literal notranslate"><span class="pre">/</span></code> en Java manté el tipus. Per
+exemple, si els dos operands són enters, el resultat serà enter, mentre
+que si un és decimal, el resultat serà decimal</p>
+<ul class="simple">
+<li><p>1 / 2 → 0</p></li>
+<li><p>1.0 / 2 → 0.5</p></li>
+<li><p>1 / 2.0 → 0.5</p></li>
+<li><p>1 / 2d → 0.5</p></li>
 </ul>
+<p>Fixa't com, en el primer cas, el resultat és 0, mentre que en els altres
+tres és 0.5. En el moment que un dels operadors és decimal, el resultat
+serà decimal. Ah! la <code class="docutils literal notranslate"><span class="pre">d</span></code> que apareix al darrer exemple és de <code class="docutils literal notranslate"><span class="pre">double</span></code>
+i permet indicar a Java que el literal s'ha de considerar d'aquest tipus.
+s</p>
+<p>Saps, però, quin és el valor de l'expressió <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">0</span></code>? Potser has pensat que
+infinit, però com que infinit és un número molt gran per Java, et
+respondrà de la següent manera:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshell&gt; 5 / 0</span>
+<span class="hll"><span class="go">|  Exception java.lang.ArithmeticException: / by zero</span>
+</span><span class="hll"><span class="go">|        at (#1:1)</span>
+</span></pre></div>
 </div>
+<p>Es a dir, et generarà un error en intentar executar-ho de divisió per
+zero.</p>
+<p>A banda, és interessant conèixer l'operador <code class="docutils literal notranslate"><span class="pre">%</span></code> que correspon al mòdul o
+resta de la divisió entera.</p>
+<ul class="simple">
+<li><p>11 % 2 → 1</p></li>
+<li><p>12 % 2 → 0</p></li>
+</ul>
+<p>En aquest cas, calcular mòdul 2 ens permet saber si un nombre és parell o
+senar doncs els parells sempre resultaran amb resta 0 i els senars amb 1.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_08_calculadora_basica.html"><span class="doc"> Exercici 31_08. Calculadora bàsica</span></a></p>
 </div>
 
 
@@ -135,8 +172,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="basics_exercicis_sequencials.html" class="btn btn-neutral float-right" title="Instruccions seqüencials" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="expressions.html" class="btn btn-neutral float-left" title="Operadors i expressions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="expressions_booleanes_relacionals.html" class="btn btn-neutral float-right" title="Expressions booleanes" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
