@@ -1,5 +1,5 @@
 #########################################################
-|exerciseiconO__| Exercici 31_18. Els blocs d'un programa
+|exerciseicon___| Exercici 31_18. Els blocs d'un programa
 #########################################################
 
 .. rubric:: Context
@@ -10,12 +10,13 @@
 
 * Com lliurar-lo: :ref:`instruccions <instruccions_git>`
 
-* [☼] Exercici :ref:`optatiu<descripcio_exercicis_optatius>`
-
 .. rubric:: Enunciat
 
 
 Identifica els blocs del programa que has fet a l'exercici :doc:`exercici_31_15_dosenordre`
 
-Dibuixa-ho amb un diagrama de caixes (genera un pdf) o bé en forma de
-jerarquia de fitxers com hem vist als apunts.
+Representa-ho de les següents dues maneres que hem estudiat:
+
+- com un diagrama de caixes
+
+- en forma de jerarquia de fitxers

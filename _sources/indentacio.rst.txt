@@ -115,4 +115,4 @@ Hi ha moltes maneres d'indentar. En aquest curs adoptem una de ben
 estàndard per Java. Intenta seguir-la el màxim possible, doncs en aquest
 curs és **obligatòria**.
 
-|exerciseiconO__| :doc:`exercici_31_18_indentacio`
+|exerciseicon___| :doc:`exercici_31_18_indentacio`
