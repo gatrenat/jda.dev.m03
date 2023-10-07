@@ -9,6 +9,8 @@ complexes:
 
 * la clara és major d'edat o bé tu ets més jove que ella?
 
+* no és cert que tu siguis més jove que la Clara?
+
 Anem a pams. Comencem per la primera pregunta. Per poder-la representar
 necessitem una variable per l'edat de la Clara i una altra per la teva.
 Així, la podem reformular d'una manera més redundant: "l'edat de la Clara
