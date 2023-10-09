@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 31_16. Parells i senars &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 31_25. Una calculadora senzilla &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 31_17. Exercici d&#39;operador ternari" href="exercici_31_17_ternari.html" />
-    <link rel="prev" title="Exercici 31_15. Dos en ordre" href="exercici_31_15_dosenordre.html" />
+    <link rel="next" title="Exercici 31_26. Pagaments" href="exercici_31_26_pagaments.html" />
+    <link rel="prev" title="Exercici 31_24. Tres en ordre" href="exercici_31_24_tresenordre.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -68,7 +68,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_condicionals.html">Instruccions condicionals</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_14_preso.html"> Exercici 31_14. La presó</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_15_dosenordre.html"> Exercici 31_15. Dos en ordre</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 31_16. Parells i senars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_31_16_parellsenar.html"> Exercici 31_16. Parells i senars</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_17_ternari.html"> Exercici 31_17. Exercici d'operador ternari</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_18_indentacio.html"> Exercici 31_18. Els blocs d'un programa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_19_autocaravana.html"> Exercici 31_19. El classificador d'autocaravanes</a></li>
@@ -77,7 +77,7 @@
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_22_diessetmana_switch_expr.html"> Exercici 31_22. Els dies de la setmana (revisitat novament)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_23_mesosanys.html"> Exercici 31_23. Mesos i anys</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_24_tresenordre.html"> Exercici 31_24. Tres en ordre</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_31_25_calculadora_senzilla.html"> Exercici 31_25. Una calculadora senzilla</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 31_25. Una calculadora senzilla</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_26_pagaments.html"> Exercici 31_26. Pagaments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_27_semafor.html"> Exercici 31_27. La guia de semàfors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_28_nombre_de_fills.html"> Exercici 31_28. El nombre de fills</a></li>
@@ -109,12 +109,12 @@
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
           <li class="breadcrumb-item"><a href="basics_exercicis.html">Llista d'exercicis</a></li>
           <li class="breadcrumb-item"><a href="basics_exercicis_condicionals.html">Instruccions condicionals</a></li>
-      <li class="breadcrumb-item active"> Exercici 31_16. Parells i senars</li>
+      <li class="breadcrumb-item active"> Exercici 31_25. Una calculadora senzilla</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_31_15_dosenordre.html" class="btn btn-neutral float-left" title="Exercici 31_15. Dos en ordre" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_31_17_ternari.html" class="btn btn-neutral float-right" title="Exercici 31_17. Exercici d&#39;operador ternari" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_31_24_tresenordre.html" class="btn btn-neutral float-left" title="Exercici 31_24. Tres en ordre" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_31_26_pagaments.html" class="btn btn-neutral float-right" title="Exercici 31_26. Pagaments" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -122,47 +122,82 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="exerciseicon-t-exercici-31-16-parells-i-senars">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 31_16. Parells i senars<a class="headerlink" href="#exerciseicon-t-exercici-31-16-parells-i-senars" title="Permalink to this heading"></a></h1>
+  <div class="section" id="exerciseicon-t-exercici-31-25-una-calculadora-senzilla">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 31_25. Una calculadora senzilla<a class="headerlink" href="#exerciseicon-t-exercici-31-25-una-calculadora-senzilla" title="Permalink to this heading"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">31_16_parellsenar/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="condicionals_doble.html"><span class="doc">I què passa sinó…?</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">31_25_calculadora_senzilla/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="condicionals_conclusions.html"><span class="doc">Conclusions</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Desenvolupa un programa que donat un número enter retorni si és <em>parell</em> o
-<em>senar</em>.</p>
-<p>Una simulació d'execució pot ser:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>ParellSenar<span class="w"> </span><span class="m">5</span>
-<span class="hll"><span class="go">El número 5 és senar</span>
+<p>En aquesta ocasió desenvoluparem una calculadora senzilla que demani a l'usuari un primer operand
+numèric, una operació entre (+ - * /) i un segon operand, i escrigui el
+resultat d'aplicar l'operació als operands.</p>
+<p>Exemples d'interacció:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>CalculadoraSenzilla
+<span class="hll"><span class="go">Operand1?</span>
+</span><span class="go">4</span>
+<span class="hll"><span class="go">Operador?</span>
+</span><span class="go">+</span>
+<span class="hll"><span class="go">Operand2?</span>
+</span><span class="go">5</span>
+<span class="hll"><span class="go">4,00 + 5,00 = 9,00</span>
 </span></pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>ParellSenar<span class="w"> </span><span class="m">8</span>
-<span class="hll"><span class="go">Él número 8 és parell</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>CalculadoraSenzilla
+<span class="hll"><span class="go">Operand1?</span>
+</span><span class="go">4</span>
+<span class="hll"><span class="go">Operador?</span>
+</span><span class="go">/</span>
+<span class="hll"><span class="go">Operand2?</span>
+</span><span class="go">0</span>
+<span class="hll"><span class="go">No es pot dividir entre 0</span>
 </span></pre></div>
 </div>
-<p>Considera, si et cal, fer servir la següent plantilla</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Programa que indica si el número proporcionat com a primer argument</span>
-<span class="cm"> * és parell o senar.</span>
-<span class="cm"> * Si no s&#39;especifica cap número, el resultat és indeterminat.</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>CalculadoraSenzilla
+<span class="hll"><span class="go">Operand1?</span>
+</span><span class="go">4</span>
+<span class="hll"><span class="go">Operador?</span>
+</span><span class="go">^</span>
+<span class="hll"><span class="go">Operand2?</span>
+</span><span class="go">3</span>
+<span class="hll"><span class="go">L&#39;operador ^ no està disponible</span>
+</span></pre></div>
+</div>
+<p>Aquest programa presenta algunes particularitats que no hem treballat fins
+ara. En concret, les variables que hauràs de fer servir seran de tipus
+diferents de l'habitual <code class="docutils literal notranslate"><span class="pre">int</span></code>. En concret, farem servir <code class="docutils literal notranslate"><span class="pre">double</span></code> i
+<code class="docutils literal notranslate"><span class="pre">char</span></code>. Si et cal recordar com es convertíen, torna a repassar la secció
+<a class="reference internal" href="entrada_sortida.html#continguts-llegint-diferents-tipus"><span class="std std-ref">Llegint diferents tipus</span></a>.</p>
+<p>Et proposo que facis servir la següent plantilla. Per descomptat, caldrà
+que emplenis els espais comentats amb <code class="docutils literal notranslate"><span class="pre">/*█████*/</span></code></p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Aquest programa demana dos operands i un operador binari (+, -, * o /)</span>
+<span class="cm"> * i mostra el resultat del càlcul corresponent</span>
 <span class="cm"> */</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ParellSenar</span><span class="w"> </span><span class="p">{</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CalculadoraSenzilla</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-<span class="w">        </span><span class="cm">/* █████ Aquí el codi amb l&#39;estructura condicional */</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Operand1?&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">operand1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Operador?&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">operador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="cm">/* █████ Aquí falta una variable encara */</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">operador</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">operand1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">operand2</span><span class="p">;</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">operand1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; + &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">operand2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">resultat</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">operador</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="cm">/* █████ */</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="cm">/* █████ */</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Recorda que podem saber si un nombre és parell o senar segons el
-residu de la divisió entera (mòdul) com vam veure a
-<a class="reference internal" href="expressions_numeriques.html"><span class="doc">Expressions numèriques</span></a></p>
-</div>
+<p>Vols una mica més de complexitat? Intenta realitzar el problema sense
+repetir la instrucció <code class="docutils literal notranslate"><span class="pre">System.out.println(operand1</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">+</span>
+<span class="pre">operand2</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">=</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">resultat);</span></code></p>
 </div>
 
 
@@ -191,8 +226,8 @@ residu de la divisió entera (mòdul) com vam veure a
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_31_15_dosenordre.html" class="btn btn-neutral float-left" title="Exercici 31_15. Dos en ordre" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_31_17_ternari.html" class="btn btn-neutral float-right" title="Exercici 31_17. Exercici d&#39;operador ternari" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_31_24_tresenordre.html" class="btn btn-neutral float-left" title="Exercici 31_24. Tres en ordre" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_31_26_pagaments.html" class="btn btn-neutral float-right" title="Exercici 31_26. Pagaments" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,65 @@
+########################################################
+|exerciseicon___| Exercici 31_20. Els dies de la setmana
+########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``31_20_diessetmana/``
+
+* Continguts relacionats: :doc:`condicionals_conclusions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+
+Desenvolupa un programa que demani per entrada estàndard un número enter
+entre el 1 i el 7 i respongui segons la taula:
+
++---------+-----------+
+| entrada | sortida   |
++=========+===========+
+| 1       | Dilluns   |
++---------+-----------+
+| 2       | Dimarts   |
++---------+-----------+
+| 3       | Dimecres  |
++---------+-----------+
+| 4       | Dijous    |
++---------+-----------+
+| 5       | Divendres |
++---------+-----------+
+| 6       | Dissabte  |
++---------+-----------+
+| 7       | Diumenge  |
++---------+-----------+
+| altre   | Error     |
++---------+-----------+
+
+Considera les següents simulacions d'execució:
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    $ java DiaSetmana 1
+    Dilluns
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    $ java DiaSetmana 5
+    Divendres
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    $ java DiaSetmana 0
+    Error
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    $ java DiaSetmana 8
+    Error
+
+Pots suposar que sempre rebrà un valor enter.

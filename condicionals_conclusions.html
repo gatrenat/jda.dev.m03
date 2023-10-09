@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Condicionals &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Conclusions &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Què passa sí…?" href="condicionals_simple.html" />
-    <link rel="prev" title="Taules de veritat" href="taules_veritat.html" />
+    <link rel="next" title="Llista d&#39;exercicis" href="basics_exercicis.html" />
+    <link rel="prev" title="I en cas que no, que passa sí…?" href="condicionals_niament.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -62,12 +62,12 @@
 <li class="toctree-l2"><a class="reference internal" href="instruccions.html">Instruccions seqüencials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Condicionals</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="condicionals.html">Condicionals</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="condicionals_simple.html">Què passa sí…?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="condicionals_doble.html">I què passa sinó…?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="indentacio.html">Indentació i blocs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="condicionals_niament.html">I en cas que no, que passa sí…?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="condicionals_conclusions.html">Conclusions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conclusions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a></li>
@@ -91,12 +91,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
-      <li class="breadcrumb-item active">Condicionals</li>
+          <li class="breadcrumb-item"><a href="condicionals.html">Condicionals</a></li>
+      <li class="breadcrumb-item active">Conclusions</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="condicionals_simple.html" class="btn btn-neutral float-right" title="Què passa sí…?" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="condicionals_niament.html" class="btn btn-neutral float-left" title="I en cas que no, que passa sí…?" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="basics_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -104,43 +105,41 @@
     
            <div itemprop="articleBody">
              
-  <div class="section" id="condicionals">
-<h1>Condicionals<a class="headerlink" href="#condicionals" title="Permalink to this heading"></a></h1>
-<p>Intenta resoldre el següent exercici:</p>
-<p>Desenvolupa un programa que donat un número enter retorni si és <em>parell</em> o
-<em>senar</em>.</p>
-<p>Per exemple, considera les següents interaccions:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>ParellSenar<span class="w"> </span><span class="m">4</span>
-<span class="hll"><span class="go">Parell</span>
-</span></pre></div>
-</div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>ParellSenar<span class="w"> </span><span class="m">5</span>
-<span class="hll"><span class="go">Senar</span>
-</span></pre></div>
-</div>
-<p>Si veus que no te'n surts, no et sentis malament i continua llegint.</p>
-<div class="section" id="instruccions-condicionals">
-<h2>Instruccions condicionals<a class="headerlink" href="#instruccions-condicionals" title="Permalink to this heading"></a></h2>
-<p>Amb el que sabem fins ara, els nostres programes són una seqüència
-d'instruccions que s'executen de la primera a la darrera.</p>
-<p>Però el programa <code class="docutils literal notranslate"><span class="pre">ParellSenar</span></code> requereix que es mostri una instrucció o
-una altra depenent d'una condició. Com ho podem fer?</p>
-<p>Els llenguatges de programació ofereixen el que anomenarem <em>instruccions
-condicionals</em>.</p>
-<p>La idea bàsica és que les instruccions condicionals ens permeten decidir
-quin codi executem depenent d'una <em>condició</em>. Una condició no és més que
-una expressió amb resultat booleà que ja em vist a
-<a class="reference internal" href="expressions_booleanes_relacionals.html"><span class="doc">Expressions booleanes</span></a>.</p>
-<p>Els continguts d'aquesta secció s'estructuren en les següents entrades:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="condicionals_simple.html">Què passa sí…?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="condicionals_doble.html">I què passa sinó…?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="indentacio.html">Indentació i blocs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="condicionals_niament.html">I en cas que no, que passa sí…?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="condicionals_conclusions.html">Conclusions</a></li>
-</ul>
-</div>
+  <div class="section" id="conclusions">
+<h1>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this heading"></a></h1>
+<p>En aquesta secció hem aprés a fer que els nostres programes es puguin
+adaptar a les circumstàncies. És a dir, ara poden respondre de manera
+diferent depenent de determinades condicions.</p>
+<p>Ho hem aconseguit mitjançant les estructures de condició. Bàsicament
+<code class="docutils literal notranslate"><span class="pre">if</span></code> amb la seva alternativa <code class="docutils literal notranslate"><span class="pre">else</span></code> i la construcció <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> per
+poder indicar vàries condicions seguides.</p>
+<p>Les estructures condicionals defineixen blocs (entre <code class="docutils literal notranslate"><span class="pre">{}</span></code>) que
+s'executen o no, depenent del resultat d'una expressió amb resultat
+booleà: les condicions.</p>
+<p>Hem vist també el concepte d'indentació (<em>sagnat</em>) i la importància que
+juga a l'hora de fer el nostre codi més fàcil d'entendre entre els
+desenvolupadors.</p>
+<p>Amb l'adició dels condicionals, els nostres programes poden adaptar-se i
+respondre al que passa al &quot;món&quot;.</p>
+<div class="section" id="exercicis">
+<h2>Exercicis<a class="headerlink" href="#exercicis" title="Permalink to this heading"></a></h2>
+<p>A continuació tens una llista d'exercicis proposats per què practiquis els
+condicionals.</p>
+<p>Veuràs que hi ha un bon grapat d'exercicis opcionals. Hi són perquè
+tinguis opció de practicar fins que et sentis amb prou confiança. En cas
+que els no opcionals els hagis pogut realitzar amb comoditat, planteja't
+només fer els opcionals d'ampliació si disposes de prou temps.</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_31_20_diessetmana.html"><span class="doc"> Exercici 31_20. Els dies de la setmana</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_21_diessetmana_switch.html"><span class="doc"> Exercici 31_21. Els dies de la setmana (revisitat)</span></a></p>
+<p><img alt="exerciseiconO_T" src="_images/exerciseiconO_T.png" /> <a class="reference internal" href="exercici_31_22_diessetmana_switch_expr.html"><span class="doc"> Exercici 31_22. Els dies de la setmana (revisitat novament)</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_23_mesosanys.html"><span class="doc"> Exercici 31_23. Mesos i anys</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_24_tresenordre.html"><span class="doc"> Exercici 31_24. Tres en ordre</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_25_calculadora_senzilla.html"><span class="doc"> Exercici 31_25. Una calculadora senzilla</span></a></p>
+<p><img alt="exerciseiconO_T" src="_images/exerciseiconO_T.png" /> <a class="reference internal" href="exercici_31_26_pagaments.html"><span class="doc"> Exercici 31_26. Pagaments</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_27_semafor.html"><span class="doc"> Exercici 31_27. La guia de semàfors</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_28_nombre_de_fills.html"><span class="doc"> Exercici 31_28. El nombre de fills</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_31_29_ascensor.html"><span class="doc"> Exercici 31_29. L'ascensor</span></a></p>
+<p><img alt="exerciseiconO__" src="_images/exerciseiconO__.png" /> <a class="reference internal" href="exercici_31_30_metge_virtual.html"><span class="doc"> Exercici 31_30. El metge virtual</span></a></p>
 </div>
 </div>
 
@@ -170,8 +169,8 @@ una expressió amb resultat booleà que ja em vist a
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="taules_veritat.html" class="btn btn-neutral float-left" title="Taules de veritat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="condicionals_simple.html" class="btn btn-neutral float-right" title="Què passa sí…?" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="condicionals_niament.html" class="btn btn-neutral float-left" title="I en cas que no, que passa sí…?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="basics_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

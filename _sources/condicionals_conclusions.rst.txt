@@ -1,0 +1,56 @@
+###########
+Conclusions
+###########
+
+En aquesta secció hem aprés a fer que els nostres programes es puguin
+adaptar a les circumstàncies. És a dir, ara poden respondre de manera
+diferent depenent de determinades condicions.
+
+Ho hem aconseguit mitjançant les estructures de condició. Bàsicament
+``if`` amb la seva alternativa ``else`` i la construcció ``else if`` per
+poder indicar vàries condicions seguides.
+
+Les estructures condicionals defineixen blocs (entre ``{}``) que
+s'executen o no, depenent del resultat d'una expressió amb resultat
+booleà: les condicions.
+
+Hem vist també el concepte d'indentació (*sagnat*) i la importància que
+juga a l'hora de fer el nostre codi més fàcil d'entendre entre els
+desenvolupadors.
+
+Amb l'adició dels condicionals, els nostres programes poden adaptar-se i
+respondre al que passa al "món".
+
+
+Exercicis
+=========
+
+A continuació tens una llista d'exercicis proposats per què practiquis els
+condicionals.
+
+Veuràs que hi ha un bon grapat d'exercicis opcionals. Hi són perquè
+tinguis opció de practicar fins que et sentis amb prou confiança. En cas
+que els no opcionals els hagis pogut realitzar amb comoditat, planteja't
+només fer els opcionals d'ampliació si disposes de prou temps.
+
+|exerciseicon___| :doc:`exercici_31_20_diessetmana`
+
+|exerciseicon__T| :doc:`exercici_31_21_diessetmana_switch`
+
+|exerciseiconO_T| :doc:`exercici_31_22_diessetmana_switch_expr`
+
+|exerciseicon__T| :doc:`exercici_31_23_mesosanys`
+
+|exerciseicon__T| :doc:`exercici_31_24_tresenordre`
+
+|exerciseicon__T| :doc:`exercici_31_25_calculadora_senzilla`
+
+|exerciseiconO_T| :doc:`exercici_31_26_pagaments`
+
+|exerciseicon__T| :doc:`exercici_31_27_semafor`
+
+|exerciseicon__T| :doc:`exercici_31_28_nombre_de_fills`
+
+|exerciseicon__T| :doc:`exercici_31_29_ascensor`
+
+|exerciseiconO__| :doc:`exercici_31_30_metge_virtual`
