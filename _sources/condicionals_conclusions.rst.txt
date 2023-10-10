@@ -33,7 +33,7 @@ tinguis opció de practicar fins que et sentis amb prou confiança. En cas
 que els no opcionals els hagis pogut realitzar amb comoditat, planteja't
 només fer els opcionals d'ampliació si disposes de prou temps.
 
-|exerciseicon___| :doc:`exercici_31_20_diessetmana`
+|exerciseicon__T| :doc:`exercici_31_20_diessetmana`
 
 |exerciseicon__T| :doc:`exercici_31_21_diessetmana_switch`
 
