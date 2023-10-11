@@ -47,5 +47,7 @@ Un cop ho hagis consultat, considera un altre cop l'exercici
 dels :doc:`dies de la setmana <exercici_31_20_diessetmana>`. Crea una nova versió, en
 aquesta ocasió fent servir ``switch`` en el format expressió.
 
+Sabràs que ho has fet bé si el teu programa **només** té una instrucció d'escriptura.
+
 A partir d'ara, si t'agrada, pots fer servir aquesta estructura en tots
 els teus programes.

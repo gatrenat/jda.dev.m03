@@ -15,8 +15,8 @@
 .. rubric:: Enunciat
 
 
-Desenvolupa un programa que demani per entrada estàndard un número enter
-entre el 1 i el 7 i respongui segons la taula:
+Desenvolupa un programa que reculli el primer argument de línia de comandes, i
+respongui segons la taula:
 
 +---------+-----------+
 | entrada | sortida   |

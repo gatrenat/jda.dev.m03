@@ -22,7 +22,7 @@ Recorda un altre cop el programa ``EndevinaNombre``
     :language: java
     :linenos:
 
-Crea una nova versió que faci el mateix però amb totes les declaracions i
-les inicialitzacions en la mateixa línia.
+Crea una nova versió que faci el mateix però amb totes les declaracions 
+en la mateixa línia que les seves inicialitzacions.
 
 *Pista*: el resultat serà un programa amb dues línies menys.
