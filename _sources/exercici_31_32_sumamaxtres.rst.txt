@@ -1,0 +1,34 @@
+###############################################################
+|exerciseicon__T| Exercici 31_32. Suma com a molt tres positius
+###############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``31_32_sumamaxtres/``
+
+* Continguts relacionats: :doc:`while_petita_correccio`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+
+Amplia la versió del programa ``SumaPositius`` de manera que, en comptes
+de demanar tres valors sempre, ara només demani fins el primer cop que
+s'introdueixi un valor negatiu. Encara cal sumar només els positius, és
+clar.
+
+Pots comprovar que estigui bé, tot executant el programa amb l'execució
+següent:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
+
+    $ java SumaPositius
+    Introdueix el primer valor
+    3
+    Introdueix el segon valor
+    -1
+    La suma és 3

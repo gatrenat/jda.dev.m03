@@ -18,8 +18,8 @@ probablement et servirà per repassar.
     expressions.rst
     condicionals.rst
     basics_exercicis.rst
+    while.rst
 
-..    while.rst
 ..    recorreguts.rst
 ..    strings.rst
 ..    control_bucles.rst

@@ -1,0 +1,53 @@
+###########################################################
+|exerciseicon__T| Exercici 31_41. Endevina amb cancel·lació
+###########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``31_41_endevina_cancel/``
+
+* Continguts relacionats: :doc:`while_exercicis`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Tornem a l'exercici que implementava el :doc:`joc d'endevinar
+<exercici_31_40_endevina>`
+
+En aquesta ocasió desenvoluparem una nova versió que millorarà l'exercici.
+
+
+La versió anterior obligava els usuaris a encertar per poder finalitzar.
+
+Aquesta nova versió ofereix la possibilitat de sortir del joc en introduir
+una cadena buida (recorda ``isEmpty()``).
+
+Quan els usuaris entrin la cadena buida, el programa respondrà amb el
+missatge "Cancel·lat!" i finalitzarà.
+
+Fixa't que el programa haurà d'oferir tota la funcionalitat de la versió
+anterior.
+
+Un exemple d'execució seria:
+
+.. code-block:: console
+    :emphasize-lines: 2, 3, 5, 6, 8, 9, 11
+
+    $  java EndevinaNombre 
+    Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat
+    Introdueix un valor
+    5
+    És més gran que 5
+    Introdueix un valor
+    50
+    És més petit que 50
+    Introdueix un valor
+
+    Cancel·lat!
+
+Atenció: ara ja no podem garantir que totes les entrades siguin enteres.
+Quan l'entrada sigui la cadena buida ja no ho serà. Podem suposar que si
+no és la cadena buida, el que es rep serà sempre convertible a enter.

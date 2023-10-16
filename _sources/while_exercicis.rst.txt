@@ -1,0 +1,19 @@
+################
+Alguns exercicis
+################
+
+Practica una mica més els coneixements de bucles d'aquest tema.
+
+|exerciseicon__T| :doc:`exercici_31_35_lloro`
+
+|exerciseicon__T| :doc:`exercici_31_36_trobamaxim`
+
+|exerciseicon_ST| :doc:`exercici_31_37_trobaproxim`
+
+|exerciseicon__T| :doc:`exercici_31_38_mitja`
+
+|exerciseiconOS_| :doc:`exercici_31_39_dowhile`
+
+|exerciseicon__T| :doc:`exercici_31_40_endevina`
+
+|exerciseicon__T| :doc:`exercici_31_41_endevina_cancel`
