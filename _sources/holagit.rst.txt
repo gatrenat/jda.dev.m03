@@ -436,7 +436,7 @@ a GitHub.
 .. code-block:: console
 
     $ cd /tmp
-    $ git clone git@github.com:renat/introprg.gi temporal
+    $ git clone git@github.com:renat/introprg.git temporal
     $ cd temporal
 
 Fixa't que disposes dels mateixos continguts que tenies al teu espai de treball
