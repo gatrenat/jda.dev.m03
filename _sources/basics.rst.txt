@@ -17,8 +17,8 @@ probablement et servirà per repassar.
     variables.rst
     expressions.rst
     condicionals.rst
-    basics_exercicis.rst
     while.rst
+    basics_exercicis.rst
 
 ..    recorreguts.rst
 ..    strings.rst

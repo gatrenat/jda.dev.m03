@@ -68,7 +68,7 @@ Versió Java
     public class CalculaRadi {
       public static void main(String[] args) throws IOException {
         System.out.println("Càlcul de l'àrea d'un cercle");
-        System.out.println("Introduïu el radi:");
+        System.out.print("Introduïu el radi:");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String linia = reader.readLine();
         float radi = Float.parseFloat(linia);  // conversió de String a float

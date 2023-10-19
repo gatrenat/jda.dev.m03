@@ -134,25 +134,22 @@ el password del teu usuari.</p>
 <p>Un cop finalitzada l'execució de <code class="docutils literal notranslate"><span class="pre">configura_introprg.sh</span></code> podràs
 comprovar si tot està bé escrivint:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
-<span class="gp">$ </span>prgtest
-<span class="go">ERROR: El directori actual no es troba dins del directori de treball</span>
+<span class="gp">$ </span>prgtest<span class="w"> </span>--version
 </pre></div>
 </div>
-<p>Malgrat surt un error, és la resposta que esperàvem. El programa de
-validació <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> s'ha executat correctament i t'està avisant que no
-et trobes dins d'una carpeta que reconegui com a exercici. Genial!</p>
-<p>L'error que no voldríem és el següent:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>prgtest
-<span class="go">-bash: prgtes: command not found</span>
+<p>Si aquesta comanda resulta en un missatge que indica quina versió de prgtest
+tens, vol dir que tens l'entorn ben configurat.</p>
+<p>Si la resposta que obtenim amb aquesta comanda és el següent missatge d'error,
+i tens clar que has executat <code class="docutils literal notranslate"><span class="pre">configura_introprg.sh</span></code> i <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code>,
+demana ajuda.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">-bash: prgtest: command not found</span>
 </pre></div>
 </div>
-<p>Si t'ha resposta això després d'haver executat <code class="docutils literal notranslate"><span class="pre">configura_introprg.sh</span></code> i
-<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code>, demana ajuda.</p>
 </div>
-<div class="section" id="terminal-amb-fons-negre">
-<h2>Terminal amb fons negre<a class="headerlink" href="#terminal-amb-fons-negre" title="Permalink to this heading"></a></h2>
-<p>És probable que vegis millor la sortida de <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> amb el terminal amb fons negre.
-Segurament els teus ulls t'ho agrairan i a més, semblaràs més <em>pro</em> ;)</p>
+<div class="section" id="comprova-que-terminal-amb-fons-negre">
+<h2>Comprova que Terminal amb fons negre<a class="headerlink" href="#comprova-que-terminal-amb-fons-negre" title="Permalink to this heading"></a></h2>
+<p>És probable que vegis millor la sortida de <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> amb el terminal amb fons
+negre. Segurament els teus ulls t'ho agrairan i a més, semblaràs més <em>pro</em> ;)</p>
 <p>Per canviar-ho, pots obrir un terminal i anar al menú de preferències:</p>
 <img alt="_images/terminal_config_01_preferencies.png" class="align-center" src="_images/terminal_config_01_preferencies.png" />
 <p>Ara crees un nou perfil:</p>

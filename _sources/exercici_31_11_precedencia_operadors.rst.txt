@@ -18,15 +18,15 @@ manera que quedi explícitada la precedència del operadors.
 
 Pots fer servir la *jshell* per comprovar els teus resultats.
 
-#. 5 + 4 * 3
+#. ``5 + 4 * 3``
 
-#. -5 * 4 + -3
+#. ``-5 * 4 + -3``
 
-#. true && false || ! true
+#. ``true && false || ! true``
 
-#. false && (10 > 3) || ! (4 > 5)
+#. ``false && (10 > 3) || ! (4 > 5)``
 
-#. (false == (5 > 4)) && (false == ! true) || (false != true)
+#. ``(false == (5 > 4)) && (false == ! true) || (false != true)``
 
 Afegeix al menys 2 (dos) noves expressions i els seus resultats,
 inventades per tu. Intenta que, com a mínim una d'elles contingui
@@ -34,4 +34,4 @@ operadors lògics.o
 
 **Pista**: La primera es podia resoldre, per exemple:
 
-    5 + 4 * 3 → 5 + (4 * 3) → 5 + 12 → 17
+    ``5 + 4 * 3 → 5 + (4 * 3) → 5 + 12 → 17``

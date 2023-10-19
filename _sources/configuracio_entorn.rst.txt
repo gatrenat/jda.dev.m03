@@ -42,28 +42,24 @@ comprovar si tot està bé escrivint:
 .. code-block:: console
 
     $ source ~/.bashrc
-    $ prgtest 
-    ERROR: El directori actual no es troba dins del directori de treball
+    $ prgtest --version
 
-Malgrat surt un error, és la resposta que esperàvem. El programa de
-validació ``prgtest`` s'ha executat correctament i t'està avisant que no
-et trobes dins d'una carpeta que reconegui com a exercici. Genial!
+Si aquesta comanda resulta en un missatge que indica quina versió de prgtest
+tens, vol dir que tens l'entorn ben configurat.
 
-L'error que no voldríem és el següent:
+Si la resposta que obtenim amb aquesta comanda és el següent missatge d'error,
+i tens clar que has executat ``configura_introprg.sh`` i ``source ~/.bashrc``,
+demana ajuda.
 
 .. code-block:: console
 
-    $ prgtest
-    -bash: prgtes: command not found
+    -bash: prgtest: command not found
 
-Si t'ha resposta això després d'haver executat ``configura_introprg.sh`` i
-``source ~/.bashrc``, demana ajuda.
+Comprova que Terminal amb fons negre
+====================================
 
-Terminal amb fons negre
-=======================
-
-És probable que vegis millor la sortida de ``prgtest`` amb el terminal amb fons negre.
-Segurament els teus ulls t'ho agrairan i a més, semblaràs més *pro* ;)
+És probable que vegis millor la sortida de ``prgtest`` amb el terminal amb fons
+negre. Segurament els teus ulls t'ho agrairan i a més, semblaràs més *pro* ;)
 
 Per canviar-ho, pots obrir un terminal i anar al menú de preferències:
 

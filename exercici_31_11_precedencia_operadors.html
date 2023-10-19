@@ -63,6 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condicionals.html">Condicionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="while.html">Bucles condicionals</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exercici_31_01_comprensio.html"> Exercici 31_01. Comprensió de <code class="docutils literal notranslate"><span class="pre">EndevinaNombre</span></code></a></li>
@@ -84,7 +85,6 @@
 <li class="toctree-l3"><a class="reference internal" href="basics_exercicis_while.html">Bucles condicionals</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="while.html">Bucles condicionals</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -133,18 +133,18 @@
 manera que quedi explícitada la precedència del operadors.</p>
 <p>Pots fer servir la <em>jshell</em> per comprovar els teus resultats.</p>
 <ol class="arabic simple">
-<li><p>5 + 4 * 3</p></li>
-<li><p>-5 * 4 + -3</p></li>
-<li><p>true &amp;&amp; false || ! true</p></li>
-<li><p>false &amp;&amp; (10 &gt; 3) || ! (4 &gt; 5)</p></li>
-<li><p>(false == (5 &gt; 4)) &amp;&amp; (false == ! true) || (false != true)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-5</span> <span class="pre">*</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">-3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span> <span class="pre">&amp;&amp;</span> <span class="pre">false</span> <span class="pre">||</span> <span class="pre">!</span> <span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span> <span class="pre">&amp;&amp;</span> <span class="pre">(10</span> <span class="pre">&gt;</span> <span class="pre">3)</span> <span class="pre">||</span> <span class="pre">!</span> <span class="pre">(4</span> <span class="pre">&gt;</span> <span class="pre">5)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(false</span> <span class="pre">==</span> <span class="pre">(5</span> <span class="pre">&gt;</span> <span class="pre">4))</span> <span class="pre">&amp;&amp;</span> <span class="pre">(false</span> <span class="pre">==</span> <span class="pre">!</span> <span class="pre">true)</span> <span class="pre">||</span> <span class="pre">(false</span> <span class="pre">!=</span> <span class="pre">true)</span></code></p></li>
 </ol>
 <p>Afegeix al menys 2 (dos) noves expressions i els seus resultats,
 inventades per tu. Intenta que, com a mínim una d'elles contingui
 operadors lògics.o</p>
 <p><strong>Pista</strong>: La primera es podia resoldre, per exemple:</p>
 <blockquote>
-<div><p>5 + 4 * 3 → 5 + (4 * 3) → 5 + 12 → 17</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">→</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">(4</span> <span class="pre">*</span> <span class="pre">3)</span> <span class="pre">→</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">12</span> <span class="pre">→</span> <span class="pre">17</span></code></p>
 </div></blockquote>
 </div>
 
