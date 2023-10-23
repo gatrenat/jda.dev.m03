@@ -1,0 +1,38 @@
+##########################################################
+|exerciseicon__T| Exercici 31_42. Els deu primers naturals
+##########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``31_42_deu_primers/``
+
+* Continguts relacionats: :doc:`recorreguts_while`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+
+Desenvolupa un programa que escrigui els primers 10 números naturals. És
+a dir: 1 2 3…10
+
+Una simulació de l'execució seria:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java DeuPrimers
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+**Pista**: Tens pràcticament resolt l'exercici als apunts!
