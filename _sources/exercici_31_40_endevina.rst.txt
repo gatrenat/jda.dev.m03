@@ -30,7 +30,7 @@ Pels missatges concrets esperats, considera el següent exemple d'execució:
 .. code-block:: console
     :emphasize-lines: 2, 4, 5, 7, 8, 10, 11, 13, 14, 16
 
-    $ java Endevina
+    $ java EndevinaNombre
     Ves introduint enters entre 1 i 100 fins que encertis el que jo he pensat
     Introdueix un valor
     5
