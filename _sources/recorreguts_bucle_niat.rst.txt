@@ -74,7 +74,6 @@ salt de línia.
 En executar aquest codi, el resultat és:
 
 .. code-block:: console
-    :emphasize-lines: 1-
 
      1 2 3 4 5
      1 2 3 4 5
