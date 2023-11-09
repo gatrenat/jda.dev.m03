@@ -78,13 +78,13 @@ nou programador!
 
 |exerciseicon__T| :doc:`exercici_31_85_textcapicua`
 
-|exerciseiconOST| :doc:`exercici_31_91_capicuarevisada`
+|exerciseicon_ST| :doc:`exercici_31_91_capicuarevisada`
 
 |exerciseicon__T| :doc:`exercici_31_86_codifica`
 
 |exerciseicon_ST| :doc:`exercici_31_92_paraulesreves`
 
-|exerciseiconOST| :doc:`exercici_31_93_lletresreves`
+|exerciseicon_ST| :doc:`exercici_31_93_lletresreves`
 
 |exerciseicon__T| :doc:`exercici_31_87_trianglelletres`
 
