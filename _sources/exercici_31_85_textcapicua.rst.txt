@@ -37,9 +37,9 @@ Considera la següent simulació
 
 *Pista*: Et proposo que facis les següents dues implementacions
 
-* construeix un String recorrent l'original a l'inrevés i finalment
+* Construeix un String recorrent l'original a l'inrevés i finalment
   compara el resultat amb l'original. Si són iguals, són capicua
 
-* recorre la cadena original de dreta a esquerra i a l'hora d'esquerra a
+* Recorre la cadena original de dreta a esquerra i a l'hora d'esquerra a
   dreta. Potser et resulta còmode pensar en dues variables de recorregut,
   però amb una ja pots calcular l'altra.

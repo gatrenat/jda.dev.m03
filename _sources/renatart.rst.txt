@@ -18,3 +18,14 @@ Artista G.G.F., amb probables aportacions d'ornaments per part d'altres
 companys.
 
 .. image:: _renatart/renatart_2223_daw.jpg
+
+
+Autora de mems de DAM1 del curs 2425
+====================================
+
+Mems creats per l'alumna Keyla Batzin Con el 13 de novembre de 2023.
+
+.. image:: _renatart/renatart_2324_dam_01.jpg
+.. image:: _renatart/renatart_2324_dam_02.jpg
+.. image:: _renatart/renatart_2324_dam_03.jpg
+.. image:: _renatart/renatart_2324_dam_04.jpg
