@@ -34,7 +34,7 @@ Considera la següent simulació:
 .. code-block:: console
     :emphasize-lines: 2, 4
 
-    $ java TextReves
+    $ java ParaulesReves
     Text?
     Tot el que diuen de Windows és fals!
     toT le euq neuid ed swodniW sé slaf!
