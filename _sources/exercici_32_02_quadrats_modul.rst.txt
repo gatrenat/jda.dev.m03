@@ -1,0 +1,22 @@
+#######################################################
+|exerciseicon__T| Exercici 32_02. Quadrats amb un mòdul
+#######################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_02_quadrats_modul/``
+
+* Continguts relacionats: :doc:`moduls_abandonem_plantilla`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una nova versió del programa :doc:`anterior
+<exercici_32_01_quadrats>`. Aquest cop, des de ``main`` es cridarà un
+mòdul anomenat ``dibuixaQuadrats()`` que farà la feina de demanar el
+número de quadrats a dibuixar i els dibuixarà.
+
+La sortida serà la mateixa que per la versió anterior.
