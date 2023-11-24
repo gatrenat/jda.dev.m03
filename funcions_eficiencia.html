@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breu consideració sobre eficiència &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/moistyle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=4385e19b"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d8dd923b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Sobre el return" href="funcions_return.html" />
+    <link rel="prev" title="Aprofitem la funció" href="funcions_crides.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Introducció a la programació amb Java
+              <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2023-24
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="moduls_funcions.html">Funcions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
+<li class="toctree-l3"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Breu consideració sobre eficiència</a></li>
+<li class="toctree-l3"><a class="reference internal" href="funcions_return.html">Sobre el <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="funcions_arreu.html">Funcions arreu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
+          <li class="breadcrumb-item"><a href="moduls_funcions.html">Funcions</a></li>
+      <li class="breadcrumb-item active">Breu consideració sobre eficiència</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="funcions_crides.html" class="btn btn-neutral float-left" title="Aprofitem la funció" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="breu-consideracio-sobre-eficiencia">
+<h1>Breu consideració sobre eficiència<a class="headerlink" href="#breu-consideracio-sobre-eficiencia" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Comparem un altre cop les darreres versions del nostre <code class="docutils literal notranslate"><span class="pre">ComptaAiEs</span></code></p>
+<p>La versió que crida a <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code> cada cop que necessita el
+valor, sense importar-li si ja s'havia calculat abans:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span>
+<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">comptaLletra</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="n">comparaAiEs</span><span class="p">(</span><span class="n">entrada</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comptaLletra</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="linenos">11</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">lletra</span><span class="p">);</span>
+</span><span class="linenos">12</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">comptador</span><span class="p">);</span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">14</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">comparaAiEs</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="linenos">15</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos">16</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptadorE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+</span><span class="linenos">17</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">18</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">comptadorA</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">comptadorE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">20</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;a&#39;s que &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">22</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;a&#39;s com &#39;e&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">23</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">26</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">27</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">28</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">29</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">30</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">31</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">32</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span>
+<span class="linenos">33</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">34</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>En total, en aquest programa es crida dos cops <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code>
+per cada vocal, i sempre pel mateix text. El cert és que, un cop ja has
+comptat les <code class="docutils literal notranslate"><span class="pre">'a'</span></code> que conté un text, per molt que les tornis a comptar,
+seguiran havent-hi les mateixes. Malauradament <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code> no
+sap que ja les ha comptades abans i torna a fer el càlcul un altre cop per
+obtenir el mateix resultat.</p>
+<p>Et proposo la següent versió que cridaria <code class="docutils literal notranslate"><span class="pre">quantesOcurrencies()</span></code> el
+mínim possible:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* programa que mostra quantes &#39;a&#39;s i &#39;e&#39;s té el text llegit per stdin */</span>
+<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComptaAiEs</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix un text&quot;</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">entrada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="hll"><span class="linenos"> 6</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numAs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">);</span>
+</span><span class="hll"><span class="linenos"> 7</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">numEs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quantesOcurrencies</span><span class="p">(</span><span class="n">entrada</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">);</span>
+</span><span class="linenos"> 8</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">mostraOcurrencies</span><span class="p">(</span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">mostraComparacio</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numAs</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">numEs</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos">12</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraOcurrencies</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="linenos">13</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;s: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">quantes</span><span class="p">);</span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span>
+<span class="hll"><span class="linenos">15</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraComparacio</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">lletra1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes1</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra2</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="linenos">16</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">quantes2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha més &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quantes1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">quantes2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha menys &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s que &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">21</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hi ha tantes &#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">lletra1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot;&#39;s com &#39;&quot;</span><span class="o">+</span><span class="n">lletra2</span><span class="o">+</span><span class="s">&quot;&#39;s&quot;</span><span class="p">);</span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">24</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quantesOcurrencies</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">25</span><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">comptador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos">26</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">27</span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">28</span><span class="w">                </span><span class="n">comptador</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">29</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">30</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">31</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">comptador</span><span class="p">;</span>
+<span class="linenos">32</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">33</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Fixa't que aquesta versió <em>només</em> calcula un cop les ocurrències de cada
+lletra, i guarda els resultats en les variables temporals <code class="docutils literal notranslate"><span class="pre">numAs</span></code>
+<code class="docutils literal notranslate"><span class="pre">numEs</span></code>, per després passar els valors als procediments
+<code class="docutils literal notranslate"><span class="pre">mostraOcurrencies()</span></code> i <code class="docutils literal notranslate"><span class="pre">mostraComparacio()</span></code>.</p>
+<p>Podríem dir que aquesta versió és més <em>eficient</em> que l'anterior, ja que no
+torna a realitzar càlculs innecessàriament.</p>
+<p>Abans que ens emocionem massa, cal que tinguem present el cost que
+representa aquesta <em>optimització</em>:</p>
+<ul class="simple">
+<li><p>ens cal guardar els valors en variables temporals. En aquest cas
+<code class="docutils literal notranslate"><span class="pre">numAs</span></code> i <code class="docutils literal notranslate"><span class="pre">numEs</span></code></p></li>
+<li><p>la signatura dels nostres mòduls s'ha complicat. Ara requereixen més
+paràmetres</p></li>
+<li><p>l'ús d'aquests mòduls modificats també s'ha complicat: ara requereixen
+comptar les ocurrències abans de ser usats.</p></li>
+</ul>
+<p>Si bé pot resultar molt temptador <em>optimitzar</em> els nostres codis, sovint
+afegir més complexitat no és una bona idea.</p>
+<p>Així doncs, què fem? Optimitzem o no optimitzem?</p>
+<p>Com a regla general, evitarem optimitzar massa aviat, especialment si és a
+costa de complicar el codi. Un cop finalitzat el programa, i només si la
+seva execució resulta massa lenta, passarem a optimitzar tot mirant de
+minimitzar la pèrdua de simplicitat.</p>
+<section id="vols-saber-ne-mes">
+<h2>Vols saber-ne més?<a class="headerlink" href="#vols-saber-ne-mes" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Quan desenvolupem hem de tenir sempre en ment la famosa frase de <a class="reference external" href="https://ca.wikipedia.org/wiki/Donald_Knuth">Donald
+Knuth</a> <em>Premature
+Optimization Is the Root of All Evil</em> (l'optimització prematura és
+l'origen de tots els mals)</p>
+<p>L'optimització prematura no és només una cosa de desenvolupadors. Per
+exemple, <a class="reference external" href="https://effectiviology.com/premature-optimization/">aquest article</a> ho explica des d'un
+punt de vista més general.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="funcions_crides.html" class="btn btn-neutral float-left" title="Aprofitem la funció" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="funcions_return.html" class="btn btn-neutral float-right" title="Sobre el return" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
