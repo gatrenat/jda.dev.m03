@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funcions &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Repàs sobre funcions i procediments &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="El que ja sabem dels mòduls" href="funcions_intro.html" />
-    <link rel="prev" title="Primeres definicions" href="moduls_primeres_definicions.html" />
+    <link rel="next" title="Llista d&#39;exercicis" href="moduls_exercicis.html" />
+    <link rel="prev" title="La meva biblioteca" href="moduls_biblioteques.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -61,7 +61,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Funcions</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="moduls_funcions.html">Funcions</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
@@ -71,7 +71,7 @@
 <li class="toctree-l3"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="moduls_biblioteques.html">La meva biblioteca</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_conclusions.html">Repàs sobre funcions i procediments</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Repàs sobre funcions i procediments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a></li>
@@ -95,12 +95,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
-      <li class="breadcrumb-item active">Funcions</li>
+          <li class="breadcrumb-item"><a href="moduls_funcions.html">Funcions</a></li>
+      <li class="breadcrumb-item active">Repàs sobre funcions i procediments</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="moduls_primeres_definicions.html" class="btn btn-neutral float-left" title="Primeres definicions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="funcions_intro.html" class="btn btn-neutral float-right" title="El que ja sabem dels mòduls" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moduls_biblioteques.html" class="btn btn-neutral float-left" title="La meva biblioteca" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="moduls_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -108,30 +109,42 @@
     
            <div itemprop="articleBody">
              
-  <section id="funcions">
-<h1>Funcions<a class="headerlink" href="#funcions" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>Hem vist que podem dividir els nostres programes en mòduls.</p>
-<p>Els mòduls no
-deixen de ser una peça de codi etiquetada amb un nom, que pot ser
-<em>cridada</em> tants cops com ens calgui.
-Fins i tot hem vist que gràcies als <em>paràmetres</em> podem adaptar el resultat
-de cada crida a les nostres necessitats del moment.</p>
-<p>No està malament, però no és el final de la història amb els mòduls… ni
-molt menys! No et perdis el següent episodi.</p>
-<div class="toctree-wrapper compound">
+  <section id="repas-sobre-funcions-i-procediments">
+<h1>Repàs sobre funcions i procediments<a class="headerlink" href="#repas-sobre-funcions-i-procediments" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Com a resum d'aquesta secció ens queden les següents definicions:</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_eficiencia.html">Breu consideració sobre eficiència</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_return.html">Sobre el <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_arreu.html">Funcions arreu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moduls_biblioteques.html">La meva biblioteca</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_conclusions.html">Repàs sobre funcions i procediments</a></li>
-</ul>
+<li><p>funció: un mòdul que retorna un valor amb <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<p>Les funcions que hem vist fins ara s'adapten a la plantilla:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static «tipus» «nom de la funció»(«zero o més paràmetres») {
+    «instruccions del bloc»
+    return «valor del tipus»;
+}
+</pre></div>
 </div>
+<p>On «tipus» és qualsevol dels tipus vàlids (no <code class="docutils literal notranslate"><span class="pre">void</span></code>)</p>
+</li>
+<li><p>procediment: mòdul que no retorna cap valor amb <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<p>Els procediments poden tenir <code class="docutils literal notranslate"><span class="pre">return</span></code> però aquest vindrà immediatament
+seguit del punt i coma que finalitza la sentència.</p>
+<p>La plantilla pels procediments és:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>public static void «nom de la funció»(«zero o més paràmetres») {
+    «instruccions del bloc»
+    return; // si cal
+}
+</pre></div>
+</div>
+</li>
+<li><p>funció pura: funció que no modifica l'entorn i que, amb els mateixos
+arguments, sempre retorna el mateix resultat en ser cridada.</p></li>
+<li><p>funció impura: funció que altera l'entorn, per exemple, llegint de
+l'entrada estàndard, i que pot no retornar sempre el mateix valor per
+crides amb els mateixos arguments.</p>
+<p>A aquesta alteració de l'entorn li diem &quot;efectes col·laterals&quot;</p>
+</li>
+<li><p>punt de sortida: cada punt pel que pot finalitzar un mòdul. Podem
+considerar cada cop que apareix un <code class="docutils literal notranslate"><span class="pre">return</span></code> o bé quan s'acaben les
+instruccions del cos del mòdul.</p></li>
+</ul>
 </section>
 
 
@@ -160,8 +173,8 @@ molt menys! No et perdis el següent episodi.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="moduls_primeres_definicions.html" class="btn btn-neutral float-left" title="Primeres definicions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="funcions_intro.html" class="btn btn-neutral float-right" title="El que ja sabem dels mòduls" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="moduls_biblioteques.html" class="btn btn-neutral float-left" title="La meva biblioteca" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="moduls_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

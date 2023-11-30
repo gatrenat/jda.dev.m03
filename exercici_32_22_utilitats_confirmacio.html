@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funcions &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 32_22. Utilitats de confirmació &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -24,8 +24,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="El que ja sabem dels mòduls" href="funcions_intro.html" />
-    <link rel="prev" title="Primeres definicions" href="moduls_primeres_definicions.html" />
+    <link rel="next" title="Exercici 32_23. És vocal" href="exercici_32_23_es_vocal.html" />
+    <link rel="prev" title="Exercici 32_21. Matricules italianes modulades" href="exercici_32_21_matricula_italiana.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -61,20 +61,21 @@
 <li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Funcions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_eficiencia.html">Breu consideració sobre eficiència</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_return.html">Sobre el <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_arreu.html">Funcions arreu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="moduls_biblioteques.html">La meva biblioteca</a></li>
-<li class="toctree-l3"><a class="reference internal" href="funcions_conclusions.html">Repàs sobre funcions i procediments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="moduls_exercicis_intro.html">Llista d'exercicis del primer contacte amb mòduls</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_18_compara_ocurrencies.html"> Exercici 32_18. Compara ocurrències</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_19_compta_vocals.html"> Exercici 32_19. Compta vocals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_20_tipus_moduls.html"> Exercici 32_20. Tipus de mòduls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_21_matricula_italiana.html"> Exercici 32_21. Matricules italianes modulades</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 32_22. Utilitats de confirmació</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_23_es_vocal.html"> Exercici 32_23. És vocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_32_24_nomes_lletres.html"> Exercici 32_24. Només lletres (amb mòduls)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -95,12 +96,14 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
-      <li class="breadcrumb-item active">Funcions</li>
+          <li class="breadcrumb-item"><a href="moduls_exercicis.html">Llista d'exercicis</a></li>
+          <li class="breadcrumb-item"><a href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a></li>
+      <li class="breadcrumb-item active"> Exercici 32_22. Utilitats de confirmació</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="moduls_primeres_definicions.html" class="btn btn-neutral float-left" title="Primeres definicions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="funcions_intro.html" class="btn btn-neutral float-right" title="El que ja sabem dels mòduls" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_32_21_matricula_italiana.html" class="btn btn-neutral float-left" title="Exercici 32_21. Matricules italianes modulades" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_32_23_es_vocal.html" class="btn btn-neutral float-right" title="Exercici 32_23. És vocal" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -108,30 +111,38 @@
     
            <div itemprop="articleBody">
              
-  <section id="funcions">
-<h1>Funcions<a class="headerlink" href="#funcions" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>Hem vist que podem dividir els nostres programes en mòduls.</p>
-<p>Els mòduls no
-deixen de ser una peça de codi etiquetada amb un nom, que pot ser
-<em>cridada</em> tants cops com ens calgui.
-Fins i tot hem vist que gràcies als <em>paràmetres</em> podem adaptar el resultat
-de cada crida a les nostres necessitats del moment.</p>
-<p>No està malament, però no és el final de la història amb els mòduls… ni
-molt menys! No et perdis el següent episodi.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="funcions_intro.html">El que ja sabem dels mòduls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_nou_tipus.html">Un nou tipus de mòdul</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_crides.html">Aprofitem la funció</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_eficiencia.html">Breu consideració sobre eficiència</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_return.html">Sobre el <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_arreu.html">Funcions arreu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_collaterals.html">Efectes col·laterals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moduls_reutilitzacio.html">Reutilització dels mòduls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="moduls_biblioteques.html">La meva biblioteca</a></li>
-<li class="toctree-l1"><a class="reference internal" href="funcions_conclusions.html">Repàs sobre funcions i procediments</a></li>
+  <section id="exerciseicon-t-exercici-32-22-utilitats-de-confirmacio">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 32_22. Utilitats de confirmació<a class="headerlink" href="#exerciseicon-t-exercici-32-22-utilitats-de-confirmacio" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_22_utilitats_confirmacio/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="moduls_biblioteques.html"><span class="doc">La meva biblioteca</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
+<p class="rubric">Enunciat</p>
+<p>Desenvolupa una versió de l'exercici del <a class="reference internal" href="exercici_31_27_semafor.html"><span class="doc">Semàfor</span></a> de
+manera que abans de donar el consell, se n'asseguri que els usuaris són majors d'edat.</p>
+<p>La nova versió fara servir la funció
+<code class="docutils literal notranslate"><span class="pre">UtilitatsConfirmacio.respostaABoolean()</span></code>.</p>
+<p>Considera les següents simulacions:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Semafor
+<span class="hll"><span class="go">Ets major d&#39;edat?</span>
+</span><span class="go">Sí</span>
+<span class="hll"><span class="go">Color?</span>
+</span><span class="go">groc</span>
+<span class="hll"><span class="go">corre!</span>
+</span></pre></div>
 </div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Semafor
+<span class="hll"><span class="go">Ets major d&#39;edat?</span>
+</span><span class="go">Encara no</span>
+<span class="hll"><span class="go">No pots fer servir aquest programa sense supervisió</span>
+</span></pre></div>
+</div>
+<p>Si vols comprovar la potència de disposar d'aquesta funció, considera
+utilitzar-la també els programes <a class="reference internal" href="funcions_return.html"><span class="doc">Autodestruccio</span></a> i
+<a class="reference internal" href="moduls_reutilitzacio.html"><span class="doc">AutodestruccioTotal</span></a>.</p>
 </section>
 
 
@@ -160,8 +171,8 @@ molt menys! No et perdis el següent episodi.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="moduls_primeres_definicions.html" class="btn btn-neutral float-left" title="Primeres definicions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="funcions_intro.html" class="btn btn-neutral float-right" title="El que ja sabem dels mòduls" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_32_21_matricula_italiana.html" class="btn btn-neutral float-left" title="Exercici 32_21. Matricules italianes modulades" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_32_23_es_vocal.html" class="btn btn-neutral float-right" title="Exercici 32_23. És vocal" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

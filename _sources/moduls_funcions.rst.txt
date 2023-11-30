@@ -25,6 +25,5 @@ molt menys! No et perdis el següent episodi.
     funcions_arreu.rst
     funcions_collaterals.rst
     moduls_reutilitzacio.rst
-
-..    moduls_biblioteques.rst
-..    funcions_conclusions.rst
+    moduls_biblioteques.rst
+    funcions_conclusions.rst
