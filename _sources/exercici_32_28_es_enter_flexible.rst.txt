@@ -1,0 +1,81 @@
+#####################################################
+|exerciseicon__T| Exercici 32_28. És enter (flexible)
+#####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_28_es_enter_flexible/``
+
+* Continguts relacionats: :doc:`moduls_variables`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+L'exercici :doc:`anterior<exercici_32_27_es_enter>` ens ha deixat amb una
+sensació de pèrdua de funcionalitat. D'acord que per compatibilitat amb
+``Integer.parseInt()`` ens pugui ser interessant una versió estricta de
+``esEnter()`` però per altres usos podríem preferir una versió que ens
+acceptés enters envoltats d'espais.
+
+En aquest exercici farem una nova versió de ``esEnter(String)`` que li
+oferirà aquesta flexibilitat. A banda, afegirem una nova funció anomenada
+``aEnter()`` que permetrà convertir un String a enter.
+
+Aquí van les signatures:
+
+.. code-block:: java
+
+    public static boolean esEnter(String text, boolean estricte)
+
+    public static int aEnter(String text, boolean estricte)
+
+El booleà ``estricte`` permetrà decidir el comportament d'aquestes dues
+funcions:
+
+* si ``estricte`` és cert
+
+  - ``esEnter(String, boolean)`` es comporta com ``esEnter(String)``
+
+  - ``aEnter(String, boolean)`` es comporta igual que
+    ``Integer.parseInt()`` de manera que si el text no es pot convertir a enter,
+    simplement *petarà* el programa com ho faria ``Integer.parseInt()``
+
+* si ``estricte`` és fals:
+
+  - ``esEnter(String, boolean)`` acceptarà també texts amb espais a
+    l'inici i al final.
+
+  - ``aEnter(String, boolean)`` permetrà convertir a enter, sense donar
+    error, texts que continguin espais en blanc a l'inici o/i al final.
+
+Així, quan se li demani convertir un text que no sigui convertible a
+enter, ``aEnter()`` donarà un error similar a ``Integer.parseInt()``. No
+pateixis, el *prgtest* t'indicarà si no ho has fet bé amb un missatge com
+ara:
+
+.. code-block:: default
+
+	    MethodSource [className = 'TestExercise', methodName = 'aEnterFalseException', methodParameterTypes = 'java.lang.String']
+	    => org.opentest4j.AssertionFailedError: Expected java.lang.NumberFormatException to be thrown, but nothing was thrown.
+
+Bé, sí, resulta una mica críptic en aquests moments, però més endavant
+prendrà més sentit tot això de ``java.lang.NumberFormatException``. De
+moment, si veiem aquest error a la sortida del *prgtest*, ja tenim una
+idea de què ha passat.
+
+Et sorprèn que puguis tenir a l'hora ``esEnter(String)`` i
+``esEnter(String, boolean)`` amb el mateix nom? És una particularitat
+interessant de llenguatges com Java, anomenada *sobrecàrrega* o
+*overloading*, que veurem amb més detall en el futur.
+
+Què es demana?
+==============
+
+Afegeix les dues noves funcions a ``UtilString.java`` de manera que
+``prgtest`` pugui avaluar-les.
+
+El lliurament inclourà la mateixa versió de ``EsEnter.java`` que
+tenia l'exercici anterior.
