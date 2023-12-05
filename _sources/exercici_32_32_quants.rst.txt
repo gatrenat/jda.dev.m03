@@ -1,0 +1,124 @@
+#############################################
+|exerciseicon___| Exercici 32_32. Quants cops
+#############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_32_quants/``
+
+* Continguts relacionats: :doc:`moduls_variables`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Els Strings de Java en la versió que fem servir en aquest curs, no ofereixen la
+utilitat ``count()`` que en altres llenguatges permet saber quants cops apareix
+un substring en un string.
+
+Em decidit que això no pot ser, així que farem nosaltres una implementació
+d'aquesta funció.
+
+La versió que implementarem tindrà dues modalitats que permetran decidir si cal
+realitzar comparacions extrictes o no en el sentit de l'exercici
+:doc:`anterior<exercici_32_30_substring>`.
+
+Les signatures a implementar són:
+
+.. code-block:: java
+
+    // retorna el nombre d'aparicions del subtext dins del text, considerant si
+    // ha de ser o no extricte
+    public static int quants(String text, String subtext, boolean extricte)
+    // equival a quants(text, subtext, true)
+    public static int quants(String text, String subtext)
+
+Pots provar el seu funcionament amb el següent codi d'exemple:
+
+.. code-block:: java
+   :linenos:
+
+    /* Aquest programa comprova el funcionament de la funció UtilSTring.quants() */
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Text principal?");
+            String principal = Entrada.readLine();
+            System.out.println("Subtext?");
+            String subtext = Entrada.readLine();
+            System.out.println("Extricte?");
+            boolean extricte = UtilitatsConfirmacio.repsostaABoolean(Entrada.readLine());
+            System.out.printf("quants(\"%s\", \"%s\") -> %b%n",
+                              principal, subtext, extricte,
+                              UtilString.quants(principal, subtext, extricte));
+        }
+    }
+
+Unes simulacions d'execució:
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+   SKIBÍDI
+   xtricte?
+   No
+   quants("Skibiditoiletskibidiskibidi", "SKIBÍDI, false) -> 3
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+   skibidi
+   xtricte?
+   sí
+   quants("Skibiditoiletskibidiskibidi", "skibidi", true) -> 2
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5
+
+   $ java Main
+   Text principal?
+   Skibídïtoiletskibidískibidi
+   Subtext?
+   bïdí
+   Extricte?
+   no
+   quants("Skibídïtoiletskibidískibidi", "skibidi", true) -> 3
+
+Nota: Fixa't en les dièresis i accents.
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+
+   Extricte?
+   No
+   quants("Skibiditoiletskibidiskibidi", "", false) -> 0
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5
+
+   $ java Main
+   Text principal?
+
+   Subtext?
+   toilet
+   Extricte?
+   No
+   quants("", "skibidi", false) -> 0
+
+Per simplicitat, si la subcadena és buida, retornarà 0 en comptes d'infinit.
+Confio en que apreciaràs aquesta simplificació ;)
+
+Resol aquest exercici només fent servir mòduls pròpis teus i les funcions bàsiques
+``String.charAt()`` i ``String.length()``.

@@ -643,3 +643,11 @@ Per descomptat, podràs fer servir mòduls realitzats a exercicis anteriors.
 |exerciseicon__T| :doc:`exercici_32_28_es_enter_flexible`
 
 |exerciseicon__T| :doc:`exercici_32_29_cadena_continua`
+
+|exerciseicon__T| :doc:`exercici_32_30_substring`
+
+|exerciseicon__T| :doc:`exercici_32_31_prefixsufix`
+
+|exerciseicon___| :doc:`exercici_32_32_quants`
+
+|exerciseicon_S_| :doc:`exercici_32_33_progressio`

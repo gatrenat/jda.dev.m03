@@ -1,0 +1,154 @@
+############################################################
+|exerciseicon_S_| Exercici 32_33. Progressió de les paraules
+############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_33_progressio/``
+
+* Continguts relacionats: :doc:`moduls_variables`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+.. rubric:: Enunciat
+
+
+T'has fixat que per algunes paraules totes les seves lletres van apareixent de
+manera **creixent** segons l'alfabet?
+Per exemple, la paraula "amor" té 'a' < 'm' < 'o' < 'r'.
+Direm a aquestes paraules *creixents*.
+
+En canvi, hi ha d'altres paraules per les que les lletres es mostren de manera
+**decreixent**. 
+Per exemple, la paraula "roma" té 'r' > 'o' > 'm' > 'a'.
+Anomenarem aquestes paraules *decreixents*.
+
+Encara més, algunes paraules comencen creixents però tot d'una comencen a
+decrèixer. Per exemple "ameba" comença a crèixer amb 'a', 'm' i després decreix
+amb 'e' > 'b' > 'a'.
+Direm a aquestes paraules *creixidecris*.
+
+Evidentment, si tenim de *creixidecris* també en tindrem de *decricreixis*. És
+a dir, paraules que comencen decreixent i tot d'una deixen de decrèixer per
+acabar creixent. Per exemple, "sonar", comença fent 's' > 'o' > 'n' > 'a' per
+després començar a crèixer amb 'a' < 'r'.
+
+Les quatre categories de paraules, tenen dues variants cadascuna: estrictes i
+no estrictes. Per exemple, la paraula "illa" de manera estricta, no seria
+classificable com a cap de les quatre ja que hi ha una lletra que es repeteix
+i, per tant, no pot ser major ni menor estricta que la seva igual. 'i' < 'l'
+però 'l' == 'l'. En canvi, "illa" podria considerar-se *crexidecri no estricta*
+ja que 'i' <= 'l' <= 'l' i després comença el decreixement amb 'l' >= 'a'.
+
+La resta de paraules, potser la majoria, no són ni creixents ni decreixents.
+Per exemple, "java" comença decreixent 'j' > 'a', per després créixer, 'a' <
+'v', per finalment tornar a decréixer 'v' > 'a'. Anomenarem les paraules com
+aquesta *normaleta*.
+
+Desenvolupa un programa que implementi el patró "lloro" amb finalització de
+cadena buida. Per cada paraula entrada, indicarà de quin tipus és: creixent,
+decreixent, creixidecri, decricreixi o normaleta.
+
+El programa ignorarà majúscules/minúscules, espais en blanc i altres símbols no
+lletres, En el cas dels caràcters especials catalans, es considerarà que la 'ç'
+equival a la 'c', i les vocals accentuades equivalen a la vocal sense
+accentuar.
+
+Per fer-ho, el programa utilitzarà els següents mòduls de la biblioteca
+``UtilString`` (que també hauràs de codificar):
+
+* ``boolean esCreixent(String text)``: retorna cert quan el text rebut és
+  creixent esticte. Per exemple:
+
+    .. code-block:: console
+
+        jshell> esCreixent("adeu");
+        $1 ==> true
+
+        jshell> esCreixent("adéu");     // atenció a l'accent
+        $2 ==> true
+
+        jshell> esCreixent("am or");    // atenció a l'espai
+        $3 ==> false
+
+        jshell> esCreixent("amOr");     // atenció a la O majúscula
+        $4 ==> false
+
+        jshell> esCreixent("amor ");    // atenció a l'espai
+        $5 ==> false
+
+        jshell> esCreixent("1234Aa");   // sí, accepta números
+        $6 ==> true
+
+        jshell> esCreixent("");         // si és en blanc, no és creixent
+        $7 ==> false
+
+        jshell> esCreixent("a");        // si només una lletra, no és creixent
+        $8 ==> false
+
+* ``boolean esDecreixent(String text)``: retorna cert quan el text és decreixent estricta.
+
+* ``boolean esCreixiDecri(String test)``: retorna cert quan el text és *decricreixi* estricta.
+
+* ``boolean esDecriCreixi(String test)``: retorna cert quan el text és *creixidecri* estricta.
+
+Els mòduls anteriors disposaran d'una versió que permetrà indicar si el
+creixement ha de ser o no estricte. Per exemple, la paraula "ella" de manera
+estricta seria normaleta ja que la primera 'l' no és major ni menor a la
+segona. En canvi, de manera no estricta seria creixidecri. 'e' <= 'l' <= 'l' i
+'l' >= 'a'.
+
+Aquí les signatures:
+
+* ``boolean esCreixent(String text, boolean estricta)``: com
+  ``esCreixent(String)`` quan ``estricta`` és cert. Quan és fals, retorna cert
+  quan ``text`` és creixent no estricta.
+
+* ``boolean esDecreixent(String text, boolean estricta)``: retorna cert quan el
+  text és decreixent estricta o no, segons el paràmetre ``estricta``.
+
+* ``boolean esCreixiDecri(String test, boolean estricta)``: retorna cert quan
+  el text és *decricreixi* estricta, segons el paràmetre ``estricta``.
+
+* ``boolean esDecriCreixi(String test, boolean estricta)``: retorna cert quan
+  el text és *creixidecri* estricta, segons el paràmetre ``estricta``.
+
+
+Una simulació d'execució.
+
+.. code-block:: java
+
+    $ java Progressio
+    Intruduïu text. Enter per finalitzar.
+    Hola
+    "Hola" és normaleta
+    Adéu
+    "Adéu" és creixent
+    "Hola i adèu!"
+    "Hola" és normaleta
+    "adéu" és creixent
+    "i o a!"
+    Cap paraula vàlida
+    "Die Äpfel sind lecker"
+    "Die" és creixidecri
+    "Äpfel" és decricreixi
+    "sind" és normaleta
+    "lecker" és normaleta
+    " Un  amor  romà "
+    "Un" és decreixent
+    "amor" és creixent
+    "romà" és decreixent
+
+    Adéu
+
+Nota: Fixa't que la sortida mostra les diferents paraules que s'introdueixen,
+tant si és en una línia com si és en vàries. També ignora espais extra,
+paraules massa curtes i simbols no lletra. Fixa't que les lletres fora de
+l'alfabet català, com ara la ``'Ä'`` no es considera com la ``'A'`` i, per
+tant, té un ordre per sobre de la majoria de les lletres de l'alfabet català.
+
+Resol aquest exercici només fent servir les funcions bàsiques
+``String.charAt()`` i ``String.length()`` i mòduls teus que no continguin
+altres utilitats de manipulació de strings.

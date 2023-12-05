@@ -20,8 +20,7 @@ Els exercicis dels temes :doc:`moduls_funcions` i ``moduls_variables`` són:
     exercici_32_27_es_enter.rst
     exercici_32_28_es_enter_flexible.rst
     exercici_32_29_cadena_continua.rst
-
-..    exercici_32_30_substring.rst
-..    exercici_32_31_prefixsufix.rst
-..    exercici_32_32_quants.rst
-..    exercici_32_33_progressio.rst
+    exercici_32_30_substring.rst
+    exercici_32_31_prefixsufix.rst
+    exercici_32_32_quants.rst
+    exercici_32_33_progressio.rst

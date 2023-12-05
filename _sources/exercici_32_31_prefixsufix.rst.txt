@@ -1,0 +1,115 @@
+####################################################
+|exerciseicon__T| Exercici 32_31. Prefixos i sufixos
+####################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_31_prefixsufix/``
+
+* Continguts relacionats: :doc:`moduls_variables`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Implementarem ara una nova versió per les utilitats de String: ``startsWith`` i ``endsWith``.
+
+Les versions a implementar tindran dues modalitats per permetre indicar si ha
+de ser extricte o no en el sentit de l'exercici :doc:`anterior<exercici_32_30_substring>`.
+
+Les signatures a implementar són:
+
+.. code-block:: java
+
+    // retorna cert quan text comença amb prefix, considerant si ha de ser o no extricte
+    public static boolean esPrefix(String text, String prefix, boolean extricte)
+    // equival a esPrefix(text, prefix, true)
+    public static boolean esPrefix(String text, String prefix)
+
+    // retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte
+    public static boolean esSufix(String text, String sufix, boolean extricte)
+    // equival a esSufix(text, sufix, true)
+    public static boolean esSufix(String text, String sufix)
+
+Pots provar el seu funcionament amb el següent codi d'exemple:
+
+.. code-block:: java
+   :linenos:
+
+    /* Aquest programa comprova el funcionament de les funció UtilSTring.esPrefix() i esSufix() */
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Text principal?");
+            String principal = Entrada.readLine();
+            System.out.println("Subtext?");
+            String subtext = Entrada.readLine();
+            System.out.println("Extricte?");
+            boolean extricte = UtilitatsConfirmacio.respostaABoolean(Entrada.readLine());
+            System.out.printf("esPrefix(\"%s\", \"%s\") -> %b%n",
+                              principal, subtext, extricte,
+                              UtilString.esPrefix(principal, subtext, extricte));
+            System.out.printf("esSufix(\"%s\", \"%s\") -> %b%n",
+                              principal, subtext, extricte,
+                              UtilString.esSufix(principal, subtext, extricte));
+        }
+    }
+
+Unes simulacions d'execució:
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5-
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+   skïbidi
+   Extricte?
+   No
+   esPrefix("Skibiditoiletskibidiskibidi", "skïbidi", false) -> true
+   esSufix("Skibiditoiletskibidiskibidi", "skïbidi", false) -> true
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5-
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+   skibidi
+   Extricte?
+   Sí
+   esPrefix("Skibiditoiletskibidiskibidi", "skibidi", true) -> false
+   esSufix("Skibiditoiletskibidiskibidi", "skibidi", true) -> true
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5-
+
+   $ java Main
+   Text principal?
+   Skibiditoiletskibidiskibidi
+   Subtext?
+
+   Extricte?
+   No
+   esPrefix("Skibiditoiletskibidiskibidi", "", false) -> true
+   esSufix("Skibiditoiletskibidiskibidi", "", false) -> true
+
+.. code-block:: console
+   :emphasize-lines: 1, 3, 5-
+
+   $ java Main
+   Text principal?
+
+   Subtext?
+   skibidi
+   Extricte?
+   No
+   esPrefix("", "skibidi", false) -> false
+   esSufix("", "skibidi", false) -> false
+
+
+Resol aquest exercici només fent servir mòduls pròpis teus i les funcions
+bàsiques ``String.charAt()`` i ``String.length()``.
