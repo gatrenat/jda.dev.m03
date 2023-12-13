@@ -1,0 +1,34 @@
+###########################
+Llista d'exercicis d'arrays
+###########################
+
+Els exercicis del tema :doc:`arrays` són:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    exercici_32_34_nota_mes_alta_v1.rst
+    exercici_32_35_nota_mes_alta_v2.rst
+    exercici_32_36_nota_mes_alta_v3.rst
+    exercici_32_37_nota_mes_alta_v4.rst
+    exercici_32_38_enters_entre_comes_v1.rst
+    exercici_32_39_enters_entre_comes_v2.rst
+    exercici_32_40_enters_entre_comes_v3.rst
+    exercici_32_41_enters_entre_comes_v4.rst
+    exercici_32_42_arguments.rst
+    exercici_32_43_nomes_enters.rst
+    exercici_32_44_split.rst
+    exercici_32_45_join.rst
+
+..    exercici_32_46_tresenratlla_files.rst
+..    exercici_32_47_tresenratlla_taulell.rst
+..    exercici_32_48_tresenratlla.rst
+
+..    exercici_32_49_pilota_cau.rst
+..    exercici_32_50_pilota_rebota.rst
+..    exercici_32_51_digitart.rst
+..    exercici_32_52_int2str.rst
+..    exercici_32_53_inisequencial.rst
+..    exercici_32_54_formestaula.rst
+..    exercici_32_55_formesplenes.rst
