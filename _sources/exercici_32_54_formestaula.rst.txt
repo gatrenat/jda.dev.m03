@@ -1,0 +1,322 @@
+###################################################
+|exerciseicon_ST| Exercici 32_54. Formes entaulades
+###################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_54_formestaula/``
+
+* Continguts relacionats: :doc:`arrays_mutabilitat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa que, a partir de l'especificació d'una forma, la
+dibuixi.
+
+Una especificació de forma consisteix en un string format per tres elements
+seguits:
+
+- una especificació de dimensió com la que ja hem vist a exercicis com
+  :doc:`aquest<exercici_32_52_int2str>`
+
+  Com a recordatori, l'especificació de dimensió està formada per dos
+  números del 1 al 99, separades amb un caràcter ``'x'``.
+
+- una especificació de forma
+
+L'especificació de forma consisteix en un text amb un dels següents:
+
+* ``\``: primera diagonal
+
+* ``|``:  vertical al mig
+
+* ``-``:  horitzontal al mig
+
+* ``+``:  quarts
+
+* ``/``:  segona diagonal
+
+* ``x``:  creu
+
+* ``=``:  pas de vianants
+
+* ``||``:  zebra
+  
+* ``++``:  taulell d'escacs
+
+Les especificacions de les formes es rebran com a arguments de la línia de
+comandes.
+
+Per exemple, si volem especificar una taula de 5x6 amb la primera
+diagonal, indicarem:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+   $ java Formes '5x6\'
+   5x6\
+   X.....
+   .X....
+   ..X...
+   ...X..
+   ....X.
+
+**Nota**: Per assegurar que *bash* no interpreti els caràcters especials
+de la línia de comandes, pot ser necessari envoltar cada especificació
+entre cometes simples.
+
+En cas que l'especificació de la taula no sigui correcta, el programa
+mostrarà un error. En canvi, si el problema és que no s'ha especificat la
+forma o bé aquesta no es coneix, el programa mostrarà una taula tota
+inicialitzada a fals.
+
+La següent simulació mostra aquests dos casos:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+   $ java Formes '5x6\' '0x6\' 4x3
+   5x6\
+   X.....
+   ·X....
+   ··X...
+   ···X..
+   ····X.
+
+   0x6\
+   Especificació errònia
+
+   4x3
+   ···
+   ···
+   ···
+   ···
+
+
+Mòduls
+------
+
+Es requereixen els següents mòduls:
+
+* ``UtilTaula.taulaToString(boolean[][] taula, char caracterTrue, char
+  caracterFalse)``
+
+  Aquesta funció *pura* retornarà un string amb una representació dels valors de
+  la taula que rep amb els caràcters rebuts.
+
+  Per exemple, considera el següent fragment de codi:
+
+  .. code-block:: java
+     :linenos:
+
+     boolean[][] taula = {
+                             {true, false, false},
+                             {false, true, true}
+                         };
+     String resultat = UtilTaula.taulaToString(taula, 'X', '·');
+     System.out.println(resultat);
+
+  Per sortida estàndard mostrarà:
+
+  .. code-block:: none
+
+     X··
+     ·XX
+
+* ``UtilTaula.inicialitzaPrimeraDiagonal(boolean[][])``
+
+  Procediment que rep una taula de booleans i la inicialitza amb la
+  primera diagonal a ``true`` i la resta a ``false``.
+
+  És a dir, aquest procediment és l'encarregat d'inicialitzar la taula per
+  l'especificació ``\``.
+
+  Considera el següent fragment de codi:
+
+  .. code-block:: java
+     :linenos:
+
+     boolean[][] taula = UtilTaula.primeraDiagonal(new boolean[5][6]);
+     String resultat = UtilTaula.taulaToString(taula, 'X', '·');
+     System.out.println(resultat);
+
+  Per sortida estàndard mostrarà:
+
+  .. code-block:: console
+
+     5x6\
+     X·····
+     ·X····
+     ··X···
+     ···X··
+     ····X·
+
+  Aquesta forma sempre començarà emplenant per la primera fila i primera
+  columna. Així, per algunes dimensions, no semblarà gaire una diagonal.
+  Per exemple:
+
+  .. code-block:: console
+
+     5x8\
+     X···
+     ·X··
+     ··X·
+     ···X
+     ····
+     ····
+     ····
+     ····
+
+* ``UtilTaula.inicialitzaVerticalMig(boolean[][])``
+
+  Com en el cas de la primera diagonal, però ara dividint la taula en dues
+  seccions, amb una línia vertical. Aquest procediment és l'encarregat de
+  dibuixar l'especificació ``|``.
+
+  Tingues present que si les columnes són parelles, la vertical estarà a
+  la columna menor de les dues del mig.
+
+  .. code-block:: console
+
+     4x4|                    4x5|
+     ·X··                    ··X··
+     ·X··                    ··X··
+     ·X··                    ··X··
+     ·X··                    ··X··
+
+* ``UtilTaula.inicialitzaHoritzontalMig(boolean[][])``
+
+  Molt similar a la ``|`` però ara amb una línia horitzontal per processar
+  l'especificació ``-``. En aquest cas, caldrà que tinguis present si el
+  nombre de files és parell o senar.
+
+
+  .. code-block:: console
+
+     7x5-               2x4-                4x5-
+     ·····              XXXX                ·····
+     ·····              ····                XXXXX
+     ·····                                  ·····
+     XXXXX                                  ·····
+     ·····
+     ·····
+     ·····
+
+
+* ``UtilTaula.inicialitzaQuarts(boolean[][])``: per ``+``
+
+  Amb aquesta forma caldrà que tinguis present les mateixes consideracions
+  que amb les formes ``|`` i ``-`` respecte dimensions parelles i senars.
+
+  .. code-block:: none
+
+     5x5+                    3x2+                4x6+
+     ··X··                   X·                  ··X···
+     ··X··                   XX                  XXXXXX
+     XXXXX                   X·                  ··X···
+     ··X··                                       ··X···
+     ··X··
+
+
+* ``UtilTaula.segonaDiagonal(boolean[][])``: per l'especificació de la
+  forma ``/``.
+
+  Aquesta forma és molt similar a la ``\``.
+
+  Aquesta forma sempre començarà emplenant per la primera fila i darrera
+  columna.
+
+  .. code-block:: none
+
+     7x7/                         7x5/                4x7/
+     ······X                      ····X               ······X
+     ·····X·                      ···X·               ·····X·
+     ····X··                      ··X··               ····X··
+     ···X···                      ·X···               ···X···
+     ··X····                      X····
+     ·X·····                      ·····
+     X······                      ·····
+
+* ``UtilTaula.inicialitzaCreu(boolean[][] taula)``: per ``x``
+
+  Amb aquesta forma caldrà que tinguis present les mateixes consideracions
+  que amb les formes ``\`` i ``/`` respecte dimensions parelles i senars.
+  Això implicarà que per algunes dimensions, no semblarà pas una ``X`` sinó,
+  com al següent exemple, més aviat una ``V``, mentre que per d'altres
+  quedaran línies en blanc al final.
+
+  .. code-block:: none
+
+     7x7x                     3x5x                7x5x
+     X·····X                  X···X               X···X
+     ·X···X·                  .X.X.               ·X·X·
+     ··X·X··                  ..X..               ··X··
+     ···X···                                      ·X·X·
+     ··X·X··                                      X···X
+     ·X···X·                                      ·····
+     X·····X                                      ·····
+
+
+
+
+
+
+
+
+
+
+
+
+
+* ``UtilTaula.inicialitzaPasVianants(boolean[][])``: per ``=``
+
+  El pas de vianants fa una sèrie de línies horitzontals intercalades,
+  començant per una línia buida.
+
+  .. code-block:: none
+
+     7x4=                    4x4=
+     ····                    ····
+     XXXX                    XXXX
+     ····                    ····
+     XXXX                    XXXX
+     ····
+     XXXX
+     ····
+
+* ``UtilTaula.inicialitzaZebra(boolean[][])``: per ``||``
+
+  Molt semblant al pas de vianants, aquest mòdul inicialitza la taula amb
+  una sèrie de línies verticals intercalades, començant amb una buida.
+
+  .. code-block:: none
+
+     4x7||                   4x6||
+     ·X·X·X·                 ·X·X·X
+     ·X·X·X·                 ·X·X·X
+     ·X·X·X·                 ·X·X·X
+     ·X·X·X·                 ·X·X·X
+
+* ``UtilTaula.inicialitzaEscacs(boolean[][])``: per ``++``
+  
+  En aquesta ocasió, la forma representarà un patró intercalat similar al
+  que apareix a un taulell d'escacs. La primera casella (primera fila i
+  primera columna) començarà sempre en blanc.
+
+  .. code-block:: none
+
+     8x8++                   5x8++               4x7++
+     ·X·X·X·X                ·X·X·X·X            ·X·X·X·
+     X·X·X·X·                X·X·X·X·            X·X·X·X
+     ·X·X·X·X                ·X·X·X·X            ·X·X·X·
+     X·X·X·X·                X·X·X·X·            X·X·X·X
+     ·X·X·X·X                ·X·X·X·X
+     X·X·X·X·
+     ·X·X·X·X
+     X·X·X·X·

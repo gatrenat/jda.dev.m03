@@ -20,15 +20,13 @@ Els exercicis del tema :doc:`arrays` són:
     exercici_32_43_nomes_enters.rst
     exercici_32_44_split.rst
     exercici_32_45_join.rst
-
-..    exercici_32_46_tresenratlla_files.rst
-..    exercici_32_47_tresenratlla_taulell.rst
-..    exercici_32_48_tresenratlla.rst
-
-..    exercici_32_49_pilota_cau.rst
-..    exercici_32_50_pilota_rebota.rst
-..    exercici_32_51_digitart.rst
-..    exercici_32_52_int2str.rst
-..    exercici_32_53_inisequencial.rst
-..    exercici_32_54_formestaula.rst
-..    exercici_32_55_formesplenes.rst
+    exercici_32_46_tresenratlla_files.rst
+    exercici_32_47_tresenratlla_taulell.rst
+    exercici_32_48_tresenratlla.rst
+    exercici_32_49_pilota_cau.rst
+    exercici_32_50_pilota_rebota.rst
+    exercici_32_51_digitart.rst
+    exercici_32_52_int2str.rst
+    exercici_32_53_inisequencial.rst
+    exercici_32_54_formestaula.rst
+    exercici_32_55_formesplenes.rst
