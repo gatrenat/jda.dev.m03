@@ -34,21 +34,21 @@ Pots provar el seu funcionament amb el següent codi d'exemple:
     /* Aquest programa comprova el funcionament de la funció UtilSTring.junta() */
     public class Main {
         public static void main(String[] args) {
-            System.out.printf("Separador?")
+            System.out.printf("Separador?");
             String separador = Entrada.readLine();
-            System.out.printf("Darrer separador?")
+            System.out.printf("Darrer separador?");
             String darrerSeparador = Entrada.readLine();
-            System.out.printf("Valors:")
+            System.out.printf("Valors:");
             if (args.length > 0) {
-                for (String entrada: args) {
-                    System.out.printf("\t\"%s\"", entrada);
+                for (int i=0; i < args.length; i++) {
+                    System.out.printf("\t\"%s\"", args[i]);
                 }
             } else {
                 System.out.println("Cap valor");
             }
-            System.out.println("junta(valors, \"%s\", \"%s\") -> \"%s\"%n",
+            System.out.printf("junta(valors, \"%s\", \"%s\") -> \"%s\"%n",
                                 separador, darrerSeparador,
-                                junta(args, sepaador, darrerSeparador));
+                                UtilString.junta(args, separador, darrerSeparador));
         }
     }
 

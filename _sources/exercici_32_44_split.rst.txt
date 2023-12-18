@@ -24,7 +24,7 @@ Les signatures a implementar són:
     // retorna la seqüència de subcadenes de text separades entre caràcters en blanc, incloent els caracters en blanc quan inclouBlanc és cert
     public static String[] separa(String text, boolean inclouBlanc)
     // equival a separa(text, true)
-    public static boolean separa(String text)
+    public static String[] separa(String text)
 
 Pots provar el seu funcionament amb el següent codi d'exemple:
 
@@ -37,11 +37,12 @@ Pots provar el seu funcionament amb el següent codi d'exemple:
             System.out.println("Text principal?");
             String principal = Entrada.readLine();
             System.out.println("Inclou espais?");
-            String[] paraules = UtilitatsConfirmacio.separa(Entrada.readLine());
+            boolean extricte = ! UtilitatsConfirmacio.respostaABoolean(Entrada.readLine());
+            String[] paraules = UtilString.separa(principal);
             System.out.printf("separa(\"%s\", %b) -> %n", principal, extricte);
             if (paraules.length > 0) {
-                for (String paraula: paraules) {
-                    System.out.printf("\t\"%s\"", paraula);
+                for (int i=0; i < paraules.length; i++) {
+                    System.out.printf("\t\"%s\"", paraules[i]);
                 }
             } else {
                 System.out.println("Cap resultat");
@@ -110,6 +111,5 @@ Fixa't que inclou tots els espais que troba.
    No
    separa("", false) ->
    Cap resultat
-
 
 Per descomptat, no facis servir ``String.split()``!
