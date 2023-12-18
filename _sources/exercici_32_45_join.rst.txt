@@ -41,7 +41,7 @@ Pots provar el seu funcionament amb el següent codi d'exemple:
             System.out.printf("Valors:");
             if (args.length > 0) {
                 for (int i=0; i < args.length; i++) {
-                    System.out.printf("\t\"%s\"", args[i]);
+                    System.out.printf("- \"%s\"", args[i]);
                 }
             } else {
                 System.out.println("Cap valor");
@@ -63,9 +63,9 @@ Unes simulacions d'execució:
    Darrer separador?
     i
    Valors:
-       "llet"
-       "sal"
-       "mantega"
+   - "llet"
+   - "sal"
+   - "mantega"
    junta(valors, ", ", " i ") -> "llet, sal, mantega"
 
 
@@ -78,9 +78,9 @@ Unes simulacions d'execució:
    Darrer separador?
    /
    Valors:
-       "llet"
-       "sal"
-       "mantega"
+   - "llet"
+   - "sal"
+   - "mantega"
    junta(valors, "/", "/") -> "llet/sal/mantega/sucre"
 
 .. code-block:: console
@@ -92,9 +92,9 @@ Unes simulacions d'execució:
    Darrer separador?
     =
    Valors:
-       "1"
-       "2"
-       "3"
+   - "1"
+   - "2"
+   - "3"
    junta(valors, " + ", " = ") -> "1 + 2 = 3"
 
 .. code-block:: console
@@ -108,6 +108,5 @@ Unes simulacions d'execució:
    Valors:
    cap valor
    junta(valors, ", ", " i ") -> ""
-
 
 Per descomptat, no facis servir ``String.join()``!

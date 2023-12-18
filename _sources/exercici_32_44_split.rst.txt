@@ -1,5 +1,5 @@
 #######################################################
-|exerciseicon___| Exercici 32_44. La utilitat ``split``
+|exerciseicon_S_| Exercici 32_44. La utilitat ``split``
 #######################################################
 
 .. rubric:: Context
@@ -14,15 +14,18 @@
 
 Implementa una versió simplificada de la utilitat ``String.split()``
 
-La versió que implementarem considerarà com a separador els caracters en blanc (``Character.isWhitespace()``)
-El resultat serà sempre un array de String i disposarà de dues modalitats que permetran decidir què fer amb els espais en blanc, si incloure'ls o no en el resultat.
+La versió que implementarem considerarà com a separador els caracters en blanc
+(``Character.isWhitespace()``) El resultat serà sempre un array de String i
+disposarà de dues modalitats que permetran decidir què fer amb els espais en
+blanc, si incloure'ls o no en el resultat.
 
 Les signatures a implementar són:
 
 .. code-block:: java
 
-    // retorna la seqüència de subcadenes de text separades entre caràcters en blanc, incloent els caracters en blanc quan inclouBlanc és cert
-    public static String[] separa(String text, boolean inclouBlanc)
+    // retorna la seqüència de subcadenes de text separades entre caràcters en
+    // blanc, incloent els caracters en blanc quan inclouBlancs és cert
+    public static String[] separa(String text, boolean inclouBlancs)
     // equival a separa(text, true)
     public static String[] separa(String text)
 
@@ -37,12 +40,12 @@ Pots provar el seu funcionament amb el següent codi d'exemple:
             System.out.println("Text principal?");
             String principal = Entrada.readLine();
             System.out.println("Inclou espais?");
-            boolean extricte = ! UtilitatsConfirmacio.respostaABoolean(Entrada.readLine());
-            String[] paraules = UtilString.separa(principal);
-            System.out.printf("separa(\"%s\", %b) -> %n", principal, extricte);
+            boolean inclouBlancs = UtilitatsConfirmacio.respostaABoolean(Entrada.readLine());
+            String[] paraules = UtilString.separa(principal, extricte);
+            System.out.printf("separa(\"%s\", %b) ->%n", principal, extricte);
             if (paraules.length > 0) {
                 for (int i=0; i < paraules.length; i++) {
-                    System.out.printf("\t\"%s\"", paraules[i]);
+                    System.out.printf("- \"%s\"\n", paraules[i]);
                 }
             } else {
                 System.out.println("Cap resultat");
@@ -61,15 +64,15 @@ Unes simulacions d'execució:
    Inclou espais?
    No
    separa("Heute ist ein guter Tag um glücklich zu sein", false) ->
-       "Heute"
-       "ist"
-       "ein"
-       "guter"
-       "Tag"
-       "um"
-       "glücklich"
-       "zu"
-       "sein"
+   - "Heute"
+   - "ist"
+   - "ein"
+   - "guter"
+   - "Tag"
+   - "um"
+   - "glücklich"
+   - "zu"
+   - "sein"
 
 .. code-block:: console
    :emphasize-lines: 1, 3, 5-
@@ -80,24 +83,24 @@ Unes simulacions d'execució:
    Inclou espais?
    Sí
    separa("  Heute ist   ein guter Tag um glücklich zu sein", true) ->
-       "  "
-       "Heute"
-       " "
-       "ist"
-       "   "
-       "ein"
-       " "
-       "guter"
-       " "
-       "Tag"
-       " "
-       "um"
-       " "
-       "glücklich"
-       " "
-       "zu"
-       " "
-       "sein"
+   - "  "
+   - "Heute"
+   - " "
+   - "ist"
+   - "   "
+   - "ein"
+   - " "
+   - "guter"
+   - " "
+   - "Tag"
+   - " "
+   - "um"
+   - " "
+   - "glücklich"
+   - " "
+   - "zu"
+   - " "
+   - "sein"
 
 Fixa't que inclou tots els espais que troba.
 

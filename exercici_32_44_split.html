@@ -129,8 +129,8 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-exercici-32-44-la-utilitat-split">
-<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 32_44. La utilitat <code class="docutils literal notranslate"><span class="pre">split</span></code><a class="headerlink" href="#exerciseicon-exercici-32-44-la-utilitat-split" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-s-exercici-32-44-la-utilitat-split">
+<h1><img alt="exerciseicon_S_" src="_images/exerciseicon_S_.png" /> Exercici 32_44. La utilitat <code class="docutils literal notranslate"><span class="pre">split</span></code><a class="headerlink" href="#exerciseicon-s-exercici-32-44-la-utilitat-split" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
 <li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_44_split/</span></code></p></li>
@@ -139,11 +139,14 @@
 </ul>
 <p class="rubric">Enunciat</p>
 <p>Implementa una versió simplificada de la utilitat <code class="docutils literal notranslate"><span class="pre">String.split()</span></code></p>
-<p>La versió que implementarem considerarà com a separador els caracters en blanc (<code class="docutils literal notranslate"><span class="pre">Character.isWhitespace()</span></code>)
-El resultat serà sempre un array de String i disposarà de dues modalitats que permetran decidir què fer amb els espais en blanc, si incloure'ls o no en el resultat.</p>
+<p>La versió que implementarem considerarà com a separador els caracters en blanc
+(<code class="docutils literal notranslate"><span class="pre">Character.isWhitespace()</span></code>) El resultat serà sempre un array de String i
+disposarà de dues modalitats que permetran decidir què fer amb els espais en
+blanc, si incloure'ls o no en el resultat.</p>
 <p>Les signatures a implementar són:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna la seqüència de subcadenes de text separades entre caràcters en blanc, incloent els caracters en blanc quan inclouBlanc és cert</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">separa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inclouBlanc</span><span class="p">)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna la seqüència de subcadenes de text separades entre caràcters en</span>
+<span class="c1">// blanc, incloent els caracters en blanc quan inclouBlancs és cert</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">separa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inclouBlancs</span><span class="p">)</span>
 <span class="c1">// equival a separa(text, true)</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">separa</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 </pre></div>
@@ -155,12 +158,12 @@ El resultat serà sempre un array de String i disposarà de dues modalitats que 
 <span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text principal?&quot;</span><span class="p">);</span>
 <span class="linenos"> 5</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">principal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Inclou espais?&quot;</span><span class="p">);</span>
-<span class="linenos"> 7</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">paraules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">separa</span><span class="p">(</span><span class="n">principal</span><span class="p">);</span>
-<span class="linenos"> 9</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;separa(\&quot;%s\&quot;, %b) -&gt; %n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">inclouBlancs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">paraules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilString</span><span class="p">.</span><span class="na">separa</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;separa(\&quot;%s\&quot;, %b) -&gt;%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">);</span>
 <span class="linenos">10</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">paraules</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">11</span><span class="w">             </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">paraules</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">12</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\t\&quot;%s\&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">paraules</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos">12</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;- \&quot;%s\&quot;\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">paraules</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
 <span class="linenos">13</span><span class="w">             </span><span class="p">}</span>
 <span class="linenos">14</span><span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">15</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cap resultat&quot;</span><span class="p">);</span>
@@ -176,15 +179,15 @@ El resultat serà sempre un array de String i disposarà de dues modalitats que 
 </span><span class="go">Inclou espais?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="hll"><span class="go">separa(&quot;Heute ist ein guter Tag um glücklich zu sein&quot;, false) -&gt;</span>
-</span><span class="hll"><span class="go">    &quot;Heute&quot;</span>
-</span><span class="hll"><span class="go">    &quot;ist&quot;</span>
-</span><span class="hll"><span class="go">    &quot;ein&quot;</span>
-</span><span class="hll"><span class="go">    &quot;guter&quot;</span>
-</span><span class="hll"><span class="go">    &quot;Tag&quot;</span>
-</span><span class="hll"><span class="go">    &quot;um&quot;</span>
-</span><span class="hll"><span class="go">    &quot;glücklich&quot;</span>
-</span><span class="hll"><span class="go">    &quot;zu&quot;</span>
-</span><span class="hll"><span class="go">    &quot;sein&quot;</span>
+</span><span class="hll"><span class="go">- &quot;Heute&quot;</span>
+</span><span class="hll"><span class="go">- &quot;ist&quot;</span>
+</span><span class="hll"><span class="go">- &quot;ein&quot;</span>
+</span><span class="hll"><span class="go">- &quot;guter&quot;</span>
+</span><span class="hll"><span class="go">- &quot;Tag&quot;</span>
+</span><span class="hll"><span class="go">- &quot;um&quot;</span>
+</span><span class="hll"><span class="go">- &quot;glücklich&quot;</span>
+</span><span class="hll"><span class="go">- &quot;zu&quot;</span>
+</span><span class="hll"><span class="go">- &quot;sein&quot;</span>
 </span></pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span>java<span class="w"> </span>Main
@@ -193,24 +196,24 @@ El resultat serà sempre un array de String i disposarà de dues modalitats que 
 </span><span class="go">Inclou espais?</span>
 <span class="hll"><span class="go">Sí</span>
 </span><span class="hll"><span class="go">separa(&quot;  Heute ist   ein guter Tag um glücklich zu sein&quot;, true) -&gt;</span>
-</span><span class="hll"><span class="go">    &quot;  &quot;</span>
-</span><span class="hll"><span class="go">    &quot;Heute&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;ist&quot;</span>
-</span><span class="hll"><span class="go">    &quot;   &quot;</span>
-</span><span class="hll"><span class="go">    &quot;ein&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;guter&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;Tag&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;um&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;glücklich&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;zu&quot;</span>
-</span><span class="hll"><span class="go">    &quot; &quot;</span>
-</span><span class="hll"><span class="go">    &quot;sein&quot;</span>
+</span><span class="hll"><span class="go">- &quot;  &quot;</span>
+</span><span class="hll"><span class="go">- &quot;Heute&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;ist&quot;</span>
+</span><span class="hll"><span class="go">- &quot;   &quot;</span>
+</span><span class="hll"><span class="go">- &quot;ein&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;guter&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;Tag&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;um&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;glücklich&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;zu&quot;</span>
+</span><span class="hll"><span class="go">- &quot; &quot;</span>
+</span><span class="hll"><span class="go">- &quot;sein&quot;</span>
 </span></pre></div>
 </div>
 <p>Fixa't que inclou tots els espais que troba.</p>

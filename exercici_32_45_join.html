@@ -159,7 +159,7 @@ darrer separador.</p>
 <span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Valors:&quot;</span><span class="p">);</span>
 <span class="linenos"> 9</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">10</span><span class="w">             </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">11</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\t\&quot;%s\&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;- \&quot;%s\&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
 <span class="linenos">12</span><span class="w">             </span><span class="p">}</span>
 <span class="linenos">13</span><span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">14</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cap valor&quot;</span><span class="p">);</span>
@@ -178,9 +178,9 @@ darrer separador.</p>
 </span><span class="go">Darrer separador?</span>
 <span class="hll"><span class="go"> i</span>
 </span><span class="hll"><span class="go">Valors:</span>
-</span><span class="hll"><span class="go">    &quot;llet&quot;</span>
-</span><span class="hll"><span class="go">    &quot;sal&quot;</span>
-</span><span class="hll"><span class="go">    &quot;mantega&quot;</span>
+</span><span class="hll"><span class="go">- &quot;llet&quot;</span>
+</span><span class="hll"><span class="go">- &quot;sal&quot;</span>
+</span><span class="hll"><span class="go">- &quot;mantega&quot;</span>
 </span><span class="hll"><span class="go">junta(valors, &quot;, &quot;, &quot; i &quot;) -&gt; &quot;llet, sal, mantega&quot;</span>
 </span></pre></div>
 </div>
@@ -190,9 +190,9 @@ darrer separador.</p>
 </span><span class="go">Darrer separador?</span>
 <span class="hll"><span class="go">/</span>
 </span><span class="hll"><span class="go">Valors:</span>
-</span><span class="hll"><span class="go">    &quot;llet&quot;</span>
-</span><span class="hll"><span class="go">    &quot;sal&quot;</span>
-</span><span class="hll"><span class="go">    &quot;mantega&quot;</span>
+</span><span class="hll"><span class="go">- &quot;llet&quot;</span>
+</span><span class="hll"><span class="go">- &quot;sal&quot;</span>
+</span><span class="hll"><span class="go">- &quot;mantega&quot;</span>
 </span><span class="hll"><span class="go">junta(valors, &quot;/&quot;, &quot;/&quot;) -&gt; &quot;llet/sal/mantega/sucre&quot;</span>
 </span></pre></div>
 </div>
@@ -202,9 +202,9 @@ darrer separador.</p>
 </span><span class="go">Darrer separador?</span>
 <span class="hll"><span class="go"> =</span>
 </span><span class="hll"><span class="go">Valors:</span>
-</span><span class="hll"><span class="go">    &quot;1&quot;</span>
-</span><span class="hll"><span class="go">    &quot;2&quot;</span>
-</span><span class="hll"><span class="go">    &quot;3&quot;</span>
+</span><span class="hll"><span class="go">- &quot;1&quot;</span>
+</span><span class="hll"><span class="go">- &quot;2&quot;</span>
+</span><span class="hll"><span class="go">- &quot;3&quot;</span>
 </span><span class="hll"><span class="go">junta(valors, &quot; + &quot;, &quot; = &quot;) -&gt; &quot;1 + 2 = 3&quot;</span>
 </span></pre></div>
 </div>
