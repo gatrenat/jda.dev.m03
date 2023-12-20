@@ -129,13 +129,14 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-exercici-32-45-la-utilitat-join">
-<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 32_45. La utilitat <code class="docutils literal notranslate"><span class="pre">join</span></code><a class="headerlink" href="#exerciseicon-exercici-32-45-la-utilitat-join" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-32-45-la-utilitat-join">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 32_45. La utilitat <code class="docutils literal notranslate"><span class="pre">join</span></code><a class="headerlink" href="#exerciseicon-t-exercici-32-45-la-utilitat-join" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
 <li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_45_join/</span></code></p></li>
 <li><p>Continguts relacionats: <a class="reference internal" href="arrays_en_java.html"><span class="doc">Seqüències en Java</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
 <p>Implementa una versió simplificada de la utilitat <code class="docutils literal notranslate"><span class="pre">String.join()</span></code></p>
@@ -152,14 +153,14 @@ darrer separador.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/* Aquest programa comprova el funcionament de la funció UtilSTring.junta() */</span>
 <span class="linenos"> 2</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 3</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Separador?&quot;</span><span class="p">);</span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Separador?&quot;</span><span class="p">);</span>
 <span class="linenos"> 5</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">separador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Darrer separador?&quot;</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Darrer separador?&quot;</span><span class="p">);</span>
 <span class="linenos"> 7</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">darrerSeparador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Valors:&quot;</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valors:&quot;</span><span class="p">);</span>
 <span class="linenos"> 9</span><span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">10</span><span class="w">             </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">11</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;- \&quot;%s\&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">                 </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;- \&quot;%s\&quot;%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
 <span class="linenos">12</span><span class="w">             </span><span class="p">}</span>
 <span class="linenos">13</span><span class="w">         </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">14</span><span class="w">             </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Cap valor&quot;</span><span class="p">);</span>
@@ -181,7 +182,7 @@ darrer separador.</p>
 </span><span class="hll"><span class="go">- &quot;llet&quot;</span>
 </span><span class="hll"><span class="go">- &quot;sal&quot;</span>
 </span><span class="hll"><span class="go">- &quot;mantega&quot;</span>
-</span><span class="hll"><span class="go">junta(valors, &quot;, &quot;, &quot; i &quot;) -&gt; &quot;llet, sal, mantega&quot;</span>
+</span><span class="hll"><span class="go">junta(valors, &quot;, &quot;, &quot; i &quot;) -&gt; &quot;llet, sal i mantega&quot;</span>
 </span></pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span>java<span class="w"> </span>Main<span class="w"> </span>llet<span class="w"> </span>sal<span class="w"> </span>mantega<span class="w"> </span>sucre
@@ -193,6 +194,7 @@ darrer separador.</p>
 </span><span class="hll"><span class="go">- &quot;llet&quot;</span>
 </span><span class="hll"><span class="go">- &quot;sal&quot;</span>
 </span><span class="hll"><span class="go">- &quot;mantega&quot;</span>
+</span><span class="hll"><span class="go">- &quot;sucre&quot;</span>
 </span><span class="hll"><span class="go">junta(valors, &quot;/&quot;, &quot;/&quot;) -&gt; &quot;llet/sal/mantega/sucre&quot;</span>
 </span></pre></div>
 </div>
