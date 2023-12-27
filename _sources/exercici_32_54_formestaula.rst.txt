@@ -16,21 +16,21 @@
 
 .. rubric:: Enunciat
 
-Desenvolupa un programa que, a partir de l'especificació d'una forma, la
+Desenvolupa un programa que, a partir de l'especificació d'una taula, la
 dibuixi.
 
-Una especificació de forma consisteix en un string format per tres elements
-seguits:
+Una especificació d'una taula consisteix en un string amb els seguents
+elements:
 
-- una especificació de dimensió com la que ja hem vist a exercicis com
+- Una especificació de dimensió com la que ja hem vist a exercicis com
   :doc:`aquest<exercici_32_52_int2str>`
 
   Com a recordatori, l'especificació de dimensió està formada per dos
   números del 1 al 99, separades amb un caràcter ``'x'``.
 
-- una especificació de forma
+- Opcionalment, una especificació de forma.
 
-L'especificació de forma consisteix en un text amb un dels següents:
+L'especificació de forma consisteix en un text amb un dels següents valors:
 
 * ``\``: primera diagonal
 
@@ -50,7 +50,7 @@ L'especificació de forma consisteix en un text amb un dels següents:
   
 * ``++``:  taulell d'escacs
 
-Les especificacions de les formes es rebran com a arguments de la línia de
+Les especificacions de les taules es rebran com a arguments de la línia de
 comandes.
 
 Per exemple, si volem especificar una taula de 5x6 amb la primera
@@ -72,16 +72,18 @@ de la línia de comandes, pot ser necessari envoltar cada especificació
 entre cometes simples.
 
 En cas que l'especificació de la taula no sigui correcta, el programa
-mostrarà un error. En canvi, si el problema és que no s'ha especificat la
-forma o bé aquesta no es coneix, el programa mostrarà una taula tota
-inicialitzada a fals.
+mostrarà un error.
 
-La següent simulació mostra aquests dos casos:
+Si l'especificació de la taula no inclou l'especificació de forma o bé aquesta
+no es troba entre les conegudes, el programa no ho considerarà un error. En
+canvi, mostrarà una taula "buida".
+
+La següent simulació exemplifica aquests casos:
 
 .. code-block:: console
    :emphasize-lines: 2-
 
-   $ java Formes '5x6\' '0x6\' 4x3
+   $ java Formes '5x6\' '0x6\' 4x3 '2x3?'
    5x6\
    X.....
    ·X....
@@ -95,6 +97,10 @@ La següent simulació mostra aquests dos casos:
    4x3
    ···
    ···
+   ···
+   ···
+
+   2x3?
    ···
    ···
 

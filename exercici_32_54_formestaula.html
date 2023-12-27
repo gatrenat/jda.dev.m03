@@ -140,19 +140,19 @@
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Desenvolupa un programa que, a partir de l'especificació d'una forma, la
+<p>Desenvolupa un programa que, a partir de l'especificació d'una taula, la
 dibuixi.</p>
-<p>Una especificació de forma consisteix en un string format per tres elements
-seguits:</p>
+<p>Una especificació d'una taula consisteix en un string amb els seguents
+elements:</p>
 <ul>
-<li><p>una especificació de dimensió com la que ja hem vist a exercicis com
+<li><p>Una especificació de dimensió com la que ja hem vist a exercicis com
 <a class="reference internal" href="exercici_32_52_int2str.html"><span class="doc">aquest</span></a></p>
 <p>Com a recordatori, l'especificació de dimensió està formada per dos
 números del 1 al 99, separades amb un caràcter <code class="docutils literal notranslate"><span class="pre">'x'</span></code>.</p>
 </li>
-<li><p>una especificació de forma</p></li>
+<li><p>Opcionalment, una especificació de forma.</p></li>
 </ul>
-<p>L'especificació de forma consisteix en un text amb un dels següents:</p>
+<p>L'especificació de forma consisteix en un text amb un dels següents valors:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">\</span></code>: primera diagonal</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">|</span></code>:  vertical al mig</p></li>
@@ -164,7 +164,7 @@ números del 1 al 99, separades amb un caràcter <code class="docutils literal n
 <li><p><code class="docutils literal notranslate"><span class="pre">||</span></code>:  zebra</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">++</span></code>:  taulell d'escacs</p></li>
 </ul>
-<p>Les especificacions de les formes es rebran com a arguments de la línia de
+<p>Les especificacions de les taules es rebran com a arguments de la línia de
 comandes.</p>
 <p>Per exemple, si volem especificar una taula de 5x6 amb la primera
 diagonal, indicarem:</p>
@@ -181,11 +181,12 @@ diagonal, indicarem:</p>
 de la línia de comandes, pot ser necessari envoltar cada especificació
 entre cometes simples.</p>
 <p>En cas que l'especificació de la taula no sigui correcta, el programa
-mostrarà un error. En canvi, si el problema és que no s'ha especificat la
-forma o bé aquesta no es coneix, el programa mostrarà una taula tota
-inicialitzada a fals.</p>
-<p>La següent simulació mostra aquests dos casos:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Formes<span class="w"> </span><span class="s1">&#39;5x6\&#39;</span><span class="w"> </span><span class="s1">&#39;0x6\&#39;</span><span class="w"> </span>4x3
+mostrarà un error.</p>
+<p>Si l'especificació de la taula no inclou l'especificació de forma o bé aquesta
+no es troba entre les conegudes, el programa no ho considerarà un error. En
+canvi, mostrarà una taula &quot;buida&quot;.</p>
+<p>La següent simulació exemplifica aquests casos:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Formes<span class="w"> </span><span class="s1">&#39;5x6\&#39;</span><span class="w"> </span><span class="s1">&#39;0x6\&#39;</span><span class="w"> </span>4x3<span class="w"> </span><span class="s1">&#39;2x3?&#39;</span>
 <span class="hll"><span class="go">5x6\</span>
 </span><span class="hll"><span class="go">X.....</span>
 </span><span class="hll"><span class="go">·X....</span>
@@ -199,6 +200,10 @@ inicialitzada a fals.</p>
 </span><span class="hll"><span class="go">4x3</span>
 </span><span class="hll"><span class="go">···</span>
 </span><span class="hll"><span class="go">···</span>
+</span><span class="hll"><span class="go">···</span>
+</span><span class="hll"><span class="go">···</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">2x3?</span>
 </span><span class="hll"><span class="go">···</span>
 </span><span class="hll"><span class="go">···</span>
 </span></pre></div>

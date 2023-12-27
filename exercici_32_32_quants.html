@@ -123,13 +123,14 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-exercici-32-32-quants-cops">
-<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 32_32. Quants cops<a class="headerlink" href="#exerciseicon-exercici-32-32-quants-cops" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-32-32-quants-cops">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 32_32. Quants cops<a class="headerlink" href="#exerciseicon-t-exercici-32-32-quants-cops" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
 <li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">32_32_quants/</span></code></p></li>
 <li><p>Continguts relacionats: <a class="reference internal" href="moduls_variables.html"><span class="doc">Variables i mòduls</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
 <p>Els Strings de Java en la versió que fem servir en aquest curs, no ofereixen la
@@ -157,7 +158,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Subtext?&quot;</span><span class="p">);</span>
 <span class="linenos"> 7</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Extricte?&quot;</span><span class="p">);</span>
-<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">repsostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 <span class="linenos">10</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;quants(\&quot;%s\&quot;, \&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span>
 <span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">,</span>
 <span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">quants</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">));</span>
@@ -171,9 +172,9 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">SKIBÍDI</span>
-</span><span class="go">xtricte?</span>
+</span><span class="go">Extricte?</span>
 <span class="go">No</span>
-<span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;SKIBÍDI, false) -&gt; 3</span>
+<span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;SKIBÍDI&quot;, false) -&gt; 3</span>
 </pre></div>
 </div>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="gp">$ </span>java<span class="w"> </span>Main
@@ -181,7 +182,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">skibidi</span>
-</span><span class="go">xtricte?</span>
+</span><span class="go">Extricte?</span>
 <span class="go">sí</span>
 <span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skibidi&quot;, true) -&gt; 2</span>
 </pre></div>
@@ -193,7 +194,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">bïdí</span>
 </span><span class="go">Extricte?</span>
 <span class="go">no</span>
-<span class="go">quants(&quot;Skibídïtoiletskibidískibidi&quot;, &quot;skibidi&quot;, true) -&gt; 3</span>
+<span class="go">quants(&quot;Skibídïtoiletskibidískibidi&quot;, &quot;bïdí&quot;, false) -&gt; 3</span>
 </pre></div>
 </div>
 <p>Nota: Fixa't en les dièresis i accents.</p>
@@ -214,7 +215,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">toilet</span>
 </span><span class="go">Extricte?</span>
 <span class="go">No</span>
-<span class="go">quants(&quot;&quot;, &quot;skibidi&quot;, false) -&gt; 0</span>
+<span class="go">quants(&quot;&quot;, &quot;toilet&quot;, false) -&gt; 0</span>
 </pre></div>
 </div>
 <p>Per simplicitat, si la subcadena és buida, retornarà 0 en comptes d'infinit.
