@@ -47,14 +47,50 @@ Per exemple, "java" comença decreixent 'j' > 'a', per després créixer, 'a' <
 'v', per finalment tornar a decréixer 'v' > 'a'. Anomenarem les paraules com
 aquesta *normaleta*.
 
-Desenvolupa un programa que implementi el patró "lloro" amb finalització de
-cadena buida. Per cada paraula entrada, indicarà de quin tipus és: creixent,
-decreixent, creixidecri, decricreixi o normaleta.
+Desenvolupa el programa ``Progressio`` que implementa el patró "lloro" amb
+finalització de cadena buida. Per cada paraula entrada, indicarà de quin tipus
+és: creixent, decreixent, creixidecri, decricreixi o normaleta.
 
 El programa ignorarà majúscules/minúscules, espais en blanc i altres símbols no
 lletres, En el cas dels caràcters especials catalans, es considerarà que la 'ç'
 equival a la 'c', i les vocals accentuades equivalen a la vocal sense
 accentuar.
+
+Una simulació d'execució.
+
+.. code-block:: java
+
+    $ java Progressio
+    Intruduïu text. Enter per finalitzar.
+    Pera
+    "Pera" és normaleta
+    Poma
+    "Poma" és decreixent
+    "Pera i poma"
+    "Pera" és normaleta
+    "poma" és decreixent
+    "i o a!"
+    Cap paraula vàlida
+    "Die Äpfel sind lecker"
+    "Die" és creixidecri
+    "Äpfel" és decricreixi
+    "sind" és normaleta
+    "lecker" és normaleta
+    " Un  amor  romà "
+    "Un" és decreixent
+    "amor" és creixent
+    "romà" és decreixent
+      Matrícula    1234BCD!
+    "Matrícula" és normaleta
+    "BCD" és creixent
+    Adéu
+
+Nota: Fixa't que la sortida mostra les diferents paraules que s'introdueixen,
+tant si és en una línia com si és en vàries. També ignora espais extra,
+paraules massa curtes i simbols no lletra (incloent els números). Fixa't que
+les lletres fora de l'alfabet català, com ara la ``'Ä'`` no es considera com la
+``'A'`` i, per tant, té un ordre per sobre de la majoria de les lletres de
+l'alfabet català.
 
 Per fer-ho, el programa utilitzarà els següents mòduls de la biblioteca
 ``UtilString`` (que també hauràs de codificar):
@@ -68,7 +104,7 @@ Per fer-ho, el programa utilitzarà els següents mòduls de la biblioteca
         $1 ==> true
 
         jshell> esCreixent("adéu");     // atenció a l'accent
-        $2 ==> true
+        $2 ==> False
 
         jshell> esCreixent("am or");    // atenció a l'espai
         $3 ==> false
@@ -115,39 +151,6 @@ Aquí les signatures:
 * ``boolean esDecriCreixi(String test, boolean estricta)``: retorna cert quan
   el text és *creixidecri* estricta, segons el paràmetre ``estricta``.
 
-
-Una simulació d'execució.
-
-.. code-block:: java
-
-    $ java Progressio
-    Intruduïu text. Enter per finalitzar.
-    Pera
-    "Pera" és normaleta
-    Poma
-    "Poma" és decreixent
-    "Pera i poma"
-    "Pera" és normaleta
-    "poma" és decreixent
-    "i o a!"
-    Cap paraula vàlida
-    "Die Äpfel sind lecker"
-    "Die" és creixidecri
-    "Äpfel" és decricreixi
-    "sind" és normaleta
-    "lecker" és normaleta
-    " Un  amor  romà "
-    "Un" és decreixent
-    "amor" és creixent
-    "romà" és decreixent
-
-    Adéu
-
-Nota: Fixa't que la sortida mostra les diferents paraules que s'introdueixen,
-tant si és en una línia com si és en vàries. També ignora espais extra,
-paraules massa curtes i simbols no lletra. Fixa't que les lletres fora de
-l'alfabet català, com ara la ``'Ä'`` no es considera com la ``'A'`` i, per
-tant, té un ordre per sobre de la majoria de les lletres de l'alfabet català.
 
 Resol aquest exercici només fent servir les funcions bàsiques
 ``String.charAt()`` i ``String.length()`` i mòduls teus que no continguin
