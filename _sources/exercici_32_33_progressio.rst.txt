@@ -122,13 +122,13 @@ Una simulació d'execució.
 
     $ java Progressio
     Intruduïu text. Enter per finalitzar.
-    Hola
-    "Hola" és normaleta
-    Adéu
-    "Adéu" és creixent
-    "Hola i adèu!"
-    "Hola" és normaleta
-    "adéu" és creixent
+    Pera
+    "Pera" és normaleta
+    Poma
+    "Poma" és decreixent
+    "Pera i poma"
+    "Pera" és normaleta
+    "poma" és decreixent
     "i o a!"
     Cap paraula vàlida
     "Die Äpfel sind lecker"
