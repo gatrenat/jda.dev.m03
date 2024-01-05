@@ -239,7 +239,7 @@ primera diagonal a <code class="docutils literal notranslate"><span class="pre">
 <p>És a dir, aquest procediment és l'encarregat d'inicialitzar la taula per
 l'especificació <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
 <p>Considera el següent fragment de codi:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">taula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilTaula</span><span class="p">.</span><span class="na">primeraDiagonal</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">6</span><span class="o">]</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">boolean</span><span class="o">[][]</span><span class="w"> </span><span class="n">taula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilTaula</span><span class="p">.</span><span class="na">inicialitzaPrimeraDiagonal</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">boolean</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="mi">6</span><span class="o">]</span><span class="p">);</span>
 <span class="linenos">2</span><span class="n">String</span><span class="w"> </span><span class="n">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilTaula</span><span class="p">.</span><span class="na">taulaToString</span><span class="p">(</span><span class="n">taula</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;X&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;·&#39;</span><span class="p">);</span>
 <span class="linenos">3</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">resultat</span><span class="p">);</span>
 </pre></div>
@@ -309,7 +309,7 @@ XXXXX                   X·                  ··X···
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">UtilTaula.segonaDiagonal(boolean[][])</span></code>: per l'especificació de la
+<li><p><code class="docutils literal notranslate"><span class="pre">UtilTaula.inicialitzaSegonaDiagonal(boolean[][])</span></code>: per l'especificació de la
 forma <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
 <p>Aquesta forma és molt similar a la <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
 <p>Aquesta forma sempre començarà emplenant per la primera fila i darrera

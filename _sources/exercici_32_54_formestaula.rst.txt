@@ -148,7 +148,7 @@ Es requereixen els següents mòduls:
   .. code-block:: java
      :linenos:
 
-     boolean[][] taula = UtilTaula.primeraDiagonal(new boolean[5][6]);
+     boolean[][] taula = UtilTaula.inicialitzaPrimeraDiagonal(new boolean[5][6]);
      String resultat = UtilTaula.taulaToString(taula, 'X', '·');
      System.out.println(resultat);
 
@@ -230,7 +230,7 @@ Es requereixen els següents mòduls:
      ··X··
 
 
-* ``UtilTaula.segonaDiagonal(boolean[][])``: per l'especificació de la
+* ``UtilTaula.inicialitzaSegonaDiagonal(boolean[][])``: per l'especificació de la
   forma ``/``.
 
   Aquesta forma és molt similar a la ``\``.
@@ -267,15 +267,6 @@ Es requereixen els següents mòduls:
      ··X·X··                                      X···X
      ·X···X·                                      ·····
      X·····X                                      ·····
-
-
-
-
-
-
-
-
-
 
 
 
