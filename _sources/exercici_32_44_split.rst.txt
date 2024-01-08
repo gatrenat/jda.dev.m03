@@ -30,7 +30,7 @@ Les signatures a implementar són:
     // retorna la seqüència de subcadenes de text separades entre caràcters en
     // blanc, incloent els caracters en blanc quan inclouBlancs és cert
     public static String[] separa(String text, boolean inclouBlancs)
-    // equival a separa(text, true)
+    // equival a separa(text, false)
     public static String[] separa(String text)
 
 Pots provar el seu funcionament amb el següent codi d'exemple:

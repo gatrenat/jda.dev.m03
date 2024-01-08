@@ -109,6 +109,31 @@ Considera les següents simulacions:
     ··X
     X Guanya
 
+Atenció ara al jugador `O` que s'equivocarà i abandonarà:
+
+.. code-block:: console
+    :emphasize-lines: 2-6, 8-11, 13-17, 19-
+
+    $ java TresEnRatlla
+    Comença el joc
+    ···
+    ···
+    ···
+    X?
+    11
+    ···
+    ·X·
+    ···
+    O?
+    23
+    error
+    ···
+    ·X·
+    ···
+    O?
+    a
+    O abandona
+
 A banda, el teu codi haurà d'incloure uns determinats mòduls (agafa-ho com
 una pista):
 
