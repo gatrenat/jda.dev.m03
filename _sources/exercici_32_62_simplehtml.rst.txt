@@ -1,0 +1,126 @@
+#############################################
+|exerciseicon_ST| Exercici 32_62. Simple HTML
+#############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``32_62_simplehtml/``
+
+* Continguts relacionats: :doc:`moduls_recursivitat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un mòdul que rebi un String i el mostri estructurat com a HTML bàsic.
+
+* Els parèntesis ``()`` els considerarà delimitadors de llistes ordenades ``<ol>``
+
+* Els corxets ``[]`` els considerarà delimitadors de llistes no ordenades ``<ul>``
+
+* Els elements dins de parèntesis o corxets, separats per coma, els considerarà
+  elements de la llista (``<li>``)
+
+* Qualsevol altre text fora dels paréntesis, corxets, els considerarà un paràgraf ``<p>``
+
+Per exemple, en rebre ``"Compra (llet, ous, mantega) i també [galetes, pèsols]"``
+mostrarà  ``<p>Compra</p><ol><li>llet</li><li>ous</li><li>mantega</li><ol><p>i
+també</p><ul><li>galetes</li><li>pèsols</li></ul>``.
+
+T'estàs preguntant perquè surt aquest exercici a la secció de recursivitat?
+
+En cas que rebi ``"[un(dos(tres,quatre)cinc)sis]"``, mostrarà
+``<ul><li>un<ol><li>dos<ol><li>tres</li><li>quatre</li></ol>cinc</li></ol>sis</li></ul>``.
+
+Sí, caldrà resoldre el problema de manera recursiva! És més, no podràs fer
+servir el bucles estàndard ``while`` ni ``for``. Un repte, eh?
+
+El mòdul tindrà la següent signatura ``public static void
+mostraTextAHtml(String)`` i serà definit dins la bibliotega ``SimpleHtlm``.
+
+
+Caldrà que consideris uns quants casos particulars, que et detallo a continuació:
+
+* **Cadena buida**: En cas que l'entrada sigui la cadena buida, retornarà la cadena buida.
+
+* **Espais**: Tot i que a HTML no l'importen els espais extra, al nostre
+  ``prgtest`` sí. Així que haurem d'eliminar els espais sobrers. Això inclou
+  tant els espais a inici i a final, com aquells extra que apareguin entre les
+  paraules. Per exemple, si l'entrada és ``"    un      dos    "``, el que es
+  mostrarà serà ``<p>un dos</p>``.
+
+  Això és extensible a les llistes. Per exemple: ``"  (   un    ,   dos   )   "`` resultarà en
+  ``<ol><li>un</li><li>dos</li></ol>``.
+
+* **Elements amb coma i sense coma**: Quan els elements dins dels parèntesis
+  estan separats per una coma (``,``), quedaran en el seu propi ``<li>``, mentre que si no estan separats per coma, queden dins del mateix ``<li>``.
+
+  Per exemple, cas que rebi ``"[un, (dos, (tres, quatre), cinc), sis]"``, mostrarà
+  ``<ul><li>un</li><li><ol><li>dos</li><li><ol><li>tres</li><li>quatre</li></ol></li><li>cinc</li></ol></li><li>sis</li></ul>``
+
+  En canvi, quan és ``"[un(dos(tres, quatre)cinc)sis]"``, resultarà en
+  ``<ul><li>un<ol><li>dos<ol><li>tres</li><li>quatre</li></ol>cinc</li></ol>sis</li></ul>``
+
+* **Llistes buides**: Les llistes buides apareixeran sense elements. Per
+  exemple ``"([])"`` quedarà ``<ol><li><ul></ul></li></ol>``
+
+* **Parentesis mal tancats**: Què passa si el text d'entrada no tanca amb el
+  parèntesis que va obrir? Doncs que mana el de l'opertura! ``"(un, dos, tres]"`` resulta en 
+  ``<ol><li>un</li><li>dos</li><li>tres</li></ol>``.
+
+* **Parèntesis no oberts**: I si hi ha un tancament que no correspon a cap
+  opertura? Doncs que resulta com un text qualsevol. Per exemple, ``") adéu oio
+  )"`` resulta en ``<p>) adéu oio )</p>``
+
+* **Opertures no tancades**: Què tal una opertura sense tancament? Es considera
+  tancada al final. Exemple ``"(un [dos (tres, quatre"`` resultarà en
+  ``<ol><li>un<ul><li>dos<ol><li>tres</li><li>quatre</li></ol></li></ul></li></ol>``
+
+* **Comes que no delimiten**: Un altre cas límit resulta quan hi ha comes que
+  no semblen delimitar *items*. En aquests casos, se considera que delimitan un
+  element buit. Aquí tens un exemple amb diferents casuístiques: ``"(, un,dos ,
+  , tres, )"`` resulta en
+  ``<ol><li></li><li>un</li><li></li><li>dos</li><li></li><li></li><li></li><li>tres</li><li></li><li></li></ol>``
+
+El ``prgtest`` realitzarà les proves sobre el següent codi:
+
+.. code-block:: java
+    :linenos:
+
+    /* Programa que mostra l'ús de SimpleHtml.mostraTextAHtml(String) a partir de
+    * l'entrada estàndard */
+    public class Main {
+        public static void main(String[] args) {
+            SimpleHtml.mostraTextAHtml(Entrada.readLine());
+        }
+    }
+
+
+En cas que et calgui alguna pista:
+
+* Considera començar a resoldre el problema més simple. Primer només paràgrafs.
+  Després només llistes ``<ol>``. Deixa casos extrems pel final.
+
+* Preparat els teus propis jocs de prova. Facilita't la feina guardant
+  l'entrada en algun fitxer i redireccionant-lo al programa. També pots guardar
+  la sortida esperada en un altre fitxer per comparar el resultat: ``$ java
+  Main < entrada.txt | diff esperat.txt -``
+
+* El profe ha resolt el problema fent servir una funció impura amb la signatura
+  ``int mostraTextAHtmlRec(String text, int pos)`` que considerava el text a
+  partir de la posició ``pos`` (inicialment 0) i que retornava la posició un
+  cop processat el text.
+
+  També ha creat més d'una funció addicional, una per mostrar paràgrafs, una
+  altra per llistes, etc.
+
+  El resultat final es "tail-recursive" malgrat Java no és capaç d'utilitzar
+  aquesta característica. Com sabem, el món no s'acaba en Java, oi?
+
+  Finalment, el teu profe no ha trobat una solució trivial a aquest problema i
+  s'ha passat una estona divertida programant-lo. Espero que tu també t'ho
+  passis bé.

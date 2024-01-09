@@ -130,6 +130,6 @@ pràctica aquests conceptes:
 
 |exerciseicon__T| :doc:`exercici_32_43_nomes_enters`
 
-|exerciseicon___| :doc:`exercici_32_44_split`
+|exerciseicon_ST| :doc:`exercici_32_44_split`
 
-|exerciseicon___| :doc:`exercici_32_45_join`
+|exerciseicon__T| :doc:`exercici_32_45_join`
