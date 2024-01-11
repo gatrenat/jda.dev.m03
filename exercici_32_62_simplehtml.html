@@ -139,13 +139,43 @@ elements de la llista (<code class="docutils literal notranslate"><span class="p
 <li><p>Qualsevol altre text fora dels paréntesis, corxets, els considerarà un paràgraf <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code></p></li>
 </ul>
 <p>Per exemple, en rebre <code class="docutils literal notranslate"><span class="pre">&quot;Compra</span> <span class="pre">(llet,</span> <span class="pre">ous,</span> <span class="pre">mantega)</span> <span class="pre">i</span> <span class="pre">també</span> <span class="pre">[galetes,</span> <span class="pre">pèsols]&quot;</span></code>
-mostrarà  <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;Compra&lt;/p&gt;&lt;ol&gt;&lt;li&gt;llet&lt;/li&gt;&lt;li&gt;ous&lt;/li&gt;&lt;li&gt;mantega&lt;/li&gt;&lt;ol&gt;&lt;p&gt;i</span>
-<span class="pre">també&lt;/p&gt;&lt;ul&gt;&lt;li&gt;galetes&lt;/li&gt;&lt;li&gt;pèsols&lt;/li&gt;&lt;/ul&gt;</span></code>.</p>
+mostrarà  <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;Compra&lt;/p&gt;&lt;ol&gt;&lt;li&gt;llet&lt;/li&gt;&lt;li&gt;ous&lt;/li&gt;&lt;li&gt;mantega&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;i</span>
+<span class="pre">també&lt;/p&gt;&lt;ul&gt;&lt;li&gt;galetes&lt;/li&gt;&lt;li&gt;pèsols&lt;/li&gt;&lt;/ul&gt;</span></code> que afegint indentació es veuria:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Compra<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>llet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>ous<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>mantega<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>i també<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>galetes<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>písols<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
 <p>T'estàs preguntant perquè surt aquest exercici a la secció de recursivitat?</p>
 <p>En cas que rebi <code class="docutils literal notranslate"><span class="pre">&quot;[un(dos(tres,quatre)cinc)sis]&quot;</span></code>, mostrarà
-<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;&lt;li&gt;un&lt;ol&gt;&lt;li&gt;dos&lt;ol&gt;&lt;li&gt;tres&lt;/li&gt;&lt;li&gt;quatre&lt;/li&gt;&lt;/ol&gt;cinc&lt;/li&gt;&lt;/ol&gt;sis&lt;/li&gt;&lt;/ul&gt;</span></code>.</p>
-<p>Sí, caldrà resoldre el problema de manera recursiva! És més, no podràs fer
-servir el bucles estàndard <code class="docutils literal notranslate"><span class="pre">while</span></code> ni <code class="docutils literal notranslate"><span class="pre">for</span></code>. Un repte, eh?</p>
+<code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;&lt;li&gt;un&lt;ol&gt;&lt;li&gt;dos&lt;ol&gt;&lt;li&gt;tres&lt;/li&gt;&lt;li&gt;quatre&lt;/li&gt;&lt;/ol&gt;cinc&lt;/li&gt;&lt;/ol&gt;sis&lt;/li&gt;&lt;/ul&gt;</span></code>, que amb indentació es veuria:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>un
+        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>dos
+                <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>tres<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>quatre<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+                cinc
+            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+        sis
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Sí, caldrà resoldre el problema de manera recursiva! És més, si vols passar
+totes les proves, no podràs fer servir el bucles estàndard <code class="docutils literal notranslate"><span class="pre">while</span></code> ni
+<code class="docutils literal notranslate"><span class="pre">for</span></code>. Un repte, eh?</p>
 <p>El mòdul tindrà la següent signatura <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span> <span class="pre">void</span>
 <span class="pre">mostraTextAHtml(String)</span></code> i serà definit dins la bibliotega <code class="docutils literal notranslate"><span class="pre">SimpleHtlm</span></code>.</p>
 <p>Caldrà que consideris uns quants casos particulars, que et detallo a continuació:</p>

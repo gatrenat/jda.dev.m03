@@ -28,16 +28,49 @@ Desenvolupa un mòdul que rebi un String i el mostri estructurat com a HTML bàs
 * Qualsevol altre text fora dels paréntesis, corxets, els considerarà un paràgraf ``<p>``
 
 Per exemple, en rebre ``"Compra (llet, ous, mantega) i també [galetes, pèsols]"``
-mostrarà  ``<p>Compra</p><ol><li>llet</li><li>ous</li><li>mantega</li><ol><p>i
-també</p><ul><li>galetes</li><li>pèsols</li></ul>``.
+mostrarà  ``<p>Compra</p><ol><li>llet</li><li>ous</li><li>mantega</li></ol><p>i
+també</p><ul><li>galetes</li><li>pèsols</li></ul>`` que afegint indentació es veuria:
+
+.. code:: html
+
+    <p>Compra</p>
+    <ol>
+        <li>llet</li>
+        <li>ous</li>
+        <li>mantega</li>
+    </ol>
+    <p>i també</p>
+    <ul>
+        <li>galetes</li>
+        <li>písols</li>
+    </ul>
+
 
 T'estàs preguntant perquè surt aquest exercici a la secció de recursivitat?
 
 En cas que rebi ``"[un(dos(tres,quatre)cinc)sis]"``, mostrarà
-``<ul><li>un<ol><li>dos<ol><li>tres</li><li>quatre</li></ol>cinc</li></ol>sis</li></ul>``.
+``<ul><li>un<ol><li>dos<ol><li>tres</li><li>quatre</li></ol>cinc</li></ol>sis</li></ul>``, que amb indentació es veuria:
 
-Sí, caldrà resoldre el problema de manera recursiva! És més, no podràs fer
-servir el bucles estàndard ``while`` ni ``for``. Un repte, eh?
+.. code:: html
+
+    <ul>
+        <li>un
+            <ol>
+                <li>dos
+                    <ol>
+                        <li>tres</li>
+                        <li>quatre</li>
+                    </ol>
+                    cinc
+                </li>
+            </ol>
+            sis
+        </li>
+    </ul>
+
+Sí, caldrà resoldre el problema de manera recursiva! És més, si vols passar
+totes les proves, no podràs fer servir el bucles estàndard ``while`` ni
+``for``. Un repte, eh?
 
 El mòdul tindrà la següent signatura ``public static void
 mostraTextAHtml(String)`` i serà definit dins la bibliotega ``SimpleHtlm``.
