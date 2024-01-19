@@ -16,6 +16,30 @@
 
 Rescatarem :doc:`exercici_31_73_nomeslletres` i el farem modular.
 
+Recordem que el nostre programa original feia tres coses diferents:
+
+1. Obtenció del text d'entrada
+
+2. Filtrat de les lletres del text
+
+3. Separació de les lletres filtrades
+
+La nova versió oferirà un mòdul per cadascuna de les tres parts del programa. En concret:
+
+1. L'obtenció de les dades ja la tenim resolta amb ``Entrada.readLine()``
+
+2. El filtrat de les lletres el farem amb una nova funció pura anomenada ``nomesLletres()`` que afegirem a ``UtilString``.
+
+.. code-block:: java
+
+    "ElsgenetsdelApocalipsi".equals(String.nomesLletres("Els 4 genets de l'Apocalipsi!"))
+
+3. La separació la farem amb una altra funció pura que anomenarem ``lletresSeparades()`` que també afegirem a ``UtilString``.
+
+.. code-block:: java
+
+    "A, p, o, c, a, l, i, p, s, i".equals(String.lletresSeparades("Apocalipsi"))
+
 El programa ``NomesLletres.java`` resultant tindrà el següent codi (Només
 falta el comentari de capçalera!):
 

@@ -79,7 +79,7 @@ Les variables a analitzar són les següents:
 
 * ``levelTwo`` a la línia 162
 
-* ``ROP_FILE`` a la línia 61
+* ``PROP_FILE`` a la línia 61
 
 * ``segmentSource`` a la línia 317
 

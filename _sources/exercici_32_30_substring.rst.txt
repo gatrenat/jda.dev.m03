@@ -107,7 +107,7 @@ Nota: Fixa't en la ``ï`` de
    Text principal?
    Skibiditoiletskibidiskibidi
    Subtext?
-   toilet
+   TOILET
    Extricte?
    sí
    esSubstring("Skibiditoiletskibidiskibidi", "TOILET", true) -> false

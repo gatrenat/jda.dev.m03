@@ -70,6 +70,8 @@ Unes simulacions d'execució:
    - "mantega"
    junta(valors, ", ", " i ") -> "llet, sal i mantega"
 
+Atenció que el separador és ``", "``, és a dir, té un espai després de la coma.
+El darrer separador és ``" i "``, amb espais abans i després de la "i".
 
 .. code-block:: console
    :emphasize-lines: 1, 3, 5-

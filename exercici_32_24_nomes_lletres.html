@@ -139,6 +139,26 @@
 </ul>
 <p class="rubric">Enunciat</p>
 <p>Rescatarem <a class="reference internal" href="exercici_31_73_nomeslletres.html"><span class="doc"> Exercici 31_73. Només lletres</span></a> i el farem modular.</p>
+<p>Recordem que el nostre programa original feia tres coses diferents:</p>
+<ol class="arabic simple">
+<li><p>Obtenció del text d'entrada</p></li>
+<li><p>Filtrat de les lletres del text</p></li>
+<li><p>Separació de les lletres filtrades</p></li>
+</ol>
+<p>La nova versió oferirà un mòdul per cadascuna de les tres parts del programa. En concret:</p>
+<ol class="arabic simple">
+<li><p>L'obtenció de les dades ja la tenim resolta amb <code class="docutils literal notranslate"><span class="pre">Entrada.readLine()</span></code></p></li>
+<li><p>El filtrat de les lletres el farem amb una nova funció pura anomenada <code class="docutils literal notranslate"><span class="pre">nomesLletres()</span></code> que afegirem a <code class="docutils literal notranslate"><span class="pre">UtilString</span></code>.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;ElsgenetsdelApocalipsi&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">nomesLletres</span><span class="p">(</span><span class="s">&quot;Els 4 genets de l&#39;Apocalipsi!&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>La separació la farem amb una altra funció pura que anomenarem <code class="docutils literal notranslate"><span class="pre">lletresSeparades()</span></code> que també afegirem a <code class="docutils literal notranslate"><span class="pre">UtilString</span></code>.</p></li>
+</ol>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;A, p, o, c, a, l, i, p, s, i&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">lletresSeparades</span><span class="p">(</span><span class="s">&quot;Apocalipsi&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 <p>El programa <code class="docutils literal notranslate"><span class="pre">NomesLletres.java</span></code> resultant tindrà el següent codi (Només
 falta el comentari de capçalera!):</p>
 <div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/*</span>

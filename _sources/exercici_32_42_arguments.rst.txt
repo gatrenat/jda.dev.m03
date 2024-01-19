@@ -14,7 +14,7 @@
 
 .. rubric:: Enunciat
 
-T'has aturat a pensar de quin tipus és el paràmetre del procediment
+T'has plantejat mai de quin tipus és el paràmetre del procediment
 ``main()`` que contenen tants programes que has fet en Java?
 
 
