@@ -126,14 +126,15 @@ Per passar totes les proves, caldrà implementar els mòduls:
 
 * ``int obteColumnes(String)``: descripció a la plantilla
 
-* ``UtilTaula.taulaToString(int[][])``
+* ``String UtilTaula.taulaToString(int[][])``
 
-  Procediment que composa un String a partir del contingut d'una taula d'enters.
+  Funció pura que composa un String a partir del contingut d'una taula d'enters.
   Els valors apareixeran separats amb un espai i representa els
-  números com a mínim amb vuit posicions.  (**pista**: "%8d")
+  números com a mínim amb vuit posicions.  (**pista**: String.format() i "%8d")
 
-  Per exemple, imprimir el resultat de ``taulaToString()`` sobre una
-  taula de 3x4 podria tenir el següent aspecte:
+  Per exemple, imprimir el resultat de ``taulaToString()`` sobre una taula de
+  3x4 que hagués estat inicialitzada amb valors seqüèncials, tindria el següent
+  aspecte:
 
   .. code-block:: none
 

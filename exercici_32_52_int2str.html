@@ -244,12 +244,13 @@ interessant a guardar al calaix d'eines.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">obteFiles(String)</span></code>: descripció a la plantilla</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">obteColumnes(String)</span></code>: descripció a la plantilla</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">UtilTaula.taulaToString(int[][])</span></code></p>
-<p>Procediment que composa un String a partir del contingut d'una taula d'enters.
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">UtilTaula.taulaToString(int[][])</span></code></p>
+<p>Funció pura que composa un String a partir del contingut d'una taula d'enters.
 Els valors apareixeran separats amb un espai i representa els
-números com a mínim amb vuit posicions.  (<strong>pista</strong>: &quot;%8d&quot;)</p>
-<p>Per exemple, imprimir el resultat de <code class="docutils literal notranslate"><span class="pre">taulaToString()</span></code> sobre una
-taula de 3x4 podria tenir el següent aspecte:</p>
+números com a mínim amb vuit posicions.  (<strong>pista</strong>: String.format() i &quot;%8d&quot;)</p>
+<p>Per exemple, imprimir el resultat de <code class="docutils literal notranslate"><span class="pre">taulaToString()</span></code> sobre una taula de
+3x4 que hagués estat inicialitzada amb valors seqüèncials, tindria el següent
+aspecte:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1         2         3         4
 5         6         7         8
 9        10        11        12
