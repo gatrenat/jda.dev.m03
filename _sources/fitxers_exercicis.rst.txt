@@ -12,10 +12,9 @@ continuació:
     exercici_33_01_excepcional.rst
     exercici_33_02_vocal_inici_fi.rst
     exercici_33_03_csv.rst
-
-..    exercici_33_04_lloro_memoria.rst
-..    exercici_33_05_traduccio.rst
-..    exercici_33_06_log.rst
+    exercici_33_04_lloro_memoria.rst
+    exercici_33_05_traduccio.rst
+    exercici_33_06_log.rst
 
 ..    exercici_33_07_classificador.rst
 ..    exercici_33_08_alumnes.rst
