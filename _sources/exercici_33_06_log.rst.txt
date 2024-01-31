@@ -90,7 +90,7 @@ Contingut d'un registre
 Cada registre tindrà la següent informació:
 
 * seqüencial: el nombre d'entrades de log introduïdes prèviament dins
-  d'aquesta execució.
+  d'aquesta execució. Comença a comptar per 1.
 
 * tipus: ``ERROR``, ``WARNING``, ``INFO``, ``DEBUG``
 
