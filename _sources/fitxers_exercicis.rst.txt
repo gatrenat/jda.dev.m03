@@ -17,6 +17,5 @@ continuació:
     exercici_33_06_log.rst
     exercici_33_07_classificador.rst
     exercici_33_08_alumnes.rst
-
-..    exercici_33_09_inspecciona.rst
-..    exercici_33_10_classificador_dups.rst
+    exercici_33_09_inspecciona.rst
+    exercici_33_10_classificador_dups.rst
