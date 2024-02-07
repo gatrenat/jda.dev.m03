@@ -29,6 +29,5 @@ execucions anteriors.
     fitxers_escriptura.rst
     fitxers_registres.rst
     fitxers_gestio.rst
+    fitxers_conclusions.rst
     fitxers_exercicis.rst
-
-..    fitxers_conclusions.rst
