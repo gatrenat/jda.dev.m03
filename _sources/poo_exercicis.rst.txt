@@ -2,6 +2,8 @@
 Exercicis
 #########
 
+Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:
+
 .. toctree::
     :maxdepth: 1
     :titlesonly:
