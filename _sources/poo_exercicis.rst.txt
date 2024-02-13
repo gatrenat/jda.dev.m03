@@ -1,0 +1,45 @@
+#########
+Exercicis
+#########
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    exercici_34_01_mazegame.rst
+    exercici_34_02_propietats.rst
+    exercici_34_03_ascensor.rst
+    exercici_34_04_mutabilitat.rst
+    exercici_34_05_puja.rst
+    exercici_34_06_multiples.rst
+    exercici_34_07_ascensors.rst
+
+..    exercici_34_08_extern.rst
+..    exercici_34_09_extern.rst
+..    exercici_34_10_posicio.rst
+..    exercici_34_11_moviment.rst
+..    exercici_34_12_protegides.rst
+..    exercici_34_13_posicio_correcta.rst
+..    exercici_34_14_ascensor_protegit.rst
+..    exercici_34_15_com_esta.rst
+..    exercici_34_16_ascensor_informatiu.rst
+..    exercici_34_17_ensinistrat.rst
+..    exercici_34_18_assessinable.rst
+..    exercici_34_19_ascensor_interactiu.rst
+..    exercici_34_20_classes_i_objectes.rst
+..    exercici_34_21_constructor_posicio.rst
+..    exercici_34_22_constructor_parametritzat.rst
+..    exercici_34_23_constructor_posicio.rst
+..    exercici_34_24_aquesta_posicio.rst
+..    exercici_34_25_molts_constructors.rst
+..    exercici_34_26_hora.rst
+..    exercici_34_27_resum.rst
+..    exercici_34_28_hora_static.rst
+..    exercici_34_29_unic.rst
+..    exercici_34_30_ulls.rst
+..    exercici_34_31_picarol.rst
+..    exercici_34_32_exemple_herencia.rst
+..    exercici_34_33_renat_es_gat.rst
+..    exercici_34_34_metodes_cridats.rst
+..    exercici_34_35_garfield.rst
+..    exercici_34_36_interfagat.rst

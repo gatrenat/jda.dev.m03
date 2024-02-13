@@ -1,0 +1,30 @@
+##################
+Classes i objectes
+##################
+
+En aquests continguts, tindràs una primera visió dels conceptes *classe* i
+*objecte*.
+
+Aquesta introducció es realitza de manera pràctica, guiada amb
+exercicis que progressivament incorporen diferents perspectives dels
+conceptes a tractar.
+
+Coneixerem ara a un nou amic que ens acompanyarà en aquest viatge de
+descobriment de la programació orientada a objectes: el gat Renat.
+
+
+Som-hi doncs!
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    poo_intro_propietats.rst
+    poo_intro_propietats_mutables.rst
+    poo_intro_multiples_instancies.rst
+
+..    poo_intro_extern.rst
+..    poo_intro_public.rst
+..    poo_intro_private.rst
+..    poo_intro_consultes.rst
+..    poo_intro_accions.rst

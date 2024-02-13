@@ -1,0 +1,20 @@
+#######################################################################
+|exerciseicon___| Exercici 34_06. Anotacions sobre multiples instàncies
+#######################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``34_06_multiples/``
+
+* Continguts relacionats: :doc:`poo_intro_multiples_instancies`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Descarregat :download:`aquesta plantilla<_recursos/poo_multiples.rst>` i
+completa-la, tot reemplaçant els ``XXX`` per les anotacions que has pres a
+classe.
+
+.. literalinclude:: _recursos/poo_multiples.rst
+   :language: rst

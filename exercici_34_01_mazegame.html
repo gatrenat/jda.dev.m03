@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 34_01. Laberint &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/moistyle.css?v=0e2f4d36" />
+
+  
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=4385e19b"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d8dd923b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Exercici 34_02. Anotacions sobre les propietats" href="exercici_34_02_propietats.html" />
+    <link rel="prev" title="Exercicis" href="poo_exercicis.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Introducció a la programació amb Java
+              <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2023-24
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="poo_intro.html">Classes i objectes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="poo_exercicis.html">Exercicis</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_01. Laberint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_02_propietats.html"> Exercici 34_02. Anotacions sobre les propietats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_03_ascensor.html"> Exercici 34_03. L'ascensor està al primer pis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_04_mutabilitat.html"> Exercici 34_04. Anotacions sobre mutabilitat de les propietats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_05_puja.html"> Exercici 34_05. L'ascensor puja un pis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_06_multiples.html"> Exercici 34_06. Anotacions sobre multiples instàncies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_07_ascensors.html"> Exercici 34_07. Molts ascensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
+          <li class="breadcrumb-item"><a href="poo_exercicis.html">Exercicis</a></li>
+      <li class="breadcrumb-item active"> Exercici 34_01. Laberint</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="poo_exercicis.html" class="btn btn-neutral float-left" title="Exercicis" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_02_propietats.html" class="btn btn-neutral float-right" title="Exercici 34_02. Anotacions sobre les propietats" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="exerciseicon-exercici-34-01-laberint">
+<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 34_01. Laberint<a class="headerlink" href="#exerciseicon-exercici-34-01-laberint" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_01_mazegame/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="poo.html"><span class="doc">Programació Orientada a Objectes</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+</ul>
+<p class="rubric">Enunciat</p>
+<p>En aquesta secció et presento una pràctica una mica més gran que la resta dels
+exercicis d'aquest bloc. Està pensada per què la vagis realitzant poc a poc,
+idealment en equip.</p>
+<p>La nostra clienta ens ha demanat que desenvolupem un joc.</p>
+<p>El joc és una barreja entre el cercamines i els de sortir d'un laberint.</p>
+<p>Consisteix en dirigir un avatar per un laberint fins a arribar a la sortida. La
+dificultat rau en que no veiem les parets del laberint fins que l'avatar no
+ensopega amb elles.</p>
+<p>Després de discutir una estona amb la clienta, hem definit algunes simulacions
+que permeten fer-se una idea de com funcionarà el joc. Ella s'ha mostrat
+d'acord i, més interessant per nosaltres, disposada a pagar-nos si acabem
+adequadament la nostra feina.</p>
+<section id="simulacio-1-mostra-ajuda-i-abandona">
+<h2>Simulació 1: Mostra ajuda i abandona<a class="headerlink" href="#simulacio-1-mostra-ajuda-i-abandona" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>La següent simulació demostra una interacció molt bàsica amb el programa:</p>
+<ul class="simple">
+<li><p>Arrencada del programa amb el laberint a jugar per línia de comandes.</p></li>
+<li><p>Capçalera del programa.</p></li>
+<li><p>Ús de l'opció d'ajuda i les opcions disponibles.</p></li>
+<li><p>Abandonament de la partida amb missatge discutiblement sensible.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$  </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint01.dat
+<span class="go">Joc del laberint</span>
+<span class="go">================</span>
+<span class="go">H: mostra ajuda</span>
+
+<span class="go">Laberint: laberint01</span>
+<span class="go">Encara no resolt</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">→·····</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; h</span>
+<span class="go">Les opcions disponibles són:</span>
+<span class="go">H: Mostra aquest text d&#39;ajuda</span>
+<span class="go">L: gira a l&#39;esquerra</span>
+<span class="go">R: gira a la dreta</span>
+<span class="go">F: mou una passa endavant</span>
+<span class="go">nF: mou n passes endavant</span>
+<span class="go">Q: Sortir</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">→·····</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; Q</span>
+<span class="go">Adéu CAGUETA!</span>
+</pre></div>
+</div>
+<p>A banda, aquesta simulació demostra com el programa representa el laberint, amb
+els seus límits, l'entrada i la sortida, els espais no explorats (els '·') i
+l'avatar en forma de fletxa que indica tant la posició com el sentit del seu
+moviment.</p>
+<p>Cal tenir present també el contingut de <code class="docutils literal notranslate"><span class="pre">laberint01.dat</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$  </span>cat<span class="w"> </span>laberint01.dat
+<span class="go">6x7</span>
+<span class="go">XXXXXXX</span>
+<span class="go">X...X.X</span>
+<span class="go">XX.X..X</span>
+<span class="go">E...X.G</span>
+<span class="go">X.....X</span>
+<span class="go">XXXXXXX</span>
+</pre></div>
+</div>
+<p>En la primera línia s'especifica les dimensions del laberint. En aquest cas 6
+files i 7 columnes.</p>
+<p>Tant els límits del laberint com les parets interiors estan marcats amb 'X'.
+L'entrada està marcada amb 'E' i la sortida amb 'G'. La resta de posicions dins
+del laberint es representen amb un '.' (punt).</p>
+</section>
+<section id="simulacio-2-un-laberint-trivial">
+<h2>Simulació 2: Un laberint trivial<a class="headerlink" href="#simulacio-2-un-laberint-trivial" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>En aquesta ocasió farem servir un laberint trivial</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>laberint02.dat
+<span class="go">3x2</span>
+<span class="go">XX</span>
+<span class="go">EG</span>
+<span class="go">XX</span>
+</pre></div>
+</div>
+<p>Aquí la simulació:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$  </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint02.dat
+<span class="go">Joc del laberint</span>
+<span class="go">================</span>
+<span class="go">H: mostra ajuda</span>
+
+<span class="go">Laberint: laberint02</span>
+<span class="go">Encara no resolt</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌┐</span>
+<span class="go">→</span>
+<span class="go">└┘</span>
+
+<span class="go">&gt; f</span>
+<span class="go">Aconseguit!</span>
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌┐</span>
+<span class="go">→</span>
+<span class="go">└┘</span>
+
+<span class="go">Has resolt el laberint en 1 intent</span>
+
+<span class="go">Nou rècord! Indica el teu nom:</span>
+<span class="go">Winner24</span>
+</pre></div>
+</div>
+<p>Aquesta simulació mostra un dels laberints més petits possibles: 3 files i 2
+columnes.</p>
+<p>En el moment que l'avatar arriba a una porta, finalitza l'execució.</p>
+</section>
+<section id="simulacio-3-soluciona-laberint-sense-superar-record">
+<h2>Simulació 3: Soluciona laberint sense superar rècord<a class="headerlink" href="#simulacio-3-soluciona-laberint-sense-superar-record" title="Enllaça amb aquesta capçalera"></a></h2>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint03.dat
+
+<span class="go">Joc del laberint</span>
+<span class="go">================</span>
+
+<span class="go">H: mostra ajuda</span>
+
+<span class="go">Laberint: laberint03</span>
+<span class="go">Rècord actual: Winner24 en 2 intents</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">→·····</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">→····</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; L</span>
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">↑····</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Xoc!</span>
+<span class="go">Intents actuals: 2</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">→ ····</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Intents actuals: 2</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go"> →····</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Intents actuals: 2</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">  →···</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Intents actuals: 2</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">   →··</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Xoc!</span>
+<span class="go">Intents actuals: 3</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">→   █·</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; 3F</span>
+<span class="go">Intents actuals: 3</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">→   █·</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; L</span>
+<span class="go">Intents actuals: 3</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█····│</span>
+<span class="go">   ↑█·</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; F</span>
+<span class="go">Xoc!</span>
+<span class="go">Intents actuals: 4</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█·█··│</span>
+<span class="go">→   █·</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; 3FRF</span>
+<span class="go">Intents actuals: 4</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█·█··│</span>
+<span class="go">    █·</span>
+<span class="go">│··↓··│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; L2FL</span>
+<span class="go">Intents actuals: 4</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█·█··│</span>
+<span class="go">    █·</span>
+<span class="go">│··  ↑│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">&gt; FRF</span>
+<span class="go">Aconseguit!</span>
+<span class="go">Intents actuals: 4</span>
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│█·█··│</span>
+<span class="go">    █ →</span>
+<span class="go">│··   │</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">Has resolt el laberint en 4 intents</span>
+
+<span class="go">No has superat el rècord. Potser la següent vegada.</span>
+</pre></div>
+</div>
+<p>En aquesta simulació, veiem com:</p>
+<ul>
+<li><p>Inicialment fa una passa endavant amb 'F'</p>
+<p>L'opció 'F' (Forward) indica fer una passa en el sentit de la fletxa que representa l'avatar.</p>
+</li>
+<li><p>A continuació gira a l'esquerra amb 'L'</p>
+<p>La fletxa apunta amunt.</p>
+</li>
+<li><p>La següent passa endavant es troba amb una paret interna.</p>
+<p>Apareix l'avís de 'Xoc!' i s'incrementa el nombre d'intents actuals que ara ja són 2.</p>
+<p>La paret amb la que ha xocat ara és visible.</p>
+<p>El camí que ha explorat fins ara, que no correspon a una paret, apareix en blanc.</p>
+<p>L'avatar torna a la posició de sortida.</p>
+</li>
+<li><p>A continuació fa 4 passes seguides i torna a xocar.</p>
+<p>Les tres primeres passes no tenen cap problema. La primera va a parar a una
+posició ja explorada, les altres dues exploren dues noves posicions.
+Finalment la darrera passa fa xocar contra una paret.</p>
+<p>L'avatar torna a la seva posició d'origen, la nova paret descoberta així com
+les posicions explorades, s'afegeixen a la informació ja visible de l'intent
+previ. Anem pel tercer intent!</p>
+</li>
+<li><p>Com que ja veu que hi ha tres passes segures endavant, pot fer un pas múltiple.</p>
+<p>Indica tres passes endavant fent &quot;3F&quot;</p>
+<p>L'avatar avança les tres passes</p>
+</li>
+<li><p>Gira a l'esquerra novament, fa una passa endavant també novament i, encara
+novament, torna a xocar-se.</p></li>
+<li><p>Sense desanimar-se, fa tres passes endavant, gira a la dreta i fa una passa
+endavant, tot junt, amb la comanda &quot;3FRF&quot;</p>
+<p>Tot seguir fa &quot;L2FL&quot; tot esquivant la paret trobada. De moment bé!</p>
+<p>A continuació fa una passa, gira a la dreta i torna a fer una passa amb &quot;FRF&quot;,
+el que du l'avatar a la sortida.</p>
+</li>
+<li><p>La partida ha finalitzat.</p>
+<p>El programa indica quants intents han calgut i, com que són més que el
+rècord, informa que no s'ha aconseguit superar.</p>
+<p>El programa finalitza aquí l'execució.</p>
+</li>
+</ul>
+</section>
+<section id="simulacio-4-un-laberint-amb-moltes-portes">
+<h2>Simulació 4: Un laberint amb moltes portes<a class="headerlink" href="#simulacio-4-un-laberint-amb-moltes-portes" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Amb aquest exemple veurem que poden haver-hi més d'una porta i que la jugadora
+té una sort que no s'ho creu ni ella:</p>
+<p>El laberint té la següent descripció:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>laberint04.dat
+<span class="go"> 7x8</span>
+<span class="go"> XXGXXXXX</span>
+<span class="go"> X.X....X</span>
+<span class="go"> XX..X.XG</span>
+<span class="go"> E..X...X</span>
+<span class="go"> XXXX.XXG</span>
+<span class="go"> G....X.G</span>
+<span class="go"> XXXXXXXX</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Joc del laberint</span>
+<span class="go">================</span>
+<span class="go">H: mostra ajuda</span>
+
+<span class="go">Laberint: laberint04</span>
+<span class="go">Rècord actual: Normalet54 en 241 intents</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─ ────┐</span>
+<span class="go">│······│</span>
+<span class="go">│······</span>
+<span class="go">→······│</span>
+<span class="go">│······</span>
+<span class="go">······</span>
+<span class="go">└──────┘</span>
+
+<span class="go">&gt; 2FLFRFLFR2FR2FRFL2FR4F</span>
+<span class="go">Aconseguit!</span>
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌─ ────┐</span>
+<span class="go">│··   ·│</span>
+<span class="go">│·  · ·</span>
+<span class="go">   ·  ·│</span>
+<span class="go">│··· ··</span>
+<span class="go">←    ··</span>
+<span class="go">└──────┘</span>
+
+<span class="go">Has resolt el laberint en 1 intent</span>
+
+<span class="go">Nou rècord! Indica el teu nom:</span>
+<span class="go">Eleftèria</span>
+</pre></div>
+</div>
+<p>D'acord, és poc creïble que <em>Eleftèria</em> pugui haver arribat a la sortida
+d'aquest laberint en un únic intent i amb una sola comanda, sense haver fet
+algun tipus de trampa. Recorda que és una simulació i que el temps que dediquis
+llegint passes inventades el podries utilitzar començant el programa.</p>
+</section>
+<section id="consideracions-adidionals">
+<h2>Consideracions adidionals<a class="headerlink" href="#consideracions-adidionals" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Aquestes són algunes consideracions addicionals que no es veuen a les simulacions:</p>
+<ul>
+<li><p>L'estensió d'un laberint ha de ser <code class="docutils literal notranslate"><span class="pre">.dat</span></code>, però si l'argument rebut per
+línia de comandes no presenta aquesta extensió, el programa serà capaç de
+cercar si hi ha un fitxer amb el nom rebut tot afegint l'extensió <code class="docutils literal notranslate"><span class="pre">.dat</span></code></p>
+<p>Per exemple, les següents dues crides seran equivalents:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint01
+<span class="gp">$ </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint01.dat
+</pre></div>
+</div>
+</li>
+<li><p>Les dimensions del laberint s'han de poder expressar amb valors enters
+(<code class="docutils literal notranslate"><span class="pre">int</span></code>) És a dir, que el nombre de files estarà entre 2 i
+<code class="docutils literal notranslate"><span class="pre">Integer.MAX_VALUE</span></code>.</p></li>
+<li><p>Tot laberint ha de tenir una única entrada i una o més sortides.</p></li>
+<li><p>Tant les entrades com les sortides han de trobar-se exclusivament en els
+límits del laberint.</p></li>
+<li><p>No poden haver entrades ni sortides a les cantonades del laberint.</p>
+<p>Aquesta restricció fa que els laberints més petits siguin de 2x3 o 3x2.</p>
+</li>
+<li><p>Si l'avatar xoca contra un dels límits o bé torna a l'entrada, es considera
+un xoc com si hagués xocat amb una paret interna.</p></li>
+<li><p>Si es demana un moviment que deixa l'avatar més enllà d'una porta, es
+considera que ha arribat igualment. És a dir, si amb 'F' arriba a la sortida,
+'100F' també arribaria a la sortida.</p></li>
+<li><p>Les comandes seran vàlides tant si són en majúscules com minúscules. A més,
+en cas que hi hagi espais en blanc a la comanda, tant a l'inici, com al
+final, com entre mig, aquests espais seran ignorats.</p>
+<p>Per exemple, les següents comandes es considerarien equivalents:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">&gt; 2F</span>
+<span class="go">&gt;    2F</span>
+<span class="go">&gt;    2      F</span>
+<span class="go">&gt; FF</span>
+<span class="go">&gt; F   F</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="missatges-d-error">
+<h2>Missatges d'error<a class="headerlink" href="#missatges-d-error" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Hi ha uns quants errors que cal tenir en compte, a banda dels casos indicats a
+la secció de consideracions addicionals.</p>
+<ul class="simple">
+<li><p>Si no s'especifica el nom del laberint</p></li>
+<li><p>Se n'expecifica més d'un</p></li>
+<li><p>El laberint especificat no correspon a un fitxer llegible</p></li>
+<li><p>La dimensió del laberint no correspon amb la descripció de la forma del
+laberint</p></li>
+<li><p>L'especificació de l'entrada o les sortides no respecta les consideracions anteriors</p></li>
+</ul>
+</section>
+<section id="caracters-especials">
+<h2>Caràcters especials<a class="headerlink" href="#caracters-especials" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>La representació final del laberint que mostrarà el teu programa als usuaris,
+queda a la teva decisió. En cas que t'hagi agradat la manera amb que es veu a
+les simulacions d'aquest enunciat, aquí tens el següent codi que podries usar
+al teu programa:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MazeChars</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">CORNER_UL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;┌&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">CORNER_DL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;└&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">CORNER_UR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;┐&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">CORNER_DR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;┘&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">LIMIT_V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;│&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">LIMIT_H</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;─&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ARROW_UP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;↑&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ARROW_DOWN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;↓&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ARROW_LEFT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;←&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ARROW_RIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;→&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">WALL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;■&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">EMPTY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;·&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="ampliacions">
+<h2>Ampliacions<a class="headerlink" href="#ampliacions" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>El que hem vist fins ara, seria la versió més bàsica del joc que ens han
+demanat. Podem però fer ampliacions. Aquí algunes idees que podrien temptar-te:</p>
+<section id="generador-de-laberints">
+<h3>Generador de laberints<a class="headerlink" href="#generador-de-laberints" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Com hem vist, els laberints s'especifiquen en un fitxer de text pla i, per
+tant, són perfectament editables amb el mateix editor amb que programem. Amb
+tot, donat que el format té uns requisits molt marcats, pot ser còmode una eina
+que ens permeti generar-los.</p>
+<p>Per aquesta raó, desenvoluparem un ajudant en la generació de laberints.</p>
+<p>El generador de laberints també ens oferirà una interacció per terminal, amb un
+prompt i un conjunt de funcionalitats.</p>
+<p>Aquestes seran les comandes disponibles:</p>
+<ul>
+<li><p>H: Mostra una llista amb les opcions disponibles.</p></li>
+<li><p>L: Llistarà tots els fitxers de laberint disponibles a la carpeta actual.</p></li>
+<li><p>D nom: Mostrarà els detalls d'un dels laberints disponibles.</p>
+<p>Els detalls que mostrarà són:</p>
+<ul>
+<li><p>Nom del laberint. És el nom del fitxer.</p></li>
+<li><p>Validesa. Si el fitxer conté una definició vàlida de laberint segons el validador.</p>
+<p>En cas que la definició no sigui vàlida, no mostrarà res més.</p>
+</li>
+<li><p>Descripció del laberint</p></li>
+<li><p>Dimensions del laberint. És a dir, nombre de files per nombre de columnes</p></li>
+<li><p>Forma del laberint. És a dir, els elements que defineixen les parets del laberint.</p></li>
+<li><p>En cas que el laberint hagi estat resolt, mostrarà els detalls del rècord: nom i nombre d'intents.
+Si no està resolt, ho indicarà.</p></li>
+</ul>
+</li>
+<li><p>R nom: eliminarà un laberint dels disponibles, a partir del nom.</p></li>
+<li><p>A nom: afegirà un nou laberint als disponibles.</p></li>
+<li><p>Q: finalitzar l'aplicació.</p></li>
+</ul>
+<p>Nota: el nom es pot especificar amb o sense l'extensió <code class="docutils literal notranslate"><span class="pre">.dat</span></code></p>
+<p>Considera la següent simulació que mostra l'ús de les diferents funcionalitats
+excepte l'afegit de un nou laberint.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>*.dat<span class="w"> </span>*.txt
+<span class="go">laberint01.dat</span>
+<span class="go">laberint02.dat</span>
+<span class="go">cosarara.dat</span>
+<span class="go">altrestemes.txt</span>
+
+<span class="gp">$ </span>java<span class="w"> </span>MazeGen
+<span class="go">Generador de laberints</span>
+<span class="go">H: Ajuda</span>
+
+<span class="go">&gt; H</span>
+
+<span class="go">Les opcions disponibles d&#39;aquest generador de laberints són:</span>
+<span class="go">H: Mostra aquest text d&#39;ajuda</span>
+<span class="go">L: Llistar fitxers de laberint</span>
+<span class="go">A: Afegir fitxer de laberint</span>
+<span class="go">R: Eliminar fitxer de laberint</span>
+<span class="go">D: Mostra els detalls d&#39;un fitxer de laberint</span>
+<span class="go">Q: Sortir</span>
+
+<span class="go">&gt; L</span>
+<span class="go">laberint01.dat</span>
+<span class="go">laberint02.dat</span>
+<span class="go">cosarara.dat</span>
+
+<span class="go">&gt; D laberint01</span>
+
+<span class="go">Nom: laberint01</span>
+
+<span class="go">Descripció:</span>
+<span class="go">Aquest és el laberint més fàcil del món.</span>
+<span class="go">El resoldràs en un tres i no res.</span>
+
+<span class="go">Dimensions: 7x7</span>
+
+<span class="go">Forma:</span>
+
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">→···■·</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">Record:</span>
+<span class="go">- nom: Winner24</span>
+<span class="go">- intents: 3</span>
+
+<span class="go">&gt; D desconegut</span>
+
+<span class="go">No es troba el fitxer: desconegut.dat</span>
+
+<span class="go">&gt; D laberint02.dat</span>
+
+<span class="go">Nom: laberint02</span>
+
+<span class="go">Descripció:</span>
+<span class="go">Aquest ès un laberint molt allargat.</span>
+
+<span class="go">Dimensions: 3x20</span>
+
+<span class="go">Forma:</span>
+
+<span class="go">┌──────────────────┐</span>
+<span class="go">→··················</span>
+<span class="go">└──────────────────┘</span>
+
+<span class="go">No resolt</span>
+
+<span class="go">&gt; D cosarara.dat</span>
+
+<span class="go">Nom: cosarara</span>
+
+<span class="go">Especificació no vàlida.</span>
+
+<span class="go">&gt; D laberint02</span>
+<span class="go">S&#39;eliminarà el fitxer: laberint02.dat</span>
+<span class="go">Segur? (S/N):</span>
+<span class="go">No</span>
+
+<span class="go">Cap fitxer eliminat.</span>
+
+<span class="go">&gt; D laberint02.dat</span>
+<span class="go">S&#39;eliminarà el fitxer: laberint02.dat</span>
+<span class="go">Segur? (S/N):</span>
+<span class="go">Sí</span>
+
+<span class="go">Eliminat el fitxer: laberint02.dat</span>
+
+<span class="go">&gt; L</span>
+<span class="go">laberint01.dat</span>
+<span class="go">cosarara.dat</span>
+
+<span class="go">&gt; Q</span>
+</pre></div>
+</div>
+<p>L'ús de l'opció d'afegir nou laberint es simula a continuació:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MazeGen
+<span class="go">Generador de laberints</span>
+<span class="go">H: Ajuda</span>
+
+<span class="go">&gt; A laberint01</span>
+
+<span class="go">Ja existeix el fitxer: laberint01.dat</span>
+
+<span class="go">&gt; A laberint03.dat</span>
+
+<span class="go">Contesteu les següents preguntes.</span>
+<span class="go">En qualsevol moment escriviu &quot;Q!&quot; per cancel·lar la generació.</span>
+
+<span class="go">Descripció del laberint? (línia en blanc per finalitzar)</span>
+
+<span class="go">Un laverin ke konstara</span>
+<span class="go">una mica més de aish que malament escric!</span>
+<span class="go">Q!</span>
+
+<span class="go">Cancel·lat</span>
+
+<span class="go">&gt; A laberint03</span>
+
+<span class="go">Contesteu les següents preguntes.</span>
+<span class="go">En qualsevol moment escriviu &quot;Q!&quot; per cancel·lar la generació.</span>
+
+<span class="go">Descripció del laberint? (línia en blanc per finalitzar)</span>
+
+<span class="go">Un laberint molón</span>
+
+
+<span class="go">Dimensions del laberint? (ex. 3x4 per un laberint de 3 files i 4 columnes)</span>
+<span class="go">1x5</span>
+
+<span class="go">Cal un mínim de 3 files i 3 columnes.</span>
+
+<span class="go">Dimensions del laberint? (ex. 3x4 per un laberint de 3 files i 4 columnes)</span>
+<span class="go">7x7</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌─────┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">Coordenada de l&#39;entrada? (ex. 0,1)</span>
+<span class="go">0,0</span>
+<span class="go">L&#39;entrada no pot estar en una cantonada.</span>
+
+<span class="go">Coordenada de l&#39;entrada? (ex. 0,1)</span>
+<span class="go">0,3</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌──↓──┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">Quantes sortides? Entre 1 i 19</span>
+<span class="go">5031</span>
+
+<span class="go">No hi caben tantes sortides.</span>
+
+<span class="go">Quantes sortides? Entre 1 i 19</span>
+<span class="go">12</span>
+
+<span class="go">Coordenada de la sortida nr. 1?</span>
+<span class="go">0, 3</span>
+
+<span class="go">Aquesta posició està ocupada.</span>
+
+<span class="go">Coordenada de la sortida nr. 1?</span>
+<span class="go">0, 4</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌──↓ ─┐</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">│·····│</span>
+<span class="go">└─────┘</span>
+
+<span class="go">Coordenada de la sortida nr. 2?</span>
+<span class="go">Q!</span>
+
+<span class="go">Cancel·lat</span>
+
+<span class="go">&gt; A laberint03</span>
+
+<span class="go">Contesteu les següents preguntes.</span>
+<span class="go">En qualsevol moment escriviu &quot;Q!&quot; per cancel·lar la generació.</span>
+
+<span class="go">Descripció del laberint? (línia en blanc per finalitzar)</span>
+
+<span class="go">Un laberint molón</span>
+
+
+<span class="go">Dimensions del laberint? (ex. 3x4 per un laberint de 3 files i 4 columnes)</span>
+<span class="go">7x6</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌────┐</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└────┘</span>
+
+<span class="go">Coordenada de l&#39;entrada? (ex. 0,1)</span>
+<span class="go">0,3</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌──↓─┐</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└────┘</span>
+
+<span class="go">Quantes sortides? Entre 1 i 17</span>
+<span class="go">1</span>
+
+<span class="go">Coordenada de la sortida nr. 1?</span>
+<span class="go">6, 1</span>
+
+<span class="go">Forma actual:</span>
+
+<span class="go">┌──↓─┐</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">Definiu les coordenades de les parets del laberint.</span>
+<span class="go">La coordenada intercanviarà paret amb espai.</span>
+<span class="go">Línia en blanc per finalitzar.</span>
+
+<span class="go">0, 4</span>
+<span class="go">No es poden modificar els límits del laberint.</span>
+<span class="go">1,4</span>
+
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">1,3</span>
+<span class="go">┌──↓─┐</span>
+<span class="go">│··■■│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">1,3</span>
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">2,3</span>
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│··■·│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">3, 1</span>
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│··■·│</span>
+<span class="go">│■···│</span>
+<span class="go">│····│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">4, 2</span>
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│··■·│</span>
+<span class="go">│■···│</span>
+<span class="go">│·■··│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+
+<span class="go">Finalitzada la definició de la forma</span>
+
+<span class="go">Nom: laberint03</span>
+
+<span class="go">Descripció:</span>
+
+<span class="go">Un laberint molón</span>
+
+<span class="go">Dimensions: 7x6</span>
+
+<span class="go">Forma:</span>
+
+<span class="go">┌──↓─┐</span>
+<span class="go">│···■│</span>
+<span class="go">│··■·│</span>
+<span class="go">│■···│</span>
+<span class="go">│·■··│</span>
+<span class="go">│····│</span>
+<span class="go">└ ───┘</span>
+
+<span class="go">Crear laberint? (S/N)</span>
+<span class="go">S</span>
+<span class="go">Laberint creat</span>
+
+<span class="go">&gt; Q</span>
+</pre></div>
+</div>
+</section>
+<section id="laberint-solucionable">
+<h3>Laberint solucionable<a class="headerlink" href="#laberint-solucionable" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Per desenvolupar la versió bàsica del laberint, cal que implementis algun
+validador que asseguri que els requeriments s'acompleixen.</p>
+<p>El validador &quot;bàsic&quot; de l'exercici, té una limitació important: considera
+vàlids laberints que no tenen solució.</p>
+<p>Per exemple:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>┌──↓─┐
+│···■│
+│·■■·│
+│■···│
+│·■··│
+│····│
+└ ───┘
+</pre></div>
+</div>
+<p>Amplia el validador, de manera que comprovi si el laberint té o no solució.
+Per poder-ho fer, considera investigar el concepte de <em>backtracking</em> i gaudeix
+de l'experiència.</p>
+</section>
+<section id="finestra-de-laberint">
+<h3>Finestra de laberint<a class="headerlink" href="#finestra-de-laberint" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>El joc del laberint que hem desenvolupat té una limitació important. Els
+laberints només poden ser jugats còmodament si hi caben a la pantalla.</p>
+<p>Aquesta ampliació proposa oferir laberints de mida realment llarga. Quan el
+laberint passa d'una determinada mida, el programa podria mostrar només una
+part d'aquest, una finestra. L'avatar podria quedar centrat o bé que es mostrés
+més a partir del sentit del moviment.</p>
+</section>
+<section id="editor-de-laberints">
+<h3>Editor de laberints<a class="headerlink" href="#editor-de-laberints" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>El generador de laberints té un munt de limitacions. Si has de fer un laberint
+realment gros, resulta molt incòmode definir les parets interiors posició a
+posició.</p>
+<p>Afegeix la possibilitat de considerar rangs en comptes de coordenades simples.</p>
+<p>Per exemple, en acceptar <code class="docutils literal notranslate"><span class="pre">3-6,2</span></code> implicaria <code class="docutils literal notranslate"><span class="pre">3,2</span></code>, <code class="docutils literal notranslate"><span class="pre">4,2</span></code>, <code class="docutils literal notranslate"><span class="pre">5,2</span></code> i
+<code class="docutils literal notranslate"><span class="pre">6,2</span></code>. Encara pots anar a més, acceptant múltiples rangs en una comanda, com
+ara <code class="docutils literal notranslate"><span class="pre">3-6,4-5;12-23,5-30</span></code>.</p>
+</section>
+<section id="avatars-compactes">
+<h3>Avatars compactes<a class="headerlink" href="#avatars-compactes" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Probablement has definit un objecte que encapsula la informació d'un avatar.</p>
+<p>Aquest objecte ha de gestionar la posició dins del laberint (coordenades) el
+sentit del moviment de l'avatar.</p>
+<p>Molt probablement aquesta informació l'has implementada amb una propietat per
+cada element (fila, columna, sentit)</p>
+<p>En aquesta ampliació, et proposo que intentis implementar tota la informació
+d'un avatar fent servir un únic <code class="docutils literal notranslate"><span class="pre">long</span></code>!</p>
+<p>Com és possible? Fixa't que les coordenades han de poder representar-se amb un
+<code class="docutils literal notranslate"><span class="pre">int</span></code> i que han de ser sempre positives. Això fa que sobri un bit dels 32 que
+usem per la fila, el mateix per la columna. Així que tenim 2 bits sense usar.</p>
+<p>Per altra banda, el sentit del moviment són quatre valors possibles. Quatre
+valors es poden codificar en… 2 bits! Mmmm</p>
+<p>Finalment un <code class="docutils literal notranslate"><span class="pre">long</span></code> són 64 bits (com 2 <code class="docutils literal notranslate"><span class="pre">int</span></code>)</p>
+<p>T'atreveixes a canviar la implementació de <code class="docutils literal notranslate"><span class="pre">Avatar</span></code> de manera que només faci
+servir internament un <code class="docutils literal notranslate"><span class="pre">long</span></code> per codificar tota la info? El més fort de tot és
+que si fas aquesta modificació, la resta dels programes que fan servir
+<code class="docutils literal notranslate"><span class="pre">Avatar</span></code> ni se n'enterarien!</p>
+<p>Per fer aquesta ampliació hauràs d'investigar una mica els operadors
+<em>bit-wise</em>.</p>
+</section>
+<section id="binaris">
+<h3>Binaris<a class="headerlink" href="#binaris" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>El fet que els jugadors poden fer trampes mirant la definició d'un laberint,
+no acaba de ser satisfactori. Per què no complicar una mica la vida dels
+<em>cheaters</em> guardant aquesta informació en fitxers binaris?</p>
+<p>Això és també vàlid per l'emmagatzemament dels rècords. Ara és massa fàcil pels
+jugadors tramposos editar aquest fitxer i dir que han guanyat, sense ni tant
+sols haver jugat.</p>
+<p>Donat que el nombre de símbols diferents que requereix un laberint és realment
+reduït, les possibilitats de compactació són moltes. A més a més, no cal ni
+guardar la dimensió ja que, en ser tan petits, llegiríem tota la info d'una
+tacada.</p>
+</section>
+</section>
+<section id="lliurament">
+<h2>Lliurament<a class="headerlink" href="#lliurament" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>El lliurament d'aquesta pràctica inclourà els següents continguts:</p>
+<ul class="simple">
+<li><p>Documentació del projecte</p></li>
+<li><p>Codi de la solució proposada</p></li>
+<li><p>Jocs de prova</p></li>
+</ul>
+<p>Anem a pams:</p>
+<section id="documentacio">
+<h3>Documentació<a class="headerlink" href="#documentacio" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>La documentació del projecte consisteix en un document en format pdf amb els
+següents continguts:</p>
+<ul>
+<li><p>Una portada que inclou el nom del projecte, els noms dels desenvolupadors, la
+data (amb mes i any és suficient), el context (centre, cicle, curs,
+assignatura/es implicades)</p></li>
+<li><p>Pàgines numerades, incloent total de pàgines, i amb un peu on indiqui, com a
+mínim, el títol del projecte tal i com apareix a la portada.</p></li>
+<li><p>Una taula de continguts amb indicació dels números de pàgina</p></li>
+<li><p>Una introducció que descrigui el projecte i l'estructura del document.</p></li>
+<li><p>Una secció amb diferents diagrames UML que descriguin el projecte.</p></li>
+<li><p>Una secció amb la descripció de la funcionalitat implementada, ressaltant si
+escau, les ampliacions realitzades.</p></li>
+<li><p>Una secció que inclogui el llistat dels fitxers que es lliuren, com ara els
+codis font del programa, laberints de prova i jocs de prova.</p>
+<p>Cada nom de fitxer ha d'anar acompanyat d'una descripció de què conté.</p>
+</li>
+<li><p>Una secció descrivint com provar les diferents opcions del programa. Pot ser
+similar a les simulacions d'aquest mateix document.</p></li>
+<li><p>Una secció, a mode de conclusions, en la que es descrigui aspectes del
+projecte que cada desenvolupador/a vulgui destacar, com per exemple, què ha
+aprés, que li hagués agradat fer, etc.</p></li>
+</ul>
+</section>
+<section id="codi">
+<h3>Codi<a class="headerlink" href="#codi" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>El codi del programa està format per</p>
+</section>
+<section id="jocs-de-prova">
+<h3>Jocs de prova<a class="headerlink" href="#jocs-de-prova" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Donat que és un programa d'entrada/sortida per consola, és possible guardar el
+contingut d'una interacció a un fitxer, i la sortida esperada a un altre, de
+manera que es pugui comprovar si el programa passa o no la prova de manera
+automàtica.</p>
+<p>Per exemple, considera la simulació 2 d'aquest enunciat.</p>
+<p>Per fer aquesta prova afegiries els següents tres fitxers:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>laberint02.dat
+<span class="go">3x2</span>
+<span class="go">XX</span>
+<span class="go">EG</span>
+<span class="go">XX</span>
+
+<span class="gp">$ </span>cat<span class="w"> </span>test_laberint02.in
+<span class="go">F</span>
+<span class="go">Winner24</span>
+
+<span class="gp">$ </span>cat<span class="w"> </span>test_laberint02.out
+<span class="go">Joc del laberint</span>
+<span class="go">================</span>
+<span class="go">H: mostra ajuda</span>
+
+<span class="go">Laberint: laberint02</span>
+<span class="go">Encara no resolt</span>
+
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌┐</span>
+<span class="go">→</span>
+<span class="go">└┘</span>
+
+<span class="go">&gt; Aconseguit!</span>
+<span class="go">Intents actuals: 1</span>
+<span class="go">┌┐</span>
+<span class="go">→</span>
+<span class="go">└┘</span>
+
+<span class="go">Has resolt el laberint en 1 intent</span>
+
+<span class="go">Nou rècord! Indica el teu nom:</span>
+</pre></div>
+</div>
+<p>Per realitzar aquesta prova, caldrà simplement fer:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MazeGame<span class="w"> </span>laberint02.dat<span class="w"> </span>&lt;<span class="w"> </span>test_laberint02.in<span class="w"> </span><span class="p">|</span><span class="w"> </span>diff<span class="w"> </span>-<span class="w"> </span>test_laberint02.out
+</pre></div>
+</div>
+<p>Per descomptat, pots fer-te un <em>prgtest-lite</em> amb un petit guió (potser en
+<em>bash</em>) que llenci totes les proves que tinguis disponibles. No és obligatori,
+però segurament t'agradarà disposar-ne. Per descomptat, demana ajut si no saps
+ni per on començar.</p>
+<p>Quines proves has de fer? Intenta que hi hagi proves per cadascuna de les
+funcionalitats que has implementat. Per exemple, una prova que permeti que el
+programa generi cada missatge d'error.</p>
+<p>No tinguis massa ambició a l'hora de definir una prova. Com més clar sigui
+l'element que vulguis provar, millor. És preferible tres proves que comprovin
+tres punts concrets, que no pas una que faci la prova de tots tres.</p>
+<p>No oblidis descriure a la documentació, quin és l'objectiu que persegueixes amb
+cada prova.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="poo_exercicis.html" class="btn btn-neutral float-left" title="Exercicis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_02_propietats.html" class="btn btn-neutral float-right" title="Exercici 34_02. Anotacions sobre les propietats" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2024 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
