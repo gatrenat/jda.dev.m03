@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 34_05. L&#39;ascensor puja un pis &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 34_13. Posició sempre correcta &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 34_06. Anotacions sobre multiples instàncies" href="exercici_34_06_multiples.html" />
-    <link rel="prev" title="Exercici 34_04. Anotacions sobre mutabilitat de les propietats" href="exercici_34_04_mutabilitat.html" />
+    <link rel="next" title="Exercici 34_14. Ascensor protegit" href="exercici_34_14_ascensor_protegit.html" />
+    <link rel="prev" title="Exercici 34_12. Anotacions sobre accés des de fora" href="exercici_34_12_protegides.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -69,7 +69,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_02_propietats.html"> Exercici 34_02. Anotacions sobre les propietats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_03_ascensor.html"> Exercici 34_03. L'ascensor està al primer pis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_04_mutabilitat.html"> Exercici 34_04. Anotacions sobre mutabilitat de les propietats</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_05. L'ascensor puja un pis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_05_puja.html"> Exercici 34_05. L'ascensor puja un pis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_06_multiples.html"> Exercici 34_06. Anotacions sobre multiples instàncies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_07_ascensors.html"> Exercici 34_07. Molts ascensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_08_extern.html"> Exercici 34_08. Anotacions sobre accés des de fora</a></li>
@@ -77,7 +77,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_10_posicio.html"> Exercici 34_10. Renat té posició</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_11_moviment.html"> Exercici 34_11. L'ascensor té moviment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_12_protegides.html"> Exercici 34_12. Anotacions sobre accés des de fora</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_34_13_posicio_correcta.html"> Exercici 34_13. Posició sempre correcta</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_13. Posició sempre correcta</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_14_ascensor_protegit.html"> Exercici 34_14. Ascensor protegit</a></li>
 </ul>
 </li>
@@ -102,12 +102,12 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
           <li class="breadcrumb-item"><a href="poo_exercicis.html">Exercicis</a></li>
-      <li class="breadcrumb-item active"> Exercici 34_05. L'ascensor puja un pis</li>
+      <li class="breadcrumb-item active"> Exercici 34_13. Posició sempre correcta</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_34_04_mutabilitat.html" class="btn btn-neutral float-left" title="Exercici 34_04. Anotacions sobre mutabilitat de les propietats" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_06_multiples.html" class="btn btn-neutral float-right" title="Exercici 34_06. Anotacions sobre multiples instàncies" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_12_protegides.html" class="btn btn-neutral float-left" title="Exercici 34_12. Anotacions sobre accés des de fora" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_14_ascensor_protegit.html" class="btn btn-neutral float-right" title="Exercici 34_14. Ascensor protegit" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -115,43 +115,65 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-t-exercici-34-05-l-ascensor-puja-un-pis">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_05. L'ascensor puja un pis<a class="headerlink" href="#exerciseicon-t-exercici-34-05-l-ascensor-puja-un-pis" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-34-13-posicio-sempre-correcta">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_13. Posició sempre correcta<a class="headerlink" href="#exerciseicon-t-exercici-34-13-posicio-sempre-correcta" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_05_puja/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_propietats_mutables.html"><span class="doc">Propietats mutables</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_13_posicio_correcta/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_private.html"><span class="doc">Propietats protegides</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Afegeix el següent procediment al codi de l'ascensor definit a
-<a class="reference internal" href="exercici_34_03_ascensor.html"><span class="doc">l'exercici anterior</span></a>:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">puja</span><span class="p">(</span><span class="n">Ascensor</span><span class="w"> </span><span class="n">ascensor</span><span class="p">)</span>
+<p>En aquest exercici, torna a afegir la propietat <code class="docutils literal notranslate"><span class="pre">posicio</span></code> que vas
+incorporar a l'exercici <a class="reference internal" href="exercici_34_10_posicio.html"><span class="doc">Renat té posició</span></a>.
+En aquesta ocasió, fes la propietat privada i implementa els accessors de
+manera que garanteixis que la posició del Renat sigui sempre correcta, a
+l'hora que pugui ser canviada.</p>
+<figure class="align-center">
+<p class="plantuml">
+<img src="_images/plantuml-d3098497f04b27f14460764e25145a138f415c48.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+
+ class GatRenat {
+     - vides: int
+     - posicio: String
+     + getVides(): int
+     + setVides(int)
+     + getPosicio(): String
+     + setPosicio(String)
+ }
+ &#64;enduml"/>
+</p>
+</figure>
+<p>Recorda que les posicions vàlides del gat Renat són <strong>exactament</strong>: <code class="docutils literal notranslate"><span class="pre">&quot;dret&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;assegut&quot;</span></code> i <code class="docutils literal notranslate"><span class="pre">&quot;estirat&quot;</span></code>.</p>
+<p>En cas que el <em>setter</em> de <code class="docutils literal notranslate"><span class="pre">posicio</span></code> rebi un valor no vàlid, mantindrà el
+valor de la propietat sense modificar. És a dir, es comportarà igual que
+<code class="docutils literal notranslate"><span class="pre">setVides()</span></code>.</p>
+<p>Completa la següent plantilla:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">         </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vides inicials: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix nova posició:&quot;</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="n">renat</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició final: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Aquest procediment incrementarà en un el pis en que es troba l'ascensor
-que rep.</p>
-<p>Et passo la plantilla amb el <code class="docutils literal notranslate"><span class="pre">main()</span></code> perquè el <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> et deixi
-passar.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ascensor</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// XXX</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">puja</span><span class="p">(</span><span class="n">Ascensor</span><span class="w"> </span><span class="n">ascensor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// XXX</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
-<span class="w">        </span><span class="c1">// XXX</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;ascensor inicialment està a la planta &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">pis</span><span class="p">);</span>
-<span class="w">        </span><span class="n">puja</span><span class="p">(</span><span class="n">ascensor</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;ascensor finalment està a la planta &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">pis</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>En completar el programa anterior, caldrà que l'execució sigui la següent:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>Ascensor
-<span class="hll"><span class="go"> L&#39;ascensor inicialment està a la planta -1</span>
-</span><span class="hll"><span class="go"> L&#39;ascensor finalment està a la planta 0</span>
+<p>Una simulació d'execució de <code class="docutils literal notranslate"><span class="pre">UsaGatRenat</span></code> vindria a ser:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>UsaGatRenat
+<span class="hll"><span class="go">Vides inicials: 7</span>
+</span><span class="hll"><span class="go">Posició inicial: estirat</span>
+</span><span class="hll"><span class="go">Introdueix nova posició:</span>
+</span><span class="go">assegut</span>
+<span class="hll"><span class="go">Posició final: assegut</span>
 </span></pre></div>
 </div>
 </section>
@@ -182,8 +204,8 @@ passar.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_34_04_mutabilitat.html" class="btn btn-neutral float-left" title="Exercici 34_04. Anotacions sobre mutabilitat de les propietats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_06_multiples.html" class="btn btn-neutral float-right" title="Exercici 34_06. Anotacions sobre multiples instàncies" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_12_protegides.html" class="btn btn-neutral float-left" title="Exercici 34_12. Anotacions sobre accés des de fora" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_14_ascensor_protegit.html" class="btn btn-neutral float-right" title="Exercici 34_14. Ascensor protegit" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,74 @@
+##################################################
+|exerciseicon__T| Exercici 34_10. Renat té posició
+##################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``34_10_posicio/``
+
+* Continguts relacionats: :doc:`poo_intro_extern`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Fins ara disposem de la classe ``GatRenat`` amb la següent definició:
+
+.. code-block:: java
+    :linenos:
+
+    public class GatRenat {
+        int vides = 7;         // vides disponibles del gat Renat
+    }
+
+En aquesta ocasió afegirem al nostre gat Renat la possibilitat d'indicar
+en quina posició es troba. En concret, podrà estar dret, assegut o estirat.
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class GatRenat {
+         vides: int
+         posicio: String
+     }
+     @enduml
+
+Modifica la definició de la seva classe perquè pugui guardar aquesta
+informació, fent que inicialment el gat estigui estirat.
+
+La informació de l'estat la guardarem en una propietat amb el nom
+``posicio`` que serà de tipus String.
+
+Considera la següent plantilla:
+
+.. code-block:: java
+   :linenos:
+
+    /* XXX */
+    public class UsaGatRenat {
+        public static void main(String[] args) {
+            /* XXX */
+            System.out.println("Vides inicials: " + renat.vides);
+            System.out.println("Posició inicial: " + renat.XXX);
+            /* XXX *?
+            System.out.println("Posició final: " + renat.XXX);
+        }
+    }
+
+L'execució hauria de ser:
+
+.. code-block:: console
+    :emphasize-lines: 2-
+
+    $ java UsaGatRenat
+    Vides inicials: 7
+    Posició inicial: estirat
+    Posició final: assegut

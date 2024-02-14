@@ -15,14 +15,14 @@ Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:
     exercici_34_05_puja.rst
     exercici_34_06_multiples.rst
     exercici_34_07_ascensors.rst
+    exercici_34_08_extern.rst
+    exercici_34_09_extern.rst
+    exercici_34_10_posicio.rst
+    exercici_34_11_moviment.rst
+    exercici_34_12_protegides.rst
+    exercici_34_13_posicio_correcta.rst
+    exercici_34_14_ascensor_protegit.rst
 
-..    exercici_34_08_extern.rst
-..    exercici_34_09_extern.rst
-..    exercici_34_10_posicio.rst
-..    exercici_34_11_moviment.rst
-..    exercici_34_12_protegides.rst
-..    exercici_34_13_posicio_correcta.rst
-..    exercici_34_14_ascensor_protegit.rst
 ..    exercici_34_15_com_esta.rst
 ..    exercici_34_16_ascensor_informatiu.rst
 ..    exercici_34_17_ensinistrat.rst

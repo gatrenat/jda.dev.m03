@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercicis &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 34_10. Renat té posició &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 34_01. Laberint" href="exercici_34_01_mazegame.html" />
-    <link rel="prev" title="Propietats protegides" href="poo_intro_private.html" />
+    <link rel="next" title="Exercici 34_11. L&#39;ascensor té moviment" href="exercici_34_11_moviment.html" />
+    <link rel="prev" title="Exercici 34_09. L&#39;Ascensor des de fora" href="exercici_34_09_extern.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -64,7 +64,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="poo_intro.html">Classes i objectes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Exercicis</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="poo_exercicis.html">Exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_01_mazegame.html"> Exercici 34_01. Laberint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_02_propietats.html"> Exercici 34_02. Anotacions sobre les propietats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_03_ascensor.html"> Exercici 34_03. L'ascensor està al primer pis</a></li>
@@ -74,7 +74,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_07_ascensors.html"> Exercici 34_07. Molts ascensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_08_extern.html"> Exercici 34_08. Anotacions sobre accés des de fora</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_09_extern.html"> Exercici 34_09. L'Ascensor des de fora</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_34_10_posicio.html"> Exercici 34_10. Renat té posició</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_10. Renat té posició</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_11_moviment.html"> Exercici 34_11. L'ascensor té moviment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_12_protegides.html"> Exercici 34_12. Anotacions sobre accés des de fora</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_13_posicio_correcta.html"> Exercici 34_13. Posició sempre correcta</a></li>
@@ -101,12 +101,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
-      <li class="breadcrumb-item active">Exercicis</li>
+          <li class="breadcrumb-item"><a href="poo_exercicis.html">Exercicis</a></li>
+      <li class="breadcrumb-item active"> Exercici 34_10. Renat té posició</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="poo_intro_private.html" class="btn btn-neutral float-left" title="Propietats protegides" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_01_mazegame.html" class="btn btn-neutral float-right" title="Exercici 34_01. Laberint" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_09_extern.html" class="btn btn-neutral float-left" title="Exercici 34_09. L&#39;Ascensor des de fora" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_11_moviment.html" class="btn btn-neutral float-right" title="Exercici 34_11. L&#39;ascensor té moviment" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -114,26 +115,62 @@
     
            <div itemprop="articleBody">
              
-  <section id="exercicis">
-<h1>Exercicis<a class="headerlink" href="#exercicis" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_01_mazegame.html"> Exercici 34_01. Laberint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_02_propietats.html"> Exercici 34_02. Anotacions sobre les propietats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_03_ascensor.html"> Exercici 34_03. L'ascensor està al primer pis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_04_mutabilitat.html"> Exercici 34_04. Anotacions sobre mutabilitat de les propietats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_05_puja.html"> Exercici 34_05. L'ascensor puja un pis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_06_multiples.html"> Exercici 34_06. Anotacions sobre multiples instàncies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_07_ascensors.html"> Exercici 34_07. Molts ascensors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_08_extern.html"> Exercici 34_08. Anotacions sobre accés des de fora</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_09_extern.html"> Exercici 34_09. L'Ascensor des de fora</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_10_posicio.html"> Exercici 34_10. Renat té posició</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_11_moviment.html"> Exercici 34_11. L'ascensor té moviment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_12_protegides.html"> Exercici 34_12. Anotacions sobre accés des de fora</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_13_posicio_correcta.html"> Exercici 34_13. Posició sempre correcta</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_34_14_ascensor_protegit.html"> Exercici 34_14. Ascensor protegit</a></li>
+  <section id="exerciseicon-t-exercici-34-10-renat-te-posicio">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_10. Renat té posició<a class="headerlink" href="#exerciseicon-t-exercici-34-10-renat-te-posicio" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_10_posicio/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_extern.html"><span class="doc">Accés extern</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
+<p class="rubric">Enunciat</p>
+<p>Fins ara disposem de la classe <code class="docutils literal notranslate"><span class="pre">GatRenat</span></code> amb la següent definició:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">         </span><span class="c1">// vides disponibles del gat Renat</span>
+<span class="linenos">3</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>En aquesta ocasió afegirem al nostre gat Renat la possibilitat d'indicar
+en quina posició es troba. En concret, podrà estar dret, assegut o estirat.</p>
+<figure class="align-center">
+<p class="plantuml">
+<img src="_images/plantuml-46ae262486eafdb56e42fa27cf6db453407bdef9.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+
+ class GatRenat {
+     vides: int
+     posicio: String
+ }
+ &#64;enduml"/>
+</p>
+</figure>
+<p>Modifica la definició de la seva classe perquè pugui guardar aquesta
+informació, fent que inicialment el gat estigui estirat.</p>
+<p>La informació de l'estat la guardarem en una propietat amb el nom
+<code class="docutils literal notranslate"><span class="pre">posicio</span></code> que serà de tipus String.</p>
+<p>Considera la següent plantilla:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="cm">/* XXX */</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="cm">/* XXX */</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vides inicials: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">         </span><span class="o">/*</span><span class="w"> </span><span class="n">XXX</span><span class="w"> </span><span class="o">*?</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Posició final: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>L'execució hauria de ser:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>UsaGatRenat
+<span class="hll"><span class="go">Vides inicials: 7</span>
+</span><span class="hll"><span class="go">Posició inicial: estirat</span>
+</span><span class="hll"><span class="go">Posició final: assegut</span>
+</span></pre></div>
 </div>
 </section>
 
@@ -163,8 +200,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="poo_intro_private.html" class="btn btn-neutral float-left" title="Propietats protegides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_01_mazegame.html" class="btn btn-neutral float-right" title="Exercici 34_01. Laberint" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_09_extern.html" class="btn btn-neutral float-left" title="Exercici 34_09. L&#39;Ascensor des de fora" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_11_moviment.html" class="btn btn-neutral float-right" title="Exercici 34_11. L&#39;ascensor té moviment" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

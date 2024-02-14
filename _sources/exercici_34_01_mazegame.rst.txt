@@ -436,7 +436,7 @@ Consideracions adidionals
 
 Aquestes són algunes consideracions addicionals que no es veuen a les simulacions:
 
-* L'estensió d'un laberint ha de ser ``.dat``, però si l'argument rebut per
+* L'extensió d'un laberint ha de ser ``.dat``, però si l'argument rebut per
   línia de comandes no presenta aquesta extensió, el programa serà capaç de
   cercar si hi ha un fitxer amb el nom rebut tot afegint l'extensió ``.dat``
 

@@ -1,0 +1,20 @@
+####################################################################
+|exerciseicon___| Exercici 34_08. Anotacions sobre accés des de fora
+####################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``34_08_extern/``
+
+* Continguts relacionats: :doc:`poo_intro_extern`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+Descarregat :download:`aquesta plantilla<_recursos/poo_extern.rst>` i
+completa-la, tot reemplaçant els ``XXX`` per les anotacions que has pres a
+classe.
+
+.. literalinclude:: _recursos/poo_extern.rst
+   :language: rst

@@ -1,0 +1,100 @@
+############
+Accés extern
+############
+
+Fins ara, la definició de ``GatRenat`` ha estat sempre acompanyada d'un
+``main()`` dins del mateix fitxer. Es podria accedir des d'un altre
+programa?
+
+Fixa't en el següent diagrama de classes:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class GatRenat {
+         vides: int
+     }
+
+     class UsaGatRenat {
+         {static} main(String[])
+     }
+
+     UsaGatRenat -left-> GatRenat
+
+     @enduml
+
+Hi apareixen dues classes, la nostra coneguda ``GatRenat`` i la nova
+``UsaGatRenat``.
+
+Hi ha un "petit* canvi, però. ``GatRenat`` ara no té ``main()``.
+
+Si traduïm aquesta classe a codi, obtindrem:
+
+.. code-block:: java
+    :linenos:
+
+    public class GatRenat {
+        int vides;
+    }
+
+Reduïda, oi?
+
+En aquests moments no fa una gran diferència entre posar ``public`` i no
+posar-ho. Amb tot, de seguida veurem que és un bon moment explicitar-ho.
+
+Considera ara el següent codi corresponent a l'altra classe:
+
+.. code-block:: java
+    :linenos:
+
+    public class UsaGatRenat {
+        public static void main(String[] args) {
+            GatRenat renat = new GatRenat();
+            System.out.println("Al gat Renat li queden " + renat.vides + " vides");
+        }
+    }
+
+Copia el codi en un fitxer al mateix directori que el de l'exercici
+anterior i executa'l.
+
+Respon a les següents preguntes:
+
+1. Quin és el nom del fitxer on està definit el punt d'entrada ``main()`` d'aquest programa?
+
+#. Ara tenim dos fitxers amb ``main()``. Com pot saber Java quin és el
+   ``main()`` a executar?
+
+#. A quin fitxer està definida la classe del gat Renat?
+
+#. Quants programes es podrien construir fent ús de la definició del gat Renat?
+
+#. Elimina el ``main()`` de ``GatRenat``. Continua funcionant ``UsaGatRenat``?
+   Què ha deixat de poder-se executar?
+
+#. Què passaria si el fitxer amb el codi anterior i el que conté la
+   definició de la classe del Renat estiguessin en directoris
+   diferents?
+
+Una mica de *culturilla* POO
+============================
+
+Tot i que ``vides`` és una variable, en el món de la POO aquest tipus de
+*bestioles* se les coneix com *propietats* o *camps*.
+
+Una classe pot definir tantes propietats com li calguin.
+
+Als valors que tenen les propietats d'una instància en un determinat
+moment se li anomena *estat* de la instància.
+
+
+|exerciseicon___| :doc:`exercici_34_08_extern`
+
+|exerciseicon__T| :doc:`exercici_34_09_extern`
+
+|exerciseicon__T| :doc:`exercici_34_10_posicio`
