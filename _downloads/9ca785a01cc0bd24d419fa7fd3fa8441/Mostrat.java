@@ -1,5 +1,5 @@
 /*
- * programa que mostra el seu propi codi
+ * Programa que mostra el seu propi codi
  * Nota: pressuposa que el codi font es troba en la mateixa carpeta que
  * l'executable.
  */

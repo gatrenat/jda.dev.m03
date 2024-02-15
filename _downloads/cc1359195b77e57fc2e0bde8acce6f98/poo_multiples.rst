@@ -17,7 +17,7 @@ Les anotacions responen a diferents preguntes sobre aquest codi:
 ::
 
     01    public class GatRenat {
-    02        public int vides = 7;   // vides disponibles del gat Renat
+    02        int vides = 7;   // vides disponibles del gat Renat
     03
     04        public static void main(String[] args) {
     05            GatRenat renatI;

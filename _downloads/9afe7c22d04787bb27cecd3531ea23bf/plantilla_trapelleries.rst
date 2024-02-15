@@ -27,6 +27,9 @@ Aquí tens unes instruccions que t'ajudaran: ::
     $ touch existent.txt
     $ chmod -r existent.txt
 
+Ara reemplaça ``inexistent.txt`` per ``existent.txt`` a ``Mostrat.java`` i
+executa'l.
+
 L'error que genera és: ::
 
     $ java Mostrat
