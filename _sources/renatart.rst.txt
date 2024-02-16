@@ -29,3 +29,4 @@ Mems creats per l'alumna Keyla Batzin Con el 13 de novembre de 2023.
 .. image:: _renatart/renatart_2324_dam_02.jpg
 .. image:: _renatart/renatart_2324_dam_03.jpg
 .. image:: _renatart/renatart_2324_dam_04.jpg
+.. image:: _renatart/renatart_2324_dam_05.jpg

@@ -115,7 +115,7 @@ programa?</p>
 <p>Fixa't en el següent diagrama de classes:</p>
 <figure class="align-center">
 <p class="plantuml">
-<img src="_images/plantuml-2d6979b3a0e0c17be39b74579cfc4fd590dffaba.png" alt=" &#64;startuml
+<img src="_images/plantuml-f1d27e3af816849e35a9920cbf67a4996c56750a.png" alt=" &#64;startuml
  hide circle
  skinparam monochrome true
  skinparam classAttributeIconSize 0
@@ -123,6 +123,7 @@ programa?</p>
 
  class GatRenat {
      vides: int
+     {static} main(String[])
  }
 
  class UsaGatRenat {
@@ -140,17 +141,20 @@ programa?</p>
 <p>Si traduïm aquesta classe a codi, obtindrem:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GatRenat</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">2</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">vides</span><span class="p">;</span>
-<span class="linenos">3</span><span class="p">}</span>
+<span class="linenos">3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
+<span class="linenos">5</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Al gat Renat li queden &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+<span class="linenos">6</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">7</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Reduïda, oi?</p>
 <p>En aquests moments no fa una gran diferència entre posar <code class="docutils literal notranslate"><span class="pre">public</span></code> i no
 posar-ho. Amb tot, de seguida veurem que és un bon moment explicitar-ho.</p>
 <p>Considera ara el següent codi corresponent a l'altra classe:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaGatRenat</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">2</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos">3</span><span class="w">        </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
-<span class="linenos">4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Al gat Renat li queden &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides&quot;</span><span class="p">);</span>
+<span class="linenos">4</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Al gat Renat li queden &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">renat</span><span class="p">.</span><span class="na">vides</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; vides també des de UsaGatRenat&quot;</span><span class="p">);</span>
 <span class="linenos">5</span><span class="w">    </span><span class="p">}</span>
 <span class="linenos">6</span><span class="p">}</span>
 </pre></div>
