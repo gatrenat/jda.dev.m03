@@ -22,13 +22,13 @@ Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:
     exercici_34_12_protegides.rst
     exercici_34_13_posicio_correcta.rst
     exercici_34_14_ascensor_protegit.rst
+    exercici_34_15_com_esta.rst
+    exercici_34_16_ascensor_informatiu.rst
+    exercici_34_17_ensinistrat.rst
+    exercici_34_18_assessinable.rst
+    exercici_34_19_interactiu.rst
+    exercici_34_20_classes_i_objectes.rst
 
-..    exercici_34_15_com_esta.rst
-..    exercici_34_16_ascensor_informatiu.rst
-..    exercici_34_17_ensinistrat.rst
-..    exercici_34_18_assessinable.rst
-..    exercici_34_19_ascensor_interactiu.rst
-..    exercici_34_20_classes_i_objectes.rst
 ..    exercici_34_21_constructor_posicio.rst
 ..    exercici_34_22_constructor_parametritzat.rst
 ..    exercici_34_23_constructor_posicio.rst

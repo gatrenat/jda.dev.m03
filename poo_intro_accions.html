@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Classes i objectes &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Accions d&#39;un objecte &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Propietats" href="poo_intro_propietats.html" />
-    <link rel="prev" title="Programació Orientada a Objectes" href="poo.html" />
+    <link rel="next" title="Exercicis" href="poo_exercicis.html" />
+    <link rel="prev" title="Preguntes a un objecte" href="poo_intro_consultes.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -63,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fitxers.html">Fitxers</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="poo.html">Programació Orientada a Objectes</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Classes i objectes</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="poo_intro.html">Classes i objectes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_propietats.html">Propietats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_propietats_mutables.html">Propietats mutables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_multiples_instancies.html">Múltiples instàncies</a></li>
@@ -71,7 +71,7 @@
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_public.html">Propietats públiques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_private.html">Propietats protegides</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_intro_consultes.html">Preguntes a un objecte</a></li>
-<li class="toctree-l3"><a class="reference internal" href="poo_intro_accions.html">Accions d'un objecte</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Accions d'un objecte</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="poo_exercicis.html">Exercicis</a></li>
@@ -95,12 +95,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
-      <li class="breadcrumb-item active">Classes i objectes</li>
+          <li class="breadcrumb-item"><a href="poo_intro.html">Classes i objectes</a></li>
+      <li class="breadcrumb-item active">Accions d'un objecte</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="poo.html" class="btn btn-neutral float-left" title="Programació Orientada a Objectes" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="poo_intro_propietats.html" class="btn btn-neutral float-right" title="Propietats" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="poo_intro_consultes.html" class="btn btn-neutral float-left" title="Preguntes a un objecte" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="poo_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -108,28 +109,61 @@
     
            <div itemprop="articleBody">
              
-  <section id="classes-i-objectes">
-<h1>Classes i objectes<a class="headerlink" href="#classes-i-objectes" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>En aquests continguts, tindràs una primera visió dels conceptes <em>classe</em> i
-<em>objecte</em>.</p>
-<p>Aquesta introducció es realitza de manera pràctica, guiada amb
-exercicis que progressivament incorporen diferents perspectives dels
-conceptes a tractar.</p>
-<p>Coneixerem ara a un nou amic que ens acompanyarà en aquest viatge de
-descobriment de la programació orientada a objectes: el gat Renat.</p>
-<p>Som-hi doncs!</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_propietats.html">Propietats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_propietats_mutables.html">Propietats mutables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_multiples_instancies.html">Múltiples instàncies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_extern.html">Accés extern</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_public.html">Propietats públiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_private.html">Propietats protegides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_consultes.html">Preguntes a un objecte</a></li>
-<li class="toctree-l1"><a class="reference internal" href="poo_intro_accions.html">Accions d'un objecte</a></li>
+  <section id="accions-d-un-objecte">
+<h1>Accions d'un objecte<a class="headerlink" href="#accions-d-un-objecte" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Un dels avantatges de la POO és que podem tractar peces de codi com si
+tinguessin una mena de personalitat pròpia. És el que es coneix com
+<em>la metàfora de la POO</em>. Així, podem imaginar que els objectes ens
+responen quan els fem consultes, com ara <code class="docutils literal notranslate"><span class="pre">renat.esDret()</span></code> que hem vist
+abans.</p>
+<p>A banda de fer consultes, podem imaginar que li demanem que faci coses.</p>
+<p>Això ja ho podem fer. Per exemple, podem demanar-li que es posi dret tot
+cridant <code class="docutils literal notranslate"><span class="pre">renat.setPosicio(&quot;dret&quot;)</span></code>. Amb tot, encara ho podem fer més
+natural.
+Tornem a ampliar el nostre pacient amic Renat.</p>
+<figure class="align-center">
+<p class="plantuml">
+<img src="_images/plantuml-591431a9e94c7f3dd95cc9336f8ea144fe27427b.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+ class GatRenat {
+     + aixecat()
+     + seu()
+     + estirat()
+ }
+ &#64;enduml"/>
+</p>
+</figure>
+<p>Aquest diagrama UML ens mostra tres nous mètodes o serveis:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aixecat()</span></code>: fa que Renat es posi dret.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seu()</span></code>: fa que Renat s'assegui.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">estirat()</span></code>: fa que Renat s'estiri.</p></li>
 </ul>
+<p>Amb els nous mètodes, la interacció amb Renat comença a ser força
+<em>natural</em>. Fixa't per exemple, en la següent <em>conversa</em>:</p>
+<blockquote>
+<div><p>Si Renat està dret que s'assegui.</p>
+</div></blockquote>
+<p>Això en codi i aprofitant els nous mètodes, vindria a ser:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">renat</span><span class="p">.</span><span class="na">esDret</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">renat</span><span class="p">.</span><span class="na">seu</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
 </div>
+<p>Compara-ho amb la versió sense mètodes <em>naturals</em>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">renat</span><span class="p">.</span><span class="na">getPosicio</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;dret&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">renat</span><span class="p">.</span><span class="na">setPosicio</span><span class="p">(</span><span class="s">&quot;assegut&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Et toca programar!</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_34_17_ensinistrat.html"><span class="doc"> Exercici 34_17. En Renat està ensinistrat!</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_34_18_assessinable.html"><span class="doc"> Exercici 34_18. En Renat és assessinable</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_34_19_interactiu.html"><span class="doc"> Exercici 34_19. Ascensor interactiu</span></a></p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_34_20_classes_i_objectes.html"><span class="doc"> Exercici 34_20. Què he aprés de les classes i objectes?</span></a></p>
 </section>
 
 
@@ -158,8 +192,8 @@ descobriment de la programació orientada a objectes: el gat Renat.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="poo.html" class="btn btn-neutral float-left" title="Programació Orientada a Objectes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="poo_intro_propietats.html" class="btn btn-neutral float-right" title="Propietats" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="poo_intro_consultes.html" class="btn btn-neutral float-left" title="Preguntes a un objecte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="poo_exercicis.html" class="btn btn-neutral float-right" title="Exercicis" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

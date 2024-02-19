@@ -25,6 +25,5 @@ Som-hi doncs!
     poo_intro_extern.rst
     poo_intro_public.rst
     poo_intro_private.rst
-
-..    poo_intro_consultes.rst
-..    poo_intro_accions.rst
+    poo_intro_consultes.rst
+    poo_intro_accions.rst

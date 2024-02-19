@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 34_07. Molts ascensors &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 34_16. Ascensor informatiu &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 34_08. Anotacions sobre accés des de fora" href="exercici_34_08_extern.html" />
-    <link rel="prev" title="Exercici 34_06. Anotacions sobre multiples instàncies" href="exercici_34_06_multiples.html" />
+    <link rel="next" title="Exercici 34_17. En Renat està ensinistrat!" href="exercici_34_17_ensinistrat.html" />
+    <link rel="prev" title="Exercici 34_15. Com està Renat?" href="exercici_34_15_com_esta.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -71,7 +71,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_04_mutabilitat.html"> Exercici 34_04. Anotacions sobre mutabilitat de les propietats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_05_puja.html"> Exercici 34_05. L'ascensor puja un pis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_06_multiples.html"> Exercici 34_06. Anotacions sobre multiples instàncies</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_07. Molts ascensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_34_07_ascensors.html"> Exercici 34_07. Molts ascensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_08_extern.html"> Exercici 34_08. Anotacions sobre accés des de fora</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_09_extern.html"> Exercici 34_09. L'Ascensor des de fora</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_10_posicio.html"> Exercici 34_10. Renat té posició</a></li>
@@ -80,7 +80,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_13_posicio_correcta.html"> Exercici 34_13. Posició sempre correcta</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_14_ascensor_protegit.html"> Exercici 34_14. Ascensor protegit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_15_com_esta.html"> Exercici 34_15. Com està Renat?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_34_16_ascensor_informatiu.html"> Exercici 34_16. Ascensor informatiu</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 34_16. Ascensor informatiu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_17_ensinistrat.html"> Exercici 34_17. En Renat està ensinistrat!</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_18_assessinable.html"> Exercici 34_18. En Renat és assessinable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_34_19_interactiu.html"> Exercici 34_19. Ascensor interactiu</a></li>
@@ -108,12 +108,12 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="poo.html">Programació Orientada a Objectes</a></li>
           <li class="breadcrumb-item"><a href="poo_exercicis.html">Exercicis</a></li>
-      <li class="breadcrumb-item active"> Exercici 34_07. Molts ascensors</li>
+      <li class="breadcrumb-item active"> Exercici 34_16. Ascensor informatiu</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_34_06_multiples.html" class="btn btn-neutral float-left" title="Exercici 34_06. Anotacions sobre multiples instàncies" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_08_extern.html" class="btn btn-neutral float-right" title="Exercici 34_08. Anotacions sobre accés des de fora" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_15_com_esta.html" class="btn btn-neutral float-left" title="Exercici 34_15. Com està Renat?" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_17_ensinistrat.html" class="btn btn-neutral float-right" title="Exercici 34_17. En Renat està ensinistrat!" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -121,56 +121,73 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-t-exercici-34-07-molts-ascensors">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_07. Molts ascensors<a class="headerlink" href="#exerciseicon-t-exercici-34-07-molts-ascensors" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-34-16-ascensor-informatiu">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 34_16. Ascensor informatiu<a class="headerlink" href="#exerciseicon-t-exercici-34-16-ascensor-informatiu" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_07_ascensors/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_multiples_instancies.html"><span class="doc">Múltiples instàncies</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">34_16_ascensor_informatiu/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="poo_intro_consultes.html"><span class="doc">Preguntes a un objecte</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Desenvolupa una nova versió de <code class="docutils literal notranslate"><span class="pre">Ascensor</span></code></p>
-<p>En aquesta ocasió disposarà d'una funció anomenada
-<code class="docutils literal notranslate"><span class="pre">creaAscensorsEnEscala()</span></code> que rebrà un nombre d'ascensors i retornarà un
-array amb el nombre d'ascensors especificat de manera que cada ascensor
-estarà en el pis indicat per la seva posició a l'array.</p>
-<p>El <code class="docutils literal notranslate"><span class="pre">main()</span></code> decidirà a partir del valor que rebi en el primer argument
-de línia de comandes, quants ascensors crea, cridarà a
-<code class="docutils literal notranslate"><span class="pre">creaAscensorsEnEscala()</span></code> i mostrarà els pisos de tots els ascensors
-creats.</p>
-<p>Completa aquesta plantilla:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cm">/* XXX */</span>
-<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ascensor</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="cm">/* XXX */</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Ascensor</span><span class="o">[]</span><span class="w"> </span><span class="nf">creaAscensorsEnEscala</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">quants</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="cm">/* XXX */</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
-<span class="linenos">10</span><span class="w">        </span><span class="cm">/* XXX */</span>
-<span class="linenos">11</span><span class="w">        </span><span class="n">Ascensor</span><span class="o">[]</span><span class="w"> </span><span class="n">ascensors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">creaAscensorsEnEscala</span><span class="p">(</span><span class="n">quants</span><span class="p">);</span>
-<span class="linenos">12</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ascensors</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="linenos">13</span><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Ascensor %d al pis %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ascensors</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">pis</span><span class="p">);</span>
-<span class="linenos">14</span><span class="w">        </span><span class="p">}</span>
-<span class="linenos">15</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">16</span><span class="p">}</span>
+<p>Afegeix al repertori de mètodes de <code class="docutils literal notranslate"><span class="pre">Ascensor</span></code> els següents:</p>
+<figure class="align-center">
+<p class="plantuml">
+<img src="_images/plantuml-06bd5098f04aa80928147950bcd7fe313b3d9634.png" alt=" &#64;startuml
+ hide circle
+ skinparam monochrome true
+ skinparam classAttributeIconSize 0
+
+ class Ascensor {
+    + esAbaix(): boolean
+    + esAdalt(): boolean
+    + esAturat(): boolean
+    + esEnMoviment(): boolean
+    + esPujant(): boolean
+    + esBaixant(): boolean
+    + comEsta(): String
+ }
+ &#64;enduml"/>
+</p>
+</figure>
+<p><code class="docutils literal notranslate"><span class="pre">esAbaix()</span></code> i <code class="docutils literal notranslate"><span class="pre">esAdalt()</span></code> retornen cert quan l'ascensor es troba
+al primer i al darrer pis respectivament.</p>
+<p><code class="docutils literal notranslate"><span class="pre">esEnMoviment()</span></code> retorna cert quan està pujant o baixant.</p>
+<p><code class="docutils literal notranslate"><span class="pre">comEsta()</span></code> retorna un String amb el moviment i el pis. Per exemple, si
+està pujant en el pis 1, el missatge serà <code class="docutils literal notranslate"><span class="pre">pujant</span> <span class="pre">al</span> <span class="pre">pis</span> <span class="pre">1</span></code>.</p>
+<p>Completa la plantilla següent:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaAscensor</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="c1">// XXX considera si et cal algun mòdul d&#39;ajut</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="n">Ascensor</span><span class="w"> </span><span class="n">ascensor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ascensor</span><span class="p">();</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pis inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Moviment inicial: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix nou pis:&quot;</span><span class="p">);</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="c1">// XXX llegir el nou pis de stdin i assignar-lo a l&#39;ascensor</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introdueix nou moviment:&quot;</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">        </span><span class="c1">// XXX llegir el nou moviment de stdin i assignar-lo a l&#39;ascensor</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Pis final: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Moviment final: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos">15</span><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estat de l&#39;ascensor: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ascensor</span><span class="p">.</span><span class="na">XXX</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">17</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Un exemple de sortida serà:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Ascensor<span class="w"> </span><span class="m">3</span>
-<span class="hll"><span class="go">Ascensor 0 al pis 0</span>
-</span><span class="hll"><span class="go">Ascensor 1 al pis 1</span>
-</span><span class="hll"><span class="go">Ascensor 2 al pis 2</span>
-</span></pre></div>
-</div>
-<p>En cas que no se li passi un únic úargument enter, es considerarà que se li ha
-passat el valor 0, i es mostrarà el missatge <code class="docutils literal notranslate"><span class="pre">Cap</span> <span class="pre">ascensor</span></code> com mostra la
-següent execució.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Ascensor<span class="w"> </span><span class="m">15</span><span class="w"> </span>són<span class="w"> </span><span class="m">15</span>
-<span class="hll"><span class="go">Cap ascensor</span>
+<p>Considera la següent simulació de la sortida de <code class="docutils literal notranslate"><span class="pre">UsaAscensor</span></code> un cop
+completat:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>UsaAscensor
+<span class="hll"><span class="go">Pis inicial: -1</span>
+</span><span class="hll"><span class="go">Moviment inicial: aturat</span>
+</span><span class="hll"><span class="go">Introdueix nou pis:</span>
+</span><span class="go">5</span>
+<span class="hll"><span class="go">Introdueix nou moviment:</span>
+</span><span class="go">pujant</span>
+<span class="hll"><span class="go">Pis final: 5</span>
+</span><span class="hll"><span class="go">Moviment final: pujant</span>
+</span><span class="hll"><span class="go">Estat de l&#39;ascensor: pujant al pis 5</span>
 </span></pre></div>
 </div>
 </section>
@@ -201,8 +218,8 @@ següent execució.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_34_06_multiples.html" class="btn btn-neutral float-left" title="Exercici 34_06. Anotacions sobre multiples instàncies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_34_08_extern.html" class="btn btn-neutral float-right" title="Exercici 34_08. Anotacions sobre accés des de fora" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_34_15_com_esta.html" class="btn btn-neutral float-left" title="Exercici 34_15. Com està Renat?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_34_17_ensinistrat.html" class="btn btn-neutral float-right" title="Exercici 34_17. En Renat està ensinistrat!" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
