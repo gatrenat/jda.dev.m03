@@ -33,8 +33,6 @@ Fixa't en el següent diagrama de classes:
 Hi apareixen dues classes, la nostra coneguda ``GatRenat`` i la nova
 ``UsaGatRenat``.
 
-Hi ha un "petit* canvi, però. ``GatRenat`` ara no té ``main()``.
-
 Si traduïm aquesta classe a codi, obtindrem:
 
 .. code-block:: java
