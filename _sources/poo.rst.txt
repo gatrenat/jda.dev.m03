@@ -32,11 +32,11 @@ Aquest tema es desglossa en les següents entrades:
 
     poo_intro.rst
     poo_constructors.rst
+    poo_static.rst
+    poo_composicio.rst
 
     poo_exercicis.rst
 
-.. poo_static.rst
-.. poo_composicio.rst
 .. poo_herencia.rst
 
 Abans de començar, però, et vull presentar una pràctica que

@@ -35,11 +35,11 @@ Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:
     exercici_34_25_molts_constructors.rst
     exercici_34_26_hora.rst
     exercici_34_27_resum.rst
+    exercici_34_28_hora_static.rst
+    exercici_34_29_unic.rst
+    exercici_34_30_ulls.rst
+    exercici_34_31_picarol.rst
 
-..    exercici_34_28_hora_static.rst
-..    exercici_34_29_unic.rst
-..    exercici_34_30_ulls.rst
-..    exercici_34_31_picarol.rst
 ..    exercici_34_32_exemple_herencia.rst
 ..    exercici_34_33_renat_es_gat.rst
 ..    exercici_34_34_metodes_cridats.rst
