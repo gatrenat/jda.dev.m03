@@ -1,0 +1,199 @@
+##################
+L'herència en Java
+##################
+
+Java, com a llenguatge orientat a objectes, implementa el concepte
+d'herència.
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+     class GatRenat extends Gat
+
+     @enduml
+
+
+
+L'herència en Java s'especifica amb la paraula clau ``extends``, de la
+següent manera:
+
+.. code-block:: java
+   :linenos:
+
+   public class GatRenat extends Gat {
+      /*…*/
+   }
+
+
+Java no admet herència múltiple. Cada classe pot ser (i de fet és) només
+subclasse d'una única classe.
+
+A dalt de tot de la jerarquia de classes es troba la classe ``Object`` (la
+classe més general)
+
+Per exemple, les següents dues declaracions són equivalents:
+
+.. code-block:: java
+    :linenos:
+
+    public class Gat {}
+
+.. code-block:: java
+    :linenos:
+
+    public class Gat extends Object {}
+
+``Object`` aporta una sèrie de característiques a totes les classes de
+Java, per exemple, el mètode ``String toString()``. Si consultes la
+documentació de la classe `Object
+<https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html>`_
+hi trobaràs un bon grapat de mètodes, molts d'ells força allunyats del que
+hem vist fins ara a aquest curs. No pateixis. Quedat amb que hi són i on
+pots trobar la seva descripció.
+
+Però veiem en funcionament l'herència:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+
+     class Gat {
+         -vides: int
+         +getVides(): int
+         +setVides(int)
+     }
+
+     class GatRenat extends Gat
+
+     class UsaGatRenat {
+         + {static} main(String[])
+     }
+
+     UsaGatRenat -left-> GatRenat
+
+     @enduml
+
+
+En primer lloc, veiem la classe ``Gat``:
+
+.. code-block:: java
+    :linenos:
+
+    public class Gat {
+         private int vides = 7;
+         public int getVides() { return vides; }
+         public void setVides(int vides) {
+             if (vides < 0) return;
+             this.vides = vides;
+         }
+    }
+
+Ara la classe ``GatRenat`` aquest cop relacionant-la amb ``Gat``:
+
+.. code-block:: java
+    :linenos:
+
+    public class GatRenat extends Gat {}
+
+Ha estat breu, oi?
+
+Finalment, veiem com podem usar aquesta *nova* versió de ``GatRenat``:
+
+.. code-block:: java
+    :linenos:
+
+    public class UsaGatRenat {
+         public static void main(String[] args){
+              GatRenat renat = new GatRenat();
+              System.out.printf("El gat Renat té %d vides%n", renat.getVides());
+         }
+    }
+
+En executar ``UsaGatRenat`` ens trobem amb l'habitual:
+
+.. code-block:: console
+
+    $ java UsaGatRenat
+    El gat Renat té 7 vides
+
+Tot i sent habitual, és important que notem que ``getVides()`` no ha estat
+definit a ``GatRenat`` sinó a ``Gat``.
+
+Una simplificació pels exemples
+===============================
+
+Com sabem, les tres classes de l'exemple anterior han de ser definides en
+tres fitxers separats que han de tenir com a nom el de la classe. Si bé
+aquesta és una manera força recomanable de fer, el cert és que no resulta
+massa pràctic per a presentar-te exemples. Per aquesta raó, et presento
+una funcionalitat de Java que fins ara no t'havia mostrat: podem posar més
+d'una classe a un mateix fitxer sempre i quant hi hagi com a molt una de
+pública.
+
+Considera el següent codi que es troba en un únic fitxer anomenat
+``UsaGatRenat.java``:
+
+.. code-block:: java
+    :linenos:
+
+    class Gat {
+         private int vides = 7;
+         public int getVides() { return vides; }
+         public void setVides(int vides) {
+             if (vides < 0) return;
+             this.vides = vides;
+         }
+    }
+
+    class GatRenat extends Gat {}
+
+    public class UsaGatRenat {
+         public static void main(String[] args){
+              GatRenat renat = new GatRenat();
+              System.out.printf("El gat Renat té %d vides%n", renat.getVides());
+         }
+    }
+
+Com pots veure, el fitxer conté **tres** declaracions de variables, amb
+una sola de pública.
+
+Considera la següent interacció:
+
+.. code-block:: console
+    :emphasize-lines: 2, 5, 7-
+
+    $ ls
+    UsaGatRenat.java
+    $ javac UsaGatRenat.java
+    $ ls
+    Gat.class  GatRenat.class  UsaGatRenat.class  UsaGatRenat.java
+    $ java UsaGatRenat
+    Abans de crear un Gat Renat
+    Neix un Gat
+    Neix un Gat Renat
+    Un cop creat un Gat Renat
+
+Fixa't que, malgrat només hi ha un ``.java``, en compilar-lo, Java en
+genera *tres* fitxers ``.class``, un per cada classe definida a
+``UsaGatRenat.java``.
+
+També pots veure que el resultat de l'execució és el mateix que quan cada
+classe tenia el seu propi fitxer.
+
+Donat que encara no coneixem massa bé quines repercusions té el fet que
+dues de les classes no siguin marcades com a públiques, de moment la
+versió d'un sol fitxer i la de tres ens resulten equivalents.
+
+|exerciseicon___| :doc:`exercici_34_32_exemple_herencia`
+
+|exerciseicon__T| :doc:`exercici_34_33_renat_es_gat`

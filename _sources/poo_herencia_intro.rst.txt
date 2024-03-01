@@ -1,0 +1,65 @@
+######################
+El concepte d'herència
+######################
+
+Què tenen en comú en Renat, el Garfield, el Misifú, i en Tom (company
+del Jerry)? Doncs tots ells tenen quatre potes amb urpes i ullals,
+miolen, respiren, mengen sardines, empaiten ratolins… en definitiva:
+són gats.
+
+I, què tenen en comú els gats, els gossos i els ratolins? Doncs que
+respiren, mengen… en definitiva: són animals. Però també són éssers
+vius, mamífers terrestres, de sang calenta, amb endoesquelet…
+
+Cadascuna de les diferents categories (classes) a les que pertany en
+Renat, li ofereix un conjunt de característiques. En Renat *hereta* la
+necessitat de menjar per ser ésser viu, de respirar per ser animal, un
+esquelet intern per ser un animal amb endoesquelet, urpes i ullals per
+ser felí, etc.
+
+Diem que Renat és un gat (*is-a*). I com que els gats són felins, en
+Renat és un felí. I com que els felins són animals, en Renat és un
+animal. És a dir, la relació *is-a* és transitiva:
+
+    Si A és subclasse de B, i B és subclasse de C, llavors A és subclasse de C
+
+O amb un exemple més proper:
+
+    Si GatRenat és Gat, i Gat és Felí, llavors GatRenat és Felí
+
+El següent diagrama mostra una jerarquia *parcial* dels animals.
+
+.. figure:: _images/jerarquia_animals.png
+   :alt: Jerarquia d'animals
+   :align: center
+
+Quan una classe A hereta d'una classe B, es diu que:
+
+* A és un B
+* A estén B
+* A especialitza a B
+* A concreta B
+* B generalitza a A
+* A és subclasse de B
+* B és superclasse d'A
+
+Al diagrama veiem també casos en que una classe estén més d'una
+superclasse. Per exemple, els felins són a l'hora carnívors i
+mamífers.  Això permet que un felí tingui a l'hora característiques de
+Carnívor (ex. menja carn), i a l'hora les de mamífer (ex. alleta les
+seves cries).
+
+D'aquesta possibilitat de disposar de més d'una superclasse pertanyent
+a jerarquies diferents, se'n diu *herència múltiple* i es produeix
+quan:
+
+    A estén B i A estén C però B no estén C ni C estén B
+
+Així, tenim que els gats són a l'hora mamífers i carnívors (per ser
+felins). El diagrama ens mostra que els gossos són també mamífers i
+carnívors, però no són felins. Això explica que, com els gats, mengin
+carn (per ser carnívors) i alletin les seves cries (per ser mamífers)
+però, a diferència dels gats, no tinguin urpes (per no ser felins).
+Això exemplifica el fet que cada classe dins la jerarquia afegeix
+característiques particulars a les seves subclasses.
+
