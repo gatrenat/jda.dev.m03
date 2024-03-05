@@ -37,7 +37,6 @@ Aquest tema es desglossa en les següents entrades:
     poo_herencia.rst
     poo_exercicis.rst
 
-
 Abans de començar, però, et vull presentar una pràctica que
 treballarem al llarg d'aquest bloc.
 

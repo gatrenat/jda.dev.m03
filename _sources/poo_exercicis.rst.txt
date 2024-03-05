@@ -43,4 +43,5 @@ Els enunciats dels exercicis d'aquest tema es troben llistats a continuació:
     exercici_34_33_renat_es_gat.rst
     exercici_34_34_metodes_cridats.rst
     exercici_34_35_garfield.rst
-    exercici_34_36_interfagat.rst
+
+.. exercici_34_36_interfagat.rst
