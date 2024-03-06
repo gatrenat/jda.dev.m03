@@ -30,7 +30,7 @@ les vides d'un ``GatRenat`` i així estalviar-nos un munt de codi:
 Ara, l'ús de la targeta (la pèrdua d'un viatge) la podem executar amb el
 mètode ``mor()`` que treu una vida/viatge fins que ja no en queden més.
 Saber si encara queden viatges ho podem resoldre amb el mètode
-``esViu()`` i la recàrrega amb ``resuscita()``.`
+``esViu()`` i la recàrrega amb ``reviu()``.`
 
 És cert que ens estalviem tot de codificació, però… tenim una targeta de
 viatges que miola.
