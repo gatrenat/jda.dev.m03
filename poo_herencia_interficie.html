@@ -76,6 +76,7 @@
 <li class="toctree-l3"><a class="reference internal" href="poo_polimorfisme.html">Polimorfisme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_abstract.html">Classes abstractes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poo_herencia_abus.html">Perill d'abús d'herència</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poo_interfaces.html"><em>Interfaces</em></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="poo_exercicis.html">Exercicis</a></li>
@@ -124,26 +125,26 @@ que defineix la classe, més tots els membres no privats que hereta.</p>
 <p>En UML, suposant que els membres són <em>atributs</em>, vindria a ser:</p>
 <figure class="align-center">
 <p class="plantuml">
-<img src="_images/plantuml-4ef5adfb828152501b0ae16ffacd46521b39327d.png" alt=" &#64;startuml
+<img src="_images/plantuml-d061b515ab85303064eeb48591ed5496c98e6bac.png" alt=" &#64;startuml
  hide circle
  skinparam monochrome true
  skinparam classAttributeIconSize 0
 
  class Renat extends Gat {
-    +mr1
-    +mr2
+    +mr1()
+    +mr2()
  }
  class Gat extends Felí {
-    +mg1
-    +mg2
+    +mg1()
+    +mg2()
  }
  class Pantera extends Felí {
-    +mp1
-    +mp2
+    +mp1()
+    +mp2()
  }
  class Felí {
-    +mf1
-    +mf2
+    +mf1()
+    +mf2()
  }
  &#64;enduml"/>
 </p>

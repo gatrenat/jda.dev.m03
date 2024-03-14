@@ -22,20 +22,20 @@ En UML, suposant que els membres són *atributs*, vindria a ser:
      skinparam classAttributeIconSize 0
 
      class Renat extends Gat {
-        +mr1
-        +mr2
+        +mr1()
+        +mr2()
      }
      class Gat extends Felí {
-        +mg1
-        +mg2
+        +mg1()
+        +mg2()
      }
      class Pantera extends Felí {
-        +mp1
-        +mp2
+        +mp1()
+        +mp2()
      }
      class Felí {
-        +mf1
-        +mf2
+        +mf1()
+        +mf2()
      }
      @enduml
 
