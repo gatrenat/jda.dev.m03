@@ -19,10 +19,10 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     moduls.rst
     fitxers.rst
     poo.rst
+    bib.rst
     apendix.rst
 
 ..    adoo.rst
-..    bib.rst
 ..    cvs.rst
 ..    test.rst
 ..    refactoring.rst
