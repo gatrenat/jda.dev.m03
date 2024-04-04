@@ -88,7 +88,7 @@ GatRenat        estirat()        ``"ja m'estiro"`` si estava estirat, ``"passo d
 GatRenat        deixatEstimar()  ``"em deixo estimar"``
 Garfield        deixatEstimar()  ``"em deixo estimar, però només una mica"``
 Gat             mor()            ``"adéu món cruel"`` si estava viu, ``"ja l'he espifiada"`` altrament
-Gat             ressuscita()     ``"encara miolo"`` si estava viu, ``"guai!"`` altrament
+Gat             reviu()          ``"encara miolo"`` si estava viu, ``"guai!"`` altrament
 =============== ================ ===================================================================
 
 Per provar el funcionament de tot el conjunt, hauràs de poder executar el següent codi:
