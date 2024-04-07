@@ -1,0 +1,75 @@
+#############################################################
+|exerciseicon__T| Exercici 35_10. Les posicions del gat Renat
+#############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``35_10_gatposicio/``
+
+* Continguts relacionats: :doc:`bib_enum`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Considera el següent diagrama:
+
+.. uml::
+    :align: center
+
+     @startuml
+     hide circle
+     skinparam monochrome true
+     skinparam classAttributeIconSize 0
+
+     enum GatPosicio {
+        + DRET
+        + ASSEGUT
+        + ESTIRAT
+        + {static} fromString(String): GatPosicio
+     }
+
+     class GatRenat {
+        - posicio: GatPosicio
+        + GatRenat(GatPosicio)
+        + GatRenat(String)
+        + getPosicio(): GatPosicio
+        + setPosicio(GatPosicio)
+        + setPosicio(String)
+     }
+
+     GatRenat -> GatPosicio
+     @enduml
+
+Implementa la classe ``GatRenat`` que ofereixi els elements que apareixen
+en el diagrama.
+
+Atenció: alguns mòduls llencen una excepció si el valor que reben no és
+vàlid.
+
+Fes servir la següent classe per provar la nova funcionalitat:
+
+.. code-block:: java
+   :linenos:
+
+    public class UsaGatRenat {
+         public static void main(String[] args){
+             try {
+                 GatPosicio posicio = GatPosicio.fromString(args[0]);
+                 GatRenat renat = new GatRenat(posicio);
+                 System.out.println("El gat Renat està: " + renat.getPosicio());
+            } catch (IllegalArgumentException e) {
+                System.out.println(e);
+            }
+         }
+    }
+
+La sortida serà:
+
+.. code-block:: console
+   :emphasize-lines: 2
+
+    $ java UsaGatRenat dret
+    El gat Renat està: DRET
