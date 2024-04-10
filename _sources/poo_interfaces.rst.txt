@@ -24,7 +24,7 @@ alguna inexplicable raó, no ho és.
         deixatEstimar()
      }
      class Gat {
-        menja()
+        menja(Menjar)
      }
      class GatRenat extends AnimalDeCompanyia
      class Garfield extends AnimalDeCompanyia
@@ -117,7 +117,7 @@ Però no dèiem que en Renat també era un gat? Cap problema:
          public static void main(String[] args){
               GatRenat renat = new GatRenat();
               renat.deixatEstimar();
-              renat.menja();
+              renat.menja(new Menjar("Sardines"));
          }
     }
 

@@ -127,7 +127,7 @@ com el Garfield són animals de companyia mentre que el gat salvatge, per
 alguna inexplicable raó, no ho és.</p>
 <figure class="align-center">
 <p class="plantuml">
-<img src="_images/plantuml-841417d33b6d1fec317f59cf9410b9438558b492.png" alt=" &#64;startuml
+<img src="_images/plantuml-7fd245936d31b2e6b2078f9da9275587bc1d2747.png" alt=" &#64;startuml
  hide circle
  skinparam monochrome true
  skinparam classAttributeIconSize 0
@@ -136,7 +136,7 @@ alguna inexplicable raó, no ho és.</p>
     deixatEstimar()
  }
  class Gat {
-    menja()
+    menja(Menjar)
  }
  class GatRenat extends AnimalDeCompanyia
  class Garfield extends AnimalDeCompanyia
@@ -211,7 +211,7 @@ podríem haver declarat <code class="docutils literal notranslate"><span class="
 <span class="linenos">15</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
 <span class="linenos">16</span><span class="w">          </span><span class="n">GatRenat</span><span class="w"> </span><span class="n">renat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GatRenat</span><span class="p">();</span>
 <span class="linenos">17</span><span class="w">          </span><span class="n">renat</span><span class="p">.</span><span class="na">deixatEstimar</span><span class="p">();</span>
-<span class="linenos">18</span><span class="w">          </span><span class="n">renat</span><span class="p">.</span><span class="na">menja</span><span class="p">();</span>
+<span class="linenos">18</span><span class="w">          </span><span class="n">renat</span><span class="p">.</span><span class="na">menja</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Menjar</span><span class="p">(</span><span class="s">&quot;Sardines&quot;</span><span class="p">));</span>
 <span class="linenos">19</span><span class="w">     </span><span class="p">}</span>
 <span class="linenos">20</span><span class="p">}</span>
 </pre></div>
