@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercicis &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 35_01. La classe vi" href="exercici_35_01_vi.html" />
-    <link rel="prev" title="Clau-Valor" href="bib_maps.html" />
+    <link rel="next" title="Exercici 35_18. EnvoltaString és compara amb Strings" href="exercici_35_18_envoltastring_str.html" />
+    <link rel="prev" title="Exercici 35_16. Especificacions independents" href="exercici_35_16_mouespecs.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -71,7 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bib_enum.html">Enumerats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_lists.html">Llistes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bib_maps.html">Clau-Valor</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Exercicis</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="bib_exercicis.html">Exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_01_vi.html"> Exercici 35_01. La classe <code class="docutils literal notranslate"><span class="pre">vi</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_02_botiga.html"> Exercici 35_02. La classe <code class="docutils literal notranslate"><span class="pre">botiga</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_03_entorn.html"> Exercici 35_03. La classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code></a></li>
@@ -88,7 +88,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_14_botigacerca.html"> Exercici 35_14. Cerques de vi amb múltiples resultats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_15_especs.html"> Exercici 35_15. Especificacions de vi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_16_mouespecs.html"> Exercici 35_16. Especificacions independents</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_35_17_envoltastring_case.html"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_18_envoltastring_str.html"> Exercici 35_18. EnvoltaString és compara amb Strings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_35_19_especmap.html"> Exercici 35_19. Propietats del vi</a></li>
 </ul>
@@ -113,12 +113,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="bib.html">Biblioteques</a></li>
-      <li class="breadcrumb-item active">Exercicis</li>
+          <li class="breadcrumb-item"><a href="bib_exercicis.html">Exercicis</a></li>
+      <li class="breadcrumb-item active"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="bib_maps.html" class="btn btn-neutral float-left" title="Clau-Valor" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_35_01_vi.html" class="btn btn-neutral float-right" title="Exercici 35_01. La classe vi" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_16_mouespecs.html" class="btn btn-neutral float-left" title="Exercici 35_16. Especificacions independents" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_35_18_envoltastring_str.html" class="btn btn-neutral float-right" title="Exercici 35_18. EnvoltaString és compara amb Strings" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -126,31 +127,42 @@
     
            <div itemprop="articleBody">
              
-  <section id="exercicis">
-<h1>Exercicis<a class="headerlink" href="#exercicis" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>Els exercicis de la secció <a class="reference internal" href="bib.html"><span class="doc">Biblioteques</span></a> són:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_01_vi.html"> Exercici 35_01. La classe <code class="docutils literal notranslate"><span class="pre">vi</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_02_botiga.html"> Exercici 35_02. La classe <code class="docutils literal notranslate"><span class="pre">botiga</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_03_entorn.html"> Exercici 35_03. La classe <code class="docutils literal notranslate"><span class="pre">Entorn</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_04_csv.html"> Exercici 35_04. Guardem les dades</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_05_vi_ampliat.html"> Exercici 35_05. El Vi ampliat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_06_hores_controlades.html"> Exercici 35_06. La classe <code class="docutils literal notranslate"><span class="pre">Hora</span></code> amb control d'errors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_07_hores_excepcionals.html"> Exercici 35_07. La classe Hora amb excepcions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_08_hores_ilegals.html"> Exercici 35_08. La classe Hora amb <code class="docutils literal notranslate"><span class="pre">IllegalArgumentException</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_09_botiga_excepcional.html"> Exercici 35_09. Excepcions a la botiga de vins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_10_gatposicio.html"> Exercici 35_10. Les posicions del gat Renat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_11_viprotegit.html"> Exercici 35_11. El vi protegit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_12_list.html"> Exercici 35_12. La classe <code class="docutils literal notranslate"><span class="pre">UsaList</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_13_remove.html"> Exercici 35_13. Comparació de <code class="docutils literal notranslate"><span class="pre">remove()</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_14_botigacerca.html"> Exercici 35_14. Cerques de vi amb múltiples resultats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_15_especs.html"> Exercici 35_15. Especificacions de vi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_16_mouespecs.html"> Exercici 35_16. Especificacions independents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_17_envoltastring_case.html"> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_18_envoltastring_str.html"> Exercici 35_18. EnvoltaString és compara amb Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_35_19_especmap.html"> Exercici 35_19. Propietats del vi</a></li>
+  <section id="exerciseicon-t-exercici-35-17-envoltastring-indiferent-a-majuscules-i-minuscules">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 35_17. EnvoltaString indiferent a majúscules i minúscules<a class="headerlink" href="#exerciseicon-t-exercici-35-17-envoltastring-indiferent-a-majuscules-i-minuscules" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">35_17_envoltastring_case/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bib_maps.html"><span class="doc">Clau-Valor</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
+<p class="rubric">Enunciat</p>
+<p>Modifica la classe <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> de manera que consideri iguals
+dos <code class="docutils literal notranslate"><span class="pre">EnvoltaString</span></code> quan els seus valors coincideixen sense tenir en
+compte majúscules i minúscules.</p>
+<p>El <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> executarà el següent codi:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UsaEnvoltaString</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Renat&quot;</span><span class="p">;</span>
+<span class="linenos"> 4</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">nom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nom per defecte&quot;</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot; == \&quot;%s\&quot; -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;\&quot;%s\&quot;.equals(\&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">,</span><span class="w"> </span><span class="n">nom2</span><span class="p">,</span><span class="w"> </span><span class="n">nom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">nom2</span><span class="p">));</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom1</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="n">EnvoltaString</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EnvoltaString</span><span class="p">(</span><span class="n">nom2</span><span class="p">);</span>
+<span class="linenos">10</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s == %s -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">);</span>
+<span class="linenos">11</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;%s.equals(%s) -&gt; %b%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom2</span><span class="p">,</span><span class="w"> </span><span class="n">envoltaNom1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">envoltaNom2</span><span class="p">));</span>
+<span class="linenos">12</span><span class="w">     </span><span class="p">}</span>
+<span class="linenos">13</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Esperarà que, per exemple, la següent execució generi la sortida esperada:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>UsaEnvoltaString<span class="w"> </span>RENAT
+<span class="hll"><span class="go"> &quot;Renat&quot; == &quot;RENAT&quot; -&gt; false</span>
+</span><span class="hll"><span class="go"> &quot;Renat&quot;.equals(&quot;RENAT&quot;) -&gt; false</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;) == ENVOLTAT(&quot;RENAT&quot;) -&gt; false</span>
+</span><span class="hll"><span class="go"> ENVOLTAT(&quot;Renat&quot;).equals(ENVOLTAT(&quot;RENAT&quot;)) -&gt; true</span>
+</span></pre></div>
 </div>
 </section>
 
@@ -180,8 +192,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bib_maps.html" class="btn btn-neutral float-left" title="Clau-Valor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_35_01_vi.html" class="btn btn-neutral float-right" title="Exercici 35_01. La classe vi" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_35_16_mouespecs.html" class="btn btn-neutral float-left" title="Exercici 35_16. Especificacions independents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_35_18_envoltastring_str.html" class="btn btn-neutral float-right" title="Exercici 35_18. EnvoltaString és compara amb Strings" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
