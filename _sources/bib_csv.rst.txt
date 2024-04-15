@@ -4,7 +4,7 @@ Guardem les dades
 
 La implementació actual de l'aplicació de gestió de la botiga de vins ens ha
 servit per mostrar-li a la Sra. Estrella el concepte. Inicialment li ha agradat
-molt, però de seguida se n'ha desimflat del tot, quan se n'ha adonat que ha
+molt, però de seguida se n'ha desinflat del tot, quan se n'ha adonat que ha
 d'introduir cada cop que arrenqui l'aplicació, tots els vins de la botiga.
 
 Lògic, oi?

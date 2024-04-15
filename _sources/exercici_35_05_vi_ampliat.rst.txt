@@ -133,7 +133,7 @@ El diagrama UML tindrà ara el següent aspecte:
              String lloc, String origen,
              String tipus, String collita) { /* … */ }
 
-.. warning:: ara que el nombre d'atributs s'ha incrementat tant, apareix
+.. warning:: Ara que el nombre d'atributs s'ha incrementat tant, apareix
    un perill a l'hora d'ordenar-los. Per evitar-te problemes amb les
    proves, et recomano que segueixis l'ordre indicat a la signatura del
    constructor anterior.
@@ -193,10 +193,9 @@ En el cas de ``deArrayString()``, quan l'entrada no disposi exactament del
 nombre d'elements necessaris per crear un vi, o bé algun d'aquests
 elements no sigui vàlid per l'atribut que li correspon, retornarà ``null``.
 
-Tot i que podríem escollir qualsevol ordre per les propietats, les
-guardarem de la següent manera per poder passar les proves que hem
-preparat: referència, nom, tipus,
-preu, collita, estoc, denominació d'origen i lloc.
+Tot i que podríem escollir qualsevol ordre per les propietats, les guardarem de
+la següent manera per poder passar les proves que hem preparat: referència,
+nom, preu, estoc, lloc, denominació d'origen, tipus, i any de collita.
 
 També ens caldrà modificar ``toString()`` si volem continuar utilitzant-lo
 per mostrar totes les propietats del vi.
