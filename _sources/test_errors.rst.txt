@@ -1,0 +1,42 @@
+##########
+Els errors
+##########
+
+Els errors formen part de la realitat del desenvolupament informàtic.
+
+De fet, no només del desenvolupament informàtic. Pensa en alguna cosa on
+no vegis possible que es trobi mai cap error. Escriu-la en algun lloc,
+potser en el futur canviaràs d'opinió
+
+Tots en cometem i ho fem a totes les fases: en agafar els requeriments, en
+analitzar-los i dissenyar les solucions, en codificar… Fins i tot, a
+l'hora de provar el nostre desenvolupament!
+
+Però, perquè hi ha errors?
+
+* perquè som mals programadors?
+
+* perquè no som prou disciplinats?
+
+* perquè ens obliguen a desenvolupar massa ràpid?
+
+* …
+
+Potser sí que tot l'anterior afecta, però la crua realitat és simplement
+perquè som humans.
+
+En molts contexts de la nostra vida observarem que la gent intenta
+amagar els seus errors i, sovint, no "destapa" els errors d'altres
+per… bé, ja ho saps: no volem quedar malament i volem mantenir les bones relacions.
+
+A la nostra professió hem de fer un esforç i canviar aquesta manera de
+funcionar. El millor que ens pot passar és que trobem l'error abans que els
+nostres clients. Creu-me que a ells no els importa gaire les teves convencions
+socials. El que volen és que allò pel que pagen *funcioni*.
+
+Per tant, si una prova ens troba un error abans del lliurament ho hem de
+celebrar. Probablement millor postposar la celebració a després d'arreglar-lo.
+Ja m'entens, oi?
+
+En resum: d'errors tots en fem, sempre en tindrem i millor trobar-los
+aviat.

@@ -1,0 +1,70 @@
+###############################################
+|exerciseicon__T| Exercici 52_05. Suma de punts
+###############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_05_suma/``
+
+* Continguts relacionats: :doc:`test_junit`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Afegeix un nou test que comprovi que el mètode ``Punt.suma(Punt)``
+funciona correctament. Aquest mètode tindrà el següent codi que, per
+descomptat, afegiràs **després** de crear el teu test.
+
+.. code-block:: java
+
+    public void suma(Punt p) { x+=p.x; y+=p.y; }
+
+Un cop desenvolupat i executat el test, afegeix el mètode ``suma(Punt)``
+que suma les coordenades de dos punts.
+
+Hauríem de poder fer coses com ara:
+
+.. code-block:: java
+
+    Punt p1 = new Punt(2, 3);
+    Punt p2 = new Punt(4, 5);
+
+    p1.suma(p2);
+    System.out.printf("p1: (%d, %d)", p1.getX(), p1.getY());    // p1: (6, 8)
+
+
+En passar les teves proves, el ``prgtest`` esperarà que també executis
+correctament el següent codi:
+
+.. code-block:: java
+   :linenos:
+
+    public class UsaPunt {
+        public static void main(String[] args){
+            int x1 = // args[0] si hi és i és enter, o 0 altrament
+            int y1 = // args[1] si hi és i és enter, o 0 altrament
+            int x2 = // args[2] si hi és i és enter, o 0 altrament
+            int y2 = // args[3] si hi és i és enter, o 0 altrament
+            Punt p1 = new Punt(x1, y1);
+            Punt p2 = new Punt(x2, y2);
+            System.out.printf("p1: (%d, %d)%n", p1.getX(), p1.getY());
+            System.out.printf("p2: (%d, %d)%n", p2.getX(), p2.getY());
+            p1.suma(p2);
+            System.out.printf("p1+p2: (%d, %d)%n", p1.getX(), p1.getY());
+        }
+    }
+
+Un exemple d'execució seria:
+
+.. code-block:: console
+
+   $ java UsaPunt 2 3 4 5
+   p1: (2, 3)
+   p2: (4, 5)
+   p1+p2: (6, 8)
+
+.. note:: No modifiquis els tests anteriors. Simplement afegeix els nous a
+   ``TestPunt.java``.
