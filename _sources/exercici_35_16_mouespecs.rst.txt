@@ -319,7 +319,7 @@ El nou disseny tindrà el següent aspecte:
         + esComplet(): boolean
         + aArrayString(): String[]
         + {static} deArrayString(String[]): Especificacio
-        + esPlantillaDe(Especificacio): boolean
+        + esPlantillaDe(Vi): boolean
     }
 
     Entorn *-- Botiga
