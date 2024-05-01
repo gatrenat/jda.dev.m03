@@ -1,0 +1,52 @@
+##################################################
+|exerciseicon__T| Exercici 52_14. Proves unitàries
+##################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_14_mes_tests/``
+
+* Continguts relacionats: :doc:`refactoring_exemple_objectiu`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Amb la prova de l'exercici :doc:`anterior <exercici_52_13_init_test>` ja tenim
+un mínim de seguretat a l'hora de començar a fer canvis al nostre codi. Amb
+tot, abans de començar a modificar un codi, és molt interessant disposar del
+màxim possible de cobertura de proves. És a dir, que les proves passin pel
+màxim nombre de línies del codi.
+
+Com que estem d'entrenament, dedica una mica més d'esforç i crea un
+joc de prova amb cobertura 100% de les línies del mètode
+``Client.informe()``
+
+Pista: considera primer llistar tots els tests que vols fer. Et passo uns quants:
+
+* cap lloguer
+
+* un lloguer de vehicle de categoria bàsica per un dia
+
+* el mateix però per 2 dies
+
+* el mateix però per 3 dies
+
+* el mateix però per més de 3 dies (per exemple 5)
+
+* dos lloguers de vehicles de categoria bàsica per un dia
+
+* …
+
+Per completar la llista pensa, a banda de que els teus tests passin per totes
+les branques del codi, altres combinacions possibles. Recorda que l'objectiu és
+cobrir el màxim possible de casos perquè, quan fem modificacions al codi,
+aquestes no generin resultats diferents als que generaven abans.
+
+Afegeix aquests nous tests a ``TestGestor`` que vas desenvolupar a l'exercici
+:doc:`anterior <exercici_52_13_init_test>`.
+
+Per passar les proves bàsiques, hauries d'implementar com a mínim 15 proves
+noves.

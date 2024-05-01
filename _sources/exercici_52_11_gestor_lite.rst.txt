@@ -1,0 +1,76 @@
+##############################################################
+|exerciseicon__T| Exercici 52_11. El Gestor de Lloguers *lite*
+##############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_11_gestor_lite/``
+
+* Continguts relacionats: :doc:`refactoring_exemple_partida`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+En aquest exercici codificaràs la classe ``GestorLite`` que et permetrà
+fer una prova bàsica del teu codi.
+
+``GestorLite`` oferirà els següents mètodes estàtics:
+
+* ``creaClientDemo()``
+
+   Aquest mètode crearà un client de proves i el retornarà.
+   Continua llegint per tenir els detalls del client a crear.
+
+* ``mostraClient(Client)``
+
+   Aquest mètode rebrà un client i mostrarà els seus detalls per sortida
+   estàndard. L'esquema de la sortida esperada és el següent:
+
+   .. code-block:: none
+
+       Client: «nom del client»
+               «nif»
+               «telèfon»
+       Lloguers: «num de lloguers del client»
+               1. vehicle: «marca del vehícle del primer lloguer» «model»
+               dies llogats: «nombre de dies llogats»
+               2. «… dades de la resta de lloguers del client»
+
+
+* ``main()``: aquest mètode et permetrà fer a tu les proves que consideris
+  oportunes. Si no se t'acut què posar, considera:
+
+  .. code-block:: java
+
+        public static void main(String[] args) {
+            Client demo = creaClientDemo();
+            mostraClient(demo);
+        }
+
+  ``prgtest`` no farà cap cas a aquest ``main()``.
+
+
+Considera la següent simulació d'execució per que et puguis fer una idea de les
+dades concretes del client demo:
+
+.. code-block:: console
+   :emphasize-lines: 2-
+
+   $ java GestorLite
+   Client: Eugènia Salinas Roig
+           51590695Q
+           93614214242
+   Lloguers: 3
+           1. vehicle: Seat 600
+              dies llogats: 2
+           2. vehicle: Tata Vista
+              dies llogats: 5
+           3. vehicle: Fiat Uno
+              dies llogats: 3
+
+
+**Nota**: Seat 600 i Tata Vista haurien de ser de categoria bàsica, mentre que
+el Fiat Uno hauria de estar com categoria luxe.

@@ -1,0 +1,58 @@
+#######################
+Què és el *refactoring*
+#######################
+
+Llegim a la pàgina principal de `www.refactoring_com
+<http://www.refactoring.com/>`_ mantinguda per Martin Fowler, un dels
+autors de referència sobre el concepte de *refacció* o *refactoring*:
+
+    Refactoring is a disciplined technique for restructuring an
+    existing body of code, altering its internal structure without
+    changing its external behavior.
+
+Així, la refacció és un procés que persegueix millorar un codi sense
+afectar la seva funcionalitat.
+
+No és fàcil d'explicar, en termes generals, en que consisteix aquesta
+millora. Aquí considerarem que un codi és millor que un altre quan
+una o més de les següents afirmacions s'acompleixi:
+
+* és més fàcil d'entendre
+
+* és més fàcil de reutilitzar
+
+* és més fàcil de modificar
+
+La refacció **no** afegeix més funcionalitat al codi. És un procés
+que fem per a nosaltres mateixos, els desenvolupadors, i no pels usuaris
+finals (tot i que aquests també es veuran beneficiats)
+
+La refacció **no** necessàriament fa el codi executar-se més
+eficientment. De fet, de vegades pot ser el contrari. Amb tot, la
+possible pèrdua d'eficiència d'execució es veu gairebé sempre
+compensada per l'enorme increment en l'eficiència d'introducció de
+nous canvis, correcció d'errors, etc. Ah! En el no tan freqüent cas
+que l'eficiència en execució sigui un punt crític, la refacció ajuda a
+que l'optimització s'apliqui sobre un codi més senzill i,
+probablement, serà encara més efectiva.
+
+Clàssicament als desenvolupadors ens diuen que primer hem de fer un
+disseny perfecte, per després implementar-lo. Amb les tècniques de
+desenvolupament àgil de moda actualment, aquest període de
+disseny s'ha vist reduït. En comptes, el programari es va generant en
+cicles de curta durada. A cada cicle, normalment es corregeixen errors
+al codi anterior, se li afegeixen noves funcionalitats i… es
+realitza un procés de refacció per permetre continuar fent més cicles
+*curts*.
+
+Però com? T'estic venent que desenvolupadors amb seny modificaran un
+codi que aparentment ja funciona només per fer-ho més "maco"? I si la
+modificació trenca l'aplicació en algun punt imprevist? Com era
+aquella màxima… «si funciona, no el toquis»? Hi ha truc. Encara que,
+en la teoria, no és absolutament imprescindible, la refacció es
+recolza fortament en la *prova unitària*. El procés es realitza amb
+petits canvis seguits del llançament de la bateria de proves. Si hi ha
+algun problema, es detecta, es corregeix i es continua amb un sistema
+lliure d'errors (fins on les proves sàpiguen dir).
+
+|exerciseicon___| :doc:`exercici_52_09_exemple`
