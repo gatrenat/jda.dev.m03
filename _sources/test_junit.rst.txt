@@ -410,19 +410,18 @@ Ops! És clar, el ``42`` no el tenim en lloc. Cap problema, canviem el
 Ara tenim:
 
 .. code-block:: console
-   :emphasize-lines: 9
+   :emphasize-lines: 4
 
     $ javac *.java && java org.junit.platform.console.ConsoleLauncher -c TestPunt
     …
-    ╷
     ├─ JUnit Jupiter ✔
     │  └─ TestPunt ✔
-    │     ├─ constructorDefecteXZero() ✔
-    │     ├─ constructorDefecteYZero() ✔
+    │     ├─ constructorDefecteXZero() ✘ expected: <0> but was: <42>
     │     ├─ constructor() ✔
-    │     └─ setX42() ✘ expected: <42> but was: <0>
-    └─ JUnit Vintage ✔
-     …
+    │     └─ setX42() ✔
+    ├─ JUnit Vintage ✔
+    └─ JUnit Platform Suite ✔
+    …
 
 Vaja! Passem un test però fallem en un altre!
 

@@ -437,15 +437,14 @@ novament farem perquè només passi la prova.</p>
 <p>Ara tenim:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>javac<span class="w"> </span>*.java<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>java<span class="w"> </span>org.junit.platform.console.ConsoleLauncher<span class="w"> </span>-c<span class="w"> </span>TestPunt
 <span class="go"> …</span>
-<span class="go"> ╷</span>
 <span class="go"> ├─ JUnit Jupiter ✔</span>
-<span class="go"> │  └─ TestPunt ✔</span>
-<span class="go"> │     ├─ constructorDefecteXZero() ✔</span>
-<span class="go"> │     ├─ constructorDefecteYZero() ✔</span>
+<span class="hll"><span class="go"> │  └─ TestPunt ✔</span>
+</span><span class="go"> │     ├─ constructorDefecteXZero() ✘ expected: &lt;0&gt; but was: &lt;42&gt;</span>
 <span class="go"> │     ├─ constructor() ✔</span>
-<span class="hll"><span class="go"> │     └─ setX42() ✘ expected: &lt;42&gt; but was: &lt;0&gt;</span>
-</span><span class="go"> └─ JUnit Vintage ✔</span>
-<span class="go">  …</span>
+<span class="go"> │     └─ setX42() ✔</span>
+<span class="go"> ├─ JUnit Vintage ✔</span>
+<span class="go"> └─ JUnit Platform Suite ✔</span>
+<span class="go"> …</span>
 </pre></div>
 </div>
 <p>Vaja! Passem un test però fallem en un altre!</p>
