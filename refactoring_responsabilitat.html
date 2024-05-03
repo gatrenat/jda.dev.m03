@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El problema &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Moviment de responsabilitat &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Objectiu de refacció" href="refactoring_exemple_objectiu.html" />
-    <link rel="prev" title="Informe de client" href="refactoring_exemple_informe.html" />
+    <link rel="next" title="Eliminació de variables temporals" href="refactoring_removetmps.html" />
+    <link rel="prev" title="Temporals per crides" href="refactoring_tmp_call.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -67,17 +67,11 @@
 <li class="toctree-l1"><a class="reference internal" href="test.html">Validació d'aplicacions</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="refactoring.html">Refactoring</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="refactoring_intro.html">Què és el <em>refactoring</em></a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="refactoring_exemple.html">El lloguer de vehicles</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_partida.html">Punt de partida</a></li>
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_informe.html">Informe de client</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">El problema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_objectiu.html">Objectiu de refacció</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="refactoring_exemple.html">El lloguer de vehicles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_method_extraction.html">Extracció de mètodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_method_movement.html">Moviment de mètodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_tmp_call.html">Temporals per crides</a></li>
-<li class="toctree-l2"><a class="reference internal" href="refactoring_responsabilitat.html">Moviment de responsabilitat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Moviment de responsabilitat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_removetmps.html">Eliminació de variables temporals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_metodes_lleugers.html">Una funcionalitat per mètode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_altres.html">Altres passes de refacció</a></li>
@@ -103,13 +97,12 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="refactoring.html">Refactoring</a></li>
-          <li class="breadcrumb-item"><a href="refactoring_exemple.html">El lloguer de vehicles</a></li>
-      <li class="breadcrumb-item active">El problema</li>
+      <li class="breadcrumb-item active">Moviment de responsabilitat</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="refactoring_exemple_informe.html" class="btn btn-neutral float-left" title="Informe de client" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="refactoring_exemple_objectiu.html" class="btn btn-neutral float-right" title="Objectiu de refacció" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="refactoring_tmp_call.html" class="btn btn-neutral float-left" title="Temporals per crides" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="refactoring_removetmps.html" class="btn btn-neutral float-right" title="Eliminació de variables temporals" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -117,25 +110,15 @@
     
            <div itemprop="articleBody">
              
-  <section id="el-problema">
-<h1>El problema<a class="headerlink" href="#el-problema" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>El codi del mètode <code class="docutils literal notranslate"><span class="pre">informe()</span></code>, per lleig que ens resulti, fa el que s'espera
-i al compilador no l'importa l'estètica.</p>
-<p>El problema vindrà quan ens calgui modificar-lo. Suposa que ens demanen que
-afegim un nou mètode que generi l'informe en format html.</p>
-<p>Què ens caldrà modficar d'aquest codi per a poder realitzar-ho?</p>
-<p>Què en podríem aprofitar del mètode <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code>?</p>
-<p>D'acord que podem fer un <em>copy&amp;paste</em> i modificar la part de construcció del
-String de tornada. Què passaria llavors si ens demanen que canviem la lògica del
-càlcul de l'informe?  (ex. canvien política de preu pels vehicles de luxe).</p>
-<p>Potser em diràs que <em>el codi no és tan complex després de tot</em> i que
-no és tan greu haver-lo de reescriure. Si ho has pensat, recorda que
-aquest és només un exemple senzill; una <em>joguina</em> per introduir el
-concepte. A la vida real aquest tipus de codi el trobaràs <strong>molt</strong> més
-llarg, enrevessat i barrejat amb altre codi del mateix nivell.</p>
-<p>Com a regla d'or: si el codi que has de modificar presenta una
-resistència important als canvis que persegueixes incorporar-li,
-<strong>primer</strong> refacció i <strong>després</strong> introducció de la modificació.</p>
+  <section id="moviment-de-responsabilitat">
+<h1>Moviment de responsabilitat<a class="headerlink" href="#moviment-de-responsabilitat" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>En aquesta secció repetirem els passos de refacció que hem vist fins ara, en
+altres parts del codi.</p>
+<p>Recorda que anteriorment ens hem preocupat del càlcul de la <em>quantitat</em>. Ara ho
+farem sobre el càlcul de la <em>bonificació</em>.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_20_extraccio.html"><span class="doc"> Exercici 52_20. Extracció del càlcul de bonificacions</span></a></p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_21_moviment.html"><span class="doc"> Exercici 52_21. Reassignant responsabilitats</span></a></p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_52_22_documentacio.html"><span class="doc"> Exercici 52_22. Actualització de la documentació</span></a></p>
 </section>
 
 
@@ -164,8 +147,8 @@ resistència important als canvis que persegueixes incorporar-li,
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="refactoring_exemple_informe.html" class="btn btn-neutral float-left" title="Informe de client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="refactoring_exemple_objectiu.html" class="btn btn-neutral float-right" title="Objectiu de refacció" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="refactoring_tmp_call.html" class="btn btn-neutral float-left" title="Temporals per crides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="refactoring_removetmps.html" class="btn btn-neutral float-right" title="Eliminació de variables temporals" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

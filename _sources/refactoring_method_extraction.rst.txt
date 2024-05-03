@@ -1,0 +1,253 @@
+####################
+Extracció de mètodes
+####################
+
+A aquesta secció realitzarem els primers passos de refacció sobre el nostre
+codi d'exemple. En concret, es realitza un pas de refacció conegut com a
+*extracció de mètode*.
+
+Per un mètode tan llarg com ``Client.informe()``, potser una de les passes de
+refacció més adequada és aconseguir descomposar-lo en mètodes més petits.
+
+A aquest tipus de refacció li direm *extracció de mètode*.
+
+Una de les pistes que ens ofereix el codi que es beneficiaria d'una extracció
+de mètode és que és tan llarg que, per poder-lo entendre, acabem posant
+comentaris separant diferents seccions.
+
+Per exemple, considera el següent codi:
+
+.. code-block:: java
+    :linenos:
+
+    /* mostra un missatge amb el mes anterior i el mes següent de
+     * mesActual per l'any anyActual.
+     * Pressuposa que mesActual és un valor entre 1 i 12.  */
+    private static void mostraMesAnteriorISeguent(int mesActual, int anyActual) {
+        // calcula i mostra el mes anterior
+        int mesAnterior, anyAnterior;
+        if (mesActual == 1) {
+            mesAnterior = 12;
+            anyAnterior = anyActual - 1;
+        } else {
+            mesAnterior = mesActual - 1;
+            anyAnterior = anyActual;
+        }
+        System.out.println("Mes anterior: " + mesAnterior + "/" + anyAnterior);
+
+        // calcula i mostra el mes següent
+        int mesSeguent, anySeguent;
+        if (mesActual == 12) {
+            mesSeguent = 1;
+            anySeguent = anyActual + 1;
+        } else {
+            mesSeguent = mesActual + 1;
+            anySeguent = anyActual;
+        }
+        System.out.println("Mes següent: " + mesSeguent + "/" + anySeguent);
+    }
+
+Aquest codi realitza dues coses diferents:
+
+#. calcula i mostra el mes anterior
+
+#. calcula i mostra el mes següent
+
+Quan un mètode fa més d'una cosa, sol resultar molt convenient
+*delegar* algunes o totes aquestes coses a nous mètodes. Això facilita
+la llegibilitat i el reaprofitament. 
+
+En aquest exemple, aplicant l'extracció de mètodes aconseguirem el
+següent codi:
+
+.. code-block:: java
+    :linenos:
+
+    /* mostra un missatge amb el mes anterior i el mes següent de
+     * mesActual per l'any anyActual.
+     * Pressuposa que mesActual és un valor entre 1 i 12.*/
+    private static void mostraMesAnteriorISeguent(int mesActual, int anyActual) {
+        mostraMesAnterior(mesActual, anyActual);
+        mostraMesSeguent(mesActual, anyActual);
+    }
+
+    private static void mostraMesAnterior(int mesActual, int anyActual) {
+        int mesAnterior, anyAnterior;
+        if (mesActual == 1) {
+            mesAnterior = 12;
+            anyAnterior = anyActual - 1;
+        } else {
+            mesAnterior = mesActual - 1;
+            anyAnterior = anyActual;
+        }
+        System.out.println("Mes anterior: " + mesAnterior + "/" + anyAnterior);
+    }
+
+    private static void mostraMesSeguent(int mesActual, int anyActual) {
+        // XXX TODO
+    }
+
+
+El mètode ``mostraMesSeguent()`` te'l deixo per que t'exercitis.
+
+No sempre resultarà tan fàcil fer l'extracció del mètode com en aquest
+exemple. De vegades hi haurà variables compartides o parts de codi
+barrejades.
+
+Per exemple, considera com canviaria la situació per extreure el mètode si
+``mostraMesAnteriorISeguent()`` haguera estat codificat de la següent manera:
+
+.. code-block:: java
+    :linenos:
+
+    /* mostra un missatge amb el mes anterior i el mes següent de
+     * mesActual per l'any anyActual.
+     * Pressuposa que mesActual és un valor entre 1 i 12.  */
+    private static void mostraMesAnteriorISeguent(int mesActual, int anyActual) {
+        int mesAnterior, mesSeguent;
+        int anyAnterior = anyActual, anySeguent = anyActual;
+        if (mesActual == 1) {
+            mesAnterior = 12;
+            anyAnterior = anyActual - 1;
+            mesSeguent = 2;
+        } else if (mesActual == 12) {
+            mesAnterior = 11;
+            mesSeguent = 1;
+            anySeguent = anyActual + 1;
+        } else {
+            mesAnterior = mesActual - 1;
+            mesSeguent = mesActual + 1;
+        }
+        System.out.println("Mes anterior: " + mesAnterior + "/" + anyAnterior);
+        System.out.println("Mes següent: " + mesSeguent + "/" + anySeguent);
+    }
+
+En un codi com aquest, extreure les dues funcionalitats barrejades, haguera
+estat una mica menys directe.
+
+El mètode ``informe()``
+=======================
+
+Tornant al nostre mètode ``Client.informe()``, una part que podríem
+considerar candidata a extreure per començar és el bloc del
+``switch``.
+
+.. code-block:: java
+   :linenos:
+   :emphasize-lines: 9-25
+
+   public String informe() {
+       double total = 0;
+       int bonificacions = 0;
+       String resultat = "Informe de lloguers del client " +
+           getNom() +
+           " (" + getNif() + ")\n";
+       for (Lloguer lloguer: lloguers) {
+           double quantitat = 0;
+           switch (lloguer.getVehicle().getCategoria()) {
+               case Vehicle.BASIC:
+                   quantitat += 3;
+                   if (lloguer.getDies() > 3) {
+                       quantitat += (lloguer.getDies() - 3) * 1.5;
+                   }
+                   break;
+               case Vehicle.GENERAL:
+                   quantitat += 4;
+                   if (lloguer.getDies() > 2) {
+                       quantitat += (lloguer.getDies() - 2) * 2.5;
+                   }
+                   break;
+               case Vehicle.LUXE:
+                   quantitat += lloguer.getDies() * 6;
+                   break;
+           }
+
+           // afegeix lloguers freqüents
+           bonificacions ++;
+
+           // afegeix bonificació per dos dies de lloguer de Luxe
+           if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
+                   lloguer.getDies()>1 ) {
+               bonificacions ++;
+           }
+
+           // composa els resultats d'aquest lloguer
+           resultat += "\t" +
+               lloguer.getVehicle().getMarca() +
+               " " +
+               lloguer.getVehicle().getModel() + ": " +
+               (quantitat * 30) + "€" + "\n";
+           total += quantitat * 30;
+       }
+
+       // afegeix informació final
+       resultat += "Import a pagar: " + total + "€\n" +
+           "Punts guanyats: " + bonificacions + "\n";
+       return resultat;
+   }
+
+
+Com que en aquest cas, el procés és una mica més complex que amb
+l'exemple del ``mesAnteriorSeguent()``, haurem d'anar amb més compte.
+
+Per començar, hem de detectar quines són les dependències del fragment
+de codi a extreure respecte de la resta del mètode. Podem veure que el
+bloc del ``switch`` requereix les variables ``lloguer`` i
+``quantitat``. D'aquestes variables, ``lloguer`` només és consultada
+dins del codi, mentre que ``quantitat`` és modificada. ``lloguer`` el
+podem passar com a paràmetre amb tranquil·litat. Amb ``quantitat``
+però, haurem d'anar amb compte. Com que en aquest cas és només una,
+podem considerar retornar el seu valor. Donat que ``quantitat``
+s'inicialitza a 0 a cada volta del bucle i se li assigna el valor dins
+del ``switch``, podem simplement assignar-li el valor de retorn del
+nou mètode que estem definint.
+
+El codi resultant per ``Client.informe()`` podria ser el següent:
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 8
+
+    public String informe() {
+        double total = 0;
+        int bonificacions = 0;
+        String resultat = "Informe de lloguers del client " + 
+            getNom() + 
+            " (" + getNif() + ")\n";
+        for (Lloguer lloguer: lloguers) {
+            double quantitat = quantitatPerLloguer(lloguer);
+
+            // afegeix lloguers freqüents
+            bonificacions ++;
+
+            // afegeix bonificació per dos dies de lloguer de Luxe
+            if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
+                    lloguer.getDies()>1 ) {
+                bonificacions ++;
+            }
+
+            // composa els resultats d'aquest lloguer
+            resultat += "\t" + 
+                lloguer.getVehicle().getMarca() + 
+                " " + 
+                lloguer.getVehicle().getModel() + ": " +
+                (quantitat * 30) + "€" + "\n";
+            total += quantitat * 30;
+        }
+
+        // afegeix informació final
+        resultat += "Import a pagar: " + total + "€\n" +
+            "Punts guanyats: " + bonificacions + "\n";
+        return resultat;
+    }
+
+En aquest exemple, el mètode ``quantitatPerLloguer()`` apareix a un únic
+lloc. És freqüent, però, que quan extraiem un mètode, el seu codi estigués
+duplicat en múltiples llocs del codi. Quan reemplacem el codi per la crida, hem
+de cercar tots els llocs on el codi està duplicat. De vegades no és fàcil, ja
+que poden haver-hi diferents noms de variables o el codi pot aparèixer barrejat
+amb altres funcionalitats. Pot arribar a ser un repte.
+
+|exerciseicon__T| :doc:`exercici_52_15_extraccio`
+
+|exerciseicon___| :doc:`exercici_52_16_documentacio`

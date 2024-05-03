@@ -1,0 +1,19 @@
+#########################
+Altres passes de refacció
+#########################
+
+En aquesta entrada finalitzarem la nostra introducció a la refacció amb algunes
+passes finals. En concret, considerarem els passos de refacció *extracció de
+constant* i *reanomenament de mètode*. A més, a mode de conclusió, culminarem
+la nostra preparació  de l'aplicació tot creant el mètode
+``Client.informeHTML()``, l'objectiu dels nostres esforços de refacció.
+
+|exerciseicon__T| :doc:`exercici_52_28_una_constant`
+
+|exerciseicon__T| :doc:`exercici_52_29_mes_constants`
+
+|exerciseicon__T| :doc:`exercici_52_30_reanomena`
+
+|exerciseicon__T| :doc:`exercici_52_31_informehtml`
+
+|exerciseicon___| :doc:`exercici_52_32_documentacio`

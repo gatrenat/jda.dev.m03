@@ -1,0 +1,53 @@
+###################################################
+|exerciseicon__T| Exercici 52_31. L'informe en HTML
+###################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``52_31_informehtml/``
+
+* Continguts relacionats: :doc:`refactoring_altres`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Ara que ``Client.informe()`` només s'encarrega directament de composar
+l'informe, és el moment de fer la versió en HTML.
+
+Codifica el mètode ``Client.informeHTML()`` de manera que generi un resultat amb
+la següent estructura:
+
+.. code-block:: html
+
+    <p>Informe de lloguers del client <em>Ken Robinson</em> (<strong>43092837A</strong>)</p>
+    <table>
+      <tr>
+        <td><strong>Marca</strong></td>
+        <td><strong>Model</strong></td>
+        <td><strong>Import</strong></td>
+      </tr>
+      <tr><td>Tata</td><td>Vista</td><td>90.0€</td></tr>
+      <tr><td>Wolswagen</td><td>Passat</td><td>270.0€</td></tr>
+      <tr><td>Mercedes</td><td>SLK 2.0</td><td>360.0€</td></tr>
+    </table>
+    <p>Import a pagar: <em>720.0€</em></p>
+    <p>Punts guanyats: <em>4</em></p>
+
+Evidentment, ens aprofitarem de tota la refacció que hem estat fent. Així que,
+aquest nou mètode cridarà els mètodes ``composaCapsaleraHTML()``,
+``composaDetallHTML()`` i ``composaPeuHTML()``.
+
+Codifica també les proves unitàries corresponents. Potser les pots intentar
+construir abans de crear tot el codi!
+
+Caldrà que com a mínim creis una nova prova unitària per l'exemple que genera
+``GestorLite.creaClientDemo()``. Anomena aquesta prova
+``TestGestor.informeHTMLDemo()``.
+
+.. tip:: Tot i que per HTML, els espais en blanc generalment no tenen gaire
+   significat, desenvolupar una prova que els ignori no és trivial. Per aquesta
+   raó, caldrà que revisis amb molta cura que la sortida de ``informeHTML()``
+   coincideixi exactament amb l'esperada (incloent espais).

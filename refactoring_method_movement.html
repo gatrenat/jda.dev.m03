@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El problema &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Moviment de mètodes &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Objectiu de refacció" href="refactoring_exemple_objectiu.html" />
-    <link rel="prev" title="Informe de client" href="refactoring_exemple_informe.html" />
+    <link rel="next" title="Temporals per crides" href="refactoring_tmp_call.html" />
+    <link rel="prev" title="Extracció de mètodes" href="refactoring_method_extraction.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -67,15 +67,9 @@
 <li class="toctree-l1"><a class="reference internal" href="test.html">Validació d'aplicacions</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="refactoring.html">Refactoring</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="refactoring_intro.html">Què és el <em>refactoring</em></a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="refactoring_exemple.html">El lloguer de vehicles</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_partida.html">Punt de partida</a></li>
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_informe.html">Informe de client</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">El problema</a></li>
-<li class="toctree-l3"><a class="reference internal" href="refactoring_exemple_objectiu.html">Objectiu de refacció</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="refactoring_exemple.html">El lloguer de vehicles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_method_extraction.html">Extracció de mètodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="refactoring_method_movement.html">Moviment de mètodes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Moviment de mètodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_tmp_call.html">Temporals per crides</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_responsabilitat.html">Moviment de responsabilitat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="refactoring_removetmps.html">Eliminació de variables temporals</a></li>
@@ -103,13 +97,12 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="refactoring.html">Refactoring</a></li>
-          <li class="breadcrumb-item"><a href="refactoring_exemple.html">El lloguer de vehicles</a></li>
-      <li class="breadcrumb-item active">El problema</li>
+      <li class="breadcrumb-item active">Moviment de mètodes</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="refactoring_exemple_informe.html" class="btn btn-neutral float-left" title="Informe de client" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="refactoring_exemple_objectiu.html" class="btn btn-neutral float-right" title="Objectiu de refacció" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="refactoring_method_extraction.html" class="btn btn-neutral float-left" title="Extracció de mètodes" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="refactoring_tmp_call.html" class="btn btn-neutral float-right" title="Temporals per crides" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -117,25 +110,44 @@
     
            <div itemprop="articleBody">
              
-  <section id="el-problema">
-<h1>El problema<a class="headerlink" href="#el-problema" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>El codi del mètode <code class="docutils literal notranslate"><span class="pre">informe()</span></code>, per lleig que ens resulti, fa el que s'espera
-i al compilador no l'importa l'estètica.</p>
-<p>El problema vindrà quan ens calgui modificar-lo. Suposa que ens demanen que
-afegim un nou mètode que generi l'informe en format html.</p>
-<p>Què ens caldrà modficar d'aquest codi per a poder realitzar-ho?</p>
-<p>Què en podríem aprofitar del mètode <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code>?</p>
-<p>D'acord que podem fer un <em>copy&amp;paste</em> i modificar la part de construcció del
-String de tornada. Què passaria llavors si ens demanen que canviem la lògica del
-càlcul de l'informe?  (ex. canvien política de preu pels vehicles de luxe).</p>
-<p>Potser em diràs que <em>el codi no és tan complex després de tot</em> i que
-no és tan greu haver-lo de reescriure. Si ho has pensat, recorda que
-aquest és només un exemple senzill; una <em>joguina</em> per introduir el
-concepte. A la vida real aquest tipus de codi el trobaràs <strong>molt</strong> més
-llarg, enrevessat i barrejat amb altre codi del mateix nivell.</p>
-<p>Com a regla d'or: si el codi que has de modificar presenta una
-resistència important als canvis que persegueixes incorporar-li,
-<strong>primer</strong> refacció i <strong>després</strong> introducció de la modificació.</p>
+  <section id="moviment-de-metodes">
+<h1>Moviment de mètodes<a class="headerlink" href="#moviment-de-metodes" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>En aquesta entrada relitza un nou pas de refacció conegut com a
+<em>moviment de mètode</em>.</p>
+<p>Essencialment el <em>moviment de mètode</em> significa que un mètode que pertany a la
+classe <code class="docutils literal notranslate"><span class="pre">Origen</span></code>, passa a pertànyer a la classe <code class="docutils literal notranslate"><span class="pre">Destinació</span></code>.</p>
+<p>Movem mètodes, per exemple, quan la classe d'origen fa massa coses. També quan
+el mètode a moure no té sentit que es faci en aquesta classe. En moure mètodes,
+la classe d'origen quedarà més <em>primeta</em>, és a dir, farà menys coses i, per
+tant, serà més fàcil d'entendre, provar i mantenir.</p>
+<p>Tornem al nostre exemple i fixem-nos en el mètode
+<code class="docutils literal notranslate"><span class="pre">Client.quantitatPerLloguer()</span></code> que acabem d'extreure al <a class="reference internal" href="refactoring_method_extraction.html"><span class="doc">pas
+anterior</span></a>. El nou mètode fa servir informació
+del lloguer i del vehicle associat, però, quina informació fa servir de la
+classe <code class="docutils literal notranslate"><span class="pre">Client</span></code>? La resposta és <strong>cap</strong>!</p>
+<p>El mètode <code class="docutils literal notranslate"><span class="pre">quantitatPerLloguer()</span></code> no necessita res de la instància de classe
+on està definit, per poder fer la seva feina.</p>
+<p>Aquest tipus de situacions ens han de fer sospitar que potser, el mètode no es
+troba en el lloc adequat. És a dir, potser no ha de ser responsabilitat de
+Client calcular l'import d'un Lloguer concret.</p>
+<p>Aquesta és bona candidata per aplicar el <em>moviment de mètode</em>.</p>
+<p>Sovint no resulta gens fàcil decidir de bon començament la classe a la que
+assignar una responsabilitat concreta. Per aquesta raó és freqüent que les
+responsabilitats s'hagin de reassignar amb el temps. Aquest pas de refacció
+(<em>moviment de mètode</em>) pot arribar a resultar, doncs, força útil.</p>
+<p><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> <a class="reference internal" href="exercici_52_17_moviment.html"><span class="doc"> Exercici 52_17. Movent quantitatPerLloguer()</span></a></p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_52_18_documentacio.html"><span class="doc"> Exercici 52_18. Documentem el moviment</span></a></p>
+<section id="altres-passos-de-refaccio">
+<h2>Altres passos de refacció<a class="headerlink" href="#altres-passos-de-refaccio" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Existeixen altres passos de refacció relacionats amb el <em>moviment de mètode</em>.
+Un de molt evident és el <em>moviment de propietat</em>. La idea és similar de la del
+moviment de mètodes: trobes una propietat a una classe quan hauria d'estar a
+una altra. El mecanisme d'aplicació d'aquest pas és molt similar que el de
+moviment de mètodes.</p>
+<p>Tant el moviment de mètode com el de propietat, es poden considerar <em>moviments
+de responsabilitat</em> en el sentit que la responsabilitat que abans queia en una
+classe, acaba passant a una altra.</p>
+</section>
 </section>
 
 
@@ -164,8 +176,8 @@ resistència important als canvis que persegueixes incorporar-li,
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="refactoring_exemple_informe.html" class="btn btn-neutral float-left" title="Informe de client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="refactoring_exemple_objectiu.html" class="btn btn-neutral float-right" title="Objectiu de refacció" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="refactoring_method_extraction.html" class="btn btn-neutral float-left" title="Extracció de mètodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="refactoring_tmp_call.html" class="btn btn-neutral float-right" title="Temporals per crides" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 52_11. El Gestor de Lloguers lite &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 52_19. Extracció de quantitat &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 52_12. Documentació de la refacció" href="exercici_52_12_documentacio.html" />
-    <link rel="prev" title="Exercici 52_10. Codificant el Gestor de Lloguers" href="exercici_52_10_gestor_lloguers.html" />
+    <link rel="next" title="Exercici 52_20. Extracció del càlcul de bonificacions" href="exercici_52_20_extraccio.html" />
+    <link rel="prev" title="Exercici 52_18. Documentem el moviment" href="exercici_52_18_documentacio.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -79,7 +79,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="refactoring_exercicis.html">Exercicis de <em>Refactoring</em></a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_09_exemple.html"> Exercici 52_09. El meu exemple</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_10_gestor_lloguers.html"> Exercici 52_10. Codificant el Gestor de Lloguers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 52_11. El Gestor de Lloguers <em>lite</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_52_11_gestor_lite.html"> Exercici 52_11. El Gestor de Lloguers <em>lite</em></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_12_documentacio.html"> Exercici 52_12. Documentació de la refacció</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_13_init_test.html"> Exercici 52_13. Primera prova de regressió</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_14_mes_tests.html"> Exercici 52_14. Proves unitàries</a></li>
@@ -87,7 +87,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_16_documentacio.html"> Exercici 52_16. Documentem l'extracció</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_17_moviment.html"> Exercici 52_17. Movent <code class="docutils literal notranslate"><span class="pre">quantitatPerLloguer()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_18_documentacio.html"> Exercici 52_18. Documentem el moviment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercici_52_19_temporal.html"> Exercici 52_19. Extracció de <code class="docutils literal notranslate"><span class="pre">quantitat</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 52_19. Extracció de <code class="docutils literal notranslate"><span class="pre">quantitat</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_20_extraccio.html"> Exercici 52_20. Extracció del càlcul de bonificacions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_21_moviment.html"> Exercici 52_21. Reassignant responsabilitats</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercici_52_22_documentacio.html"> Exercici 52_22. Actualització de la documentació</a></li>
@@ -124,12 +124,12 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="refactoring.html">Refactoring</a></li>
           <li class="breadcrumb-item"><a href="refactoring_exercicis.html">Exercicis de <em>Refactoring</em></a></li>
-      <li class="breadcrumb-item active"> Exercici 52_11. El Gestor de Lloguers <em>lite</em></li>
+      <li class="breadcrumb-item active"> Exercici 52_19. Extracció de <code class="docutils literal notranslate"><span class="pre">quantitat</span></code></li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_52_10_gestor_lloguers.html" class="btn btn-neutral float-left" title="Exercici 52_10. Codificant el Gestor de Lloguers" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_52_12_documentacio.html" class="btn btn-neutral float-right" title="Exercici 52_12. Documentació de la refacció" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_52_18_documentacio.html" class="btn btn-neutral float-left" title="Exercici 52_18. Documentem el moviment" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_52_20_extraccio.html" class="btn btn-neutral float-right" title="Exercici 52_20. Extracció del càlcul de bonificacions" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -137,69 +137,20 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-t-exercici-52-11-el-gestor-de-lloguers-lite">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 52_11. El Gestor de Lloguers <em>lite</em><a class="headerlink" href="#exerciseicon-t-exercici-52-11-el-gestor-de-lloguers-lite" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-52-19-extraccio-de-quantitat">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 52_19. Extracció de <code class="docutils literal notranslate"><span class="pre">quantitat</span></code><a class="headerlink" href="#exerciseicon-t-exercici-52-19-extraccio-de-quantitat" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">52_11_gestor_lite/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="refactoring_exemple_partida.html"><span class="doc">Punt de partida</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">52_19_temporal/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="refactoring_tmp_call.html"><span class="doc">Temporals per crides</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>En aquest exercici codificaràs la classe <code class="docutils literal notranslate"><span class="pre">GestorLite</span></code> que et permetrà
-fer una prova bàsica del teu codi.</p>
-<p><code class="docutils literal notranslate"><span class="pre">GestorLite</span></code> oferirà els següents mètodes estàtics:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">creaClientDemo()</span></code></p>
-<blockquote>
-<div><p>Aquest mètode crearà un client de proves i el retornarà.
-Continua llegint per tenir els detalls del client a crear.</p>
-</div></blockquote>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mostraClient(Client)</span></code></p>
-<blockquote>
-<div><p>Aquest mètode rebrà un client i mostrarà els seus detalls per sortida
-estàndard. L'esquema de la sortida esperada és el següent:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Client: «nom del client»
-        «nif»
-        «telèfon»
-Lloguers: «num de lloguers del client»
-        1. vehicle: «marca del vehícle del primer lloguer» «model»
-        dies llogats: «nombre de dies llogats»
-        2. «… dades de la resta de lloguers del client»
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">main()</span></code>: aquest mètode et permetrà fer a tu les proves que consideris
-oportunes. Si no se t'acut què posar, considera:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Client</span><span class="w"> </span><span class="n">demo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">creaClientDemo</span><span class="p">();</span>
-<span class="w">    </span><span class="n">mostraClient</span><span class="p">(</span><span class="n">demo</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">prgtest</span></code> no farà cap cas a aquest <code class="docutils literal notranslate"><span class="pre">main()</span></code>.</p>
-</li>
-</ul>
-<p>Considera la següent simulació d'execució per que et puguis fer una idea de les
-dades concretes del client demo:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>GestorLite
-<span class="hll"><span class="go">Client: Eugènia Salinas Roig</span>
-</span><span class="hll"><span class="go">        51590695Q</span>
-</span><span class="hll"><span class="go">        93614214242</span>
-</span><span class="hll"><span class="go">Lloguers: 3</span>
-</span><span class="hll"><span class="go">        1. vehicle: Seat 600</span>
-</span><span class="hll"><span class="go">           dies llogats: 2</span>
-</span><span class="hll"><span class="go">        2. vehicle: Tata Vista</span>
-</span><span class="hll"><span class="go">           dies llogats: 5</span>
-</span><span class="hll"><span class="go">        3. vehicle: Fiat Uno</span>
-</span><span class="hll"><span class="go">           dies llogats: 3</span>
-</span></pre></div>
-</div>
-<p><strong>Nota</strong>: Seat 600 i Tata Vista haurien de ser de categoria bàsica, mentre que
-el Fiat Uno hauria de estar com categoria luxe.</p>
+<p>Aplica el pas de reemplaçament de variable temporal per crida sobre la variable
+<code class="docutils literal notranslate"><span class="pre">quantitat</span></code> a <code class="docutils literal notranslate"><span class="pre">Client.informe()</span></code>.</p>
+<p>Poca feina ens donarà aquest exercici, oi? Encara que un canvi fàcil, no
+oblidis passar-li les proves per si has trencat alguna cosa.</p>
 </section>
 
 
@@ -228,8 +179,8 @@ el Fiat Uno hauria de estar com categoria luxe.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_52_10_gestor_lloguers.html" class="btn btn-neutral float-left" title="Exercici 52_10. Codificant el Gestor de Lloguers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_52_12_documentacio.html" class="btn btn-neutral float-right" title="Exercici 52_12. Documentació de la refacció" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_52_18_documentacio.html" class="btn btn-neutral float-left" title="Exercici 52_18. Documentem el moviment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_52_20_extraccio.html" class="btn btn-neutral float-right" title="Exercici 52_20. Extracció del càlcul de bonificacions" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -35,13 +35,12 @@ Els continguts d'aquest tema es troben distribuïts en les següents entrades:
 
    refactoring_intro.rst
    refactoring_exemple.rst
+   refactoring_method_extraction.rst
+   refactoring_method_movement.rst
+   refactoring_tmp_call.rst
+   refactoring_responsabilitat.rst
+   refactoring_removetmps.rst
+   refactoring_metodes_lleugers.rst
+   refactoring_altres.rst
+   refactoring_conclusions.rst
    refactoring_exercicis.rst
-
-..   refactoring_method_extraction.rst
-..   refactoring_method_movement.rst
-..   refactoring_tmp_call.rst
-..   refactoring_responsabilitat.rst
-..   refactoring_removetmps.rst
-..   refactoring_metodes_lleugers.rst
-..   refactoring_altres.rst
-..   refactoring_conclusions.rst
