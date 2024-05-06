@@ -22,9 +22,9 @@ Els continguts d'aquest curs estan organitzats en els següents temes:
     bib.rst
     test.rst
     refactoring.rst
+    bd.rst
     apendix.rst
 
 ..    adoo.rst
 ..    cvs.rst
-..    bd.rst
 
