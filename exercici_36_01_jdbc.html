@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apèndix &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercici 36_01. A veure si ho he entès bé &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Introducció al reStructuredText" href="rst_intro.html" />
-    <link rel="prev" title="Exercici 36_01. A veure si ho he entès bé" href="exercici_36_01_jdbc.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Exercicis de persistència" href="bd_exercicis.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -66,12 +66,17 @@
 <li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html">Validació d'aplicacions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="refactoring.html">Refactoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bd.html">Persistència amb bases de dades</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Apèndix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst_intro.html">Introducció al reStructuredText</a></li>
-<li class="toctree-l2"><a class="reference internal" href="renatart.html">Renat.art</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="bd.html">Persistència amb bases de dades</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bd_modelrelacional_i_poo.html">POO i Model Relacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_sgbd.html">SGBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_jdbc.html">JDBC</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="bd_exercicis.html">Exercicis de persistència</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Exercici 36_01. A veure si ho he entès bé</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
         </div>
@@ -88,12 +93,14 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Apèndix</li>
+          <li class="breadcrumb-item"><a href="bd.html">Persistència amb bases de dades</a></li>
+          <li class="breadcrumb-item"><a href="bd_exercicis.html">Exercicis de persistència</a></li>
+      <li class="breadcrumb-item active"> Exercici 36_01. A veure si ho he entès bé</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-left" title="Exercici 36_01. A veure si ho he entès bé" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="rst_intro.html" class="btn btn-neutral float-right" title="Introducció al reStructuredText" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bd_exercicis.html" class="btn btn-neutral float-left" title="Exercicis de persistència" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -101,17 +108,32 @@
     
            <div itemprop="articleBody">
              
-  <section id="apendix">
-<h1>Apèndix<a class="headerlink" href="#apendix" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>A aquesta secció final dels apunts hi trobaràs elements addicionals que poden
-ser-te d'utilitat a l'hora d'ampliar els conceptes treballats durant el
-curs.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rst_intro.html">Introducció al reStructuredText</a></li>
-<li class="toctree-l1"><a class="reference internal" href="renatart.html">Renat.art</a></li>
+  <section id="exerciseicon-exercici-36-01-a-veure-si-ho-he-entes-be">
+<h1><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> Exercici 36_01. A veure si ho he entès bé<a class="headerlink" href="#exerciseicon-exercici-36-01-a-veure-si-ho-he-entes-be" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">36_01_jdbc/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="bd_jdbc.html"><span class="doc">JDBC</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 </ul>
-</div>
+<p class="rubric">Enunciat</p>
+<p>Indica quines de les següents afirmacions són certes respecte JDBC.
+Intenta argumentar-les:</p>
+<ol class="arabic simple">
+<li><p>És un sistema que ens permet accedir des d'una base de dades relacional, a un
+programa fet en Java.</p></li>
+<li><p>Per a poder accedir a un SGBD concret, ens caldrà una implementació adequada
+del JDBC, doncs JDBC per si sol només defineix <em>interfaces</em> i poc més.</p></li>
+<li><p>Si els nostres programes fan servir les interfícies definides per JDBC en
+comptes de les classes concretes dels drivers, hauria de ser raonablement
+fàcil canviar de SGBD sense haver de modificar els nostres programes.</p></li>
+<li><p>Donada una implementació concreta de JDBC, coneguda com a <em>driver</em>, podríem
+accedir a diverses fonts de dades, no només bases de dades.</p></li>
+<li><p>Amb el <em>driver</em> adequat, el nostre programa hauria de poder accedir a un full
+de càlcul fent servir JDBC.</p></li>
+</ol>
+<p>Pots contestar les preguntes, per exemple, en un document de text formatat
+com <a class="reference internal" href="rst_intro.html"><span class="doc">ReStructuredText</span></a>.</p>
 </section>
 
 
@@ -140,8 +162,8 @@ curs.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-left" title="Exercici 36_01. A veure si ho he entès bé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="rst_intro.html" class="btn btn-neutral float-right" title="Introducció al reStructuredText" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bd_exercicis.html" class="btn btn-neutral float-left" title="Exercicis de persistència" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apèndix &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
+  <title>Exercicis de persistència &mdash; Introducció a la programació amb Java 2023-24 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Introducció al reStructuredText" href="rst_intro.html" />
-    <link rel="prev" title="Exercici 36_01. A veure si ho he entès bé" href="exercici_36_01_jdbc.html" />
+    <link rel="next" title="Exercici 36_01. A veure si ho he entès bé" href="exercici_36_01_jdbc.html" />
+    <link rel="prev" title="JDBC" href="bd_jdbc.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -66,12 +66,17 @@
 <li class="toctree-l1"><a class="reference internal" href="bib.html">Biblioteques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test.html">Validació d'aplicacions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="refactoring.html">Refactoring</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bd.html">Persistència amb bases de dades</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Apèndix</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst_intro.html">Introducció al reStructuredText</a></li>
-<li class="toctree-l2"><a class="reference internal" href="renatart.html">Renat.art</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="bd.html">Persistència amb bases de dades</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bd_modelrelacional_i_poo.html">POO i Model Relacional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_sgbd.html">SGBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_jdbc.html">JDBC</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Exercicis de persistència</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_01_jdbc.html"> Exercici 36_01. A veure si ho he entès bé</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
 </ul>
 
         </div>
@@ -88,12 +93,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Apèndix</li>
+          <li class="breadcrumb-item"><a href="bd.html">Persistència amb bases de dades</a></li>
+      <li class="breadcrumb-item active">Exercicis de persistència</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-left" title="Exercici 36_01. A veure si ho he entès bé" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="rst_intro.html" class="btn btn-neutral float-right" title="Introducció al reStructuredText" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bd_jdbc.html" class="btn btn-neutral float-left" title="JDBC" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-right" title="Exercici 36_01. A veure si ho he entès bé" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -101,15 +107,13 @@
     
            <div itemprop="articleBody">
              
-  <section id="apendix">
-<h1>Apèndix<a class="headerlink" href="#apendix" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>A aquesta secció final dels apunts hi trobaràs elements addicionals que poden
-ser-te d'utilitat a l'hora d'ampliar els conceptes treballats durant el
-curs.</p>
+  <section id="exercicis-de-persistencia">
+<h1>Exercicis de persistència<a class="headerlink" href="#exercicis-de-persistencia" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Els exercicis de la secció de <a class="reference internal" href="bd.html"><span class="doc">persistència en bases de dades</span></a>
+són:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="rst_intro.html">Introducció al reStructuredText</a></li>
-<li class="toctree-l1"><a class="reference internal" href="renatart.html">Renat.art</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_01_jdbc.html"> Exercici 36_01. A veure si ho he entès bé</a></li>
 </ul>
 </div>
 </section>
@@ -140,8 +144,8 @@ curs.</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-left" title="Exercici 36_01. A veure si ho he entès bé" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="rst_intro.html" class="btn btn-neutral float-right" title="Introducció al reStructuredText" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bd_jdbc.html" class="btn btn-neutral float-left" title="JDBC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-right" title="Exercici 36_01. A veure si ho he entès bé" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
