@@ -73,7 +73,7 @@ Els tests que hauràs de desenvolupar, com a mínim, són:
 
 * ``Segment`` disposa de constructor per defecte que s'inicialitza amb
   punts per defecte. Et proposo que ho comprovis amb ``assertAll()`` i,
-  per et plantegis sobreescriure ``equals()`` de ``Punt`` per un resultat
+  que et plantegis sobreescriure ``equals()`` de ``Punt`` per un resultat
   més *professional*. Per descomptat, pots afegir ``hashCode()`` malgrat
   aquí no el farem servir.
 
