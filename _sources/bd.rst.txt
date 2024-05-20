@@ -17,7 +17,7 @@ Els continguts es distribueixen de la següent manera:
     bd_modelrelacional_i_poo.rst
     bd_sgbd.rst
     bd_jdbc.rst
+    bd_consultes.rst
+    bd_conclusions.rst
     bd_exercicis.rst
-
-..    bd_consultes.rst
 

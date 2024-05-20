@@ -27,7 +27,7 @@
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
     <link rel="next" title="Exercici 36_01. A veure si ho he entès bé" href="exercici_36_01_jdbc.html" />
-    <link rel="prev" title="JDBC" href="bd_jdbc.html" />
+    <link rel="prev" title="Conclusions" href="bd_conclusions.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -70,8 +70,22 @@
 <li class="toctree-l2"><a class="reference internal" href="bd_modelrelacional_i_poo.html">POO i Model Relacional</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bd_sgbd.html">SGBD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bd_jdbc.html">JDBC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_consultes.html">El Zoo persistent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bd_conclusions.html">Conclusions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Exercicis de persistència</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercici_36_01_jdbc.html"> Exercici 36_01. A veure si ho he entès bé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_02_drop.html"> Exercici 36_02. Elimina taula <em>CATEGORIES</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_03_select.html"> Exercici 36_03. Consulta de categories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_04_id.html"> Exercici 36_04. Recuperar l'identificador</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_05_animals.html"> Exercici 36_05. Creació i destrucció de la taula <em>ANIMALS</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_06_insert.html"> Exercici 36_06. Inserció d'animals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_07_select.html"> Exercici 36_07. Recuperar animals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_08_update.html"> Exercici 36_08. Modificació d'animals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_09_delete.html"> Exercici 36_09. Eliminació de categories i animals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_10_botigabd_ineficient.html"> Exercici 36_10. La botiga de vins en base de dades</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_11_botigabd_eficient.html"> Exercici 36_11. La botiga de vins <em>eficient</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_12_botigabd_fullbd.html"> Exercici 36_12. La botiga de vins <em>full-bd</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercici_36_13_botigabd_barata.html"> Exercici 36_13. Una botiga <em>barata</em> de vins</a></li>
 </ul>
 </li>
 </ul>
@@ -98,7 +112,7 @@
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="bd_jdbc.html" class="btn btn-neutral float-left" title="JDBC" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="bd_conclusions.html" class="btn btn-neutral float-left" title="Conclusions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-right" title="Exercici 36_01. A veure si ho he entès bé" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
@@ -114,6 +128,18 @@ són:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="exercici_36_01_jdbc.html"> Exercici 36_01. A veure si ho he entès bé</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_02_drop.html"> Exercici 36_02. Elimina taula <em>CATEGORIES</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_03_select.html"> Exercici 36_03. Consulta de categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_04_id.html"> Exercici 36_04. Recuperar l'identificador</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_05_animals.html"> Exercici 36_05. Creació i destrucció de la taula <em>ANIMALS</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_06_insert.html"> Exercici 36_06. Inserció d'animals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_07_select.html"> Exercici 36_07. Recuperar animals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_08_update.html"> Exercici 36_08. Modificació d'animals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_09_delete.html"> Exercici 36_09. Eliminació de categories i animals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_10_botigabd_ineficient.html"> Exercici 36_10. La botiga de vins en base de dades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_11_botigabd_eficient.html"> Exercici 36_11. La botiga de vins <em>eficient</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_12_botigabd_fullbd.html"> Exercici 36_12. La botiga de vins <em>full-bd</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercici_36_13_botigabd_barata.html"> Exercici 36_13. Una botiga <em>barata</em> de vins</a></li>
 </ul>
 </div>
 </section>
@@ -144,7 +170,7 @@ són:</p>
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="bd_jdbc.html" class="btn btn-neutral float-left" title="JDBC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="bd_conclusions.html" class="btn btn-neutral float-left" title="Conclusions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="exercici_36_01_jdbc.html" class="btn btn-neutral float-right" title="Exercici 36_01. A veure si ho he entès bé" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

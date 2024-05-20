@@ -1,0 +1,15 @@
+###########
+Conclusions
+###########
+
+Hem arribat al final d'aquest recorregut per la persistència des de la POO. Has
+vist com hem salvat el salt entre els objectes i les taules d'una manera molt
+explícita.
+
+Hem treballat les operacions bàsiques anomenades sovint com *CRUD*: creació,
+lectura, modificació i eliminació.
+
+És molt probable que quan desenvolupis et trobis amb biblioteques que ja et
+facin aquestes traduccions per tu. En tot cas, és important que entenguis que
+el que fan no és màgia i que tu ho pots també programar, en cas de
+necessitar-ho.
