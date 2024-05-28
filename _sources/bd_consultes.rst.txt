@@ -131,7 +131,7 @@ Un possible codi usuari seria:
 
     import java.sql.SQLException;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");
@@ -288,7 +288,7 @@ Cridarem aquesta funció des de ``UsaZoo``:
 
     import java.sql.SQLException;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

@@ -599,7 +599,7 @@ llista immutable.
     import java.util.List;
     import java.util.ArrayList;
     public class UmmodifiableDemo {
-      public static void main(String args[]){
+      public static void main(String[] args){
         List<String> gats = new ArrayList<String>();
         gats.add("Renat");
         gats.add("Garfield");

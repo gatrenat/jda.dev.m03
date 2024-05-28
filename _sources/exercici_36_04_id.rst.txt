@@ -59,7 +59,7 @@ El següent ``UsaZoo`` et permetrà comprovar si has fet el que s'esperava.
 
     import java.sql.SQLException;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

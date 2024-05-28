@@ -66,7 +66,7 @@ El nou ``main()`` de ``UsaZoo`` per aquest exercici serà:
     :linenos:
 
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

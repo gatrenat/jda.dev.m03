@@ -200,7 +200,7 @@ produir. Una versió del codi força més sòlida seria:
     import java.sql.SQLException;
 
     public class UsaSQLite {
-        public static void main( String args[] ) {
+        public static void main(String[] args ) {
             final String nom_bd = "test.bd";  // nom de la base de dades a la que intentarem connectar
             Connection conn = null;
             try {

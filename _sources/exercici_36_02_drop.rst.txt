@@ -27,7 +27,7 @@ El resultat haurà de permetre que funcioni el següent codi:
     
     import java.sql.SQLException;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

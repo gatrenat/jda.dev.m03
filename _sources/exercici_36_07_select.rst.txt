@@ -96,7 +96,7 @@ El codi de ``UsaZoo`` serà aquest cop:
     import java.util.List;
     import java.util.Arrays;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

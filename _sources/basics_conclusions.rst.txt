@@ -78,13 +78,7 @@ nou programador!
 
 |exerciseicon__T| :doc:`exercici_31_85_textcapicua`
 
-|exerciseicon_ST| :doc:`exercici_31_91_capicuarevisada`
-
 |exerciseicon__T| :doc:`exercici_31_86_codifica`
-
-|exerciseicon_ST| :doc:`exercici_31_92_paraulesreves`
-
-|exerciseicon_ST| :doc:`exercici_31_93_lletresreves`
 
 |exerciseicon__T| :doc:`exercici_31_87_trianglelletres`
 
@@ -93,3 +87,9 @@ nou programador!
 |exerciseicon__T| :doc:`exercici_31_89_piramide`
 
 |exerciseicon_ST| :doc:`exercici_31_90_duhast`
+
+|exerciseicon_ST| :doc:`exercici_31_91_capicuarevisada`
+
+|exerciseicon_ST| :doc:`exercici_31_92_paraulesreves`
+
+|exerciseicon_ST| :doc:`exercici_31_93_lletresreves`

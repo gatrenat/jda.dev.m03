@@ -51,7 +51,7 @@ El codi de prova a ``UsaZoo`` és:
     import java.util.List;
     import java.util.LinkedList;
     public class UsaZoo {
-        public static void main( String args[]) throws SQLException {
+        public static void main(String[] args) throws SQLException {
             Zoo zoo = new Zoo();
 
             System.out.print("Primer connectem amb la base de dades: ");

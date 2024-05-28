@@ -61,3 +61,51 @@ Això és més compacte que amb el ``while`` oi? Aquesta és bàsicament el
 principal avantatge.
 
 |exerciseicon__T| :doc:`exercici_31_46_deu_primers_for`
+
+Consideracions addicionals sobre el ``for`` normalitzat
+=======================================================
+
+En aquest curs, farem servir un ``for`` que anomenarem *normalitzat*.
+
+Per exemple:
+
+.. code-block:: none
+
+   for(int «nom variable» = «valor inicial»;
+       «nom variable» «comparador» «valor final»;
+       «modificació de variable») {
+       «bloc del bucle»
+    }
+
+Aquest bucle, com hem vist, presenta les següents característiques:
+
+* Una única variable de recorregut, de tipus enter, declarada i inicialitzada
+  en el primer element del ``for()``.
+
+* El segon element del ``for`` serà una única condició de permanència dins del
+  bucle en la que la variable de recorregut apareix en primer lloc de
+  l'expressió, a continuació vindrà el comparador i finalment l'expressió que
+  defineix el límit del bucle.
+
+  El comparador ha de ser un dels següents: <, <=, >, =>
+
+* El tercer element del ``for`` consistirà en una instrucció de modificació de
+  la variable de recorregut. Per exemple, ``numero = numero + 1``
+
+* Finalment, i extremadament important, dins del bloc del bucle (el que hi ha
+  entre ``{}``) no pot modificar-se la variable de recorregut. Només podem
+  accedir a ella per consultar el seu valor.
+
+Es possible fer servir el ``for`` en Java d'una altra manera? La resposta és
+sí, amb un petit matís: els sistemes de correcció d'aquest curs no et donaran
+per vàlid un codi que contingui ``for`` no normalitzat.
+
+Altres formes de fer servir aquest bucle, poden ser interessants però tendeixen
+a fer el codi més complex d'entendre i afegeixen més risc a que el programa no
+finalitzi. Tots dos problemes justifiquen la decisió de requerir bucles ``for``
+normalitzats en aquest curs d'introducció a la programació.
+
+Què passa si ja domino l'ús del ``for`` normalitzat i vull fer *virgueries*?
+Genial! Tot del que experimentis en trauràs nou coneixement! Únicament pels
+exercicis d'aquest curs que vulguis passar les proves, assegura't que fas la
+versió normalitzada.
