@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuració bàsica del sistema operatiu &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/moistyle.css?v=0e2f4d36" />
+
+  
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9bafd1c4"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d8dd923b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Editor" href="requeriments_editor.html" />
+    <link rel="prev" title="Instal·lació Guest Additions" href="equip_install_guest_additions.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Introducció a la programació amb Java
+              <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2024-25
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="primeres_passes.html">Primeres passes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requeriments_coneixements_previs.html">Coneixements previs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_aquests_continguts.html">Sobre aquests continguts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="requeriments_equip.html">Ordinador i sistema operatiu</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="equip_particio_propia.html">Opció recomanada: partició pròpia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_maquina_virtual_ova.html">Opció fàcil: màquina virtual preconfigurada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_maquina_virtual.html">Opció +/- fàcil: màquina virtual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_alternatives.html">Opcions alternatives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_install_debian.html">Instaŀlació de Debian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equip_install_guest_additions.html">Instal·lació Guest Additions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Configuració bàsica del sistema operatiu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_editor.html">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_llenguatge.html">Llenguatge de programació</a></li>
+<li class="toctree-l3"><a class="reference internal" href="requeriments_cvs.html">Control de versions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_exercicis.html">Sobre els exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consells.html">Uns consells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="holagit.html">Git i GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracio_entorn.html">Configuració de l'entorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com_lliurar.html">Com lliurar un exercici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ritual_holamon.html">Ritual Hola Món!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primeres_passes_exercicis.html">Llista d'exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="primeres_passes.html">Primeres passes</a></li>
+          <li class="breadcrumb-item"><a href="requeriments_tecnics.html">Requeriments tècnics</a></li>
+          <li class="breadcrumb-item"><a href="requeriments_equip.html">Ordinador i sistema operatiu</a></li>
+      <li class="breadcrumb-item active">Configuració bàsica del sistema operatiu</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="equip_install_guest_additions.html" class="btn btn-neutral float-left" title="Instal·lació Guest Additions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="requeriments_editor.html" class="btn btn-neutral float-right" title="Editor" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="configuracio-basica-del-sistema-operatiu">
+<h1>Configuració bàsica del sistema operatiu<a class="headerlink" href="#configuracio-basica-del-sistema-operatiu" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Sigui que has instaŀlat Debian amb partició dedicada o a una màquina
+virtual, et caldrà encara fer algun petit pas per poder treballar de
+manera més segura.</p>
+<p>En concret, a continuació configuraràs l'equip perquè el teu usuari pugui
+realitzar accions privilegiades sense haver d'anar a <em>root</em>.</p>
+<p>Aquest és un pas opcional però et facilitarà la feina i t'evitarà
+possibles accidents que solen produir-se quan treballem com a <em>root</em>.</p>
+<p>El que faràs serà afegir el teu usuari a un grup especial d'usuaris del
+sistema anomenat <em>sudoers</em>.</p>
+<p>Obre un terminal (ex. tecla finestretes, escriu <code class="docutils literal notranslate"><span class="pre">terminal</span></code> i prem enter)</p>
+<p>Tecleja el següent (sense els símbols inicial <code class="docutils literal notranslate"><span class="pre">$</span></code> ni <code class="docutils literal notranslate"><span class="pre">#</span></code>)</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>su
+<span class="hll"><span class="go">«tecleja aquí el teu password de root»</span>
+</span><span class="gp"># </span>cp<span class="w"> </span>/etc/sudoers<span class="o">{</span>,.antic<span class="o">}</span>
+<span class="gp"># </span>vi<span class="w"> </span>/etc/sudoers
+</pre></div>
+</div>
+<p>Ara se t'obrirà un editor amb una configuració.</p>
+<aside class="sidebar">
+<p class="sidebar-title">Por de trencar alguna cosa?</p>
+<p>No pateixis per trencar res doncs hem fet una còpia de seguretat. En
+cas que trenquis alguna cosa, simplement fes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>cp<span class="w"> </span>/etc/sudoers<span class="o">{</span>.antic,<span class="o">}</span>
+</pre></div>
+</div>
+</aside>
+<p>Dins de l'editor, escriu <code class="docutils literal notranslate"><span class="pre">/ALL</span></code></p>
+<p>Ara prem la tecla <code class="docutils literal notranslate"><span class="pre">y</span></code> dos cops i a continuació prem <code class="docutils literal notranslate"><span class="pre">p</span></code>. Acabes de
+duplicar la línia, oi?</p>
+<p>Ara prem les lletres <code class="docutils literal notranslate"><span class="pre">c</span></code> seguit de <code class="docutils literal notranslate"><span class="pre">w</span></code> i comença a teclejar el teu nom
+d'usuari. En el meu cas és <code class="docutils literal notranslate"><span class="pre">renat</span></code>. En acabar prem la lletra <code class="docutils literal notranslate"><span class="pre">esc</span></code></p>
+<p>En el meu cas, com que el meu usuari és <em>renat</em>, veig:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span>    <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">:</span><span class="n">ALL</span><span class="p">)</span> <span class="n">ALL</span>
+<span class="n">renat</span>   <span class="n">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">ALL</span><span class="p">:</span><span class="n">ALL</span><span class="p">)</span> <span class="n">ALL</span>
+</pre></div>
+</div>
+<p>Guarda els canvis i surt tot escrivint <code class="docutils literal notranslate"><span class="pre">:x!</span></code></p>
+<p>Finalment retorna al teu usuari fent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">root@debian: /home/renat# </span><span class="nb">exit</span>
+<span class="gp">renat@debian: ~$</span>
+</pre></div>
+</div>
+<p>A partir d'ara, el teu usuari podrà executar comandes privilegiades amb
+<code class="docutils literal notranslate"><span class="pre">sudo</span></code>. Per exemple, pots revisar si hi ha actualitzacions fent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+<p>Quan et demani el <em>password</em> posa el del teu usuari ara en comptes del de
+<code class="docutils literal notranslate"><span class="pre">root</span></code>.</p>
+<p>En aquests moments tens una màquina virtual en perfectes condicions per
+començar aquest curs. Felicitats!</p>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="equip_install_guest_additions.html" class="btn btn-neutral float-left" title="Instal·lació Guest Additions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="requeriments_editor.html" class="btn btn-neutral float-right" title="Editor" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
