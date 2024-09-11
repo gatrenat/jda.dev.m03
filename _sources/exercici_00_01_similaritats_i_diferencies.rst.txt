@@ -131,7 +131,7 @@ Un cop finalitzat, registra els canvis al control de versions i puja'ls a GitHub
 Pots comprovar que tot està correcte, mirant directament a l'aplicació Web de
 GitHub.
 
-*Nota*: en realitat no cal que facis un ``push`` per cada exercici que
+*Nota*: En realitat no cal que facis un ``push`` per cada exercici que
 finalitzis. Ho pots fer només en finalitzar la teva sessió de treball. El
 que sí és **molt** recomanable és que facis el ``add`` i el ``commit`` per
 cada exercici, doncs et simplificarà molt trobar la solució en cas que

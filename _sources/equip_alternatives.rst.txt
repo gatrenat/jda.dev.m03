@@ -28,7 +28,7 @@ la butxaca per treballar amb diferents equips.  Recorda només que les
 versions antigues d'USB solen reduir la velocitat respecte el disc dur de
 l'equip. Amb un USB 3.x segurament tindràs un rendiment acceptable.
 
-Una altra opció si uses MSWindows. Des de la versió 10, Windowes ofereix
+Una altra opció si uses MSWindows. Des de la versió 10, Windows ofereix
 la possibilitat d'instaŀlar una màquina virtual directament des de la
 botiga. Et caldrà activar el *subsistema linux* i escollir alguna
 distribució. Vigila perquè algunes distribucions són antigues i podries

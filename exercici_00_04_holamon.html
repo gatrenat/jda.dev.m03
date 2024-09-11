@@ -175,47 +175,44 @@ una mica de temps per descriure què has fet. Aquests missatges t'ajudaran
 molt per trobar una versió en cas que tinguis algun problema en el futur.</p>
 <p>Ara és el moment de comprovar que el programa fa l'esperat:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>prgtest
-<span class="go">S&#39;ha trobat un error en executar la prova 01</span>
+<span class="go">🟢 INFO: Test de compilació principal passat</span>
+<span class="go">⛔ ERROR: La prova d&#39;entrada/sortida 01 ha fallat.</span>
 
+<span class="go">He trobat una discrepància en la sortida estànadard del teu programa</span>
 
-<span class="go">Execució del programa</span>
-<span class="go">=====================</span>
-
-<span class="go">L&#39;execució ha estat la següent:</span>
-
+<span class="go">He executat el teu programa amb la comanda:</span>
 <span class="gp">$ </span>java<span class="w"> </span>HolaMon
 
-<span class="go">Sortida esperada</span>
-<span class="go">================</span>
+<span class="go">No li he passat cap més entrada.</span>
 
-<span class="go">S&#39;esperava la següent sortida del programa:</span>
+<span class="go">El que esperava per sortida estàndard és:</span>
+<span class="go">1  → Hello World!</span>
 
-<span class="go">1!  Hello World!</span>
+<span class="go">La sortida ha produït el teu programa ha estat:</span>
+<span class="go">1  → Hola Món!</span>
 
-<span class="go">Sortida trobada</span>
-<span class="go">===============</span>
-
-<span class="go">La sortida que ha generat el programa ha estat:</span>
-<span class="go">1!  Hola Món!</span>
-
-<span class="go">Discrepància</span>
-<span class="go">============</span>
-
-<span class="go">Les següents línies difereixen</span>
-<span class="go">1   Hello World!</span>
-<span class="go">1   Hola Món!</span>
+<span class="go">Aquesta és la primera diferència:</span>
+<span class="go">1    Hello World!</span>
+<span class="go">1    Hola Món!</span>
+<span class="go">-     ^</span>
+<span class="go">    💡 Executa el teu programa amb l&#39;entrada especificada per reproduir l&#39;error</span>
 </pre></div>
 </div>
 <p>Ops! Què ha passat? Sembla que el nostre programa no passa una de les
 proves!</p>
-<p>Si ens fixe'm bé en el que ens diu <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> veiem que la sortida
-esperada era <code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">World!&quot;</span></code> mentre que la que ha generat el nostre
-programa ha estat <code class="docutils literal notranslate"><span class="pre">&quot;Hola</span> <span class="pre">Món!&quot;</span></code>.</p>
+<p>Si ens fixem bé en el que ens diu <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> veiem que la sortida esperada era
+<code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">World!&quot;</span></code> mentre que la que ha generat el nostre programa ha estat
+<code class="docutils literal notranslate"><span class="pre">&quot;Hola</span> <span class="pre">Món!&quot;</span></code>. De fet, fins i tot ens indica quina és la primera lletra que
+difereix. Per descomptat, podrien haver-hi més errors. En aquest tipus de
+proves, <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> només ens donarà el primer error que trobi.</p>
 <p>Però el meu programa estava bé, profe. Si he copiat exactament el teu
 codi!</p>
 <p>D'acord. He fet una <em>miqueta</em> de trampa aquí i he demanat que la prova
-requereixi que la sortida del programa estigui en anglès amb l'objectiu
-que poguessis veure un error de <code class="docutils literal notranslate"><span class="pre">prgtest</span></code></p>
+requereixi que la sortida del programa estigui en anglès. Tenia una bona raó
+per enredar-te: que poguessis veure un error de <code class="docutils literal notranslate"><span class="pre">prgtest</span></code>. Si segueixes el
+curs sencer, el <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> serà una eina tan important (i estimada/odiada) com
+ho pugui ser el compilador <code class="docutils literal notranslate"><span class="pre">javac</span></code>. Està bé que vagis coneixent les seves
+<em>manies</em>.</p>
 <p>Ara que ja saps quin és el problema, corregeix el codi, torna a fer una
 prova manual per veure que tot estigui bé, registra el canvi i passa un
 altre cop <code class="docutils literal notranslate"><span class="pre">prgtest</span></code>:</p>

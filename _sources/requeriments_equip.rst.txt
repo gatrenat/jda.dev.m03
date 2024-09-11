@@ -21,6 +21,16 @@ Et caldrà, per tant, un ordinador amb una distribució GNU/Linux. Et
 recomano un Debian o Ubuntu recent en la configuració per defecte. No cal
 que sigui la darrera versió.
 
+.. important::
+
+   Els programes de suport estan preparats per funcionar en una arquitectura
+   AMD de 64 bits (x86-64).
+   El més probable és que el teu ordinador tingui aquesta arquitectura.
+   Recentment, però, alguna marca (Apple) ha començat a comercialitzar
+   equips amb arquitectura ARM. En cas que el teu equip tingui aquesta
+   arquitectura, podries trobar dificultats per executar-hi els programes de
+   suport. Parlem-ne.
+
 L'ordinador no cal que sigui súper potent, doncs la major part del temps
 estarem editant text, navegant i executant codi des de línia de comandes.
 Això permet que puguis seguir el curs amb una petita partició al teu
@@ -33,8 +43,23 @@ de 2GHz, amb 4GB de RAM i 25GB de disk dur, i una resolució VGA de
 1024x768. Si el teu equip no arriba a això, no pateixis doncs hi ha
 alternatives més barates. Pregunta'm si et cal.
 
-A continuació et faig dues propostes d'instaŀlació. A veure quina
+Per treballar còmodament aquest curs, et recomano un equip amb un mínim de 8 GB
+de RAM, si pots, millor 16, i uns 128 GB de disc (preferiblement SSD). El
+processador pot ser senzill (per exemple, un Intel Core i3 de 8a generació o
+equivalent) i la resolució de pantalla mínima de 1366x768, tot i que 1920x1080
+seria ideal per a més comoditat. A partir d'aquí, el que pugui i vulgui
+permetre's la teva butxaca. Recorda que aquestes són especificacions
+específiques per aquest curs, i que has de considerar altres usos del teu
+equip.
+
+A continuació et faig algunes propostes d'instaŀlació. A veure quina
 s'adapta més a la teva situació/preferències.
+
+Tingues present que les versions de les aplicacions i sistemes operatius a què
+fan referència els següents tutorials, eren les actuals en el moment de la seva
+realització i és fàcil que no coincideixin plenament amb el que et trobaràs. En
+cas de dificultats, comenta-ho al teu docent.
+
 
 .. toctree::
    :maxdepth: 1

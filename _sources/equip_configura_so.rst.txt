@@ -38,7 +38,12 @@ Ara se t'obrirà un editor amb una configuració.
 
        # cp /etc/sudoers{.antic,}
 
-Dins de l'editor, escriu ``/ALL``
+Dins de l'editor, escriu ``/root.*ALL``. El cursor es col·locarà a la línia amb
+el contingut:
+
+::
+
+    root    ALL=(ALL:ALL) ALL
 
 Ara prem la tecla ``y`` dos cops i a continuació prem ``p``. Acabes de
 duplicar la línia, oi?

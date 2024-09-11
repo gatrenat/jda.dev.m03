@@ -92,49 +92,46 @@ Ara és el moment de comprovar que el programa fa l'esperat:
 .. code-block:: console
 
     $ prgtest
-    S'ha trobat un error en executar la prova 01
+    🟢 INFO: Test de compilació principal passat
+    ⛔ ERROR: La prova d'entrada/sortida 01 ha fallat.
 
+    He trobat una discrepància en la sortida estànadard del teu programa
 
-    Execució del programa
-    =====================
+    He executat el teu programa amb la comanda:
+    $ java HolaMon
 
-    L'execució ha estat la següent:
+    No li he passat cap més entrada.
 
-    $ java HolaMon 
+    El que esperava per sortida estàndard és:
+    1  → Hello World!
 
-    Sortida esperada
-    ================
+    La sortida ha produït el teu programa ha estat:
+    1  → Hola Món!
 
-    S'esperava la següent sortida del programa:
-
-    1!  Hello World!
-
-    Sortida trobada
-    ===============
-
-    La sortida que ha generat el programa ha estat:
-    1!  Hola Món!
-
-    Discrepància
-    ============
-
-    Les següents línies difereixen
-    1   Hello World!
-    1   Hola Món!
+    Aquesta és la primera diferència:
+    1    Hello World!
+    1    Hola Món!
+    -     ^
+        💡 Executa el teu programa amb l'entrada especificada per reproduir l'error
 
 Ops! Què ha passat? Sembla que el nostre programa no passa una de les
 proves!
 
-Si ens fixe'm bé en el que ens diu ``prgtest`` veiem que la sortida
-esperada era ``"Hello World!"`` mentre que la que ha generat el nostre
-programa ha estat ``"Hola Món!"``.
+Si ens fixem bé en el que ens diu ``prgtest`` veiem que la sortida esperada era
+``"Hello World!"`` mentre que la que ha generat el nostre programa ha estat
+``"Hola Món!"``. De fet, fins i tot ens indica quina és la primera lletra que
+difereix. Per descomptat, podrien haver-hi més errors. En aquest tipus de
+proves, ``prgtest`` només ens donarà el primer error que trobi.
 
 Però el meu programa estava bé, profe. Si he copiat exactament el teu
 codi!
 
 D'acord. He fet una *miqueta* de trampa aquí i he demanat que la prova
-requereixi que la sortida del programa estigui en anglès amb l'objectiu
-que poguessis veure un error de ``prgtest``
+requereixi que la sortida del programa estigui en anglès. Tenia una bona raó
+per enredar-te: que poguessis veure un error de ``prgtest``. Si segueixes el
+curs sencer, el ``prgtest`` serà una eina tan important (i estimada/odiada) com
+ho pugui ser el compilador ``javac``. Està bé que vagis coneixent les seves
+*manies*.
 
 Ara que ja saps quin és el problema, corregeix el codi, torna a fer una
 prova manual per veure que tot estigui bé, registra el canvi i passa un

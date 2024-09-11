@@ -132,16 +132,6 @@ facis en aquesta assignatura quedi aïllada de la resta.</p></li>
 <p>Per aquestes situacions, una solució fàcil i força acceptable és crear una
 <em>màquina virtual</em>. En aquest context i simplificant-ho força, màquina
 virtual es refereix a un sistema operatiu <em>dins</em> el teu sistema operatiu.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Jo ja en sé de fer màquines virtuals!</p>
-<p>Si ja tens els dits pelats d'instaŀlar màquines virtuals, pots ometre
-aquesta pàgina. Simplement assegura't que t'instaŀles un GNU/Linux, per
-exemple Debian 10 o posterior. Altres distribucions no haurien de
-suposar-te cap problema pel que fa a aquesta assignatura sempre que
-sàpigues manegar-te amb la que escullis. Si vas per aquest camí i hi trobes
-problemes, avisa i potser et sé orientar per que en trobis la solució.</p>
-</div>
 <p>Aquesta secció t'ofereix una guia per crear una màquina virtual a partir d'una
 de <em>prefabricada</em>. Aquesta opció és la que et permet despreocupar-te al màxim
 de detalls tècnics ja que, fins i tot, porta instaŀlat la major part del
@@ -152,8 +142,8 @@ instaŀlarem a sobre, la <em>màquina virtual</em>.</p>
 <p>Potser estàs pensant que t'agradaria muntar tu la màquina virtual pel teu
 compte i així aprendre a fer-ho. Si és així i disposes d'una mica més de temps,
 t'he preparat <cite>aquesta guia &lt;equip_maquina_virtual&gt;</cite> per fer-ho.</p>
-<p>Per aquestes instruccions, suposaré que el teu sistema amfitrió és un Windows
-10. Altres sistemes haurien de ser molt similars.</p>
+<p>Per aquestes instruccions, suposaré que el teu sistema amfitrió és un
+MSWindows. Altres sistemes haurien de ser molt similars.</p>
 <section id="installacio-de-virtualbox">
 <h2>Instaŀlació de VirtualBox<a class="headerlink" href="#installacio-de-virtualbox" title="Enllaça amb aquesta capçalera"></a></h2>
 <p>En primer lloc, ens cal un programa que gestioni la màquina virtual que
@@ -191,14 +181,14 @@ d'instaŀlar controladors (en anglès <em>drivers</em>) addicionals, probablemen
 </section>
 <section id="descarregar-la-maquina-preconfigurada">
 <h2>Descarregar la màquina preconfigurada<a class="headerlink" href="#descarregar-la-maquina-preconfigurada" title="Enllaça amb aquesta capçalera"></a></h2>
-<p>Aquest és <a class="reference download external" download="" href="https://drive.google.com/file/d/17I5gEjks4WlFvCkVk6XPultqw6Duqm4j/view?usp=drive_link"><code class="xref download docutils literal notranslate"><span class="pre">l'enllaç</span></code></a>
+<p>Aquest és <a class="reference download external" download="" href="https://drive.google.com/file/d/1pPGE-n0dVrkHvxEUE0uqM2x1-sJeEwEb/view?usp=sharing"><code class="xref download docutils literal notranslate"><span class="pre">l'enllaç</span></code></a>
 al fitxer que conté la màquina virtual. És probable que et mostri una
 finestreta perquè em demanis accés. Si és així, indica'm al missatge qui ets.
 També és probable que t'avisi que no pot comprovar si el fitxer té virus.
 T'hauràs d'arriscar aquí. Si et serveix, al voltant d'un centenar de persones
 han fet servir exactament aquest fitxer abans que tu. Avisa'm si tens algun
 problema.</p>
-<p>El fitxer fa 3,4Gb i, depenent de la connexió que tinguis, potser et toca
+<p>El fitxer fa 3,5Gb i, depenent de la connexió que tinguis, potser et toca
 esperar una mica.</p>
 <p>Un cop finalitzada la descàrrega, recorda on has deixat el fitxer. Per exemple,
 a la carpeta <em>Baixades</em></p>
@@ -212,10 +202,10 @@ a la carpeta <em>Baixades</em></p>
 <p>Prem el botó <em>Endavant</em> i revisa les opcions:</p>
 <img alt="_images/vbox_debian_install_ova_03_opcions.png" class="align-center" src="_images/vbox_debian_install_ova_03_opcions.png" />
 <p>Per canviar el valor d'alguna opció fes un doble click a sobre i edita segons la teva preferència.</p>
-<p>És important especialment el valor de la <em>RAM</em>. La preinstaŀlació indica 4096Mb
+<p>És important especialment el valor de la <em>RAM</em>. La preinstaŀlació indica 6Gb
 perquè estic suposant que la teva màquina anfitriona en té més (potser 8GB) Si
-l'amfitrió té 4Gb, hauràs de baixar aquesta quantitat, per exemple a 2048Mb o
-3072Mb. Em sap greu però t'haig d'avisar que t'anirà lent.</p>
+l'amfitrió en té 4Gb, hauràs de baixar la RAM de la màquina virtual, per
+exemple a 2048Mb o 3072Mb. Em sap greu però t'haig d'avisar que t'anirà lent.</p>
 <img alt="_images/vbox_debian_install_ova_04_edit_opcions.png" class="align-center" src="_images/vbox_debian_install_ova_04_edit_opcions.png" />
 <p>Un cop hagis finalitzat, prem el botó <em>Importa</em> i espera un momentet</p>
 <img alt="_images/vbox_debian_install_ova_05_important.png" class="align-center" src="_images/vbox_debian_install_ova_05_important.png" />
@@ -227,7 +217,8 @@ contrassenyes indicades a la descripció de la màquina.</p>
 <img alt="_images/vbox_debian_install_ova_07_login.png" class="align-center" src="_images/vbox_debian_install_ova_07_login.png" />
 <p>Selecciona l'usuari <em>General</em> i escriu la contrasenya corresponent.</p>
 <p>Et recomano que canviïs les contrasenyes per quelcom que t'agradi més. Així, de
-pas, també faràs més segur el teu sistema. Demana ajut per fer-ho.</p>
+pas, també faràs més segur el teu sistema. Demana ajut per fer-ho si no te'n
+surts.</p>
 <p>Aquesta màquina virtual ja porta instaŀlades les <em>guest additions</em>, unes
 utilitats per fer més còmoda la interacció entre la màquina amfitrió i la
 virtual. Et proposo que li facis una ullada al final de la secció
