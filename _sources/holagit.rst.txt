@@ -108,31 +108,35 @@ convidat al teu repositori, no em resultarà fàcil saber que ets un dels
 meus alumnes. GitHub és molt escrupolós amb la teva privacitat i no
 compartirà la teva adreça amb potencials desconeguts.
 
-Em caldrà que m'enviïs un correu amb l'adreça del centre en el que
-m'indiquis:
+Demana als teus docents que et passin la URL del formulari de subscripció i
+emplena'l.
 
-* el teu nom complet
+.. Em caldrà que m'enviïs un correu amb l'adreça del centre en el que
+.. m'indiquis:
+.. 
+.. * el teu nom complet
+.. 
+.. * el nom amb el que t'agradaria que em referís a tu
+.. 
+..   Per exemple, si et dius *Renat Maria*,  potser t'agrada que et diguin
+..   simplement *Renat* o *Renny* o *Maria*.
+.. 
+..   Si no m'indiques cap nom, faré servir el teu nom complet sense els
+..   cognoms.
+.. 
+.. * la URL del teu repositori
 
-* el nom amb el que t'agradaria que em referís a tu
-
-  Per exemple, si et dius *Renat Maria*,  potser t'agrada que et diguin
-  simplement *Renat* o *Renny* o *Maria*.
-
-  Si no m'indiques cap nom, faré servir el teu nom complet sense els
-  cognoms.
-
-* la URL del teu repositori
-
-Trobaràs la URL del teu repositori aquí:
+El formulari et demanarà la URL del teu repositori, que pots trobar aquí:
 
 .. figure:: _images/githubrepourl.png
     :figclass: align-center
 
-Fes click sobre el botó verd *Code* i copia la el contingut de la caixeta
-que t'apareix. En el meu cas ``git@github.com:renat/introprg.git``.
-Podràs copiar aquesta adreça amb la combinació de tecles ``<CTRL> c`` o bé
-fent click sobre el botó que apareix a la dreta. El podràs enganxar al teu
-correu amb ``<CTRL> v`` o amb el botó dret del ratolí i *Enganxa*.
+Fes click sobre el botó verd *Code*, selecciona **SSH** i copia la el contingut
+de la caixeta que t'apareix. En el meu cas
+``git@github.com:renat/introprg.git``. Podràs copiar aquesta adreça amb la
+combinació de tecles ``<CTRL> c`` o bé fent click sobre el botó que apareix a
+la dreta. El podràs enganxar al formulari amb ``<CTRL> v`` o amb el botó dret
+del ratolí i *Enganxa*.
 
 
 Espai de treball
