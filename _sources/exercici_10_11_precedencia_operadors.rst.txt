@@ -1,0 +1,37 @@
+############################################################
+|exerciseicon___| Exercici 10_11. Precedència dels operadors
+############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``10_11_precedencia_operadors/``
+
+* Continguts relacionats: :doc:`expressions_booleanes_logics`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+
+Posa parèntesis i calcula el resultat final de les següents expressions de
+manera que quedi explícitada la precedència del operadors.
+
+Pots fer servir la *jshell* per comprovar els teus resultats.
+
+#. ``5 + 4 * 3``
+
+#. ``-5 * 4 + -3``
+
+#. ``true && false || ! true``
+
+#. ``false && (10 > 3) || ! (4 > 5)``
+
+#. ``(false == (5 > 4)) && (false == ! true) || (false != true)``
+
+Afegeix al menys 2 (dos) noves expressions i els seus resultats,
+inventades per tu. Intenta que, com a mínim una d'elles contingui
+operadors lògics.o
+
+**Pista**: La primera es podia resoldre, per exemple:
+
+    ``5 + 4 * 3 → 5 + (4 * 3) → 5 + 12 → 17``

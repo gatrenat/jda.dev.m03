@@ -1,0 +1,29 @@
+################################################
+|exerciseicon___| Exercici 10_12. Algunes taules
+################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``10_12_taules_veritat/``
+
+* Continguts relacionats: :doc:`taules_veritat`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+.. rubric:: Enunciat
+
+
+Composa una taula de veritat per cadascuna de les següents afirmacions:
+
+#. la Clara és major d'edat o bé la Clara és més jove que el Marc
+
+#. Al menys un de vosaltres, la Clara, el Marc o tu, és major d'edat
+
+#. la Clara és major d'edat, i tu ets major que el Marc però no major que
+   la Clara
+
+   Atenció a la coma! Fa de parèntesis per separar la primera subexpressió
+   de la resta!
+
+Pots realitzar-les en qualsevol format, fins i tot amb paper i bolígraf, i
+després lliures una foto.
