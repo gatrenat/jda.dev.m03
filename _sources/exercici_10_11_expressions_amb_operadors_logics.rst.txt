@@ -1,10 +1,10 @@
 ##################################################################
-|exerciseicon___| Exercici 10_10. Expressions amb operadors lògics
+|exerciseicon___| Exercici 10_11. Expressions amb operadors lògics
 ##################################################################
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``10_10_expressions_amb_operadors_logics/``
+* Carpeta de lliurament: ``10_11_expressions_amb_operadors_logics/``
 
 * Continguts relacionats: :doc:`expressions_booleanes_logics`
 

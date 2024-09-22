@@ -131,7 +131,7 @@ de les regles bàsiques que hauràs de seguir en aquest curs:
   No pateixis, si intentes declarar dues variables amb el mateix nom, el
   Java t'ho farà saber.
 
-|exerciseicon___| :doc:`exercici_10_06_nom_variables`
+|exerciseicon___| :doc:`exercici_10_07_nom_variables`
 
 El tipus d'una variable
 =======================
@@ -226,5 +226,5 @@ hem fet ja, són:
   del teu equip.
 
 
-|exerciseicon___| :doc:`exercici_10_07_valors_del_tipus_adequat`
+|exerciseicon___| :doc:`exercici_10_08_valors_del_tipus_adequat`
 

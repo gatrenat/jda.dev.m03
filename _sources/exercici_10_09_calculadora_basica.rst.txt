@@ -1,10 +1,10 @@
 ####################################################
-|exerciseicon__T| Exercici 10_08. Calculadora bàsica
+|exerciseicon__T| Exercici 10_09. Calculadora bàsica
 ####################################################
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``10_08_calculadora_basica/``
+* Carpeta de lliurament: ``10_09_calculadora_basica/``
 
 * Continguts relacionats: :doc:`expressions_numeriques`
 

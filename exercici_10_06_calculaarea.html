@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exercici 10_02. Duplica un número &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+  <title>Exercici 10_06. Càlcul de l&#39;àrea d&#39;un cercle &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 10_03. Inicialització en línia" href="exercici_10_03_inicialitzacio_en_linia.html" />
-    <link rel="prev" title="Exercici 10_01. Comprensió de EndevinaNombre" href="exercici_10_01_comprensio.html" />
+    <link rel="next" title="Exercici 10_07. Noms de variables" href="exercici_10_07_nom_variables.html" />
+    <link rel="prev" title="Exercici 10_05. Noms i cognoms" href="exercici_10_05_nomcognom.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -67,11 +67,11 @@
 <li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_01_comprensio.html"> Exercici 10_01. Comprensió de <code class="docutils literal notranslate"><span class="pre">EndevinaNombre</span></code></a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 10_02. Duplica un número</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_10_02_duplica.html"> Exercici 10_02. Duplica un número</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_03_inicialitzacio_en_linia.html"> Exercici 10_03. Inicialització en línia</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_04_reduccio_de_prints.html"> Exercici 10_04. Reduïm <code class="docutils literal notranslate"><span class="pre">prints</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_05_nomcognom.html"> Exercici 10_05. Noms i cognoms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_10_06_calculaarea.html"> Exercici 10_06. Càlcul de l'àrea d'un cercle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 10_06. Càlcul de l'àrea d'un cercle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_07_nom_variables.html"> Exercici 10_07. Noms de variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_08_valors_del_tipus_adequat.html"> Exercici 10_08. Valors del tipus adequat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_10_09_calculadora_basica.html"> Exercici 10_09. Calculadora bàsica</a></li>
@@ -106,12 +106,12 @@
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
           <li class="breadcrumb-item"><a href="basics_exercicis.html">Llista d'exercicis</a></li>
           <li class="breadcrumb-item"><a href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
-      <li class="breadcrumb-item active"> Exercici 10_02. Duplica un número</li>
+      <li class="breadcrumb-item active"> Exercici 10_06. Càlcul de l'àrea d'un cercle</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_10_01_comprensio.html" class="btn btn-neutral float-left" title="Exercici 10_01. Comprensió de EndevinaNombre" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_10_03_inicialitzacio_en_linia.html" class="btn btn-neutral float-right" title="Exercici 10_03. Inicialització en línia" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_10_05_nomcognom.html" class="btn btn-neutral float-left" title="Exercici 10_05. Noms i cognoms" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_10_07_nom_variables.html" class="btn btn-neutral float-right" title="Exercici 10_07. Noms de variables" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -119,56 +119,49 @@
     
            <div itemprop="articleBody">
              
-  <section id="exerciseicon-t-exercici-10-02-duplica-un-numero">
-<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 10_02. Duplica un número<a class="headerlink" href="#exerciseicon-t-exercici-10-02-duplica-un-numero" title="Enllaça amb aquesta capçalera"></a></h1>
+  <section id="exerciseicon-t-exercici-10-06-calcul-de-l-area-d-un-cercle">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 10_06. Càlcul de l'àrea d'un cercle<a class="headerlink" href="#exerciseicon-t-exercici-10-06-calcul-de-l-area-d-un-cercle" title="Enllaça amb aquesta capçalera"></a></h1>
 <p class="rubric">Context</p>
 <ul class="simple">
-<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">10_02_duplica/</span></code></p></li>
-<li><p>Continguts relacionats: <a class="reference internal" href="declaracions_i_assignacions.html"><span class="doc">Declaracions i assignacions</span></a></p></li>
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">10_06_calculaarea/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="entrada_sortida.html"><span class="doc">Instruccions d'entrada/sortida</span></a></p></li>
 <li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Desenvolupa un programa que dupliqui per 2 el número que rep en
-executar-ho</p>
-<p>Aquí tens una plantilla pel teu codi. Pots copiar-la i enganxar-la al teu
-editor pel fitxer <code class="docutils literal notranslate"><span class="pre">Duplica.java</span></code>. Únicament hauràs de
-reemplaçar els comentaris <code class="docutils literal notranslate"><span class="pre">/*█████*/</span></code> pel codi corresponent.</p>
+<p>Recordes el programa que calculava l'àrea d'un cercle que vam analitzar a <a class="reference internal" href="primer_contacte.html"><span class="doc">Un primer contacte</span></a>?</p>
+<p>En aquest exercici, recuperaràs la versió en Java, l'adaptaràs a la manera de
+fer del curs i ampliaràs la seva funcionalitat per afegir les unitats.</p>
+<p>Un exemple d'ús:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"> $ </span>java<span class="w"> </span>CalculaArea
+<span class="hll"><span class="go"> Càlcul de l&#39;area d&#39;un cercle</span>
+</span><span class="hll"><span class="go"> Introduïu el radi:</span>
+</span><span class="go"> 2</span>
+<span class="hll"><span class="go"> Introduïu les unitats:</span>
+</span><span class="go"> cm</span>
+<span class="hll"><span class="go"> L&#39;area del cercle es de 78.53975 cm^2</span>
+</span></pre></div>
+</div>
+<p>Copia la següent plantilla a un editor i guarda-la en la carpeta corresponent a
+l'exercici. Reemplaça els comentaris <code class="docutils literal notranslate"><span class="pre">/*█████*/</span></code> pel codi corresponent.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm"> * Aquest programa duplica el valor que rep com a primer argument</span>
-<span class="cm"> *</span>
-<span class="cm"> * El programa no controla valors no adequats d&#39;entrada</span>
-<span class="cm"> */</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Duplica</span><span class="w"> </span><span class="p">{</span>
+<span class="cm">* █████</span>
+<span class="cm">*/</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CalculaArea</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">        </span><span class="c1">// declara les variables a utilitzar</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreADuplicar</span><span class="p">;</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nombreDuplicat</span><span class="p">;</span>
-
-<span class="w">        </span><span class="c1">// obté el nombre a duplicar</span>
-<span class="w">        </span><span class="n">nombreADuplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-
-<span class="w">        </span><span class="c1">// calcula el doble</span>
-<span class="w">        </span><span class="n">nombreDuplicat</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="cm">/*█████*/</span><span class="p">;</span>
-
-<span class="w">        </span><span class="c1">// mostra resultats</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;El doble de &quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="cm">/*█████*/</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; és &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Càlcul de l&#39;àrea d&#39;un cercle&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduïu el radi:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="cm">/*█████*/</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">unitats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/*█████*/</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">radi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Float</span><span class="p">.</span><span class="na">parseFloat</span><span class="p">(</span><span class="n">linia</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radi</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="cm">/*█████*/</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;^2&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Per exemple, considera la següent execució:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>Duplica<span class="w"> </span><span class="m">5</span>
-<span class="hll"><span class="go">El doble de 5 és 10</span>
-</span></pre></div>
-</div>
-<p>En acabar, no oblidis pujar els canvis a GitHub! Si has oblidat com
-fer-ho, torna a revisar la guia <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">Com lliurar un exercici</span></a></p>
+<p>Nota: Assegura't que inclous una capçalera descriptiva.</p>
 </section>
 
 
@@ -197,8 +190,8 @@ fer-ho, torna a revisar la guia <a class="reference internal" href="com_lliurar.
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_10_01_comprensio.html" class="btn btn-neutral float-left" title="Exercici 10_01. Comprensió de EndevinaNombre" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_10_03_inicialitzacio_en_linia.html" class="btn btn-neutral float-right" title="Exercici 10_03. Inicialització en línia" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_10_05_nomcognom.html" class="btn btn-neutral float-left" title="Exercici 10_05. Noms i cognoms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_10_07_nom_variables.html" class="btn btn-neutral float-right" title="Exercici 10_07. Noms de variables" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -54,5 +54,5 @@ resta de la divisió entera.
 En aquest cas, calcular mòdul 2 ens permet saber si un nombre és parell o
 senar doncs els parells sempre resultaran amb resta 0 i els senars amb 1.
 
-|exerciseicon__T| :doc:`exercici_10_08_calculadora_basica`
+|exerciseicon__T| :doc:`exercici_10_09_calculadora_basica`
 

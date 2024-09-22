@@ -133,6 +133,8 @@ El programa fa el següent:
 
 |exerciseicon__T| :doc:`exercici_10_05_nomcognom`
 
+|exerciseicon__T| :doc:`exercici_10_06_calculaarea`
+
 .. _continguts_llegint_diferents_tipus:
 
 Llegint diferents tipus

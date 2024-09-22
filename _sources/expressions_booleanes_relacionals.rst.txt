@@ -49,5 +49,5 @@ exemple:
 * (5 > 4) != false → true != false → true
 
 
-|exerciseicon___| :doc:`exercici_10_09_operadors_relacionals`
+|exerciseicon___| :doc:`exercici_10_10_operadors_relacionals`
 

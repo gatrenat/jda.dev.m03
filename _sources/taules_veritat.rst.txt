@@ -227,6 +227,6 @@ nombre de files amb el mateix valor el podrem calcular a partir de 2
 elevat al nombre de variables que venen a continuació. No et preocupis
 doncs en aquest curs no passarem de 4 variables.
 
-|exerciseicon___| :doc:`exercici_10_12_taules_veritat`
+|exerciseicon___| :doc:`exercici_10_13_taules_veritat`
 
-|exerciseicon___| :doc:`exercici_10_13_simplificacions_expressions`
+|exerciseicon___| :doc:`exercici_10_14_simplificacions_expressions`

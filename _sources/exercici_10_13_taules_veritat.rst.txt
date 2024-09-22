@@ -1,10 +1,10 @@
 ################################################
-|exerciseicon___| Exercici 10_12. Algunes taules
+|exerciseicon___| Exercici 10_13. Algunes taules
 ################################################
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``10_12_taules_veritat/``
+* Carpeta de lliurament: ``10_13_taules_veritat/``
 
 * Continguts relacionats: :doc:`taules_veritat`
 

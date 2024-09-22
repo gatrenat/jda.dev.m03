@@ -1,10 +1,10 @@
 ###################################################
-|exerciseicon___| Exercici 10_06. Noms de variables
+|exerciseicon___| Exercici 10_07. Noms de variables
 ###################################################
 
 .. rubric:: Context
 
-* Carpeta de lliurament: ``10_06_nom_variables/``
+* Carpeta de lliurament: ``10_07_nom_variables/``
 
 * Continguts relacionats: :doc:`variables`
 
