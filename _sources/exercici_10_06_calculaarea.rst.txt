@@ -30,7 +30,7 @@ Un exemple d'ús:
     2
     Introduïu les unitats:
     cm
-    L'area del cercle es de 78.53975 cm^2
+    L'area és 78.53975 cm^2
 
 Copia la següent plantilla a un editor i guarda-la en la carpeta corresponent a
 l'exercici. Reemplaça els comentaris ``/*█████*/`` pel codi corresponent.
@@ -43,14 +43,20 @@ l'exercici. Reemplaça els comentaris ``/*█████*/`` pel codi correspon
     public class CalculaArea {
         public static void main(String[] args) {
             System.out.println("Càlcul de l'àrea d'un cercle");
-            System.out.println("Introduïu el radi:");
-            String linia = Entrada.readLine();
+            /*█████*/
+            String linia = /*█████*/;
             System.out.println(/*█████*/);
             String unitats = /*█████*/;
             float radi = Float.parseFloat(linia);
             float area =  (float)Math.PI * radi * radi;
-            System.out.println("L'àrea és " + area + /*█████*/ + "^2");
+            /*█████*/
         }
     }
 
-Nota: Assegura't que inclous una capçalera descriptiva.
+Notes:
+
+- Assegura't que inclous una capçalera descriptiva.
+
+- Fixa't que aquest codi no inclou cap *import*, per tant, fes servir
+  ``Entrada.readLine()`` per llegir la entrada del teclat.
+

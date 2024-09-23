@@ -139,7 +139,7 @@ fer del curs i ampliaràs la seva funcionalitat per afegir les unitats.</p>
 </span><span class="go"> 2</span>
 <span class="hll"><span class="go"> Introduïu les unitats:</span>
 </span><span class="go"> cm</span>
-<span class="hll"><span class="go"> L&#39;area del cercle es de 78.53975 cm^2</span>
+<span class="hll"><span class="go"> L&#39;area és 78.53975 cm^2</span>
 </span></pre></div>
 </div>
 <p>Copia la següent plantilla a un editor i guarda-la en la carpeta corresponent a
@@ -150,18 +150,23 @@ l'exercici. Reemplaça els comentaris <code class="docutils literal notranslate"
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CalculaArea</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Càlcul de l&#39;àrea d&#39;un cercle&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduïu el radi:&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
+<span class="w">        </span><span class="cm">/*█████*/</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">linia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/*█████*/</span><span class="p">;</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="cm">/*█████*/</span><span class="p">);</span>
 <span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">unitats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/*█████*/</span><span class="p">;</span>
 <span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">radi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Float</span><span class="p">.</span><span class="na">parseFloat</span><span class="p">(</span><span class="n">linia</span><span class="p">);</span>
 <span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radi</span><span class="p">;</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="cm">/*█████*/</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;^2&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="cm">/*█████*/</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Nota: Assegura't que inclous una capçalera descriptiva.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>Assegura't que inclous una capçalera descriptiva.</p></li>
+<li><p>Fixa't que aquest codi no inclou cap <em>import</em>, per tant, fes servir
+<code class="docutils literal notranslate"><span class="pre">Entrada.readLine()</span></code> per llegir la entrada del teclat.</p></li>
+</ul>
 </section>
 
 
