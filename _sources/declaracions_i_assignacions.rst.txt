@@ -315,7 +315,7 @@ Així, per exemple:
 
     int nombre = 10;
 
-Pràctic, no?
+Pràctic, oi?
 
 |exerciseiconO_T| :doc:`exercici_10_03_inicialitzacio_en_linia`
 
