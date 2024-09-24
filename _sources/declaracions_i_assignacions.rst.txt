@@ -28,15 +28,15 @@ Fem un petit joc dels d'endevinar un nombre.
 
 Segueix les instruccions:
 
-* pensa't un nombre
+* Pensa't un nombre
 
-* multiplica el nombre pensat per 3
+* Multiplica el nombre pensat per 3
 
-* suma-li 6
+* Suma-li 6
 
-* divideix-ho entre 3
+* Divideix-ho entre 3
 
-* resta-li el número que et vas pensar
+* Resta-li el número que et vas pensar
 
 Deixa'm que endevini. Et queden, et queden… 2, oi que sí?
 
