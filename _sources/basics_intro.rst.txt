@@ -2,7 +2,7 @@
 Introducció
 ###########
 
-Malgrat molta gent pensa que la programació és quelcom molt complicat, en
+Molta gent pensa que la programació és quelcom molt complicat, però en
 realitat es tracta de saber *jugar* amb un conjunt relativament reduït de
 conceptes bàsics.
 
