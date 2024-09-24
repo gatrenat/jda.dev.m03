@@ -2,9 +2,7 @@
 Apèndix
 #######
 
-A aquesta secció final dels apunts hi trobaràs elements addicionals que poden
-ser-te d'utilitat a l'hora d'ampliar els conceptes treballats durant el
-curs.
+A aquesta secció dels apunts hi trobaràs elements addicionals del curs.
 
 .. toctree::
     :maxdepth: 1
