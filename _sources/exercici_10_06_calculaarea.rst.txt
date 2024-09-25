@@ -28,7 +28,7 @@ Un exemple d'ús:
     Càlcul de l'area d'un cercle
     Introduïu el radi:
     2
-    Introduïu les unitats:
+    Introduïu les unitats (ex. cm):
     cm
     L'area és 78.53975 cm^2
 
