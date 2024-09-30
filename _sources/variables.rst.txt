@@ -124,6 +124,14 @@ de les regles bàsiques que hauràs de seguir en aquest curs:
   ``laDataDeNaixementDelGatRenat`` pot prescindir de partícules i altres
   dades conegudes, quedant en ``dataNaixementRenat``
 
+* El nom no pot coincidir amb paraules reservades del llenguatge.
+
+  Poc a poc anirem descobrint quines són aquestes paraules reservades. De
+  moment ja n'hem vist unes poques. Per exemple ``int`` o ``public``. Els
+  editors de text sovint ens les remarcaran amb un color diferent i, el millor
+  de tot, si ens equivoquem i anomenem una variable com una paraula reservada,
+  el compilador es queixarà.
+
 * Finalment, el nom d'una variable ha de ser únic en el seu context. És a
   dir, cada variable ha de tenir un nom diferent o sinó tornaríem boig al
   Java per saber a quin valor ens referim!
