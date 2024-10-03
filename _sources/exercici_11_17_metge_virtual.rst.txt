@@ -1,0 +1,78 @@
+##################################################
+|exerciseicon__T| Exercici 11_17. El metge virtual
+##################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``11_17_metge_virtual/``
+
+* Continguts relacionats: :doc:`condicionals_conclusions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+
+En aquest exercici hauràs de desenvolupar un metge virtual “especialista”
+en refredats.
+
+El nostre metge, només té les següents regles que aplica en ordre:
+
+a) si el malalt presenta esternuts i mal de cap llavors, si té
+problemes d’estómac li recomanarà prendre paracetamol i si no en té li
+proposarà prendre àcid acetil salicílic (una aspirina, vaja).
+
+b) si el malalt ens diu que té tos llavors, si és massa jove (menor de
+12 anys) li recomanarà un caramel de mel i altrament li proposarà un
+caramel d’eucaliptus.
+
+c) si no presenta cap dels anteriors símptomes, el metge proposarà al
+pacient que vingui a la seva consulta presencial per poder
+examinar-lo.
+
+Notes:
+
+- El programa es dirà ``MetgeVirtual``
+
+- Pots suposar que el programa només rebrà respostes correctes.
+
+- El programa preguntarà el mínim d'informació imprescindible per donar
+  resposta.
+
+Considera les següents iteracions:
+
+.. code-block:: console
+   :emphasize-lines: 2,4,6
+
+   esternuts? (sí o no)
+   sí
+   mal de cap? (sí o no)
+   sí
+   problemes d'estómac? (sí o no)
+   no
+   pren una aspirina.
+
+.. code-block:: console
+   :emphasize-lines: 2,4,6,8
+
+   esternuts? (sí o no)
+   sí
+   mal de cap? (sí o no)
+   no
+   tos? (sí o no)
+   sí
+   edat?
+   10
+   pren un carmel d'eucaluptus
+
+.. code-block:: console
+   :emphasize-lines: 2,4
+
+   Esternuts? (sí o no)
+   no
+   tos? (sí o no)
+   no
+   vine a la consulta
+

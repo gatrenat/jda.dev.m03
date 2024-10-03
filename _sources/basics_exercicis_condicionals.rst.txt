@@ -1,0 +1,26 @@
+#########################
+Instruccions condicionals
+#########################
+
+La llista d'exercicis sobre :doc:`condicionals <condicionals>` és:
+
+.. toctree::
+    :titlesonly:
+
+    exercici_11_01_preso.rst
+    exercici_11_02_dosenordre.rst
+    exercici_11_03_parellsenar.rst
+    exercici_11_04_ternari.rst
+    exercici_11_05_indentacio.rst
+    exercici_11_06_autocaravana.rst
+    exercici_11_07_diessetmana.rst
+    exercici_11_08_diessetmana_switch
+    exercici_11_09_diessetmana_switch_expr
+    exercici_11_10_mesosanys.rst
+    exercici_11_11_tresenordre.rst
+    exercici_11_12_calculadora_senzilla.rst
+    exercici_11_13_pagaments.rst
+    exercici_11_14_semafor.rst
+    exercici_11_15_nombre_de_fills.rst
+    exercici_11_16_ascensor.rst
+    exercici_11_17_metge_virtual.rst
