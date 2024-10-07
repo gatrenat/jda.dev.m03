@@ -65,7 +65,7 @@ Considera les següents iteracions:
    sí
    edat?
    10
-   pren un carmel d'eucaluptus
+   pren un carmel de mel
 
 .. code-block:: console
    :emphasize-lines: 2,4
