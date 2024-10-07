@@ -30,7 +30,7 @@ Una simulació d'execució pot ser:
     :emphasize-lines: 2
 
     $ java ParellSenar 8
-    Él número 8 és parell
+    El número 8 és parell
 
 Considera, si et cal, fer servir la següent plantilla
 
