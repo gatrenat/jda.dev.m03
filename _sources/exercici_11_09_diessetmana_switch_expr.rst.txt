@@ -49,5 +49,4 @@ aquesta ocasió fent servir ``switch`` en el format expressió.
 
 Sabràs que ho has fet bé si el teu programa **només** té una instrucció d'escriptura.
 
-A partir d'ara, si t'agrada, pots fer servir aquesta estructura en tots
-els teus programes.
+Manté el nom del programa de l'exercici anterior.

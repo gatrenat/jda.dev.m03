@@ -33,5 +33,7 @@ Un cop ho hagis consultat, considera un altre cop l'exercici
 dels :doc:`dies de la setmana <exercici_11_07_diessetmana>`. Crea una nova versió, en
 aquesta ocasió fent servir ``switch``.
 
+El nou nom del programa serà ``DiaSetmanaSwitch``.
+
 Si t'agrada com queda, pots fer servir aquesta nova estructura condicional
 en tots aquells exercicis que consideris convenient.
