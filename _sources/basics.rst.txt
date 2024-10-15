@@ -17,10 +17,10 @@ probablement et servirà per repassar.
     variables.rst
     expressions.rst
     condicionals.rst
+    while.rst
 
     basics_exercicis.rst
 
-..    while.rst
 ..    recorreguts.rst
 ..    strings.rst
 ..    control_bucles.rst
