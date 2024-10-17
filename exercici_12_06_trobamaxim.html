@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bucles condicionals &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+  <title>Exercici 12_06. Troba el màxim &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 12_01. Suma tres positius" href="exercici_12_01_sumatres.html" />
-    <link rel="prev" title="Exercici 11_17. El metge virtual" href="exercici_11_17_metge_virtual.html" />
+    <link rel="next" title="Exercici 12_07. La nota mitjana" href="exercici_12_07_mitjana.html" />
+    <link rel="prev" title="Exercici 12_05. El lloro" href="exercici_12_05_lloro.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -69,13 +69,13 @@
 <li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics_exercicis_condicionals.html">Instruccions condicionals</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Bucles condicionals</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="basics_exercicis_while.html">Bucles condicionals</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_01_sumatres.html"> Exercici 12_01. Suma tres positius</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_02_sumamaxtres.html"> Exercici 12_02. Suma com a molt tres positius</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_03_sumanotes.html"> Exercici 12_03. Suma notes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_04_quantsparells.html"> Exercici 12_04. Quants parells</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_05_lloro.html"> Exercici 12_05. El lloro</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_06_trobamaxim.html"> Exercici 12_06. Troba el màxim</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 12_06. Troba el màxim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_07_mitjana.html"> Exercici 12_07. La nota mitjana</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_08_estadistiques.html"> Exercici 12_08. Estadístiques</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_12_09_dowhile.html"> Exercici 12_09. La condició al final</a></li>
@@ -107,12 +107,13 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
           <li class="breadcrumb-item"><a href="basics_exercicis.html">Llista d'exercicis</a></li>
-      <li class="breadcrumb-item active">Bucles condicionals</li>
+          <li class="breadcrumb-item"><a href="basics_exercicis_while.html">Bucles condicionals</a></li>
+      <li class="breadcrumb-item active"> Exercici 12_06. Troba el màxim</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_11_17_metge_virtual.html" class="btn btn-neutral float-left" title="Exercici 11_17. El metge virtual" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_12_01_sumatres.html" class="btn btn-neutral float-right" title="Exercici 12_01. Suma tres positius" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_12_05_lloro.html" class="btn btn-neutral float-left" title="Exercici 12_05. El lloro" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_12_07_mitjana.html" class="btn btn-neutral float-right" title="Exercici 12_07. La nota mitjana" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -120,25 +121,40 @@
     
            <div itemprop="articleBody">
              
-  <section id="bucles-condicionals">
-<h1>Bucles condicionals<a class="headerlink" href="#bucles-condicionals" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>La llista d'exercicis sobre <a class="reference internal" href="while.html"><span class="doc">bucles condicionals</span></a> és:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_01_sumatres.html"> Exercici 12_01. Suma tres positius</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_02_sumamaxtres.html"> Exercici 12_02. Suma com a molt tres positius</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_03_sumanotes.html"> Exercici 12_03. Suma notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_04_quantsparells.html"> Exercici 12_04. Quants parells</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_05_lloro.html"> Exercici 12_05. El lloro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_06_trobamaxim.html"> Exercici 12_06. Troba el màxim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_07_mitjana.html"> Exercici 12_07. La nota mitjana</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_08_estadistiques.html"> Exercici 12_08. Estadístiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_09_dowhile.html"> Exercici 12_09. La condició al final</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_10_endevina.html"> Exercici 12_10. Endevina el nombre</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_11_endevina_cancel.html"> Exercici 12_11. Endevina amb cancel·lació</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_12_trobaproxim.html"> Exercici 12_12. Troba el més pròxim</a></li>
+  <section id="exerciseicon-t-exercici-12-06-troba-el-maxim">
+<h1><img alt="exerciseicon__T" src="_images/exerciseicon__T.png" /> Exercici 12_06. Troba el màxim<a class="headerlink" href="#exerciseicon-t-exercici-12-06-troba-el-maxim" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">12_06_trobamaxim/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="while_exercicis.html"><span class="doc">Alguns exercicis</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
+<p class="rubric">Enunciat</p>
+<p>Desenvolupa un programa anomenat <code class="docutils literal notranslate"><span class="pre">Trobamaxim</span></code>, que vagi demanant enters
+positius i que, en el moment que rebi un de negatiu, mostri el valor màxim
+positiu introduït i finalitzi l'execució.</p>
+<p>Un exemple d'execució seria:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introdueix un valor</span>
+<span class="hll"><span class="go">12</span>
+</span><span class="go">Introdueix un valor</span>
+<span class="hll"><span class="go">10</span>
+</span><span class="go">Introdueix un valor</span>
+<span class="hll"><span class="go">24</span>
+</span><span class="go">Introdueix un valor</span>
+<span class="hll"><span class="go">-1</span>
+</span><span class="go">El màxim és 24</span>
+</pre></div>
 </div>
+<p>En cas que no s'hagi introduït cap valor positiu, la resposta final serà
+0.</p>
+<p>Pista: Et proposo que abans de seguir llegint aquesta pista, intentis
+pensar la solució pel teu compte. Només continua llegint si et quedes
+sense idees.</p>
+<p>T'has fixa't? Aquest problema requereix anar realitzant una certa acció sobre
+una sèrie d'entrades (en aquest cas, guardar el valor màxim) fins que rep una
+entrada que marca el final (en aquest cas, un valor negatiu). Això no li havíem
+dit el <a class="reference internal" href="exercici_12_05_lloro.html"><span class="doc">patró del lloro</span></a>?</p>
 </section>
 
 
@@ -167,8 +183,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_11_17_metge_virtual.html" class="btn btn-neutral float-left" title="Exercici 11_17. El metge virtual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_12_01_sumatres.html" class="btn btn-neutral float-right" title="Exercici 12_01. Suma tres positius" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercici_12_05_lloro.html" class="btn btn-neutral float-left" title="Exercici 12_05. El lloro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="exercici_12_07_mitjana.html" class="btn btn-neutral float-right" title="Exercici 12_07. La nota mitjana" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -23,6 +23,5 @@ El tema està descomposat en els següents punts:
     while_no_goto.rst
     while_redundancia.rst
     while_infinit.rst
-
-..    while_exercicis.rst
-..    while_conclusions.rst
+    while_exercicis.rst
+    while_conclusions.rst

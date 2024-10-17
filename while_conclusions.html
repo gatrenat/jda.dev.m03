@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bucles condicionals &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+  <title>Conclusions &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
@@ -26,8 +26,8 @@
     <link rel="author" title="Quant a aquests documents" href="about.html" />
     <link rel="index" title="Índex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
-    <link rel="next" title="Exercici 12_01. Suma tres positius" href="exercici_12_01_sumatres.html" />
-    <link rel="prev" title="Exercici 11_17. El metge virtual" href="exercici_11_17_metge_virtual.html" />
+    <link rel="next" title="Llista d&#39;exercicis" href="basics_exercicis.html" />
+    <link rel="prev" title="Alguns exercicis" href="while_exercicis.html" />
      
     <script class="googleanalytics" src="_static/moiscripts.js"></script>
     <meta name="robots" content="noindex">
@@ -65,27 +65,20 @@
 <li class="toctree-l2"><a class="reference internal" href="variables.html">Variables i tipus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="expressions.html">Operadors i expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="condicionals.html">Condicionals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="while.html">Bucles condicionals</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basics_exercicis_condicionals.html">Instruccions condicionals</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Bucles condicionals</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_01_sumatres.html"> Exercici 12_01. Suma tres positius</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_02_sumamaxtres.html"> Exercici 12_02. Suma com a molt tres positius</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_03_sumanotes.html"> Exercici 12_03. Suma notes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_04_quantsparells.html"> Exercici 12_04. Quants parells</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_05_lloro.html"> Exercici 12_05. El lloro</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_06_trobamaxim.html"> Exercici 12_06. Troba el màxim</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_07_mitjana.html"> Exercici 12_07. La nota mitjana</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_08_estadistiques.html"> Exercici 12_08. Estadístiques</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_09_dowhile.html"> Exercici 12_09. La condició al final</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_10_endevina.html"> Exercici 12_10. Endevina el nombre</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_11_endevina_cancel.html"> Exercici 12_11. Endevina amb cancel·lació</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exercici_12_12_trobaproxim.html"> Exercici 12_12. Troba el més pròxim</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="while.html">Bucles condicionals</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="while_context.html">Un problema a resoldre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_simplifiquem.html">Simplifiquem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_mes_complexitat.html">Afegim un pas de complexitat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_petita_correccio.html">Petita correcció</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_cas_general.html">Plantegem ja el cas general</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_no_goto.html">Bucles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_redundancia.html">Codi duplicat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_infinit.html">Bucle per sempre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="while_exercicis.html">Alguns exercicis</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Conclusions</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
@@ -106,13 +99,13 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="basics.html">Elements bàsics de la programació</a></li>
-          <li class="breadcrumb-item"><a href="basics_exercicis.html">Llista d'exercicis</a></li>
-      <li class="breadcrumb-item active">Bucles condicionals</li>
+          <li class="breadcrumb-item"><a href="while.html">Bucles condicionals</a></li>
+      <li class="breadcrumb-item active">Conclusions</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
-        <a href="exercici_11_17_metge_virtual.html" class="btn btn-neutral float-left" title="Exercici 11_17. El metge virtual" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_12_01_sumatres.html" class="btn btn-neutral float-right" title="Exercici 12_01. Suma tres positius" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="while_exercicis.html" class="btn btn-neutral float-left" title="Alguns exercicis" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="basics_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
   <hr/>
 </div>
@@ -120,25 +113,41 @@
     
            <div itemprop="articleBody">
              
-  <section id="bucles-condicionals">
-<h1>Bucles condicionals<a class="headerlink" href="#bucles-condicionals" title="Enllaça amb aquesta capçalera"></a></h1>
-<p>La llista d'exercicis sobre <a class="reference internal" href="while.html"><span class="doc">bucles condicionals</span></a> és:</p>
-<div class="toctree-wrapper compound">
+  <section id="conclusions">
+<h1>Conclusions<a class="headerlink" href="#conclusions" title="Enllaça amb aquesta capçalera"></a></h1>
+<p>Hem vist moltes coses importants en aquesta secció. Permet-me un resum:</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_01_sumatres.html"> Exercici 12_01. Suma tres positius</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_02_sumamaxtres.html"> Exercici 12_02. Suma com a molt tres positius</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_03_sumanotes.html"> Exercici 12_03. Suma notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_04_quantsparells.html"> Exercici 12_04. Quants parells</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_05_lloro.html"> Exercici 12_05. El lloro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_06_trobamaxim.html"> Exercici 12_06. Troba el màxim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_07_mitjana.html"> Exercici 12_07. La nota mitjana</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_08_estadistiques.html"> Exercici 12_08. Estadístiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_09_dowhile.html"> Exercici 12_09. La condició al final</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_10_endevina.html"> Exercici 12_10. Endevina el nombre</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_11_endevina_cancel.html"> Exercici 12_11. Endevina amb cancel·lació</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercici_12_12_trobaproxim.html"> Exercici 12_12. Troba el més pròxim</a></li>
+<li><p>la més obvia és la nova estructura <code class="docutils literal notranslate"><span class="pre">while</span></code> que ens permet executar un
+bloc d'instruccions repetidament <em>mentre</em> es compleixi una posició.</p>
+<p>Sabem que és important que dins del bucle es produeixin canvis que
+permetin en algun moment que la condició del bucle passi a ser falsa,
+altrament el programa es quedarà funcionant fins que l'avortem.</p>
+</li>
+<li><p><em>acumulador</em>: una variable que va acumulant els valors que van
+enregistrant-se durant l'execució del programa, sovint dins d'un
+bucle.</p>
+<p>El punt important és que sempre l'hem d'inicialitzar a un valor</p>
+<p>Es tracta d'un <em>patró de programació</em> molt habitual i el veurem sovint i
+amb diferents aspectes. De moment l'hem vist útil per sumar valors,
+comptar-los i trobar el màxim.</p>
+</li>
+<li><p>duplicació de codi: quan tenim codi duplicat, els nostres programes
+costen més de modificar i és més fàcil introduir errors.</p>
+<p>A aquest problema també el coneixem com a <em>codi redundant</em> i més
+endavant veurem que és una de les raons per les quals voldrem disposar
+de quelcom més d'assignacions, condicionals i bucles per fer els nostres
+programes.</p>
+</li>
+<li><p>algunes utilitats amb Strings com ara saber si una cadena està buida o
+només conté blancs.</p></li>
+<li><p>Encara una cosa més: resoldre problemes per simplificació</p>
+<p>Es tracta d'una estratègia molt poderosa. Cada cop que et trobis amb un
+problema que no sàpigues ni per on agafar, una bona manera de
+començar-lo a atacar és plantejant-ne una versió simplificada.</p>
+<p>En l'exercici de la suma de positius tens un exemple de com funciona.
+Aprofita'l!</p>
+</li>
 </ul>
-</div>
 </section>
 
 
@@ -167,8 +176,8 @@
 </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercici_11_17_metge_virtual.html" class="btn btn-neutral float-left" title="Exercici 11_17. El metge virtual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="exercici_12_01_sumatres.html" class="btn btn-neutral float-right" title="Exercici 12_01. Suma tres positius" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="while_exercicis.html" class="btn btn-neutral float-left" title="Alguns exercicis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="basics_exercicis.html" class="btn btn-neutral float-right" title="Llista d&#39;exercicis" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
