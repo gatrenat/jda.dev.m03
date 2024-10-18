@@ -15,7 +15,7 @@
 .. rubric:: Enunciat
 
 
-Desenvolupa un programa anomenat ``Trobamaxim``, que vagi demanant enters
+Desenvolupa un programa anomenat ``TrobaMaxim``, que vagi demanant enters
 positius i que, en el moment que rebi un de negatiu, mostri el valor màxim
 positiu introduït i finalitzi l'execució.
 
