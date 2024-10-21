@@ -15,12 +15,11 @@
 .. rubric:: Enunciat
 
 
-Desenvolupa un programa que dupliqui per 2 el número que rep en
-executar-ho
+Desenvolupa un programa que multipliqui per 2 el número que rep en executar-ho.
 
 Aquí tens una plantilla pel teu codi. Pots copiar-la i enganxar-la al teu
-editor pel fitxer ``Duplica.java``. Únicament hauràs de
-reemplaçar els comentaris ``/*█████*/`` pel codi corresponent.
+editor pel fitxer ``Duplica.java``. Únicament hauràs de reemplaçar els
+comentaris ``/*█████*/`` pel codi corresponent.
 
 
 .. code-block:: java

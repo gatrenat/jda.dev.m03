@@ -1,0 +1,57 @@
+#########################################################
+|exerciseicon__T| Exercici 13_04. Enters de principi a fi
+#########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``13_04_while_naturalsentre/``
+
+* Continguts relacionats: :doc:`recorreguts_while`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa el programa ``NaturalsEntre`` que demani tres
+nombres enters positius,
+i escrigui els valors entre el primer i el segon saltant d'un al
+següent amb el tercer.
+
+Podem suposar que el programa sempre rebrà números enters per l'entrada estàndard.
+
+El programa comprovarà que els tres valors siguin positius, que
+el primer sigui menor o igual que el segon, i que el tercer
+sigui més gran que zero. Ah! Farà les comprovacions de manera que si, per exemple el primer valor ja no era positiu, no preguntarà més.
+
+Per qualsevol error, indicarà "Valor no vàlid" i finalitzarà.
+
+Una simulació de l'execució seria:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6-
+
+    Valor inicial?
+    9
+    Valor final?
+    16
+    Salt?
+    3
+    9
+    12
+    15
+
+Pista: El programa té dues parts. La primera és l'obtenció i
+validació de les dades. Si tot ha anat bé, passarà a la segona
+part, en la que mostrarà els valors corresponents i per la que
+faràs bé en considerar les preguntes típiques dels problemes
+anteriors:
+
+* Quin és el valor inicial?
+
+* Quin és el valor final?
+
+* Quina és la condició adequada per mantenir-se dins del ``while``?
+
+* Com es calcula el següent valor?

@@ -1,0 +1,44 @@
+#####################################################################
+|exerciseicon__T| Exercici 13_02. Els primers naturals decreixentment
+#####################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``13_02_while_naturalsdec/``
+
+* Continguts relacionats: :doc:`recorreguts_while`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Crea una nova versió de l'exercici :doc:`anterior <exercici_13_01_while_naturals>`. Aquest cop, el programa es dirà 
+``NaturalsDecreixents`` 
+i, en comptes de mostrar els nombres de manera creixent, o farà decreixentment.
+
+Per exemple, per l'entrada 10, el programa escriurà:
+
+.. code-block:: console
+
+    10
+    9
+    8
+    7
+    6
+    5
+    4
+    3
+    2
+    1
+
+Per resoldre'l, planteja't novament les preguntes:
+
+* Quin és el valor inicial?
+
+* Quin és el valor final?
+
+* Quina és la condició adequada per mantenir-se dins del ``while``?
+
+* Com es calcula el següent valor?

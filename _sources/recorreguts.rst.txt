@@ -1,0 +1,32 @@
+###########
+Recorreguts
+###########
+
+Ara que ja coneixem el bucle ``while``, podem resoldre problemes que ens
+permetin processar les diferents entrades dels usuaris mentre es mantingui una
+determinada condició.
+
+Considera el següent problema:
+
+    Desenvolupa un programa que escrigui els primers 10 números naturals. És
+    a dir: 1 2 3…10
+
+Intenta resoldre el problema anterior amb els coneixements que hem vist
+fins ara. Aviat et presentaré una nova manera de solucionar-lo.
+
+Aquest tipus de problemes de recorreguts són molt típics. Tant, que molts
+llenguatges, incloent el Java, ofereixen formes de bucle diferent per
+simplificar-los. Aquest és el nostre nou tema.
+
+Els continguts que treballarem es troben dividits en els següents punts:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    recorreguts_while.rst
+    recorreguts_for.rst
+    recorreguts_numerics.rst
+
+..    recorreguts_bucle_niat.rst
+..    recorreguts_conclusions.rst
