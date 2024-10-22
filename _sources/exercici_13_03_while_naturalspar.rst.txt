@@ -15,7 +15,7 @@
 .. rubric:: Enunciat
 
 Crea una nova versió d'aquest :doc:`exercici <exercici_13_01_while_naturals>`. Aquest cop, el programa es dirà 
-``PrimersParells``, i també mostrarà els números de manera creixent. Ara, però, no els mostrarà tots sinó només els parells.
+``NaturalsParells``, i també mostrarà els números de manera creixent. Ara, però, no els mostrarà tots sinó només els parells.
 
 Per exemple, per l'entrada 10, el programa escriurà:
 
