@@ -14,16 +14,16 @@
 
 .. rubric:: Enunciat
 
-Desenvolupa el programa ``NaturalsEntre`` que demani tres
-nombres enters positius,
-i escrigui els valors entre el primer i el segon saltant d'un al
+Desenvolupa el programa ``NaturalsEntre`` que demani tres nombres enters no
+negatius, i escrigui els valors entre el primer i el segon saltant d'un al
 següent amb el tercer.
 
 Podem suposar que el programa sempre rebrà números enters per l'entrada estàndard.
 
-El programa comprovarà que els tres valors siguin positius, que
-el primer sigui menor o igual que el segon, i que el tercer
-sigui més gran que zero. Ah! Farà les comprovacions de manera que si, per exemple el primer valor ja no era positiu, no preguntarà més.
+El programa comprovarà que els tres valors siguin no negatius, que el primer
+sigui menor o igual que el segon, i que el tercer sigui més gran que zero. Ah!
+Farà les comprovacions de manera que si per exemple el primer valor ja era
+negatiu, no preguntarà més.
 
 Per qualsevol error, indicarà "Valor no vàlid" i finalitzarà.
 
