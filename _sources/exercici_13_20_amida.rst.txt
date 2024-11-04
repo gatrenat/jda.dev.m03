@@ -14,9 +14,9 @@
 
 .. rubric:: Enunciat
 
-En aquesta ocasió desenvoluparàs un programa que anirà demanant nombres enters
-fins rebre'n un de negatiu o bé una cadena buida o només formada per espais en
-blanc.
+En aquesta ocasió desenvoluparàs un programa anomenat ``RectanglesAMida`` que
+anirà demanant nombres enters fins rebre'n un de negatiu o bé una cadena buida
+o només formada per espais en blanc.
 
 Per cada nombre que rebi, dibuixarà un rectangle d'asteriscs ('``*``') amb el nombre de
 columnes indicat pel número introduït, i el nombre de files indicat pel número anterior.
