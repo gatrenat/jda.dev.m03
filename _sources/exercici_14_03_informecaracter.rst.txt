@@ -92,5 +92,8 @@ Pot suposar que a posició sempre s'introduirà un enter.
 En cas que no hi hagi cap caràcter al text introduït, el programa finalitzarà
 amb el missatge "Error".
 
+En cas que la posició introduida no sigui vàlida, el programa finalitzarà amb
+el missatge "Fora de rang".
+
 Nota: La gràcia és que vegis com es comporta cada utilitat quan li dónes
 diferents valors i no tant que passis les proves.
