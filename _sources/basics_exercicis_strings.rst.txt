@@ -1,0 +1,27 @@
+#######
+Strings
+#######
+
+La llista d'exercicis sobre :doc:`strings` és:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    exercici_14_01_tipus_primitius.rst
+    exercici_14_02_informestring.rst
+    exercici_14_03_informecaracter.rst
+    exercici_14_04_manipulant_strings.rst
+    exercici_14_05_vocalmin.rst
+    exercici_14_06_vocalinifi.rst
+    exercici_14_07_lletrafi.rst
+    exercici_14_08_extremspermutats.rst
+    exercici_14_09_matricula_italiana.rst
+    exercici_14_10_matricula_valida_ampliada.rst
+    exercici_14_11_analisi_caracter.rst
+
+..    exercici_14_12_parentitza.rst
+..    exercici_14_13_nomeslletres.rst
+..    exercici_14_14_mostra_interval_string.rst
+..    exercici_14_15_cadena_continua.rst
+..    exercici_14_16_es_enter.rst
