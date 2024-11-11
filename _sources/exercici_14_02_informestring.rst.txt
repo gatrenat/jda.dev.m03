@@ -59,8 +59,9 @@ utilitat                                    descripció
 Què hem de fer?
 ===============
 
-Desenvolupa un programa que demani dos texts i un enter positiu i composi
-un petit informe amb el resultat de les funcions anteriors.
+Desenvolupa un programa anomenat ``InformeString`` que demani dos texts i un
+enter positiu i composi un petit informe amb el resultat de les funcions
+anteriors.
 
 Considera la següent simulació:
 
