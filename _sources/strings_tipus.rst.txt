@@ -231,10 +231,10 @@ funcionament abans. Recordem algunes:
     String unaAltraManera = "" + valorEnter;    // aprofita la concatenació
     String encaraUnaAltra = Integer.toString(valorEnter);
 
-Transformacions
-===============
+Utilitats
+=========
 
-Els Strings disposen de moltes utilitats per transformar-los.
+Els Strings disposen de moltes utilitats que permeten manipular-los.
 
 Per exemple,``startsWith()``: permet saber si el text comença amb un determinat text.
 Podem usar aquesta utilitat, per exemple, de la següent manera:
@@ -247,6 +247,8 @@ Podem usar aquesta utilitat, per exemple, de la següent manera:
 
       jshell> "adéu".startsWith("ho")
       $2 ==> false
+
+Anirem coneixent-les de mica en mica.
 
 Construcció de Strings
 ======================
