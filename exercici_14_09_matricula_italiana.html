@@ -153,8 +153,9 @@ gestió informatitzada de les matrícules, oi?</p>
 Aquest és l'objectiu d'aquest exercici!</p>
 <section id="que-hem-de-fer">
 <h2>Què hem de fer?<a class="headerlink" href="#que-hem-de-fer" title="Enllaça amb aquesta capçalera"></a></h2>
-<p>Desenvolupa un programa que demani a l'usuari una matrícula i li digui si el que li ha introduït
-correspon a una matrícula italiana vàlida en el format vigent.</p>
+<p>Desenvolupa un programa anomenat <code class="docutils literal notranslate"><span class="pre">MatriculaValida</span></code> que demani a
+l'usuari una matrícula i li digui si el que li ha introduït correspon
+a una matrícula italiana vàlida en el format vigent.</p>
 <p>Per simplicitat, no considerarem ni el codi del país, ni altres marques
 com ara l'any de matriculació o el codi de província.</p>
 <p>Una matrícula vàlida està formada per:</p>
@@ -167,17 +168,15 @@ com ara l'any de matriculació o el codi de província.</p>
 com <code class="docutils literal notranslate"><span class="pre">Ç</span></code>, <code class="docutils literal notranslate"><span class="pre">À</span></code>, <code class="docutils literal notranslate"><span class="pre">Ñ</span></code> o <code class="docutils literal notranslate"><span class="pre">ß</span></code>, i exceptuant les lletres que porten a
 confusió <code class="docutils literal notranslate"><span class="pre">I</span></code>, <code class="docutils literal notranslate"><span class="pre">O</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code> i <code class="docutils literal notranslate"><span class="pre">U</span></code>.</p>
 <p>Considera les següents simulacions:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">DD029YJ</span>
-<span class="hll"><span class="go">És una matrícula italiana vàlida</span>
-</span></pre></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">DD029YJ</span>
+</span><span class="go">És una matrícula italiana vàlida</span>
+</pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">0291BYJ</span>
-<span class="hll"><span class="go">No és una matrícula italiana vàlida</span>
-</span></pre></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">0291BYJ</span>
+</span><span class="go">No és una matrícula italiana vàlida</span>
+</pre></div>
 </div>
 <p><strong>Pista</strong>: Aquest exercici et pot obligar a fer moltes condicions i el teu
 codi, molt probablement semblarà molt repetitiu. Per no complicar-te massa

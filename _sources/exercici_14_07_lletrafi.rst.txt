@@ -14,9 +14,10 @@
 
 .. rubric:: Enunciat
 
-Desenvolupa una nova versió del programa del Lloro, anomenada ``Lloro`` que, en aquest cas
-només repeteixi les paraules que finalitzin amb una lletra no vocal. Com
-la versió original, s'aturarà quan rebi una cadena en blanc o buida.
+Desenvolupa una nova versió del programa del Lloro, anomenada
+``LloroAcabaLletra`` que, en aquest cas només repeteixi les paraules que
+finalitzin amb una lletra no vocal. Com la versió original, s'aturarà quan rebi
+una cadena en blanc o buida.
 
 Atenció: el programa ha de considerar vocals tant les majúscules com les
 minúscules.

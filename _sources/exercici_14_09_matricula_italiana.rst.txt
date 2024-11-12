@@ -37,8 +37,9 @@ Aquest és l'objectiu d'aquest exercici!
 Què hem de fer?
 ===============
 
-Desenvolupa un programa que demani a l'usuari una matrícula i li digui si el que li ha introduït
-correspon a una matrícula italiana vàlida en el format vigent.
+Desenvolupa un programa anomenat ``MatriculaValida`` que demani a
+l'usuari una matrícula i li digui si el que li ha introduït correspon
+a una matrícula italiana vàlida en el format vigent.
 
 Per simplicitat, no considerarem ni el codi del país, ni altres marques
 com ara l'any de matriculació o el codi de província.
@@ -58,17 +59,15 @@ confusió ``I``, ``O``, ``Q`` i ``U``.
 Considera les següents simulacions:
 
 .. code-block:: console
-    :emphasize-lines: 2, 4
+    :emphasize-lines: 2
 
-    $ java MatriculaValida
     Introduïu una matrícula
     DD029YJ
     És una matrícula italiana vàlida
 
 .. code-block:: console
-    :emphasize-lines: 2, 4
+    :emphasize-lines: 2
 
-    $ java MatriculaValida
     Introduïu una matrícula
     0291BYJ
     No és una matrícula italiana vàlida
