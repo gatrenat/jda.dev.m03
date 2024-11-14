@@ -26,33 +26,29 @@ permeti saber què ha fallat.
 Considera les següents simulacions:
 
 .. code-block:: console
-    :emphasize-lines: 2, 4
+    :emphasize-lines: 2
 
-    $ java MatriculaValida
     Introduïu una matrícula
     DD029YJ
     És una matrícula italiana vàlida
 
 .. code-block:: console
-    :emphasize-lines: 2, 4
+    :emphasize-lines: 2
 
-    $ java MatriculaValida
     Introduïu una matrícula
     Hola
     No és una matrícula italiana vàlida: massa curta
 
 .. code-block:: console
-    :emphasize-lines: 2, 4
+    :emphasize-lines: 2
 
-    $ java MatriculaValida
     Introduïu una matrícula
     DD029iunmuntdecaractersaddicionals
     No és una matrícula italiana vàlida: massa llarga
 
 .. code-block:: console
-    :emphasize-lines: 2, 4-
+    :emphasize-lines: 2-
 
-    $ java MatriculaValida
     Introduïu una matrícula
     0291BQj
     No és una matrícula italiana vàlida

@@ -20,8 +20,8 @@ probablement et servirà per repassar.
     while.rst
     recorreguts.rst
     strings.rst
+    control_bucles.rst
 
     basics_exercicis.rst
 
-..    control_bucles.rst
 ..    basics_conclusions.rst

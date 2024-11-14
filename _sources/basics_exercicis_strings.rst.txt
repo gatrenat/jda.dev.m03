@@ -19,9 +19,12 @@ La llista d'exercicis sobre :doc:`strings` és:
     exercici_14_09_matricula_italiana.rst
     exercici_14_10_matricula_valida_ampliada.rst
     exercici_14_11_analisi_caracter.rst
-
-..    exercici_14_12_parentitza.rst
-..    exercici_14_13_nomeslletres.rst
-..    exercici_14_14_mostra_interval_string.rst
-..    exercici_14_15_cadena_continua.rst
-..    exercici_14_16_es_enter.rst
+    exercici_14_12_parentitza.rst
+    exercici_14_13_nomeslletres.rst
+    exercici_14_14_distribuidor.rst
+    exercici_14_15_mostrainterval.rst
+    exercici_14_16_cadena.rst
+    exercici_14_17_enterestricte.rst
+    exercici_14_18_enterflexible.rst
+    exercici_14_19_contedarrer.rst
+    exercici_14_20_endevinacontrolat.rst

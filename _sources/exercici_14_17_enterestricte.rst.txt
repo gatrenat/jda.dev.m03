@@ -1,0 +1,48 @@
+##################################################
+|exerciseicon__T| Exercici 14_17. Enters estrictes
+##################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``14_17_enterestricte/``
+
+* Continguts relacionats: :doc:`strings_recorreguts`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa, anomenat ``Enters`` que vagi demanant texts fins rebre
+la cadena buida.
+
+Per cada text no buit que rebi, indicarà si correspon o no a un nombre
+enter escrit amb dígits.
+
+Aquest exercici considerarà estrictament els nombres enters formats per dígits,
+amb la única excepció que el primer caràcter pot ser ``+`` o ``-``.
+
+Considera la següent simulació:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6, 8, 10, 12
+
+    Introdueix texts (enter sol per finalitzar)
+    123
+    És enter
+    -4
+    És enter
+    +5
+    És enter
+      321
+    No és enter
+    cinc
+    No és enter
+
+    Adéu
+
+
+.. note:: Amb aquesta interpretació estricta dels enters, si el programa diu
+   que un valor és enter, podem estar segurs que ``Integer.parseInt()`` podrà
+   convertir-lo amb seguretat.

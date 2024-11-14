@@ -68,6 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="while.html">Bucles condicionals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="recorreguts.html">Recorreguts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control_bucles.html">Control de bucles</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="basics_exercicis.html">Llista d'exercicis</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="basics_exercicis_sequencials.html">Instruccions seqüencials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics_exercicis_condicionals.html">Instruccions condicionals</a></li>
@@ -86,6 +87,15 @@
 <li class="toctree-l4"><a class="reference internal" href="exercici_14_09_matricula_italiana.html"> Exercici 14_09. Matrícules italianes</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 14_10. Matrícules italianes (ampliació)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exercici_14_11_analisi_caracter.html"> Exercici 14_11. Analísis d'un caràcter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_12_parentitza.html"> Exercici 14_12. Lletres entre parèntesis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_13_nomeslletres.html"> Exercici 14_13. Només lletres</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_14_distribuidor.html"> Exercici 14_14. Distribuidor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_15_mostrainterval.html"> Exercici 14_15. Secció d'un String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_16_cadena.html"> Exercici 14_16. Cadena continua</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_17_enterestricte.html"> Exercici 14_17. Enters estrictes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_18_enterflexible.html"> Exercici 14_18. Enters flexibles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_19_contedarrer.html"> Exercici 14_19. Conté el darrer caràcter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_14_20_endevinacontrolat.html"> Exercici 14_20. Endevina amb control</a></li>
 </ul>
 </li>
 </ul>
@@ -141,28 +151,24 @@ matrícula no és vàlida, no et diu perquè.</p>
 <p>En aquesta ocasió, farem una versió millorada del programa, de manera que
 permeti saber què ha fallat.</p>
 <p>Considera les següents simulacions:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">DD029YJ</span>
-<span class="hll"><span class="go">És una matrícula italiana vàlida</span>
-</span></pre></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">DD029YJ</span>
+</span><span class="go">És una matrícula italiana vàlida</span>
+</pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">Hola</span>
-<span class="hll"><span class="go">No és una matrícula italiana vàlida: massa curta</span>
-</span></pre></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">Hola</span>
+</span><span class="go">No és una matrícula italiana vàlida: massa curta</span>
+</pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">DD029iunmuntdecaractersaddicionals</span>
-<span class="hll"><span class="go">No és una matrícula italiana vàlida: massa llarga</span>
-</span></pre></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">DD029iunmuntdecaractersaddicionals</span>
+</span><span class="go">No és una matrícula italiana vàlida: massa llarga</span>
+</pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>java<span class="w"> </span>MatriculaValida
-<span class="hll"><span class="go">Introduïu una matrícula</span>
-</span><span class="go">0291BQj</span>
-<span class="hll"><span class="go">No és una matrícula italiana vàlida</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Introduïu una matrícula</span>
+<span class="hll"><span class="go">0291BQj</span>
+</span><span class="hll"><span class="go">No és una matrícula italiana vàlida</span>
 </span><span class="hll"><span class="go">0: Ha de ser una lletra</span>
 </span><span class="hll"><span class="go">2: Ha de ser una lletra</span>
 </span><span class="hll"><span class="go">9: Correcte</span>
