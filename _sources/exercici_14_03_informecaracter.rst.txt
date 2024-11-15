@@ -63,7 +63,8 @@ utilitat                            descripció
 Què hem de fer?
 ===============
 
-Desenvolupa un programa que demani un text i un número per entrada estàndard.
+Desenvolupa un programa anomenat ``InformeCaracter`` que demani un text i un
+número per entrada estàndard.
 A partir del caracter de la posició indicada pel segon valor, el programa
 composarà un petit informe amb el resultat de les funcions anteriors.
 
