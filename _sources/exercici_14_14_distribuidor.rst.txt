@@ -14,8 +14,8 @@
 
 .. rubric:: Enunciat
 
-Desenvolupa un programa anomenat ``Distribuidor``, que implementi un *lloro* am
-finalització una cadena buida.
+Desenvolupa un programa anomenat ``Distribuidor``, que implementi un *lloro*
+amb finalització una cadena buida.
 
 El lloro anirà distribuint els diferents caracters que vagi rebent en quatre
 cadenes: una de consonants, una altra per les vocals, una de números i
