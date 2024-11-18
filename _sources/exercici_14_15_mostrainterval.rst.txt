@@ -25,8 +25,9 @@ el següent: desenvolupa un programa anomenat ``MostraInterval``
 que demani un text i dos valors enters, i que mostri tots els caràcters
 que hi ha entre el primer i el segon, en l'ordre marcat per l'entrada.
 
-En cas que els valors enters quedin fora de les posicions del text
-introduït, el programa mostrarà tot el que es pugui sense queixar-se.
+En cas que els valors enters quedin fora de les posicions del text introduït,
+el programa els *normalitzarà* al límit corresponent, i mostrarà tot el que
+pugui sense mostrar error.
 
 Considera les següents simulacions:
 
@@ -70,3 +71,18 @@ Considera les següents simulacions:
     c
     k
     s
+
+
+Atenció amb aquesta darrera simulació. El resultat és ``'J'`` perquè els dos
+límits, en estar fora de límits, queden *normalitzats* al zero.
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6
+
+    text?
+    Java rocks
+    inici?
+    -4
+    final?
+    -12
+    J

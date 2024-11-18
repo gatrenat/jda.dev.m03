@@ -153,8 +153,9 @@ permetés veure una secció d'un String</p>
 el següent: desenvolupa un programa anomenat <code class="docutils literal notranslate"><span class="pre">MostraInterval</span></code>
 que demani un text i dos valors enters, i que mostri tots els caràcters
 que hi ha entre el primer i el segon, en l'ordre marcat per l'entrada.</p>
-<p>En cas que els valors enters quedin fora de les posicions del text
-introduït, el programa mostrarà tot el que es pugui sense queixar-se.</p>
+<p>En cas que els valors enters quedin fora de les posicions del text introduït,
+el programa els <em>normalitzarà</em> al límit corresponent, i mostrarà tot el que
+pugui sense mostrar error.</p>
 <p>Considera les següents simulacions:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">text?</span>
 <span class="hll"><span class="go">Java rocks</span>
@@ -189,6 +190,17 @@ introduït, el programa mostrarà tot el que es pugui sense queixar-se.</p>
 <span class="go">c</span>
 <span class="go">k</span>
 <span class="go">s</span>
+</pre></div>
+</div>
+<p>Atenció amb aquesta darrera simulació. El resultat és <code class="docutils literal notranslate"><span class="pre">'J'</span></code> perquè els dos
+límits, en estar fora de límits, queden <em>normalitzats</em> al zero.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">text?</span>
+<span class="hll"><span class="go">Java rocks</span>
+</span><span class="go">inici?</span>
+<span class="hll"><span class="go">-4</span>
+</span><span class="go">final?</span>
+<span class="hll"><span class="go">-12</span>
+</span><span class="go">J</span>
 </pre></div>
 </div>
 </section>
