@@ -31,12 +31,13 @@ més:
   :doc:`exercici_14_17_enterestricte` en el sentit que no cal ignorar espais, ni considerar separadors. Només cal tenir en compte dígits i, opcionalment, que comencin amb un ``+`` o un ``-``.
   Ah! i només cal comprovar els valors de l'entrada estàndard. El de línia de comandes es pot suposar sempre enter.
 
-Una simulació podria ser:
+Un exemple d'execució, suposant novament que ens entren ``42`` per línia de
+comandes, seria:
+
 
 .. code-block:: console
-    :emphasize-lines: 2, 4, 5, 7, 8, 10, 11, 13, 14, 16
+    :emphasize-lines: 2, 4, 5, 7, 8, 10, 11, 13, 14
 
-    $ java Endevina
     Nombre?
     cinc
     Només nombres
