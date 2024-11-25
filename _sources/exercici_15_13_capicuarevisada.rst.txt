@@ -1,0 +1,52 @@
+#################################################################
+|exerciseicon_ST| Exercici 15_13. Texts capicua (versió avançada)
+#################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``15_13_capicuarevisada/``
+
+* Continguts relacionats: :doc:`basics_conclusions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Aquest exercici correspon a una versió més avançada de
+la versió bàsica de :doc:`text capicua <exercici_15_07_textcapicua>`
+
+Llegeix amb atenció l'enunciat per veure els canvis.
+
+Desenvolupa un programa anomenat ``Capicua``, que demani un text i
+indiqui si el text és o no capicua.
+
+Es considera que un text és capicua si llegint les seves lletres d'esquerra a
+dreta són iguals que llegint-les de dreta a esquerra, tot ignorant signes
+ortogràfics, incloent formes especials del català com ara accents i dièresis.
+
+**Nota**: Opcionalment pots tenir en comptes l'el·la geminada, però el
+``prgtest`` no en farà cap prova.
+
+Considera les següents simulacions:
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    Text?
+    Açí rema l'americà.            
+    "Açí rema l'americà." és capicua
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    Text?
+    Aquesta és una frase palindròfoba
+    "Aquesta és una frase palindròfoba" no és capicua
+
+Però no et quedis sense provar frases palíndromes reals! `Aquí
+<https://web.mat.upc.edu/antoni.guillamon/pal1.htm>`_ en pots trobar unes
+quantes.

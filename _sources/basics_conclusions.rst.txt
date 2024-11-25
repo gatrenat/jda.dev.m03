@@ -101,17 +101,18 @@ descol·loca i, sobretot, gaudeix-los!
 
 |exerciseicon__T| :doc:`exercici_15_08_codifica`
 
+|exerciseicon__T| :doc:`exercici_15_09_trianglelletres`
 
-..  :doc:`exercici_15_09_trianglelletres`
-.. 
-..  :doc:`exercici_15_10_invertitlletres`
-.. 
-..  :doc:`exercici_15_11_piramide`
-.. 
-..  :doc:`exercici_15_12_duhast`
-.. 
-..  :doc:`exercici_15_13_capicuarevisada`
-.. 
-..  :doc:`exercici_15_14_paraulesreves`
-.. 
-..  :doc:`exercici_15_15_lletresreves`
+|exerciseicon__T| :doc:`exercici_15_10_invertitlletres`
+
+|exerciseicon__T| :doc:`exercici_15_11_piramide`
+
+|exerciseicon_ST| :doc:`exercici_15_12_duhast`
+
+|exerciseicon_ST| :doc:`exercici_15_13_capicuarevisada`
+
+|exerciseicon_ST| :doc:`exercici_15_14_paraulesreves`
+
+|exerciseicon_ST| :doc:`exercici_15_15_lletresreves`
+
+|exerciseicon_ST| :doc:`exercici_15_16_password`

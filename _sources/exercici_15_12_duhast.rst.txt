@@ -1,0 +1,35 @@
+######################################################
+|exerciseicon_ST| Exercici 15_12. Triangle de paraules
+######################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``15_12_duhast/``
+
+* Continguts relacionats: :doc:`basics_conclusions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+En aquesta ocasió desenvoluparem un programa anomenat
+``TriangleParaules``, que ens permetrà construir un triangle, no de
+caràcters sinó de paraules!
+
+Considerarem que les paraules són cadenes de caràcters separades per
+espais en blanc.
+
+Per exemple, considera la següent execució:
+
+.. code-block:: console
+   :emphasize-lines: 2
+
+    Text?
+    Du hast mich
+    Du
+    Du hast
+    Du hast mich
