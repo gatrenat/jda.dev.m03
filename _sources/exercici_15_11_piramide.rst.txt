@@ -15,10 +15,7 @@
 .. rubric:: Enunciat
 
 Desenvolupa un programa anomenat ``PiramideLletres``, que demani un text
-i dibuixi un triangle amb les lletres del text en ordre invers al text
-introduït.
-
-Considera la següent simulació:
+i dibuixi una piràmide com la que es mostra al següent exemple d'execució:
 
 .. code-block:: console
    :emphasize-lines: 2
