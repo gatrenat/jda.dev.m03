@@ -1,0 +1,258 @@
+################
+Bocinets de codi
+################
+
+Recordes la  versió de ``Quadrat`` en que apareixia aquell
+``dibuixaQuadrat()``?
+
+.. code-block:: java
+    :linenos:
+
+    /* Programa que dibuixa un quadrat de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            dibuixaQuadrat();
+        }
+
+        public static void dibuixaQuadrat() {
+            for (int linia=1; linia <= 5; linia++) {
+                // dibuixa una línia
+                for (int columna=1; columna <= 5; columna++) {
+                    // dibuixa un element de la línia
+                    System.out.print(" X");
+                }
+                System.out.println();   // finalitza la línia
+            }
+        }
+    }
+
+
+Fixa't en aquesta nova versió:
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 9, 13-19
+
+    /* Programa que dibuixa un quadrat de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            dibuixaQuadrat();
+        }
+
+        public static void dibuixaQuadrat() {
+            for (int linia=1; linia <= 5; linia++) {
+                dibuixaLinia();
+            }
+        }
+
+        public static void dibuixaLinia() {
+            for (int columna=1; columna <= 5; columna++) {
+                // dibuixa un element de la línia
+                System.out.print(" X");
+            }
+            System.out.println();   // finalitza la línia
+        }
+    }
+
+En aquesta ocasió, hem tornat a fer quelcom molt similar al que varem fer
+amb ``dibuixaQuadrat()``. Hem reemplaçat el comentari de la línia 9 per
+una *invocació* de ``dibuixaLinia()`` que acaba portant-se la major part
+del codi a la definició que comença a la línia 13.
+
+En executar aquesta nova versió obtenim un altre cop la mateixa sortida
+que en les primeres, per tant, les dues versions fan el mateix.
+
+Aquesta versió, però, sí que ens permet deduir què passa quan finalitza el
+bloc de ``dibuixaLinia()``. El programa continua a la línia després de la
+invocació, en aquest cas torna a fer una volta al bucle.
+
+Què estem fent?
+---------------
+
+Pel que sembla, estem agafant tot un bloc de codi i l'estem fent bocinets
+cada cop més petits.  En concret:
+
+- agafem unes línies de codi que realitzen alguna acció i li posem un
+  comentari que descrigui què fa 
+
+- un cop tenim el comentari, generem un nom compacte (*camelCase* per
+  cert) que representi què fa
+
+- ens emportem el codi a fora del ``main()`` o del bloc on sigui, i creem
+  un nou bloc precedit del nom que hem generat amb una mica de *decoració*
+  als voltants: ``public static void`` abans i ``()`` després.
+
+- al *forat* que ha quedat a la posició original del codi extret, hi posem
+  el nom generat seguit de ``()`` i acabant en ``;``. 
+
+Posem-hi noms!
+--------------
+
+A ``dibuixaQuadrat()`` i ``dibuixaLinia()`` els anomenarem *mòduls*. 
+
+Normalment els acompanyarem dels parèntesis al final del nom ``()``  per
+remarcar que són mòduls i no altres bestioles de programació com ara
+variables.
+
+El mòdul ``dibuixaQuadrat()`` està *definit* a les línies 7 a 12, i és
+*invocat* o *cridat* quan el codi de ``main()`` arriba a la línia 4.
+
+El mòdul ``dibuixaLinia()`` està definit a les línies 14 a 19, i és cridat
+múltiples vegades (cinc en concret) cada cop que s'executa la línia 9.
+
+Al procés de descomposició del problema en subproblemes cada cop més
+petits (o senzills) l'anomenem *anàlisi descencent* o *top-down*.
+
+Els programes com els havíem fet fins ara es solen conèixer com a
+*monolítics* i són, generalment, poc recomanables i menys estimats.
+
+Els programes ben modulats (estructurats en mòduls) solen ser molt més
+fàcils de llegir, el que a l'hora facilita la seva modificació, i la
+localització i correcció d'errors. Això millora a mida que els mòduls són
+més petits i els noms són més representatius del què fan.
+
+Portem-ho a l'extrem
+--------------------
+
+Encara podríem generar més mòduls. Per exemple, 
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 15, 17, 20-22, 24-26
+
+    /* Programa que dibuixa un quadrat de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            dibuixaQuadrat();
+        }
+
+        public static void dibuixaQuadrat() {
+            for (int linia=1; linia <= 5; linia++) {
+                dibuixaLinia();
+            }
+        }
+
+        public static void dibuixaLinia() {
+            for (int columna=1; columna <= 5; columna++) {
+                dibuixaElement();
+            }
+            finalitzaLinia();
+        }
+
+        public static void dibuixaElement() {
+            System.out.print(" X");
+        }
+
+        public static void finalitzaLinia() {
+            System.out.println();
+        }
+    }
+
+En aquesta ocasió hem creat dos nous mòduls (``dibuixaElement()`` i
+``finalitzaLinia()``) que consisteixen exclusivament en una instrucció de
+sortida.
+
+Normalment no arribarem a *modular* tant, a menys que la legibilitat del
+codi ho recomani, però com que estem començant a modular… sense por!
+
+
+Múltiples maneres
+-----------------
+
+No hi ha una única manera de dividir un problema en subproblemes.
+
+Per exemple, podríem haver decidit posar el final de línia a
+``dibuixaQuadrat()`` en comptes de a ``dibuixaLinia()``:
+
+.. code-block:: java
+    :linenos:
+    :emphasize-lines: 10
+
+    /* Programa que dibuixa un quadrat de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            dibuixaQuadrat();
+        }
+
+        public static void dibuixaQuadrat() {
+            for (int linia=1; linia <= 5; linia++) {
+                dibuixaLinia();
+                finalitzaLinia();
+            }
+        }
+
+        public static void dibuixaLinia() {
+            for (int columna=1; columna <= 5; columna++) {
+                dibuixaElement();
+            }
+        }
+
+        public static void dibuixaElement() {
+            System.out.print(" X");
+        }
+
+        public static void finalitzaLinia() {
+            System.out.println();
+        }
+    }
+
+Si bé en aquest cas concret, és indiferent quina opció prenem, en moltes
+ocasions, l'objectiu del programa dictarà quina divisió és preferible. 
+
+Documentació
+------------
+
+A l'igual que el programa, els mòduls poden estar acompanyats d'una
+capçalera en forma de comentaris.
+
+El codi anterior el podríem haver enriquit amb els següents comentaris:
+
+.. code-block:: java
+    :linenos:
+
+    /* Programa que dibuixa un quadrat de 5x5 */
+    public class Quadrat {
+        public static void main(String[] args) {
+            dibuixaQuadrat();
+        }
+
+        /* dibuixa un quadrat de 5x5 */
+        public static void dibuixaQuadrat() {
+            for (int linia=1; linia <= 5; linia++) {
+                dibuixaLinia();
+                finalitzaLinia();
+            }
+        }
+
+        /* dibuixa els elements corresponents a una línia sense salt de
+           línia */
+        public static void dibuixaLinia() {
+            for (int columna=1; columna <= 5; columna++) {
+                dibuixaElement();
+            }
+        }
+
+        /* dibuixa un element d'una línia del quadrat */
+        public static void dibuixaElement() {
+            System.out.print(" X");
+        }
+
+        /* dibuixa un salt de línia del quadrat */
+        public static void finalitzaLinia() {
+            System.out.println();
+        }
+    }
+
+Dels comentaris anteriors, potser l'únic que aporta realment alguna cosa
+és el de ``dibuixaLinia()`` ja que informa que no inclou el salt de línia.
+La funció de la resta és fàcil de deduir a partir del nom escollit.
+
+Quan el teu mòdul faci coses que no són fàcilment deduïbles a partir del
+seu nom, és important que hi col·loquis un comentari explicatiu.
+
+
+|exerciseicon__T| :doc:`exercici_16_03_quadrats_modulars`
+
+
+A banda de fer el nostre codi més llegible, la *modularització* ens aporta
+algun altre avantatge?
