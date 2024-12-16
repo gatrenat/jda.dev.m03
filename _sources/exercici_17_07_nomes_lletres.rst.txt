@@ -1,0 +1,91 @@
+############################################################
+|exerciseicon__T| Exercici 17_07. Només lletres (amb mòduls)
+############################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``17_07_nomes_lletres/``
+
+* Continguts relacionats: :doc:`moduls_biblioteques`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Rescatarem :doc:`exercici_14_13_nomeslletres` i el farem modular.
+
+Recordem que el nostre programa original feia tres coses diferents:
+
+1. Obtenció del text d'entrada
+
+2. Filtrat de les lletres del text
+
+3. Separació de les lletres filtrades
+
+La nova versió oferirà un mòdul per cadascuna de les tres parts del programa. En concret:
+
+1. L'obtenció de les dades ja la tenim resolta amb ``Entrada.readLine()``
+
+2. El filtrat de les lletres el farem amb una nova funció pura anomenada ``nomesLletres()`` que afegirem a ``UtilString``.
+
+.. code-block:: java
+
+    "ElsgenetsdelApocalipsi".equals(String.nomesLletres("Els 4 genets de l'Apocalipsi!"))
+
+3. La separació la farem amb una altra funció pura que anomenarem ``lletresSeparades()`` que també afegirem a ``UtilString``.
+
+.. code-block:: java
+
+    "A, p, o, c, a, l, i, p, s, i".equals(String.lletresSeparades("Apocalipsi"))
+
+El programa ``NomesLletres.java`` resultant tindrà el següent codi (Només
+falta el comentari de capçalera!):
+
+.. code-block:: Java
+    :linenos:
+
+    /*
+     * ???
+     */
+    public class NomesLletres{
+        public static void main(String[] args) {
+            System.out.println("Text?");
+            String text = Entrada.readLine();
+            String nomesLletres = UtilString.nomesLletres(text);
+            String separades = UtilString.lletresSeparades(nomesLletres);
+            System.out.println(separades);
+        }
+    }
+
+T'ha semblat breu? Doncs espera't que t'ofereixo una versió encara més
+compacta:
+
+.. code-block:: Java
+    :linenos:
+
+    /*
+     * ???
+     */
+    public class NomesLletres{
+        public static void main(String[] args) {
+            System.out.println("Text?");
+            System.out.println(
+                    UtilString.lletresSeparades(
+                        UtilString.nomesLletres(
+                            Entrada.readLine()
+                            )
+                        )
+                    );
+        }
+    }
+
+Ueee! Són realment dues sentències! (compta els ``;``)
+
+Aquesta versió simplement està encadenant diferents funcions. A algunes
+persones, quan comencen a programar, les resulta una mica més complicat
+entendre aquest tipus de codi; no parlem ja de que se'ls acudeixi! Però és
+una manera molt habitual de desenvolupar i no està de més que comencis a
+veure-la. Per aquest exercici, i de fet per tot el curs, fes la versió que
+vulguis.

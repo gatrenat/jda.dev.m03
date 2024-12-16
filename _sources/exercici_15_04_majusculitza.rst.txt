@@ -16,7 +16,7 @@
 
 .. rubric:: Enunciat
 
-Desenvolupa un programa anomenat ``Majusculitza`` que demani un
+Desenvolupa un programa anomenat ``MajusculitzaInicials`` que demani un
 text i mostri el mateix text amb les inicials de cada paraula en
 majúscules i la resta en minúscules.
 
