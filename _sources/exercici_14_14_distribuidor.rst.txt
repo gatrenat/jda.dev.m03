@@ -1,0 +1,52 @@
+##############################################
+|exerciseicon__T| Exercici 14_14. Distribuidor
+##############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``14_14_distribuidor/``
+
+* Continguts relacionats: :doc:`strings_recorreguts`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa un programa anomenat ``Distribuidor``, que implementi un *lloro*
+amb finalització una cadena buida.
+
+El lloro anirà distribuint els diferents caracters que vagi rebent en quatre
+cadenes: una de consonants, una altra per les vocals, una de números i
+una d'altres símbols. Els guardarà en l'ordre en que els rep però sense repetits.
+
+Finalment, mostrarà els resultats.
+
+Tingues en compte:
+
+* Com a vocals, considerarem les vocals catalanes: ``à``, ``a``, ``è``, ``e``,
+  ``é``, ``i``, ``ï``, ``ò``, ``o``, ``ó``, ``u``, ``ú`` i ``ü``.
+
+* Dels símbols no considerarem l'espai.
+
+* Les lletres es mostraran en majúscules.
+
+* En cas que no s'hagi trobat cap caracter per alguna de les categories, no es
+  mostarà res sobre aquesta.
+
+Un exemple d'execució:
+
+.. code-block:: console
+   :emphasize-lines: 2, 4
+
+    Introduïu texts (INTRO per finalitzar)
+    Bon dia!
+    El meu aniversari és el 22 de febrer de 1971.
+
+
+    Vocals: OIAEUÉ
+    Consonants: BNDLMVRSF
+    Nombres: 2197
+    Símbols: !.
+

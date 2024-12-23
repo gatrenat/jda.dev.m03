@@ -1,0 +1,65 @@
+############################################
+|exerciseicon__T| Exercici 11_16. L'ascensor
+############################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``11_16_ascensor/``
+
+* Continguts relacionats: :doc:`condicionals_conclusions`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+
+Considerem un ascensor d'un edifici amb planta baixa i dos pisos (primer pis i
+segon pis) que tingui els següents botons: ‘pujar un', ‘pujar dos', ‘baixar un'
+i ‘baixar dos'. L'ascensor es comporta, a partir dels botons esmentats, segons
+el següent diagrama de transició d'estats:
+
+.. image:: _images/esquemaascensor.png
+   :align: center
+
+Es demana desenvolupar un programa que simuli el funcionament d'aquest
+ascensor.
+
+El programa demanarà el pis en que es troba i el botó que es prem, i
+mostrarà el nou pis.
+
+Cal comprovar que els botons i les plantes siguin correctes. En cas que
+no ho siguin, el programa mostrarà un missatge d'error en comptes del
+nou pis.
+
+El programa s'anomenarà ``Ascensor``.
+
+Alguns exemples d'interacció:
+
+.. code-block:: console
+    :emphasize-lines: 2,4
+
+    pis?
+    planta baixa
+    botó?
+    pujar un
+    primer pis
+
+.. code-block:: console
+    :emphasize-lines: 2,4
+
+    pis?
+    golfes
+    botó?
+    baixar un
+    error
+
+.. code-block:: console
+    :emphasize-lines: 2,4
+
+    pis?
+    segon pis
+    botó?
+    pujar un
+    error

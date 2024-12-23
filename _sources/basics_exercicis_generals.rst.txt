@@ -1,0 +1,26 @@
+##################
+Exercicis generals
+##################
+
+Aquesta és la llista d'exercicis finals de la secció de :doc:`basics`:
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 1
+
+    exercici_15_01_vocalsmajuscules.rst
+    exercici_15_02_comptavocals.rst
+    exercici_15_03_informetext.rst
+    exercici_15_04_majusculitza.rst
+    exercici_15_05_texttransformat.rst
+    exercici_15_06_textreves.rst
+    exercici_15_07_textcapicua.rst
+    exercici_15_08_codifica.rst
+    exercici_15_09_trianglelletres.rst
+    exercici_15_10_invertitlletres.rst
+    exercici_15_11_piramide.rst
+    exercici_15_12_duhast.rst
+    exercici_15_13_capicuarevisada.rst
+    exercici_15_14_paraulesreves.rst
+    exercici_15_15_lletresreves.rst
+    exercici_15_16_password.rst

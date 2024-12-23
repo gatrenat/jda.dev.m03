@@ -1,0 +1,41 @@
+=========
+Renat.art
+=========
+
+Potser no t'ho semblarà, però el gat Renat ja fa anys que hi volta. En tot
+aquest temps, molts alumnes han produït diferents creacions artístiques sobre
+el nostre més o menys entranyable amic.
+
+Com diu la dita, el millor moment per recollir aquestes creacions va ser fa un
+parell de dècades; i el segon millor moment és ara. Així, que, comencem la
+recopilació.
+
+Ah! Què vols que hi afegeixi una creació teva? Fes-me-la arribar, tot indicant
+la manera amb la que vols que et faci menció a la teva autoria.
+
+.. important:: Si ets autora/autor d'una d'aquestes creacions i ja no vols que
+   aparequi en aquests apunts, o bé vols canviar la manera amb la que em
+   refereixo a tu, només m'has d'enviar un missatge (no cal justificació) i,
+   sentint-t'ho molt, la treuré ASAP, agraït del temps que l'has volgut
+   compartir.
+
+Artista de DAW1 curs 2223
+=========================
+
+Creació trobada a la pissarra digital d'un aula , el 14 de febrer de 2023.
+Artista G.G.F., amb probables aportacions d'ornaments per part d'altres
+companys.
+
+.. image:: _renatart/renatart_2223_daw.jpg
+
+
+Autora de mems de DAM1 del curs 2425
+====================================
+
+Mems creats per l'alumna Keyla Batzin el 13 de novembre de 2023.
+
+.. image:: _renatart/renatart_2324_dam_01.jpg
+.. image:: _renatart/renatart_2324_dam_02.jpg
+.. image:: _renatart/renatart_2324_dam_03.jpg
+.. image:: _renatart/renatart_2324_dam_04.jpg
+.. image:: _renatart/renatart_2324_dam_05.jpg

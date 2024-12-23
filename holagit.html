@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git i GitHub &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/moistyle.css?v=0e2f4d36" />
+
+  
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9bafd1c4"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d8dd923b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Configuració de l&#39;entorn" href="configuracio_entorn.html" />
+    <link rel="prev" title="Un primer contacte" href="primer_contacte.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Introducció a la programació amb Java
+              <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2024-25
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="primeres_passes.html">Primeres passes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="requeriments_coneixements_previs.html">Coneixements previs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_aquests_continguts.html">Sobre aquests continguts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requeriments_tecnics.html">Requeriments tècnics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sobre_exercicis.html">Sobre els exercicis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="consells.html">Uns consells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primer_contacte.html">Un primer contacte</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Git i GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracio_entorn.html">Configuració de l'entorn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com_lliurar.html">Com lliurar un exercici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ritual_holamon.html">Ritual Hola Món!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primeres_passes_exercicis.html">Llista d'exercicis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1"><a class="reference internal" href="moduls.html">Mòduls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="primeres_passes.html">Primeres passes</a></li>
+      <li class="breadcrumb-item active">Git i GitHub</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="primer_contacte.html" class="btn btn-neutral float-left" title="Un primer contacte" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="configuracio_entorn.html" class="btn btn-neutral float-right" title="Configuració de l&#39;entorn" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="git-i-github">
+<h1>Git i GitHub<a class="headerlink" href="#git-i-github" title="Enllaça amb aquesta capçalera"></a></h1>
+<div align="center" class="align-center"><div class="graphviz"><img src="_images/graphviz-63b7506622dbb5278258e066fdafcac1d6337377.png" alt="digraph G {
+    node [ shape=&quot;none&quot; ];
+    rankdir=LR
+
+    laptop [label=&quot;&quot;, image=&quot;_images/laptop.png&quot;];
+
+    cloud [label=&quot;Web&quot;, fontsize=30, image=&quot;_images/cloud_icon.png&quot;];
+
+    github [label=&quot;&quot;, image=&quot;_images/github_logo.png&quot;];
+
+    // Relationships
+    laptop -&gt; cloud [dir=&quot;both&quot;, color=&quot;blue&quot;];
+    cloud -&gt; github [dir=&quot;both&quot;, color=&quot;blue&quot;];
+}" class="graphviz" /></div>
+</div>
+<p>Ara que ja hem vist quin aspecte fan els programes, ens toca fer els nostres!</p>
+<p>En primer lloc passarem a preparar l'equip entorn per poder realitzar les
+activitats d'aquest curs.</p>
+<p>El que ve a continuació és una seqüència de passes que hauràs de
+realitzar. Moltes de les passes les realitzaràs escrivint instruccions a
+un terminal.</p>
+<p>Per obrir un terminal, recorda que pots fer amb <code class="docutils literal notranslate"><span class="pre">ctrl-alt-t</span></code> o <code class="docutils literal notranslate"><span class="pre">alt-f2</span>
+<span class="pre">gnome-terminal</span></code>, amb <code class="docutils literal notranslate"><span class="pre">tecla</span> <span class="pre">de</span> <span class="pre">finestres</span></code> seguit de <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, entre
+altres maneres.</p>
+<p>Assegura't que segueixes totes les passes amb precisió. No et preocupis, però,
+si t'equivoques, doncs no pots trencar res. En el pitjor dels casos et pot
+passar que et toqui tornar a començar. Demana ajut sense vergonya.</p>
+<section id="github">
+<h2>GitHub<a class="headerlink" href="#github" title="Enllaça amb aquesta capçalera"></a></h2>
+<p><a class="reference external" href="https://github.com/">GitHub</a><a class="footnote-reference brackets" href="#altresxarxes" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> és una coneguda xarxa social
+per desenvolupadors.</p>
+<p>Caldrà que disposis d'un <em>repositori</em> a GitHub per a poder realitzar bona part de
+les activitats d'aquest curs.</p>
+<p>Pots entendre un repositori com una carpeta del teu ordinador però que
+serà guardada al GitHub.</p>
+<p>Disposar d'un repositori a GitHub presenta, a més de poder veure avaluades
+les teves activitats, una sèrie d'avantatges interessants:</p>
+<ul class="simple">
+<li><p>no perdràs cap fitxer ni contingut que pugis al teu GitHub</p></li>
+<li><p>la feina que facis a classe la podràs continuar a casa (o allà on puguis) i,
+en tornar a classe, et trobaràs les actualitzacions disponibles</p></li>
+<li><p>et familiaritzaràs amb una de les eines més utilitzades i millor valorades
+pels desenvolupadors en l'actualitat</p></li>
+</ul>
+<section id="crear-repositori">
+<h3>Crear repositori<a class="headerlink" href="#crear-repositori" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Crear el teu repositori és molt fàcil. En primer lloc, ves a
+<a class="reference external" href="https://github.com/">https://github.com/</a> i, si encara no en tens un, crea't un compte.</p>
+<p>Et recomano que la compta de correu que facis servir sigui el teu personal,
+doncs així el podràs aprofitar com el teu espai personal també en acabar el
+curs.</p>
+<p>Un cop disposes del teu compte, crea un repositori.</p>
+<p>Anomena'l <code class="docutils literal notranslate"><span class="pre">introprg</span></code>, marca'l com a <strong>privat</strong> i demana que inicialitzi
+el repositori amb un <em>README</em>. Finalment prem el botó de crear, deixant la
+resta d'opcions sense tocar.</p>
+<figure class="align-center align-default">
+<img alt="creació d'un repositori a GitHub" src="_images/gitcrearepo.png" />
+</figure>
+</section>
+<section id="afegir-me-com-a-collaborador">
+<h3>Afegir-me com a col·laborador<a class="headerlink" href="#afegir-me-com-a-collaborador" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Un cop has creat el nou repositori, cal que m'afegeixis com a col·laborador.</p>
+<p>Ves a <code class="docutils literal notranslate"><span class="pre">settings</span></code>, selecciona <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">access</span></code> i afegeix el meu usuari de
+github: <code class="docutils literal notranslate"><span class="pre">gatrenat</span></code>.</p>
+<figure class="align-center align-default">
+<img alt="_images/githubcollaborator.png" src="_images/githubcollaborator.png" />
+</figure>
+<p>Abans d'acceptar enviar la invitació, assegura't que és per mi. El quadre
+de diàleg hauria de tenir el següent aspecte:</p>
+<figure class="align-center align-default">
+<img alt="_images/githubcheckcollaborator.png" src="_images/githubcheckcollaborator.png" />
+</figure>
+<p>Un cop ho tinguis clar, prem el botó <em>Add gatrenat to introprg</em>.</p>
+</section>
+<section id="notifica-que-ja-estas">
+<h3>Notifica que ja estàs<a class="headerlink" href="#notifica-que-ja-estas" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Encara un petit pas més. Malgrat m'arribarà una notificació de que m'has
+convidat al teu repositori, no em resultarà fàcil saber que ets un dels
+meus alumnes. GitHub és molt escrupolós amb la teva privacitat i no
+compartirà la teva adreça amb potencials desconeguts.</p>
+<p>Demana als teus docents que et passin la URL del formulari de subscripció i
+emplena'l.</p>
+<p>El formulari et demanarà la URL del teu repositori, que pots trobar aquí:</p>
+<figure class="align-center align-default">
+<img alt="_images/githubrepourl.png" src="_images/githubrepourl.png" />
+</figure>
+<p>Fes click sobre el botó verd <em>Code</em>, selecciona <strong>SSH</strong> i copia la el contingut
+de la caixeta que t'apareix. En el meu cas
+<code class="docutils literal notranslate"><span class="pre">git&#64;github.com:renat/introprg.git</span></code>. Podràs copiar aquesta adreça amb la
+combinació de tecles <code class="docutils literal notranslate"><span class="pre">&lt;CTRL&gt;</span> <span class="pre">c</span></code> o bé fent click sobre el botó que apareix a
+la dreta. El podràs enganxar al formulari amb <code class="docutils literal notranslate"><span class="pre">&lt;CTRL&gt;</span> <span class="pre">v</span></code> o amb el botó dret
+del ratolí i <em>Enganxa</em>.</p>
+</section>
+</section>
+<section id="espai-de-treball">
+<h2>Espai de treball<a class="headerlink" href="#espai-de-treball" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Ara que ja tenim la part <em>remota</em> enllestida, passem a preparar el nostre
+espai de treball al PC.</p>
+<section id="creem-una-clau-ssh">
+<h3>Creem una clau SSH<a class="headerlink" href="#creem-una-clau-ssh" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>La versió actual de GitHub <em>convida</em> a fer servir una clau SSH de manera
+que no calgui anar posant el password de GitHub constantment.</p>
+<p>El que farem ara no és complex però requereix que et concentris per no
+equivocar-te o no funcionarà i et tocarà començar de nou.</p>
+<p>En primer lloc, tingues preparades les següents dades:</p>
+<ul>
+<li><p>la teva adreça de correu. Millor si és la del centre</p>
+<p>Hauràs de posar la teva adreça a la comanda de la línia 1 del llistat
+que ve a continuació.</p>
+</li>
+<li><p>decideix si et cal protegir la clau que generaràs amb un password.</p>
+<p>Disposar d'un password farà més segura la teva instaŀlació però també
+més incòmoda d'usar ja que et caldrà anar introduint la contrasenya de
+tant en tant.</p>
+<p>Si és el teu equip al que només tu tens accés i has posat un bon
+password per entrar al sistema, tenint en comptes la criticitat del que
+farem al curs, probablement no és cap problema no posar-li password.
+Decideix tu i si dubtes, pregunta.</p>
+<p>En cas que vulguis posar-li un password, l'hauràs d'introduïr dos cops a
+les línies 4 i 5 del llistat següent.</p>
+</li>
+</ul>
+<p>Obre una consola o terminal, per exemple amb <code class="docutils literal notranslate"><span class="pre">ctrl-alt-t</span></code> o <code class="docutils literal notranslate"><span class="pre">alt-f2</span>
+<span class="pre">gnome-terminal</span></code>, tot i que segurament trobaràs també opcions als menús.</p>
+<p>Escriu les següents comandes amb cura, tot posant les teves dades:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;elteucorreu@mevaempresa.org&quot;</span>
+</span><span class="linenos"> 2</span><span class="go">Generating public/private ed25519 key pair.</span>
+<span class="hll"><span class="linenos"> 3</span><span class="go">Enter file in which to save the key (/home/usuari/.ssh/id_ed25519):</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="go">Enter passphrase (empty for no passphrase):</span>
+</span><span class="hll"><span class="linenos"> 5</span><span class="go">Enter same passphrase again:</span>
+</span><span class="linenos"> 6</span><span class="go">Your identification has been saved in /home/usuari/.ssh/id_ed25519.</span>
+<span class="linenos"> 7</span><span class="go">Your public key has been saved in /home/usuari/.ssh/id_ed25519.pub.</span>
+<span class="linenos"> 8</span><span class="go">The key fingerprint is:</span>
+<span class="linenos"> 9</span><span class="go">SHA256:wfKXAdJmaos/xDA/aebLxXPEsTotInven+a+Ytgzon8 elteucorreu@mevaempresa.org</span>
+<span class="linenos">10</span><span class="go">The key&#39;s randomart image is:</span>
+<span class="linenos">11</span><span class="go">+--[ED25519 256]--+</span>
+<span class="linenos">12</span><span class="go">|  o.=o...        |</span>
+<span class="linenos">13</span><span class="go">|    .o.+oX..     |</span>
+<span class="linenos">14</span><span class="go">|. =+o..+o .      |</span>
+<span class="linenos">15</span><span class="go">| +. =.+o . o     |</span>
+<span class="linenos">16</span><span class="go">|.  . %.oS o      |</span>
+<span class="linenos">17</span><span class="go">|o.  +.X. .       |</span>
+<span class="linenos">18</span><span class="go">| +. =.+o . o     |</span>
+<span class="linenos">19</span><span class="go">| o   =+          |</span>
+<span class="linenos">20</span><span class="go">|      +o         |</span>
+<span class="linenos">21</span><span class="go">+----[SHA256]-----+</span>
+</pre></div>
+</div>
+<p>Això t'ha generat uns nous fitxers a una carpeta oculta anomenada
+<code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>~/.ssh
+<span class="go">authorized_keys  id_ed25519  id_ed25519.pub</span>
+</pre></div>
+</div>
+<p>Hauràs de copiar el contingut del fitxer <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code> (la clau
+pública) que podràs consultar amb <code class="docutils literal notranslate"><span class="pre">cat</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+<span class="go">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAInteressant8gUhMostrap0uDeyWWEncriptacio0mHk elteucorreu@mevaempresa.org</span>
+</pre></div>
+</div>
+<p>Selecciona la sortida de <code class="docutils literal notranslate"><span class="pre">cat</span></code> que comença amb <code class="docutils literal notranslate"><span class="pre">ssh-ed</span></code> i acaba amb el
+final de la teva adreça de correu. Ho pots fer amb el ratolí i, amb botó
+dret escollir <em>Copia</em></p>
+<p>Ara torna al teu repositori a GitHub, selecciona el botó verd <em>Code</em>,
+clica sobre <em>SSH</em> i segueix l'enllaç <em>add a new public key</em></p>
+<img alt="_images/addssh_go.png" class="align-center" src="_images/addssh_go.png" />
+<p>Això et portarà a la següent pàgina on hauràs d'indicar un nom per la teva
+clau i enganxar el text que has copiat del terminal</p>
+<img alt="_images/addssh.png" class="align-center" src="_images/addssh.png" />
+<p>Jo he escollit com a nom <em>portàtil cole</em> perquè penso que també treballaré
+en l'ordinador fix que tinc a casa, pel que també hauré de crear una clau
+SSH.</p>
+<p>A la secció <em>Key</em> del formulari, assegura't que s'ha copiat tota la clau i
+que no hi ha espais ni salts de línia de mes al final.</p>
+<p>Un cop ho tinguis clar, prem <em>Add SSH key</em> i ja estem d'aquesta part!</p>
+</section>
+<section id="vinculem-nos-amb-github">
+<h3>Vinculem-nos amb GitHub<a class="headerlink" href="#vinculem-nos-amb-github" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Escriu al terminal les següents comandes:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span>
+<span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:elteuusuariagithub/introprg.git
+<span class="hll"><span class="go">Cloning into &#39;introprg&#39;...</span>
+</span><span class="hll"><span class="go">The authenticity of host &#39;github.com (140.82.121.4)&#39; can&#39;t be established.</span>
+</span><span class="hll"><span class="go">RSA key fingerprint is SHA256:nThbg6kXUpJWGl7MyFingerPrintdCARLsaganE5SY8.</span>
+</span><span class="hll"><span class="go">Are you sure you want to continue connecting (yes/no)? yes</span>
+</span><span class="go">Warning: Permanently added &#39;github.com,140.82.121.4&#39; (RSA) to the list of known hosts.</span>
+<span class="go">remote: Enumerating objects: 6, done.</span>
+<span class="go">remote: Counting objects: 100% (6/6), done.</span>
+<span class="go">remote: Compressing objects: 100% (3/3), done.</span>
+<span class="go">Receiving objects: 100% (6/6), done.</span>
+<span class="go">remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0</span>
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>introprg/
+<span class="gp">$ </span>ls
+<span class="go">README.md</span>
+<span class="gp">$ </span>cat<span class="w"> </span>README.md
+<span class="gp"># </span>introprg
+<span class="go">Just checking whether I can write here</span>
+</pre></div>
+</div>
+<p>Les comandes anteriors han creat una carpeta anomenada <code class="docutils literal notranslate"><span class="pre">introprg/</span></code> a la
+carpeta principal del teu usuari al sistema, i han inicialitzat aquesta
+carpeta com a repositori <code class="docutils literal notranslate"><span class="pre">git</span></code> vinculat amb el que vas crear abans a
+GitHub.</p>
+<p>Si et fixes, el contingut del fitxer <code class="docutils literal notranslate"><span class="pre">README.md</span></code> és el mateix que ens ha
+generat GitHub.</p>
+</section>
+<section id="diguem-qui-som">
+<h3>Diguem qui som<a class="headerlink" href="#diguem-qui-som" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Per què git pugui funcionar bé, necessita saber algunes coses de tu.</p>
+<p>Escriu per consola les següents comandes, tot indicant el teu nom real i
+la teva adreça de correu:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;el teu nom real&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;lamevaadreça@mevaempresa.org&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="creem-el-primer-fitxer">
+<h3>Creem el primer fitxer<a class="headerlink" href="#creem-el-primer-fitxer" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>La finalitat de git és gestionar les versions de fitxers, així que toca
+afegir-ne.</p>
+<p>El primer fitxer que afegirem és una descripció de què contindrà el
+repositori. En els repositoris <code class="docutils literal notranslate"><span class="pre">git</span></code> és convenció que aquest fitxer es
+digui <code class="docutils literal notranslate"><span class="pre">readme</span></code> (<em>llegeix-me</em> en anglès)</p>
+<p>Com que ja hem demanat a <em>GitHub</em> que ens creés aquest fitxer, ara mateix
+ja el tenim:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls
+<span class="go">readme.md</span>
+</pre></div>
+</div>
+<p>L'extensió <code class="docutils literal notranslate"><span class="pre">.md</span></code> és per continguts en <em>markdown</em> un llenguatge de
+marques lleuger. Si ja coneixes aquest format, el pots mantenir.
+Altrament, segueix les instruccions per convertir-ho en un altre format
+anomenat <em>reStructuredText</em> que serà el que faré servir en aquests apunts.</p>
+<p>En primer lloc, elimina el fitxer:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rm<span class="w"> </span>README.md
+</pre></div>
+</div>
+<p>Crea ara un fitxer anomenat <code class="docutils literal notranslate"><span class="pre">readme.rst</span></code>. Una manera
+fàcil de fer-ho seria:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gedit<span class="w"> </span>readme.rst
+</pre></div>
+</div>
+<p>La comanda anterior t'obrirà l'editor de text <code class="docutils literal notranslate"><span class="pre">gedit</span></code> on hi podràs
+escriure una descripció de què contindrà el teu repositori.</p>
+<p>Et proposo que escriguis quelcom similar a:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">############################</span>
+<span class="gh">Introducció a la Programació</span>
+<span class="gh">############################</span>
+
+Activitats del curs d&#39;introducció a la programació
+</pre></div>
+</div>
+<p>Potser hi voldràs posar el teu nom i alguna cosa més relacionada amb tu.</p>
+<p>Un cop hagis acabat, guarda el fitxer (ex. prement el botó <code class="docutils literal notranslate"><span class="pre">desa</span></code> o bé
+la combinació de tecles <code class="docutils literal notranslate"><span class="pre">ctrl-s</span></code>)</p>
+<p>Comprovem que ha anat tot bé:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>status
+<span class="hll"><span class="go">On branch main</span>
+</span><span class="hll"><span class="go">Your branch is up to date with &#39;origin/main&#39;.</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">Changes not staged for commit:</span>
+</span><span class="hll"><span class="go">  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)</span>
+</span><span class="hll"><span class="go">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">    deleted:    README.md</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">Untracked files:</span>
+</span><span class="hll"><span class="go">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">    readme.rst</span>
+</span><span class="hll">
+</span><span class="hll"><span class="go">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span>
+</span></pre></div>
+</div>
+<p>Si és així, registrem els canvis al <code class="docutils literal notranslate"><span class="pre">git</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>readme.rst
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Primer commit&quot;</span>
+<span class="hll"><span class="go">[master 0aaf170] Primer commit</span>
+</span><span class="hll"><span class="go"> 2 files changed, 7 insertions(+)</span>
+</span><span class="hll"><span class="go"> delete mode 100644 readme.md</span>
+</span><span class="hll"><span class="go"> create mode 100644 readme.rst</span>
+</span></pre></div>
+</div>
+<p>Ara ja has estrenat el teu repositori!</p>
+</section>
+<section id="pugem-els-primers-continguts-al-github">
+<h3>Pugem els primers continguts al GitHub<a class="headerlink" href="#pugem-els-primers-continguts-al-github" title="Enllaça amb aquesta capçalera"></a></h3>
+<p>Ara ja podem pujar aquests continguts a GitHub. Escriu:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>push
+<span class="go">Enumerating objects: 4, done.</span>
+<span class="go">Counting objects: 100% (4/4), done.</span>
+<span class="go">Delta compression using up to 2 threads</span>
+<span class="go">Compressing objects: 100% (2/2), done.</span>
+<span class="go">Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.</span>
+<span class="go">Total 3 (delta 0), reused 0 (delta 0)</span>
+<span class="go">To github.com:mgome298/introprg.git</span>
+<span class="go">   0d5353e..b9239f4  main -&gt; main</span>
+</pre></div>
+</div>
+<p>En introduir-los, els continguts ja estaran salvats a GitHub. Si vols, ho
+pots comprovar mirant a GitHub (recorda recarregar la pàgina al navegador!)</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_00_02_holagit.html"><span class="doc"> Exercici 00_02. Hola Git</span></a></p>
+</section>
+</section>
+<section id="juguem-una-mica-un-altre-espai-de-treball">
+<h2>Juguem una mica: un altre espai de treball<a class="headerlink" href="#juguem-una-mica-un-altre-espai-de-treball" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Fem una petita activitat addicional per entendre la potència del sistema
+que tenim muntat.</p>
+<p>Un cop que hem guardat el nostre repositori a GitHub, ja el tenim
+disponible per a ser utilitzat des d'altres equips que disposin de
+<code class="docutils literal notranslate"><span class="pre">git</span></code>.</p>
+<p>En aquesta activitat simularem que ens hem canviat de PC només canviant de
+directori, però les mateixes passes serveixen per recuperar la nostra
+feina en qualsevol altre equip.</p>
+<p>En primer lloc clonarem el nostre treball a la carpeta temporal <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code>.
+Sovint el contingut d'aquesta carpeta és eliminat cada cop que iniciem
+l'equip.  Per tant, el que fem aquí no tindria gaire futur si no el pugem
+a GitHub.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/tmp
+<span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:renat/introprg.git<span class="w"> </span>temporal
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>temporal
+</pre></div>
+</div>
+<p>Fixa't que disposes dels mateixos continguts que tenies al teu espai de treball
+guardat a la carpeta <code class="docutils literal notranslate"><span class="pre">introprg/</span></code></p>
+<p>Ara crearem un nou fitxer, l'afegirem a <code class="docutils literal notranslate"><span class="pre">git</span></code> i el pujarem a GitHub</p>
+<p>El podem crear, per exemple, editant-lo:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>gedit<span class="w"> </span>eliminam.txt
+</pre></div>
+</div>
+<p>Però com que ja estem apuntant a nivell <em>pro</em>, ho farem des de terminal
+amb una sola línia:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;un fitxer a eliminar&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>eliminam.txt
+</pre></div>
+</div>
+<p>Podem comprovar que el fitxer hi és, fent servir la utilitat <code class="docutils literal notranslate"><span class="pre">ls</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls
+<span class="hll"><span class="go">…</span>
+</span><span class="hll"><span class="go">eliminam.txt</span>
+</span><span class="hll"><span class="go">…</span>
+</span></pre></div>
+</div>
+<p>També podem consultar el contingut del fitxer, per exemple, fent servir la
+utilitat <code class="docutils literal notranslate"><span class="pre">cat</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>eliminam.txt
+<span class="hll"><span class="go">un fitxer a eliminar</span>
+</span></pre></div>
+</div>
+<p>Ara toca dir-li a <code class="docutils literal notranslate"><span class="pre">git</span></code> que ha de gestionar aquest nou fitxer:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>add<span class="w"> </span>eliminam.txt
+<span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;Afegit un fitxer des de l&#39;espai de treball temporal&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Un cop introduït el password, el nou fitxer hauria d'estar a GitHub.</p>
+<p>Ara simularem que tornem al nostre equip de classe, i recuperarem els continguts
+que hem realitzat al directori temporal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>~/introprg
+<span class="gp">$ </span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>Un cop introduït el password, ja tindrem disponible el fitxer <code class="docutils literal notranslate"><span class="pre">eliminam.txt</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>eliminam.txt
+<span class="hll"><span class="go">un fitxer a eliminar</span>
+</span></pre></div>
+</div>
+<p>Ara que ja hem vist com actualitzar la feina realitzada en un altre lloc,
+ja podem eliminar aquest fitxer que no necessitem per a res. Primer
+l'eliminarem del directori de treball i després del GitHub</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rm<span class="w"> </span>eliminam.txt
+<span class="gp">$ </span>git<span class="w"> </span>status
+<span class="hll"><span class="go">…</span>
+</span><span class="hll"><span class="go">deleted:     eliminam.txt</span>
+</span><span class="hll"><span class="go">…</span>
+</span></pre></div>
+</div>
+<p>Fixa't que la resposta de <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> és que el fitxer <code class="docutils literal notranslate"><span class="pre">eliminam.txt</span></code> ha
+estat eliminat. Indicarem a <code class="docutils literal notranslate"><span class="pre">git</span></code> que el volem eliminat i pujarem els canvis a
+GitHub, on també quedarà eliminat.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git<span class="w"> </span>commit<span class="w"> </span>-am<span class="w"> </span><span class="s2">&quot;eliminat fitxer que feia nosa&quot;</span>
+<span class="gp">$ </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>Ja està.</p>
+<p>Si vols practicar una mica més, pots tornar a <code class="docutils literal notranslate"><span class="pre">/tmp/temporal/</span></code> i fer un
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> per que el fitxer quedi eliminat també allà. De fet, si tens
+temps, juga una mica més, tot clonant en altres carpetes o fins i tot
+màquines, i creant-hi nous fitxers o modificant el
+contingut d'existents. Només ha de recordar registrar els canvis a <code class="docutils literal notranslate"><span class="pre">git</span></code>
+(<code class="docutils literal notranslate"><span class="pre">add</span></code> i <code class="docutils literal notranslate"><span class="pre">commit</span></code>) i pujar-los a (<code class="docutils literal notranslate"><span class="pre">push</span></code>) o baixar-los de (<code class="docutils literal notranslate"><span class="pre">pull</span></code>)
+GitHub.</p>
+<p><img alt="exerciseicon___" src="_images/exerciseicon___.png" /> <a class="reference internal" href="exercici_00_03_resum_comandes.html"><span class="doc"> Exercici 00_03. Resum de comandes</span></a></p>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="altresxarxes" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>A banda del GitHub hi ha d'altres xarxes similars
+disponibles. Per exemple, <a class="reference external" href="https://about.gitlab.com/">gitlab</a> o <a class="reference external" href="https://bitbucket.org/">BitBucket</a>.</p>
+<p>No vol dir que aquestes altres xarxes siguin pitjors. He escollit GitHub
+només perquè ja la faig servir per hostatjar aquests apunts i per
+uniformitzar la gestió de les teves activitats.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="primer_contacte.html" class="btn btn-neutral float-left" title="Un primer contacte" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="configuracio_entorn.html" class="btn btn-neutral float-right" title="Configuració de l&#39;entorn" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

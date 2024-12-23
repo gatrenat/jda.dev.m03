@@ -1,0 +1,118 @@
+###########
+Conclusions
+###########
+
+Hem arribat al final dels elements bàsics de la programació.
+
+.. uml::
+   :align: center
+   :caption: Elements generals de la programació
+
+   @startuml
+   hide circle
+   hide empty members
+   skinparam monochrome true
+
+   Programació *-down- Objectiu
+   Programació *-down- Codi
+   Programació *-down- Documentació
+   Programació *-down- Proves
+   Programació *-down- Patrons
+   @enduml
+
+.. Fix vim highlighting*
+
+
+Per començar, hem fet un bon grapat d'exercicis i, per tant, hem aprés a
+entendre els requeriments (objectius) del programa a desenvolupar.
+
+Respecte al codi, hem carregat el nostre arsenal d'eines per programar amb els
+elements essencials:
+
+* Dades, tipus, expressions… Entre els tipus, hem tractat especialment els
+  Strings.
+
+* Assignacions i entrada/sortida bàsica
+
+* Condicionals
+
+* Bucles incloent especialment els recorreguts numèrics i la seva
+  aplicació en els Strings.
+
+* Documentació: capçaleres, bons noms, bona indentació…
+
+Hem aprés a provar els nostres programes per assegurar que acompleixen els
+requisits. A banda de les nostres proves, ens hem ajudat del ``prjtest`` i el
+*feedback* de l'informe d'avaluació, per a corregir allò que les nostres proves
+no capturaven.
+
+Ah! I hem aprés alguns patrons importants, amb nom potser poc *seriosos* com el
+patró de la presó (un ``if`` sense ``else``), el *lloro* i el *recorregut* (al
+que hem dedicat un tipus de bucle, el *for*), entre d'altres. A aquestes
+alçades, segurament veus un problema i comences a trobar peces que encaixen amb
+els patrons i exercicis que ja has fet.
+
+Els objectius dels recorreguts són variats. Alguns dels més típics han
+estat:
+
+* reduir la seqüència a un valor (ex. suma o es enter)
+
+* filtrar els elements de la seqüència (ex. només lletres)
+
+* transformar els elements de la seqüència (ex. lletres entre parèntesis)
+
+Pel camí, hem fet una primera ullada a l'enorme biblioteca del que, fins
+ara hem anomenat *utilitats* que ens ofereix el Java, com ara aquelles que
+ens permeten manipular els Strings.
+
+Tot plegat, el que hem aprés està englobat en el que es coneix com a
+*programació estructurada*
+
+Ara tenim prou coneixements com per programar teòricament qualsevol cosa!
+
+Encara ens queden, però, moltes coses interessants per aprendre que faran
+els nostres programes més llegibles i reusables. El més immediat que
+veurem seran els *mòduls* 
+
+Mentre esperem la següent temporada d'aquest curs, et deixo uns quants
+exercicis per posar en pràctica tot el que has aprés.
+
+Tingues present que la majoria d'aquests exercicis tindran restriccions amb
+l'ús d'utilitats dels Strings. La regla d'or és: si t'estalvia un ``for``
+segurament està prohibit.
+
+**Atenció**! Alguns et poden presentar reptes interessants. Les ☆ no estan
+posades del tot aleatòriament aquí. Demana ajuda si algun d'ells et
+descol·loca i, sobretot, gaudeix-los!
+
+|exerciseicon__T| :doc:`exercici_15_01_vocalsmajuscules`
+
+|exerciseicon__T| :doc:`exercici_15_02_comptavocals`
+
+|exerciseicon__T| :doc:`exercici_15_03_informetext`
+
+|exerciseicon_ST| :doc:`exercici_15_04_majusculitza`
+
+|exerciseicon_ST| :doc:`exercici_15_05_texttransformat`
+
+|exerciseicon__T| :doc:`exercici_15_06_textreves`
+
+|exerciseicon__T| :doc:`exercici_15_07_textcapicua`
+
+|exerciseicon__T| :doc:`exercici_15_08_codifica`
+
+|exerciseicon__T| :doc:`exercici_15_09_trianglelletres`
+
+|exerciseicon__T| :doc:`exercici_15_10_invertitlletres`
+
+|exerciseicon__T| :doc:`exercici_15_11_piramide`
+
+|exerciseicon_ST| :doc:`exercici_15_12_duhast`
+
+|exerciseicon_ST| :doc:`exercici_15_13_capicuarevisada`
+
+|exerciseicon_ST| :doc:`exercici_15_14_paraulesreves`
+
+|exerciseicon_ST| :doc:`exercici_15_15_lletresreves`
+
+|exerciseicon_ST| :doc:`exercici_15_16_password`

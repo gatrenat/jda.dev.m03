@@ -1,0 +1,52 @@
+##################################################
+|exerciseicon_ST| Exercici 14_18. Enters flexibles
+##################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``14_18_enterflexible/``
+
+* Continguts relacionats: :doc:`strings_recorreguts`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [☆] Exercici amb :ref:`dificultat addicional<descripcio_exercicis_dificils>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una nova versió del programa :doc:`exercici_14_17_enterestricte`.
+En aquesta ocasió implementaràs una interpretació més flexible dels enters.
+
+En concret, a banda dels enters estrictes:
+
+* Cal ignorar els espais en qualsevol lloc que hi puguin aparèixer.
+
+* Cal ignorar els separadors (punts ``.`` i guions baixos ``_``) sempre i quant es
+  trobin entre dos dígits doncs poden fer la funció de separació.
+
+  Per exemple, ``192.168.0.1`` es considera un enter.
+
+Considera la següent simulació:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4, 6, 8, 10, 12
+
+    Introdueix texts (enter sol per finalitzar)
+    123
+    És enter
+               321
+    És enter
+    -454
+    És enter
+    +543
+    És enter
+    45_678_1234.111
+    És enter
+    192.168.0.1
+    És enter
+    cinc
+    No és enter
+
+    Adéu

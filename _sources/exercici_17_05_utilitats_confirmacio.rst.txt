@@ -1,0 +1,49 @@
+##########################################################
+|exerciseicon__T| Exercici 17_05. Utilitats de confirmació
+##########################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``17_05_utilitats_confirmacio/``
+
+* Continguts relacionats: :doc:`moduls_biblioteques`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Desenvolupa una versió de l'exercici del :doc:`Semàfor<exercici_11_14_semafor>` de 
+manera que abans de donar el consell, se n'asseguri que els usuaris són majors d'edat.
+
+La nova versió fara servir la funció
+``UtilitatsConfirmacio.respostaABoolean()``.
+
+Considera les següents simulacions:
+
+.. code-block:: console
+    :emphasize-lines: 2, 4
+
+    Ets major d'edat?
+    Sí
+    Color?
+    groc
+    corre!
+
+.. code-block:: console
+    :emphasize-lines: 2
+
+    Ets major d'edat?
+    Encara no
+    No pots fer servir aquest programa sense supervisió
+
+
+Si vols comprovar la potència de disposar d'aquesta funció, considera
+utilitzar-la també els programes :doc:`Autodestruccio<funcions_return>` i
+:doc:`AutodestruccioTotal<moduls_reutilitzacio>`.
+
+
+.. note:: Per passar les proves, caldrà que facis una petita modificació
+   a ``respostaABoolean()`` de manera que ignori els espais davant i
+   darrera del text a analitzar.

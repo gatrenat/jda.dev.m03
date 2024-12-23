@@ -1,0 +1,20 @@
+##############################################################################
+|exerciseicon__T| Exercici 13_06. Els primers naturals decreixentment novament
+##############################################################################
+
+.. rubric:: Context
+
+* Carpeta de lliurament: ``13_06_for_naturalsdec/``
+
+* Continguts relacionats: :doc:`recorreguts_numerics`
+
+* Com lliurar-lo: :ref:`instruccions <instruccions_git>`
+
+* [✓] Exercici amb :ref:`autoavaluació<descripcio_exercicis_autoavaluacio>`
+
+.. rubric:: Enunciat
+
+Crea una nova versió d'aquest :doc:`exercici <exercici_13_02_while_naturalsdec>`; aquest cop amb el bucle ``for``.
+
+El nou programa manté el nom de l'original.
+
