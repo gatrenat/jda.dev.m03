@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ca" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 17_16. Progressió de les paraules &mdash; Introducció a la programació amb Java 2024-25 documentació</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="_static/moistyle.css?v=0e2f4d36" />
+
+  
+    <link rel="shortcut icon" href="_static/logoprg.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=153372e6"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=d8dd923b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="Quant a aquests documents" href="about.html" />
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="Apèndix" href="apendix.html" />
+    <link rel="prev" title="Exercici 17_15. Quants cops" href="exercici_17_15_quants.html" />
+     
+    <script class="googleanalytics" src="_static/moiscripts.js"></script>
+    <meta name="robots" content="noindex">
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Introducció a la programació amb Java
+              <img src="_static/logoprg.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                Curs 2024-25
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primeres_passes.html">Primeres passes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Elements bàsics de la programació</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="moduls.html">Mòduls</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="moduls_junit.html">Una mica de bricolatge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_intro.html">Un primer contacte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_funcions.html">Funcions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduls_variables.html">Variables i mòduls</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="moduls_exercicis.html">Llista d'exercicis</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="moduls_exercicis_intro.html">Llista d'exercicis del primer contacte amb mòduls</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_01_compara_ocurrencies.html"> Exercici 17_01. Compara ocurrències</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_02_compta_vocals.html"> Exercici 17_02. Compta vocals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_03_tipus_moduls.html"> Exercici 17_03. Tipus de mòduls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_04_matricula_italiana.html"> Exercici 17_04. Matricules italianes modulades</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_05_utilitats_confirmacio.html"> Exercici 17_05. Utilitats de confirmació</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_06_es_vocal.html"> Exercici 17_06. És vocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_07_nomes_lletres.html"> Exercici 17_07. Només lletres (amb mòduls)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_08_variables.html"> Exercici 17_08. Classifiquem les variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_09_mostra_interval_string.html"> Exercici 17_09. Secció d'un String (modular)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_10_es_enter.html"> Exercici 17_10. És enter (modular)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_11_es_enter_flexible.html"> Exercici 17_11. És enter (flexible)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_12_cadena_continua.html"> Exercici 17_12. Cadena continua (modular)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_13_substring.html"> Exercici 17_13. Substrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_14_prefixsufix.html"> Exercici 17_14. Prefixos i sufixos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exercici_17_15_quants.html"> Exercici 17_15. Quants cops</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> Exercici 17_16. Progressió de les paraules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apendix.html">Apèndix</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Introducció a la programació amb Java</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="moduls.html">Mòduls</a></li>
+          <li class="breadcrumb-item"><a href="moduls_exercicis.html">Llista d'exercicis</a></li>
+          <li class="breadcrumb-item"><a href="moduls_exercicis_funcions.html">Llista d'exercicis de funcions i variables</a></li>
+      <li class="breadcrumb-item active"> Exercici 17_16. Progressió de les paraules</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="exercici_17_15_quants.html" class="btn btn-neutral float-left" title="Exercici 17_15. Quants cops" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+           <div itemprop="articleBody">
+             
+  <section id="exerciseicon-st-exercici-17-16-progressio-de-les-paraules">
+<h1><img alt="exerciseicon_ST" src="_images/exerciseicon_ST.png" /> Exercici 17_16. Progressió de les paraules<a class="headerlink" href="#exerciseicon-st-exercici-17-16-progressio-de-les-paraules" title="Enllaça amb aquesta capçalera"></a></h1>
+<p class="rubric">Context</p>
+<ul class="simple">
+<li><p>Carpeta de lliurament: <code class="docutils literal notranslate"><span class="pre">17_16_progressio/</span></code></p></li>
+<li><p>Continguts relacionats: <a class="reference internal" href="moduls_variables_practiquem.html"><span class="doc">Exercicis addicionals</span></a></p></li>
+<li><p>Com lliurar-lo: <a class="reference internal" href="com_lliurar.html#instruccions-git"><span class="std std-ref">instruccions</span></a></p></li>
+<li><p>[☆] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-dificils"><span class="std std-ref">dificultat addicional</span></a></p></li>
+<li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
+</ul>
+<p class="rubric">Enunciat</p>
+<p>T'has fixat que les lletres d'algunes paraules estan ordenades de manera
+<strong>creixent</strong> segons l'alfabet?</p>
+<p>Per exemple, la paraula <code class="docutils literal notranslate"><span class="pre">&quot;amor&quot;</span></code> comença per <code class="docutils literal notranslate"><span class="pre">'a'</span></code>, que és anterior a
+<code class="docutils literal notranslate"><span class="pre">'m'</span></code>, que a la seva vegada és anterior a <code class="docutils literal notranslate"><span class="pre">'o'</span></code>, i que també és anterior a
+<code class="docutils literal notranslate"><span class="pre">'r'</span></code>.</p>
+<p>Anomenarem <em>creixents</em> a les paraules que presenten aquesta característica.</p>
+<p>A partir d'ara, representarem la relació entre les lletres d'una paraula així:
+<code class="docutils literal notranslate"><span class="pre">'a'</span> <span class="pre">&lt;</span> <span class="pre">'m'</span> <span class="pre">&lt;</span> <span class="pre">'o'</span> <span class="pre">&lt;</span> <span class="pre">'r'</span></code>.</p>
+<p>Hi ha d'altres paraules que estan ordenades a l'inrevés. Per exemple, la
+paraula <code class="docutils literal notranslate"><span class="pre">&quot;roma&quot;</span></code> tindria <code class="docutils literal notranslate"><span class="pre">'r'</span> <span class="pre">&gt;</span> <span class="pre">'o'</span> <span class="pre">&gt;</span> <span class="pre">'m'</span> <span class="pre">&gt;</span> <span class="pre">'a'</span></code>. Anomenarem aquestes
+paraules <em>decreixents</em>.</p>
+<p>Encara més, algunes paraules comencen creixents però tot d'una comencen a
+decrèixer. Per exemple <code class="docutils literal notranslate"><span class="pre">&quot;ameba&quot;</span></code> comença a crèixer (<code class="docutils literal notranslate"><span class="pre">'a'</span> <span class="pre">&lt;</span> <span class="pre">'m'</span></code>) i després
+decreix amb (<code class="docutils literal notranslate"><span class="pre">'m'</span> <span class="pre">&gt;</span> <span class="pre">'e'</span> <span class="pre">&gt;</span> <span class="pre">'b'</span> <span class="pre">&gt;</span> <span class="pre">'a'</span></code>). Direm a aquestes paraules
+<em>creixidecris</em>.</p>
+<p>Evidentment, si tenim de <em>creixidecris</em>, també podem pensar en <em>decricreixis</em>.
+És a dir, paraules que comencen decreixent i tot d'una deixen de decrèixer per
+acabar creixent. Per exemple, <code class="docutils literal notranslate"><span class="pre">&quot;sonar&quot;</span></code>, comença fent <code class="docutils literal notranslate"><span class="pre">'s'</span> <span class="pre">&gt;</span> <span class="pre">'o'</span> <span class="pre">&gt;</span> <span class="pre">'n'</span> <span class="pre">&gt;</span>
+<span class="pre">'a'</span></code> per després crèixer amb <code class="docutils literal notranslate"><span class="pre">'a'</span> <span class="pre">&lt;</span> <span class="pre">'r'</span></code>.</p>
+<p>Quan una paraula no pertany a cap d'aquestes quatre categories, l'anomenarem
+<em>normaleta</em>.</p>
+<p>Fixa't que paraules com <code class="docutils literal notranslate"><span class="pre">&quot;Rússia&quot;</span></code> serien classificades com a <em>normaletes</em> si
+fem servir una definició tan estricta. Podem relaxar les definicions anteriors,
+amb els següents conceptes:</p>
+<ul class="simple">
+<li><p>Podem ignorar majúscules i minúscules.</p></li>
+<li><p>Podem considerar només les lletres de l'alfabet català.</p></li>
+<li><p>Podem considerar que les vocals amb accents són iguals que la seva
+corresponent sense accent. Per exemple, <code class="docutils literal notranslate"><span class="pre">'à'</span></code> correspondria a <code class="docutils literal notranslate"><span class="pre">'a'</span></code>.
+També, la <code class="docutils literal notranslate"><span class="pre">'ç'</span></code> la podríem considerar igual a <code class="docutils literal notranslate"><span class="pre">'c'</span></code>.</p></li>
+<li><p>Finalment, podríem acceptar que les lletres estiguessin relacionades amb la
+següent de manera no estricta.</p></li>
+</ul>
+<p>Amb tota aquesta <em>relaxació</em>, <code class="docutils literal notranslate"><span class="pre">&quot;Rússia&quot;</span></code> seria <em>creixidecri</em> ja que comenca
+creixent <code class="docutils literal notranslate"><span class="pre">'R'</span> <span class="pre">&lt;=</span> <span class="pre">'ú'</span> <span class="pre">&lt;=</span> <span class="pre">'s'</span> <span class="pre">&lt;=</span> <span class="pre">'s'</span></code> i després decreix <code class="docutils literal notranslate"><span class="pre">'ú'</span> <span class="pre">&gt;=</span> <span class="pre">'s'</span> <span class="pre">&gt;=</span> <span class="pre">'s'</span> <span class="pre">&gt;=</span>
+<span class="pre">'i'</span> <span class="pre">&gt;=</span> <span class="pre">'a'</span></code>.</p>
+<section id="que-haig-de-fer">
+<h2>Què haig de fer?<a class="headerlink" href="#que-haig-de-fer" title="Enllaça amb aquesta capçalera"></a></h2>
+<p>Desenvolupa el programa <code class="docutils literal notranslate"><span class="pre">Progressio</span></code> que implementa el patró &quot;lloro&quot; amb
+finalització de cadena buida. Per cada paraula entrada, indicarà de quin tipus
+és: creixent, decreixent, creixidecri, decricreixi o normaleta.</p>
+<p>En cas que rebi més d'una paraula, el lloro dividirà l'entrada en paraules, tot
+considerant que les paraules estan separades per espais o tabuladors. Per
+exemple, per <code class="docutils literal notranslate"><span class="pre">&quot;hola</span> <span class="pre">i</span> <span class="pre">adèu&quot;</span></code> es dividiria a priori en tres paraules:
+<code class="docutils literal notranslate"><span class="pre">&quot;hola&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;i&quot;</span></code> i <code class="docutils literal notranslate"><span class="pre">&quot;adèu&quot;</span></code>.</p>
+<p>A l'hora de considerar la categoria d'una paraula, el programa:</p>
+<ul class="simple">
+<li><p>No farà distinció entre majúscules i minúscules.</p></li>
+<li><p>En cas d'espais o tabuladors de més, el programa els ignorarà.</p></li>
+<li><p>Requerirà que la paraula tingui un mínim de tres lletres de l'alfabet català.</p></li>
+<li><p>Només considerarà els caràcters de cada paraula que corresponguin a lletres
+de l'alfabet català. Per exemple, de l'entrada <code class="docutils literal notranslate"><span class="pre">&quot;1A2ç3ß4ñ!e&quot;</span></code>, el programa
+classificaria <code class="docutils literal notranslate"><span class="pre">&quot;Açe&quot;</span></code>.</p></li>
+<li><p>No farà distinció de les lletres especials catalanes de les corresponents
+sense &quot;adornaments&quot;. Per exemple, considerarà iguals <code class="docutils literal notranslate"><span class="pre">&quot;Adéu&quot;</span></code> i <code class="docutils literal notranslate"><span class="pre">&quot;adeu&quot;</span></code>.
+Per simplicitat, s'ignorarà l'el·la geminada i <code class="docutils literal notranslate"><span class="pre">&quot;el·la&quot;</span></code> serà considerada
+equivalent a <code class="docutils literal notranslate"><span class="pre">&quot;ella&quot;</span></code>.</p></li>
+</ul>
+<p>Una simulació d'execució.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> Intruduïu text. Enter per finalitzar.</span>
+<span class="hll"><span class="go"> Pera</span>
+</span><span class="go"> &quot;Pera&quot; és normaleta</span>
+<span class="hll"><span class="go"> Poma</span>
+</span><span class="go"> &quot;Poma&quot; és decreixent</span>
+<span class="go"> Pera i poma</span>
+<span class="go"> &quot;Pera&quot; és normaleta</span>
+<span class="go"> &quot;poma&quot; és decreixent</span>
+<span class="hll"><span class="go"> i o a!</span>
+</span><span class="go"> Cap paraula vàlida</span>
+<span class="hll"><span class="go">     Un amor romà</span>
+</span><span class="go"> &quot;amor&quot; és creixent</span>
+<span class="go"> &quot;romà&quot; és decreixent</span>
+<span class="hll"><span class="go"> Matrícula:    4321BCD!</span>
+</span><span class="go"> &quot;Matrícula:&quot; és normaleta</span>
+<span class="go"> &quot;4321BCD!&quot; és creixent</span>
+<span class="hll">
+</span><span class="go"> Adéu</span>
+</pre></div>
+</div>
+<p>Nota: Fixa't que quan una entrada no inclou cap paraula que compleixi els
+criteris per a ser classificada, el programa ha de retornar &quot;Cap paraula
+válida&quot;.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Progressio</span></code> farà servir els següents mòduls de la biblioteca
+<code class="docutils literal notranslate"><span class="pre">UtilString</span></code> que també hauràs de codificar:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esCreixent(String</span> <span class="pre">text)</span></code>: retorna cert quan el text rebut és
+creixent esticte. Per exemple:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">jshell&gt; esCreixent(&quot;adeu&quot;);</span>
+<span class="gp">$</span><span class="nv">1</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;adéu&quot;);    // atenció a l&#39;accent</span>
+<span class="gp">$</span><span class="nv">2</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;adEu&quot;);    // atenció a la majúscula</span>
+<span class="gp">$</span><span class="nv">3</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot; adeu&quot;);   // atenció a l&#39;espai inicial</span>
+<span class="gp">$</span><span class="nv">4</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;adeu &quot;);   // atenció a l&#39;espai final</span>
+<span class="gp">$</span><span class="nv">5</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;ad eu&quot;);   // atenció a l&#39;espai del mig</span>
+<span class="gp">$</span><span class="nv">6</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;ab&quot;);      // atenció a la longitud</span>
+<span class="gp">$</span><span class="nv">8</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">false</span>
+
+<span class="go">jshell&gt; esCreixent(&quot;a1234Bc&quot;); // atenció als dígits</span>
+<span class="gp">$</span><span class="nv">9</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esDecreixent(String</span> <span class="pre">text)</span></code>: retorna cert quan el text és decreixent estricta.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esCreixiDecri(String</span> <span class="pre">test)</span></code>: retorna cert quan el text és <em>decricreixi</em> estricta.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esDecriCreixi(String</span> <span class="pre">test)</span></code>: retorna cert quan el text és <em>creixidecri</em> estricta.</p></li>
+</ul>
+<p>Els mòduls anteriors disposaran d'una versió que permetrà indicar si la
+seqüència ha de ser o no estricta. Per exemple, la paraula &quot;ella&quot; de manera
+estricta seria normaleta ja que la primera 'l' no és major ni menor a la
+segona. En canvi, de manera no estricta seria creixidecri. <code class="docutils literal notranslate"><span class="pre">'e'</span> <span class="pre">&lt;=</span> <span class="pre">'l'</span> <span class="pre">&lt;=</span>
+<span class="pre">'l'</span></code> i <code class="docutils literal notranslate"><span class="pre">'l'</span> <span class="pre">&lt;=</span> <span class="pre">'l'</span> <span class="pre">&gt;=</span> <span class="pre">'a'</span></code>.</p>
+<p>Aquí les signatures:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esCreixent(String</span> <span class="pre">text,</span> <span class="pre">boolean</span> <span class="pre">estricta)</span></code>: considera la seqüència
+estricta segons el valor del paràmetre <code class="docutils literal notranslate"><span class="pre">estricta</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esDecreixent(String</span> <span class="pre">text,</span> <span class="pre">boolean</span> <span class="pre">estricta)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esCreixiDecri(String</span> <span class="pre">test,</span> <span class="pre">boolean</span> <span class="pre">estricta)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boolean</span> <span class="pre">esDecriCreixi(String</span> <span class="pre">test,</span> <span class="pre">boolean</span> <span class="pre">estricta)</span></code></p></li>
+</ul>
+<p>Per passar totes les proves, a més a més, caldrà que evitis utilitzar els
+mòduls que ofereix <code class="docutils literal notranslate"><span class="pre">String</span></code>, a banda de <code class="docutils literal notranslate"><span class="pre">length()</span></code> i <code class="docutils literal notranslate"><span class="pre">charAt()</span></code>. Per
+descomptat, pots <strong>reprogramar</strong> els mòduls de <code class="docutils literal notranslate"><span class="pre">String</span></code> que et calguin;
+assegura't però que els noms no coincideixen amb els originals de <code class="docutils literal notranslate"><span class="pre">String</span></code>,
+ja que el <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> no és prou hàbil encara per distingir-los.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+    <div class="googleanalytics">
+    <div id="cookiesbox">
+        Aquest lloc web utilitza galetes (<i>cookies</i>) per a analitzar el seu ús
+        amb les eines que ofereix <a href="https://www.google.com/analytics">Google Analytics</a>.
+        En continuar navegant-hi, estàs acceptant-ho.
+        <br/>
+        <a class="btn btn-neutral" onclick="setUserAcceptsCookies();">
+            Tancar
+            <span class="fa fa-window-close"></span>
+        </a>
+    </div>
+    <script>setCookiesboxVisibility();</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41103782-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercici_17_15_quants.html" class="btn btn-neutral float-left" title="Exercici 17_15. Quants cops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="apendix.html" class="btn btn-neutral float-right" title="Apèndix" accesskey="n" rel="next">Següent <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025 Moisès Gómez Girón.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41103782-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-41103782-2', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
