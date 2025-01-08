@@ -133,13 +133,53 @@
 <li><p>[✓] Exercici amb <a class="reference internal" href="sobre_exercicis.html#descripcio-exercicis-autoavaluacio"><span class="std std-ref">autoavaluació</span></a></p></li>
 </ul>
 <p class="rubric">Enunciat</p>
-<p>Recuperem l'exercici que mostrava si una cadena contenia o no <a class="reference internal" href="exercici_14_17_enterestricte.html"><span class="doc">un
-valor enter</span></a> i fem-ne la versió modular</p>
-<p>El programa <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> farà pràcticament el mateix que la versió original però
-els càlculs els realitzarà una funció anomenada <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code>, que rebrà
-el text corresponent i retornarà un booleà amb el resultat.</p>
-<p><code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> estarà definida dins de <code class="docutils literal notranslate"><span class="pre">UtilString.java</span></code> i serà
-una funció pura.</p>
+<p>Recuperem l'exercici que mostrava si una cadena contenia o no <a class="reference internal" href="exercici_14_17_enterestricte.html"><span class="doc">un valor
+enter</span></a> i fem-ne la versió modular.</p>
+<p>El programa <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> farà pràcticament el mateix que la versió original, amb
+les següents diferències:</p>
+<ul>
+<li><p>La comprovació de si una cadena correspon o no a un enter, la realitzarà una
+funció anomenada <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code>, que rebrà el text corresponent i retornarà un
+booleà amb el resultat.</p>
+<p><code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> estarà definida dins de <code class="docutils literal notranslate"><span class="pre">UtilString.java</span></code> i serà una funció
+pura.</p>
+</li>
+<li><p>El programa <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> indicarà que són enters vàlids aquelles cadenes que
+la funció <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> indiqui que ho són, i també, altres cadenes que
+<code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> hagués considerat com a vàlides si ignorés espais en blanc a
+inici i final de la cadena.</p></li>
+</ul>
+<p>Considera les següents crides a <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code>:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">esEnter</span><span class="p">(</span><span class="s">&quot;123&quot;</span><span class="p">)</span>
+<span class="kc">true</span>
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">esEnter</span><span class="p">(</span><span class="s">&quot;+123&quot;</span><span class="p">)</span>
+<span class="kc">true</span>
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">esEnter</span><span class="p">(</span><span class="s">&quot;-123&quot;</span><span class="p">)</span>
+<span class="kc">true</span>
+<span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">esEnter</span><span class="p">(</span><span class="s">&quot;  123&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// atenció als espais en blanc</span>
+<span class="kc">false</span>
+</pre></div>
+</div>
+<p>Considera també el següent exemple d'execució del programa <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go"> Introdueix texts (enter sol per finalitzar)</span>
+<span class="go"> 123</span>
+<span class="go"> És enter</span>
+<span class="go"> +123</span>
+<span class="go"> És enter</span>
+<span class="go"> -123</span>
+<span class="go"> És enter</span>
+<span class="go">     123</span>
+<span class="hll"><span class="go"> És enter</span>
+</span><span class="go"> undostres</span>
+<span class="go"> No és enter</span>
+
+<span class="go"> Adéu</span>
+</pre></div>
+</div>
+<p><strong>Pista</strong>: Fixa't que <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> fa alguna cosa per a aconseguir que la
+cadena <code class="docutils literal notranslate"><span class="pre">&quot;</span>&#160;&#160;&#160; <span class="pre">123&quot;</span></code> correspongui a un enter malgrat la funció <code class="docutils literal notranslate"><span class="pre">esEnter(&quot;</span>
+<span class="pre">123&quot;)</span></code> retorna fals. En aquesta ocasió, pots fer servir utilitats de
+<code class="docutils literal notranslate"><span class="pre">String</span></code> per a aconseguir aquest efecte.</p>
 </section>
 
 

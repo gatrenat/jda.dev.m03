@@ -136,38 +136,39 @@
 <p>En aquest exercici farem la versió flexible de l'exercici anterior, tal i com
 la vam programar a l'exercici <a class="reference internal" href="exercici_14_18_enterflexible.html"><span class="doc">aquest
 exercici</span></a>.</p>
-<p>La nova versió del mòdul <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code> oferirà aquesta flexibilitat. A
-banda, afegirem una nova funció anomenada <code class="docutils literal notranslate"><span class="pre">aEnter()</span></code> que permetrà convertir
-un String a enter.</p>
-<p>Aquí van les signatures:</p>
+<p>Haurem d'ampliar <code class="docutils literal notranslate"><span class="pre">UtilString</span></code> perquè, a banda de <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code> ofereixi els següents
+nous mòduls:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esEnter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aEnter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">aEnter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>El booleà <code class="docutils literal notranslate"><span class="pre">estricte</span></code> permetrà decidir el comportament d'aquestes dues
+<p>El booleà <code class="docutils literal notranslate"><span class="pre">estricte</span></code> permetrà parametritzar el comportament d'aquestes dues
 funcions:</p>
-<ul class="simple">
+<ul>
 <li><p>si <code class="docutils literal notranslate"><span class="pre">estricte</span></code> és cert</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> es comporta com <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aEnter(String,</span> <span class="pre">boolean)</span></code> es comporta igual que
 <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code> de manera que si el text no es pot convertir a enter,
-simplement <em>petarà</em> el programa com ho faria <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code></p></li>
-</ul>
-</li>
-<li><p>si <code class="docutils literal notranslate"><span class="pre">estricte</span></code> és fals:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> acceptarà també texts amb espais a
-l'inici i al final.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">aEnter(String,</span> <span class="pre">boolean)</span></code> permetrà convertir a enter, sense donar
-error, texts que continguin espais en blanc a l'inici o/i al final.</p></li>
-</ul>
-</li>
-</ul>
+simplement <em>petarà</em> el programa com ho faria <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code></p>
 <p>Així, quan se li demani convertir un text que no sigui convertible a
 enter, <code class="docutils literal notranslate"><span class="pre">aEnter()</span></code> donarà un error similar a <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code>. No
 pateixis, el <em>prgtest</em> t'indicarà si no ho has fet bé.</p>
+</li>
+</ul>
+</li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">estricte</span></code> és fals:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">esEnter(String,</span> <span class="pre">boolean)</span></code> acceptarà com a enters les cadenes acceptades
+com a enters flexibles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aEnter(String,</span> <span class="pre">boolean)</span></code> permetrà convertir a enter, sense donar
+error, els texts que la nova versió de <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> dóna per vàlid.</p></li>
+</ul>
+</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Et sorprèn que puguis tenir a l'hora <code class="docutils literal notranslate"><span class="pre">esEnter(String)</span></code> i
@@ -181,6 +182,24 @@ interessant de llenguatges com Java, anomenada <em>sobrecàrrega</em> o
 <code class="docutils literal notranslate"><span class="pre">prgtest</span></code> pugui avaluar-les.</p>
 <p>El lliurament inclourà la mateixa versió de <code class="docutils literal notranslate"><span class="pre">EsEnter.java</span></code> que
 tenia l'exercici anterior.</p>
+<p>Finalment, desenvolupa una nova versió del programa <code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> que es comporti
+similar a l'exercici anterior. Aquest cop, però, esperarà per línia de comandes
+(<code class="docutils literal notranslate"><span class="pre">args[0]</span></code>) la modalitat (els valors <code class="docutils literal notranslate"><span class="pre">&quot;estricte&quot;</span></code> o <code class="docutils literal notranslate"><span class="pre">&quot;flexible&quot;</span></code>) i
+actuarà en conseqüència. En cas que la modalitat no sigui un d'aquests valors,
+finalitzarà l'execució amb un error. Ah! Si no et passen cap modalitat, el teu
+programa pot donar l'error habitual.</p>
+<p><strong>Notes</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">EsEnter</span></code> no prova <code class="docutils literal notranslate"><span class="pre">aEnter()</span></code>. Si et cal fer-ho, crea't un altre programa
+que ho faci.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> encara acceptarà com a enters vàlids cadenes que no es poden
+emmagatzemar en un <code class="docutils literal notranslate"><span class="pre">int</span></code>. De fet, ni tant sols en un <code class="docutils literal notranslate"><span class="pre">long</span></code>. Se t'acut
+alguna manera de fer que quan <code class="docutils literal notranslate"><span class="pre">esEnter()</span></code> retorni <code class="docutils literal notranslate"><span class="pre">true</span></code> realment tinguis
+la confiança de que <code class="docutils literal notranslate"><span class="pre">Integer.parseInt()</span></code> funcionarà? Si se t'acut, la pots
+implementar amb tranquil·litat, ja les proves no miren aquesta casuística.
+Això sí, si ho fas, indica-ho amb un comentari al teu codi i presumeix amb el
+teu docent ;)</p></li>
+</ul>
 </section>
 </section>
 
