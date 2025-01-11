@@ -150,7 +150,7 @@ de laxa. La primera es comportarà com la funció copiada, mentre que la segona
 ignorarà majúscules/minúscules i les variants catalanes dels caràcters. Ho
 faran, seguint les següents signatures:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna cert quan subtext està inclòs extrictament dins de text</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSubstring</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSubstring</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
 <span class="c1">// equival a esSubstring(text, subtext, true)</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSubstring</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">)</span>
 </pre></div>
@@ -163,11 +163,11 @@ faran, seguint les següents signatures:</p>
 <span class="linenos"> 5</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">principal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Subtext?&quot;</span><span class="p">);</span>
 <span class="linenos"> 7</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Extricte?&quot;</span><span class="p">);</span>
-<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estricte?&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 <span class="linenos">10</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;esSubstring(\&quot;%s\&quot;, \&quot;%s\&quot;, %b) -&gt; %b%n&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">,</span>
-<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esSubstring</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">));</span>
+<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esSubstring</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">));</span>
 <span class="linenos">13</span><span class="w">     </span><span class="p">}</span>
 <span class="linenos">14</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
@@ -177,7 +177,7 @@ faran, seguint les següents signatures:</p>
 </span><span class="go">Skibiditoiletskibidiskibidi</span>
 <span class="hll"><span class="go">Subtext?</span>
 </span><span class="go">toilet</span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">No</span>
 <span class="hll"><span class="go">esSubstring(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;toilet&quot;, false) -&gt; true</span>
 </span></pre></div>
@@ -186,7 +186,7 @@ faran, seguint les següents signatures:</p>
 </span><span class="go">Skibiditoiletskibidiskibidi</span>
 <span class="hll"><span class="go">Subtext?</span>
 </span><span class="go">TOILET</span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">No</span>
 <span class="hll"><span class="go">esSubstring(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;TOILET&quot;, false) -&gt; true</span>
 </span></pre></div>
@@ -195,7 +195,7 @@ faran, seguint les següents signatures:</p>
 </span><span class="go">Skibiditoiletskibidiskibidi</span>
 <span class="hll"><span class="go">Subtext?</span>
 </span><span class="go">toïlet</span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">No</span>
 <span class="hll"><span class="go">esSubstring(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;toïlet&quot;, false) -&gt; true</span>
 </span></pre></div>
@@ -205,7 +205,7 @@ faran, seguint les següents signatures:</p>
 </span><span class="go">Skibiditoiletskibidiskibidi</span>
 <span class="hll"><span class="go">Subtext?</span>
 </span><span class="go">TOILET</span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">sí</span>
 <span class="hll"><span class="go">esSubstring(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;TOILET&quot;, true) -&gt; false</span>
 </span></pre></div>
@@ -214,7 +214,7 @@ faran, seguint les següents signatures:</p>
 </span><span class="go">Skibiditoiletskibidiskibidi</span>
 <span class="hll"><span class="go">Subtext?</span>
 </span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">No</span>
 <span class="hll"><span class="go">esSubstring(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;&quot;, false) -&gt; true</span>
 </span></pre></div>
@@ -223,7 +223,7 @@ faran, seguint les següents signatures:</p>
 </span>
 <span class="hll"><span class="go">Subtext?</span>
 </span><span class="go">toilet</span>
-<span class="hll"><span class="go">Extricte?</span>
+<span class="hll"><span class="go">Estricte?</span>
 </span><span class="go">No</span>
 <span class="hll"><span class="go">esSubstring(&quot;&quot;, &quot;toilet&quot;, false) -&gt; false</span>
 </span></pre></div>

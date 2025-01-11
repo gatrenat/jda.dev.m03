@@ -139,12 +139,12 @@ un substring en un string.</p>
 <p>Em decidit que això no pot ser, així que farem nosaltres una implementació
 d'aquesta funció.</p>
 <p>La versió que implementarem tindrà dues modalitats que permetran decidir si cal
-realitzar comparacions extrictes o no en el sentit de l'exercici
+realitzar comparacions estrictes o no en el sentit de l'exercici
 <a class="reference internal" href="exercici_17_13_substring.html"><span class="doc">anterior</span></a>.</p>
 <p>Les signatures a implementar són:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna el nombre d&#39;aparicions del subtext dins del text, considerant si</span>
-<span class="c1">// ha de ser o no extricte</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quants</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="p">)</span>
+<span class="c1">// ha de ser o no estricte</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quants</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
 <span class="c1">// equival a quants(text, subtext, true)</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">quants</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="p">)</span>
 </pre></div>
@@ -157,11 +157,11 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="linenos"> 5</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">principal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Subtext?&quot;</span><span class="p">);</span>
 <span class="linenos"> 7</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Extricte?&quot;</span><span class="p">);</span>
-<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estricte?&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 <span class="linenos">10</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;quants(\&quot;%s\&quot;, \&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">,</span>
-<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">quants</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">));</span>
+<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">quants</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">));</span>
 <span class="linenos">13</span><span class="w">     </span><span class="p">}</span>
 <span class="linenos">14</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
@@ -171,7 +171,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">SKIBÍDI</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;SKIBÍDI&quot;, false) -&gt; 3</span>
 </pre></div>
@@ -180,7 +180,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">skibidi</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">sí</span>
 </span><span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skibidi&quot;, true) -&gt; 2</span>
 </pre></div>
@@ -189,7 +189,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibídïtoiletskibidískibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">bïdí</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">no</span>
 </span><span class="go">quants(&quot;Skibídïtoiletskibidískibidi&quot;, &quot;bïdí&quot;, false) -&gt; 3</span>
 </pre></div>
@@ -199,7 +199,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll">
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">quants(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;&quot;, false) -&gt; 0</span>
 </pre></div>
@@ -208,7 +208,7 @@ realitzar comparacions extrictes o no en el sentit de l'exercici
 <span class="hll">
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">toilet</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">quants(&quot;&quot;, &quot;toilet&quot;, false) -&gt; 0</span>
 </pre></div>

@@ -135,15 +135,15 @@
 <p class="rubric">Enunciat</p>
 <p>Implementarem ara una nova versió per les utilitats de String: <code class="docutils literal notranslate"><span class="pre">startsWith</span></code> i <code class="docutils literal notranslate"><span class="pre">endsWith</span></code>.</p>
 <p>Les versions a implementar tindran dues modalitats per permetre indicar si ha
-de ser extricte o no en el sentit de l'exercici <a class="reference internal" href="exercici_17_13_substring.html"><span class="doc">anterior</span></a>.</p>
+de ser estricte o no en el sentit de l'exercici <a class="reference internal" href="exercici_17_13_substring.html"><span class="doc">anterior</span></a>.</p>
 <p>Les signatures a implementar són:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna cert quan text comença amb prefix, considerant si ha de ser o no extricte</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esPrefix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="p">)</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// retorna cert quan text comença amb prefix, considerant si ha de ser o no estricte</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esPrefix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prefix</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
 <span class="c1">// equival a esPrefix(text, prefix, true)</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esPrefix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prefix</span><span class="p">)</span>
 
-<span class="c1">// retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSufix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sufix</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="p">)</span>
+<span class="c1">// retorna cert quan text finalitza amb sufix, considerant si ha de ser o no estricte</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSufix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sufix</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="p">)</span>
 <span class="c1">// equival a esSufix(text, sufix, true)</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esSufix</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sufix</span><span class="p">)</span>
 </pre></div>
@@ -156,14 +156,14 @@ de ser extricte o no en el sentit de l'exercici <a class="reference internal" hr
 <span class="linenos"> 5</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">principal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
 <span class="linenos"> 6</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Subtext?&quot;</span><span class="p">);</span>
 <span class="linenos"> 7</span><span class="w">         </span><span class="n">String</span><span class="w"> </span><span class="n">subtext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Extricte?&quot;</span><span class="p">);</span>
-<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">extricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
+<span class="linenos"> 8</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estricte?&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">         </span><span class="kt">boolean</span><span class="w"> </span><span class="n">estricte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UtilitatsConfirmacio</span><span class="p">.</span><span class="na">respostaABoolean</span><span class="p">(</span><span class="n">Entrada</span><span class="p">.</span><span class="na">readLine</span><span class="p">());</span>
 <span class="linenos">10</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;esPrefix(\&quot;%s\&quot;, \&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span>
-<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">,</span>
-<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esPrefix</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">));</span>
+<span class="linenos">11</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esPrefix</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">));</span>
 <span class="linenos">13</span><span class="w">         </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;esSufix(\&quot;%s\&quot;, \&quot;%s\&quot;) -&gt; %b%n&quot;</span><span class="p">,</span>
-<span class="linenos">14</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">,</span>
-<span class="linenos">15</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esSufix</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">extricte</span><span class="p">));</span>
+<span class="linenos">14</span><span class="w">                           </span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">,</span>
+<span class="linenos">15</span><span class="w">                           </span><span class="n">UtilString</span><span class="p">.</span><span class="na">esSufix</span><span class="p">(</span><span class="n">principal</span><span class="p">,</span><span class="w"> </span><span class="n">subtext</span><span class="p">,</span><span class="w"> </span><span class="n">estricte</span><span class="p">));</span>
 <span class="linenos">16</span><span class="w">     </span><span class="p">}</span>
 <span class="linenos">17</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
@@ -173,7 +173,7 @@ de ser extricte o no en el sentit de l'exercici <a class="reference internal" hr
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">skïbidi</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">esPrefix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skïbidi&quot;, false) -&gt; true</span>
 <span class="go">esSufix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skïbidi&quot;, false) -&gt; true</span>
@@ -183,7 +183,7 @@ de ser extricte o no en el sentit de l'exercici <a class="reference internal" hr
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">skibidi</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">Sí</span>
 </span><span class="go">esPrefix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skibidi&quot;, true) -&gt; false</span>
 <span class="go">esSufix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;skibidi&quot;, true) -&gt; true</span>
@@ -193,7 +193,7 @@ de ser extricte o no en el sentit de l'exercici <a class="reference internal" hr
 <span class="hll"><span class="go">Skibiditoiletskibidiskibidi</span>
 </span><span class="go">Subtext?</span>
 <span class="hll">
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">esPrefix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;&quot;, false) -&gt; true</span>
 <span class="go">esSufix(&quot;Skibiditoiletskibidiskibidi&quot;, &quot;&quot;, false) -&gt; true</span>
@@ -203,7 +203,7 @@ de ser extricte o no en el sentit de l'exercici <a class="reference internal" hr
 <span class="hll">
 </span><span class="go">Subtext?</span>
 <span class="hll"><span class="go">skibidi</span>
-</span><span class="go">Extricte?</span>
+</span><span class="go">Estricte?</span>
 <span class="hll"><span class="go">No</span>
 </span><span class="go">esPrefix(&quot;&quot;, &quot;skibidi&quot;, false) -&gt; false</span>
 <span class="go">esSufix(&quot;&quot;, &quot;skibidi&quot;, false) -&gt; false</span>
